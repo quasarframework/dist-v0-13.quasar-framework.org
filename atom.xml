@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Quasar Framework]]></title>
+  <subtitle><![CDATA[A fast, simple & powerful framework to simultaneously build websites and phone/tablet apps.]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://0.0.0.0:4000/"/>
+  <updated>2015-10-02T13:35:36.864Z</updated>
+  <id>http://0.0.0.0:4000/</id>
+  
+  <author>
+    <name><![CDATA[Razvan Stoenescu]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Working On The First Release]]></title>
+    <link href="http://0.0.0.0:4000/2015/10/02/Working-On-The-First-Release/"/>
+    <id>http://0.0.0.0:4000/2015/10/02/Working-On-The-First-Release/</id>
+    <published>2015-10-02T16:35:36.000Z</published>
+    <updated>2015-10-02T13:35:36.864Z</updated>
+    <content type="html"></content>
+    <summary type="html">
+    
+    </summary>
+    
+  </entry>
+  
+</feed>

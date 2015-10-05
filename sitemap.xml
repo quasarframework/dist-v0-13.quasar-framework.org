@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://0.0.0.0:4000/docs/index.html</loc>
+    <lastmod>2015-10-05T16:07:24.069Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://0.0.0.0:4000/api/index.html</loc>
+    <lastmod>2015-10-05T16:07:01.529Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://0.0.0.0:4000/2015/10/02/Working-On-The-First-Release/</loc>
+    <lastmod>2015-10-02T13:35:36.864Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://0.0.0.0:4000/index.html</loc>
+    <lastmod>2015-09-19T13:05:25.000Z</lastmod>
+  </url>
+  
+</urlset>
