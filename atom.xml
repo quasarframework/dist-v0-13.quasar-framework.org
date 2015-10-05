@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Quasar Framework]]></title>
   <subtitle><![CDATA[A fast, simple & powerful framework to simultaneously build websites and phone/tablet apps.]]></subtitle>
-  <link href="/quasar-framework/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   <link href="http://0.0.0.0:4000/"/>
   <updated>2015-10-02T13:35:36.864Z</updated>
   <id>http://0.0.0.0:4000/</id>
