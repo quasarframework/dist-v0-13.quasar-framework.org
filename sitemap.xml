@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://0.0.0.0:4000/api/quasar.env.html</loc>
+    <lastmod>2015-10-14T19:38:00.908Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://0.0.0.0:4000/api/quasar.debug.html</loc>
+    <lastmod>2015-10-14T19:33:53.488Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://0.0.0.0:4000/api/index.html</loc>
+    <lastmod>2015-10-14T19:07:36.240Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://0.0.0.0:4000/docs/installation.html</loc>
     <lastmod>2015-10-09T13:33:44.072Z</lastmod>
   </url>
@@ -29,11 +44,6 @@
   <url>
     <loc>http://0.0.0.0:4000/index.html</loc>
     <lastmod>2015-10-05T20:30:59.832Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://0.0.0.0:4000/api/index.html</loc>
-    <lastmod>2015-10-05T16:07:01.529Z</lastmod>
   </url>
   
   <url>

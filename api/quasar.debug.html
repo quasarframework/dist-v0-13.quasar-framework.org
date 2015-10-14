@@ -2,12 +2,14 @@
 <html lang="en-US">
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
-  <title>News | Quasar Framework</title>
+  <title>Debug | Quasar Framework</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://0.0.0.0:4000/news/index.html">
+  <link rel="canonical" href="http://0.0.0.0:4000/api/quasar.debug.html">
   <!-- Alternative links -->
+  
+    
   
   <!-- Icon -->
   <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
@@ -32,18 +34,25 @@
   <link href="//fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <!-- Open Graph -->
-  <meta name="description" content="Quasar is a fast, simple &amp; powerful framework to simultaneously build websites and phone/tablet apps">
+  <meta name="description" content="The quasar.debug object has useful debugging methods:
+quasar.debug.printStack()Useful when stuck somewhere in the code and you’d like to see the Javascript stack.It outputs the stack to the console.
+q">
 <meta property="og:type" content="website">
-<meta property="og:title" content="News">
-<meta property="og:url" content="http://0.0.0.0:4000/news/index.html">
+<meta property="og:title" content="Debug">
+<meta property="og:url" content="http://0.0.0.0:4000/api/quasar.debug.html">
 <meta property="og:site_name" content="Quasar Framework">
-<meta property="og:description" content="Quasar is a fast, simple &amp; powerful framework to simultaneously build websites and phone/tablet apps">
+<meta property="og:description" content="The quasar.debug object has useful debugging methods:
+quasar.debug.printStack()Useful when stuck somewhere in the code and you’d like to see the Javascript stack.It outputs the stack to the console.
+q">
+<meta property="og:updated_time" content="2015-10-14T19:33:53.488Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="News">
-<meta name="twitter:description" content="Quasar is a fast, simple &amp; powerful framework to simultaneously build websites and phone/tablet apps">
+<meta name="twitter:title" content="Debug">
+<meta name="twitter:description" content="The quasar.debug object has useful debugging methods:
+quasar.debug.printStack()Useful when stuck somewhere in the code and you’d like to see the Javascript stack.It outputs the stack to the console.
+q">
 <meta name="twitter:site" content="quasarframework">
   <!-- Swiftype -->
-  <meta class="swiftype" name="title" data-type="string" content="News">
+  <meta class="swiftype" name="title" data-type="string" content="Debug">
   <!-- Google Analytics -->
   
 <script>
@@ -83,27 +92,43 @@
     <a id="mobile-search-btn" class="st-search-launcher"></a>
   </div>
 </header>
-    
-<div id="content-wrap">
-  <div class="wrapper">
-    <div class="inner">
-      
-        
-          <article class="article post" itemscope itemtype="http://schema.org/Article">
-  <header class="article-header">
-    
-      <h1>
-        <a href="/2015/10/02/Working-On-The-First-Release/" class="article-title" itemprop="name">Working On The First Release</a>
-      </h1>
-    
-    <a href="/2015/10/02/Working-On-The-First-Release/" class="article-date"><time datetime="2015-10-02T16:35:36.000Z">2015-10-02</time></a>
-  </header>
-  <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
-    
-  </div>
-</article>
-        
-      
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Debug</h1>
+                <a href="https://github.com/rstoenescu/quasar-site/edit/master/source/api/quasar.debug.md" class="article-edit-link" title="page.improve"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
+                <p>The <code>quasar.debug</code> object has useful debugging methods:</p>
+<h3 id="quasar-debug-printStack()" class="article-heading">quasar.debug.printStack()<a class="article-anchor" href="#quasar-debug-printStack()" aria-hidden="true"></a></h3><p>Useful when stuck somewhere in the code and you’d like to see the Javascript stack.<br>It outputs the stack to the console.</p>
+<h3 id="quasar-debug-profile(profile_name)" class="article-heading">quasar.debug.profile(<code>profile_name</code>)<a class="article-anchor" href="#quasar-debug-profile(profile_name)" aria-hidden="true"></a></h3><p>Use it when you want to know how much time did something take to get executed. Example:</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">quasar.<span class="keyword">debug</span>.<span class="keyword">profile</span>(<span class="string">'xyz'</span>);</span><br><span class="line">//run some code... then <span class="keyword">to</span> output result<span class="variable">s:</span></span><br><span class="line">quasar.<span class="keyword">debug</span>.<span class="keyword">profile</span>(<span class="string">'xyz'</span>);</span><br></pre></td></tr></table></figure>
+<p>You can have multiple profiles running at the same time.</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2015-10-14T19:33:53.488Z" itemprop="dateModified">Last update: 2015-10-14</time>
+                <a href="quasar.env.html" class="article-footer-prev" title="Previous: quasar.env.html"><i class="fa fa-chevron-left"></i><span>quasar.env</span></a>
+              </footer>
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Page Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#quasar-debug-printStack()"><span class="toc-text">quasar.debug.printStack()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#quasar-debug-profile(profile_name)"><span class="toc-text">quasar.debug.profile(profile_name)</span></a></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">Start</strong><a href="index.html" class="sidebar-link">Overview</a><strong class="sidebar-title">Core</strong><a href="quasar.env.html" class="sidebar-link">Quasar.env</a><a href="quasar.debug.html" class="sidebar-link current">Quasar.debug</a></div>
+</aside>
     </div>
   </div>
 </div>
@@ -130,10 +155,12 @@
       </li>
     </ul>
     
+      <strong class="mobile-nav-title">Start</strong><a href="index.html" class="mobile-nav-link">Overview</a><strong class="mobile-nav-title">Core</strong><a href="quasar.env.html" class="mobile-nav-link">Quasar.env</a><a href="quasar.debug.html" class="mobile-nav-link current">Quasar.debug</a>
+    
   </div>
   <div id="mobile-lang-select-wrap">
     <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span></span></span>
-    <select id="mobile-lang-select" data-canonical="">
+    <select id="mobile-lang-select" data-canonical="api/quasar.debug.html">
       
     </select>
   </div>

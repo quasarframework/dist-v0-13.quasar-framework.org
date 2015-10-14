@@ -1,4 +1,212 @@
-<!DOCTYPE html><html lang="en-US"><head prefix="og: http://ogp.me/ns#"><meta charset="utf-8"><title>Recommended Commit Message Format | Quasar Framework</title><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="canonical" href="http://0.0.0.0:4000/docs/commit-message-format.html"><link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png"><link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196"><link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160"><link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16"><link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32"><meta name="msapplication-TileColor" content="#2f83cd"><meta name="msapplication-TileImage" content="/icon/mstile-144x144.png"><link rel="stylesheet" href="/build/css/navy-690c38785c.css"><link href="//fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet"><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><meta name="description" content="This format will help with the $ quasar release command when generating the automatic changelog or recommending a version.Using other format breaks parts of the release commands.
-Each commit message c"><meta property="og:type" content="website"><meta property="og:title" content="Recommended Commit Message Format"><meta property="og:url" content="http://0.0.0.0:4000/docs/commit-message-format.html"><meta property="og:site_name" content="Quasar Framework"><meta property="og:description" content="This format will help with the $ quasar release command when generating the automatic changelog or recommending a version.Using other format breaks parts of the release commands.
-Each commit message c"><meta property="og:updated_time" content="2015-10-09T09:30:29.963Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Recommended Commit Message Format"><meta name="twitter:description" content="This format will help with the $ quasar release command when generating the automatic changelog or recommending a version.Using other format breaks parts of the release commands.
-Each commit message c"><meta name="twitter:site" content="quasarframework"><meta class="swiftype" name="title" data-type="string" content="Recommended Commit Message Format"><script>!function(e,a,t,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=a.createElement(t),s=a.getElementsByTagName(t)[0],o.async=1,o.src=n,s.parentNode.insertBefore(o,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-6317975-4","auto"),ga("send","pageview");</script><body><div id="container"><header id="header" class="wrapper"><div id="header-inner" class="inner"><h1 id="logo-wrap"><a href="/" id="logo">Quasar</a></h1><nav id="main-nav"><ul><li class="main-nav-item"><a href="/docs/" class="main-nav-link">Docs</a></li><li class="main-nav-item"><a href="/api/" class="main-nav-link">Api</a></li><li class="main-nav-item"><a href="/news/" class="main-nav-link">News</a></li><li class="main-nav-item"><a href="https://github.com/rstoenescu/quasar-framework" class="main-nav-link"><i class="fa fa-github-alt"></i></a></li></ul></nav><div id="search-btn-wrap" class="main-nav-item"><a id="search-btn" class="main-nav-link st-search-launcher"><i class="fa fa-search"></i></a></div><a id="mobile-nav-toggle"><span class="mobile-nav-toggle-bar"></span> <span class="mobile-nav-toggle-bar"></span> <span class="mobile-nav-toggle-bar"></span></a> <a id="mobile-search-btn" class="st-search-launcher"></a></div></header><div id="content-wrap"><div id="content" class="wrapper"><div id="content-inner"><article class="article-container" itemscope itemtype="http://schema.org/Article"><div class="article-inner"><div class="article"><div class="inner"><header class="article-header"><h1 class="article-title" itemprop="name">Recommended Commit Message Format</h1><a href="https://github.com/rstoenescu/quasar-site/edit/master/source/docs/commit-message-format.md" class="article-edit-link" title="page.improve"><i class="fa fa-pencil"></i></a></header><div class="article-content" itemprop="articleBody" data-swiftype-index="true"><p>This format will help with the <em>$ quasar release</em> command when generating the automatic changelog or recommending a version.<br>Using other format breaks parts of the <em>release</em> commands.</p><p>Each commit message consists of a <strong>header</strong>, a <strong>body</strong> and a <strong>footer</strong>. The header has a special<br>format that includes a <strong>type</strong>, a <strong>scope</strong> and a <strong>subject</strong>:</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">type</span>&gt;</span>(<span class="tag">&lt;<span class="title">scope</span>&gt;</span>): <span class="tag">&lt;<span class="title">subject</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">BLANK</span> <span class="attribute">LINE</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">BLANK</span> <span class="attribute">LINE</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">footer</span>&gt;</span></span><br></pre></table></figure><p>The <strong>header</strong> is mandatory and the <strong>scope</strong> of the header is optional.</p><p>Any line of the commit message cannot be longer 100 characters! This allows the message to be easier<br>to read on GitHub as well as in various git tools.</p><h3 id="Revert" class="article-heading">Revert<a class="article-anchor" href="#Revert" aria-hidden="true"></a></h3><p>If the commit reverts a previous commit, it should begin with <code>revert:</code>, followed by the header of the reverted commit. In the body it should say: <code>This reverts commit &lt;hash&gt;.</code>, where the hash is the SHA of the commit being reverted.</p><h3 id="Type" class="article-heading">Type<a class="article-anchor" href="#Type" aria-hidden="true"></a></h3><p>Must be one of the following:</p><ul><li><strong>feat</strong>: A new feature</li><li><strong>fix</strong>: A bug fix</li><li><strong>docs</strong>: Documentation only changes</li><li><strong>style</strong>: Changes that do not affect the meaning of the code (white-space, formatting, missing<br>semi-colons, etc)</li><li><strong>refactor</strong>: A code change that neither fixes a bug nor adds a feature</li><li><strong>perf</strong>: A code change that improves performance</li><li><strong>test</strong>: Adding missing tests</li><li><strong>chore</strong>: Changes to the build process or auxiliary tools and libraries such as documentation<br>generation</li></ul><h3 id="Scope" class="article-heading">Scope<a class="article-anchor" href="#Scope" aria-hidden="true"></a></h3><p>The scope could be anything specifying place of the commit change. For example use modules as scope name: <code>xhr</code>, <code>router</code>, <code>view</code> etc…</p><h3 id="Subject" class="article-heading">Subject<a class="article-anchor" href="#Subject" aria-hidden="true"></a></h3><p>The subject contains succinct description of the change:</p><ul><li>use the imperative, present tense: “change” not “changed” nor “changes”</li><li>don’t capitalize first letter</li><li>no dot (.) at the end</li></ul><h3 id="Body" class="article-heading">Body<a class="article-anchor" href="#Body" aria-hidden="true"></a></h3><p>Just as in the <strong>subject</strong>, use the imperative, present tense: “change” not “changed” nor “changes”.<br>The body should include the motivation for the change and contrast this with previous behavior.</p><h3 id="Footer" class="article-heading">Footer<a class="article-anchor" href="#Footer" aria-hidden="true"></a></h3><p>The footer should contain any information about <strong>Breaking Changes</strong> and is also the place to<br>reference GitHub issues that this commit <strong>Closes</strong>.</p><p><strong>Breaking Changes</strong> should start with the word <code>BREAKING CHANGE:</code> with a space or two newlines. The rest of the commit message is then used for this.</p></div><footer class="article-footer"><time class="article-footer-updated" datetime="2015-10-09T09:30:29.963Z" itemprop="dateModified">Last update: 2015-10-09</time> <a href="commands.html" class="article-footer-prev" title="Previous: commands.html"><i class="fa fa-chevron-left"></i><span>commands</span></a></footer></div></div><aside id="article-toc" role="navigation"><div id="article-toc-inner"><strong class="sidebar-title">Page Contents</strong><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Revert"><span class="toc-text">Revert</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Type"><span class="toc-text">Type</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scope"><span class="toc-text">Scope</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Subject"><span class="toc-text">Subject</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Body"><span class="toc-text">Body</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Footer"><span class="toc-text">Footer</span></a></li></ol><a href="#" id="article-toc-top">Back to Top</a></div></aside></div></article><aside id="sidebar" role="navigation"><div class="inner"><strong class="sidebar-title">Getting started</strong><a href="index.html" class="sidebar-link">Overview</a><a href="installation.html" class="sidebar-link">Installation</a><a href="quick-start.html" class="sidebar-link">Quick start</a><a href="commands.html" class="sidebar-link">Commands</a><a href="commit-message-format.html" class="sidebar-link current">Commit message format</a></div></aside></div></div></div><footer id="footer" class="wrapper"><div class="inner"><div id="footer-copyright">&copy; 2015 <strong>Razvan Stoenescu</strong><br>Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.</div><div id="footer-links"><a href="https://twitter.com/quasarframework" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a> <a href="https://github.com/rstoenescu/quasar-framework" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a></div></div></footer></div><div id="mobile-nav-dimmer"></div><nav id="mobile-nav"><div id="mobile-nav-inner"><ul id="mobile-nav-list"><li class="mobile-nav-item"><a href="/docs/" class="mobile-nav-link">Docs</a></li><li class="mobile-nav-item"><a href="/api/" class="mobile-nav-link">Api</a></li><li class="mobile-nav-item"><a href="/news/" class="mobile-nav-link">News</a></li><li class="mobile-nav-item"><a href="https://github.com/rstoenescu/quasar-framework" class="mobile-nav-link" rel="external" target="_blank">GitHub</a></li></ul><strong class="mobile-nav-title">Getting started</strong><a href="index.html" class="mobile-nav-link">Overview</a><a href="installation.html" class="mobile-nav-link">Installation</a><a href="quick-start.html" class="mobile-nav-link">Quick start</a><a href="commands.html" class="mobile-nav-link">Commands</a><a href="commit-message-format.html" class="mobile-nav-link current">Commit message format</a></div><div id="mobile-lang-select-wrap"><span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span></span></span><select id="mobile-lang-select" data-canonical="docs/commit-message-format.html"></select></div></nav><script src="/build/js/main-6401210c74.js"></script><script src="//cdn.jsdelivr.net/retinajs/1.1.0/retina.min.js" async></script><script>!function(t,e,n,s,c,i,a){t.SwiftypeObject=c,t[c]=t[c]||function(){(t[c].q=t[c].q||[]).push(arguments)},i=e.createElement(n),a=e.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","//s.swiftypecdn.com/install/v1/st.js","_st"),_st("install","");</script><script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script><script>document.addEventListener("DOMContentLoaded",function(){FastClick.attach(document.body)},!1);</script>
+<!DOCTYPE html>
+<html lang="en-US">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Recommended Commit Message Format | Quasar Framework</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://0.0.0.0:4000/docs/commit-message-format.html">
+  <!-- Alternative links -->
+  
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/quasar.css" type="text/css">
+  <!-- endbuild -->
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- Open Graph -->
+  <meta name="description" content="This format will help with the $ quasar release command when generating the automatic changelog or recommending a version.Using other format breaks parts of the release commands.
+Each commit message c">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Recommended Commit Message Format">
+<meta property="og:url" content="http://0.0.0.0:4000/docs/commit-message-format.html">
+<meta property="og:site_name" content="Quasar Framework">
+<meta property="og:description" content="This format will help with the $ quasar release command when generating the automatic changelog or recommending a version.Using other format breaks parts of the release commands.
+Each commit message c">
+<meta property="og:updated_time" content="2015-10-09T09:30:29.963Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Recommended Commit Message Format">
+<meta name="twitter:description" content="This format will help with the $ quasar release command when generating the automatic changelog or recommending a version.Using other format breaks parts of the release commands.
+Each commit message c">
+<meta name="twitter:site" content="quasarframework">
+  <!-- Swiftype -->
+  <meta class="swiftype" name="title" data-type="string" content="Recommended Commit Message Format">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6317975-4', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Quasar</a>
+    </h1>
+    <nav id="main-nav">
+      <ul>
+        <li class="main-nav-item"><a href="/docs/" class="main-nav-link">Docs</a></li><li class="main-nav-item"><a href="/api/" class="main-nav-link">Api</a></li><li class="main-nav-item"><a href="/news/" class="main-nav-link">News</a></li>
+        <li class="main-nav-item">
+          <a href="https://github.com/rstoenescu/quasar-framework" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <div id="search-btn-wrap" class="main-nav-item">
+      <a id="search-btn" class="main-nav-link st-search-launcher"><i class="fa fa-search"></i></a>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+    <a id="mobile-search-btn" class="st-search-launcher"></a>
+  </div>
+</header>
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Recommended Commit Message Format</h1>
+                <a href="https://github.com/rstoenescu/quasar-site/edit/master/source/docs/commit-message-format.md" class="article-edit-link" title="page.improve"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
+                <p>This format will help with the <em>$ quasar release</em> command when generating the automatic changelog or recommending a version.<br>Using other format breaks parts of the <em>release</em> commands.</p>
+<p>Each commit message consists of a <strong>header</strong>, a <strong>body</strong> and a <strong>footer</strong>.  The header has a special<br>format that includes a <strong>type</strong>, a <strong>scope</strong> and a <strong>subject</strong>:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">type</span>&gt;</span>(<span class="tag">&lt;<span class="title">scope</span>&gt;</span>): <span class="tag">&lt;<span class="title">subject</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">BLANK</span> <span class="attribute">LINE</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">BLANK</span> <span class="attribute">LINE</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">footer</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>The <strong>header</strong> is mandatory and the <strong>scope</strong> of the header is optional.</p>
+<p>Any line of the commit message cannot be longer 100 characters! This allows the message to be easier<br>to read on GitHub as well as in various git tools.</p>
+<h3 id="Revert" class="article-heading">Revert<a class="article-anchor" href="#Revert" aria-hidden="true"></a></h3><p>If the commit reverts a previous commit, it should begin with <code>revert:</code>, followed by the header of the reverted commit. In the body it should say: <code>This reverts commit &lt;hash&gt;.</code>, where the hash is the SHA of the commit being reverted.</p>
+<h3 id="Type" class="article-heading">Type<a class="article-anchor" href="#Type" aria-hidden="true"></a></h3><p>Must be one of the following:</p>
+<ul>
+<li><strong>feat</strong>: A new feature</li>
+<li><strong>fix</strong>: A bug fix</li>
+<li><strong>docs</strong>: Documentation only changes</li>
+<li><strong>style</strong>: Changes that do not affect the meaning of the code (white-space, formatting, missing<br>semi-colons, etc)</li>
+<li><strong>refactor</strong>: A code change that neither fixes a bug nor adds a feature</li>
+<li><strong>perf</strong>: A code change that improves performance</li>
+<li><strong>test</strong>: Adding missing tests</li>
+<li><strong>chore</strong>: Changes to the build process or auxiliary tools and libraries such as documentation<br>generation</li>
+</ul>
+<h3 id="Scope" class="article-heading">Scope<a class="article-anchor" href="#Scope" aria-hidden="true"></a></h3><p>The scope could be anything specifying place of the commit change. For example use modules as scope name: <code>xhr</code>, <code>router</code>, <code>view</code> etc…</p>
+<h3 id="Subject" class="article-heading">Subject<a class="article-anchor" href="#Subject" aria-hidden="true"></a></h3><p>The subject contains succinct description of the change:</p>
+<ul>
+<li>use the imperative, present tense: “change” not “changed” nor “changes”</li>
+<li>don’t capitalize first letter</li>
+<li>no dot (.) at the end</li>
+</ul>
+<h3 id="Body" class="article-heading">Body<a class="article-anchor" href="#Body" aria-hidden="true"></a></h3><p>Just as in the <strong>subject</strong>, use the imperative, present tense: “change” not “changed” nor “changes”.<br>The body should include the motivation for the change and contrast this with previous behavior.</p>
+<h3 id="Footer" class="article-heading">Footer<a class="article-anchor" href="#Footer" aria-hidden="true"></a></h3><p>The footer should contain any information about <strong>Breaking Changes</strong> and is also the place to<br>reference GitHub issues that this commit <strong>Closes</strong>.</p>
+<p><strong>Breaking Changes</strong> should start with the word <code>BREAKING CHANGE:</code> with a space or two newlines. The rest of the commit message is then used for this.</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2015-10-09T09:30:29.963Z" itemprop="dateModified">Last update: 2015-10-09</time>
+                <a href="commands.html" class="article-footer-prev" title="Previous: commands.html"><i class="fa fa-chevron-left"></i><span>commands</span></a>
+              </footer>
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Page Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Revert"><span class="toc-text">Revert</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Type"><span class="toc-text">Type</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scope"><span class="toc-text">Scope</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Subject"><span class="toc-text">Subject</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Body"><span class="toc-text">Body</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Footer"><span class="toc-text">Footer</span></a></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">Getting started</strong><a href="index.html" class="sidebar-link">Overview</a><a href="installation.html" class="sidebar-link">Installation</a><a href="quick-start.html" class="sidebar-link">Quick start</a><a href="commands.html" class="sidebar-link">Commands</a><a href="commit-message-format.html" class="sidebar-link current">Commit message format</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2015 <strong>Razvan Stoenescu</strong><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/quasarframework" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/rstoenescu/quasar-framework" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="/docs/" class="mobile-nav-link">Docs</a></li><li class="mobile-nav-item"><a href="/api/" class="mobile-nav-link">Api</a></li><li class="mobile-nav-item"><a href="/news/" class="mobile-nav-link">News</a></li>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/rstoenescu/quasar-framework" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">Getting started</strong><a href="index.html" class="mobile-nav-link">Overview</a><a href="installation.html" class="mobile-nav-link">Installation</a><a href="quick-start.html" class="mobile-nav-link">Quick start</a><a href="commands.html" class="mobile-nav-link">Commands</a><a href="commit-message-format.html" class="mobile-nav-link current">Commit message format</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span></span></span>
+    <select id="mobile-lang-select" data-canonical="docs/commit-message-format.html">
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/toc.js" type="text/javascript"></script>
+<script src="/js/mobile_nav.js" type="text/javascript"></script>
+<!-- endbuild -->
+<script src="//cdn.jsdelivr.net/retinajs/1.1.0/retina.min.js" async></script>
+
+<!-- Swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
+
+  _st('install','');
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+    }, false);
+  </script>
+</body>
+</html>
