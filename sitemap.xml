@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://0.0.0.0:4000/docs/cli-commands.html</loc>
+    <lastmod>2015-10-15T22:04:02.599Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://0.0.0.0:4000/api/quasar.router.html</loc>
     <lastmod>2015-10-15T21:47:03.375Z</lastmod>
   </url>
@@ -34,11 +39,6 @@
   <url>
     <loc>http://0.0.0.0:4000/docs/index.html</loc>
     <lastmod>2015-10-09T12:02:57.096Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://0.0.0.0:4000/docs/cli-commands.html</loc>
-    <lastmod>2015-10-09T09:40:25.555Z</lastmod>
   </url>
   
   <url>
