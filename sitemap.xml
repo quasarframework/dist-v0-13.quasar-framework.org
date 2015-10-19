@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://0.0.0.0:4000/api/quasar-ajax-requests.html</loc>
-    <lastmod>2015-10-19T16:50:16.613Z</lastmod>
+    <loc>http://0.0.0.0:4000/api/quasar-router.html</loc>
+    <lastmod>2015-10-19T16:54:41.081Z</lastmod>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:4000/api/quasar-router.html</loc>
-    <lastmod>2015-10-19T13:16:49.997Z</lastmod>
+    <loc>http://0.0.0.0:4000/api/quasar-ajax-requests.html</loc>
+    <lastmod>2015-10-19T16:50:16.613Z</lastmod>
   </url>
   
   <url>
