@@ -50,7 +50,7 @@ NOTEIn addition, you can read and write cookies using JSON objects.
 
 Read a Cookie1var value = quasar.get.cookie(&apos;cookie_name&apos;);
 When cookie i">
-<meta property="og:updated_time" content="2015-10-19T22:47:11.712Z">
+<meta property="og:updated_time" content="2015-10-19T22:48:37.900Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Quasar Cookies">
 <meta name="twitter:description" content="This is a wrapper over the standardized document.cookie.
@@ -123,7 +123,8 @@ When cookie i">
 <p><code>cookies</code> variable will be an object with key-value pairs (cookie_name : cookie_value).</p>
 <h1 id="Verify_if_Cookie_is_Set" class="article-heading">Verify if Cookie is Set<a class="article-anchor" href="#Verify_if_Cookie_is_Set" aria-hidden="true"></a></h1><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">(Boolean)</span> quasar.has.cookie<span class="comment">('cookie_name')</span>;</span><br></pre></td></tr></table></figure>
 <h1 id="Write_a_Cookie" class="article-heading">Write a Cookie<a class="article-anchor" href="#Write_a_Cookie" aria-hidden="true"></a></h1><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">quasar.<span class="keyword">set</span>.cookie(<span class="string">'cookie_name'</span>, cookie_value, <span class="keyword">options</span>);</span><br></pre></td></tr></table></figure>
-<p><code>options</code> can be <code>expire</code>, <code>path</code>, <code>domain</code>, <code>secure</code>. They are explained below:</p>
+<p><code>options</code> is an Object which can have the following properties: <code>expire</code>, <code>path</code>, <code>domain</code>, <code>secure</code>. They are explained below.</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">quasar</span><span class="class">.set</span><span class="class">.cookie</span>(<span class="string">'quasar'</span>, <span class="string">'framework'</span>, &#123;</span><br><span class="line">  <span class="attribute">secure</span>: true</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h2 id="Option_expires" class="article-heading">Option <code>expires</code><a class="article-anchor" href="#Option_expires" aria-hidden="true"></a></h2><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">expires</span>: <span class="string">10</span></span><br></pre></td></tr></table></figure>
 <p>Define lifetime of the cookie. Value can be a Number which will be interpreted as days from time of creation or a Date object. If omitted, the cookie becomes a session cookie.</p>
 <h2 id="Option_path" class="article-heading">Option <code>path</code><a class="article-anchor" href="#Option_path" aria-hidden="true"></a></h2><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">path:</span> <span class="string">'/'</span></span><br></pre></td></tr></table></figure>
@@ -136,7 +137,7 @@ When cookie i">
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2015-10-19T22:47:11.712Z" itemprop="dateModified">Last update: 2015-10-19</time>
+                <time class="article-footer-updated" datetime="2015-10-19T22:48:37.900Z" itemprop="dateModified">Last update: 2015-10-19</time>
                 <a href="quasar-ajax-requests.html" class="article-footer-prev" title="Previous: quasar-ajax-requests.html"><i class="fa fa-chevron-left"></i><span>ajax_requests</span></a>
               </footer>
             </div>
