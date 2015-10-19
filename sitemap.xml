@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://0.0.0.0:4000/api/quasar-cookies.html</loc>
+    <lastmod>2015-10-19T20:17:38.945Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://0.0.0.0:4000/api/quasar-router.html</loc>
     <lastmod>2015-10-19T16:54:41.081Z</lastmod>
   </url>
