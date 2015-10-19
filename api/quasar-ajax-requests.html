@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Quasar Ajax Requests | Quasar Framework</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://0.0.0.0:4000/api/quasar-ajax-requests.html">
+  <!-- Alternative links -->
+  
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/quasar.css" type="text/css">
+  <!-- endbuild -->
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- Open Graph -->
+  <meta name="description" content="Getting StartedMaking a Request12345678// GET request:quasar.make.a.get.request(&amp;#123;url: &apos;...&apos;&amp;#125;)  .done(function(jsonObject) &amp;#123;    console.log(&apos;data received: &apos;, jsonObject);  &amp;#125;)  .fai">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Quasar Ajax Requests">
+<meta property="og:url" content="http://0.0.0.0:4000/api/quasar-ajax-requests.html">
+<meta property="og:site_name" content="Quasar Framework">
+<meta property="og:description" content="Getting StartedMaking a Request12345678// GET request:quasar.make.a.get.request(&amp;#123;url: &apos;...&apos;&amp;#125;)  .done(function(jsonObject) &amp;#123;    console.log(&apos;data received: &apos;, jsonObject);  &amp;#125;)  .fai">
+<meta property="og:updated_time" content="2015-10-19T13:36:17.589Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Quasar Ajax Requests">
+<meta name="twitter:description" content="Getting StartedMaking a Request12345678// GET request:quasar.make.a.get.request(&amp;#123;url: &apos;...&apos;&amp;#125;)  .done(function(jsonObject) &amp;#123;    console.log(&apos;data received: &apos;, jsonObject);  &amp;#125;)  .fai">
+<meta name="twitter:site" content="quasarframework">
+  <!-- Swiftype -->
+  <meta class="swiftype" name="title" data-type="string" content="Quasar Ajax Requests">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6317975-4', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Quasar</a>
+    </h1>
+    <nav id="main-nav">
+      <ul>
+        <li class="main-nav-item"><a href="/docs/" class="main-nav-link">Docs</a></li><li class="main-nav-item"><a href="/api/" class="main-nav-link">Api</a></li><li class="main-nav-item"><a href="/news/" class="main-nav-link">News</a></li>
+        <li class="main-nav-item">
+          <a href="https://github.com/rstoenescu/quasar-framework" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <div id="search-btn-wrap" class="main-nav-item">
+      <a id="search-btn" class="main-nav-link st-search-launcher"><i class="fa fa-search"></i></a>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+    <a id="mobile-search-btn" class="st-search-launcher"></a>
+  </div>
+</header>
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Quasar Ajax Requests</h1>
+                <a href="https://github.com/rstoenescu/quasar-site/edit/master/source/api/quasar-ajax-requests.md" class="article-edit-link" title="page.improve"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
+                <h1 id="Getting_Started" class="article-heading">Getting Started<a class="article-anchor" href="#Getting_Started" aria-hidden="true"></a></h1><h2 id="Making_a_Request" class="article-heading">Making a Request<a class="article-anchor" href="#Making_a_Request" aria-hidden="true"></a></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// GET request:</span></span><br><span class="line">quasar.make.a.get.request(&#123;url: <span class="string">'...'</span>&#125;)</span><br><span class="line">  .done(<span class="function"><span class="keyword">function</span>(<span class="params">jsonObject</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'data received: '</span>, jsonObject);</span><br><span class="line">  &#125;)</span><br><span class="line">  .fail(<span class="function"><span class="keyword">function</span>(<span class="params">jqXHR, textStatus, errorThrown</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'uh, oh... the request failed...'</span>, errorThrown);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<p>Same for PUT, POST, DELETE:<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">quasar.make.a.put.request(&#123;</span><br><span class="line">  url: ...,</span><br><span class="line">  data: <span class="decorator">&#123;...&#125;</span></span><br><span class="line">&#125;);</span><br><span class="line">quasar.make.a.post.request(&#123;</span><br><span class="line">  url: ...,</span><br><span class="line">  data: <span class="decorator">&#123;...&#125;</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">// <span class="type">Notice</span> `del` instead <span class="keyword">of</span> `delete`</span><br><span class="line">quasar.make.a.del.request(<span class="decorator">&#123;...&#125;</span>);</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><strong>DATA FORMAT</strong><br>By default, the response is treated as a JSON string and it’s parsed, unless specified otherwise with <code>dataType</code> property (see <a href="#Request_Properties">Request Properties</a>).</p>
+</blockquote>
+<h2 id="Request_Properties" class="article-heading">Request Properties<a class="article-anchor" href="#Request_Properties" aria-hidden="true"></a></h2><p>When making a request, you can use the properties below:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>String</td>
+<td>URL or relative path to base URL (see <a href="#Configuring_Requests">Configuring Requests</a>)</td>
+</tr>
+<tr>
+<td>query</td>
+<td>String or Object</td>
+<td>Query String</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Object</td>
+<td>Data to be sent along with the request</td>
+</tr>
+<tr>
+<td>cachable</td>
+<td>Boolean</td>
+<td>Should the response be cached? <em>Only for GET requests</em></td>
+</tr>
+<tr>
+<td>requestName</td>
+<td>String</td>
+<td>See Request Name</td>
+</tr>
+<tr>
+<td>persistent</td>
+<td>Boolean</td>
+<td>Cannot be aborted by <code>quasar.abort.all.requests()</code></td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>Number</td>
+<td>Number of milliseconds before timeout</td>
+</tr>
+</tbody>
+</table>
+<p>… and any jQuery <a href="http://api.jquery.com/jquery.ajax/" target="_blank" rel="external">$.ajax() properties</a>. Some examples: <code>dataFilter</code>, <code>dataType</code>, <code>headers</code>, <code>processData</code>, <code>xhrFields</code>, <code>converters</code>.</p>
+<blockquote>
+<p><strong>NOTE</strong><br>Only the <code>url</code> property is mandatory.</p>
+</blockquote>
+<h2 id="Request_Outcome" class="article-heading">Request Outcome<a class="article-anchor" href="#Request_Outcome" aria-hidden="true"></a></h2><p>There are multiple ways to see the request outcome, depending on the style that you prefer:</p>
+<ol>
+<li><p>Inside the configuration object</p>
+<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">quasar.make.a.get.request(&#123;</span><br><span class="line">  url: '/articles.php',</span><br><span class="line">  done: function(data, textStatus, jqXHR) <span class="decorator">&#123;...&#125;</span>,</span><br><span class="line">  fail: function(jqXHR, textStatus, errorThrown) <span class="decorator">&#123;...&#125;</span>,</span><br><span class="line">  always: function(data|jqXHR, textStatus, jqXHR|errorThrown) <span class="decorator">&#123;...&#125;</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Outside the configuration object</p>
+<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">quasar.make.a.get.request(&#123;url: '/articles.php'&#125;)</span><br><span class="line">  .done(function(data, textStatus, jqXHR) <span class="decorator">&#123;...&#125;</span>)</span><br><span class="line">  .fail(function(jqXHR, textStatus, errorThrown) <span class="decorator">&#123;...&#125;</span>)</span><br><span class="line">  .always(function(data|jqXHR, textStatus, jqXHR|errorThrown) <span class="decorator">&#123;...&#125;</span>)</span><br><span class="line">  .then(function(data,textStatus,jqXHR) <span class="decorator">&#123;...&#125;</span>, function(jqXHR, textStatus, errorThrown) <span class="decorator">&#123;...&#125;</span>)</span><br><span class="line">  .abort();</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>Explanation of the methods:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Parameters</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>done</td>
+<td>data, textStatus, jqXHR</td>
+<td>Success handler</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>jqXHR, textStatus, errorThrown</td>
+<td>Failure handler</td>
+</tr>
+<tr>
+<td>always</td>
+<td>data/jqXHR, textStatus, jqXHR/errorThrown</td>
+<td>Both success &amp; failure handler; is triggered regardless of the outcome</td>
+</tr>
+<tr>
+<td>then</td>
+<td>Function, Function</td>
+<td>Alternative way to specify success handler (first param) and failure handler (second param)</td>
+</tr>
+<tr>
+<td>abort</td>
+<td></td>
+<td>Halts the request before it is completed</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>NOTE</strong><br>All methods (including <code>quasar.make.a.&lt;TYPE&gt;.request</code>) return a Promise.</p>
+</blockquote>
+<h1 id="Configuring_Requests" class="article-heading">Configuring Requests<a class="article-anchor" href="#Configuring_Requests" aria-hidden="true"></a></h1><p>There are global configuration properties that apply to all requests through <code>quasar.config.requests</code> object. Its configurable properties are:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>baseURL</td>
+<td>String</td>
+<td>Base URL for all requests. Example: “<a href="http://quasar-framework.org/api/" target="_blank" rel="external">http://quasar-framework.org/api/</a>“</td>
+</tr>
+<tr>
+<td>failFnHandler</td>
+<td>Function</td>
+<td>Global failure handler. See <a href="#Global_Failure_Handler">Global Failure Handler</a></td>
+</tr>
+<tr>
+<td>use.cache</td>
+<td>Boolean</td>
+<td>GET requests cache the response by default or not</td>
+</tr>
+</tbody>
+</table>
+<p>Example:<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">quasar.config.requests.baseURL = <span class="string">"http://quasar-framework.org/api/"</span>;</span><br></pre></td></tr></table></figure></p>
+<h1 id="Global_Failure_Handler" class="article-heading">Global Failure Handler<a class="article-anchor" href="#Global_Failure_Handler" aria-hidden="true"></a></h1><p>Specify a global failure handler for times when (as an example) you return a specific HTTP code if user is not authenticated.<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">quasar.config.requests.failFnHandler = <span class="function"><span class="keyword">function</span><span class="params">(jqXHR, textStatus, errorThrown)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (jqXHR.status &amp;&amp; jqXHR.status == <span class="number">401</span>) &#123;</span><br><span class="line">    <span class="comment">// user is not authenticated... give the user a message or redirect the UI</span></span><br><span class="line">    ......</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>You can <code>return true;</code> if you want to override the request’s own failure handler(s).</p>
+<h1 id="Request_Cache" class="article-heading">Request Cache<a class="article-anchor" href="#Request_Cache" aria-hidden="true"></a></h1><p>Cache response for GET requests (only) using <code>cachable</code> property:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">quasar</span><span class="class">.make</span><span class="class">.a</span><span class="class">.get</span><span class="class">.request</span>(<span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">url</span>:<span class="value"> <span class="string">'/articles.php'</span>,</span><br><span class="line">  cachable: true</span><br><span class="line">&#125;)</span></span>;</span></span><br></pre></td></tr></table></figure></p>
+<p>You can also configure all GET requests to be cached by default, so you won’t have to specify <code>cachable</code> property:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">quasar.config.requests.use.<span class="operator"><span class="keyword">cache</span> = <span class="literal">false</span>;</span></span><br></pre></td></tr></table></figure></p>
+<p>At some point you may want to invalidate the cache for all requests:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">quasar</span><span class="class">.reset</span><span class="class">.requests</span><span class="class">.cache</span>();</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><strong>NOTE</strong><br>By default, all GET requests are configured to cache their response, because <code>quasar.config.requests.use.cache</code> is <code>true</code> by default.</p>
+</blockquote>
+<h1 id="Group_Requests" class="article-heading">Group Requests<a class="article-anchor" href="#Group_Requests" aria-hidden="true"></a></h1><p>Sometimes you need to wait for multiple requests until you proceed further:<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">quasar.make.a.group.request(</span><br><span class="line">  quasar.make.a.get.request(<span class="decorator">&#123;...&#125;</span>).done(...),</span><br><span class="line">  quasar.make.a.del.request(<span class="decorator">&#123;...&#125;</span>).done(...),</span><br><span class="line">  quasar.make.a.get.request(<span class="decorator">&#123;...&#125;</span>).done(...)</span><br><span class="line">).done(function() &#123;</span><br><span class="line">  // all calls ended <span class="keyword">with</span> success</span><br><span class="line">&#125;).fail(function() &#123;</span><br><span class="line">  // at least one call failed</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h1 id="Request_Store" class="article-heading">Request Store<a class="article-anchor" href="#Request_Store" aria-hidden="true"></a></h1><p>Sometimes you need to make multiple calls using the same request properties:<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> store = quasar.get.store(<span class="decorator">&#123;...common...request...properties...&#125;</span>);</span><br><span class="line"></span><br><span class="line">store.make.a.get.request(<span class="decorator">&#123;...override...some/all...of...the...common...request...properties...&#125;</span>);</span><br><span class="line">store.make.a.put.request(<span class="decorator">&#123;...override...some/all...of...the...common...request...properties...&#125;</span>);</span><br><span class="line">store.make.a.post.request(<span class="decorator">&#123;...override...some/all...of...the...common...request...properties...&#125;</span>);</span><br><span class="line">store.make.a.del.request(<span class="decorator">&#123;...override...some/all...of...the...common...request...properties...&#125;</span>);</span><br></pre></td></tr></table></figure></p>
+<h1 id="Aborting_Requests" class="article-heading">Aborting Requests<a class="article-anchor" href="#Aborting_Requests" aria-hidden="true"></a></h1><p>Sometimes you need to halt a request before it is finished:<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> request = quasar<span class="built_in">.</span>make<span class="built_in">.</span>a<span class="built_in">.</span>get<span class="built_in">.</span>request(<span class="attribute">...</span>);</span><br><span class="line"><span class="attribute">...</span></span><br><span class="line">request<span class="built_in">.</span><span class="keyword">abort</span>();</span><br></pre></td></tr></table></figure></p>
+<p>Or you may want to halt ALL requests in progress:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">quasar</span><span class="class">.abort</span><span class="class">.all</span><span class="class">.requests</span>();</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><strong>NOTE</strong><br>When aborting all requests, you may want to exclude some of them. For this, use the <code>persistent</code> property when making those particular requests.</p>
+</blockquote>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2015-10-19T13:36:17.589Z" itemprop="dateModified">Last update: 2015-10-19</time>
+                <a href="quasar-router.html" class="article-footer-prev" title="Previous: quasar-router.html"><i class="fa fa-chevron-left"></i><span>router</span></a>
+              </footer>
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Page Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Getting_Started"><span class="toc-text">Getting Started</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Making_a_Request"><span class="toc-text">Making a Request</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Request_Properties"><span class="toc-text">Request Properties</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Request_Outcome"><span class="toc-text">Request Outcome</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Configuring_Requests"><span class="toc-text">Configuring Requests</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Global_Failure_Handler"><span class="toc-text">Global Failure Handler</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Request_Cache"><span class="toc-text">Request Cache</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Group_Requests"><span class="toc-text">Group Requests</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Request_Store"><span class="toc-text">Request Store</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Aborting_Requests"><span class="toc-text">Aborting Requests</span></a></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">Start</strong><a href="index.html" class="sidebar-link">Overview</a><strong class="sidebar-title">Core</strong><a href="quasar-environment.html" class="sidebar-link">Environment</a><a href="quasar-debug-helpers.html" class="sidebar-link">Debug helpers</a><a href="quasar-router.html" class="sidebar-link">Router</a><a href="quasar-ajax-requests.html" class="sidebar-link current">Ajax requests</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2015 <strong>Razvan Stoenescu</strong><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/quasarframework" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/rstoenescu/quasar-framework" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="/docs/" class="mobile-nav-link">Docs</a></li><li class="mobile-nav-item"><a href="/api/" class="mobile-nav-link">Api</a></li><li class="mobile-nav-item"><a href="/news/" class="mobile-nav-link">News</a></li>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/rstoenescu/quasar-framework" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">Start</strong><a href="index.html" class="mobile-nav-link">Overview</a><strong class="mobile-nav-title">Core</strong><a href="quasar-environment.html" class="mobile-nav-link">Environment</a><a href="quasar-debug-helpers.html" class="mobile-nav-link">Debug helpers</a><a href="quasar-router.html" class="mobile-nav-link">Router</a><a href="quasar-ajax-requests.html" class="mobile-nav-link current">Ajax requests</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span></span></span>
+    <select id="mobile-lang-select" data-canonical="api/quasar-ajax-requests.html">
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/toc.js" type="text/javascript"></script>
+<script src="/js/mobile_nav.js" type="text/javascript"></script>
+<!-- endbuild -->
+<script src="//cdn.jsdelivr.net/retinajs/1.1.0/retina.min.js" async></script>
+
+<!-- Swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
+
+  _st('install','');
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+    }, false);
+  </script>
+</body>
+</html>
