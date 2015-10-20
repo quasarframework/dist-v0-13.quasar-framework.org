@@ -3,7 +3,7 @@
   
   <url>
     <loc>http://0.0.0.0:4000/api/quasar-web-storage-api.html</loc>
-    <lastmod>2015-10-20T18:40:21.994Z</lastmod>
+    <lastmod>2015-10-20T19:16:14.954Z</lastmod>
   </url>
   
   <url>
@@ -32,7 +32,7 @@
   </url>
   
   <url>
-    <loc>http://0.0.0.0:4000/docs/cli-commands.html</loc>
+    <loc>http://0.0.0.0:4000/guide/cli-commands.html</loc>
     <lastmod>2015-10-18T16:56:10.269Z</lastmod>
   </url>
   
@@ -42,22 +42,22 @@
   </url>
   
   <url>
-    <loc>http://0.0.0.0:4000/docs/installation.html</loc>
+    <loc>http://0.0.0.0:4000/guide/installation.html</loc>
     <lastmod>2015-10-09T13:33:44.072Z</lastmod>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:4000/docs/quick-start.html</loc>
+    <loc>http://0.0.0.0:4000/guide/quick-start.html</loc>
     <lastmod>2015-10-09T13:32:50.716Z</lastmod>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:4000/docs/index.html</loc>
+    <loc>http://0.0.0.0:4000/guide/index.html</loc>
     <lastmod>2015-10-09T12:02:57.096Z</lastmod>
   </url>
   
   <url>
-    <loc>http://0.0.0.0:4000/docs/commit-message-format.html</loc>
+    <loc>http://0.0.0.0:4000/guide/commit-message-format.html</loc>
     <lastmod>2015-10-09T09:30:29.963Z</lastmod>
   </url>
   
