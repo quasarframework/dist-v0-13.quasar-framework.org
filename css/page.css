@@ -204,6 +204,28 @@ a.button:hover {
   padding: 0 60px 30px;
   overflow-x: hidden;
 }
+#toTop {
+  transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  opacity: 0.5;
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 7px;
+  background-color: #ddd;
+  color: #666;
+  border-radius: 7px;
+}
+#toTop.visible {
+  display: block;
+}
+#toTop:hover {
+  opacity: 1;
+}
 .content.blog h1 {
   margin: 0 0 0.5em;
 }
