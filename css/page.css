@@ -584,7 +584,7 @@ a.button:hover {
     padding: 2em 1.4em 0;
   }
   .highlight pre {
-    padding: 1.2em 1em;
+    padding: 0;
   }
   .sidebar {
     position: fixed;
@@ -625,11 +625,14 @@ a.button:hover {
 }
 .content table th,
 .content table td {
-  padding: 5px 15px;
+  padding: 13px 15px;
 }
 .content table tr:nth-child(2n) {
   background: #eee;
 }
 .content figure table {
   border: 0;
+}
+.content .highlight pre {
+  padding: 0;
 }
