@@ -34,7 +34,7 @@ pre .symbol,
 pre .symbol .string,
 pre .value,
 pre .regexp {
-  color: #38b0de;
+  color: #7883db;
 }
 pre .title {
   color: #a6e22e;
@@ -63,7 +63,7 @@ pre .apache .tag,
 pre .apache .cbracket,
 pre .tex .command,
 pre .prompt {
-  color: #38b0de;
+  color: #7883db;
 }
 pre .comment,
 pre .java .annotation,
@@ -135,14 +135,14 @@ a.button {
   font-family: 'Roboto Mono', Monaco, courier, monospace;
   font-weight: 700;
   color: #fff;
-  background-color: #48b6e1;
-  border-bottom: 2px solid #23a1d2;
+  background-color: #838dde;
+  border-bottom: 2px solid #5866d2;
   padding: 12px 14px;
   border-radius: 4px;
   transition: all 0.15s ease;
 }
 a.button:hover {
-  background-color: #56bce3;
+  background-color: #8c96e0;
   -webkit-transform: translate(0, -2px);
   transform: translate(0, -2px);
 }
@@ -264,7 +264,7 @@ body {
 }
 .nav-link:hover,
 .nav-link.current {
-  border-bottom: 3px solid #38b0de;
+  border-bottom: 3px solid #7883db;
 }
 #logo {
   display: block;
@@ -353,14 +353,14 @@ body {
   margin: 0.4em 0;
 }
 #features .feat a {
-  color: #38b0de;
+  color: #7883db;
   font-weight: 600;
 }
 #footer {
   text-align: center;
   color: #fff;
   padding: 4em 0;
-  background-color: #38b0de;
+  background-color: #7883db;
 }
 #footer .avatar {
   width: 100px;
