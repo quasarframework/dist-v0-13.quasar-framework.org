@@ -151,7 +151,7 @@ a.button:hover {
   position: relative;
   padding: 0;
   background-color: #f8f8f8;
-  padding: 0.8em 0.8em 0.4em;
+  padding: 0.8em;
   line-height: 1.1em;
   border-radius: 7px;
 }
@@ -459,6 +459,16 @@ a.button:hover {
   left: -1em;
   top: -2px;
   font-size: 1.2em;
+  font-weight: bold;
+}
+.content h1:hover:after,
+.content h2:hover:after,
+.content h3:hover:after,
+.content h4:hover:after,
+.content h5:hover:after,
+.content h6:hover:after {
+  content: " #";
+  color: #38b0de;
   font-weight: bold;
 }
 .content figure,
