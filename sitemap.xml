@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/installation.html</loc>
+    <lastmod>2015-11-10T21:05:31.326Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/index.html</loc>
+    <lastmod>2015-11-10T20:17:32.346Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-build-process.html</loc>
+    <lastmod>2015-11-10T20:16:26.306Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/writing-quasar-page.html</loc>
+    <lastmod>2015-11-10T20:05:52.683Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-app-structure.html</loc>
+    <lastmod>2015-11-10T19:33:08.063Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/cli-commands.html</loc>
+    <lastmod>2015-11-10T18:35:20.719Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/api/index.html</loc>
+    <lastmod>2015-11-09T18:26:28.390Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/api/quasar-ajax-requests.html</loc>
+    <lastmod>2015-11-09T18:26:26.134Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/api/quasar-cookies.html</loc>
+    <lastmod>2015-11-09T18:26:24.414Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/api/quasar-debug-helpers.html</loc>
+    <lastmod>2015-11-09T18:26:22.782Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/api/quasar-environment.html</loc>
+    <lastmod>2015-11-09T18:26:20.834Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/api/quasar-require.html</loc>
+    <lastmod>2015-11-09T18:26:19.062Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/api/quasar-router.html</loc>
+    <lastmod>2015-11-09T18:26:17.334Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/api/quasar-web-storage-api.html</loc>
+    <lastmod>2015-11-09T18:26:15.454Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/commit-message-format.html</loc>
+    <lastmod>2015-11-09T18:26:09.594Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quick-start.html</loc>
+    <lastmod>2015-11-09T18:26:02.998Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/blog/index.html</loc>
+    <lastmod>2015-10-22T01:02:15.961Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/index.html</loc>
+    <lastmod>2015-10-21T13:28:02.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/2015/10/02/Working-On-The-First-Release/</loc>
+    <lastmod>2015-10-02T13:35:36.864Z</lastmod>
+  </url>
+  
+</urlset>
