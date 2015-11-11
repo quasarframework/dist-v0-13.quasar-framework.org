@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://quasar-framework.org/guide/writing-quasar-page.html</loc>
+    <lastmod>2015-11-11T17:50:13.305Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-app-structure.html</loc>
+    <lastmod>2015-11-11T17:37:28.669Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://quasar-framework.org/guide/quasar-build-process.html</loc>
     <lastmod>2015-11-11T04:45:46.501Z</lastmod>
   </url>
@@ -12,18 +22,8 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/guide/quasar-app-structure.html</loc>
-    <lastmod>2015-11-11T01:54:44.746Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/guide/quasar-app-starting-point.html</loc>
     <lastmod>2015-11-11T00:56:16.194Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/writing-quasar-page.html</loc>
-    <lastmod>2015-11-11T00:56:11.618Z</lastmod>
   </url>
   
   <url>
