@@ -84,7 +84,6 @@
       <title><![CDATA[Quick Start]]></title>
       <url>http://quasar-framework.org/guide/quick-start.html</url>
       <content type="html"><![CDATA[<p>Create a project folder (in this case is called <em>q-project</em> but you can name it whatever you want):<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar new q-project</span><br><span class="line">$ <span class="built_in">cd</span> q-project</span><br></pre></td></tr></table></figure></p>
-<p>Finally install local project dependencies:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure></p>
 <p>You’re all set now. You can start developing your application.</p>
 ]]></content>
     </entry>
@@ -361,8 +360,9 @@
     <entry>
       <title><![CDATA[CLI Commands]]></title>
       <url>http://quasar-framework.org/guide/cli-commands.html</url>
-      <content type="html"><![CDATA[<h2 id="Version">Version</h2><p>Displays version information.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar -V</span><br><span class="line">$ quasar version</span><br></pre></td></tr></table></figure></p>
-<h2 id="Help">Help</h2><p>Displays list of all commands and options.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar</span><br><span class="line">$ quasar -h</span><br></pre></td></tr></table></figure></p>
+      <content type="html"><![CDATA[<h2 id="Options">Options</h2><h3 id="Version">Version</h3><p>Displays version information.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar -V</span><br><span class="line">$ quasar version</span><br></pre></td></tr></table></figure></p>
+<h3 id="Help">Help</h3><p>Displays list of all commands and options.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar</span><br><span class="line">$ quasar -h</span><br></pre></td></tr></table></figure></p>
+<h3 id="Verbose_Mode">Verbose Mode</h3><p>If you want to get more information on what’s going on (for example when building App), turn on the debug flag (<code>-d</code> option):<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar <span class="operator">-d</span> ..........</span><br></pre></td></tr></table></figure></p>
 <h2 id="Create_App_Folder">Create App Folder</h2><p>Initializes a project folder with everything necessary.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar new [folder-name]</span><br></pre></td></tr></table></figure></p>
 <h2 id="Build">Build</h2><h3 id="For_development">For development</h3><p>Generates a folder called <code>/build</code> which contains sourcemaps and everything needed to debug.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar build</span><br></pre></td></tr></table></figure></p>
 <p>For more details to see what this does go to <a href="/guide/quasar-build-process.html">Build Process</a> and <a href="/guide/quasar-app-structure.html">App Structure</a>.</p>
@@ -382,11 +382,11 @@
 <h3 id="Rename_Page">Rename Page</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar rename:page [page-name]</span><br></pre></td></tr></table></figure>
 <h3 id="Remove_Page">Remove Page</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar remove:page [page-name]</span><br></pre></td></tr></table></figure>
 <h2 id="Making_a_Release">Making a Release</h2><blockquote>
-<p><strong>NOTE</strong> This is not yet available.</p>
+<p><strong>NOTE</strong>: This is not yet available.</p>
 </blockquote>
 <p>Versioning takes into account the Angular commit style.<br>See <a href="commit-message-format.html">Commit Message Format</a>.</p>
-<h3 id="release:recommend">release:recommend</h3><p>Recommends the type of version bump, which can be: <code>patch</code>, <code>minor</code> or <code>major</code>.<br>The recommendation is based on the commit message style. See <a href="commit-message-format.html">Commit Message Format</a>.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar release:recommend</span><br></pre></td></tr></table></figure></p>
-<h3 id="release_&lt;type&gt;">release <em>&lt;type&gt;</em></h3><p><code>type</code> can be: prepatch, path, preminor, minor, premajor, major, prerelease<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar release minor</span><br></pre></td></tr></table></figure></p>
+<h3 id="Recommend_Release_Type">Recommend Release Type</h3><p>Recommends the type of version bump, which can be: <code>patch</code>, <code>minor</code> or <code>major</code>.<br>The recommendation is based on the commit message style. See <a href="commit-message-format.html">Commit Message Format</a>.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar release:recommend</span><br></pre></td></tr></table></figure></p>
+<h3 id="Release_Version_Type">Release Version Type</h3><p><code>type</code> can be: prepatch, path, preminor, minor, premajor, major, prerelease<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar release minor</span><br></pre></td></tr></table></figure></p>
 <p>What it does is:</p>
 <ul>
 <li>Bumps package version according to the <em>type</em></li>
@@ -395,7 +395,7 @@
 <li>Generates a GIT tag named “v<code>VERSION</code>“</li>
 <li>Pushes commit and tag to GIT</li>
 </ul>
-<h3 id="release:version_&lt;version&gt;">release:version <em>&lt;version&gt;</em></h3><p>If however you want to release a specific version, use this command:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar release:version <span class="number">1.2</span>.<span class="number">3</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Release_a_Specific_Version">Release a Specific Version</h3><p>If however you want to release a specific version, use this command:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar release:version <span class="number">1.2</span>.<span class="number">3</span></span><br></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
     
