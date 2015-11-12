@@ -35,6 +35,39 @@
 <blockquote>
 <p>Include other JS files for modularity by <em>require()</em>-ing them. Take full advantage of Webpack.<br>Read more about the <a href="/guide/quasar-build-process.html">Build Process</a> to understand.</p>
 </blockquote>
+<h3 id="Page_Events">Page Events</h3><p>There are global events registered for each step of the way when a user navigates to a page. See <a href="/api/quasar-events.html#Global_Events_Emitter">Quasar Events Global Emitter</a> if you haven’t already.</p>
+<table>
+<thead>
+<tr>
+<th>Event Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app:page:requiring</td>
+<td>Triggered right before requiring page Javascript</td>
+</tr>
+<tr>
+<td>app:page:preparing</td>
+<td>Triggered before calling page - prepare()</td>
+</tr>
+<tr>
+<td>app:page:scoping</td>
+<td>Triggered before calling page - scope()</td>
+</tr>
+<tr>
+<td>app:page:rendering</td>
+<td>Triggered before calling page - render()</td>
+</tr>
+<tr>
+<td>app:page:ready</td>
+<td>Triggered when page has fully loaded</td>
+</tr>
+</tbody>
+</table>
+<p>All these events are triggered regardless of the fact that the page script has the respective methods or not.</p>
+<p>Usage example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.global.events.on(<span class="string">'app:page:ready'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// props.params, props.query, props.name, props.manifest, props.route, ... available</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 <h2 id="Page_Manifest">Page Manifest</h2><p>Provide page specific configuration (in YAML format), called <em>Manifest</em> in <code>/pages/*page-name*/config.*page-name*.yml</code>.</p>
 <h3 id="HTML_&amp;_CSS_Properties">HTML &amp; CSS Properties</h3><p>These get computed by default if CSS and HTML main page files exists, but they can be overridden to point to other files. The path must start with the folder where app root <em>index.html</em> file exists.<br><figure class="highlight"><table><tr><td class="code"><pre><span class="line">css: &#39;path/to/css&#39;&#10;html: &#39;path/to/html&#39;</span><br></pre></td></tr></table></figure></p>
 <h3 id="Page_Routes_Properties">Page Routes Properties</h3><p>One more important property is <code>hashes</code>, which is an array of hashes for the respective page. Example:<br><figure class="highlight"><table><tr><td class="code"><pre><span class="line"># config.book.yml&#10;&#10;hashes:&#10;  - &#39;$&#39; # registers #/book route (because &#39;book&#39; is the name of the page)&#10;  - &#39;:chapter/:page&#39; # adds this.params.chapter &#38; this.params.page from page methods</span><br></pre></td></tr></table></figure></p>
@@ -278,7 +311,7 @@
 <blockquote>
 <p><strong>Standalone download not yet available</strong></p>
 </blockquote>
-<p><a href="<%- config.root %>guide/installation.html" class="button">Development build</a> &nbsp;&nbsp;<em>With sourcemaps, log messages and debug mode</em><br><a href="<%- config.root %>guide/installation.html" class="button">Production build</a> &nbsp;&nbsp;<em>Minified, no logs</em></p>
+<p><a href="<%- config.root %>guide/installation.html" class="button">Download Latest Stable</a></p>
 <p>Compatible with CommonJS2 and AMD loaders, but works without those too.</p>
 ]]></content>
     </entry>
@@ -496,6 +529,30 @@
 </ul>
 <h3 id="Usage-1">Usage</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Injecting globally</span></span><br><span class="line">quasar.inject.global.css(URL);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Injecting per-page</span></span><br><span class="line">quasar.inject.page.css(URL);</span><br></pre></td></tr></table></figure>
 <p>Removing injected CSS:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Removing globally injected CSS</span></span><br><span class="line">quasar.clear.global.css();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Removing page injected CSS</span></span><br><span class="line">quasar.clear.page.css();</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar Events]]></title>
+      <url>http://quasar-framework.org/api/quasar-events.html</url>
+      <content type="html"><![CDATA[<p>Events are important for the inner workings of your App and also for writing Quasar Plugins.<br>Sometimes you need an event bus or a publish/subscribe channel. An emitter solves this need.</p>
+<h2 id="Creating_an_Emitter">Creating an Emitter</h2><p>We call an emitter an object who is capable of registering and triggering events.</p>
+<p>There are two ways to create one:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// create a new Object</span></span><br><span class="line"><span class="keyword">var</span> emitter = quasar.create.events.emitter();</span><br><span class="line"></span><br><span class="line"><span class="comment">// make existing Object an emitter</span></span><br><span class="line"><span class="keyword">var</span> object = &#123;...&#125;;</span><br><span class="line">quasar.make.events.emitter(object);</span><br></pre></td></tr></table></figure></p>
+<h3 id="Check_if_Object_is_Emitter">Check if Object is Emitter</h3><p>You can also check if an object is an emitter:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> someObject = &#123;...&#125;;</span><br><span class="line"><span class="keyword">var</span> isEmitter = quasar.is.events.emitter(someObject);</span><br></pre></td></tr></table></figure></p>
+<h3 id="Global_Events_Emitter">Global Events Emitter</h3><p>There is a global events emitter already available for you to use: <code>quasar.global.events</code>. For this emitter it is highly recommended to only register callbacks for existing events and not create new events.</p>
+<h2 id="Emitter_Methods">Emitter Methods</h2><h3 id="Registering_an_Event">Registering an Event</h3><p><code>emitter.on(String eventName, Function callback[, Object context])</code></p>
+<p>Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> context = &#123;...&#125;; <span class="comment">// will be used as *this* within callback</span></span><br><span class="line">emitter.on(<span class="string">'event-name'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">param1, param2, ...paramN</span>) </span>&#123; ... &#125;, context);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Callback parameters (param1, ...paramN) are determined when triggering the event</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Removing_an_Event">Removing an Event</h3><p><code>emitter.off(String eventName[, Function callback])</code></p>
+<p>Example of unregistering an event:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">emitter.off(<span class="string">'event-name'</span>);</span><br><span class="line"><span class="comment">// 'event-name' does no longer has any callbacks</span></span><br></pre></td></tr></table></figure></p>
+<p>Example of unregistering a specific callback for an event:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> callback = <span class="function"><span class="keyword">function</span>(<span class="params">...</span>) </span>&#123;...&#125;;</span><br><span class="line">emitter.on(<span class="string">'event-name'</span>, callback);</span><br><span class="line">emitter.off(<span class="string">'event-name'</span>, callback);</span><br><span class="line"><span class="comment">// 'event-name' still exists, but does not contain the above callback anymore</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Registering_an_Event_Only_Once">Registering an Event Only Once</h3><p><code>emitter.once(String eventName, Function callback[, Object context])</code></p>
+<p>Sometimes you need to trigger a callback only once.<br>Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> callback = <span class="function"><span class="keyword">function</span>(<span class="params">...</span>) </span>&#123;...&#125;;</span><br><span class="line">emitter.once(<span class="string">'event-name'</span>, callback);</span><br><span class="line"><span class="comment">// callback will be triggered only once</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Triggering_an_Event">Triggering an Event</h3><p><code>emitter.trigger(String eventName)</code></p>
+<p>Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">emitter.trigger(<span class="string">'event-name'</span>);</span><br><span class="line"><span class="comment">// All callbacks associated with 'event-name' will be triggered</span></span><br><span class="line"><span class="comment">// in the order that they were registered.</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Checking_if_Event_is_Registered">Checking if Event is Registered</h3><p><code>Boolean emitter.hasEvent(String eventName[, Function callback])</code></p>
+<p>Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Check if 'event-name' has any callbacks associated</span></span><br><span class="line"><span class="keyword">var</span> exists = emitter.hasEvent(<span class="string">'event-name'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Check if a callback is registered with 'event-name':</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;...&#125;;</span><br><span class="line"><span class="keyword">var</span> exists = emitter.hasEvent(<span class="string">'event-name'</span>, myFunction);</span><br></pre></td></tr></table></figure></p>
+<h3 id="Getting_List_of_Events">Getting List of Events</h3><p><code>Array emitter.getEventsList()</code></p>
+<p>Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> eventsList = emitter.getEventsList();</span><br></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
     
