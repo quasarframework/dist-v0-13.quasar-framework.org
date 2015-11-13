@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://quasar-framework.org/api/quasar-events.html</loc>
+    <lastmod>2015-11-13T00:25:52.166Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://quasar-framework.org/guide/quick-start.html</loc>
     <lastmod>2015-11-12T21:04:58.582Z</lastmod>
   </url>
@@ -14,11 +19,6 @@
   <url>
     <loc>http://quasar-framework.org/guide/writing-quasar-page.html</loc>
     <lastmod>2015-11-12T18:50:48.093Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/api/quasar-events.html</loc>
-    <lastmod>2015-11-12T18:39:42.173Z</lastmod>
   </url>
   
   <url>
