@@ -2,13 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://quasar-framework.org/guide/cli-commands.html</loc>
-    <lastmod>2015-11-18T15:12:34.959Z</lastmod>
+    <loc>http://quasar-framework.org/guide/writing-quasar-page.html</loc>
+    <lastmod>2015-11-18T15:28:54.791Z</lastmod>
   </url>
   
   <url>
     <loc>http://quasar-framework.org/guide/contributing-to-quasar.html</loc>
-    <lastmod>2015-11-18T15:07:32.139Z</lastmod>
+    <lastmod>2015-11-18T15:14:39.863Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/cli-commands.html</loc>
+    <lastmod>2015-11-18T15:12:34.959Z</lastmod>
   </url>
   
   <url>
@@ -29,11 +34,6 @@
   <url>
     <loc>http://quasar-framework.org/guide/quasar-build-process.html</loc>
     <lastmod>2015-11-18T13:29:12.396Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/writing-quasar-page.html</loc>
-    <lastmod>2015-11-18T13:27:51.114Z</lastmod>
   </url>
   
   <url>
