@@ -2,13 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://quasar-framework.org/guide/writing-quasar-page.html</loc>
-    <lastmod>2015-11-17T22:37:55.150Z</lastmod>
+    <loc>http://quasar-framework.org/guide/cli-commands.html</loc>
+    <lastmod>2015-11-18T15:12:34.959Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/contributing-to-quasar.html</loc>
+    <lastmod>2015-11-18T15:07:32.139Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-app-configuration.html</loc>
+    <lastmod>2015-11-18T13:41:30.384Z</lastmod>
   </url>
   
   <url>
     <loc>http://quasar-framework.org/guide/quasar-app-structure.html</loc>
-    <lastmod>2015-11-17T22:36:29.754Z</lastmod>
+    <lastmod>2015-11-18T13:40:05.696Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/installation.html</loc>
+    <lastmod>2015-11-18T13:34:42.412Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-build-process.html</loc>
+    <lastmod>2015-11-18T13:29:12.396Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/writing-quasar-page.html</loc>
+    <lastmod>2015-11-18T13:27:51.114Z</lastmod>
   </url>
   
   <url>
@@ -17,23 +42,8 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/guide/quasar-build-process.html</loc>
-    <lastmod>2015-11-17T22:12:14.526Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/guide/quasar-app-starting-point.html</loc>
     <lastmod>2015-11-17T22:08:41.182Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/cli-commands.html</loc>
-    <lastmod>2015-11-17T22:01:38.846Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/installation.html</loc>
-    <lastmod>2015-11-17T21:56:43.178Z</lastmod>
   </url>
   
   <url>
