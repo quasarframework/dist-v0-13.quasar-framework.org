@@ -318,7 +318,7 @@
     <entry>
       <title><![CDATA[What is Quasar?]]></title>
       <url>http://quasar-framework.org/guide/index.html</url>
-      <content type="html"><![CDATA[<p>Quasar is a moderm HTML5 SPA (Single Page Application) front-end framework on steroids.<br>Some of its features:</p>
+      <content type="html"><![CDATA[<p>Quasar is a modern HTML5 SPA (Single Page Application) front-end framework on steroids.<br>Some of its features:</p>
 <h3 id="Desktop_&amp;_Mobile_App">Desktop &amp; Mobile App</h3><p>Write code once and then deploy as a responsive website or as a phone/tablet app. No need to waste time on HOW your content is displayed.. just focus on what your content is.</p>
 <h3 id="Focus_on_Content">Focus on Content</h3><p>Quasar is a time-saver from many perspectives. You don’t have to worry about a lot of things, including how your content is being displayed to best leverages the screen real-estate. The built-in components are responsive by default.</p>
 <h3 id="Built_for_Speed">Built for Speed</h3><p>Quasar Framework has a lot of optimizations behind the scenes to make your App run really fast (and consume the lowest possible battery power) by using the integrated Build system described below.</p>
