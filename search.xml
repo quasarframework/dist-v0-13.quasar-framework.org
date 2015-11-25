@@ -76,7 +76,7 @@
 <p>Usage example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.global.events.on(<span class="string">'app:page:ready'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// props.params, props.query, props.name, props.manifest, props.route, ... available</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 <h2 id="HTML">HTML</h2><p>The Quasar App Pages’ HTML is a Vue instance. Read more about the <a href="/guide/quasar-build-process.html#HTML_Files">Build Process</a> to understand.</p>
 <h2 id="CSS">CSS</h2><p>Notice that all CSS files have the <em>.styl</em> extension. This is because you can use  Stylus (with NIB). Read more about the <a href="/guide/quasar-build-process.html">Build Process</a> to understand.</p>
-<h2 id="Assets">Assets</h2><p>Place all your page assets (images, fonts, …) inside the <code>/pages/*page-name*/assets/</code> folder.</p>
+<h2 id="Assets">Assets</h2><p>Place all your page assets (images, fonts, …) inside the <code>/pages/*page-name*/assets/</code> folder.<br>Images get optimized by default on a production build.</p>
 ]]></content>
     </entry>
     
@@ -112,6 +112,7 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">// view.html:</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">h1</span>&gt;</span>view<span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">// var.html:</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">label</span>&gt;</span>@@name<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">label</span>&gt;</span>@@age<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">strong</span>&gt;</span>@@socials.fb<span class="tag">&lt;/<span class="title">strong</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">strong</span>&gt;</span>@@socials.tw<span class="tag">&lt;/<span class="title">strong</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">// ... and it gets compiled to:</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">h1</span>&gt;</span>view<span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">label</span>&gt;</span>rstoenescu<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">label</span>&gt;</span>12345<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">strong</span>&gt;</span>facebook.com/include<span class="tag">&lt;/<span class="title">strong</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">strong</span>&gt;</span>twitter.com/include<span class="tag">&lt;/<span class="title">strong</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Image_Files">Image Files</h3><p>Image files should be placed under <code>assets</code> folders. By default, on a production build, <code>GIF</code>, <code>JPEG</code>, <code>PNG</code> and <code>SVG</code> image files get “minified” without losing noticeable quality.</p>
 ]]></content>
     </entry>
     
@@ -300,7 +301,7 @@
 <h3 id="‘preview’_property">‘preview’ property</h3><p><a href="/guide/cli-commands.html#Live_Preview">Live Preview</a> configuration. Read more about configuration properties  <a href="http://www.browsersync.io/docs/options/" target="_blank" rel="external">here</a>. Example of default configuration which is merged with user specific one:<br><figure class="highlight"><table><tr><td class="code"><pre><span class="line">preview:&#10;  port: 3000&#10;  ui:&#10;    port: 3001&#10;  open: false&#10;  reloadOnRestart: true</span><br></pre></td></tr></table></figure></p>
 <h3 id="‘rpreview’_property">‘rpreview’ property</h3><p><a href="/guide/cli-commands.html#Live_Preview_with_Responsive_View">Live Preview with Responsive View</a> configuration. Read more about configuration properties <a href="http://www.browsersync.io/docs/options/" target="_blank" rel="external">here</a>. Example of default configuration which is merged with user specific one:<br><figure class="highlight"><table><tr><td class="code"><pre><span class="line">rpreview:&#10;  port: 3100&#10;  ui: false&#10;  open: false&#10;  ghostMode: true&#10;  reloadOnRestart: true</span><br></pre></td></tr></table></figure></p>
 <h3 id="‘banner’_property">‘banner’ property</h3><p>Read more how to configure <a href="https://github.com/rstoenescu/gulp-pipes#banner" target="_blank" rel="external">here</a>. Example of configuration:<br><figure class="highlight"><table><tr><td class="code"><pre><span class="line">banner:&#10;  templatePath: &#39;...&#39;&#10;  variables:&#10;    ...&#10;    ...</span><br></pre></td></tr></table></figure></p>
-<h3 id="‘test’_property">‘test’ property</h3><p>This property overrides any of the <a href="https://github.com/rstoenescu/quasar-cli/blob/master/lib/gulp/gulp-config.js#L119-L208" target="_blank">default Karma configuration</a> options.<br>See the full list of <a href="http://karma-runner.github.io/0.8/config/configuration-file.html" target="_blank">Karma configuration properties</a> that you can use.</p>
+<h3 id="‘test’_property">‘test’ property</h3><p>This property overrides any of the <a href="https://github.com/rstoenescu/quasar-cli/blob/master/lib/gulp/gulp-config.js#L123-L212" target="_blank">default Karma configuration</a> options.<br>See the full list of <a href="http://karma-runner.github.io/0.8/config/configuration-file.html" target="_blank">Karma configuration properties</a> that you can use.</p>
 ]]></content>
     </entry>
     
@@ -317,15 +318,18 @@
     <entry>
       <title><![CDATA[What is Quasar?]]></title>
       <url>http://quasar-framework.org/guide/index.html</url>
-      <content type="html"><![CDATA[<p>Quasar is a SPA front-end framework on steroids. Some of its features:</p>
+      <content type="html"><![CDATA[<p>Quasar is a moderm HTML5 SPA (Single Page Application) front-end framework on steroids.<br>Some of its features:</p>
 <h3 id="Desktop_&amp;_Mobile_App">Desktop &amp; Mobile App</h3><p>Write code once and then deploy as a responsive website or as a phone/tablet app. No need to waste time on HOW your content is displayed.. just focus on what your content is.</p>
 <h3 id="Focus_on_Content">Focus on Content</h3><p>Quasar is a time-saver from many perspectives. You don’t have to worry about a lot of things, including how your content is being displayed to best leverages the screen real-estate. The built-in components are responsive by default.</p>
+<h3 id="Built_for_Speed">Built for Speed</h3><p>Quasar Framework has a lot of optimizations behind the scenes to make your App run really fast (and consume the lowest possible battery power) by using the integrated Build system described below.</p>
 <h3 id="Build_System">Build System</h3><p>Build system out of the box to help you in managing an App folder, precompiling code, bundling it together, preparing it for deployment, running tests, live previewing of your code in browser(s). No need to write even a single line of code for this.</p>
+<p>Trivial tasks like optimizing image files (and much more) are taken care of by default. Just issue Quasar CLI commands.</p>
 <h3 id="Javascript_in_CommonJS_Format">Javascript in CommonJS Format</h3><p>As well as ensuring your code is encapsulated and modular, CommonJS modules give you dependency management, scope isolation, and namespacing. They should be used in any JavaScript application that spans more than a few files. This is why every Quasar App Javascript file must adhere to. Don’t worry about how code is compiled and bundled together because Quasar takes care of it.</p>
 <h3 id="Two-Way_Data_Binding">Two-Way Data Binding</h3><p>Develop reactive UI with two-way data binding. No need to directly touch the DOM.</p>
 <h3 id="Focus_on_Reusable_Code">Focus on Reusable Code</h3><p>Focus on writing reusable web components as (reactive) HTML tags.</p>
-<h3 id="Plugins">Plugins</h3><p>Easy plugin system to enhance Quasar’s abilities. Write your own, share them on Github.</p>
-<h3 id="CLI">CLI</h3><p>CLI available to help you in creating an App folder, building, testing, live previewing and ultimately managing App source code files.</p>
+<h3 id="Web_Components">Web Components</h3><p><strong>There is a rich ecosystem of reactive HTML tags ready to be used provided by default.</strong> Head on to the API to get to know them and use them to write as few lines of code as possible and yet enrich your App with beautifully crafted functionality.</p>
+<p>You want a swipe-responsive sidebar or a menu with tabs, or a card? Use an HTML tag provided by Quasar Framework.</p>
+<h3 id="CLI_(Command_Line_Interface)">CLI (Command Line Interface)</h3><p>CLI available to help you in creating an App folder, building, testing, live previewing and ultimately managing App source code files.</p>
 <h3 id="Enforced_Code_Quality">Enforced Code Quality</h3><p>Code quality is enforced by the built-in code linters and by test system available out of the box.</p>
 <h3 id="Live_Preview">Live Preview</h3><p>Live Preview as you write your code. Open multiple browsers and get them synchronized for click/scroll/form input events. More than that, whenever you change your code, the browsers automatically get refreshed. So forget the F5 button.</p>
 <p>Even more, you have a “Responsive View” too which helps you to quickly switch between different screen sizes in your browser window.</p>
@@ -342,7 +346,6 @@
 <h2 id="Github_Repositories">Github Repositories</h2><ul>
 <li><a href="https://github.com/rstoenescu/quasar-framework" target="_blank">Quasar Framework</a></li>
 <li><a href="https://github.com/rstoenescu/quasar-cli" target="_blank">Quasar CLI</a></li>
-<li><a href="https://github.com/rstoenescu/quasar-semantic" target="_blank">Quasar Semantic UI Build</a></li>
 </ul>
 <h2 id="Issue_Reporting_Guidelines">Issue Reporting Guidelines</h2><ul>
 <li><p>The issue list of the repository is <strong>exclusively</strong> for bug reports and feature requests.</p>
@@ -357,7 +360,7 @@
 </li>
 </ul>
 <h2 id="Pull_Request_Guidelines">Pull Request Guidelines</h2><ul>
-<li><p>Checkout a topic branch from <code>dev</code> and merge back against <code>dev</code>.</p>
+<li><p>Checkout a topic branch from <code>master</code> and merge back against <code>master</code>.</p>
 </li>
 <li><p>Work in the <code>src</code> folder and <strong>DO NOT</strong> checkin <code>/build</code> or <code>/dist</code> in the commits.</p>
 </li>
@@ -375,7 +378,7 @@
 </li>
 <li><p>If fixing a bug:</p>
 <ul>
-<li>Provide detailed description of the bug in the PR. Live demo preferred.</li>
+<li>Provide detailed description of the bug in the PR. Live demo preferred. Use <a href="http://http://plnkr.co" target="_blank">Plunker</a>.</li>
 <li>Add appropriate test coverage if applicable.</li>
 </ul>
 </li>
@@ -389,7 +392,7 @@
 </li>
 <li><p>Return early.</p>
 </li>
-<li><p>1 space after <code>function</code></p>
+<li><p>Notice the spaces when declaring a <code>function</code>:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fnName</span>(<span class="params">param1, param2, ..., paramN</span>) </span>&#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>1 space between arguments, but not between parentheses.</p>
@@ -406,10 +409,12 @@
 <p>Fork Quasar Framework Github repository. Then install all other dependencies.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure></p>
 <p>To monitor source code for changes and rebuild:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ gulp monitor</span><br></pre></td></tr></table></figure></p>
 <p>To watch source code and rebuild automatically while previewing the UI:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># multiple browsers opened to the indicated link will</span></span><br><span class="line"><span class="comment"># have clicks/scrolls/form input events synchronized</span></span><br><span class="line"></span><br><span class="line">$ gulp preview</span><br></pre></td></tr></table></figure></p>
+<p>There’s a <code>/preview</code> folder containing a demo Quasar App which gets previewed in the browser. Change its source to make use of a feature that’s of interest to you.</p>
 <p>There’s also another type of previewing – with a Responsive View (browsers won’t be synchronized). Its purpose is for you to view the UI in a desktop browser and be able to quickly switch between different device screen sizes and orientation.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ gulp rpreview</span><br></pre></td></tr></table></figure></p>
-<p>To make a development build:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># will create the /build folder</span></span><br><span class="line">$ gulp build</span><br></pre></td></tr></table></figure></p>
-<p>To make a production build:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># overwrites the /build folder and creates /dist</span></span><br><span class="line">$ gulp dist</span><br></pre></td></tr></table></figure></p>
-<p>To clean builds folder:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ gulp clean</span><br></pre></td></tr></table></figure></p>
+<p>To make a development build:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># will create the /build and /dist folders</span></span><br><span class="line">$ gulp dev</span><br></pre></td></tr></table></figure></p>
+<p>To make a production build (source minified and optimized for End-User):<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ gulp prod</span><br></pre></td></tr></table></figure></p>
+<p>By default, you can create both development and production builds:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ gulp</span><br></pre></td></tr></table></figure></p>
+<p>To clean <code>/build</code> and <code>/dist</code> folders:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ gulp clean</span><br></pre></td></tr></table></figure></p>
 <p>Testing (one single run only):<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># with all browsers:</span></span><br><span class="line">$ npm <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># with PhantomJS only</span></span><br><span class="line">$ npm run pjs</span><br><span class="line"></span><br><span class="line"><span class="comment"># with Chrome only</span></span><br><span class="line">$ npm run chrome</span><br><span class="line"></span><br><span class="line"><span class="comment"># with Firefox only</span></span><br><span class="line">$ npm run ff</span><br><span class="line"></span><br><span class="line"><span class="comment"># Then check the coverage in HTML coverage:</span></span><br><span class="line">$ npm run coverage</span><br><span class="line"><span class="comment"># --This opens Chrome browser--</span></span><br></pre></td></tr></table></figure></p>
 <p>Watch source code and test on changes (browsers will remain opened):<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># with all browsers:</span></span><br><span class="line">$ npm <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># with PhantomJS only</span></span><br><span class="line">$ npm run pjs-live</span><br><span class="line"></span><br><span class="line"><span class="comment"># with Chrome only</span></span><br><span class="line">$ npm run chrome-live</span><br><span class="line"></span><br><span class="line"><span class="comment"># with Firefox only</span></span><br><span class="line">$ npm run ff-live</span><br></pre></td></tr></table></figure></p>
 ]]></content>
@@ -490,7 +495,9 @@
 <h2 id="Pages">Pages</h2><p>Pages are the core of any Quasar App. Think of a Quasar Page as a webpage which has its own View, Controller and Model.</p>
 <h3 id="Create_Page">Create Page</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar new:page [page-name]</span><br></pre></td></tr></table></figure>
 <h3 id="Rename_Page">Rename Page</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar rename:page [old-page-name] [new-page-name]</span><br></pre></td></tr></table></figure>
-<h3 id="Remove_Page">Remove Page</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar remove:page [page-name]</span><br></pre></td></tr></table></figure>
+<h2 id="Runtime_Information">Runtime Information</h2><p>Display information about your runtime, including operating system, nodejs version, Quasar CLI version and more.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar info</span><br></pre></td></tr></table></figure>
+<p>Output example:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar info</span><br><span class="line"></span><br><span class="line"> Runtime</span><br><span class="line"> Quasar CLI 	 v0.<span class="number">0.18</span></span><br><span class="line"> Node JS 	 v4.<span class="number">2.0</span></span><br><span class="line"></span><br><span class="line"> Operating System</span><br><span class="line"> Architecture 	 x64</span><br><span class="line"> Platform 	 linux</span><br><span class="line"> Release 	 <span class="number">3.19</span>.<span class="number">0</span>-<span class="number">33</span>-generic</span><br></pre></td></tr></table></figure></p>
 <h2 id="Making_a_Release">Making a Release</h2><blockquote>
 <p><strong>NOTE</strong>: This is not yet available.</p>
 </blockquote>
@@ -527,6 +534,8 @@
 <p>Read more <a href="https://ftlabs.github.io/fastclick/" target="_blank">here</a>.</p>
 <h2 id="Semantic_UI">Semantic UI</h2><p>Inspired by Bootstrap &amp; Foundation, but way better. Semantic is a development framework that helps create beautiful, responsive layouts using human-friendly HTML. Semantic UI treats words and classes as exchangeable concepts. Classes use syntax from natural languages like noun/modifier relationships, word order, and plurality to link concepts intuitively.</p>
 <p>Read more <a href="http://semantic-ui.com/" target="_blank">here</a>.</p>
+<h2 id="Apache_Cordova">Apache Cordova</h2><p>Wrap your App in Cordova so it can be installed on a mobile phone. It offers access to native device APIs, which is awesome. It integrates perfectly with Quasar Framework.</p>
+<p>Read more <a href="https://cordova.apache.org/" target="_blank">here</a>.</p>
 ]]></content>
     </entry>
     
@@ -684,12 +693,22 @@
 <tr>
 <td>quasar.runs.on.mobile</td>
 <td>boolean</td>
-<td>Is the code running on a mobile device?</td>
+<td>Is the code running on a mobile device? (Cordova or browser)</td>
 </tr>
 <tr>
 <td>quasar.runs.on.cordova</td>
 <td>boolean</td>
 <td>Is the code running inside Cordova?</td>
+</tr>
+<tr>
+<td>quasar.runs.on.desktop</td>
+<td>boolean</td>
+<td>Is the code running on a desktop browser?</td>
+</tr>
+<tr>
+<td>quasar.runs.on.browser</td>
+<td>boolean</td>
+<td>Is the code running on a browser? (desktop or mobile)</td>
 </tr>
 <tr>
 <td>quasar.runs.with.touch</td>
@@ -699,7 +718,7 @@
 </tbody>
 </table>
 <blockquote>
-<p><strong>Note:</strong> Running on mobile means you can have this code running on a mobile device (phone or tablet) but with a browser, not within a Cordova app.</p>
+<p><strong>Note:</strong> Running on mobile means you can have this code running on a mobile device (phone or tablet) but with a browser, not within a Cordova wrapper.</p>
 </blockquote>
 ]]></content>
     </entry>
@@ -744,7 +763,7 @@
     
     <entry>
       <title><![CDATA[Quasar Ajax Requests]]></title>
-      <url>http://quasar-framework.org/api/quasar-ajax-requests.html</url>
+      <url>http://quasar-framework.org/api/quasar-ajax.html</url>
       <content type="html"><![CDATA[<p>Quasar Ajax Requests are a wrapper over jQuery’s <code>$.ajax()</code> method. There are many features added on top of it.</p>
 <h2 id="Getting_Started">Getting Started</h2><h3 id="Making_a_Request">Making a Request</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// GET request:</span></span><br><span class="line">quasar.make.a.get.request(&#123;url: <span class="string">'...'</span>&#125;)</span><br><span class="line">  .done(<span class="function"><span class="keyword">function</span>(<span class="params">jsonObject</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'data received: '</span>, jsonObject);</span><br><span class="line">  &#125;)</span><br><span class="line">  .fail(<span class="function"><span class="keyword">function</span>(<span class="params">jqXHR, textStatus, errorThrown</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'uh, oh... the request failed...'</span>, errorThrown);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
 <p>Same for PUT, POST, DELETE:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.make.a.put.request(&#123;</span><br><span class="line">  url: ...,</span><br><span class="line">  data: &#123;...&#125;</span><br><span class="line">&#125;);</span><br><span class="line">quasar.make.a.post.request(&#123;</span><br><span class="line">  url: ...,</span><br><span class="line">  data: &#123;...&#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Notice `del` instead of `delete`</span></span><br><span class="line">quasar.make.a.del.request(&#123;...&#125;);</span><br></pre></td></tr></table></figure></p>
