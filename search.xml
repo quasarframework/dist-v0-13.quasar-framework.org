@@ -421,7 +421,6 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = superLongConditionalStatement</span><br><span class="line">  ? <span class="string">'yep'</span></span><br><span class="line">  : <span class="string">'nope'</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="Commit_Message_format">Commit Message format</h2><p>See the <a href="/guide/commit-message-format.html">Commit Message Format</a> section.</p>
 <h2 id="Development_Setup">Development Setup</h2><p>You will need <a href="http://nodejs.org" target="_blank" rel="external">Node.js</a> along NPM.</p>
 <p>Fork Quasar Framework Github repository. Then install all other dependencies.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure></p>
 <p>To monitor source code for changes and rebuild automatically:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ gulp monitor</span><br></pre></td></tr></table></figure></p>
@@ -435,6 +434,32 @@
 <p>To clean folder from build artifacts:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ gulp clean</span><br></pre></td></tr></table></figure></p>
 <p>Testing (one single run only):<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># with all browsers:</span></span><br><span class="line">$ npm <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># with PhantomJS only</span></span><br><span class="line">$ npm run pjs</span><br><span class="line"></span><br><span class="line"><span class="comment"># with Chrome only</span></span><br><span class="line">$ npm run chrome</span><br><span class="line"></span><br><span class="line"><span class="comment"># with Firefox only</span></span><br><span class="line">$ npm run ff</span><br><span class="line"></span><br><span class="line"><span class="comment"># Then check the coverage in HTML coverage:</span></span><br><span class="line">$ npm run coverage</span><br><span class="line"><span class="comment"># --This opens Chrome browser--</span></span><br></pre></td></tr></table></figure></p>
 <p>Watch source code and test on changes (browsers will remain opened):<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># with all browsers:</span></span><br><span class="line">$ npm <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># with PhantomJS only</span></span><br><span class="line">$ npm run pjs-live</span><br><span class="line"></span><br><span class="line"><span class="comment"># with Chrome only</span></span><br><span class="line">$ npm run chrome-live</span><br><span class="line"></span><br><span class="line"><span class="comment"># with Firefox only</span></span><br><span class="line">$ npm run ff-live</span><br></pre></td></tr></table></figure></p>
+<h2 id="Commit_Message_Format">Commit Message Format</h2><p>Each commit message consists of a <strong>header</strong>, a <strong>body</strong> and a <strong>footer</strong>.  The header has a special<br>format that includes a <strong>type</strong>, a <strong>scope</strong> and a <strong>subject</strong>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#60;type&#62;(&#60;scope&#62;): &#60;subject&#62;&#10;&#60;BLANK LINE&#62;&#10;&#60;body&#62;&#10;&#60;BLANK LINE&#62;&#10;&#60;footer&#62;</span><br></pre></td></tr></table></figure>
+<p>The <strong>header</strong> is mandatory and the <strong>scope</strong> of the header is optional.</p>
+<p>Any line of the commit message cannot be longer 100 characters! This allows the message to be easier<br>to read on GitHub as well as in various git tools.</p>
+<h4 id="Revert">Revert</h4><p>If the commit reverts a previous commit, it should begin with <code>revert:</code>, followed by the header of the reverted commit. In the body it should say: <code>This reverts commit &lt;hash&gt;.</code>, where the hash is the SHA of the commit being reverted.</p>
+<h4 id="Type">Type</h4><p>Must be one of the following:</p>
+<ul>
+<li><strong>feat</strong>: A new feature</li>
+<li><strong>fix</strong>: A bug fix</li>
+<li><strong>docs</strong>: Documentation only changes</li>
+<li><strong>style</strong>: Changes that do not affect the meaning of the code (white-space, formatting, missing<br>semi-colons, etc)</li>
+<li><strong>refactor</strong>: A code change that neither fixes a bug nor adds a feature</li>
+<li><strong>perf</strong>: A code change that improves performance</li>
+<li><strong>test</strong>: Adding missing tests</li>
+<li><strong>chore</strong>: Changes to the build process or auxiliary tools and libraries such as documentation<br>generation</li>
+</ul>
+<h4 id="Scope">Scope</h4><p>The scope could be anything specifying place of the commit change. For example use modules as scope name: <code>xhr</code>, <code>router</code>, <code>view</code> etc…</p>
+<h4 id="Subject">Subject</h4><p>The subject contains succinct description of the change:</p>
+<ul>
+<li>use the imperative, present tense: “change” not “changed” nor “changes”</li>
+<li>don’t capitalize first letter</li>
+<li>no dot (.) at the end</li>
+</ul>
+<h4 id="Body">Body</h4><p>Just as in the <strong>subject</strong>, use the imperative, present tense: “change” not “changed” nor “changes”.<br>The body should include the motivation for the change and contrast this with previous behavior.</p>
+<h4 id="Footer">Footer</h4><p>The footer should contain any information about <strong>Breaking Changes</strong> and is also the place to<br>reference GitHub issues that this commit <strong>Closes</strong>.</p>
+<p><strong>Breaking Changes</strong> should start with the word <code>BREAKING CHANGE:</code> with a space or two newlines. The rest of the commit message is then used for this.</p>
 ]]></content>
     </entry>
     
@@ -448,39 +473,6 @@
 <p>One more example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// moduleA.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="string">'world'</span>;</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// moduleB.js</span></span><br><span class="line"><span class="keyword">var</span> text = <span class="built_in">require</span>(<span class="string">'./moduleA'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Hello '</span> + text + <span class="string">'!'</span>); <span class="comment">// Hello world!</span></span><br></pre></td></tr></table></figure>
 <p>You can export anything: Functions, Strings, Numbers, Objects, Regexps, …</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Commit Message Format]]></title>
-      <url>http://quasar-framework.org/guide/commit-message-format.html</url>
-      <content type="html"><![CDATA[<h2 id="Overview">Overview</h2><p>This format will help with the <em>$ quasar release</em> command when generating the automatic changelog or recommending a version.<br>Using other format breaks parts of the <em>release</em> commands.</p>
-<p>Each commit message consists of a <strong>header</strong>, a <strong>body</strong> and a <strong>footer</strong>.  The header has a special<br>format that includes a <strong>type</strong>, a <strong>scope</strong> and a <strong>subject</strong>:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#60;type&#62;(&#60;scope&#62;): &#60;subject&#62;&#10;&#60;BLANK LINE&#62;&#10;&#60;body&#62;&#10;&#60;BLANK LINE&#62;&#10;&#60;footer&#62;</span><br></pre></td></tr></table></figure>
-<p>The <strong>header</strong> is mandatory and the <strong>scope</strong> of the header is optional.</p>
-<p>Any line of the commit message cannot be longer 100 characters! This allows the message to be easier<br>to read on GitHub as well as in various git tools.</p>
-<h2 id="Revert">Revert</h2><p>If the commit reverts a previous commit, it should begin with <code>revert:</code>, followed by the header of the reverted commit. In the body it should say: <code>This reverts commit &lt;hash&gt;.</code>, where the hash is the SHA of the commit being reverted.</p>
-<h2 id="Type">Type</h2><p>Must be one of the following:</p>
-<ul>
-<li><strong>feat</strong>: A new feature</li>
-<li><strong>fix</strong>: A bug fix</li>
-<li><strong>docs</strong>: Documentation only changes</li>
-<li><strong>style</strong>: Changes that do not affect the meaning of the code (white-space, formatting, missing<br>semi-colons, etc)</li>
-<li><strong>refactor</strong>: A code change that neither fixes a bug nor adds a feature</li>
-<li><strong>perf</strong>: A code change that improves performance</li>
-<li><strong>test</strong>: Adding missing tests</li>
-<li><strong>chore</strong>: Changes to the build process or auxiliary tools and libraries such as documentation<br>generation</li>
-</ul>
-<h3 id="Scope">Scope</h3><p>The scope could be anything specifying place of the commit change. For example use modules as scope name: <code>xhr</code>, <code>router</code>, <code>view</code> etc…</p>
-<h3 id="Subject">Subject</h3><p>The subject contains succinct description of the change:</p>
-<ul>
-<li>use the imperative, present tense: “change” not “changed” nor “changes”</li>
-<li>don’t capitalize first letter</li>
-<li>no dot (.) at the end</li>
-</ul>
-<h3 id="Body">Body</h3><p>Just as in the <strong>subject</strong>, use the imperative, present tense: “change” not “changed” nor “changes”.<br>The body should include the motivation for the change and contrast this with previous behavior.</p>
-<h3 id="Footer">Footer</h3><p>The footer should contain any information about <strong>Breaking Changes</strong> and is also the place to<br>reference GitHub issues that this commit <strong>Closes</strong>.</p>
-<p><strong>Breaking Changes</strong> should start with the word <code>BREAKING CHANGE:</code> with a space or two newlines. The rest of the commit message is then used for this.</p>
 ]]></content>
     </entry>
     
@@ -523,21 +515,6 @@
 <h2 id="Runtime_Information">Runtime Information</h2><p>Display information about your runtime, including operating system, nodejs version, Quasar CLI version and more.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar info</span><br></pre></td></tr></table></figure>
 <p>Output example:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar info</span><br><span class="line"></span><br><span class="line"> Runtime</span><br><span class="line"> Quasar CLI:	 v0.<span class="number">0.17</span></span><br><span class="line"> Node JS:	 v4.<span class="number">2.0</span></span><br><span class="line"></span><br><span class="line"> Operating System</span><br><span class="line"> Architecture:	 x64</span><br><span class="line"> Platform:	 linux</span><br><span class="line"> Release:	 <span class="number">3.19</span>.<span class="number">0</span>-<span class="number">33</span>-generic</span><br></pre></td></tr></table></figure></p>
-<h2 id="Making_a_Release">Making a Release</h2><blockquote>
-<p><strong>NOTE</strong><br>This is not yet available.</p>
-</blockquote>
-<p>Versioning takes into account the Angular commit style.<br>See <a href="commit-message-format.html">Commit Message Format</a>.</p>
-<h3 id="Recommend_Release_Type">Recommend Release Type</h3><p>Recommends the type of version bump, which can be: <code>patch</code>, <code>minor</code> or <code>major</code>.<br>The recommendation is based on the commit message style. See <a href="commit-message-format.html">Commit Message Format</a>.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar release:recommend</span><br></pre></td></tr></table></figure></p>
-<h3 id="Release_Version_Type">Release Version Type</h3><p><code>type</code> can be: prepatch, path, preminor, minor, premajor, major, prerelease<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar release minor</span><br></pre></td></tr></table></figure></p>
-<p>What it does is:</p>
-<ul>
-<li>Bumps package version according to the <em>type</em></li>
-<li>Generates changelog from GIT</li>
-<li>Commits to GIT with commit message “[release] <code>VERSION</code>“</li>
-<li>Generates a GIT tag named “v<code>VERSION</code>“</li>
-<li>Pushes commit and tag to GIT</li>
-</ul>
-<h3 id="Release_a_Specific_Version">Release a Specific Version</h3><p>If however you want to release a specific version, use this command:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar release:version <span class="number">1.2</span>.<span class="number">3</span></span><br></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
     

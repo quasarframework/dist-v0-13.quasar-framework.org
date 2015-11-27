@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://quasar-framework.org/guide/contributing-to-quasar.html</loc>
+    <lastmod>2015-11-27T03:06:24.786Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/cli-commands.html</loc>
+    <lastmod>2015-11-27T02:59:21.210Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://quasar-framework.org/guide/quasar-app-configuration.html</loc>
     <lastmod>2015-11-27T02:48:40.098Z</lastmod>
   </url>
@@ -24,11 +34,6 @@
   <url>
     <loc>http://quasar-framework.org/guide/built-in-stack.html</loc>
     <lastmod>2015-11-27T00:26:13.758Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/cli-commands.html</loc>
-    <lastmod>2015-11-27T00:25:45.622Z</lastmod>
   </url>
   
   <url>
@@ -59,11 +64,6 @@
   <url>
     <loc>http://quasar-framework.org/guide/index.html</loc>
     <lastmod>2015-11-26T23:58:22.742Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/contributing-to-quasar.html</loc>
-    <lastmod>2015-11-26T23:13:52.670Z</lastmod>
   </url>
   
   <url>
@@ -109,11 +109,6 @@
   <url>
     <loc>http://quasar-framework.org/api/quasar-router.html</loc>
     <lastmod>2015-11-09T18:26:17.334Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/commit-message-format.html</loc>
-    <lastmod>2015-11-09T18:26:09.594Z</lastmod>
   </url>
   
   <url>
