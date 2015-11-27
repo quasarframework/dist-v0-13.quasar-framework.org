@@ -100,7 +100,7 @@
     <entry>
       <title><![CDATA[Quasar Build System]]></title>
       <url>http://quasar-framework.org/guide/quasar-build-system.html</url>
-      <content type="html"><![CDATA[<p>The App must be built before deployment. Read more how to build (and test) in the <a href="/guide/cli-commands.html#Build">CLI Commands</a> section.</p>
+      <content type="html"><![CDATA[<p>The App must be built before deployment. Read more how to build (and test) in the <a href="/guide/cli-commands.html#Build_App">CLI Commands</a> section.</p>
 <p>Following lines will describe how everything is glued together.</p>
 <h2 id="Source_Files">Source Files</h2><h3 id="Javascript_Files">Javascript Files</h3><p>Javascript files are glued together using <a href="http://webpack.github.io/docs/" target="_blank">Webpack</a>. So you can use <em>require()</em> – and <em>require.resolve()</em> – for modularity. You must adhere to the <a href="/guide/commonjs-format.html">CommonJS format</a> because of its many advantages when writing <em>.js</em> files.</p>
 <p>Take into consideration that the following files are taken as Webpack entry-points (take a good look at folders):</p>
@@ -116,10 +116,7 @@
 <li>/pages/<em>page-name</em>/css/<em>file-name</em>.styl</li>
 </ul>
 <p>So when writing a Quasar App Page CSS and you want to <em>import</em> something, in the <em>/pages/page-name/css/</em> folder, make a sub-folder and place it there. Otherwise any <em>.styl</em> files directly under <em>/pages/page-name/css/</em> folder are considered entry-points and will be built accordingly, which is not what you want. Same for the global <em>/css</em> folder.</p>
-<h3 id="HTML_Files">HTML Files</h3><blockquote>
-<p><strong>TIP</strong><br>The Quasar App Pages’ HTML is compiled into Vue instances, so yeah!, you can use <strong>two-way data binding</strong>. Read more about the two-way data binding Vue library and how to use it <a href="http://vuejs.org" target="_blank">here</a>.</p>
-</blockquote>
-<p>To support code modularity inside your HTMLs you can include other HTML files/templates. Take into consideration that the following files are considered entry-points (take a good look at folders):</p>
+<h3 id="HTML_Files">HTML Files</h3><p>To support code modularity inside your HTMLs you can include other HTML files/templates. Take into consideration that the following files are considered entry-points (take a good look at folders):</p>
 <ul>
 <li>/html/<em>file-name</em>.html</li>
 <li>/pages/<em>page-name</em>/html/<em>file-name</em>.html</li>
@@ -129,6 +126,9 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">// view.html:</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">h1</span>&gt;</span>view<span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">// var.html:</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">label</span>&gt;</span>@@name<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">label</span>&gt;</span>@@age<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">strong</span>&gt;</span>@@socials.fb<span class="tag">&lt;/<span class="title">strong</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">strong</span>&gt;</span>@@socials.tw<span class="tag">&lt;/<span class="title">strong</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">// ... and it gets compiled to:</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">h1</span>&gt;</span>view<span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">label</span>&gt;</span>rstoenescu<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">label</span>&gt;</span>12345<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">strong</span>&gt;</span>facebook.com/include<span class="tag">&lt;/<span class="title">strong</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">strong</span>&gt;</span>twitter.com/include<span class="tag">&lt;/<span class="title">strong</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>TIP</strong><br>The HTML of Quasar App Pages is used as template for Vue instances, so yeah!, you can use <strong>two-way data binding</strong>. Read more about the two-way data binding Vue library and how to use it <a href="http://vuejs.org" target="_blank">here</a>.</p>
+</blockquote>
 <h3 id="Image_Files">Image Files</h3><p>Image files should be placed under <code>assets</code> folders. By default, on a production build, <code>GIF</code>, <code>JPEG</code>, <code>PNG</code> and <code>SVG</code> image files get “minified” without losing noticeable quality.</p>
 ]]></content>
     </entry>
@@ -288,9 +288,7 @@
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p><strong>TIP</strong><br>Read about page manifests (<code>config.*page-name*.yml</code>) in <a href="/guide/writing-quasar-page.html#Page_Manifest">Writing a Page</a> section.</p>
-</blockquote>
+<p>Read about page manifests (<code>config.*page-name*.yml</code>) in <a href="/guide/writing-quasar-page.html#Page_Manifest">Writing a Page</a> section.</p>
 ]]></content>
     </entry>
     
@@ -479,16 +477,16 @@
     <entry>
       <title><![CDATA[CLI Commands]]></title>
       <url>http://quasar-framework.org/guide/cli-commands.html</url>
-      <content type="html"><![CDATA[<h2 id="Options">Options</h2><h3 id="Version">Version</h3><p>Displays version information.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar -V</span><br><span class="line">$ quasar version</span><br></pre></td></tr></table></figure></p>
-<h3 id="Help">Help</h3><p>Displays list of all commands and options.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar</span><br><span class="line">$ quasar -h</span><br></pre></td></tr></table></figure></p>
-<h3 id="Verbose_Mode">Verbose Mode</h3><p>If you want to get more information on what’s going on (for example when building App), turn on the debug flag (<code>-d</code> option):<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar <span class="operator">-d</span> ..........</span><br></pre></td></tr></table></figure></p>
-<h2 id="Create_App_Folder">Create App Folder</h2><p>Initializes a project folder with everything necessary.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar new [folder-name]</span><br></pre></td></tr></table></figure></p>
-<h2 id="Build">Build</h2><h3 id="For_Development">For Development</h3><p>Generates a folder called <code>/dist</code> which contains sourcemaps and everything needed to debug.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar build</span><br></pre></td></tr></table></figure></p>
+      <content type="html"><![CDATA[<h2 id="Options">Options</h2><h4 id="Version">Version</h4><p>Displays version information.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar -V</span><br><span class="line">$ quasar version</span><br></pre></td></tr></table></figure></p>
+<h4 id="Help">Help</h4><p>Displays list of all commands and options.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar</span><br><span class="line">$ quasar -h</span><br></pre></td></tr></table></figure></p>
+<h4 id="Verbose_Mode">Verbose Mode</h4><p>If you want to get more information on what’s going on (for example when building App), turn on the debug flag (<code>-d</code> option):<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar <span class="operator">-d</span> ..........</span><br></pre></td></tr></table></figure></p>
+<h2 id="Create_App">Create App</h2><p>Initializes a project folder with everything necessary.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar new [folder-name]</span><br></pre></td></tr></table></figure></p>
+<h2 id="Build_App">Build App</h2><h3 id="For_Development">For Development</h3><p>Generates a folder called <code>/dist</code> which contains sourcemaps and everything needed to debug.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar build</span><br></pre></td></tr></table></figure></p>
 <p>For more details to see what this does go to <a href="/guide/quasar-build-system.html">Build System</a> and <a href="/guide/quasar-app-structure.html">App Structure</a>.</p>
 <h3 id="For_Production">For Production</h3><p>Generates a folder called <code>/dist</code>. Everything is compiled, minified, …<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar build -p</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ quasar build --production</span><br></pre></td></tr></table></figure></p>
 <p>For more details to see what this does go to <a href="/guide/quasar-build-system.html">Build System</a> and <a href="/guide/quasar-app-structure.html">App Structure</a>.</p>
 <h3 id="Cleaning">Cleaning</h3><p>Cleans App folder from build artifacts.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar clean</span><br></pre></td></tr></table></figure></p>
-<h2 id="Monitoring_&amp;_Auto-Build">Monitoring &amp; Auto-Build</h2><p>Monitors source code files (Javascript files, CSS files, assets, …) for changes and when change is detected it auto-rebuilds.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar monitor</span><br></pre></td></tr></table></figure></p>
+<h3 id="Monitoring_&amp;_Auto-Rebuild">Monitoring &amp; Auto-Rebuild</h3><p>Monitors source code files (Javascript files, CSS files, assets, …) for changes and when that happens it auto-rebuilds to update the end-user code.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar monitor</span><br></pre></td></tr></table></figure></p>
 <p>For more details to see what this does go to <a href="/guide/quasar-build-system.html">Build System</a> and <a href="/guide/quasar-app-structure.html">App Structure</a>.</p>
 <h2 id="Live_Preview">Live Preview</h2><p>You can even live preview the build in your browser(s). Whenever you modify anything in the source code (Javascript files, CSS files, assets, …), it gets rebuilt and the browser(s) refreshed.</p>
 <p>Furthermore, clicks, scroll and form input are automatically synchronized between all opened browsers.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar preview</span><br></pre></td></tr></table></figure></p>
@@ -496,7 +494,7 @@
 <blockquote>
 <p><strong>NOTE</strong><br>CSS is injected into the browser(s) so the page is not required to reload, which is really cool.</p>
 </blockquote>
-<h2 id="Live_Preview_with_Responsive_View">Live Preview with Responsive View</h2><p>Want to quickly see how your App handles different device screen sizes? This is the command that you should use. Recommended (and designed) to be viewed from a desktop browser.</p>
+<h3 id="Responsive_View">Responsive View</h3><p>Want to quickly see how your App handles different device screen sizes? This is the command that you should use. Recommended (and designed) to be viewed from a desktop browser.</p>
 <p>Watches the source code (and reloads if necessary or injects CSS without page reload) but clicks, scroll and form input are <em>NOT</em> automatically synchronized between all opened browsers as for previous command.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar preview -r</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ quasar preview --responsive</span><br></pre></td></tr></table></figure>
 <p><img src="/images/preview-2.png" alt="Responsive Preview Screen" title="Responsive Preview Screen"></p>
@@ -528,16 +526,16 @@
 <p>Changing the <em>input</em> element content automatically updates <code>data.message</code> (called <em>scope</em>). Works the other way around too if you programmatically change <code>data.message</code> property. But this is just the tip of the iceberg.</p>
 <h2 id="jQuery">jQuery</h2><p>No need for an introduction. Mind that you should not be required to use it though due to Vue. It is included by default just because Quasar Framework uses it under the cover.</p>
 <blockquote>
-<p><strong>IMPORTANT</strong><br>A good Quasar App uses NO jQuery code and it does NOT touch DOM elements directly under any way. Vue should handle the DOM update for you through the scope.</p>
+<p><strong>IMPORTANT</strong><br>Good Quasar App code <strong>DOES NOT</strong> uses jQuery and it <strong>DOES NOT</strong> touch DOM elements directly under any way. Vue should handle the DOM update for you through the data scope.</p>
 </blockquote>
 <h2 id="Lodash">Lodash</h2><p>Inspired by Underscore (&amp; even has compatible API), but better. You have the global object <code>_</code> (underscore character) you can use.</p>
-<p>Read more <a href="https://lodash.com/" target="_blank">here</a>.</p>
+<p>Read more about it <a href="https://lodash.com/" target="_blank">here</a>.</p>
 <h2 id="Fastclick">Fastclick</h2><p>FastClick is a simple, easy-to-use library for eliminating the 300ms delay between a physical tap and the firing of a click event on mobile browsers. The aim is to make your Quasar App feel less laggy and more responsive while avoiding any interference with your current logic.</p>
-<p>Read more <a href="https://ftlabs.github.io/fastclick/" target="_blank">here</a>.</p>
+<p>Read more about it <a href="https://ftlabs.github.io/fastclick/" target="_blank">here</a>.</p>
 <h2 id="Semantic_UI">Semantic UI</h2><p>Inspired by Bootstrap &amp; Foundation, but way better. Semantic is a development framework that helps create beautiful, responsive layouts using human-friendly HTML. Semantic UI treats words and classes as exchangeable concepts. Classes use syntax from natural languages like noun/modifier relationships, word order, and plurality to link concepts intuitively.</p>
-<p>Read more <a href="http://semantic-ui.com/" target="_blank">here</a>.</p>
+<p>Read more about it <a href="http://semantic-ui.com/" target="_blank">here</a>.</p>
 <h2 id="Apache_Cordova">Apache Cordova</h2><p>Wrap your App in Cordova so it can be installed on a mobile phone. It offers access to native device APIs, which is awesome. It integrates perfectly with Quasar Framework.</p>
-<p>Read more <a href="https://cordova.apache.org/" target="_blank">here</a>.</p>
+<p>Read more about it <a href="https://cordova.apache.org/" target="_blank">here</a>.</p>
 ]]></content>
     </entry>
     
