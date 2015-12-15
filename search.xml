@@ -31,10 +31,10 @@
 <p>Then use the <a href="/guide/cli-commands.html#Pages">Quasar CLI</a> to build a Page.</p>
 <p>Also don’t forget to read more about the <a href="/guide/quasar-build-system.html">Build System</a> to understand how pages are precompiled and bundled, what files are considered an entry-point and many more.</p>
 <p>Let’s dissect how Pages work.</p>
-<h2 id="Javascript">Javascript</h2><p>The starting point of a Quasar Page is <em>js/script.page-name.js</em> file. Think of it as the Controller part of a Page.</p>
+<h2 id="Javascript">Javascript</h2><p>The starting point of a Quasar Page is <em>script.page-name.js</em> file. Think of it as the Controller part of a Page.</p>
 <p>It has a basic CommonJS structure that exports a Vue instantiation object or a function for doing asynchronous operations before calling a callback with a Vue instantiation object.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Option 1. Supply Vue instantiation object</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!../html/view.page-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123; <span class="comment">// Vue instance</span></span><br><span class="line">  template: html,</span><br><span class="line">  ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Option 2. Do some asynch ops first</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!../html/view.page-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">  <span class="comment">/*</span><br><span class="line">   * Properties available:</span><br><span class="line">   */</span></span><br><span class="line">  <span class="keyword">this</span>.params <span class="comment">// [Object] Route parameters -- see API &gt; Router</span></span><br><span class="line">  <span class="keyword">this</span>.query <span class="comment">// [Object] Route query string -- see API &gt; Router</span></span><br><span class="line">  <span class="keyword">this</span>.name <span class="comment">// [String] Page name (eg. 'index')</span></span><br><span class="line">  <span class="keyword">this</span>.manifest <span class="comment">// [Object] Page manifest (config.page-name.yml)</span></span><br><span class="line">  <span class="keyword">this</span>.route <span class="comment">// [String] Route name (eg. '$' or ':chapter/:page')</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="comment">// asynchronous operations</span></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">  done(&#123; <span class="comment">// Vue instance</span></span><br><span class="line">    template: html,</span><br><span class="line">    ...</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Option 1. Supply Vue instantiation object</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./view.page-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123; <span class="comment">// Vue instance</span></span><br><span class="line">  template: html,</span><br><span class="line">  ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Option 2. Do some asynch ops first</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./view.page-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">  <span class="comment">/*</span><br><span class="line">   * Properties available:</span><br><span class="line">   */</span></span><br><span class="line">  <span class="keyword">this</span>.params <span class="comment">// [Object] Route parameters -- see API &gt; Router</span></span><br><span class="line">  <span class="keyword">this</span>.query <span class="comment">// [Object] Route query string -- see API &gt; Router</span></span><br><span class="line">  <span class="keyword">this</span>.name <span class="comment">// [String] Page name (eg. 'index')</span></span><br><span class="line">  <span class="keyword">this</span>.manifest <span class="comment">// [Object] Page manifest (config.page-name.yml)</span></span><br><span class="line">  <span class="keyword">this</span>.route <span class="comment">// [String] Route name (eg. '$' or ':chapter/:page')</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="comment">// asynchronous operations</span></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">  done(&#123; <span class="comment">// Vue instance</span></span><br><span class="line">    template: html,</span><br><span class="line">    ...</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h3 id="Tips">Tips</h3><ol>
 <li><p>When exporting a function, make sure the callback is called, otherwise the Page will never load.</p>
 </li>
@@ -43,7 +43,9 @@
 <li><p>Make sure you use <code>require(&#39;raw!.....&#39;)</code> syntax for the template so that it will get bundled automatically into your JS file with the help of the Build System. This saves one precious HTTP request. <strong>Do not require the template within the exporting function (if you use one) because Webpack won’t know it needs to be handled at compile time</strong>. So require it outside to avoid issues.</p>
 </li>
 <li><p>Make good use of the Vue component lifecycle methods (<code>created</code>, <code>beforeCompile</code>, <code>compiled</code>, <code>ready</code>, <code>beforeDestroy</code>, <code>destroyed</code>) and different props:<br><img src="/images/vue-lifecycle.png" alt="Vue Lifecycle Diagram" title="Vue Lifecycle Diagram"></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Example making use of Vue component lifecycle methods</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!../html/view.page-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123; <span class="comment">// Vue instance</span></span><br><span class="line">  template: html,</span><br><span class="line">  beforeCompile: &#123;</span><br><span class="line">    <span class="comment">// Before template compiling</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;,</span><br><span class="line">  ready: &#123;</span><br><span class="line">    <span class="comment">// Template has been rendered into view</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Example making use of Vue component lifecycle methods</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./view.page-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123; <span class="comment">// Vue instance</span></span><br><span class="line">  template: html,</span><br><span class="line">  beforeCompile: &#123;</span><br><span class="line">    <span class="comment">// Before template compiling</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;,</span><br><span class="line">  ready: &#123;</span><br><span class="line">    <span class="comment">// Template has been rendered into view</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Make sure you sanitize intervals, timeouts, requestAnimationFrames or anything else at <code>beforeDestroy</code> point, otherwise you may end up with bugs when user switches to another Page.</p>
 </li>
 </ol>
 <h2 id="Page_Manifest">Page Manifest</h2><p>Provide page specific configuration (in YAML format), called <em>Manifest</em> in <code>/pages/*page-name*/config.*page-name*.yml</code>.</p>
@@ -116,14 +118,16 @@
 <li><p>Make sure you use <code>require(&#39;raw!.....&#39;)</code> syntax for the template so that it will get bundled automatically into your JS file with the help of the Build System. This saves one precious HTTP request. <strong>Do not require the template within the exporting function (if you use one) because Webpack won’t know it needs to be handled at compile time</strong>. So require it outside to avoid issues.</p>
 </li>
 <li><p>Make good use of the Vue component lifecycle methods (<code>created</code>, <code>beforeCompile</code>, <code>compiled</code>, <code>ready</code>, <code>beforeDestroy</code>, <code>destroyed</code>) and different props:<br><img src="/images/vue-lifecycle.png" alt="Vue Lifecycle Diagram" title="Vue Lifecycle Diagram"></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Example making use of Vue component lifecycle methods</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!../html/view.page-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123; <span class="comment">// Vue instance</span></span><br><span class="line">  template: html,</span><br><span class="line">  beforeCompile: &#123;</span><br><span class="line">    <span class="comment">// Before template compiling</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;,</span><br><span class="line">  ready: &#123;</span><br><span class="line">    <span class="comment">// Template has been rendered into view</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Example making use of Vue component lifecycle methods</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./view.page-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123; <span class="comment">// Vue instance</span></span><br><span class="line">  template: html,</span><br><span class="line">  beforeCompile: &#123;</span><br><span class="line">    <span class="comment">// Before template compiling</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;,</span><br><span class="line">  ready: &#123;</span><br><span class="line">    <span class="comment">// Template has been rendered into view</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Make sure you sanitize intervals, timeouts, requestAnimationFrames or anything else at <code>beforeDestroy</code> point, otherwise you may end up with bugs when user switches to another Layout.</p>
 </li>
 </ol>
 <h2 id="HTML">HTML</h2><p>The Quasar App Layout HTML representa a Vue instance template. Read more about the <a href="/guide/quasar-build-system.html#HTML_Files">Build System</a> to understand.</p>
 <p>There are several Web Components that you can use. Some of them are mandatory. A quick example:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- layout.example.html --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">quasar-layout</span> <span class="attribute">shrink-header</span> <span class="attribute">scroll-shadow</span>&gt;</span> <span class="comment">&lt;!-- mandatory --&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="title">quasar-header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">quasar-row</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-button</span>&gt;</span><span class="tag">&lt;<span class="title">quasar-icon</span> <span class="attribute">sidebar</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-icon</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-title</span>&gt;</span>Text &#123;&#123;text&#125;&#125;<span class="tag">&lt;/<span class="title">quasar-title</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-button</span>&gt;</span><span class="tag">&lt;<span class="title">quasar-icon</span> <span class="attribute">alarm</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-icon</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-button</span>&gt;</span><span class="tag">&lt;<span class="title">quasar-icon</span> <span class="attribute">ellipsis</span> <span class="attribute">vertical</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-icon</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">quasar-row</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">quasar-navigation</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-tab</span>&gt;</span><span class="tag">&lt;<span class="title">quasar-icon</span> <span class="attribute">database</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-icon</span>&gt;</span>Tab 1<span class="tag">&lt;/<span class="title">quasar-tab</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-tab</span>&gt;</span><span class="tag">&lt;<span class="title">quasar-icon</span> <span class="attribute">alarm</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-icon</span>&gt;</span>Tab 2<span class="tag">&lt;/<span class="title">quasar-tab</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-tab</span>&gt;</span><span class="tag">&lt;<span class="title">quasar-icon</span> <span class="attribute">database</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-icon</span>&gt;</span>Tab 3<span class="tag">&lt;/<span class="title">quasar-tab</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">quasar-navigation</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">quasar-header</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="title">quasar-page</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-page</span>&gt;</span> <span class="comment">&lt;!-- mandatory --&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="title">quasar-footer</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">quasar-row</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-title</span>&gt;</span>Quasar Rocks!<span class="tag">&lt;/<span class="title">quasar-title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">quasar-row</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">quasar-footer</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="title">quasar-layout</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Read more about the Components and how to use them in the <a href="/api/web-components-layout.html">Web Components - Layout</a> section.</p>
-<h2 id="Layout_Events">Layout Events</h2><p>There are global events registered for each step of the way when a Layout is loaded/swaped. See <a href="/api/core-js-events.html#Global_Events_Emitter">Quasar Events Global Emitter</a> if you haven’t already.</p>
+<h2 id="Layout_Events">Layout Events</h2><p>There are global events registered for each step of the way when a Layout is loaded/swapped. See <a href="/api/core-js-events.html#Global_Events_Emitter">Quasar Events Global Emitter</a> if you haven’t already.</p>
 <table>
 <thead>
 <tr>
@@ -208,18 +212,22 @@
 <h2 id="Source_Files">Source Files</h2><h3 id="Javascript_Files">Javascript Files</h3><p>Javascript files are glued together using <a href="http://webpack.github.io/docs/" target="_blank">Webpack</a>. So you can use <em>require()</em> – and <em>require.resolve()</em> – for modularity. You must adhere to the <a href="/guide/commonjs-format.html">CommonJS format</a> because of its many advantages when writing <em>.js</em> files.</p>
 <p>Take into consideration that the following files are taken as Webpack entry-points (take a good look at folders):</p>
 <ul>
-<li>/js/<em>file-name</em>.js</li>
-<li>/pages/<em>page-name</em>/js/script.<em>page-name</em>.js</li>
+<li>/js/*.js (Note: directly under /js; no sub-folders)</li>
+<li>/pages/<em>page-name</em>/script.<em>page-name</em>.js</li>
 <li>/layouts/<em>layout-name</em>/layout.<em>layout-name</em>.js</li>
 </ul>
-<p>So when writing a Quasar App Page script and you want to <em>require()</em> something, in the <em>/pages/page-name/js/</em> folder, make a sub-folder and place it there. Otherwise any <em>.js</em> files directly under <em>/pages/page-name/js/</em> folder are considered entry-points and will be built accordingly, which is not what you want. Same for the global <em>/js</em> folder.</p>
+<blockquote>
+<p><strong>NOTE</strong><br>Subfolders should be used to modularize your JS code.</p>
+</blockquote>
 <h3 id="CSS_Files">CSS Files</h3><p>Notice that all CSS files are built using <a href="https://learnboost.github.io/stylus/" target="_blank">Stylus</a>, so they have the <em>.styl</em> extension. The Stylus NIB extension is also available.</p>
 <p>Take into consideration that the following files are taken as Stylus entry-points (take a good look at folders):</p>
 <ul>
-<li>/css/<em>file-name</em>.styl</li>
+<li>/css/*.styl (Note: directly under /css; no sub-folders)</li>
 <li>/pages/<em>page-name</em>/css/<em>file-name</em>.styl</li>
 </ul>
-<p>So when writing a Quasar App Page CSS and you want to <em>import</em> something, in the <em>/pages/page-name/css/</em> folder, make a sub-folder and place it there. Otherwise any <em>.styl</em> files directly under <em>/pages/page-name/css/</em> folder are considered entry-points and will be built accordingly, which is not what you want. Same for the global <em>/css</em> folder.</p>
+<blockquote>
+<p><strong>NOTE</strong><br>Subfolders should be used to modularize your CSS code.</p>
+</blockquote>
 <h3 id="Image_Files">Image Files</h3><p>Image files should be placed under <code>assets</code> folders. By default, on a production build, <code>GIF</code>, <code>JPEG</code>, <code>PNG</code> and <code>SVG</code> image files get “minified” without losing noticeable quality.</p>
 ]]></content>
     </entry>
@@ -227,7 +235,7 @@
     <entry>
       <title><![CDATA[Quasar App Structure]]></title>
       <url>http://quasar-framework.org/guide/quasar-app-structure.html</url>
-      <content type="html"><![CDATA[<h2 id="Overview">Overview</h2><p>This is what a new Quasar Framework App folder structure looks like. Some folders are creating after building the App.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tree -I <span class="string">'node_modules|wrapper'</span> <span class="operator">-a</span> --dirsfirst</span><br><span class="line">.</span><br><span class="line">├── coverage</span><br><span class="line">│   ├── lcov-report</span><br><span class="line">│   │   ├── ...</span><br><span class="line">│   │   ├── index.html</span><br><span class="line">│   │   └── ...</span><br><span class="line">│   └── lcov.info</span><br><span class="line">├── dist</span><br><span class="line">│   ├── assets</span><br><span class="line">│   │   ├── fonts</span><br><span class="line">│   │   │   ├── icons</span><br><span class="line">│   │   │   │   ├── ...</span><br><span class="line">│   │   │   │   └── ...</span><br><span class="line">│   │   │   └── roboto</span><br><span class="line">│   │   │       ├── ...</span><br><span class="line">│   │   │       └── ...</span><br><span class="line">│   │   └── favicon.ico</span><br><span class="line">│   ├── css</span><br><span class="line">│   │   ├── app.css</span><br><span class="line">│   │   └── app-dependencies.css</span><br><span class="line">│   ├── js</span><br><span class="line">│   │   ├── app-dependencies.js</span><br><span class="line">│   │   └── app.js</span><br><span class="line">│   ├── layouts</span><br><span class="line">│   │   └── layout.main.js</span><br><span class="line">│   ├── pages</span><br><span class="line">│   │   └── index</span><br><span class="line">│   │       ├── assets</span><br><span class="line">│   │       │   └── assets-README.txt</span><br><span class="line">│   │       ├── css</span><br><span class="line">│   │       │   └── style.index.css</span><br><span class="line">│   │       └── js</span><br><span class="line">│   │           └── script.index.js</span><br><span class="line">│   ├── app.json</span><br><span class="line">│   └── index.html</span><br><span class="line">├── src</span><br><span class="line">│   ├── assets</span><br><span class="line">│   │   └── favicon.ico</span><br><span class="line">│   ├── css</span><br><span class="line">│   │   └── app.styl</span><br><span class="line">│   ├── html</span><br><span class="line">│   │   └── html-README.txt</span><br><span class="line">│   ├── js</span><br><span class="line">│   │   └── app.js</span><br><span class="line">│   ├── layouts</span><br><span class="line">│   │   └── main</span><br><span class="line">│   │       ├── layout.main.html</span><br><span class="line">│   │       └── layout.main.js</span><br><span class="line">│   ├── pages</span><br><span class="line">│   │   └── index</span><br><span class="line">│   │       ├── assets</span><br><span class="line">│   │       │   └── assets-README.txt</span><br><span class="line">│   │       ├── css</span><br><span class="line">│   │       │   └── style.index.styl</span><br><span class="line">│   │       ├── html</span><br><span class="line">│   │       │   └── view.index.html</span><br><span class="line">│   │       ├── js</span><br><span class="line">│   │       │   └── script.index.js</span><br><span class="line">│   │       └── config.index.yml</span><br><span class="line">│   └── index.html</span><br><span class="line">├── <span class="built_in">test</span></span><br><span class="line">│   ├── .eslintrc</span><br><span class="line">│   ├── setup.js</span><br><span class="line">│   └── test.spec.js</span><br><span class="line">├── wrapper</span><br><span class="line">│   ├── ....</span><br><span class="line">│   ├── ....</span><br><span class="line">│   └── ....</span><br><span class="line">├── .eslintrc</span><br><span class="line">├── .gitignore</span><br><span class="line">├── package.json</span><br><span class="line">├── quasar.build.yml</span><br><span class="line">├── README.md</span><br><span class="line">└── .stylintrc</span><br><span class="line"></span><br><span class="line"><span class="number">29</span> directories, <span class="number">60</span> files</span><br></pre></td></tr></table></figure></p>
+      <content type="html"><![CDATA[<h2 id="Overview">Overview</h2><p>This is what a new Quasar Framework App folder structure looks like. Some folders are creating after building the App.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tree -I <span class="string">'node_modules|wrapper'</span> <span class="operator">-a</span> --dirsfirst</span><br><span class="line">.</span><br><span class="line">├── coverage</span><br><span class="line">│   ├── lcov-report</span><br><span class="line">│   │   ├── ...</span><br><span class="line">│   │   ├── index.html</span><br><span class="line">│   │   └── ...</span><br><span class="line">│   └── lcov.info</span><br><span class="line">├── dist</span><br><span class="line">│   ├── assets</span><br><span class="line">│   │   ├── fonts</span><br><span class="line">│   │   │   ├── icons</span><br><span class="line">│   │   │   │   ├── ...</span><br><span class="line">│   │   │   │   └── ...</span><br><span class="line">│   │   │   └── roboto</span><br><span class="line">│   │   │       ├── ...</span><br><span class="line">│   │   │       └── ...</span><br><span class="line">│   │   └── favicon.ico</span><br><span class="line">│   ├── css</span><br><span class="line">│   │   ├── app.css</span><br><span class="line">│   │   └── app-dependencies.css</span><br><span class="line">│   ├── js</span><br><span class="line">│   │   ├── app-dependencies.js</span><br><span class="line">│   │   └── app.js</span><br><span class="line">│   ├── layouts</span><br><span class="line">│   │   └── main</span><br><span class="line">│   │       └── layout.main.js</span><br><span class="line">│   ├── pages</span><br><span class="line">│   │   └── index</span><br><span class="line">│   │       ├── assets</span><br><span class="line">│   │       │   └── assets-README.txt</span><br><span class="line">│   │       ├── style.index.css</span><br><span class="line">│   │       └── script.index.js</span><br><span class="line">│   ├── app.json</span><br><span class="line">│   └── index.html</span><br><span class="line">├── src</span><br><span class="line">│   ├── assets</span><br><span class="line">│   │   └── favicon.ico</span><br><span class="line">│   ├── css</span><br><span class="line">│   │   └── app.styl</span><br><span class="line">│   ├── html</span><br><span class="line">│   │   └── html-README.txt</span><br><span class="line">│   ├── js</span><br><span class="line">│   │   └── app.js</span><br><span class="line">│   ├── layouts</span><br><span class="line">│   │   └── main</span><br><span class="line">│   │       ├── layout.main.html</span><br><span class="line">│   │       └── layout.main.js</span><br><span class="line">│   ├── pages</span><br><span class="line">│   │   └── index</span><br><span class="line">│   │       ├── assets</span><br><span class="line">│   │       │   └── assets-README.txt</span><br><span class="line">│   │       ├── config.index.yml</span><br><span class="line">│   │       ├── style.index.styl</span><br><span class="line">│   │       ├── script.index.js</span><br><span class="line">│   │       └── view.index.html</span><br><span class="line">│   └── index.html</span><br><span class="line">├── <span class="built_in">test</span></span><br><span class="line">│   ├── .eslintrc</span><br><span class="line">│   ├── setup.js</span><br><span class="line">│   └── test.spec.js</span><br><span class="line">├── wrapper</span><br><span class="line">│   ├── ....</span><br><span class="line">│   ├── ....</span><br><span class="line">│   └── ....</span><br><span class="line">├── .eslintrc</span><br><span class="line">├── .gitignore</span><br><span class="line">├── package.json</span><br><span class="line">├── quasar.build.yml</span><br><span class="line">├── README.md</span><br><span class="line">└── .stylintrc</span><br><span class="line"></span><br><span class="line"><span class="number">29</span> directories, <span class="number">55</span> files</span><br></pre></td></tr></table></figure></p>
 <p>What each is used for:</p>
 <table>
 <thead>
@@ -317,7 +325,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="Pages">Pages</h2><p>An App’s central working point is the Pages it is composed of. Each page has the following structure:</p>
+<h2 id="Pages">Pages</h2><p>An App’s central working point is the Pages it is composed of.</p>
+<p>Each page has its own folder (<code>/src/pages/&lt;page-name&gt;</code>) and has the structure below:</p>
 <table>
 <thead>
 <tr>
@@ -327,61 +336,30 @@
 </thead>
 <tbody>
 <tr>
-<td>/src/pages/<strong>&lt;page-name&gt;</strong></td>
-<td>Page folder</td>
-</tr>
-<tr>
-<td>/src/pages/<strong>&lt;page-name&gt;</strong>/assets</td>
+<td>/assets</td>
 <td>Folder to place images, fonts, … specific to the page only</td>
 </tr>
 <tr>
-<td>/src/pages/<strong>&lt;page-name&gt;</strong>/css</td>
-<td>Folder to place CSS files specific to the page only</td>
+<td>/script.<strong>&lt;page-name&gt;</strong>.js</td>
+<td>JS entry point for the page</td>
 </tr>
 <tr>
-<td>/src/pages/<strong>&lt;page-name&gt;</strong>/html</td>
-<td>Folder to place HTML files specific to the page only</td>
+<td>/style.<strong>&lt;page-name&gt;</strong>.styl</td>
+<td>CSS entry point for the page</td>
 </tr>
 <tr>
-<td>/src/pages/<strong>&lt;page-name&gt;</strong>/js</td>
-<td>Folder to place JS files specific to the page only</td>
+<td>/view.<strong>&lt;page-name&gt;</strong>.html</td>
+<td>HTML template for the page</td>
 </tr>
 <tr>
-<td>/src/pages/<strong>&lt;page-name&gt;</strong>/config.<strong>&lt;page-name&gt;</strong>.yml</td>
-<td>Folder to place CSS files specific to the page only</td>
-</tr>
-</tbody>
-</table>
-<p>Placing files in these folder ensures that the Build System will compile them accordingly.</p>
-<p>Each page has a starting point for each type of asset:</p>
-<table>
-<thead>
-<tr>
-<th>Asset</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>style.<strong>&lt;page-name&gt;</strong>.styl</td>
-<td>If it exists, it will automatically be included when page is loaded.<br>When user navigates away, it is removed.</td>
-</tr>
-<tr>
-<td>view.<strong>&lt;page-name&gt;</strong>.html</td>
-<td>Template for your page</td>
-</tr>
-<tr>
-<td>script.<strong>&lt;page-name&gt;</strong>.js</td>
-<td><strong>[Required]</strong> Starting point of the page logic</td>
-</tr>
-<tr>
-<td>config.<strong>&lt;page-name&gt;</strong>.yml</td>
-<td><strong>[Required]</strong> YAML file with page configuration (called <em>Manifest</em>).</td>
+<td>/config.<strong>&lt;page-name&gt;</strong>.yml</td>
+<td>YAML file with page configuration (called <em>Manifest</em>)</td>
 </tr>
 </tbody>
 </table>
 <p>Read about page manifests (<code>config.*page-name*.yml</code>) in <a href="/guide/writing-quasar-page.html#Page_Manifest">Writing a Page</a> section.</p>
 <h2 id="Layouts">Layouts</h2><p>Layouts are the elements that wrap page content, like navigational bar or sidebar. Multiple pages can share the same Layout, which is one of the main reason for their existence.</p>
+<p>Each layout has its own folder (<code>/src/layouts/&lt;layout-name&gt;</code>) and has the following structure:</p>
 <table>
 <thead>
 <tr>
@@ -390,10 +368,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>/src/layouts/<strong>&lt;layout-name&gt;</strong></td>
-<td>Layout folder</td>
-</tr>
 <tr>
 <td>layout.<strong>&lt;layout-name&gt;</strong>.js</td>
 <td><strong>[Required]</strong> Starting point of the Layout logic</td>
@@ -662,9 +636,101 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Overview]]></title>
+      <url>http://quasar-framework.org/css/index.html</url>
+      <content type="html"><![CDATA[<p>Quasar Framework has its own full-featured CSS Framework included. Learn how to make use of it here.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar CSS Icons]]></title>
+      <url>http://quasar-framework.org/css/core-css-icons.html</url>
+      <content type="html"><![CDATA[<p>To be written.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar CSS Helper Classes]]></title>
+      <url>http://quasar-framework.org/css/core-css-helper-classes.html</url>
+      <content type="html"><![CDATA[<h2 id="Container">Container</h2><p>A very important component for your Pages is the responsive <code>container</code> class which handles margins and padding relative to the screen width automatically so your content can make the best use of the real estate available.</p>
+<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">quasar-page</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span> ...... <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">quasar-page</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Visibility">Visibility</h2><p>There are CSS classes which you can use to hide or display content based on the screen size.</p>
+<p>Display only on:</p>
+<ul>
+<li>class=”<code>only mobile</code>“</li>
+<li>class=”<code>only tablet</code>“</li>
+<li>class=”<code>only small monitor</code>“</li>
+<li>class=”<code>only large monitor</code>“</li>
+</ul>
+<p>Hide on:</p>
+<ul>
+<li>class=”<code>hide mobile</code>“</li>
+<li>class=”<code>hide tablet</code>“</li>
+<li>class=”<code>hide small monitor</code>“</li>
+<li>class=”<code>hide large monitor</code>“</li>
+</ul>
+<h3 id="Other_Classes">Other Classes</h3><p>Also there’s the <code>hidden</code> class which removes the element from the view. The <code>invisible</code> class just hides while the element will still occupy its space within the view.</p>
+<p>The <code>transparent</code> class will add a default opacity to the element.</p>
+<h2 id="Positioning">Positioning</h2><p>There are default classes for fixed and absolute positioning with regards to screen margins. Use <code>fixed-X</code> or <code>absolute-X</code> Quasar classes, where <em>X</em> can be <code>top</code>, <code>right</code>, <code>bottom</code> or <code>left</code>.</p>
+<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fixed-top"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Text_Alignment">Text Alignment</h2><p>Use <code>text-center</code>, <code>text-right</code>, <code>text-left</code> or <code>text-justify</code> Quasar CSS classes to align text positioning.</p>
+<h2 id="Shadows">Shadows</h2><p>You can use some default shadow classes which add depth to your elements:</p>
+<ul>
+<li>class=”<code>z-none</code>“</li>
+<li>class=”<code>z-2</code>“</li>
+<li>class=”<code>z-3</code>“</li>
+<li>class=”<code>z-4</code>“</li>
+<li>class=”<code>z-6</code>“</li>
+<li>class=”<code>z-8</code>“</li>
+<li>class=”<code>z-16</code>“</li>
+</ul>
+<p>There’s also the option to have a transition animation:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"z-transition z-2"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Scroll">Scroll</h2><p>There’s the <code>scroll</code> class that helps some browsers (like on iOS platform) to best handle scrolling by touch on an element’s that is overflowed (it adds the <code>overflow: auto</code> CSS property automatically).</p>
+<h2 id="Window_Height">Window Height</h2><p>Whenever you need an item to have the height equivalent to the screen height, use <code>window-height</code> Quasar CSS class.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar CSS Flexbox Layout]]></title>
+      <url>http://quasar-framework.org/css/core-css-flexbox-layout.html</url>
+      <content type="html"><![CDATA[<p>The following is an extract (and adaptation for Quasar) from <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">A Guide to Flexbox</a>.</p>
+<h2 id="Background">Background</h2><p>The Flexbox Layout (Flexible Box) module (currently a W3C Last Call Working Draft) aims at providing a more efficient way to lay out, align and distribute space among items in a container, even when their size is unknown and/or dynamic (thus the word “flex”).</p>
+<p>The main idea behind the flex layout is to give the container the ability to alter its items’ width/height (and order) to best fill the available space (mostly to accommodate to all kind of display devices and screen sizes). A flex container expands items to fill available free space, or shrinks them to prevent overflow.</p>
+<p>Most importantly, the flexbox layout is direction-agnostic as opposed to the regular layouts (block which is vertically-based and inline which is horizontally-based). While those work well for pages, they lack flexibility (no pun intended) to support large or complex applications (especially when it comes to orientation changing, resizing, stretching, shrinking, etc.).</p>
+<h2 id="Getting_Started">Getting Started</h2><p>Flexbox applies to either the Container (Parent) or the Container’s items (Children).<br><img src="/images/flexbox-container.svg" alt="Flexbox Container"><br><img src="/images/flexbox-items.svg" alt="Flexbox Items"></p>
+<p>Following classes must be accompanied by the <code>layout</code> class, which adds the <code>display: flex</code> CSS property. If you’d like inline-flex, use <code>layout inline</code> class combo.</p>
+<h2 id="Parent_Classes">Parent Classes</h2><h3 id="Direction">Direction</h3><p><strong>You need a direction</strong>. Use <code>horizontal</code>, <code>horizontal-reverse</code>, <code>vertical</code> or <code>vertical-reverse</code> classes.<br><img src="/images/flexbox-direction.svg" alt="Flexbox Direction"></p>
+<h3 id="Wrap">Wrap</h3><p><strong>You can also wrap content</strong>. Use <code>wrap</code> or <code>wrap-reverse</code> classes. By default, flex items will all try to fit onto one line. You can change that and allow the items to wrap as needed with this property. Direction also plays a role here, determining the direction new lines are stacked in.<br><img src="/images/flexbox-wrap.svg" alt="Flexbox Direction"></p>
+<h3 id="Justify_Alignment">Justify Alignment</h3><p><strong>For alignment along the main axis</strong>, use classes below. It helps distribute extra free space left over when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.<br><img src="/images/flexbox-justify.svg" alt="Flexbox Justify Content"></p>
+<h3 id="Items_Alignment">Items Alignment</h3><p><strong>For alignment perpendicular to the main axis</strong>, use classes below. This defines the default behaviour for how flex items are laid out along the cross axis on the current line. Think of it as the justify-* version for the cross-axis (perpendicular to the main-axis).<br><img src="/images/flexbox-items-align.svg" alt="Flexbox Items Align"></p>
+<h3 id="Content_Alignment">Content Alignment</h3><p>The next classes <strong>align a flex container’s lines</strong> within when there is extra space in the cross-axis, similar to how justify-* aligns individual items within the main-axis.<br><img src="/images/flexbox-content-align.svg" alt="Flexbox Content Align"></p>
+<h2 id="Children_Classes">Children Classes</h2><h3 id="Order">Order</h3><p><strong>You can set the order</strong> by using <code>order-i</code> classes, where <em>i</em> is between 1-12. By default, flex items are laid out in the source order. However, the order property controls the order in which they appear in the flex container. If you need more granularity, use <code>order</code> CSS property and assign the desired value.<br><img src="/images/flexbox-order.svg" alt="Flexbox Order"></p>
+<h3 id="Grow">Grow</h3><p><strong>An item can grow if it’s enough space available</strong> by using <code>grow-i</code> classes, where <em>i</em> is between 1-12. This defines the ability for a flex item to grow if necessary. It accepts a unit-less value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.<br>If all items have <code>grow-1</code> class, the remaining space in the container will be distributed equally to all children. If one of the children has <code>grow-2</code>, the remaining space would take up twice as much space as the others (or it will try to, at least).<br><img src="/images/flexbox-grow.svg" alt="Flexbox Grow"></p>
+<h3 id="Shrink">Shrink</h3><p><strong>An item can shrink if necessary</strong> by using <code>shrink-i</code> classes, where <em>i</em> is between 1-12.</p>
+<h3 id="Self_Alignment">Self Alignment</h3><p><strong>An item can override the aligned specified on parent</strong>. This allows alignment to be overridden for individual flex items. Please see the <a href="#Items_Alignment">Items Alignment</a> explanation from Parent Classes to understand the available values.<br><img src="/images/flexbox-self.svg" alt="Flexbox Grow"></p>
+<h3 id="Flex_Basis">Flex Basis</h3><p>This refers to the <code>flex-basis</code> CSS property (<em>Note: not a Quasar CSS class like the other ones</em>) and defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means “look at my width or height property” (which was temporarily done by the main-size keyword until deprecated). The content keyword means “size it based on the item’s content” - this keyword isn’t well supported yet, so it’s hard to test and harder to know what it’s brethren max-content, min-content, and fit-content do.</p>
+<h3 id="Combo_flex_properties">Combo flex properties</h3><p>This refers to the Quasar CSS class <code>flex-i</code> where <em>i</em> is between 1-12. It sets <code>flex</code> CSS property to the respective number (defined by <em>i</em>) and the flex-basis to near 0.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar CSS Color Palette]]></title>
+      <url>http://quasar-framework.org/css/core-css-color-palette.html</url>
+      <content type="html"><![CDATA[<p>To be written.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title></title>
       <url>http://quasar-framework.org/blog/index.html</url>
       <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar CSS Spinners]]></title>
+      <url>http://quasar-framework.org/api/web-components-spinners.html</url>
+      <content type="html"><![CDATA[<p>To be written.</p>
+]]></content>
     </entry>
     
     <entry>
@@ -892,6 +958,9 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p><strong>NOTE</strong><br>Running on mobile means you can have this code running on a mobile device (phone or tablet) but with a browser, not within a Cordova wrapper.</p>
+</blockquote>
 <p>Platform specific:</p>
 <ul>
 <li>android</li>
@@ -914,9 +983,6 @@
 <li>&amp; more…</li>
 </ul>
 <p>Example when running Chrome on a Linux desktop machine:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.runs.on = &#123;</span><br><span class="line">  chrome: <span class="literal">true</span>,</span><br><span class="line">  desktop: <span class="literal">true</span>,</span><br><span class="line">  linux: <span class="literal">true</span>,</span><br><span class="line">  name: <span class="string">"chrome"</span>,</span><br><span class="line">  platform: <span class="string">"linux"</span>,</span><br><span class="line">  version: <span class="string">"47.0.2526.80"</span>,</span><br><span class="line">  versionNumber: <span class="number">47</span>,</span><br><span class="line">  webkit: <span class="literal">true</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p><strong>NOTE</strong><br>Running on mobile means you can have this code running on a mobile device (phone or tablet) but with a browser, not within a Cordova wrapper.</p>
-</blockquote>
 ]]></content>
     </entry>
     
@@ -1143,84 +1209,6 @@
 <blockquote>
 <p><strong>NOTE</strong><br>When aborting all requests, you may want to exclude some of them. For this, use the <code>persistent</code> property when making those particular requests.</p>
 </blockquote>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar CSS Icons]]></title>
-      <url>http://quasar-framework.org/api/core-css-icons.html</url>
-      <content type="html"><![CDATA[<p>To be written.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar CSS Helper Classes]]></title>
-      <url>http://quasar-framework.org/api/core-css-helper-classes.html</url>
-      <content type="html"><![CDATA[<h2 id="Container">Container</h2><p>A very important component for your Pages is the responsive <code>container</code> class which handles margins and padding relative to the screen width automatically so your content can make the best use of the real estate available.</p>
-<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">quasar-page</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span> ...... <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">quasar-page</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="Visibility">Visibility</h2><p>There are CSS classes which you can use to hide or display content based on the screen size.</p>
-<p>Display only on:</p>
-<ul>
-<li>class=”<code>only mobile</code>“</li>
-<li>class=”<code>only tablet</code>“</li>
-<li>class=”<code>only small monitor</code>“</li>
-<li>class=”<code>only large monitor</code>“</li>
-</ul>
-<p>Hide on:</p>
-<ul>
-<li>class=”<code>hide mobile</code>“</li>
-<li>class=”<code>hide tablet</code>“</li>
-<li>class=”<code>hide small monitor</code>“</li>
-<li>class=”<code>hide large monitor</code>“</li>
-</ul>
-<h3 id="Other_Classes">Other Classes</h3><p>Also there’s the <code>hidden</code> class which removes the element from the view. The <code>invisible</code> class just hides while the element will still occupy its space within the view.</p>
-<p>The <code>transparent</code> class will add a default opacity to the element.</p>
-<h2 id="Positioning">Positioning</h2><p>There are default classes for fixed and absolute positioning with regards to screen margins. Use <code>fixed-X</code> or <code>absolute-X</code> Quasar classes, where <em>X</em> can be <code>top</code>, <code>right</code>, <code>bottom</code> or <code>left</code>.</p>
-<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fixed-top"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="Text_Alignment">Text Alignment</h2><p>Use <code>text-center</code>, <code>text-right</code>, <code>text-left</code> or <code>text-justify</code> Quasar CSS classes to align text positioning.</p>
-<h2 id="Shadows">Shadows</h2><p>You can use some default shadow classes which add depth to your elements:</p>
-<ul>
-<li>class=”<code>z-none</code>“</li>
-<li>class=”<code>z-2</code>“</li>
-<li>class=”<code>z-3</code>“</li>
-<li>class=”<code>z-4</code>“</li>
-<li>class=”<code>z-6</code>“</li>
-<li>class=”<code>z-8</code>“</li>
-<li>class=”<code>z-16</code>“</li>
-</ul>
-<p>There’s also the option to have a transition animation:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"z-transition z-2"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="Scroll">Scroll</h2><p>There’s the <code>scroll</code> class that helps some browsers (like on iOS platform) to best handle scrolling by touch on an element’s that is overflowed (it adds the <code>overflow: auto</code> CSS property automatically).</p>
-<h2 id="Window_Height">Window Height</h2><p>Whenever you need an item to have the height equivalent to the screen height, use <code>window-height</code> Quasar CSS class.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar CSS Flexbox Layout]]></title>
-      <url>http://quasar-framework.org/api/core-css-flexbox-layout.html</url>
-      <content type="html"><![CDATA[<p>The following is an extract (and adaptation for Quasar) from <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">A Guide to Flexbox</a>.</p>
-<h2 id="Background">Background</h2><p>The Flexbox Layout (Flexible Box) module (currently a W3C Last Call Working Draft) aims at providing a more efficient way to lay out, align and distribute space among items in a container, even when their size is unknown and/or dynamic (thus the word “flex”).</p>
-<p>The main idea behind the flex layout is to give the container the ability to alter its items’ width/height (and order) to best fill the available space (mostly to accommodate to all kind of display devices and screen sizes). A flex container expands items to fill available free space, or shrinks them to prevent overflow.</p>
-<p>Most importantly, the flexbox layout is direction-agnostic as opposed to the regular layouts (block which is vertically-based and inline which is horizontally-based). While those work well for pages, they lack flexibility (no pun intended) to support large or complex applications (especially when it comes to orientation changing, resizing, stretching, shrinking, etc.).</p>
-<h2 id="Getting_Started">Getting Started</h2><p>Flexbox applies to either the Container (Parent) or the Container’s items (Children).<br><img src="/images/flexbox-container.svg" alt="Flexbox Container"><br><img src="/images/flexbox-items.svg" alt="Flexbox Items"></p>
-<p>Following classes must be accompanied by the <code>layout</code> class, which adds the <code>display: flex</code> CSS property. If you’d like inline-flex, use <code>layout inline</code> class combo.</p>
-<h2 id="Parent_Classes">Parent Classes</h2><h3 id="Direction">Direction</h3><p><strong>You need a direction</strong>. Use <code>horizontal</code>, <code>horizontal-reverse</code>, <code>vertical</code> or <code>vertical-reverse</code> classes.<br><img src="/images/flexbox-direction.svg" alt="Flexbox Direction"></p>
-<h3 id="Wrap">Wrap</h3><p><strong>You can also wrap content</strong>. Use <code>wrap</code> or <code>wrap-reverse</code> classes. By default, flex items will all try to fit onto one line. You can change that and allow the items to wrap as needed with this property. Direction also plays a role here, determining the direction new lines are stacked in.<br><img src="/images/flexbox-wrap.svg" alt="Flexbox Direction"></p>
-<h3 id="Justify_Alignment">Justify Alignment</h3><p><strong>For alignment along the main axis</strong>, use classes below. It helps distribute extra free space left over when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.<br><img src="/images/flexbox-justify.svg" alt="Flexbox Justify Content"></p>
-<h3 id="Items_Alignment">Items Alignment</h3><p><strong>For alignment perpendicular to the main axis</strong>, use classes below. This defines the default behaviour for how flex items are laid out along the cross axis on the current line. Think of it as the justify-* version for the cross-axis (perpendicular to the main-axis).<br><img src="/images/flexbox-items-align.svg" alt="Flexbox Items Align"></p>
-<h3 id="Content_Alignment">Content Alignment</h3><p>The next classes <strong>align a flex container’s lines</strong> within when there is extra space in the cross-axis, similar to how justify-* aligns individual items within the main-axis.<br><img src="/images/flexbox-content-align.svg" alt="Flexbox Content Align"></p>
-<h2 id="Children_Classes">Children Classes</h2><h3 id="Order">Order</h3><p><strong>You can set the order</strong> by using <code>order-i</code> classes, where <em>i</em> is between 1-12. By default, flex items are laid out in the source order. However, the order property controls the order in which they appear in the flex container. If you need more granularity, use <code>order</code> CSS property and assign the desired value.<br><img src="/images/flexbox-order.svg" alt="Flexbox Order"></p>
-<h3 id="Grow">Grow</h3><p><strong>An item can grow if it’s enough space available</strong> by using <code>grow-i</code> classes, where <em>i</em> is between 1-12. This defines the ability for a flex item to grow if necessary. It accepts a unit-less value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.<br>If all items have <code>grow-1</code> class, the remaining space in the container will be distributed equally to all children. If one of the children has <code>grow-2</code>, the remaining space would take up twice as much space as the others (or it will try to, at least).<br><img src="/images/flexbox-grow.svg" alt="Flexbox Grow"></p>
-<h3 id="Shrink">Shrink</h3><p><strong>An item can shrink if necessary</strong> by using <code>shrink-i</code> classes, where <em>i</em> is between 1-12.</p>
-<h3 id="Self_Alignment">Self Alignment</h3><p><strong>An item can override the aligned specified on parent</strong>. This allows alignment to be overridden for individual flex items. Please see the <a href="#Items_Alignment">Items Alignment</a> explanation from Parent Classes to understand the available values.<br><img src="/images/flexbox-self.svg" alt="Flexbox Grow"></p>
-<h3 id="Flex_Basis">Flex Basis</h3><p>This refers to the <code>flex-basis</code> CSS property (<em>Note: not a Quasar CSS class like the other ones</em>) and defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means “look at my width or height property” (which was temporarily done by the main-size keyword until deprecated). The content keyword means “size it based on the item’s content” - this keyword isn’t well supported yet, so it’s hard to test and harder to know what it’s brethren max-content, min-content, and fit-content do.</p>
-<h3 id="Combo_flex_properties">Combo flex properties</h3><p>This refers to the Quasar CSS class <code>flex-i</code> where <em>i</em> is between 1-12. It sets <code>flex</code> CSS property to the respective number (defined by <em>i</em>) and the flex-basis to near 0.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar CSS Color Palette]]></title>
-      <url>http://quasar-framework.org/api/core-css-color-palette.html</url>
-      <content type="html"><![CDATA[<p>To be written.</p>
 ]]></content>
     </entry>
     
