@@ -28,20 +28,32 @@
       <title><![CDATA[Writing a Quasar App Page]]></title>
       <url>http://quasar-framework.org/guide/writing-quasar-page.html</url>
       <content type="html"><![CDATA[<p>Make sure you read and understand the <a href="/guide/quasar-app-structure.html">folder structure of a Quasar App</a> first. Read the <a href="/guide/quasar-app-structure.html#Pages">Pages</a> section closely.</p>
-<p>Then use the <a href="/guide/cli-commands.html#Pages">Quasar CLI</a> to build a page.</p>
+<p>Then use the <a href="/guide/cli-commands.html#Pages">Quasar CLI</a> to build a Page.</p>
 <p>Also don’t forget to read more about the <a href="/guide/quasar-build-system.html">Build System</a> to understand how pages are precompiled and bundled, what files are considered an entry-point and many more.</p>
-<p>Let’s dissect how pages work.</p>
-<h2 id="Javascript">Javascript</h2><p>The starting point of a Quasar Page is <em>js/script.page-name.js</em> file. Think of it as the Controller part of a page.<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line"> * Use for Async operations (like Ajax requests) before displaying page</span><br><span class="line"> */</span></span><br><span class="line"><span class="built_in">module</span>.exports.prepare = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">/*</span><br><span class="line">   * Properties available:</span><br><span class="line">   */</span></span><br><span class="line">  <span class="keyword">this</span>.params <span class="comment">// [Object] Route parameters -- see API &gt; Router</span></span><br><span class="line">  <span class="keyword">this</span>.query <span class="comment">// [Object] Route query string -- see API &gt; Router</span></span><br><span class="line">  <span class="keyword">this</span>.name <span class="comment">// [String] Page name (eg. 'index')</span></span><br><span class="line">  <span class="keyword">this</span>.manifest <span class="comment">// [Object] Page manifest (config.page-name.yml)</span></span><br><span class="line">  <span class="keyword">this</span>.route <span class="comment">// [String] Route name (eg. '$' or ':chapter/:page')</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">/* When async operations are done, call this: */</span></span><br><span class="line">  <span class="keyword">this</span>.done(<span class="comment">/* [Anything] */</span>data);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"> <span class="comment">/*</span><br><span class="line">  * Compute Vue scope</span><br><span class="line">  */</span></span><br><span class="line"> <span class="built_in">module</span>.exports.scope = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="comment">/*</span><br><span class="line">    * Common properties available:</span><br><span class="line">    */</span></span><br><span class="line">   <span class="keyword">this</span>.params <span class="comment">// [Object] Route parameters -- see API &gt; Router</span></span><br><span class="line">   <span class="keyword">this</span>.query <span class="comment">// [Object] Route query string -- see API &gt; Router</span></span><br><span class="line">   <span class="keyword">this</span>.name <span class="comment">// [String] Page name (eg. 'index')</span></span><br><span class="line">   <span class="keyword">this</span>.manifest <span class="comment">// [Object] Page manifest (config.page-name.yml)</span></span><br><span class="line">   <span class="keyword">this</span>.route <span class="comment">// [String] Route name (eg. '$' or ':chapter/:page')</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">/*</span><br><span class="line">    * Specific properties available:</span><br><span class="line">    */</span></span><br><span class="line">   <span class="keyword">this</span>.data <span class="comment">// [Anything] Result from calling this.done() from prepare() from above</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">/* Return what is going to become the Vue scope of the page */</span></span><br><span class="line">   <span class="keyword">return</span> &#123;...&#125;;</span><br><span class="line"> &#125;;</span><br><span class="line"></span><br><span class="line"> <span class="comment">/*</span><br><span class="line">  * Finally everything is set to start page operations</span><br><span class="line">  */</span></span><br><span class="line"><span class="built_in">module</span>.exports.start = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">/*</span><br><span class="line">   * Properties available:</span><br><span class="line">   */</span></span><br><span class="line">  <span class="keyword">this</span>.params <span class="comment">// [Object] Route parameters -- see API &gt; Router</span></span><br><span class="line">  <span class="keyword">this</span>.query <span class="comment">// [Object] Route query string -- see API &gt; Router</span></span><br><span class="line">  <span class="keyword">this</span>.name <span class="comment">// [String] Page name (eg. 'index')</span></span><br><span class="line">  <span class="keyword">this</span>.manifest <span class="comment">// [Object] Page manifest (config.page-name.yml)</span></span><br><span class="line">  <span class="keyword">this</span>.route <span class="comment">// [String] Route name (eg. '$' or ':chapter/:page')</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">/*</span><br><span class="line">   * Specific properties available:</span><br><span class="line">   */</span></span><br><span class="line">  <span class="keyword">this</span>.data <span class="comment">// [Anything] Result from calling this.done() from prepare() from above</span></span><br><span class="line">  <span class="keyword">this</span>.scope <span class="comment">// [Object] Result from calling scope() from above</span></span><br><span class="line">  <span class="keyword">this</span>.vm <span class="comment">// [Object, Vue instance] Vue-Model of page</span></span><br><span class="line"></span><br><span class="line">  ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p><strong>TIP</strong><br>Include other JS files for modularity by <em>require()</em>-ing them. Take full advantage of Webpack.<br>Read more about the <a href="/guide/quasar-build-system.html">Build System</a> to understand.</p>
-</blockquote>
+<p>Let’s dissect how Pages work.</p>
+<h2 id="Javascript">Javascript</h2><p>The starting point of a Quasar Page is <em>js/script.page-name.js</em> file. Think of it as the Controller part of a Page.</p>
+<p>It has a basic CommonJS structure that exports a Vue instantiation object or a function for doing asynchronous operations before calling a callback with a Vue instantiation object.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Option 1. Supply Vue instantiation object</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!../html/view.page-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123; <span class="comment">// Vue instance</span></span><br><span class="line">  template: html,</span><br><span class="line">  ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Option 2. Do some asynch ops first</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!../html/view.page-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">  <span class="comment">/*</span><br><span class="line">   * Properties available:</span><br><span class="line">   */</span></span><br><span class="line">  <span class="keyword">this</span>.params <span class="comment">// [Object] Route parameters -- see API &gt; Router</span></span><br><span class="line">  <span class="keyword">this</span>.query <span class="comment">// [Object] Route query string -- see API &gt; Router</span></span><br><span class="line">  <span class="keyword">this</span>.name <span class="comment">// [String] Page name (eg. 'index')</span></span><br><span class="line">  <span class="keyword">this</span>.manifest <span class="comment">// [Object] Page manifest (config.page-name.yml)</span></span><br><span class="line">  <span class="keyword">this</span>.route <span class="comment">// [String] Route name (eg. '$' or ':chapter/:page')</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="comment">// asynchronous operations</span></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">  done(&#123; <span class="comment">// Vue instance</span></span><br><span class="line">    template: html,</span><br><span class="line">    ...</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="Tips">Tips</h3><ol>
+<li><p>When exporting a function, make sure the callback is called, otherwise the Page will never load.</p>
+</li>
+<li><p>Include other JS files for modularity by <em>require()</em>-ing them. Take full advantage of Webpack.<br>Read more about the <a href="/guide/quasar-build-system.html">Build System</a> to understand.</p>
+</li>
+<li><p>Make sure you use <code>require(&#39;raw!.....&#39;)</code> syntax for the template so that it will get bundled automatically into your JS file with the help of the Build System. This saves one precious HTTP request. <strong>Do not require the template within the exporting function (if you use one) because Webpack won’t know it needs to be handled at compile time</strong>. So require it outside to avoid issues.</p>
+</li>
+<li><p>Make good use of the Vue component lifecycle methods (<code>created</code>, <code>beforeCompile</code>, <code>compiled</code>, <code>ready</code>, <code>beforeDestroy</code>, <code>destroyed</code>) and different props:<br><img src="/images/vue-lifecycle.png" alt="Vue Lifecycle Diagram" title="Vue Lifecycle Diagram"></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Example making use of Vue component lifecycle methods</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!../html/view.page-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123; <span class="comment">// Vue instance</span></span><br><span class="line">  template: html,</span><br><span class="line">  beforeCompile: &#123;</span><br><span class="line">    <span class="comment">// Before template compiling</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;,</span><br><span class="line">  ready: &#123;</span><br><span class="line">    <span class="comment">// Template has been rendered into view</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 <h2 id="Page_Manifest">Page Manifest</h2><p>Provide page specific configuration (in YAML format), called <em>Manifest</em> in <code>/pages/*page-name*/config.*page-name*.yml</code>.</p>
-<h3 id="HTML_&amp;_CSS_Properties">HTML &amp; CSS Properties</h3><p>These get computed by default if CSS and HTML main page files exists, but they can be overridden to point to other files. The path must start with the folder where app root <em>index.html</em> file exists.<br><figure class="highlight"><table><tr><td class="code"><pre><span class="line">css: &#39;path/to/css&#39;&#10;html: &#39;path/to/html&#39;</span><br></pre></td></tr></table></figure></p>
-<h3 id="Page_Routes_Properties">Page Routes Properties</h3><p>One more important property is <code>hashes</code>, which is an array of hashes for the respective page. Example:<br><figure class="highlight"><table><tr><td class="code"><pre><span class="line"># config.book.yml&#10;&#10;hashes:&#10;  - &#39;$&#39; # registers #/book route (because &#39;book&#39; is the name of the page)&#10;  - &#39;:chapter/:page&#39; # adds this.params.chapter &#38; this.params.page from page methods</span><br></pre></td></tr></table></figure></p>
-<p>So now if we navigate to route <em>#/book/thinking/20</em>, we’ll trigger <em>book</em> page:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// js/script.book.js</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports.start = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.params.chapter <span class="comment">// is (String) 'thinking'</span></span><br><span class="line">  <span class="keyword">this</span>.params.page <span class="comment">// is (String) '20'</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<h3 id="Your_Own_Properties">Your Own Properties</h3><p>Any other property that you write in the page manifest will be accessible under <code>this.manifest</code> property in page methods.<br><figure class="highlight"><table><tr><td class="code"><pre><span class="line"># config.book.yml&#10;&#10;myprop: &#39;my-value&#39;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// js/script.book.js</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports.start = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.manifest.myprop <span class="comment">// is 'my-value'</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="Page_Events">Page Events</h2><p>There are global events registered for each step of the way when a user navigates to a page. See <a href="/api/quasar-events.html#Global_Events_Emitter">Quasar Events Global Emitter</a> if you haven’t already.</p>
+<h3 id="CSS_Property">CSS Property</h3><p>These get computed by default if CSS main page file exists (<strong>so it is optional!</strong>), but it can be overridden to point to other files. The path must start with the folder where app root <em>index.html</em> file exists.<br><figure class="highlight"><table><tr><td class="code"><pre><span class="line">css: &#39;path/to/css&#39;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Page_Routes_Property">Page Routes Property</h3><p>One more important property is <code>hashes</code>, which is an array of hashes for the respective page. Example:<br><figure class="highlight"><table><tr><td class="code"><pre><span class="line"># config.book.yml&#10;&#10;hashes:&#10;  - &#39;$&#39; # registers #/book route (because &#39;book&#39; is the name of the page)&#10;  - &#39;:chapter/:page&#39; # adds this.params.chapter &#38; this.params.page to page&#39;s main script when using a function</span><br></pre></td></tr></table></figure></p>
+<p>So now if we navigate to route <em>#/book/thinking/20</em>, we’ll trigger <em>book</em> page:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// js/script.book.js</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.params.chapter <span class="comment">// is (String) 'thinking'</span></span><br><span class="line">  <span class="keyword">this</span>.params.page <span class="comment">// is (String) '20'</span></span><br><span class="line"></span><br><span class="line">  done(...);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Your_Own_Properties">Your Own Properties</h3><p>Any other property that you write in the page manifest will be accessible under <code>this.manifest</code> property in page methods, and under the global <code>quasar.global.manifest</code> object.</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line"># config.book.yml&#10;&#10;myprop: &#39;my-value&#39;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// js/script.book.js</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.manifest.myprop <span class="comment">// is 'my-value'</span></span><br><span class="line"></span><br><span class="line">  done(...);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="Page_Events">Page Events</h2><p>There are global events registered for each step of the way when a user navigates to a page. See <a href="/api/core-js-events.html#Global_Events_Emitter">Quasar Events Global Emitter</a> if you haven’t already.</p>
 <table>
 <thead>
 <tr>
@@ -51,20 +63,28 @@
 </thead>
 <tbody>
 <tr>
-<td>app:page:requiring</td>
-<td>Triggered right before requiring page Javascript</td>
+<td>app:page:require</td>
+<td>Triggered before requiring page JS file</td>
 </tr>
 <tr>
-<td>app:page:preparing</td>
-<td>Triggered before calling page - prepare()</td>
+<td>app:page:post-require</td>
+<td>Triggered after requiring page JS file</td>
 </tr>
 <tr>
-<td>app:page:scoping</td>
-<td>Triggered before calling page - scope()</td>
+<td>app:page:prepare</td>
+<td>Triggered before solving page dependencies</td>
 </tr>
 <tr>
-<td>app:page:starting</td>
-<td>Triggered before calling page - start()</td>
+<td>app:page:post-prepare</td>
+<td>Triggered after we have the page’s Vue instantiation object</td>
+</tr>
+<tr>
+<td>app:page:render</td>
+<td>Triggered before rendering page on screen</td>
+</tr>
+<tr>
+<td>app:page:post-render</td>
+<td>Triggered after rendering page on screen</td>
 </tr>
 <tr>
 <td>app:page:ready</td>
@@ -72,11 +92,94 @@
 </tr>
 </tbody>
 </table>
-<p>All these events are triggered regardless of the fact that the page script has the respective methods or not.</p>
 <p>Usage example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.global.events.on(<span class="string">'app:page:ready'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// props.params, props.query, props.name, props.manifest, props.route, ... available</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<h2 id="HTML">HTML</h2><p>The Quasar App Pages’ HTML is a Vue instance. Read more about the <a href="/guide/quasar-build-system.html#HTML_Files">Build System</a> to understand.</p>
-<h2 id="CSS">CSS</h2><p>Notice that all CSS files have the <em>.styl</em> extension. This is because you can use  Stylus (with NIB). Read more about the <a href="/guide/quasar-build-system.html">Build System</a> to understand.</p>
+<h2 id="HTML">HTML</h2><p>The Quasar App Page HTML represents a Vue instance template. Read more about the <a href="/guide/quasar-build-system.html#HTML_Files">Build System</a> to understand.</p>
+<h2 id="CSS">CSS</h2><p>Notice that all CSS files have the <em>.styl</em> extension. This is because you can use Stylus (with NIB extension). Read more about the <a href="/guide/quasar-build-system.html">Build System</a> to understand.</p>
 <h2 id="Assets">Assets</h2><p>Place all your page assets (images, fonts, …) inside the <code>/pages/*page-name*/assets/</code> folder.<br>Images get optimized by default on a production build.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Writing a Quasar App Layout]]></title>
+      <url>http://quasar-framework.org/guide/writing-quasar-layout.html</url>
+      <content type="html"><![CDATA[<p>Make sure you read and understand the <a href="/guide/quasar-app-structure.html">folder structure of a Quasar App</a> first.<br>Read the <a href="/guide/quasar-app-structure.html#Layouts">Layouts</a> section closely. Then use the <a href="/guide/cli-commands.html#Layouts">Quasar CLI</a> to build a Layout.</p>
+<p>Now let’s dissect how Layouts work.</p>
+<h2 id="Javascript">Javascript</h2><p>The starting point of a Quasar Layout is <em>layout.layout-name.js</em> file. Think of it as the Controller of a Layout.</p>
+<p>It has a basic CommonJS structure that exports a Vue instantiation object or a function for doing asynchronous operations before calling a callback with a Vue instantiation object.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Option 1. Supply Vue instantiation object</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./layout.layout-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123; <span class="comment">// Vue instance</span></span><br><span class="line">  template: html,</span><br><span class="line">  ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Option 2. Do some asynch ops first</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./layout.layout-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">  <span class="comment">/*</span><br><span class="line">   * Properties available regarding the page</span><br><span class="line">   * that gets loaded along this Layout</span><br><span class="line">   */</span></span><br><span class="line">  <span class="keyword">this</span>.params <span class="comment">// [Object] Route parameters -- see API &gt; Router</span></span><br><span class="line">  <span class="keyword">this</span>.query <span class="comment">// [Object] Route query string -- see API &gt; Router</span></span><br><span class="line">  <span class="keyword">this</span>.name <span class="comment">// [String] Page name (eg. 'index')</span></span><br><span class="line">  <span class="keyword">this</span>.manifest <span class="comment">// [Object] Page manifest (config.page-name.yml)</span></span><br><span class="line">  <span class="keyword">this</span>.route <span class="comment">// [String] Route name (eg. '$' or ':chapter/:page')</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="comment">// asynchronous operations</span></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">  done(&#123; <span class="comment">// Vue instance</span></span><br><span class="line">    template: html,</span><br><span class="line">    ...</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="Tips">Tips</h3><ol>
+<li><p>When exporting a function, make sure the callback is called, otherwise the Page will never load.</p>
+</li>
+<li><p>Include other JS files for modularity by <em>require()</em>-ing them. Take full advantage of Webpack.<br>Read more about the <a href="/guide/quasar-build-system.html">Build System</a> to understand.</p>
+</li>
+<li><p>Make sure you use <code>require(&#39;raw!.....&#39;)</code> syntax for the template so that it will get bundled automatically into your JS file with the help of the Build System. This saves one precious HTTP request. <strong>Do not require the template within the exporting function (if you use one) because Webpack won’t know it needs to be handled at compile time</strong>. So require it outside to avoid issues.</p>
+</li>
+<li><p>Make good use of the Vue component lifecycle methods (<code>created</code>, <code>beforeCompile</code>, <code>compiled</code>, <code>ready</code>, <code>beforeDestroy</code>, <code>destroyed</code>) and different props:<br><img src="/images/vue-lifecycle.png" alt="Vue Lifecycle Diagram" title="Vue Lifecycle Diagram"></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Example making use of Vue component lifecycle methods</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!../html/view.page-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123; <span class="comment">// Vue instance</span></span><br><span class="line">  template: html,</span><br><span class="line">  beforeCompile: &#123;</span><br><span class="line">    <span class="comment">// Before template compiling</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;,</span><br><span class="line">  ready: &#123;</span><br><span class="line">    <span class="comment">// Template has been rendered into view</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="HTML">HTML</h2><p>The Quasar App Layout HTML representa a Vue instance template. Read more about the <a href="/guide/quasar-build-system.html#HTML_Files">Build System</a> to understand.</p>
+<p>There are several Web Components that you can use. Some of them are mandatory. A quick example:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- layout.example.html --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">quasar-layout</span> <span class="attribute">shrink-header</span> <span class="attribute">scroll-shadow</span>&gt;</span> <span class="comment">&lt;!-- mandatory --&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="title">quasar-header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">quasar-row</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-button</span>&gt;</span><span class="tag">&lt;<span class="title">quasar-icon</span> <span class="attribute">sidebar</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-icon</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-title</span>&gt;</span>Text &#123;&#123;text&#125;&#125;<span class="tag">&lt;/<span class="title">quasar-title</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-button</span>&gt;</span><span class="tag">&lt;<span class="title">quasar-icon</span> <span class="attribute">alarm</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-icon</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-button</span>&gt;</span><span class="tag">&lt;<span class="title">quasar-icon</span> <span class="attribute">ellipsis</span> <span class="attribute">vertical</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-icon</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">quasar-row</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">quasar-navigation</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-tab</span>&gt;</span><span class="tag">&lt;<span class="title">quasar-icon</span> <span class="attribute">database</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-icon</span>&gt;</span>Tab 1<span class="tag">&lt;/<span class="title">quasar-tab</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-tab</span>&gt;</span><span class="tag">&lt;<span class="title">quasar-icon</span> <span class="attribute">alarm</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-icon</span>&gt;</span>Tab 2<span class="tag">&lt;/<span class="title">quasar-tab</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-tab</span>&gt;</span><span class="tag">&lt;<span class="title">quasar-icon</span> <span class="attribute">database</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-icon</span>&gt;</span>Tab 3<span class="tag">&lt;/<span class="title">quasar-tab</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">quasar-navigation</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">quasar-header</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="title">quasar-page</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-page</span>&gt;</span> <span class="comment">&lt;!-- mandatory --&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="title">quasar-footer</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">quasar-row</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-title</span>&gt;</span>Quasar Rocks!<span class="tag">&lt;/<span class="title">quasar-title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">quasar-row</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">quasar-footer</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="title">quasar-layout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Read more about the Components and how to use them in the <a href="/api/web-components-layout.html">Web Components - Layout</a> section.</p>
+<h2 id="Layout_Events">Layout Events</h2><p>There are global events registered for each step of the way when a Layout is loaded/swaped. See <a href="/api/core-js-events.html#Global_Events_Emitter">Quasar Events Global Emitter</a> if you haven’t already.</p>
+<table>
+<thead>
+<tr>
+<th>Event Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app:layout:require</td>
+<td>Triggered before requiring page JS file</td>
+</tr>
+<tr>
+<td>app:layout:post-require</td>
+<td>Triggered after requiring page JS file</td>
+</tr>
+<tr>
+<td>app:layout:prepare</td>
+<td>Triggered before solving page dependencies</td>
+</tr>
+<tr>
+<td>app:layout:post-prepare</td>
+<td>Triggered after we have the page’s Vue instantiation object</td>
+</tr>
+<tr>
+<td>app:layout:render</td>
+<td>Triggered before rendering page on screen</td>
+</tr>
+<tr>
+<td>app:layout:post-render</td>
+<td>Triggered after rendering page on screen</td>
+</tr>
+<tr>
+<td>app:layout:ready</td>
+<td>Triggered when page has fully loaded</td>
+</tr>
+</tbody>
+</table>
+<p>Usage example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.global.events.on(<span class="string">'app:layout:ready'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Vue State Management]]></title>
+      <url>http://quasar-framework.org/guide/vue-state-management.html</url>
+      <content type="html"><![CDATA[<p>As you should know, Pages and Layouts are essentially Vue instances. So they have a data object. It is good to learn how to efficiently share parts of the data object between components.</p>
+<p><em>The following is an extract (and adaptation) from <a href="http://vuejs.org" target="_blank">VueJS official website</a></em>.</p>
+<p>In large applications, state management often becomes complex due to multiple pieces of state scattered across many components and the interactions between them. It is often overlooked that the source of truth in Vue instances is the raw data object - a Vue instances simply proxies access to it. Therefore, if you have a piece of state that should be shared by multiple instances, you should avoid duplicating it and share it by identity:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> sourceOfTruth = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> vmA = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: sourceOfTruth</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> vmB = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: sourceOfTruth</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>Now whenever <code>sourceOfTruth</code> is mutated, both <code>vmA</code> and <code>vmB</code> will update their views automatically. Extending this idea further, we would arrive at the <strong>store pattern</strong>:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> store = &#123;</span><br><span class="line">  state: &#123;</span><br><span class="line">    message: <span class="string">'Hello!'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  actionA: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.state.message = <span class="string">'action A triggered'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  actionB: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.state.message = <span class="string">'action B triggered'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> vmA = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    privateState: &#123;&#125;,</span><br><span class="line">    sharedState: store.state</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> vmB = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    privateState: &#123;&#125;,</span><br><span class="line">    sharedState: store.state</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>Notice we are putting all actions that mutate the store’s state inside the store itself. This type of centralized state management makes it easier to understand what type of mutations could happen to the state, and how are they triggered. Each component can still own and manage its private state.</p>
+<p><img src="/images/vue-state-management.png" alt="Vue State Management"></p>
+<p>One thing to take note is that you should never replace the original state object in your actions - the components and the store need to share reference to the same object in order for the mutations to be observed.</p>
+<p>If we enforce a convention where components are never allowed to directly mutate state that belongs to a store, but should instead dispatch events that notify the store to perform actions, we’ve essentially arrived at the <a href="https://facebook.github.io/flux/" target="_blank">Flux</a> architecture. The benefits of this convention is we can record all state mutations happening to the store, and on top of that we can implement advanced debugging helpers such as mutation logs, snapshots, history re-rolls etc.</p>
+<p>The Flux architecture is commonly used in React applications. Turns out the core idea behind Flux can be quite simply achieved in Vue.js, thanks to the unobtrusive reactivity system. Do note what we demonstrated here is just an example to introduce the concept - you may not need it at all for simple scenarios, and you should adapt the pattern to fit the real needs of your application.</p>
 ]]></content>
     </entry>
     
@@ -106,7 +209,8 @@
 <p>Take into consideration that the following files are taken as Webpack entry-points (take a good look at folders):</p>
 <ul>
 <li>/js/<em>file-name</em>.js</li>
-<li>/pages/<em>page-name</em>/js/<em>file-name</em>.js</li>
+<li>/pages/<em>page-name</em>/js/script.<em>page-name</em>.js</li>
+<li>/layouts/<em>layout-name</em>/layout.<em>layout-name</em>.js</li>
 </ul>
 <p>So when writing a Quasar App Page script and you want to <em>require()</em> something, in the <em>/pages/page-name/js/</em> folder, make a sub-folder and place it there. Otherwise any <em>.js</em> files directly under <em>/pages/page-name/js/</em> folder are considered entry-points and will be built accordingly, which is not what you want. Same for the global <em>/js</em> folder.</p>
 <h3 id="CSS_Files">CSS Files</h3><p>Notice that all CSS files are built using <a href="https://learnboost.github.io/stylus/" target="_blank">Stylus</a>, so they have the <em>.styl</em> extension. The Stylus NIB extension is also available.</p>
@@ -116,19 +220,6 @@
 <li>/pages/<em>page-name</em>/css/<em>file-name</em>.styl</li>
 </ul>
 <p>So when writing a Quasar App Page CSS and you want to <em>import</em> something, in the <em>/pages/page-name/css/</em> folder, make a sub-folder and place it there. Otherwise any <em>.styl</em> files directly under <em>/pages/page-name/css/</em> folder are considered entry-points and will be built accordingly, which is not what you want. Same for the global <em>/css</em> folder.</p>
-<h3 id="HTML_Files">HTML Files</h3><p>To support code modularity inside your HTMLs you can include other HTML files/templates. Take into consideration that the following files are considered entry-points (take a good look at folders):</p>
-<ul>
-<li>/html/<em>file-name</em>.html</li>
-<li>/pages/<em>page-name</em>/html/<em>file-name</em>.html</li>
-</ul>
-<p>So when writing a Quasar App Page HTML and you want to <em>include</em> something, in the <em>/pages/page-name/html/</em> folder, make a sub-folder and place it there. Otherwise any <em>.html</em> files directly under <em>/pages/page-name/html/</em> folder are considered entry-points and will be built accordingly, which is not what you want. Same for the global <em>/html</em> folder.</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">// view.page-name.html:</span><br><span class="line"></span><br><span class="line">@@include('./view.html')     &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span><br><span class="line">@@include('./var.html', &#123;    &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span><br><span class="line">  "name": "rstoenescu",</span><br><span class="line">  "age": 12345,</span><br><span class="line">  "socials": &#123;</span><br><span class="line">    "fb": "facebook.com/include",</span><br><span class="line">    "tw": "twitter.com/include"</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">// view.html:</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">h1</span>&gt;</span>view<span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">// var.html:</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">label</span>&gt;</span>@@name<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">label</span>&gt;</span>@@age<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">strong</span>&gt;</span>@@socials.fb<span class="tag">&lt;/<span class="title">strong</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">strong</span>&gt;</span>@@socials.tw<span class="tag">&lt;/<span class="title">strong</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">// ... and it gets compiled to:</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">h1</span>&gt;</span>view<span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">label</span>&gt;</span>rstoenescu<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">label</span>&gt;</span>12345<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">strong</span>&gt;</span>facebook.com/include<span class="tag">&lt;/<span class="title">strong</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">strong</span>&gt;</span>twitter.com/include<span class="tag">&lt;/<span class="title">strong</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><strong>TIP</strong><br>The HTML of Quasar App Pages is used as template for Vue instances, so yeah!, you can use <strong>two-way data binding</strong>. Read more about the two-way data binding Vue library and how to use it <a href="http://vuejs.org" target="_blank">here</a>.</p>
-</blockquote>
 <h3 id="Image_Files">Image Files</h3><p>Image files should be placed under <code>assets</code> folders. By default, on a production build, <code>GIF</code>, <code>JPEG</code>, <code>PNG</code> and <code>SVG</code> image files get “minified” without losing noticeable quality.</p>
 ]]></content>
     </entry>
@@ -136,7 +227,7 @@
     <entry>
       <title><![CDATA[Quasar App Structure]]></title>
       <url>http://quasar-framework.org/guide/quasar-app-structure.html</url>
-      <content type="html"><![CDATA[<h2 id="Overview">Overview</h2><p>This is what a new Quasar Framework App folder structure looks like. Some folders are creating after building the App.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tree -I <span class="string">'node_modules|wrapper'</span> <span class="operator">-a</span> --dirsfirst</span><br><span class="line">.</span><br><span class="line">├── coverage</span><br><span class="line">│   ├── lcov-report</span><br><span class="line">│   │   ├── base.css</span><br><span class="line">│   │   ├── index.html</span><br><span class="line">│   │   ├── prettify.css</span><br><span class="line">│   │   ├── prettify.js</span><br><span class="line">│   │   ├── sort-arrow-sprite.png</span><br><span class="line">│   │   └── sorter.js</span><br><span class="line">│   └── lcov.info</span><br><span class="line">├── dist</span><br><span class="line">│   ├── assets</span><br><span class="line">│   │   └── favicon.ico</span><br><span class="line">│   ├── css</span><br><span class="line">│   │   ├── themes</span><br><span class="line">│   │   │   └── default</span><br><span class="line">│   │   │       └── assets</span><br><span class="line">│   │   │           ├── fonts</span><br><span class="line">│   │   │           │   ├── icons.eot</span><br><span class="line">│   │   │           │   ├── icons.otf</span><br><span class="line">│   │   │           │   ├── icons.svg</span><br><span class="line">│   │   │           │   ├── icons.ttf</span><br><span class="line">│   │   │           │   ├── icons.woff</span><br><span class="line">│   │   │           │   └── icons.woff2</span><br><span class="line">│   │   │           └── images</span><br><span class="line">│   │   │               └── flags.png</span><br><span class="line">│   │   ├── app.css</span><br><span class="line">│   │   └── app-dependencies.css</span><br><span class="line">│   ├── js</span><br><span class="line">│   │   ├── app-dependencies.js</span><br><span class="line">│   │   └── app.js</span><br><span class="line">│   ├── pages</span><br><span class="line">│   │   └── index</span><br><span class="line">│   │       ├── assets</span><br><span class="line">│   │       │   └── assets-README.txt</span><br><span class="line">│   │       ├── css</span><br><span class="line">│   │       │   └── style.index.css</span><br><span class="line">│   │       ├── html</span><br><span class="line">│   │       │   └── view.index.html</span><br><span class="line">│   │       └── js</span><br><span class="line">│   │           └── script.index.js</span><br><span class="line">│   ├── app.json</span><br><span class="line">│   └── index.html</span><br><span class="line">├── src</span><br><span class="line">│   ├── assets</span><br><span class="line">│   │   └── favicon.ico</span><br><span class="line">│   ├── css</span><br><span class="line">│   │   └── app.styl</span><br><span class="line">│   ├── html</span><br><span class="line">│   │   └── html-README.txt</span><br><span class="line">│   ├── js</span><br><span class="line">│   │   └── app.js</span><br><span class="line">│   ├── pages</span><br><span class="line">│   │   └── index</span><br><span class="line">│   │       ├── assets</span><br><span class="line">│   │       │   └── assets-README.txt</span><br><span class="line">│   │       ├── css</span><br><span class="line">│   │       │   └── style.index.styl</span><br><span class="line">│   │       ├── html</span><br><span class="line">│   │       │   └── view.index.html</span><br><span class="line">│   │       ├── js</span><br><span class="line">│   │       │   └── script.index.js</span><br><span class="line">│   │       └── config.index.yml</span><br><span class="line">│   └── index.html</span><br><span class="line">├── <span class="built_in">test</span></span><br><span class="line">│   ├── .eslintrc</span><br><span class="line">│   ├── setup.js</span><br><span class="line">│   └── test.spec.js</span><br><span class="line">├── wrapper</span><br><span class="line">│   ├── ....</span><br><span class="line">│   ├── ....</span><br><span class="line">│   └── ....</span><br><span class="line">├── CHANGELOG.md</span><br><span class="line">├── .eslintrc</span><br><span class="line">├── .gitignore</span><br><span class="line">├── package.json</span><br><span class="line">├── quasar.build.yml</span><br><span class="line">├── README.md</span><br><span class="line">└── .stylintrc</span><br><span class="line"></span><br><span class="line"><span class="number">30</span> directories, <span class="number">45</span> files</span><br></pre></td></tr></table></figure></p>
+      <content type="html"><![CDATA[<h2 id="Overview">Overview</h2><p>This is what a new Quasar Framework App folder structure looks like. Some folders are creating after building the App.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tree -I <span class="string">'node_modules|wrapper'</span> <span class="operator">-a</span> --dirsfirst</span><br><span class="line">.</span><br><span class="line">├── coverage</span><br><span class="line">│   ├── lcov-report</span><br><span class="line">│   │   ├── ...</span><br><span class="line">│   │   ├── index.html</span><br><span class="line">│   │   └── ...</span><br><span class="line">│   └── lcov.info</span><br><span class="line">├── dist</span><br><span class="line">│   ├── assets</span><br><span class="line">│   │   ├── fonts</span><br><span class="line">│   │   │   ├── icons</span><br><span class="line">│   │   │   │   ├── ...</span><br><span class="line">│   │   │   │   └── ...</span><br><span class="line">│   │   │   └── roboto</span><br><span class="line">│   │   │       ├── ...</span><br><span class="line">│   │   │       └── ...</span><br><span class="line">│   │   └── favicon.ico</span><br><span class="line">│   ├── css</span><br><span class="line">│   │   ├── app.css</span><br><span class="line">│   │   └── app-dependencies.css</span><br><span class="line">│   ├── js</span><br><span class="line">│   │   ├── app-dependencies.js</span><br><span class="line">│   │   └── app.js</span><br><span class="line">│   ├── layouts</span><br><span class="line">│   │   └── layout.main.js</span><br><span class="line">│   ├── pages</span><br><span class="line">│   │   └── index</span><br><span class="line">│   │       ├── assets</span><br><span class="line">│   │       │   └── assets-README.txt</span><br><span class="line">│   │       ├── css</span><br><span class="line">│   │       │   └── style.index.css</span><br><span class="line">│   │       └── js</span><br><span class="line">│   │           └── script.index.js</span><br><span class="line">│   ├── app.json</span><br><span class="line">│   └── index.html</span><br><span class="line">├── src</span><br><span class="line">│   ├── assets</span><br><span class="line">│   │   └── favicon.ico</span><br><span class="line">│   ├── css</span><br><span class="line">│   │   └── app.styl</span><br><span class="line">│   ├── html</span><br><span class="line">│   │   └── html-README.txt</span><br><span class="line">│   ├── js</span><br><span class="line">│   │   └── app.js</span><br><span class="line">│   ├── layouts</span><br><span class="line">│   │   └── main</span><br><span class="line">│   │       ├── layout.main.html</span><br><span class="line">│   │       └── layout.main.js</span><br><span class="line">│   ├── pages</span><br><span class="line">│   │   └── index</span><br><span class="line">│   │       ├── assets</span><br><span class="line">│   │       │   └── assets-README.txt</span><br><span class="line">│   │       ├── css</span><br><span class="line">│   │       │   └── style.index.styl</span><br><span class="line">│   │       ├── html</span><br><span class="line">│   │       │   └── view.index.html</span><br><span class="line">│   │       ├── js</span><br><span class="line">│   │       │   └── script.index.js</span><br><span class="line">│   │       └── config.index.yml</span><br><span class="line">│   └── index.html</span><br><span class="line">├── <span class="built_in">test</span></span><br><span class="line">│   ├── .eslintrc</span><br><span class="line">│   ├── setup.js</span><br><span class="line">│   └── test.spec.js</span><br><span class="line">├── wrapper</span><br><span class="line">│   ├── ....</span><br><span class="line">│   ├── ....</span><br><span class="line">│   └── ....</span><br><span class="line">├── .eslintrc</span><br><span class="line">├── .gitignore</span><br><span class="line">├── package.json</span><br><span class="line">├── quasar.build.yml</span><br><span class="line">├── README.md</span><br><span class="line">└── .stylintrc</span><br><span class="line"></span><br><span class="line"><span class="number">29</span> directories, <span class="number">60</span> files</span><br></pre></td></tr></table></figure></p>
 <p>What each is used for:</p>
 <table>
 <thead>
@@ -169,10 +260,6 @@
 <tr>
 <td>/wrapper</td>
 <td>Native mobile app wrapper; see <a href="/guide/cli-commands.html#Native_Mobile_App_Wrapper">Native_Mobile_App_Wrapper</a></td>
-</tr>
-<tr>
-<td>/CHANGELOG.md</td>
-<td>Change log <a href="/guide/cli-commands.html#Making_a_Release">generated by Quasar CLI</a></td>
 </tr>
 <tr>
 <td>/.eslintrc</td>
@@ -221,6 +308,10 @@
 <td>Folder to store assets for each page</td>
 </tr>
 <tr>
+<td>/src/layouts</td>
+<td>Folder to store assets for each layout</td>
+</tr>
+<tr>
 <td>/src/index.html</td>
 <td>App starting point</td>
 </tr>
@@ -261,6 +352,7 @@
 </tr>
 </tbody>
 </table>
+<p>Placing files in these folder ensures that the Build System will compile them accordingly.</p>
 <p>Each page has a starting point for each type of asset:</p>
 <table>
 <thead>
@@ -276,7 +368,7 @@
 </tr>
 <tr>
 <td>view.<strong>&lt;page-name&gt;</strong>.html</td>
-<td>If it exists, it will automatically be included when page is loaded.</td>
+<td>Template for your page</td>
 </tr>
 <tr>
 <td>script.<strong>&lt;page-name&gt;</strong>.js</td>
@@ -289,6 +381,30 @@
 </tbody>
 </table>
 <p>Read about page manifests (<code>config.*page-name*.yml</code>) in <a href="/guide/writing-quasar-page.html#Page_Manifest">Writing a Page</a> section.</p>
+<h2 id="Layouts">Layouts</h2><p>Layouts are the elements that wrap page content, like navigational bar or sidebar. Multiple pages can share the same Layout, which is one of the main reason for their existence.</p>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/src/layouts/<strong>&lt;layout-name&gt;</strong></td>
+<td>Layout folder</td>
+</tr>
+<tr>
+<td>layout.<strong>&lt;layout-name&gt;</strong>.js</td>
+<td><strong>[Required]</strong> Starting point of the Layout logic</td>
+</tr>
+<tr>
+<td>layout.<strong>&lt;layout-name&gt;</strong>.html</td>
+<td>Template for your Layout</td>
+</tr>
+</tbody>
+</table>
+<p>Read more about it in <a href="/guide/writing-quasar-layout.html">Writing a Layout</a> section.</p>
 ]]></content>
     </entry>
     
@@ -306,13 +422,13 @@
       <url>http://quasar-framework.org/guide/quasar-app-configuration.html</url>
       <content type="html"><![CDATA[<p>As you’ve seen in <a href="/guide/quasar-app-structure.html">App Structure</a> page (read it if you haven’t already), there are a few key configuration files for your Quasar App.</p>
 <h2 id="app-json">app.json</h2><p><em>Gets generated by the build system</em></p>
-<p>This is the place that all App configuration gets merged in. All pages manifests, all routes, and many more. You can build a search widget based on this file.</p>
+<p>This is the place that all App configuration gets merged in automatically by the Build System. All pages manifests, all routes, and many more. You can build a search widget based on this file.</p>
 <p>Example:<br><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">pages</span>": <span class="value">&#123;</span><br><span class="line">    "<span class="attribute">index</span>": <span class="value">&#123;</span><br><span class="line">      "<span class="attribute">hashes</span>": <span class="value">[</span><br><span class="line">        <span class="string">"$"</span>,</span><br><span class="line">        <span class="string">":article/:page"</span></span><br><span class="line">      ]</span><br><span class="line">    </span>&#125;</span><br><span class="line">  </span>&#125;</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="quasar-build-yml">quasar.build.yml</h2><p>This is the place where you configure how your App is built, what dependencies to inject, how your Quasar App is tested and more.</p>
 <p>Example:<br><figure class="highlight"><table><tr><td class="code"><pre><span class="line">deps:&#10;  js:&#10;    - &#39;node_modules/X/js/y.js&#39;&#10;    - &#39;node_modules/W/z.js&#39;&#10;  css:&#10;    - &#39;node_modules/X/css/y.css&#39;&#10;preview:&#10;  port: 3500&#10;previewResp:&#10;  port: 3600&#10;test:&#10;  exclude: []</span><br></pre></td></tr></table></figure></p>
 <h3 id="‘deps’_object">‘deps’ object</h3><p>Specify the dependencies of your App. You can use NPM to install different packages, or Bower, or just download some file from somewhere and store it inside the App’s folder. In the end, all you need is a path. The Build System takes care of the rest. Mind the order as it may be important.</p>
 <h3 id="‘preview’_object">‘preview’ object</h3><p><a href="/guide/cli-commands.html#Live_Preview">Live Preview</a> configuration. Read more about configuration properties  <a href="http://www.browsersync.io/docs/options/" target="_blank" rel="external">here</a>. Example of default configuration which is merged with user specific one:<br><figure class="highlight"><table><tr><td class="code"><pre><span class="line">preview:&#10;  port: 3000&#10;  ui:&#10;    port: 3001&#10;  open: false&#10;  reloadOnRestart: true</span><br></pre></td></tr></table></figure></p>
-<h3 id="‘previewResp’_object">‘previewResp’ object</h3><p><a href="/guide/cli-commands.html#Live_Preview_with_Responsive_View">Live Preview with Responsive View</a> configuration. Read more about configuration properties <a href="http://www.browsersync.io/docs/options/" target="_blank" rel="external">here</a>. Example of default configuration which is merged with user specific one:<br><figure class="highlight"><table><tr><td class="code"><pre><span class="line">previewResp:&#10;  port: 3100&#10;  ui: false&#10;  open: false&#10;  ghostMode: true&#10;  reloadOnRestart: true</span><br></pre></td></tr></table></figure></p>
+<h3 id="‘previewResp’_object">‘previewResp’ object</h3><p><a href="/guide/cli-commands.html#Responsive_View">Live Preview with Responsive View</a> configuration. Read more about configuration properties <a href="http://www.browsersync.io/docs/options/" target="_blank" rel="external">here</a>. Example of default configuration which is merged with user specific one:<br><figure class="highlight"><table><tr><td class="code"><pre><span class="line">previewResp:&#10;  port: 3100&#10;  ui: false&#10;  open: false&#10;  ghostMode: true&#10;  reloadOnRestart: true</span><br></pre></td></tr></table></figure></p>
 <h3 id="‘test’_object">‘test’ object</h3><p>This object’s properties override any of the <a href="https://github.com/rstoenescu/quasar-cli/blob/master/lib/gulp/gulp-config.js#L14-L103" target="_blank">default Karma configuration</a> options.<br>See the full list of <a href="http://karma-runner.github.io/0.8/config/configuration-file.html" target="_blank">Karma configuration properties</a> that you can use.</p>
 ]]></content>
     </entry>
@@ -332,8 +448,11 @@
     <entry>
       <title><![CDATA[What is Quasar?]]></title>
       <url>http://quasar-framework.org/guide/index.html</url>
-      <content type="html"><![CDATA[<p>Quasar is a modern HTML5 SPA (Single Page Application) front-end framework on steroids.<br>Some of its features:</p>
-<h3 id="Responsive_Website_&amp;_Mobile_App">Responsive Website &amp; Mobile App</h3><p>Write code once and then deploy as a responsive website or as a native phone/tablet app. No need to waste time on HOW your content is displayed.. just focus on what your content is.</p>
+      <content type="html"><![CDATA[<p>Quasar is a modern HTML5 SPA (Single Page Application) front-end framework on steroids.</p>
+<p>Some of its features:</p>
+<h3 id="Responsive_Website_&amp;_Mobile_App">Responsive Website &amp; Mobile App</h3><p><img src="/images/responsive-banner.png" alt="Build on one. Use it on all." title="Build on one. Use it on all."></p>
+<p>Write code once and then deploy as a responsive website or as a native phone/tablet app. No need to waste time on HOW your content is displayed.. just focus on what your content is.</p>
+<h3 id="CSS_Framework">CSS Framework</h3><p>Quasar uses its own full-featured CSS Framework. You can tweak it and build your own theme to make your App’s design distinctive.</p>
 <h3 id="Focus_on_Content">Focus on Content</h3><p>Quasar is a time-saver from many perspectives. You don’t have to worry about a lot of things, including how your content is being displayed to best leverages the screen real-estate. The built-in components are responsive by default.</p>
 <h3 id="Built_for_Speed">Built for Speed</h3><p>Quasar Framework has a lot of optimizations behind the scenes to make your App run really fast (and consume the lowest possible battery power) by using the integrated Build system described below.</p>
 <h3 id="Build_System">Build System</h3><p>Build system out of the box to help you in managing an App folder, precompiling code, bundling it together, preparing it for deployment, running tests, live previewing of your code in browser(s). No need to write even a single line of code for this.</p>
@@ -503,6 +622,9 @@
 <h2 id="Pages">Pages</h2><p>Pages are the core of any Quasar App. Think of a Quasar Page as a webpage which has its own View, Controller and Model.</p>
 <h3 id="Create_Page">Create Page</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar page [page-name]</span><br></pre></td></tr></table></figure>
 <h3 id="Rename_Page">Rename Page</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar page [current-page-name] [new-page-name]</span><br></pre></td></tr></table></figure>
+<h2 id="Layouts">Layouts</h2><p>Layouts are the elements that wrap one or multiple pages (like navigational bar).</p>
+<h3 id="Create_Layout">Create Layout</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar layout [layout-name]</span><br></pre></td></tr></table></figure>
+<h3 id="Rename_Layout">Rename Layout</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar layout [current-layout-name] [new-layout-name]</span><br></pre></td></tr></table></figure>
 <h2 id="Native_Mobile_App_Wrapper">Native Mobile App Wrapper</h2><p>You can use Cordova to wrap your Quasar App into a native mobile App.</p>
 <h3 id="Wrap_your_App">Wrap your App</h3><p>So you want to be able to produce native apps for the mobile platforms:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar wrap</span><br></pre></td></tr></table></figure></p>
 <p>This command generates a folder inside your App called <code>/wrapper</code>. It contains the assets of a Cordova project mapped to your Quasar App’s source code.</p>
@@ -524,18 +646,18 @@
 <p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"demo"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">p</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">v-model</span>=<span class="value">"message"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> demo = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#demo'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    message: <span class="string">'Hello Vue.js!'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>Changing the <em>input</em> element content automatically updates <code>data.message</code> (called <em>scope</em>). Works the other way around too if you programmatically change <code>data.message</code> property. But this is just the tip of the iceberg.</p>
+<h2 id="Apache_Cordova">Apache Cordova</h2><p>Wrap your App in Cordova so it can be installed on a mobile phone. It offers access to native device APIs, which is awesome. It integrates perfectly with Quasar Framework.</p>
+<p>Read more about it <a href="https://cordova.apache.org/" target="_blank">here</a>.</p>
+<h2 id="Lodash">Lodash</h2><p>Inspired by Underscore (&amp; even has compatible API), but better. You have the global object <code>_</code> (underscore character) you can use.</p>
+<p>Read more about it <a href="https://lodash.com/" target="_blank">here</a>.</p>
+<h2 id="HammerJS">HammerJS</h2><p>Add touch gestures to your App. Hammer is a open-source library that can recognize gestures made by touch, mouse and pointer events. It doesn’t have any dependencies, and it’s small.</p>
+<p>Read more about it <a href="http://hammerjs.github.io/" target="_blank">here</a>.</p>
 <h2 id="jQuery">jQuery</h2><p>No need for an introduction. Mind that you should not be required to use it though due to Vue. It is included by default just because Quasar Framework uses it under the cover.</p>
 <blockquote>
 <p><strong>IMPORTANT</strong><br>Good Quasar App code <strong>DOES NOT</strong> uses jQuery and it <strong>DOES NOT</strong> touch DOM elements directly under any way. Vue should handle the DOM update for you through the data scope.</p>
 </blockquote>
-<h2 id="Lodash">Lodash</h2><p>Inspired by Underscore (&amp; even has compatible API), but better. You have the global object <code>_</code> (underscore character) you can use.</p>
-<p>Read more about it <a href="https://lodash.com/" target="_blank">here</a>.</p>
 <h2 id="Fastclick">Fastclick</h2><p>FastClick is a simple, easy-to-use library for eliminating the 300ms delay between a physical tap and the firing of a click event on mobile browsers. The aim is to make your Quasar App feel less laggy and more responsive while avoiding any interference with your current logic.</p>
 <p>Read more about it <a href="https://ftlabs.github.io/fastclick/" target="_blank">here</a>.</p>
-<h2 id="Semantic_UI">Semantic UI</h2><p>Inspired by Bootstrap &amp; Foundation, but way better. Semantic is a development framework that helps create beautiful, responsive layouts using human-friendly HTML. Semantic UI treats words and classes as exchangeable concepts. Classes use syntax from natural languages like noun/modifier relationships, word order, and plurality to link concepts intuitively.</p>
-<p>Read more about it <a href="http://semantic-ui.com/" target="_blank">here</a>.</p>
-<h2 id="Apache_Cordova">Apache Cordova</h2><p>Wrap your App in Cordova so it can be installed on a mobile phone. It offers access to native device APIs, which is awesome. It integrates perfectly with Quasar Framework.</p>
-<p>Read more about it <a href="https://cordova.apache.org/" target="_blank">here</a>.</p>
 ]]></content>
     </entry>
     
@@ -546,8 +668,39 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Quasar Layout Web Components]]></title>
+      <url>http://quasar-framework.org/api/web-components-layout.html</url>
+      <content type="html"><![CDATA[<p>Layout example with all components available to get a feel of how to use them:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- layout.example.html --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">quasar-layout</span> <span class="attribute">shrink-header</span> <span class="attribute">scroll-shadow</span>&gt;</span> <span class="comment">&lt;!-- mandatory --&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="title">quasar-header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">quasar-row</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-button</span>&gt;</span><span class="tag">&lt;<span class="title">quasar-icon</span> <span class="attribute">sidebar</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-icon</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-title</span>&gt;</span>Text &#123;&#123;text&#125;&#125;<span class="tag">&lt;/<span class="title">quasar-title</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-button</span>&gt;</span><span class="tag">&lt;<span class="title">quasar-icon</span> <span class="attribute">alarm</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-icon</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-button</span>&gt;</span><span class="tag">&lt;<span class="title">quasar-icon</span> <span class="attribute">ellipsis</span> <span class="attribute">vertical</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-icon</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">quasar-row</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">quasar-navigation</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-tab</span>&gt;</span><span class="tag">&lt;<span class="title">quasar-icon</span> <span class="attribute">database</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-icon</span>&gt;</span>Tab 1<span class="tag">&lt;/<span class="title">quasar-tab</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-tab</span>&gt;</span><span class="tag">&lt;<span class="title">quasar-icon</span> <span class="attribute">alarm</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-icon</span>&gt;</span>Tab 2<span class="tag">&lt;/<span class="title">quasar-tab</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-tab</span>&gt;</span><span class="tag">&lt;<span class="title">quasar-icon</span> <span class="attribute">database</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-icon</span>&gt;</span>Tab 3<span class="tag">&lt;/<span class="title">quasar-tab</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">quasar-navigation</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">quasar-header</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="title">quasar-page</span>&gt;</span><span class="tag">&lt;/<span class="title">quasar-page</span>&gt;</span> <span class="comment">&lt;!-- mandatory --&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="title">quasar-footer</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">quasar-row</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">quasar-title</span>&gt;</span>Quasar Rocks!<span class="tag">&lt;/<span class="title">quasar-title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">quasar-row</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">quasar-footer</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="title">quasar-layout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Let’s take each Web Component one by one. Make sure you close the opening tag.</p>
+<h3 id="quasar-layout">quasar-layout</h3><p>Wraps the layout and is a mandatory tag for a Quasar Layout. There are a few behaviors that can be used (see them below). Use empty attributes on the quasar-layout tag.</p>
+<ol>
+<li><code>scroll-shadow</code> - When user scrolls the page a shadow appears on the top navigation bar.</li>
+<li><code>keep-marginals</code> - Keep top navigation bar and footer visible at all times regardless of page scroll position.</li>
+<li><code>shrink-header</code> - When user scrolls the page only the top row remains visible and all subsequent rows get hidden.</li>
+<li><code>retract-header</code> - When user scrolls the page down the top navigation bar gets hidden. When scrolling up it slowly gets visible again regardless of page scroll position.</li>
+</ol>
+<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">quasar-layout</span> <span class="attribute">retract-header</span> <span class="attribute">scroll-shadow</span>&gt;</span></span><br><span class="line">  ...</span><br><span class="line"><span class="tag">&lt;/<span class="title">quasar-layout</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="quasar-page">quasar-page</h3><p>Wraps the page content and is a mandatory tag for a Quasar Layout.</p>
+<h3 id="quasar-header">quasar-header</h3><p>Wraps the top navigation bar.</p>
+<h3 id="quasar-row">quasar-row</h3><p>Wraps a header or footer row.</p>
+<h3 id="quasar-title">quasar-title</h3><p>Wraps the main row item that grows horizontally to the available real estate.</p>
+<h3 id="quasar-footer">quasar-footer</h3><p>Wraps the footer. Use rows as for the header.</p>
+<h3 id="quasar-navigation">quasar-navigation</h3><p>Wraps the navigational tabs. Do not wrap in a <code>quasar-row</code>.</p>
+<h3 id="quasar-tab">quasar-tab</h3><p>Wraps a tab for the navigational row.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Overview]]></title>
+      <url>http://quasar-framework.org/api/index.html</url>
+      <content type="html"><![CDATA[<p>Learn here the API specifications of every feature embedded in Quasar Framework. How to require a script, how to create a route, how to detect if the app is running within Cordova or on a desktop, and many more.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Web Storage]]></title>
-      <url>http://quasar-framework.org/api/quasar-web-storage-api.html</url>
+      <url>http://quasar-framework.org/api/feat-web-storage.html</url>
       <content type="html"><![CDATA[<p>Quasar provides a wrapper over Web Storage API.</p>
 <blockquote>
 <p><strong>NOTE</strong><br>Web Storage API only retrieves strings. <strong>Quasar retrieves data with its original data type.</strong> You tell it to store a Number then to retrieve it and it will still be a Number, not a string representation of the number as with Web Storage API. Same for JSON, Regular Expressions, Dates, Booleans and so on. Read below.</p>
@@ -580,8 +733,35 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Quasar Cookies]]></title>
+      <url>http://quasar-framework.org/api/feat-cookies.html</url>
+      <content type="html"><![CDATA[<p>This is a wrapper over the standardized <code>document.cookie</code>.</p>
+<blockquote>
+<p><strong>NOTE</strong><br>In addition, you can read and write cookies using JSON objects.</p>
+</blockquote>
+<h2 id="Read_a_Cookie">Read a Cookie</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> value = quasar.get.cookie(<span class="string">'cookie_name'</span>);</span><br></pre></td></tr></table></figure>
+<p>When cookie is not set, the return value is <code>undefined</code>.</p>
+<h2 id="Read_All_Cookies">Read All Cookies</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> cookies = quasar.get.all.cookies();</span><br></pre></td></tr></table></figure>
+<p><code>cookies</code> variable will be an object with key-value pairs (cookie_name : cookie_value).</p>
+<h2 id="Verify_if_Cookie_is_Set">Verify if Cookie is Set</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="built_in">Boolean</span>) quasar.has.cookie(<span class="string">'cookie_name'</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="Write_a_Cookie">Write a Cookie</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.set.cookie(<span class="string">'cookie_name'</span>, cookie_value, options);</span><br></pre></td></tr></table></figure>
+<p><code>options</code> is an Object which can have the following properties: <code>expire</code>, <code>path</code>, <code>domain</code>, <code>secure</code>. They are explained below.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.set.cookie(<span class="string">'quasar'</span>, <span class="string">'framework'</span>, &#123;</span><br><span class="line">  secure: <span class="literal">true</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="Option_expires">Option <code>expires</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">expires: <span class="number">10</span></span><br></pre></td></tr></table></figure>
+<p>Define lifetime of the cookie. Value can be a Number which will be interpreted as days from time of creation or a Date object. If omitted, the cookie becomes a session cookie.</p>
+<h3 id="Option_path">Option <code>path</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">path: <span class="string">'/'</span></span><br></pre></td></tr></table></figure>
+<p>Define the path where the cookie is valid. By default the path of the cookie is the path of the page where the cookie was created (standard browser behavior). If you want to make it available for instance across the entire domain use path: ‘/‘. Default: path of page where the cookie was created.</p>
+<h3 id="Option_domain">Option <code>domain</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">domain: <span class="string">'quasar-framework.org'</span></span><br></pre></td></tr></table></figure>
+<p>Define the domain where the cookie is valid. Default: domain of page where the cookie was created.</p>
+<h3 id="Option_secure">Option <code>secure</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">secure: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>If true, the cookie transmission requires a secure protocol (HTTPS) and will NOT be sent over HTTP. Default value is <code>false</code>.</p>
+<h2 id="Remove_a_Cookie">Remove a Cookie</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.remove.cookie(<span class="string">'cookie_name'</span>);</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Router]]></title>
-      <url>http://quasar-framework.org/api/quasar-router.html</url>
+      <url>http://quasar-framework.org/api/core-js-router.html</url>
       <content type="html"><![CDATA[<h2 id="Getting_Started">Getting Started</h2><p>Each route is an object defined like below:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> route = &#123;</span><br><span class="line">  path: <span class="string">'#/'</span></span><br><span class="line">  before: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; ... &#125; <span class="comment">// can be omitted</span></span><br><span class="line">  on: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; ... &#125;</span><br><span class="line">  after: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; ... &#125; <span class="comment">// can be omitted</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 <p>Adding a route:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.add.route(&#123;...&#125;);</span><br></pre></td></tr></table></figure></p>
 <p>Initialize router to start listening to hash changes:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.start.router();</span><br></pre></td></tr></table></figure></p>
@@ -611,7 +791,7 @@
     
     <entry>
       <title><![CDATA[Quasar Require]]></title>
-      <url>http://quasar-framework.org/api/quasar-require.html</url>
+      <url>http://quasar-framework.org/api/core-js-require.html</url>
       <content type="html"><![CDATA[<p>This feature is used to dynamically include <code>.js</code> files or inject <code>.css</code> ones.</p>
 <h2 id="Require_a_Script_file">Require a Script file</h2><p>You can require a CommonJS compliant .js file directly from your application. Subsequent require() calls within the files are going to also be fetched. Besides being able to use synchronous (but not browser blocking!) require() calls within the browser, you can also require scripts from your node_modules/ folder.</p>
 <p>Features that you can take advantage of:</p>
@@ -646,14 +826,14 @@
 <li>CSS is cached, so subsequent calls to the same resource are resolved without fetching file again.</li>
 <li>Ability to remove global or per-page injected CSS at command.</li>
 </ul>
-<h3 id="Usage-1">Usage</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Injecting globally</span></span><br><span class="line">quasar.inject.global.css(URL);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Injecting per-page</span></span><br><span class="line">quasar.inject.page.css(URL);</span><br></pre></td></tr></table></figure>
-<p>Removing injected CSS:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Removing globally injected CSS</span></span><br><span class="line">quasar.clear.global.css();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Removing page injected CSS</span></span><br><span class="line">quasar.clear.page.css();</span><br></pre></td></tr></table></figure></p>
+<h3 id="Usage-1">Usage</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Injecting globally</span></span><br><span class="line">quasar.inject.css(URL);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Injecting per-page</span></span><br><span class="line">quasar.inject.page.css(URL);</span><br></pre></td></tr></table></figure>
+<p>Removing injected CSS:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Removing globally injected CSS</span></span><br><span class="line">quasar.clear.css();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Removing page injected CSS</span></span><br><span class="line">quasar.clear.page.css();</span><br></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[Quasar Events]]></title>
-      <url>http://quasar-framework.org/api/quasar-events.html</url>
+      <url>http://quasar-framework.org/api/core-js-events.html</url>
       <content type="html"><![CDATA[<p>Events are important for the inner workings of your App and also for writing Quasar Plugins.<br>Sometimes you need an event bus or a publish/subscribe channel. An emitter solves this need.</p>
 <h2 id="Creating_an_Emitter">Creating an Emitter</h2><p>We call an emitter an object who is capable of registering and triggering events.</p>
 <p>There are two ways to create one:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// create a new Object</span></span><br><span class="line"><span class="keyword">var</span> emitter = quasar.create.events.emitter();</span><br><span class="line"></span><br><span class="line"><span class="comment">// make existing Object an emitter</span></span><br><span class="line"><span class="keyword">var</span> object = &#123;...&#125;;</span><br><span class="line">quasar.make.events.emitter(object);</span><br></pre></td></tr></table></figure></p>
@@ -679,7 +859,7 @@
     
     <entry>
       <title><![CDATA[Quasar Environment]]></title>
-      <url>http://quasar-framework.org/api/quasar-environment.html</url>
+      <url>http://quasar-framework.org/api/core-js-environment.html</url>
       <content type="html"><![CDATA[<p>Helpers are built-in to detect the environment in which the code is running:</p>
 <table>
 <thead>
@@ -693,22 +873,17 @@
 <tr>
 <td>quasar.runs.on.mobile</td>
 <td>boolean</td>
-<td>Is the code running on a mobile device? (Cordova or browser)</td>
+<td>Is the code running on a mobile device?</td>
 </tr>
 <tr>
 <td>quasar.runs.on.cordova</td>
 <td>boolean</td>
-<td>Is the code running inside Cordova?</td>
+<td>Is the code running within Cordova?</td>
 </tr>
 <tr>
 <td>quasar.runs.on.desktop</td>
 <td>boolean</td>
 <td>Is the code running on a desktop browser?</td>
-</tr>
-<tr>
-<td>quasar.runs.on.browser</td>
-<td>boolean</td>
-<td>Is the code running on a browser? (desktop or mobile)</td>
 </tr>
 <tr>
 <td>quasar.runs.with.touch</td>
@@ -717,6 +892,28 @@
 </tr>
 </tbody>
 </table>
+<p>Platform specific:</p>
+<ul>
+<li>android</li>
+<li>lackberry</li>
+<li>cros</li>
+<li>ios</li>
+<li>ipad</li>
+<li>iphone</li>
+<li>ipod</li>
+<li>kindle</li>
+<li>linux</li>
+<li>mac</li>
+<li>playbook</li>
+<li>silk</li>
+<li>chrome</li>
+<li>opera</li>
+<li>safari</li>
+<li>win (Windows)</li>
+<li>winphone (Windows Phone)</li>
+<li>&amp; more…</li>
+</ul>
+<p>Example when running Chrome on a Linux desktop machine:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.runs.on = &#123;</span><br><span class="line">  chrome: <span class="literal">true</span>,</span><br><span class="line">  desktop: <span class="literal">true</span>,</span><br><span class="line">  linux: <span class="literal">true</span>,</span><br><span class="line">  name: <span class="string">"chrome"</span>,</span><br><span class="line">  platform: <span class="string">"linux"</span>,</span><br><span class="line">  version: <span class="string">"47.0.2526.80"</span>,</span><br><span class="line">  versionNumber: <span class="number">47</span>,</span><br><span class="line">  webkit: <span class="literal">true</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p><strong>NOTE</strong><br>Running on mobile means you can have this code running on a mobile device (phone or tablet) but with a browser, not within a Cordova wrapper.</p>
 </blockquote>
@@ -725,7 +922,7 @@
     
     <entry>
       <title><![CDATA[Quasar Debug Helpers]]></title>
-      <url>http://quasar-framework.org/api/quasar-debug-helpers.html</url>
+      <url>http://quasar-framework.org/api/core-js-debug-helpers.html</url>
       <content type="html"><![CDATA[<p>The <code>quasar.debug</code> object has useful debugging methods.</p>
 <h2 id="Javascript_Stack">Javascript Stack</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.debug.printStack()</span><br></pre></td></tr></table></figure>
 <p>Useful when stuck somewhere in the code and you’d like to see the Javascript stack outputted to the console.</p>
@@ -735,35 +932,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar Cookies]]></title>
-      <url>http://quasar-framework.org/api/quasar-cookies.html</url>
-      <content type="html"><![CDATA[<p>This is a wrapper over the standardized <code>document.cookie</code>.</p>
-<blockquote>
-<p><strong>NOTE</strong><br>In addition, you can read and write cookies using JSON objects.</p>
-</blockquote>
-<h2 id="Read_a_Cookie">Read a Cookie</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> value = quasar.get.cookie(<span class="string">'cookie_name'</span>);</span><br></pre></td></tr></table></figure>
-<p>When cookie is not set, the return value is <code>undefined</code>.</p>
-<h2 id="Read_All_Cookies">Read All Cookies</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> cookies = quasar.get.all.cookies();</span><br></pre></td></tr></table></figure>
-<p><code>cookies</code> variable will be an object with key-value pairs (cookie_name : cookie_value).</p>
-<h2 id="Verify_if_Cookie_is_Set">Verify if Cookie is Set</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="built_in">Boolean</span>) quasar.has.cookie(<span class="string">'cookie_name'</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="Write_a_Cookie">Write a Cookie</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.set.cookie(<span class="string">'cookie_name'</span>, cookie_value, options);</span><br></pre></td></tr></table></figure>
-<p><code>options</code> is an Object which can have the following properties: <code>expire</code>, <code>path</code>, <code>domain</code>, <code>secure</code>. They are explained below.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.set.cookie(<span class="string">'quasar'</span>, <span class="string">'framework'</span>, &#123;</span><br><span class="line">  secure: <span class="literal">true</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="Option_expires">Option <code>expires</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">expires: <span class="number">10</span></span><br></pre></td></tr></table></figure>
-<p>Define lifetime of the cookie. Value can be a Number which will be interpreted as days from time of creation or a Date object. If omitted, the cookie becomes a session cookie.</p>
-<h3 id="Option_path">Option <code>path</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">path: <span class="string">'/'</span></span><br></pre></td></tr></table></figure>
-<p>Define the path where the cookie is valid. By default the path of the cookie is the path of the page where the cookie was created (standard browser behavior). If you want to make it available for instance across the entire domain use path: ‘/‘. Default: path of page where the cookie was created.</p>
-<h3 id="Option_domain">Option <code>domain</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">domain: <span class="string">'quasar-framework.org'</span></span><br></pre></td></tr></table></figure>
-<p>Define the domain where the cookie is valid. Default: domain of page where the cookie was created.</p>
-<h3 id="Option_secure">Option <code>secure</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">secure: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>If true, the cookie transmission requires a secure protocol (HTTPS) and will NOT be sent over HTTP. Default value is <code>false</code>.</p>
-<h2 id="Remove_a_Cookie">Remove a Cookie</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.remove.cookie(<span class="string">'cookie_name'</span>);</span><br></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Ajax Requests]]></title>
-      <url>http://quasar-framework.org/api/quasar-ajax.html</url>
+      <url>http://quasar-framework.org/api/core-js-ajax.html</url>
       <content type="html"><![CDATA[<p>Quasar Ajax Requests are a wrapper over jQuery’s <code>$.ajax()</code> method. There are many features added on top of it.</p>
 <h2 id="Getting_Started">Getting Started</h2><h3 id="Making_a_Request">Making a Request</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// GET request:</span></span><br><span class="line">quasar.make.a.get.request(&#123;url: <span class="string">'...'</span>&#125;)</span><br><span class="line">  .done(<span class="function"><span class="keyword">function</span>(<span class="params">jsonObject</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'data received: '</span>, jsonObject);</span><br><span class="line">  &#125;)</span><br><span class="line">  .fail(<span class="function"><span class="keyword">function</span>(<span class="params">jqXHR, textStatus, errorThrown</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'uh, oh... the request failed...'</span>, errorThrown);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
 <p>Same for PUT, POST, DELETE:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.make.a.put.request(&#123;</span><br><span class="line">  url: ...,</span><br><span class="line">  data: &#123;...&#125;</span><br><span class="line">&#125;);</span><br><span class="line">quasar.make.a.post.request(&#123;</span><br><span class="line">  url: ...,</span><br><span class="line">  data: &#123;...&#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Notice `del` instead of `delete`</span></span><br><span class="line">quasar.make.a.del.request(&#123;...&#125;);</span><br></pre></td></tr></table></figure></p>
@@ -977,9 +1147,80 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Overview]]></title>
-      <url>http://quasar-framework.org/api/index.html</url>
-      <content type="html"><![CDATA[<p>Learn here the API specifications of every feature embedded in Quasar Framework. How to require a script, how to create a route, how to detect if the app is running within Cordova or on a desktop, and many more.</p>
+      <title><![CDATA[Quasar CSS Icons]]></title>
+      <url>http://quasar-framework.org/api/core-css-icons.html</url>
+      <content type="html"><![CDATA[<p>To be written.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar CSS Helper Classes]]></title>
+      <url>http://quasar-framework.org/api/core-css-helper-classes.html</url>
+      <content type="html"><![CDATA[<h2 id="Container">Container</h2><p>A very important component for your Pages is the responsive <code>container</code> class which handles margins and padding relative to the screen width automatically so your content can make the best use of the real estate available.</p>
+<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">quasar-page</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span> ...... <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">quasar-page</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Visibility">Visibility</h2><p>There are CSS classes which you can use to hide or display content based on the screen size.</p>
+<p>Display only on:</p>
+<ul>
+<li>class=”<code>only mobile</code>“</li>
+<li>class=”<code>only tablet</code>“</li>
+<li>class=”<code>only small monitor</code>“</li>
+<li>class=”<code>only large monitor</code>“</li>
+</ul>
+<p>Hide on:</p>
+<ul>
+<li>class=”<code>hide mobile</code>“</li>
+<li>class=”<code>hide tablet</code>“</li>
+<li>class=”<code>hide small monitor</code>“</li>
+<li>class=”<code>hide large monitor</code>“</li>
+</ul>
+<h3 id="Other_Classes">Other Classes</h3><p>Also there’s the <code>hidden</code> class which removes the element from the view. The <code>invisible</code> class just hides while the element will still occupy its space within the view.</p>
+<p>The <code>transparent</code> class will add a default opacity to the element.</p>
+<h2 id="Positioning">Positioning</h2><p>There are default classes for fixed and absolute positioning with regards to screen margins. Use <code>fixed-X</code> or <code>absolute-X</code> Quasar classes, where <em>X</em> can be <code>top</code>, <code>right</code>, <code>bottom</code> or <code>left</code>.</p>
+<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fixed-top"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Text_Alignment">Text Alignment</h2><p>Use <code>text-center</code>, <code>text-right</code>, <code>text-left</code> or <code>text-justify</code> Quasar CSS classes to align text positioning.</p>
+<h2 id="Shadows">Shadows</h2><p>You can use some default shadow classes which add depth to your elements:</p>
+<ul>
+<li>class=”<code>z-none</code>“</li>
+<li>class=”<code>z-2</code>“</li>
+<li>class=”<code>z-3</code>“</li>
+<li>class=”<code>z-4</code>“</li>
+<li>class=”<code>z-6</code>“</li>
+<li>class=”<code>z-8</code>“</li>
+<li>class=”<code>z-16</code>“</li>
+</ul>
+<p>There’s also the option to have a transition animation:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"z-transition z-2"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Scroll">Scroll</h2><p>There’s the <code>scroll</code> class that helps some browsers (like on iOS platform) to best handle scrolling by touch on an element’s that is overflowed (it adds the <code>overflow: auto</code> CSS property automatically).</p>
+<h2 id="Window_Height">Window Height</h2><p>Whenever you need an item to have the height equivalent to the screen height, use <code>window-height</code> Quasar CSS class.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar CSS Flexbox Layout]]></title>
+      <url>http://quasar-framework.org/api/core-css-flexbox-layout.html</url>
+      <content type="html"><![CDATA[<p>The following is an extract (and adaptation for Quasar) from <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">A Guide to Flexbox</a>.</p>
+<h2 id="Background">Background</h2><p>The Flexbox Layout (Flexible Box) module (currently a W3C Last Call Working Draft) aims at providing a more efficient way to lay out, align and distribute space among items in a container, even when their size is unknown and/or dynamic (thus the word “flex”).</p>
+<p>The main idea behind the flex layout is to give the container the ability to alter its items’ width/height (and order) to best fill the available space (mostly to accommodate to all kind of display devices and screen sizes). A flex container expands items to fill available free space, or shrinks them to prevent overflow.</p>
+<p>Most importantly, the flexbox layout is direction-agnostic as opposed to the regular layouts (block which is vertically-based and inline which is horizontally-based). While those work well for pages, they lack flexibility (no pun intended) to support large or complex applications (especially when it comes to orientation changing, resizing, stretching, shrinking, etc.).</p>
+<h2 id="Getting_Started">Getting Started</h2><p>Flexbox applies to either the Container (Parent) or the Container’s items (Children).<br><img src="/images/flexbox-container.svg" alt="Flexbox Container"><br><img src="/images/flexbox-items.svg" alt="Flexbox Items"></p>
+<p>Following classes must be accompanied by the <code>layout</code> class, which adds the <code>display: flex</code> CSS property. If you’d like inline-flex, use <code>layout inline</code> class combo.</p>
+<h2 id="Parent_Classes">Parent Classes</h2><h3 id="Direction">Direction</h3><p><strong>You need a direction</strong>. Use <code>horizontal</code>, <code>horizontal-reverse</code>, <code>vertical</code> or <code>vertical-reverse</code> classes.<br><img src="/images/flexbox-direction.svg" alt="Flexbox Direction"></p>
+<h3 id="Wrap">Wrap</h3><p><strong>You can also wrap content</strong>. Use <code>wrap</code> or <code>wrap-reverse</code> classes. By default, flex items will all try to fit onto one line. You can change that and allow the items to wrap as needed with this property. Direction also plays a role here, determining the direction new lines are stacked in.<br><img src="/images/flexbox-wrap.svg" alt="Flexbox Direction"></p>
+<h3 id="Justify_Alignment">Justify Alignment</h3><p><strong>For alignment along the main axis</strong>, use classes below. It helps distribute extra free space left over when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.<br><img src="/images/flexbox-justify.svg" alt="Flexbox Justify Content"></p>
+<h3 id="Items_Alignment">Items Alignment</h3><p><strong>For alignment perpendicular to the main axis</strong>, use classes below. This defines the default behaviour for how flex items are laid out along the cross axis on the current line. Think of it as the justify-* version for the cross-axis (perpendicular to the main-axis).<br><img src="/images/flexbox-items-align.svg" alt="Flexbox Items Align"></p>
+<h3 id="Content_Alignment">Content Alignment</h3><p>The next classes <strong>align a flex container’s lines</strong> within when there is extra space in the cross-axis, similar to how justify-* aligns individual items within the main-axis.<br><img src="/images/flexbox-content-align.svg" alt="Flexbox Content Align"></p>
+<h2 id="Children_Classes">Children Classes</h2><h3 id="Order">Order</h3><p><strong>You can set the order</strong> by using <code>order-i</code> classes, where <em>i</em> is between 1-12. By default, flex items are laid out in the source order. However, the order property controls the order in which they appear in the flex container. If you need more granularity, use <code>order</code> CSS property and assign the desired value.<br><img src="/images/flexbox-order.svg" alt="Flexbox Order"></p>
+<h3 id="Grow">Grow</h3><p><strong>An item can grow if it’s enough space available</strong> by using <code>grow-i</code> classes, where <em>i</em> is between 1-12. This defines the ability for a flex item to grow if necessary. It accepts a unit-less value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.<br>If all items have <code>grow-1</code> class, the remaining space in the container will be distributed equally to all children. If one of the children has <code>grow-2</code>, the remaining space would take up twice as much space as the others (or it will try to, at least).<br><img src="/images/flexbox-grow.svg" alt="Flexbox Grow"></p>
+<h3 id="Shrink">Shrink</h3><p><strong>An item can shrink if necessary</strong> by using <code>shrink-i</code> classes, where <em>i</em> is between 1-12.</p>
+<h3 id="Self_Alignment">Self Alignment</h3><p><strong>An item can override the aligned specified on parent</strong>. This allows alignment to be overridden for individual flex items. Please see the <a href="#Items_Alignment">Items Alignment</a> explanation from Parent Classes to understand the available values.<br><img src="/images/flexbox-self.svg" alt="Flexbox Grow"></p>
+<h3 id="Flex_Basis">Flex Basis</h3><p>This refers to the <code>flex-basis</code> CSS property (<em>Note: not a Quasar CSS class like the other ones</em>) and defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means “look at my width or height property” (which was temporarily done by the main-size keyword until deprecated). The content keyword means “size it based on the item’s content” - this keyword isn’t well supported yet, so it’s hard to test and harder to know what it’s brethren max-content, min-content, and fit-content do.</p>
+<h3 id="Combo_flex_properties">Combo flex properties</h3><p>This refers to the Quasar CSS class <code>flex-i</code> where <em>i</em> is between 1-12. It sets <code>flex</code> CSS property to the respective number (defined by <em>i</em>) and the flex-basis to near 0.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar CSS Color Palette]]></title>
+      <url>http://quasar-framework.org/api/core-css-color-palette.html</url>
+      <content type="html"><![CDATA[<p>To be written.</p>
 ]]></content>
     </entry>
     
