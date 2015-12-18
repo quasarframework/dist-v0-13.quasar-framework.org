@@ -2,6 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://quasar-framework.org/api/core-js-html-tag-attributes.html</loc>
+    <lastmod>2015-12-18T17:22:22.777Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/contributing-to-quasar.html</loc>
+    <lastmod>2015-12-18T15:35:26.285Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-build-system.html</loc>
+    <lastmod>2015-12-18T15:27:17.142Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-app-configuration.html</loc>
+    <lastmod>2015-12-18T15:24:09.130Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/cli-commands.html</loc>
+    <lastmod>2015-12-18T15:17:22.894Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/css/core-css-icons.html</loc>
+    <lastmod>2015-12-18T02:27:09.246Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/css/core-css-flexbox-layout.html</loc>
+    <lastmod>2015-12-18T02:15:41.822Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/index.html</loc>
+    <lastmod>2015-12-17T21:21:29.565Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://quasar-framework.org/api/core-js-touch-events.html</loc>
     <lastmod>2015-12-17T18:49:10.721Z</lastmod>
   </url>
@@ -12,18 +52,8 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/guide/index.html</loc>
-    <lastmod>2015-12-17T14:38:49.388Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/css/core-css-helper-classes.html</loc>
     <lastmod>2015-12-17T13:55:50.752Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/css/core-css-flexbox-layout.html</loc>
-    <lastmod>2015-12-17T13:53:19.832Z</lastmod>
   </url>
   
   <url>
@@ -39,11 +69,6 @@
   <url>
     <loc>http://quasar-framework.org/api/core-js-environment.html</loc>
     <lastmod>2015-12-15T22:17:23.237Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/quasar-build-system.html</loc>
-    <lastmod>2015-12-15T22:15:51.853Z</lastmod>
   </url>
   
   <url>
@@ -67,11 +92,6 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/css/core-css-icons.html</loc>
-    <lastmod>2015-12-15T13:54:31.127Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/css/core-css-color-palette.html</loc>
     <lastmod>2015-12-15T13:54:11.559Z</lastmod>
   </url>
@@ -87,23 +107,8 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/guide/quasar-app-configuration.html</loc>
-    <lastmod>2015-12-15T08:55:25.016Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/cli-commands.html</loc>
-    <lastmod>2015-12-14T18:25:34.451Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/api/core-js-require.html</loc>
     <lastmod>2015-12-14T16:32:27.626Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/contributing-to-quasar.html</loc>
-    <lastmod>2015-11-27T03:06:24.786Z</lastmod>
   </url>
   
   <url>
