@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://quasar-framework.org/api/core-js-events.html</loc>
+    <lastmod>2015-12-19T08:43:18.039Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://quasar-framework.org/guide/quasar-events-list.html</loc>
     <lastmod>2015-12-19T08:39:17.207Z</lastmod>
   </url>
@@ -42,22 +47,22 @@
   </url>
   
   <url>
+    <loc>http://quasar-framework.org/guide/quasar-app-starting-point.html</loc>
+    <lastmod>2015-12-19T08:00:17.039Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://quasar-framework.org/guide/quasar-app-structure.html</loc>
     <lastmod>2015-12-19T08:00:17.039Z</lastmod>
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/guide/quasar-build-system.html</loc>
-    <lastmod>2015-12-19T08:00:17.039Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/quasar-app-configuration.html</loc>
-    <lastmod>2015-12-19T08:00:17.039Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/guide/installation.html</loc>
+    <lastmod>2015-12-19T08:00:17.039Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-build-system.html</loc>
     <lastmod>2015-12-19T08:00:17.039Z</lastmod>
   </url>
   
@@ -72,13 +77,8 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/guide/quasar-app-starting-point.html</loc>
+    <loc>http://quasar-framework.org/guide/quasar-app-configuration.html</loc>
     <lastmod>2015-12-19T08:00:17.039Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/contributing-to-quasar.html</loc>
-    <lastmod>2015-12-19T08:00:17.035Z</lastmod>
   </url>
   
   <url>
@@ -88,6 +88,11 @@
   
   <url>
     <loc>http://quasar-framework.org/guide/cli-commands.html</loc>
+    <lastmod>2015-12-19T08:00:17.035Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/contributing-to-quasar.html</loc>
     <lastmod>2015-12-19T08:00:17.035Z</lastmod>
   </url>
   
@@ -139,11 +144,6 @@
   <url>
     <loc>http://quasar-framework.org/api/core-js-ajax.html</loc>
     <lastmod>2015-11-27T00:23:29.590Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/api/core-js-events.html</loc>
-    <lastmod>2015-11-27T00:22:44.026Z</lastmod>
   </url>
   
   <url>
