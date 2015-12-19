@@ -2,28 +2,103 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://quasar-framework.org/api/core-js-html-tag-attributes.html</loc>
-    <lastmod>2015-12-18T17:22:22.777Z</lastmod>
+    <loc>http://quasar-framework.org/guide/quasar-events-list.html</loc>
+    <lastmod>2015-12-19T08:39:17.207Z</lastmod>
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/guide/contributing-to-quasar.html</loc>
-    <lastmod>2015-12-18T15:35:26.285Z</lastmod>
+    <loc>http://quasar-framework.org/api/core-js-environment.html</loc>
+    <lastmod>2015-12-19T08:36:24.615Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/api/web-components-layout.html</loc>
+    <lastmod>2015-12-19T08:28:57.039Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/writing-quasar-layout.html</loc>
+    <lastmod>2015-12-19T08:24:54.495Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/api/web-components-spinners.html</loc>
+    <lastmod>2015-12-19T08:23:55.739Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/api/core-js-router.html</loc>
+    <lastmod>2015-12-19T08:21:24.207Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/built-in-stack.html</loc>
+    <lastmod>2015-12-19T08:20:07.235Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/writing-quasar-page.html</loc>
+    <lastmod>2015-12-19T08:10:08.443Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-app-structure.html</loc>
+    <lastmod>2015-12-19T08:00:17.039Z</lastmod>
   </url>
   
   <url>
     <loc>http://quasar-framework.org/guide/quasar-build-system.html</loc>
-    <lastmod>2015-12-18T15:27:17.142Z</lastmod>
+    <lastmod>2015-12-19T08:00:17.039Z</lastmod>
   </url>
   
   <url>
     <loc>http://quasar-framework.org/guide/quasar-app-configuration.html</loc>
-    <lastmod>2015-12-18T15:24:09.130Z</lastmod>
+    <lastmod>2015-12-19T08:00:17.039Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/installation.html</loc>
+    <lastmod>2015-12-19T08:00:17.039Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-mobile-wrapper-tips.html</loc>
+    <lastmod>2015-12-19T08:00:17.039Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/vue-state-management.html</loc>
+    <lastmod>2015-12-19T08:00:17.039Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-app-starting-point.html</loc>
+    <lastmod>2015-12-19T08:00:17.039Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/contributing-to-quasar.html</loc>
+    <lastmod>2015-12-19T08:00:17.035Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/commonjs-format.html</loc>
+    <lastmod>2015-12-19T08:00:17.035Z</lastmod>
   </url>
   
   <url>
     <loc>http://quasar-framework.org/guide/cli-commands.html</loc>
-    <lastmod>2015-12-18T15:17:22.894Z</lastmod>
+    <lastmod>2015-12-19T08:00:17.035Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/index.html</loc>
+    <lastmod>2015-12-19T08:00:17.035Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/api/core-js-html-tag-attributes.html</loc>
+    <lastmod>2015-12-18T17:22:22.777Z</lastmod>
   </url>
   
   <url>
@@ -37,18 +112,8 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/guide/index.html</loc>
-    <lastmod>2015-12-17T21:21:29.565Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/api/core-js-touch-events.html</loc>
     <lastmod>2015-12-17T18:49:10.721Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/api/core-js-router.html</loc>
-    <lastmod>2015-12-17T15:28:31.460Z</lastmod>
   </url>
   
   <url>
@@ -57,53 +122,13 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/guide/built-in-stack.html</loc>
-    <lastmod>2015-12-17T02:26:02.357Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/css/index.html</loc>
     <lastmod>2015-12-15T22:23:53.885Z</lastmod>
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/api/core-js-environment.html</loc>
-    <lastmod>2015-12-15T22:17:23.237Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/writing-quasar-layout.html</loc>
-    <lastmod>2015-12-15T22:10:26.809Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/writing-quasar-page.html</loc>
-    <lastmod>2015-12-15T22:10:25.601Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/quasar-app-structure.html</loc>
-    <lastmod>2015-12-15T22:03:58.801Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/api/web-components-spinners.html</loc>
-    <lastmod>2015-12-15T14:25:08.811Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/css/core-css-color-palette.html</loc>
     <lastmod>2015-12-15T13:54:11.559Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/vue-state-management.html</loc>
-    <lastmod>2015-12-15T11:06:07.152Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/api/web-components-layout.html</loc>
-    <lastmod>2015-12-15T10:52:20.076Z</lastmod>
   </url>
   
   <url>
@@ -122,28 +147,8 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/guide/quasar-mobile-wrapper-tips.html</loc>
-    <lastmod>2015-11-27T00:20:17.946Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/commonjs-format.html</loc>
-    <lastmod>2015-11-27T00:19:42.142Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/installation.html</loc>
-    <lastmod>2015-11-26T20:51:49.282Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/api/index.html</loc>
     <lastmod>2015-11-24T12:29:30.796Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/quasar-app-starting-point.html</loc>
-    <lastmod>2015-11-17T22:08:41.182Z</lastmod>
   </url>
   
   <url>
