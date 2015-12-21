@@ -2,6 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://quasar-framework.org/guide/quasar-pages.html</loc>
+    <lastmod>2015-12-21T13:21:54.745Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-layouts.html</loc>
+    <lastmod>2015-12-21T13:21:41.953Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-build-system.html</loc>
+    <lastmod>2015-12-21T13:14:37.289Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-app-structure.html</loc>
+    <lastmod>2015-12-21T13:01:54.693Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-app-starting-point.html</loc>
+    <lastmod>2015-12-21T12:53:52.685Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-app-configuration.html</loc>
+    <lastmod>2015-12-21T12:42:11.501Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://quasar-framework.org/api/core-js-events.html</loc>
     <lastmod>2015-12-19T08:43:18.039Z</lastmod>
   </url>
@@ -22,11 +52,6 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/guide/writing-quasar-layout.html</loc>
-    <lastmod>2015-12-19T08:24:54.495Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/api/web-components-spinners.html</loc>
     <lastmod>2015-12-19T08:23:55.739Z</lastmod>
   </url>
@@ -42,17 +67,7 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/guide/writing-quasar-page.html</loc>
-    <lastmod>2015-12-19T08:10:08.443Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/quasar-app-starting-point.html</loc>
-    <lastmod>2015-12-19T08:00:17.039Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/quasar-app-structure.html</loc>
+    <loc>http://quasar-framework.org/guide/vue-state-management.html</loc>
     <lastmod>2015-12-19T08:00:17.039Z</lastmod>
   </url>
   
@@ -62,22 +77,7 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/guide/quasar-build-system.html</loc>
-    <lastmod>2015-12-19T08:00:17.039Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/guide/quasar-mobile-wrapper-tips.html</loc>
-    <lastmod>2015-12-19T08:00:17.039Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/vue-state-management.html</loc>
-    <lastmod>2015-12-19T08:00:17.039Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/quasar-app-configuration.html</loc>
     <lastmod>2015-12-19T08:00:17.039Z</lastmod>
   </url>
   
