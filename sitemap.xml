@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://quasar-framework.org/components/layout-overview.html</loc>
+    
+    <lastmod>2016-06-05T13:20:26.514Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/layout-automatic-navigation-tabs.html</loc>
+    
+    <lastmod>2016-06-05T12:13:15.443Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/layout-navigation-tabs.html</loc>
+    
+    <lastmod>2016-06-05T12:06:02.531Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/layout-header-and-footer.html</loc>
+    
+    <lastmod>2016-06-05T12:04:29.751Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/layout-drawer.html</loc>
+    
+    <lastmod>2016-06-05T12:04:12.715Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://quasar-framework.org/guide/built-in-stack.html</loc>
     
     <lastmod>2016-06-04T20:57:29.610Z</lastmod>
@@ -30,37 +65,9 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/layout-overview.html</loc>
-    
-    <lastmod>2016-06-03T14:49:53.370Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/guide/vue-model-communication.html</loc>
     
     <lastmod>2016-06-03T14:48:58.290Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/layout-drawer.html</loc>
-    
-    <lastmod>2016-06-03T14:23:54.938Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/layout-automatic-navigation-tabs.html</loc>
-    
-    <lastmod>2016-06-03T14:15:35.326Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/layout-header-and-footer.html</loc>
-    
-    <lastmod>2016-06-03T14:08:48.718Z</lastmod>
     
   </url>
   
@@ -177,13 +184,6 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/tree.html</loc>
-    
-    <lastmod>2016-06-02T04:18:08.394Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/components/rating.html</loc>
     
     <lastmod>2016-06-02T04:18:08.394Z</lastmod>
@@ -191,7 +191,7 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/pagination.html</loc>
+    <loc>http://quasar-framework.org/components/tree.html</loc>
     
     <lastmod>2016-06-02T04:18:08.394Z</lastmod>
     
@@ -199,6 +199,13 @@
   
   <url>
     <loc>http://quasar-framework.org/components/parallax.html</loc>
+    
+    <lastmod>2016-06-02T04:18:08.394Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/pagination.html</loc>
     
     <lastmod>2016-06-02T04:18:08.394Z</lastmod>
     
@@ -250,13 +257,6 @@
     <loc>http://quasar-framework.org/components/tabs.html</loc>
     
     <lastmod>2016-06-01T12:22:24.409Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/layout-navigation-tabs.html</loc>
-    
-    <lastmod>2016-06-01T12:20:08.857Z</lastmod>
     
   </url>
   
