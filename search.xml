@@ -19,9 +19,32 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Quasar Color Palette]]></title>
+      <url>http://quasar-framework.org/api/css-color-palette.html</url>
+      <content type="html"><![CDATA[<p>Quasar Framework offers a wide selection of colors out of the box. You can use them both as Stylus variables in your CSS code or directly as CSS classes in your HTML templates.</p>
+<input type="hidden" data-fullpage-demo="colors">
+
+<p>This page comes really handy after reading <a href="/guide/quasar-theming.html">Quasar Theming</a>.</p>
+<h2 id="Brand-Colors"><a href="#Brand-Colors" class="headerlink" title="Brand Colors"></a>Brand Colors</h2><p>There can be three main colors used throughout your App, called <code>primary</code>, <code>secondary</code> and <code>tertiary</code>.</p>
+<p>Most of the colors that Quasar Components use are strongly linked with these three colors that you can change. Choosing these colors is the first step one should take when differentiating the design of its own App. You’ll notice immediately on changing their default values that Quasar Components follow these colors as a guideline.</p>
+<h2 id="Color-List"><a href="#Color-List" class="headerlink" title="Color List"></a>Color List</h2><p>Here’s the list of colors provided out of the box. Use them as CSS classes or as Stylus variables (preceded by <code>$</code> character).</p>
+<p><code>primary</code>, <code>secondary</code>, <code>tertiary</code><br><code>neutral</code>, <code>neutral</code>, <code>positive</code>, <code>negative</code>, <code>info</code>, <code>warning</code>, <code>light</code>, <code>dark</code>, <code>faded</code></p>
+<p>On the following colors there are variations available:<br><code>red</code>, <code>pink</code>, <code>purple</code>, <code>deep-purple</code>, <code>indigo</code>, <code>blue</code>, <code>light-blue</code>, <code>cyan</code>, <code>teal</code>, <code>green</code>, <code>light-green</code>, <code>lime</code>, <code>yellow</code>, <code>amber</code>, <code>orange</code>, <code>deep-orange</code>, <code>brown</code>, <code>grey</code>, <code>blue-grey</code></p>
+<p>Example of color variation: <code>red</code>, <code>red-1</code>, <code>red-2</code>, …, <code>red-14</code>. See the demo to make a good picture of what variations are. Variation 11 to 14 are color accents.</p>
+<h2 id="CSS-Classes"><a href="#CSS-Classes" class="headerlink" title="CSS Classes"></a>CSS Classes</h2><p>Use <code>text-</code> or <code>bg-</code> prefixes as class names to change the color of text or the color of the background.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- changing text color --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"text-primary"</span>&gt;</span>....<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- changing background color --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"bg-positive"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Stylus-Color-Variables"><a href="#Stylus-Color-Variables" class="headerlink" title="Stylus Color Variables"></a>Stylus Color Variables</h2><p>In your Stylus App code you can use them as <code>$primary</code>, <code>$red-1</code>, and so on.</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span></span><br><span class="line">  <span class="attribute">color</span> <span class="variable">$red</span>-<span class="number">1</span></span><br><span class="line">  <span class="attribute">background-color</span> <span class="variable">$grey</span>-<span class="number">5</span></span><br></pre></td></tr></table></figure>
+<p>The full list of colors is stored in the <code>$colors</code> array. You can change it to add/remove/change colors and all Quasar Components will generate CSS according to those colors.</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">$colors ?= &#123;</span><br><span class="line">  neutral: $neutral</span><br><span class="line">  primary: $primary</span><br><span class="line">  secondary: $secondary</span><br><span class="line">  tertiary: $tertiary</span><br><span class="line">  positive: $positive</span><br><span class="line">  negative: $negative</span><br><span class="line">  warning: $warning</span><br><span class="line">  info: $info</span><br><span class="line">  light: $light</span><br><span class="line">  dark: $dark,</span><br><span class="line"></span><br><span class="line">  red: $red,</span><br><span class="line">  pink: $pink,</span><br><span class="line">  purple: $purple,</span><br><span class="line">  deep-purple: $deep-purple,</span><br><span class="line">  indigo: $indigo,</span><br><span class="line">  blue: $blue,</span><br><span class="line">  light-blue: $light-blue,</span><br><span class="line">  cyan: $cyan,</span><br><span class="line">  teal: $teal,</span><br><span class="line">  green: $green,</span><br><span class="line">  light-green: $light-green,</span><br><span class="line">  lime: $lime,</span><br><span class="line">  yellow: $yellow,</span><br><span class="line">  amber: $amber,</span><br><span class="line">  orange: $orange,</span><br><span class="line">  deep-orange: $deep-orange,</span><br><span class="line">  brown: $brown,</span><br><span class="line">  grey: $grey,</span><br><span class="line">  blue-grey: $blue-grey</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Icons]]></title>
       <url>http://quasar-framework.org/api/css-icons.html</url>
       <content type="html"><![CDATA[<p>What would an App be without icons? A default set of (hundreds of) icons is included in any Quasar App.<br>These are the <a href="https://design.google.com/icons/" target="_blank" rel="external">Material Design Icons</a>. You can you can read (and search for them) in the previous link.</p>
+<p><img src="/images/material-icons.png" alt="Material Icons Example"></p>
 <p>It just differs the way you use them in a Quasar App:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--</span><br><span class="line">  On Material Design Icons website you check for an icon and it says:</span><br><span class="line">  "&lt;i class="material-icons"&gt;account_circle&lt;/i&gt;"</span><br><span class="line"></span><br><span class="line">  On Quasar App you simply use it like this:</span><br><span class="line">--&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">i</span>&gt;</span>account_circle<span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>No need for extra markup. Note the “underscore” character instead of a space character… this is mandatory, as Material Icons are displayed using a ligature font.</p>
 ]]></content>
@@ -208,6 +231,12 @@
     </entry>
     
     <entry>
+      <title></title>
+      <url>http://quasar-framework.org/blog/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar CSS Positioning Classes]]></title>
       <url>http://quasar-framework.org/api/css-positioning.html</url>
       <content type="html"><![CDATA[<p>There are CSS classes supplied by Quasar to help you position a DOM element easily:</p>
@@ -375,6 +404,16 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Stylus Variables]]></title>
+      <url>http://quasar-framework.org/api/css-stylus-variables.html</url>
+      <content type="html"><![CDATA[<p>Quasar CSS is a blank slate that you can easily customize and modify to fit your brand, while still following the standards of each platform. The best apps in the app stores are fully customized and Quasar makes it easy to do the same with your App.</p>
+<p>Quasar is built on top of Stylus, which allows it to set some default styles for your App but makes it extremely easy for you to change the defaults in your App code.</p>
+<p>Customizing a theme means overriding Stylus variables which can hold colors, sizes, border types and so on. To understand how and where to make use of the full list of variables below, read <a href="/guide/quasar-theming.html">Guide &gt; Theming</a>.</p>
+<h2 id="Variables-List"><a href="#Variables-List" class="headerlink" title="Variables List"></a>Variables List</h2><!-- DO NOT WRITE ANYTHING BELOW THIS LINE -->
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar CSS Shadows]]></title>
       <url>http://quasar-framework.org/api/css-shadows.html</url>
       <content type="html"><![CDATA[<p>Simple yet effective way to add shadows to create a depth effect.<br>The shadows are in accordance to Material Design speifications.<br>Don’t forget to check the demo.</p>
@@ -423,28 +462,6 @@
 </tbody>
 </table>
 <p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"shadow-1"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar Color Palette]]></title>
-      <url>http://quasar-framework.org/api/css-color-palette.html</url>
-      <content type="html"><![CDATA[<p>Quasar Framework offers a wide selection of colors out of the box. You can use them both as Stylus variables in your CSS code or directly as CSS classes in your HTML templates.</p>
-<input type="hidden" data-fullpage-demo="colors">
-
-<p>This page comes really handy after reading <a href="/guide/quasar-theming.html">Quasar Theming</a>.</p>
-<h2 id="Brand-Colors"><a href="#Brand-Colors" class="headerlink" title="Brand Colors"></a>Brand Colors</h2><p>There can be three main colors used throughout your App, called <code>primary</code>, <code>secondary</code> and <code>tertiary</code>.</p>
-<p>Most of the colors that Quasar Components use are strongly linked with these three colors that you can change. Choosing these colors is the first step one should take when differentiating the design of its own App. You’ll notice immediately on changing their default values that Quasar Components follow these colors as a guideline.</p>
-<h2 id="Color-List"><a href="#Color-List" class="headerlink" title="Color List"></a>Color List</h2><p>Here’s the list of colors provided out of the box. Use them as CSS classes or as Stylus variables (preceded by <code>$</code> character).</p>
-<p><code>primary</code>, <code>secondary</code>, <code>tertiary</code><br><code>neutral</code>, <code>neutral</code>, <code>positive</code>, <code>negative</code>, <code>info</code>, <code>warning</code>, <code>light</code>, <code>dark</code>, <code>faded</code></p>
-<p>On the following colors there are variations available:<br><code>red</code>, <code>pink</code>, <code>purple</code>, <code>deep-purple</code>, <code>indigo</code>, <code>blue</code>, <code>light-blue</code>, <code>cyan</code>, <code>teal</code>, <code>green</code>, <code>light-green</code>, <code>lime</code>, <code>yellow</code>, <code>amber</code>, <code>orange</code>, <code>deep-orange</code>, <code>brown</code>, <code>grey</code>, <code>blue-grey</code></p>
-<p>Example of color variation: <code>red</code>, <code>red-1</code>, <code>red-2</code>, …, <code>red-14</code>. See the demo to make a good picture of what variations are. Variation 11 to 14 are color accents.</p>
-<h2 id="CSS-Classes"><a href="#CSS-Classes" class="headerlink" title="CSS Classes"></a>CSS Classes</h2><p>Use <code>text-</code> or <code>bg-</code> prefixes as class names to change the color of text or the color of the background.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- changing text color --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"text-primary"</span>&gt;</span>....<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- changing background color --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"bg-positive"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="Stylus-Color-Variables"><a href="#Stylus-Color-Variables" class="headerlink" title="Stylus Color Variables"></a>Stylus Color Variables</h2><p>In your Stylus App code you can use them as <code>$primary</code>, <code>$red-1</code>, and so on.</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span></span><br><span class="line">  <span class="attribute">color</span> <span class="variable">$red</span>-<span class="number">1</span></span><br><span class="line">  <span class="attribute">background-color</span> <span class="variable">$grey</span>-<span class="number">5</span></span><br></pre></td></tr></table></figure>
-<p>The full list of colors is stored in the <code>$colors</code> array. You can change it to add/remove/change colors and all Quasar Components will generate CSS according to those colors.</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">$colors ?= &#123;</span><br><span class="line">  neutral: $neutral</span><br><span class="line">  primary: $primary</span><br><span class="line">  secondary: $secondary</span><br><span class="line">  tertiary: $tertiary</span><br><span class="line">  positive: $positive</span><br><span class="line">  negative: $negative</span><br><span class="line">  warning: $warning</span><br><span class="line">  info: $info</span><br><span class="line">  light: $light</span><br><span class="line">  dark: $dark,</span><br><span class="line"></span><br><span class="line">  red: $red,</span><br><span class="line">  pink: $pink,</span><br><span class="line">  purple: $purple,</span><br><span class="line">  deep-purple: $deep-purple,</span><br><span class="line">  indigo: $indigo,</span><br><span class="line">  blue: $blue,</span><br><span class="line">  light-blue: $light-blue,</span><br><span class="line">  cyan: $cyan,</span><br><span class="line">  teal: $teal,</span><br><span class="line">  green: $green,</span><br><span class="line">  light-green: $light-green,</span><br><span class="line">  lime: $lime,</span><br><span class="line">  yellow: $yellow,</span><br><span class="line">  amber: $amber,</span><br><span class="line">  orange: $orange,</span><br><span class="line">  deep-orange: $deep-orange,</span><br><span class="line">  brown: $brown,</span><br><span class="line">  grey: $grey,</span><br><span class="line">  blue-grey: $blue-grey</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -535,14 +552,6 @@
 </tr>
 </tbody>
 </table>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Overview]]></title>
-      <url>http://quasar-framework.org/api/index.html</url>
-      <content type="html"><![CDATA[<p>Learn here about the API specifications of every feature embedded in Quasar Framework. How to require a script, how to create a route, how to detect if the app is running within Cordova or on a desktop, and many more, including Quasar CSS specifications.</p>
-<p>By default, Quasar covers a lot of areas of Web development with ready to use API which simplifies your code and hides the different platform quirks.</p>
 ]]></content>
     </entry>
     
@@ -700,6 +709,14 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Overview]]></title>
+      <url>http://quasar-framework.org/api/index.html</url>
+      <content type="html"><![CDATA[<p>Learn here about the API specifications of every feature embedded in Quasar Framework. How to require a script, how to create a route, how to detect if the app is running within Cordova or on a desktop, and many more, including Quasar CSS specifications.</p>
+<p>By default, Quasar covers a lot of areas of Web development with ready to use API which simplifies your code and hides the different platform quirks.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Fullscreen]]></title>
       <url>http://quasar-framework.org/api/js-app-fullscreen.html</url>
       <content type="html"><![CDATA[<p>There are times when you want your website to run in fullscreen.<br>Quasar makes it easy by wrapping the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API" target="_blank" rel="external">Fullscreen API</a>.</p>
@@ -713,12 +730,56 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Stylus Variables]]></title>
-      <url>http://quasar-framework.org/api/css-stylus-variables.html</url>
-      <content type="html"><![CDATA[<p>Quasar CSS is a blank slate that you can easily customize and modify to fit your brand, while still following the standards of each platform. The best apps in the app stores are fully customized and Quasar makes it easy to do the same with your App.</p>
-<p>Quasar is built on top of Stylus, which allows it to set some default styles for your App but makes it extremely easy for you to change the defaults in your App code.</p>
-<p>Customizing a theme means overriding Stylus variables which can hold colors, sizes, border types and so on. To understand how and where to make use of the full list of variables below, read <a href="/guide/quasar-theming.html">Guide &gt; Theming</a>.</p>
-<h2 id="Variables-List"><a href="#Variables-List" class="headerlink" title="Variables List"></a>Variables List</h2><!-- DO NOT WRITE ANYTHING BELOW THIS LINE -->
+      <title><![CDATA[Quasar App Visibility]]></title>
+      <url>http://quasar-framework.org/api/js-app-visibility.html</url>
+      <content type="html"><![CDATA[<p>Quasar makes use of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API" target="_blank" rel="external">Page Visibility API</a> which lets you know when a website/app is visible or in focus.</p>
+<input type="hidden" data-fullpage-demo="app-visibility">
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="built_in">Boolean</span>) quasar.app.is.visible();</span><br></pre></td></tr></table></figure>
+<p>There is also an event triggered when focus changes:</p>
+<table>
+<thead>
+<tr>
+<th>Event Name</th>
+<th>Parameters</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app:visibility</td>
+<td>(String) state</td>
+<td>App got focus if <code>state</code> is <code>visible</code> or lost focus if <code>state</code> is <code>hidden</code></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar Cookies]]></title>
+      <url>http://quasar-framework.org/api/js-cookies.html</url>
+      <content type="html"><![CDATA[<p>This is a wrapper over the standardized <code>document.cookie</code>.</p>
+<blockquote>
+<p><strong>NOTE</strong><br>In addition, you can read and write cookies using JSON objects.</p>
+</blockquote>
+<h2 id="Read-a-Cookie"><a href="#Read-a-Cookie" class="headerlink" title="Read a Cookie"></a>Read a Cookie</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> value = quasar.get.cookie(<span class="string">'cookie_name'</span>);</span><br></pre></td></tr></table></figure>
+<p>When cookie is not set, the return value is <code>undefined</code>.</p>
+<h2 id="Read-All-Cookies"><a href="#Read-All-Cookies" class="headerlink" title="Read All Cookies"></a>Read All Cookies</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> cookies = quasar.get.all.cookies();</span><br></pre></td></tr></table></figure>
+<p><code>cookies</code> variable will be an object with key-value pairs (cookie_name : cookie_value).</p>
+<h2 id="Verify-if-Cookie-is-Set"><a href="#Verify-if-Cookie-is-Set" class="headerlink" title="Verify if Cookie is Set"></a>Verify if Cookie is Set</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="built_in">Boolean</span>) quasar.has.cookie(<span class="string">'cookie_name'</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="Write-a-Cookie"><a href="#Write-a-Cookie" class="headerlink" title="Write a Cookie"></a>Write a Cookie</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.set.cookie(<span class="string">'cookie_name'</span>, cookie_value, options);</span><br></pre></td></tr></table></figure>
+<p><code>options</code> is an Object which can have the following properties: <code>expire</code>, <code>path</code>, <code>domain</code>, <code>secure</code>. They are explained below.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.set.cookie(<span class="string">'quasar'</span>, <span class="string">'framework'</span>, &#123;</span><br><span class="line">  secure: <span class="literal">true</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="Option-expires"><a href="#Option-expires" class="headerlink" title="Option expires"></a>Option <code>expires</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">expires: <span class="number">10</span></span><br></pre></td></tr></table></figure>
+<p>Define lifetime of the cookie. Value can be a Number which will be interpreted as days from time of creation or a Date object. If omitted, the cookie becomes a session cookie.</p>
+<h3 id="Option-path"><a href="#Option-path" class="headerlink" title="Option path"></a>Option <code>path</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">path: <span class="string">'/'</span></span><br></pre></td></tr></table></figure>
+<p>Define the path where the cookie is valid. By default the path of the cookie is the path of the page where the cookie was created (standard browser behavior). If you want to make it available for instance across the entire domain use path: ‘/‘. Default: path of page where the cookie was created.</p>
+<h3 id="Option-domain"><a href="#Option-domain" class="headerlink" title="Option domain"></a>Option <code>domain</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">domain: <span class="string">'quasar-framework.org'</span></span><br></pre></td></tr></table></figure>
+<p>Define the domain where the cookie is valid. Default: domain of page where the cookie was created.</p>
+<h3 id="Option-secure"><a href="#Option-secure" class="headerlink" title="Option secure"></a>Option <code>secure</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">secure: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>If true, the cookie transmission requires a secure protocol (HTTPS) and will NOT be sent over HTTP. Default value is <code>false</code>.</p>
+<h2 id="Remove-a-Cookie"><a href="#Remove-a-Cookie" class="headerlink" title="Remove a Cookie"></a>Remove a Cookie</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.remove.cookie(<span class="string">'cookie_name'</span>);</span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -940,60 +1001,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar App Visibility]]></title>
-      <url>http://quasar-framework.org/api/js-app-visibility.html</url>
-      <content type="html"><![CDATA[<p>Quasar makes use of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API" target="_blank" rel="external">Page Visibility API</a> which lets you know when a website/app is visible or in focus.</p>
-<input type="hidden" data-fullpage-demo="app-visibility">
-
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="built_in">Boolean</span>) quasar.app.is.visible();</span><br></pre></td></tr></table></figure>
-<p>There is also an event triggered when focus changes:</p>
-<table>
-<thead>
-<tr>
-<th>Event Name</th>
-<th>Parameters</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>app:visibility</td>
-<td>(String) state</td>
-<td>App got focus if <code>state</code> is <code>visible</code> or lost focus if <code>state</code> is <code>hidden</code></td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar Cookies]]></title>
-      <url>http://quasar-framework.org/api/js-cookies.html</url>
-      <content type="html"><![CDATA[<p>This is a wrapper over the standardized <code>document.cookie</code>.</p>
-<blockquote>
-<p><strong>NOTE</strong><br>In addition, you can read and write cookies using JSON objects.</p>
-</blockquote>
-<h2 id="Read-a-Cookie"><a href="#Read-a-Cookie" class="headerlink" title="Read a Cookie"></a>Read a Cookie</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> value = quasar.get.cookie(<span class="string">'cookie_name'</span>);</span><br></pre></td></tr></table></figure>
-<p>When cookie is not set, the return value is <code>undefined</code>.</p>
-<h2 id="Read-All-Cookies"><a href="#Read-All-Cookies" class="headerlink" title="Read All Cookies"></a>Read All Cookies</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> cookies = quasar.get.all.cookies();</span><br></pre></td></tr></table></figure>
-<p><code>cookies</code> variable will be an object with key-value pairs (cookie_name : cookie_value).</p>
-<h2 id="Verify-if-Cookie-is-Set"><a href="#Verify-if-Cookie-is-Set" class="headerlink" title="Verify if Cookie is Set"></a>Verify if Cookie is Set</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="built_in">Boolean</span>) quasar.has.cookie(<span class="string">'cookie_name'</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="Write-a-Cookie"><a href="#Write-a-Cookie" class="headerlink" title="Write a Cookie"></a>Write a Cookie</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.set.cookie(<span class="string">'cookie_name'</span>, cookie_value, options);</span><br></pre></td></tr></table></figure>
-<p><code>options</code> is an Object which can have the following properties: <code>expire</code>, <code>path</code>, <code>domain</code>, <code>secure</code>. They are explained below.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.set.cookie(<span class="string">'quasar'</span>, <span class="string">'framework'</span>, &#123;</span><br><span class="line">  secure: <span class="literal">true</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="Option-expires"><a href="#Option-expires" class="headerlink" title="Option expires"></a>Option <code>expires</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">expires: <span class="number">10</span></span><br></pre></td></tr></table></figure>
-<p>Define lifetime of the cookie. Value can be a Number which will be interpreted as days from time of creation or a Date object. If omitted, the cookie becomes a session cookie.</p>
-<h3 id="Option-path"><a href="#Option-path" class="headerlink" title="Option path"></a>Option <code>path</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">path: <span class="string">'/'</span></span><br></pre></td></tr></table></figure>
-<p>Define the path where the cookie is valid. By default the path of the cookie is the path of the page where the cookie was created (standard browser behavior). If you want to make it available for instance across the entire domain use path: ‘/‘. Default: path of page where the cookie was created.</p>
-<h3 id="Option-domain"><a href="#Option-domain" class="headerlink" title="Option domain"></a>Option <code>domain</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">domain: <span class="string">'quasar-framework.org'</span></span><br></pre></td></tr></table></figure>
-<p>Define the domain where the cookie is valid. Default: domain of page where the cookie was created.</p>
-<h3 id="Option-secure"><a href="#Option-secure" class="headerlink" title="Option secure"></a>Option <code>secure</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">secure: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>If true, the cookie transmission requires a secure protocol (HTTPS) and will NOT be sent over HTTP. Default value is <code>false</code>.</p>
-<h2 id="Remove-a-Cookie"><a href="#Remove-a-Cookie" class="headerlink" title="Remove a Cookie"></a>Remove a Cookie</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.remove.cookie(<span class="string">'cookie_name'</span>);</span><br></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Events List]]></title>
       <url>http://quasar-framework.org/api/js-events-list.html</url>
       <content type="html"><![CDATA[<p>There are global events registered for some key things in Quasar Framework.<br>See <a href="/api/js-events.html">Quasar Events API</a> if you haven’t already, to learn how to hook into these events and what they are.</p>
@@ -1150,6 +1157,33 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Quasar Events]]></title>
+      <url>http://quasar-framework.org/api/js-events.html</url>
+      <content type="html"><![CDATA[<p>Events are important for the inner workings of your App and also for writing Quasar Plugins.<br>Sometimes you need an event bus or a publish/subscribe channel. An emitter solves this need.</p>
+<p>If you are looking for the Events List, it is <a href="/api/js-events-list.html">here</a>.</p>
+<h2 id="Creating-an-Emitter"><a href="#Creating-an-Emitter" class="headerlink" title="Creating an Emitter"></a>Creating an Emitter</h2><p>We call an emitter an object who is capable of registering and triggering events.</p>
+<p>There are two ways to create one:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// create a new Object</span></span><br><span class="line"><span class="keyword">var</span> emitter = quasar.create.events.emitter();</span><br><span class="line"></span><br><span class="line"><span class="comment">// make existing Object an emitter</span></span><br><span class="line"><span class="keyword">var</span> object = &#123;...&#125;;</span><br><span class="line">quasar.make.events.emitter(object);</span><br></pre></td></tr></table></figure></p>
+<h3 id="Check-if-Object-is-Emitter"><a href="#Check-if-Object-is-Emitter" class="headerlink" title="Check if Object is Emitter"></a>Check if Object is Emitter</h3><p>You can also check if an object is an emitter:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> someObject = &#123;...&#125;;</span><br><span class="line"><span class="keyword">var</span> isEmitter = quasar.is.events.emitter(someObject);</span><br></pre></td></tr></table></figure></p>
+<h3 id="Global-Events-Emitter"><a href="#Global-Events-Emitter" class="headerlink" title="Global Events Emitter"></a>Global Events Emitter</h3><p>There is a global events emitter already available for you to use: <code>quasar.events</code>. Make sure you <em>DON’T</em> name your own events to match the ones that Quasar uses by default (see list <a href="/guide/writing-quasar-page.html#Page-Events">here</a>). It is recommended that you create your own global emitters to avoid event naming problems.</p>
+<h2 id="Emitter-Methods"><a href="#Emitter-Methods" class="headerlink" title="Emitter Methods"></a>Emitter Methods</h2><blockquote>
+<p><strong>NOTE</strong><br>Event name must <em>NOT</em> contain space characters, otherwise the string will be considered as containing multiple events names.</p>
+</blockquote>
+<h3 id="Registering-an-Event-Callback"><a href="#Registering-an-Event-Callback" class="headerlink" title="Registering an Event/Callback"></a>Registering an Event/Callback</h3><p><code>emitter.on(String eventNames, Function callback [, Object context])</code></p>
+<p>Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> context = &#123;...&#125;; <span class="comment">// will be used as *this* within callback</span></span><br><span class="line">emitter.on(<span class="string">'event-name'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">param1, param2, ...paramN</span>) </span>&#123; ... &#125;, context);</span><br><span class="line"></span><br><span class="line"><span class="comment">// The params that are used when triggering the event are passed on</span></span><br><span class="line"><span class="comment">// to each callback.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// We can register multiple events at once:</span></span><br><span class="line">emitter.on(<span class="string">'event1 event2 eventN'</span>, callback);</span><br></pre></td></tr></table></figure></p>
+<h3 id="Removing-an-Event-Callback"><a href="#Removing-an-Event-Callback" class="headerlink" title="Removing an Event/Callback"></a>Removing an Event/Callback</h3><p><code>emitter.off(String eventNames [, Function callback])</code></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Unregistering an event:</span></span><br><span class="line">emitter.off(<span class="string">'event-name'</span>);</span><br><span class="line"><span class="comment">// 'event-name' does no longer has any callbacks</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Unregistering a specific callback for an event:</span></span><br><span class="line"><span class="keyword">var</span> callback = <span class="function"><span class="keyword">function</span>(<span class="params">...</span>) </span>&#123;...&#125;;</span><br><span class="line">emitter.on(<span class="string">'event-name'</span>, callback);</span><br><span class="line">emitter.off(<span class="string">'event-name'</span>, callback);</span><br><span class="line"><span class="comment">// 'event-name' still exists (if other callbacks are registered to this event),</span></span><br><span class="line"><span class="comment">// but does not contain the above callback anymore</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// We can remove callback from multiple events at once:</span></span><br><span class="line">emitter.off(<span class="string">'event1 event2 eventN'</span>, callback);</span><br><span class="line"></span><br><span class="line"><span class="comment">// or we can remove all callbacks from multiple events at once:</span></span><br><span class="line">emitter.off(<span class="string">'event1 event2 eventN'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// or we can remove all callbacks and all events at once:</span></span><br><span class="line">emitter.off();</span><br></pre></td></tr></table></figure>
+<h3 id="Registering-a-Callback-to-Be-Run-Only-Once"><a href="#Registering-a-Callback-to-Be-Run-Only-Once" class="headerlink" title="Registering a Callback to Be Run Only Once"></a>Registering a Callback to Be Run Only Once</h3><p><code>emitter.once(String eventNames, Function callback [, Object context])</code></p>
+<p>Sometimes you need to trigger a callback only once. Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> callback = <span class="function"><span class="keyword">function</span>(<span class="params">...</span>) </span>&#123;...&#125;;</span><br><span class="line">emitter.once(<span class="string">'event-name'</span>, callback);</span><br><span class="line"><span class="comment">// callback will be triggered only once</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// We can also register callback to be triggered once</span></span><br><span class="line"><span class="comment">// for multiple events at once:</span></span><br><span class="line">emitter.once(<span class="string">'event1 event2'</span>, callback);</span><br><span class="line"><span class="comment">// callback will be triggered only once for 'event1'</span></span><br><span class="line"><span class="comment">// AND only once more for 'event2'</span></span><br><span class="line"><span class="comment">// ... so triggering 'event1' and 'event2' multiple times</span></span><br><span class="line"><span class="comment">// will run callback a total of 2 times</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Triggering-an-Event"><a href="#Triggering-an-Event" class="headerlink" title="Triggering an Event"></a>Triggering an Event</h3><p><code>emitter.trigger(String eventNames [, Anything *args])</code></p>
+<p>Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">emitter.trigger(<span class="string">'event-name'</span>);</span><br><span class="line"><span class="comment">// All callbacks associated with 'event-name' will be triggered</span></span><br><span class="line"><span class="comment">// in the order that they were registered.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Trigger with parameters (as many as you want):</span></span><br><span class="line">emitter.trigger(<span class="string">'event-name'</span>, <span class="number">10</span>, <span class="string">'wow'</span>, &#123;obj: <span class="literal">true</span>&#125;);</span><br><span class="line"><span class="comment">// These parameters will be used when calling all registered</span></span><br><span class="line"><span class="comment">// callbacks for 'event-name' --&gt; callback(10, 'wow', &#123;obj: true&#125;);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// We can also trigger multiple events at once:</span></span><br><span class="line">emitter.trigger(<span class="string">'event1 event2 event3'</span>);</span><br><span class="line">emitter.trigger(<span class="string">'event1 event2 event3'</span>, <span class="number">10</span>, <span class="string">'wow'</span>, &#123;obj: <span class="literal">true</span>&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// We can also trigger ALL registered events at once:</span></span><br><span class="line">emitter.trigger();</span><br></pre></td></tr></table></figure></p>
+<h3 id="Checking-for-Subscribers"><a href="#Checking-for-Subscribers" class="headerlink" title="Checking for Subscribers"></a>Checking for Subscribers</h3><p><code>Boolean emitter.hasSubscriber(String eventNames [, Function callback])</code><br>or<br><code>Boolean emitter.hasSubscriber(Function callback)</code></p>
+<p>Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Check if 'event-name' has any callbacks associated</span></span><br><span class="line"><span class="keyword">var</span> exists = emitter.hasSubscriber(<span class="string">'event-name'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Check if a callback is registered for an event:</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;...&#125;;</span><br><span class="line"><span class="keyword">var</span> exists = emitter.hasSubscriber(<span class="string">'event-name'</span>, myFunction);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Check if a callback is registered for any of the specified events</span></span><br><span class="line"><span class="keyword">var</span> exists = emitter.hasSubscriber(<span class="string">'event1 event2'</span>, myFunction);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Check if a callback is registered for any events</span></span><br><span class="line"><span class="keyword">var</span> exists = emitter.hasSubscriber(myFunction);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Check if an emitter has any events/callbacks at all:</span></span><br><span class="line"><span class="keyword">var</span> exists = emitter.hasSubscriber();</span><br></pre></td></tr></table></figure></p>
+<h3 id="Getting-List-of-Events"><a href="#Getting-List-of-Events" class="headerlink" title="Getting List of Events"></a>Getting List of Events</h3><p><code>Array emitter.getEventsList()</code></p>
+<p>Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> eventsList = emitter.getEventsList();</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Environment]]></title>
       <url>http://quasar-framework.org/api/js-environment.html</url>
       <content type="html"><![CDATA[<p>Helpers are built-in to detect the environment in which the code is running:</p>
@@ -1201,29 +1235,45 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar Events]]></title>
-      <url>http://quasar-framework.org/api/js-events.html</url>
-      <content type="html"><![CDATA[<p>Events are important for the inner workings of your App and also for writing Quasar Plugins.<br>Sometimes you need an event bus or a publish/subscribe channel. An emitter solves this need.</p>
-<p>If you are looking for the Events List, it is <a href="/api/js-events-list.html">here</a>.</p>
-<h2 id="Creating-an-Emitter"><a href="#Creating-an-Emitter" class="headerlink" title="Creating an Emitter"></a>Creating an Emitter</h2><p>We call an emitter an object who is capable of registering and triggering events.</p>
-<p>There are two ways to create one:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// create a new Object</span></span><br><span class="line"><span class="keyword">var</span> emitter = quasar.create.events.emitter();</span><br><span class="line"></span><br><span class="line"><span class="comment">// make existing Object an emitter</span></span><br><span class="line"><span class="keyword">var</span> object = &#123;...&#125;;</span><br><span class="line">quasar.make.events.emitter(object);</span><br></pre></td></tr></table></figure></p>
-<h3 id="Check-if-Object-is-Emitter"><a href="#Check-if-Object-is-Emitter" class="headerlink" title="Check if Object is Emitter"></a>Check if Object is Emitter</h3><p>You can also check if an object is an emitter:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> someObject = &#123;...&#125;;</span><br><span class="line"><span class="keyword">var</span> isEmitter = quasar.is.events.emitter(someObject);</span><br></pre></td></tr></table></figure></p>
-<h3 id="Global-Events-Emitter"><a href="#Global-Events-Emitter" class="headerlink" title="Global Events Emitter"></a>Global Events Emitter</h3><p>There is a global events emitter already available for you to use: <code>quasar.events</code>. Make sure you <em>DON’T</em> name your own events to match the ones that Quasar uses by default (see list <a href="/guide/writing-quasar-page.html#Page-Events">here</a>). It is recommended that you create your own global emitters to avoid event naming problems.</p>
-<h2 id="Emitter-Methods"><a href="#Emitter-Methods" class="headerlink" title="Emitter Methods"></a>Emitter Methods</h2><blockquote>
-<p><strong>NOTE</strong><br>Event name must <em>NOT</em> contain space characters, otherwise the string will be considered as containing multiple events names.</p>
+      <title><![CDATA[Quasar Helpers]]></title>
+      <url>http://quasar-framework.org/api/js-helpers-and-utils.html</url>
+      <content type="html"><![CDATA[<h2 id="Open-External-URL"><a href="#Open-External-URL" class="headerlink" title="Open External URL"></a>Open External URL</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.open.url(<span class="string">'http://...'</span>);</span><br></pre></td></tr></table></figure>
+<p>It will take care of the quirks involved when running under Cordova or on a browser, including notifying the user he/she has to acknowledge opening popups.</p>
+<h2 id="Debounce-Function"><a href="#Debounce-Function" class="headerlink" title="Debounce Function"></a>Debounce Function</h2><p>If your App uses JavaScript to accomplish taxing tasks, a debounce function is essential to ensuring a given task doesn’t fire so often that it bricks browser performance. Debouncing a function limits the rate at which the function can fire.</p>
+<p>A quick example: you have a resize listener on the window which does some element dimension calculations and (possibly) repositions a few elements. That isn’t a heavy task in itself but being repeatedly fired after numerous resizes will really slow your App down. So why not limit the rate at which the function can fire?</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Returns a function, that, as long as it continues to be invoked, will not</span></span><br><span class="line"><span class="comment">// be triggered. The function will be called after it stops being called for</span></span><br><span class="line"><span class="comment">// N milliseconds. If `immediate` is passed, trigger the function on the</span></span><br><span class="line"><span class="comment">// leading edge, instead of the trailing.</span></span><br><span class="line"></span><br><span class="line">(Debounced <span class="built_in">Function</span>) quasar.debounce(<span class="built_in">Function</span> fn, <span class="built_in">Number</span> milliseconds_to_wait, <span class="built_in">Boolean</span> immediate);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Example:</span></span><br><span class="line"><span class="built_in">window</span>.addEventListener(</span><br><span class="line">  <span class="string">'resize'</span>,</span><br><span class="line">  quasar.debounce(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    .... things to <span class="keyword">do</span> ...</span><br><span class="line">  &#125;, <span class="number">300</span> <span class="comment">/*ms to wait*/</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h2 id="Function-Reflection"><a href="#Function-Reflection" class="headerlink" title="Function Reflection"></a>Function Reflection</h2><p>Retrieve in an array the formal name of a Function’s parameters (NOT their effective value).</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 'fn' must be a reference to a Function</span></span><br><span class="line">(<span class="built_in">Array</span>) quasar.get.fn.param.names(<span class="built_in">Function</span> fn);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Example:</span></span><br><span class="line"><span class="keyword">var</span> parameters = quasar.get.fn.param.names(</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">testMe</span>(<span class="params">a, b, c</span>) </span>&#123; <span class="comment">/* bla bla */</span> &#125;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(parameters); <span class="comment">// ['a', 'b', 'c']</span></span><br></pre></td></tr></table></figure>
+<h2 id="Key-Codes"><a href="#Key-Codes" class="headerlink" title="Key Codes"></a>Key Codes</h2><p>Quasar has all key codes available through <code>quasar.key</code>. Some examples:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">'#searchbox input'</span>).bind(<span class="string">'keypress'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> key = e.keyCode || e.which;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (key === quasar.key.enter) &#123;</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> (key === quasar.key.backspace) &#123;</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>For a complete list of keys just type <code>quasar.key</code> in your browsers JS console.</p>
+<h2 id="Get-Normalized-Path"><a href="#Get-Normalized-Path" class="headerlink" title="Get Normalized Path"></a>Get Normalized Path</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="built_in">String</span>) quasar.get.normalized.path(<span class="built_in">String</span> path);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Example:</span></span><br><span class="line"><span class="keyword">var</span> normalizedPath = quasar.get.normalized.path(</span><br><span class="line">  <span class="string">'images/singing/../folder/second/../../quasar.png'</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(normalizedPath); <span class="comment">// "http://quasar-framework.org/images/quasar.png"</span></span><br></pre></td></tr></table></figure>
+<h2 id="Next-Tick"><a href="#Next-Tick" class="headerlink" title="Next Tick"></a>Next Tick</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Alias for `setTimeout(fn, 1)`:</span></span><br><span class="line">quasar.nextTick(<span class="built_in">Function</span> fn);</span><br></pre></td></tr></table></figure>
+<p>Note that Vue also has a <code>nextTick()</code> method, but it differs than <code>quasar.nextTick()</code> in the sense that the specified Function will run on the next digest cycle:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.nextTick(<span class="built_in">Function</span> fn);</span><br></pre></td></tr></table></figure></p>
+<h2 id="Capitalize-String"><a href="#Capitalize-String" class="headerlink" title="Capitalize String"></a>Capitalize String</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(Capitalized <span class="built_in">String</span>) quasar.capitalize(<span class="built_in">String</span> str);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Example: 'title' becomes 'Title'</span></span><br></pre></td></tr></table></figure>
+<h2 id="Debug-Helpers"><a href="#Debug-Helpers" class="headerlink" title="Debug Helpers"></a>Debug Helpers</h2><p>The <code>quasar.debug</code> object has useful debugging methods.</p>
+<h3 id="Javascript-Stack"><a href="#Javascript-Stack" class="headerlink" title="Javascript Stack"></a>Javascript Stack</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.debug.printStack()</span><br></pre></td></tr></table></figure>
+<p>Useful when stuck somewhere in the code and you’d like to see the Javascript stack outputted to the console.</p>
+<h3 id="Profiling"><a href="#Profiling" class="headerlink" title="Profiling"></a>Profiling</h3><p>Sometimes you want to know how much time did something take to get executed. Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.debug.profile(<span class="string">'xyz'</span>);</span><br><span class="line"><span class="comment">//run some code... then to output results:</span></span><br><span class="line">quasar.debug.profile(<span class="string">'xyz'</span>);</span><br></pre></td></tr></table></figure></p>
+<p>You can have multiple profiles running at the same time.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar Scroll Fire]]></title>
+      <url>http://quasar-framework.org/api/js-scroll-fire-directive.html</url>
+      <content type="html"><![CDATA[<p>“Scroll Fire” is a feature that enables a method to be called (once and only once) when user scrolls current page to a specific scroll position in pixels.</p>
+<input type="hidden" data-fullpage-demo="scroll-fire">
+
+<p>For ease of use, its implementation is through a Vue Directive called <code>v-scroll-fire</code>.</p>
+<blockquote>
+<p><strong>NOTE</strong><br>There is also a <code>v-scroll</code> directive which fires whenever user scrolls the Page, available to read <a href="/api/js-vue-directives.html#Directive-“v-scroll”">here</a>.</p>
 </blockquote>
-<h3 id="Registering-an-Event-Callback"><a href="#Registering-an-Event-Callback" class="headerlink" title="Registering an Event/Callback"></a>Registering an Event/Callback</h3><p><code>emitter.on(String eventNames, Function callback [, Object context])</code></p>
-<p>Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> context = &#123;...&#125;; <span class="comment">// will be used as *this* within callback</span></span><br><span class="line">emitter.on(<span class="string">'event-name'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">param1, param2, ...paramN</span>) </span>&#123; ... &#125;, context);</span><br><span class="line"></span><br><span class="line"><span class="comment">// The params that are used when triggering the event are passed on</span></span><br><span class="line"><span class="comment">// to each callback.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// We can register multiple events at once:</span></span><br><span class="line">emitter.on(<span class="string">'event1 event2 eventN'</span>, callback);</span><br></pre></td></tr></table></figure></p>
-<h3 id="Removing-an-Event-Callback"><a href="#Removing-an-Event-Callback" class="headerlink" title="Removing an Event/Callback"></a>Removing an Event/Callback</h3><p><code>emitter.off(String eventNames [, Function callback])</code></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Unregistering an event:</span></span><br><span class="line">emitter.off(<span class="string">'event-name'</span>);</span><br><span class="line"><span class="comment">// 'event-name' does no longer has any callbacks</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Unregistering a specific callback for an event:</span></span><br><span class="line"><span class="keyword">var</span> callback = <span class="function"><span class="keyword">function</span>(<span class="params">...</span>) </span>&#123;...&#125;;</span><br><span class="line">emitter.on(<span class="string">'event-name'</span>, callback);</span><br><span class="line">emitter.off(<span class="string">'event-name'</span>, callback);</span><br><span class="line"><span class="comment">// 'event-name' still exists (if other callbacks are registered to this event),</span></span><br><span class="line"><span class="comment">// but does not contain the above callback anymore</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// We can remove callback from multiple events at once:</span></span><br><span class="line">emitter.off(<span class="string">'event1 event2 eventN'</span>, callback);</span><br><span class="line"></span><br><span class="line"><span class="comment">// or we can remove all callbacks from multiple events at once:</span></span><br><span class="line">emitter.off(<span class="string">'event1 event2 eventN'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// or we can remove all callbacks and all events at once:</span></span><br><span class="line">emitter.off();</span><br></pre></td></tr></table></figure>
-<h3 id="Registering-a-Callback-to-Be-Run-Only-Once"><a href="#Registering-a-Callback-to-Be-Run-Only-Once" class="headerlink" title="Registering a Callback to Be Run Only Once"></a>Registering a Callback to Be Run Only Once</h3><p><code>emitter.once(String eventNames, Function callback [, Object context])</code></p>
-<p>Sometimes you need to trigger a callback only once. Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> callback = <span class="function"><span class="keyword">function</span>(<span class="params">...</span>) </span>&#123;...&#125;;</span><br><span class="line">emitter.once(<span class="string">'event-name'</span>, callback);</span><br><span class="line"><span class="comment">// callback will be triggered only once</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// We can also register callback to be triggered once</span></span><br><span class="line"><span class="comment">// for multiple events at once:</span></span><br><span class="line">emitter.once(<span class="string">'event1 event2'</span>, callback);</span><br><span class="line"><span class="comment">// callback will be triggered only once for 'event1'</span></span><br><span class="line"><span class="comment">// AND only once more for 'event2'</span></span><br><span class="line"><span class="comment">// ... so triggering 'event1' and 'event2' multiple times</span></span><br><span class="line"><span class="comment">// will run callback a total of 2 times</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="Triggering-an-Event"><a href="#Triggering-an-Event" class="headerlink" title="Triggering an Event"></a>Triggering an Event</h3><p><code>emitter.trigger(String eventNames [, Anything *args])</code></p>
-<p>Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">emitter.trigger(<span class="string">'event-name'</span>);</span><br><span class="line"><span class="comment">// All callbacks associated with 'event-name' will be triggered</span></span><br><span class="line"><span class="comment">// in the order that they were registered.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Trigger with parameters (as many as you want):</span></span><br><span class="line">emitter.trigger(<span class="string">'event-name'</span>, <span class="number">10</span>, <span class="string">'wow'</span>, &#123;obj: <span class="literal">true</span>&#125;);</span><br><span class="line"><span class="comment">// These parameters will be used when calling all registered</span></span><br><span class="line"><span class="comment">// callbacks for 'event-name' --&gt; callback(10, 'wow', &#123;obj: true&#125;);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// We can also trigger multiple events at once:</span></span><br><span class="line">emitter.trigger(<span class="string">'event1 event2 event3'</span>);</span><br><span class="line">emitter.trigger(<span class="string">'event1 event2 event3'</span>, <span class="number">10</span>, <span class="string">'wow'</span>, &#123;obj: <span class="literal">true</span>&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// We can also trigger ALL registered events at once:</span></span><br><span class="line">emitter.trigger();</span><br></pre></td></tr></table></figure></p>
-<h3 id="Checking-for-Subscribers"><a href="#Checking-for-Subscribers" class="headerlink" title="Checking for Subscribers"></a>Checking for Subscribers</h3><p><code>Boolean emitter.hasSubscriber(String eventNames [, Function callback])</code><br>or<br><code>Boolean emitter.hasSubscriber(Function callback)</code></p>
-<p>Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Check if 'event-name' has any callbacks associated</span></span><br><span class="line"><span class="keyword">var</span> exists = emitter.hasSubscriber(<span class="string">'event-name'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Check if a callback is registered for an event:</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;...&#125;;</span><br><span class="line"><span class="keyword">var</span> exists = emitter.hasSubscriber(<span class="string">'event-name'</span>, myFunction);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Check if a callback is registered for any of the specified events</span></span><br><span class="line"><span class="keyword">var</span> exists = emitter.hasSubscriber(<span class="string">'event1 event2'</span>, myFunction);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Check if a callback is registered for any events</span></span><br><span class="line"><span class="keyword">var</span> exists = emitter.hasSubscriber(myFunction);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Check if an emitter has any events/callbacks at all:</span></span><br><span class="line"><span class="keyword">var</span> exists = emitter.hasSubscriber();</span><br></pre></td></tr></table></figure></p>
-<h3 id="Getting-List-of-Events"><a href="#Getting-List-of-Events" class="headerlink" title="Getting List of Events"></a>Getting List of Events</h3><p><code>Array emitter.getEventsList()</code></p>
-<p>Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> eventsList = emitter.getEventsList();</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Template for VueModel below --&gt;</span></span><br><span class="line">....</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-scroll-fire</span>=<span class="string">"bounceImage"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">....</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// VueModel for template above</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  ...,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    bounceImage: <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">      element.velocity(<span class="string">'callout.tada'</span>, &#123;</span><br><span class="line">        display: <span class="literal">null</span></span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>IMPORTANT</strong><br>For performance purposes, the scroll listener function injected  is by default debounced by 50ms. Read more about <code>debouncing</code> <a href="/api/js-helpers-and-utils.html#Debounce-Function">here</a>.</p>
+</blockquote>
 ]]></content>
     </entry>
     
@@ -1270,44 +1320,25 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar Helpers]]></title>
-      <url>http://quasar-framework.org/api/js-helpers-and-utils.html</url>
-      <content type="html"><![CDATA[<h2 id="Open-External-URL"><a href="#Open-External-URL" class="headerlink" title="Open External URL"></a>Open External URL</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.open.url(<span class="string">'http://...'</span>);</span><br></pre></td></tr></table></figure>
-<p>It will take care of the quirks involved when running under Cordova or on a browser, including notifying the user he/she has to acknowledge opening popups.</p>
-<h2 id="Debounce-Function"><a href="#Debounce-Function" class="headerlink" title="Debounce Function"></a>Debounce Function</h2><p>If your App uses JavaScript to accomplish taxing tasks, a debounce function is essential to ensuring a given task doesn’t fire so often that it bricks browser performance. Debouncing a function limits the rate at which the function can fire.</p>
-<p>A quick example: you have a resize listener on the window which does some element dimension calculations and (possibly) repositions a few elements. That isn’t a heavy task in itself but being repeatedly fired after numerous resizes will really slow your App down. So why not limit the rate at which the function can fire?</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Returns a function, that, as long as it continues to be invoked, will not</span></span><br><span class="line"><span class="comment">// be triggered. The function will be called after it stops being called for</span></span><br><span class="line"><span class="comment">// N milliseconds. If `immediate` is passed, trigger the function on the</span></span><br><span class="line"><span class="comment">// leading edge, instead of the trailing.</span></span><br><span class="line"></span><br><span class="line">(Debounced <span class="built_in">Function</span>) quasar.debounce(<span class="built_in">Function</span> fn, <span class="built_in">Number</span> milliseconds_to_wait, <span class="built_in">Boolean</span> immediate);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Example:</span></span><br><span class="line"><span class="built_in">window</span>.addEventListener(</span><br><span class="line">  <span class="string">'resize'</span>,</span><br><span class="line">  quasar.debounce(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    .... things to <span class="keyword">do</span> ...</span><br><span class="line">  &#125;, <span class="number">300</span> <span class="comment">/*ms to wait*/</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<h2 id="Function-Reflection"><a href="#Function-Reflection" class="headerlink" title="Function Reflection"></a>Function Reflection</h2><p>Retrieve in an array the formal name of a Function’s parameters (NOT their effective value).</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 'fn' must be a reference to a Function</span></span><br><span class="line">(<span class="built_in">Array</span>) quasar.get.fn.param.names(<span class="built_in">Function</span> fn);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Example:</span></span><br><span class="line"><span class="keyword">var</span> parameters = quasar.get.fn.param.names(</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">testMe</span>(<span class="params">a, b, c</span>) </span>&#123; <span class="comment">/* bla bla */</span> &#125;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(parameters); <span class="comment">// ['a', 'b', 'c']</span></span><br></pre></td></tr></table></figure>
-<h2 id="Key-Codes"><a href="#Key-Codes" class="headerlink" title="Key Codes"></a>Key Codes</h2><p>Quasar has all key codes available through <code>quasar.key</code>. Some examples:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">'#searchbox input'</span>).bind(<span class="string">'keypress'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> key = e.keyCode || e.which;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (key === quasar.key.enter) &#123;</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> (key === quasar.key.backspace) &#123;</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>For a complete list of keys just type <code>quasar.key</code> in your browsers JS console.</p>
-<h2 id="Get-Normalized-Path"><a href="#Get-Normalized-Path" class="headerlink" title="Get Normalized Path"></a>Get Normalized Path</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="built_in">String</span>) quasar.get.normalized.path(<span class="built_in">String</span> path);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Example:</span></span><br><span class="line"><span class="keyword">var</span> normalizedPath = quasar.get.normalized.path(</span><br><span class="line">  <span class="string">'images/singing/../folder/second/../../quasar.png'</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(normalizedPath); <span class="comment">// "http://quasar-framework.org/images/quasar.png"</span></span><br></pre></td></tr></table></figure>
-<h2 id="Next-Tick"><a href="#Next-Tick" class="headerlink" title="Next Tick"></a>Next Tick</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Alias for `setTimeout(fn, 1)`:</span></span><br><span class="line">quasar.nextTick(<span class="built_in">Function</span> fn);</span><br></pre></td></tr></table></figure>
-<p>Note that Vue also has a <code>nextTick()</code> method, but it differs than <code>quasar.nextTick()</code> in the sense that the specified Function will run on the next digest cycle:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.nextTick(<span class="built_in">Function</span> fn);</span><br></pre></td></tr></table></figure></p>
-<h2 id="Capitalize-String"><a href="#Capitalize-String" class="headerlink" title="Capitalize String"></a>Capitalize String</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(Capitalized <span class="built_in">String</span>) quasar.capitalize(<span class="built_in">String</span> str);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Example: 'title' becomes 'Title'</span></span><br></pre></td></tr></table></figure>
-<h2 id="Debug-Helpers"><a href="#Debug-Helpers" class="headerlink" title="Debug Helpers"></a>Debug Helpers</h2><p>The <code>quasar.debug</code> object has useful debugging methods.</p>
-<h3 id="Javascript-Stack"><a href="#Javascript-Stack" class="headerlink" title="Javascript Stack"></a>Javascript Stack</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.debug.printStack()</span><br></pre></td></tr></table></figure>
-<p>Useful when stuck somewhere in the code and you’d like to see the Javascript stack outputted to the console.</p>
-<h3 id="Profiling"><a href="#Profiling" class="headerlink" title="Profiling"></a>Profiling</h3><p>Sometimes you want to know how much time did something take to get executed. Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.debug.profile(<span class="string">'xyz'</span>);</span><br><span class="line"><span class="comment">//run some code... then to output results:</span></span><br><span class="line">quasar.debug.profile(<span class="string">'xyz'</span>);</span><br></pre></td></tr></table></figure></p>
-<p>You can have multiple profiles running at the same time.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar Scroll Fire]]></title>
-      <url>http://quasar-framework.org/api/js-scroll-fire-directive.html</url>
-      <content type="html"><![CDATA[<p>“Scroll Fire” is a feature that enables a method to be called (once and only once) when user scrolls current page to a specific scroll position in pixels.</p>
-<input type="hidden" data-fullpage-demo="scroll-fire">
-
-<p>For ease of use, its implementation is through a Vue Directive called <code>v-scroll-fire</code>.</p>
+      <title><![CDATA[Handling Touch Events]]></title>
+      <url>http://quasar-framework.org/api/js-touch-events.html</url>
+      <content type="html"><![CDATA[<p>Quasar makes good use of <a href="http://hammerjs.github.io/" target="_blank" rel="external">HammerJS</a> and has specific API to nicely wrap touch events.</p>
+<h2 id="Vue-‘v-touch’-directive"><a href="#Vue-‘v-touch’-directive" class="headerlink" title="Vue ‘v-touch’ directive"></a>Vue ‘v-touch’ directive</h2><p>Quasar has its own Vue directive written for handling touch events:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch:event</span>=<span class="string">"method_name"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- ..where "event" is the name of the Touch action --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch:pan</span>=<span class="string">"panning"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Here’s the list of touch events supported by HammerJS: <code>pan</code>, <code>pinch</code>, <code>press</code>, <code>rotate</code>, <code>swipe</code>. Basically, any touch action that HammerJS has, so visit their website to get updates.</p>
 <blockquote>
-<p><strong>NOTE</strong><br>There is also a <code>v-scroll</code> directive which fires whenever user scrolls the Page, available to read <a href="/api/js-vue-directives.html#Directive-“v-scroll”">here</a>.</p>
+<p>Just make sure that the method you supply to the directive is registered in your Vue, be that the Quasar Page Vue instance, the Quasar Layout Vue instance or any other Vue instance containing the respective node.</p>
 </blockquote>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Template for VueModel below --&gt;</span></span><br><span class="line">....</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-scroll-fire</span>=<span class="string">"bounceImage"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">....</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// VueModel for template above</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  ...,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    bounceImage: <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">      element.velocity(<span class="string">'callout.tada'</span>, &#123;</span><br><span class="line">        display: <span class="literal">null</span></span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Example of declaring the method used for the touch action:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123; <span class="comment">// or in Page/Layout definition 'module.exports = &#123;...&#125;'</span></span><br><span class="line"></span><br><span class="line">  template: <span class="string">'&lt;div v-touch:pan="panning"&gt;Touch Enabled Node&lt;/div&gt;'</span>,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    panning: <span class="function"><span class="keyword">function</span>(<span class="params">hammer</span>) </span>&#123;</span><br><span class="line">      <span class="comment">// 'hammer' variable has the Hammer object</span></span><br><span class="line">      <span class="comment">// which describes the Touch Event</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">// hammer.deltaX, hammer.deltaY, ...</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h3 id="Custom-Touch-Events"><a href="#Custom-Touch-Events" class="headerlink" title="Custom Touch Events"></a>Custom Touch Events</h3><p>There’s a way to write your own custom Touch Events. Here’s an example:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.register.custom.touch.event(&#123;</span><br><span class="line">  event: <span class="string">'doubletap'</span>,</span><br><span class="line">  type: <span class="string">'tap'</span>,</span><br><span class="line">  taps: <span class="number">2</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch:doubletap</span>=<span class="string">"doubleTapped"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Through-jQuery"><a href="#Through-jQuery" class="headerlink" title="Through jQuery"></a>Through jQuery</h2><p>There are two methods you can use to manage Hammer:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> node = $(...);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Initialize Hammer on DOM node</span></span><br><span class="line">node.hammer(hammerOptions);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Get Hammer instance from node</span></span><br><span class="line"><span class="keyword">var</span> hammer = node.getHammer();</span><br><span class="line">hammer.on(<span class="string">'pan'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;...&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>Don’t worry, jQuery events are still emitted when using Hammer this way.</p>
+<h2 id="Prevent-Ghost-Clicks"><a href="#Prevent-Ghost-Clicks" class="headerlink" title="Prevent Ghost Clicks"></a>Prevent Ghost Clicks</h2><p>When dealing directly with jQuery and Hammer for a <code>tap</code> event, you need to make the following call:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.prevent.ghost.click(node);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 'node' can be a jQuery selector or a native DOM element</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p><strong>IMPORTANT</strong><br>For performance purposes, the scroll listener function injected  is by default debounced by 50ms. Read more about <code>debouncing</code> <a href="/api/js-helpers-and-utils.html#Debounce-Function">here</a>.</p>
+<p><strong>NOTE</strong><br><code>v-touch</code> directive does NOT support <code>tap</code> event. Use <code>v-on:click</code> directive or jQuery’s <code>.click()</code> method instead.</p>
 </blockquote>
 ]]></content>
     </entry>
@@ -1338,30 +1369,6 @@
 <h3 id="Get-Route-By-Path"><a href="#Get-Route-By-Path" class="headerlink" title="Get Route By Path"></a>Get Route By Path</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(route_obj) quasar.get.route(hash);</span><br><span class="line">Example: quasar.get.route(<span class="string">'#/article'</span>);</span><br></pre></td></tr></table></figure>
 <h3 id="Reloading-Current-Route"><a href="#Reloading-Current-Route" class="headerlink" title="Reloading Current Route"></a>Reloading Current Route</h3><p>This will trigger the route methods once again.<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.reload.current.route();</span><br></pre></td></tr></table></figure></p>
 <h3 id="Navigating-to-a-Route"><a href="#Navigating-to-a-Route" class="headerlink" title="Navigating to a Route"></a>Navigating to a Route</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.navigate.to.route(hash);</span><br><span class="line">Example: quasar.navigate.to.route(<span class="string">'#/article'</span>);</span><br></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Handling Touch Events]]></title>
-      <url>http://quasar-framework.org/api/js-touch-events.html</url>
-      <content type="html"><![CDATA[<p>Quasar makes good use of <a href="http://hammerjs.github.io/" target="_blank" rel="external">HammerJS</a> and has specific API to nicely wrap touch events.</p>
-<h2 id="Vue-‘v-touch’-directive"><a href="#Vue-‘v-touch’-directive" class="headerlink" title="Vue ‘v-touch’ directive"></a>Vue ‘v-touch’ directive</h2><p>Quasar has its own Vue directive written for handling touch events:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch:event</span>=<span class="string">"method_name"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- ..where "event" is the name of the Touch action --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch:pan</span>=<span class="string">"panning"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>Here’s the list of touch events supported by HammerJS: <code>pan</code>, <code>pinch</code>, <code>press</code>, <code>rotate</code>, <code>swipe</code>. Basically, any touch action that HammerJS has, so visit their website to get updates.</p>
-<blockquote>
-<p>Just make sure that the method you supply to the directive is registered in your Vue, be that the Quasar Page Vue instance, the Quasar Layout Vue instance or any other Vue instance containing the respective node.</p>
-</blockquote>
-<p>Example of declaring the method used for the touch action:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123; <span class="comment">// or in Page/Layout definition 'module.exports = &#123;...&#125;'</span></span><br><span class="line"></span><br><span class="line">  template: <span class="string">'&lt;div v-touch:pan="panning"&gt;Touch Enabled Node&lt;/div&gt;'</span>,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    panning: <span class="function"><span class="keyword">function</span>(<span class="params">hammer</span>) </span>&#123;</span><br><span class="line">      <span class="comment">// 'hammer' variable has the Hammer object</span></span><br><span class="line">      <span class="comment">// which describes the Touch Event</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">// hammer.deltaX, hammer.deltaY, ...</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<h3 id="Custom-Touch-Events"><a href="#Custom-Touch-Events" class="headerlink" title="Custom Touch Events"></a>Custom Touch Events</h3><p>There’s a way to write your own custom Touch Events. Here’s an example:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.register.custom.touch.event(&#123;</span><br><span class="line">  event: <span class="string">'doubletap'</span>,</span><br><span class="line">  type: <span class="string">'tap'</span>,</span><br><span class="line">  taps: <span class="number">2</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch:doubletap</span>=<span class="string">"doubleTapped"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="Through-jQuery"><a href="#Through-jQuery" class="headerlink" title="Through jQuery"></a>Through jQuery</h2><p>There are two methods you can use to manage Hammer:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> node = $(...);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Initialize Hammer on DOM node</span></span><br><span class="line">node.hammer(hammerOptions);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Get Hammer instance from node</span></span><br><span class="line"><span class="keyword">var</span> hammer = node.getHammer();</span><br><span class="line">hammer.on(<span class="string">'pan'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;...&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>Don’t worry, jQuery events are still emitted when using Hammer this way.</p>
-<h2 id="Prevent-Ghost-Clicks"><a href="#Prevent-Ghost-Clicks" class="headerlink" title="Prevent Ghost Clicks"></a>Prevent Ghost Clicks</h2><p>When dealing directly with jQuery and Hammer for a <code>tap</code> event, you need to make the following call:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.prevent.ghost.click(node);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 'node' can be a jQuery selector or a native DOM element</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><strong>NOTE</strong><br><code>v-touch</code> directive does NOT support <code>tap</code> event. Use <code>v-on:click</code> directive or jQuery’s <code>.click()</code> method instead.</p>
-</blockquote>
 ]]></content>
     </entry>
     
@@ -1451,12 +1458,6 @@
     </entry>
     
     <entry>
-      <title></title>
-      <url>http://quasar-framework.org/blog/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Built-in Technology Stack]]></title>
       <url>http://quasar-framework.org/guide/built-in-stack.html</url>
       <content type="html"><![CDATA[<p>You can take full advantage of the following dependencies that are provided by default:</p>
@@ -1516,6 +1517,7 @@
 <h2 id="Native-Mobile-App-Wrapper"><a href="#Native-Mobile-App-Wrapper" class="headerlink" title="Native Mobile App Wrapper"></a>Native Mobile App Wrapper</h2><p>You can use Cordova to wrap your Quasar App into a native mobile App.</p>
 <h3 id="Wrap-your-App"><a href="#Wrap-your-App" class="headerlink" title="Wrap your App"></a>Wrap your App</h3><p>So you want to be able to produce native apps for the mobile platforms with Cordova (make sure you have it installed: <code>npm install -g cordova</code>):<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar wrap</span><br></pre></td></tr></table></figure></p>
 <p>This command generates a folder inside your App called <code>/wrapper</code>. It contains the assets of a Cordova project mapped to your Quasar App’s source code.</p>
+<p>It also installs the Crosswalk plugin <code>cordova-plugin-crosswalk-webview</code> which wraps your App with latest Chromium browser. This ensures that your App will have the same runtime on all platforms. Read more <a href="https://crosswalk-project.org/documentation/about.html" target="_blank" rel="external">here</a> about Crosswalk.</p>
 <h3 id="Execute-Cordova-Command"><a href="#Execute-Cordova-Command" class="headerlink" title="Execute Cordova Command"></a>Execute Cordova Command</h3><p>You surely want to add a platform or perform useful Cordova commands:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar wrap [Cordova <span class="built_in">command</span> arguments]</span><br><span class="line"></span><br><span class="line"><span class="comment"># examples:</span></span><br><span class="line">$ quasar wrap platform add android</span><br><span class="line">$ quasar wrap run</span><br><span class="line">$ quasar wrap build</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p><strong>TIP</strong><br>Use it in conjunction with <code>quasar build</code> when you frequently test on your mobile: <code>quasar build &amp;&amp; quasar wrap run</code></p>
@@ -1721,6 +1723,99 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Quasar App Structure]]></title>
+      <url>http://quasar-framework.org/guide/quasar-app-structure.html</url>
+      <content type="html"><![CDATA[<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>This is what a new Quasar Framework App folder structure looks like. Some folders are creating after building the App.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tree -I <span class="string">'node_modules|wrapper'</span> <span class="_">-a</span> --dirsfirst</span><br><span class="line">.</span><br><span class="line">├── coverage</span><br><span class="line">│   ├── lcov-report</span><br><span class="line">│   │   ├── ...</span><br><span class="line">│   │   ├── index.html</span><br><span class="line">│   │   └── ...</span><br><span class="line">│   └── lcov.info</span><br><span class="line">├── dist</span><br><span class="line">│   ├── assets</span><br><span class="line">│   │   ├── fonts</span><br><span class="line">│   │   │   ├── icons</span><br><span class="line">│   │   │   │   ├── ...</span><br><span class="line">│   │   │   │   └── ...</span><br><span class="line">│   │   │   └── roboto</span><br><span class="line">│   │   │       ├── ...</span><br><span class="line">│   │   │       └── ...</span><br><span class="line">│   │   └── favicon.ico</span><br><span class="line">│   ├── css</span><br><span class="line">│   │   ├── app.mat.css</span><br><span class="line">│   │   └── app.ios.css</span><br><span class="line">│   ├── js</span><br><span class="line">│   │   └── deps.js</span><br><span class="line">│   ├── layouts</span><br><span class="line">│   │   └── main</span><br><span class="line">│   │       ├── layout.main.css</span><br><span class="line">│   │       └── layout.main.js</span><br><span class="line">│   ├── pages</span><br><span class="line">│   │   └── index</span><br><span class="line">│   │       ├── assets</span><br><span class="line">│   │       │   └── assets-README.txt</span><br><span class="line">│   │       ├── style.index.css</span><br><span class="line">│   │       └── script.index.js</span><br><span class="line">│   └── index.html</span><br><span class="line">├── src</span><br><span class="line">│   ├── assets</span><br><span class="line">│   │   └── favicon.ico</span><br><span class="line">│   ├── css</span><br><span class="line">│   │   ├── common</span><br><span class="line">│   │   │   ├── app.style.styl</span><br><span class="line">│   │   │   └── app.theme.styl</span><br><span class="line">│   │   ├── app.ios.styl</span><br><span class="line">│   │   └── app.mat.styl</span><br><span class="line">│   ├── html</span><br><span class="line">│   │   └── html-README.txt</span><br><span class="line">│   ├── js</span><br><span class="line">│   │   └── ...</span><br><span class="line">│   ├── layouts</span><br><span class="line">│   │   └── main</span><br><span class="line">│   │       ├── layout.main.yml</span><br><span class="line">│   │       ├── layout.main.styl</span><br><span class="line">│   │       ├── layout.main.html</span><br><span class="line">│   │       └── layout.main.js</span><br><span class="line">│   ├── pages</span><br><span class="line">│   │   └── index</span><br><span class="line">│   │       ├── assets</span><br><span class="line">│   │       │   └── assets-README.txt</span><br><span class="line">│   │       ├── config.index.yml</span><br><span class="line">│   │       ├── style.index.styl</span><br><span class="line">│   │       ├── script.index.js</span><br><span class="line">│   │       └── view.index.html</span><br><span class="line">│   └── index.html</span><br><span class="line">├── <span class="built_in">test</span></span><br><span class="line">│   ├── .eslintrc</span><br><span class="line">│   ├── setup.js</span><br><span class="line">│   └── test.spec.js</span><br><span class="line">├── wrapper</span><br><span class="line">│   ├── ....</span><br><span class="line">│   ├── ....</span><br><span class="line">│   └── ....</span><br><span class="line">├── .eslintrc</span><br><span class="line">├── .gitignore</span><br><span class="line">├── package.json</span><br><span class="line">├── quasar.build.yml</span><br><span class="line">├── README.md</span><br><span class="line">└── .stylintrc</span><br></pre></td></tr></table></figure></p>
+<p>What each is used for:</p>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/dist</td>
+<td>Production build folder</td>
+</tr>
+<tr>
+<td>/coverage</td>
+<td>Code coverage after <a href="/guide/cli-commands.html#Running-Test-Suites">running tests with CLI</a></td>
+</tr>
+<tr>
+<td>/src</td>
+<td>App source files; see <a href="#Source-Folder">Source Folder</a></td>
+</tr>
+<tr>
+<td>/test</td>
+<td>Test source files used for <a href="/guide/cli-commands.html#Running-Test-Suites">running tests with CLI</a></td>
+</tr>
+<tr>
+<td>/wrapper</td>
+<td>Native mobile app wrapper; see <a href="/guide/cli-commands.html#Native-Mobile-App-Wrapper">Native Mobile App Wrapper</a></td>
+</tr>
+<tr>
+<td>/.eslintrc</td>
+<td>Default ESLINT config for linting Javascript files</td>
+</tr>
+<tr>
+<td>/.gitignore</td>
+<td>Tells GIT what files to ignore</td>
+</tr>
+<tr>
+<td>/package.json</td>
+<td>App’s NPM management file</td>
+</tr>
+<tr>
+<td>/quasar.build.yml</td>
+<td>YAML file used to <a href="/guide/quasar-app-configuration.html#quasar-build-yml">configure App build</a></td>
+</tr>
+<tr>
+<td>/.stylintrc</td>
+<td>Default Stylus lint config for linting Stylus files</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Source-Folder"><a href="#Source-Folder" class="headerlink" title="Source Folder"></a>Source Folder</h2><p>This is where you’ll spend most of your time writing code for your App.</p>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/src/css</td>
+<td>Folder to store global/common CSS files</td>
+</tr>
+<tr>
+<td>/src/html</td>
+<td>Folder to store global/common HTML files</td>
+</tr>
+<tr>
+<td>/src/js</td>
+<td>Folder to store global/common JS files</td>
+</tr>
+<tr>
+<td>/src/pages</td>
+<td>Folder to store assets for each page; see <a href="/guide/quasar-pages.html">Pages</a></td>
+</tr>
+<tr>
+<td>/src/layouts</td>
+<td>Folder to store assets for each layout; see <a href="/guide/quasar-layouts.html">Layouts</a></td>
+</tr>
+<tr>
+<td>/src/index.html</td>
+<td>App starting point</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Build System]]></title>
       <url>http://quasar-framework.org/guide/quasar-build-system.html</url>
       <content type="html"><![CDATA[<p>The App must be built before deployment. Read more how to build (and test) in the <a href="/guide/cli-commands.html#Build-App">CLI Commands</a> section.</p>
@@ -1748,6 +1843,89 @@
 </blockquote>
 <h3 id="Image-Files"><a href="#Image-Files" class="headerlink" title="Image Files"></a>Image Files</h3><p>Image files should be placed under <code>assets</code> folders. By default, on a production build, <code>GIF</code>, <code>JPEG</code>, <code>PNG</code> and <code>SVG</code> image files get “minified” without losing noticeable quality.</p>
 <h3 id="HTML-Files"><a href="#HTML-Files" class="headerlink" title="HTML Files"></a>HTML Files</h3><p>When building for Production, HTML files are minified.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar App Layouts]]></title>
+      <url>http://quasar-framework.org/guide/quasar-layouts.html</url>
+      <content type="html"><![CDATA[<p>Layouts are the elements that wrap page content, like navigational bar or drawers. Multiple pages can share the same Layout, which is one of the main reason for their existence.</p>
+<p>Because it’s easier and it ensures you’re using the Quasar standard, use <a href="/guide/cli-commands.html#Layouts">Quasar CLI</a> to build a Layout.</p>
+<p>Don’t forget to read more about the <a href="/guide/quasar-build-system.html">Build System</a> to understand how layouts are precompiled and bundled, what files are considered an entry-point and many more.</p>
+<h2 id="Structure"><a href="#Structure" class="headerlink" title="Structure"></a>Structure</h2><p>Each layout has its own folder (<code>/src/layouts/&lt;layout-name&gt;</code>) and has the following structure:</p>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Optional</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/assets</td>
+<td>Yes</td>
+<td>Folder to place images, fonts, … specific to the layout only</td>
+</tr>
+<tr>
+<td>layout.<strong>&lt;layout-name&gt;</strong>.js</td>
+<td></td>
+<td>Starting point of the Layout logic</td>
+</tr>
+<tr>
+<td>layout.<strong>&lt;layout-name&gt;</strong>.yml</td>
+<td></td>
+<td>YAML file with layout configuration (called <em>Manifest</em>)</td>
+</tr>
+<tr>
+<td>layout.<strong>&lt;layout-name&gt;</strong>.html</td>
+<td></td>
+<td>Template for your Layout</td>
+</tr>
+<tr>
+<td>layout.<strong>&lt;layout-name&gt;</strong>.styl</td>
+<td>Yes</td>
+<td>Starting point of the Layout CSS</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>NOTE</strong><br>If you do not use the optional files or folder, delete them to get a boost in build times. This folder structure is created by <a href="/guide/cli-commands.html#Create-Layout">Quasar CLI</a> so you don’t have to manually do it.</p>
+</blockquote>
+<h2 id="Layout-Controller-Javascript"><a href="#Layout-Controller-Javascript" class="headerlink" title="Layout Controller (Javascript)"></a>Layout Controller (Javascript)</h2><p>The starting point of a Quasar Layout is <em>layout.layout-name.js</em> file. Think of it as the Controller of a Layout.</p>
+<p>It has a basic CommonJS structure that exports a Vue instantiation object or a function for doing asynchronous operations before calling a callback with a Vue instantiation object.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Option 1. Supply Vue instantiation object</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./layout.layout-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123; <span class="comment">// Vue instance</span></span><br><span class="line">  template: html,</span><br><span class="line">  ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Option 2. Do some asynchronous operations first</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./layout.layout-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">  <span class="comment">/*</span><br><span class="line">   * 'this' contains Layout manifest;</span><br><span class="line">   * for example if you have specific</span><br><span class="line">   * CSS for the layout, then:</span><br><span class="line">   * 'this.css' will contain the URL</span><br><span class="line">   */</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="comment">// asynchronous operations</span></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">  done(&#123; <span class="comment">// Vue instance</span></span><br><span class="line">    template: html,</span><br><span class="line">    ...</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><ol>
+<li><p>When exporting a function, make sure the callback is called, otherwise the Page will never load.</p>
+</li>
+<li><p>Include other JS files for modularity by <em>require()</em>-ing them. Take full advantage of Webpack.<br>Read more about the <a href="/guide/quasar-build-system.html">Build System</a> to understand.</p>
+</li>
+<li><p>Make sure you use <code>require(&#39;raw!.....&#39;)</code> syntax for the template so that it will get bundled automatically into your JS file with the help of the Build System. This saves one precious HTTP request. <strong>Do not require the template within the exporting function (if you use one) because Webpack won’t know it needs to be handled at compile time</strong>. So require it outside to avoid issues.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// do</span></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./some.html'</span>); <span class="comment">// &lt;&lt;&lt;</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">  done(&#123;</span><br><span class="line">    template: html <span class="comment">// &lt;&lt;&lt;</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// don't!</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">  done(&#123;</span><br><span class="line">    template: <span class="built_in">require</span>(<span class="string">'raw!./some.html'</span>) <span class="comment">// &lt;&lt;&lt;</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Make good use of the Vue component lifecycle methods (<code>created</code>, <code>beforeCompile</code>, <code>compiled</code>, <code>ready</code>, <code>beforeDestroy</code>, <code>destroyed</code>) and different props:</p>
+<p><img src="/images/vue-lifecycle.png" alt="Vue Lifecycle Diagram" title="Vue Lifecycle Diagram"></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Example making use of Vue component lifecycle methods</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./layout.main.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  template: html,</span><br><span class="line">  beforeCompile: ...,</span><br><span class="line">  compiled: ...,</span><br><span class="line">  destroyed: ...,</span><br><span class="line">  ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Make sure you sanitize intervals, timeouts, requestAnimationFrames or anything else at <code>beforeDestroy</code> point, otherwise you may end up with bugs when user switches to another Layout.</p>
+</li>
+<li><p>Read about how to communicate between Page and Layouts  <a href="/guide/vue-model-communication.html">here</a>. It’s important to know how to share VueModel data between the two.</p>
+</li>
+</ol>
+<h3 id="Global-Layout-Variable"><a href="#Global-Layout-Variable" class="headerlink" title="Global Layout Variable"></a>Global Layout Variable</h3><p>There is a global variable available for you to use called <code>quasar.current.layout</code> which holds properties like <code>name</code> and <code>vm</code> (current layout’s VueModel Object - good place to change VM’s reactive data).</p>
+<h2 id="Layout-Template"><a href="#Layout-Template" class="headerlink" title="Layout Template"></a>Layout Template</h2><p>The Quasar App Layout HTML represents a Vue instance template. Read more about the <a href="/guide/quasar-build-system.html#HTML-Files">Build System</a> to understand.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong><br>There are several Web Components that you can use. Some of them are mandatory. Read more about them and how to use them starting with <a href="/components/layout-overview.html">Components &gt; Layout Overview</a> documentation page.</p>
+</blockquote>
+<h2 id="Layout-CSS"><a href="#Layout-CSS" class="headerlink" title="Layout CSS"></a>Layout CSS</h2><p>Each Layout can use its own CSS. Notice that all CSS files have the <em>.styl</em> extension. This is because you can use Stylus (with NIB extension). Read more about the <a href="/guide/quasar-build-system.html">Build System</a> to understand.</p>
+<p>To better isolate scope of each Layout CSS, the <code>layout.*layout-name*.styl</code> files have by default the following structure:</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">.layout-X // where X is the name of the layout</span><br><span class="line">  //</span><br></pre></td></tr></table></figure>
+<p>Place all your Stylus code under <code>.layout-*X*</code>.</p>
+<h2 id="Layout-Assets"><a href="#Layout-Assets" class="headerlink" title="Layout Assets"></a>Layout Assets</h2><p>Place all your page assets (like images) inside the <code>/layouts/*layout-name*/assets/</code> folder.<br>Images get optimized by default on a production build.</p>
+<h2 id="Layout-Events"><a href="#Layout-Events" class="headerlink" title="Layout Events"></a>Layout Events</h2><p>Loading a Layout is a complex procedure involving requiring its script file, preparing script file (including resolving dependencies) and rendering it. You can hook into these procedures by making good use of the Events API. See <a href="/api/js-events-list.html#Layout-Events">Quasar Events List</a> and <a href="/api/js-events.html">Event API</a>.</p>
+<h2 id="Layout-Manifest"><a href="#Layout-Manifest" class="headerlink" title="Layout Manifest"></a>Layout Manifest</h2><p>Provide layout specific configuration (in YAML format), called <em>Manifest</em> in <code>/layouts/*layout-name*/layout.*layout-name*.yml</code>.</p>
+<p>Example of Layout Manifest property: <code>css</code>. This property gets computed by default if the <code>.styl</code> file exists in the layout folder (<strong>so it is optional!</strong>), but it can be overridden to point to other files. The path must start with the folder where app root <em>index.html</em> file exists.<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">css:</span> <span class="string">'path/to/css'</span></span><br></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
     
@@ -1904,95 +2082,19 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar App Structure]]></title>
-      <url>http://quasar-framework.org/guide/quasar-app-structure.html</url>
-      <content type="html"><![CDATA[<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>This is what a new Quasar Framework App folder structure looks like. Some folders are creating after building the App.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tree -I <span class="string">'node_modules|wrapper'</span> <span class="_">-a</span> --dirsfirst</span><br><span class="line">.</span><br><span class="line">├── coverage</span><br><span class="line">│   ├── lcov-report</span><br><span class="line">│   │   ├── ...</span><br><span class="line">│   │   ├── index.html</span><br><span class="line">│   │   └── ...</span><br><span class="line">│   └── lcov.info</span><br><span class="line">├── dist</span><br><span class="line">│   ├── assets</span><br><span class="line">│   │   ├── fonts</span><br><span class="line">│   │   │   ├── icons</span><br><span class="line">│   │   │   │   ├── ...</span><br><span class="line">│   │   │   │   └── ...</span><br><span class="line">│   │   │   └── roboto</span><br><span class="line">│   │   │       ├── ...</span><br><span class="line">│   │   │       └── ...</span><br><span class="line">│   │   └── favicon.ico</span><br><span class="line">│   ├── css</span><br><span class="line">│   │   ├── app.mat.css</span><br><span class="line">│   │   └── app.ios.css</span><br><span class="line">│   ├── js</span><br><span class="line">│   │   └── deps.js</span><br><span class="line">│   ├── layouts</span><br><span class="line">│   │   └── main</span><br><span class="line">│   │       ├── layout.main.css</span><br><span class="line">│   │       └── layout.main.js</span><br><span class="line">│   ├── pages</span><br><span class="line">│   │   └── index</span><br><span class="line">│   │       ├── assets</span><br><span class="line">│   │       │   └── assets-README.txt</span><br><span class="line">│   │       ├── style.index.css</span><br><span class="line">│   │       └── script.index.js</span><br><span class="line">│   └── index.html</span><br><span class="line">├── src</span><br><span class="line">│   ├── assets</span><br><span class="line">│   │   └── favicon.ico</span><br><span class="line">│   ├── css</span><br><span class="line">│   │   ├── common</span><br><span class="line">│   │   │   ├── app.style.styl</span><br><span class="line">│   │   │   └── app.theme.styl</span><br><span class="line">│   │   ├── app.ios.styl</span><br><span class="line">│   │   └── app.mat.styl</span><br><span class="line">│   ├── html</span><br><span class="line">│   │   └── html-README.txt</span><br><span class="line">│   ├── js</span><br><span class="line">│   │   └── ...</span><br><span class="line">│   ├── layouts</span><br><span class="line">│   │   └── main</span><br><span class="line">│   │       ├── layout.main.yml</span><br><span class="line">│   │       ├── layout.main.styl</span><br><span class="line">│   │       ├── layout.main.html</span><br><span class="line">│   │       └── layout.main.js</span><br><span class="line">│   ├── pages</span><br><span class="line">│   │   └── index</span><br><span class="line">│   │       ├── assets</span><br><span class="line">│   │       │   └── assets-README.txt</span><br><span class="line">│   │       ├── config.index.yml</span><br><span class="line">│   │       ├── style.index.styl</span><br><span class="line">│   │       ├── script.index.js</span><br><span class="line">│   │       └── view.index.html</span><br><span class="line">│   └── index.html</span><br><span class="line">├── <span class="built_in">test</span></span><br><span class="line">│   ├── .eslintrc</span><br><span class="line">│   ├── setup.js</span><br><span class="line">│   └── test.spec.js</span><br><span class="line">├── wrapper</span><br><span class="line">│   ├── ....</span><br><span class="line">│   ├── ....</span><br><span class="line">│   └── ....</span><br><span class="line">├── .eslintrc</span><br><span class="line">├── .gitignore</span><br><span class="line">├── package.json</span><br><span class="line">├── quasar.build.yml</span><br><span class="line">├── README.md</span><br><span class="line">└── .stylintrc</span><br></pre></td></tr></table></figure></p>
-<p>What each is used for:</p>
-<table>
-<thead>
-<tr>
-<th>Asset</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>/dist</td>
-<td>Production build folder</td>
-</tr>
-<tr>
-<td>/coverage</td>
-<td>Code coverage after <a href="/guide/cli-commands.html#Running-Test-Suites">running tests with CLI</a></td>
-</tr>
-<tr>
-<td>/src</td>
-<td>App source files; see <a href="#Source-Folder">Source Folder</a></td>
-</tr>
-<tr>
-<td>/test</td>
-<td>Test source files used for <a href="/guide/cli-commands.html#Running-Test-Suites">running tests with CLI</a></td>
-</tr>
-<tr>
-<td>/wrapper</td>
-<td>Native mobile app wrapper; see <a href="/guide/cli-commands.html#Native-Mobile-App-Wrapper">Native Mobile App Wrapper</a></td>
-</tr>
-<tr>
-<td>/.eslintrc</td>
-<td>Default ESLINT config for linting Javascript files</td>
-</tr>
-<tr>
-<td>/.gitignore</td>
-<td>Tells GIT what files to ignore</td>
-</tr>
-<tr>
-<td>/package.json</td>
-<td>App’s NPM management file</td>
-</tr>
-<tr>
-<td>/quasar.build.yml</td>
-<td>YAML file used to <a href="/guide/quasar-app-configuration.html#quasar-build-yml">configure App build</a></td>
-</tr>
-<tr>
-<td>/.stylintrc</td>
-<td>Default Stylus lint config for linting Stylus files</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Source-Folder"><a href="#Source-Folder" class="headerlink" title="Source Folder"></a>Source Folder</h2><p>This is where you’ll spend most of your time writing code for your App.</p>
-<table>
-<thead>
-<tr>
-<th>Asset</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>/src/css</td>
-<td>Folder to store global/common CSS files</td>
-</tr>
-<tr>
-<td>/src/html</td>
-<td>Folder to store global/common HTML files</td>
-</tr>
-<tr>
-<td>/src/js</td>
-<td>Folder to store global/common JS files</td>
-</tr>
-<tr>
-<td>/src/pages</td>
-<td>Folder to store assets for each page; see <a href="/guide/quasar-pages.html">Pages</a></td>
-</tr>
-<tr>
-<td>/src/layouts</td>
-<td>Folder to store assets for each layout; see <a href="/guide/quasar-layouts.html">Layouts</a></td>
-</tr>
-<tr>
-<td>/src/index.html</td>
-<td>App starting point</td>
-</tr>
-</tbody>
-</table>
+      <title><![CDATA[Quasar Mobile Wrapper Tips]]></title>
+      <url>http://quasar-framework.org/guide/quasar-mobile-wrapper-tips.html</url>
+      <content type="html"><![CDATA[<p>Make sure you read the CLI section called <a href="/guide/cli-commands.html#Native-Mobile-App-Wrapper">Native Mobile App Wrapper</a> first. This will give you a starting point. But here are some tips:</p>
+<h2 id="Browser-Simulator"><a href="#Browser-Simulator" class="headerlink" title="Browser Simulator"></a>Browser Simulator</h2><p>Use Google Chrome’s emulator from Developer Tools. It’s a fantastic tool. You can select which device to emulate, but keep in mind that it’s an <em>emulator</em> and not the real deal.</p>
+<p><img src="/images/chrome.png" alt="Google Chrome emulator" title="Google Chrome emulator"></p>
+<h2 id="Debug-on-Android"><a href="#Debug-on-Android" class="headerlink" title="Debug on Android"></a>Debug on Android</h2><p>When something goes wrong with your App when running on a mobile platform, what do you do? Write a bunch of <code>console.log()s</code>? Where should this be displayed? Use <code>alert()s</code>? This may interfere with the application’s flow.</p>
+<p>So what do you do? The solution is to make use of the <code>tools/monitor</code> tool from the SDK.</p>
+<p><img src="/images/monitor.png" alt="tools/monitor screen" title="tools/monitor screen"></p>
+<h2 id="Setting-Up-Device-on-Linux"><a href="#Setting-Up-Device-on-Linux" class="headerlink" title="Setting Up Device on Linux"></a>Setting Up Device on Linux</h2><p>You may bump into <code>?????? no permissions</code> problem when trying to run your App directly on an Android phone/tablet.</p>
+<p>Here’s how you fix this:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># create the .rules file and insert the content</span></span><br><span class="line"><span class="comment"># from below this example</span></span><br><span class="line">sudo vim /etc/udev/rules.d/51-android.rules</span><br><span class="line">sudo chmod 644   /etc/udev/rules.d/51-android.rules</span><br><span class="line">sudo chown root. /etc/udev/rules.d/51-android.rules</span><br><span class="line">sudo service udev restart</span><br><span class="line">sudo killall adb</span><br></pre></td></tr></table></figure>
+<p>The content for <code>51-android.rules</code>:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0bb4&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0e79&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0502&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0b05&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;413c&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0489&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;091e&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;18d1&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0bb4&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;12d1&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;24e3&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;2116&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0482&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;17ef&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;1004&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;22b8&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0409&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;2080&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0955&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;2257&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;10a9&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;1d4d&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0471&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;04da&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;05c6&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;1f53&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;04e8&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;04dd&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0fce&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0930&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;19d2&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;1bbb&quot;, MODE=&quot;0666&quot;</span><br></pre></td></tr></table></figure></p>
+<p>Now running <code>adb devices</code> should discover your device.</p>
 ]]></content>
     </entry>
     
@@ -2087,106 +2189,6 @@
 </blockquote>
 <h2 id="Speed-Up-Build-Time"><a href="#Speed-Up-Build-Time" class="headerlink" title="Speed Up Build Time"></a>Speed Up Build Time</h2><p>By default, Quasar CLI builds your App with all available themes. You can speed up build time when developing by forcing only one theme rather than building all of them. See <a href="/guide/quasar-app-configuration.html#‘forceTheme’-String">forceTheme</a> property in <a href="/guide/quasar-app-configuration.html">App Configuration</a>.</p>
 <h2 id="Stylus-Variables"><a href="#Stylus-Variables" class="headerlink" title="Stylus Variables"></a>Stylus Variables</h2><p>Read a complete list of all Stylus variables that you can override <a href="/api/css-stylus-variables.html">here</a>.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar Mobile Wrapper Tips]]></title>
-      <url>http://quasar-framework.org/guide/quasar-mobile-wrapper-tips.html</url>
-      <content type="html"><![CDATA[<p>Make sure you read the CLI section called <a href="/guide/cli-commands.html#Native-Mobile-App-Wrapper">Native Mobile App Wrapper</a> first. This will give you a starting point. But here are some tips:</p>
-<h2 id="Browser-Simulator"><a href="#Browser-Simulator" class="headerlink" title="Browser Simulator"></a>Browser Simulator</h2><p>Use Google Chrome’s emulator from Developer Tools. It’s a fantastic tool. You can select which device to emulate, but keep in mind that it’s an <em>emulator</em> and not the real deal.</p>
-<p><img src="/images/chrome.png" alt="Google Chrome emulator" title="Google Chrome emulator"></p>
-<h2 id="Debug-on-Android"><a href="#Debug-on-Android" class="headerlink" title="Debug on Android"></a>Debug on Android</h2><p>When something goes wrong with your App when running on a mobile platform, what do you do? Write a bunch of <code>console.log()s</code>? Where should this be displayed? Use <code>alert()s</code>? This may interfere with the application’s flow.</p>
-<p>So what do you do? The solution is to make use of the <code>tools/monitor</code> tool from the SDK.</p>
-<p><img src="/images/monitor.png" alt="tools/monitor screen" title="tools/monitor screen"></p>
-<h2 id="Setting-Up-Device-on-Linux"><a href="#Setting-Up-Device-on-Linux" class="headerlink" title="Setting Up Device on Linux"></a>Setting Up Device on Linux</h2><p>You may bump into <code>?????? no permissions</code> problem when trying to run your App directly on an Android phone/tablet.</p>
-<p>Here’s how you fix this:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># create the .rules file and insert the content</span></span><br><span class="line"><span class="comment"># from below this example</span></span><br><span class="line">sudo vim /etc/udev/rules.d/51-android.rules</span><br><span class="line">sudo chmod 644   /etc/udev/rules.d/51-android.rules</span><br><span class="line">sudo chown root. /etc/udev/rules.d/51-android.rules</span><br><span class="line">sudo service udev restart</span><br><span class="line">sudo killall adb</span><br></pre></td></tr></table></figure>
-<p>The content for <code>51-android.rules</code>:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0bb4&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0e79&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0502&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0b05&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;413c&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0489&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;091e&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;18d1&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0bb4&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;12d1&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;24e3&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;2116&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0482&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;17ef&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;1004&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;22b8&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0409&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;2080&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0955&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;2257&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;10a9&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;1d4d&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0471&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;04da&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;05c6&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;1f53&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;04e8&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;04dd&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0fce&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0930&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;19d2&quot;, MODE=&quot;0666&quot;</span><br><span class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;1bbb&quot;, MODE=&quot;0666&quot;</span><br></pre></td></tr></table></figure></p>
-<p>Now running <code>adb devices</code> should discover your device.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar App Layouts]]></title>
-      <url>http://quasar-framework.org/guide/quasar-layouts.html</url>
-      <content type="html"><![CDATA[<p>Layouts are the elements that wrap page content, like navigational bar or drawers. Multiple pages can share the same Layout, which is one of the main reason for their existence.</p>
-<p>Because it’s easier and it ensures you’re using the Quasar standard, use <a href="/guide/cli-commands.html#Layouts">Quasar CLI</a> to build a Layout.</p>
-<p>Don’t forget to read more about the <a href="/guide/quasar-build-system.html">Build System</a> to understand how layouts are precompiled and bundled, what files are considered an entry-point and many more.</p>
-<h2 id="Structure"><a href="#Structure" class="headerlink" title="Structure"></a>Structure</h2><p>Each layout has its own folder (<code>/src/layouts/&lt;layout-name&gt;</code>) and has the following structure:</p>
-<table>
-<thead>
-<tr>
-<th>Asset</th>
-<th>Optional</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>/assets</td>
-<td>Yes</td>
-<td>Folder to place images, fonts, … specific to the layout only</td>
-</tr>
-<tr>
-<td>layout.<strong>&lt;layout-name&gt;</strong>.js</td>
-<td></td>
-<td>Starting point of the Layout logic</td>
-</tr>
-<tr>
-<td>layout.<strong>&lt;layout-name&gt;</strong>.yml</td>
-<td></td>
-<td>YAML file with layout configuration (called <em>Manifest</em>)</td>
-</tr>
-<tr>
-<td>layout.<strong>&lt;layout-name&gt;</strong>.html</td>
-<td></td>
-<td>Template for your Layout</td>
-</tr>
-<tr>
-<td>layout.<strong>&lt;layout-name&gt;</strong>.styl</td>
-<td>Yes</td>
-<td>Starting point of the Layout CSS</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>NOTE</strong><br>If you do not use the optional files or folder, delete them to get a boost in build times. This folder structure is created by <a href="/guide/cli-commands.html#Create-Layout">Quasar CLI</a> so you don’t have to manually do it.</p>
-</blockquote>
-<h2 id="Layout-Controller-Javascript"><a href="#Layout-Controller-Javascript" class="headerlink" title="Layout Controller (Javascript)"></a>Layout Controller (Javascript)</h2><p>The starting point of a Quasar Layout is <em>layout.layout-name.js</em> file. Think of it as the Controller of a Layout.</p>
-<p>It has a basic CommonJS structure that exports a Vue instantiation object or a function for doing asynchronous operations before calling a callback with a Vue instantiation object.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Option 1. Supply Vue instantiation object</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./layout.layout-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123; <span class="comment">// Vue instance</span></span><br><span class="line">  template: html,</span><br><span class="line">  ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Option 2. Do some asynchronous operations first</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./layout.layout-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">  <span class="comment">/*</span><br><span class="line">   * 'this' contains Layout manifest;</span><br><span class="line">   * for example if you have specific</span><br><span class="line">   * CSS for the layout, then:</span><br><span class="line">   * 'this.css' will contain the URL</span><br><span class="line">   */</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="comment">// asynchronous operations</span></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">  done(&#123; <span class="comment">// Vue instance</span></span><br><span class="line">    template: html,</span><br><span class="line">    ...</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><ol>
-<li><p>When exporting a function, make sure the callback is called, otherwise the Page will never load.</p>
-</li>
-<li><p>Include other JS files for modularity by <em>require()</em>-ing them. Take full advantage of Webpack.<br>Read more about the <a href="/guide/quasar-build-system.html">Build System</a> to understand.</p>
-</li>
-<li><p>Make sure you use <code>require(&#39;raw!.....&#39;)</code> syntax for the template so that it will get bundled automatically into your JS file with the help of the Build System. This saves one precious HTTP request. <strong>Do not require the template within the exporting function (if you use one) because Webpack won’t know it needs to be handled at compile time</strong>. So require it outside to avoid issues.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// do</span></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./some.html'</span>); <span class="comment">// &lt;&lt;&lt;</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">  done(&#123;</span><br><span class="line">    template: html <span class="comment">// &lt;&lt;&lt;</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// don't!</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">  done(&#123;</span><br><span class="line">    template: <span class="built_in">require</span>(<span class="string">'raw!./some.html'</span>) <span class="comment">// &lt;&lt;&lt;</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Make good use of the Vue component lifecycle methods (<code>created</code>, <code>beforeCompile</code>, <code>compiled</code>, <code>ready</code>, <code>beforeDestroy</code>, <code>destroyed</code>) and different props:</p>
-<p><img src="/images/vue-lifecycle.png" alt="Vue Lifecycle Diagram" title="Vue Lifecycle Diagram"></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Example making use of Vue component lifecycle methods</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./layout.main.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  template: html,</span><br><span class="line">  beforeCompile: ...,</span><br><span class="line">  compiled: ...,</span><br><span class="line">  destroyed: ...,</span><br><span class="line">  ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Make sure you sanitize intervals, timeouts, requestAnimationFrames or anything else at <code>beforeDestroy</code> point, otherwise you may end up with bugs when user switches to another Layout.</p>
-</li>
-<li><p>Read about how to communicate between Page and Layouts  <a href="/guide/vue-model-communication.html">here</a>. It’s important to know how to share VueModel data between the two.</p>
-</li>
-</ol>
-<h3 id="Global-Layout-Variable"><a href="#Global-Layout-Variable" class="headerlink" title="Global Layout Variable"></a>Global Layout Variable</h3><p>There is a global variable available for you to use called <code>quasar.current.layout</code> which holds properties like <code>name</code> and <code>vm</code> (current layout’s VueModel Object - good place to change VM’s reactive data).</p>
-<h2 id="Layout-Template"><a href="#Layout-Template" class="headerlink" title="Layout Template"></a>Layout Template</h2><p>The Quasar App Layout HTML represents a Vue instance template. Read more about the <a href="/guide/quasar-build-system.html#HTML-Files">Build System</a> to understand.</p>
-<blockquote>
-<p><strong>IMPORTANT</strong><br>There are several Web Components that you can use. Some of them are mandatory. Read more about them and how to use them starting with <a href="/components/layout-overview.html">Components &gt; Layout Overview</a> documentation page.</p>
-</blockquote>
-<h2 id="Layout-CSS"><a href="#Layout-CSS" class="headerlink" title="Layout CSS"></a>Layout CSS</h2><p>Each Layout can use its own CSS. Notice that all CSS files have the <em>.styl</em> extension. This is because you can use Stylus (with NIB extension). Read more about the <a href="/guide/quasar-build-system.html">Build System</a> to understand.</p>
-<p>To better isolate scope of each Layout CSS, the <code>layout.*layout-name*.styl</code> files have by default the following structure:</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">.layout-X // where X is the name of the layout</span><br><span class="line">  //</span><br></pre></td></tr></table></figure>
-<p>Place all your Stylus code under <code>.layout-*X*</code>.</p>
-<h2 id="Layout-Assets"><a href="#Layout-Assets" class="headerlink" title="Layout Assets"></a>Layout Assets</h2><p>Place all your page assets (like images) inside the <code>/layouts/*layout-name*/assets/</code> folder.<br>Images get optimized by default on a production build.</p>
-<h2 id="Layout-Events"><a href="#Layout-Events" class="headerlink" title="Layout Events"></a>Layout Events</h2><p>Loading a Layout is a complex procedure involving requiring its script file, preparing script file (including resolving dependencies) and rendering it. You can hook into these procedures by making good use of the Events API. See <a href="/api/js-events-list.html#Layout-Events">Quasar Events List</a> and <a href="/api/js-events.html">Event API</a>.</p>
-<h2 id="Layout-Manifest"><a href="#Layout-Manifest" class="headerlink" title="Layout Manifest"></a>Layout Manifest</h2><p>Provide layout specific configuration (in YAML format), called <em>Manifest</em> in <code>/layouts/*layout-name*/layout.*layout-name*.yml</code>.</p>
-<p>Example of Layout Manifest property: <code>css</code>. This property gets computed by default if the <code>.styl</code> file exists in the layout folder (<strong>so it is optional!</strong>), but it can be overridden to point to other files. The path must start with the folder where app root <em>index.html</em> file exists.<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">css:</span> <span class="string">'path/to/css'</span></span><br></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
     
