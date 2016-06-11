@@ -4,7 +4,21 @@
   <url>
     <loc>http://quasar-framework.org/guide/importing-dependencies.html</loc>
     
-    <lastmod>2016-06-11T14:39:53.820Z</lastmod>
+    <lastmod>2016-06-11T17:37:27.121Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/cli-commands.html</loc>
+    
+    <lastmod>2016-06-11T17:35:44.305Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/index.html</loc>
+    
+    <lastmod>2016-06-11T17:35:02.069Z</lastmod>
     
   </url>
   
@@ -12,13 +26,6 @@
     <loc>http://quasar-framework.org/guide/quasar-app-configuration.html</loc>
     
     <lastmod>2016-06-11T14:38:11.768Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/cli-commands.html</loc>
-    
-    <lastmod>2016-06-11T13:42:46.448Z</lastmod>
     
   </url>
   
@@ -261,13 +268,6 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/parallax.html</loc>
-    
-    <lastmod>2016-06-02T04:18:08.394Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/components/tree.html</loc>
     
     <lastmod>2016-06-02T04:18:08.394Z</lastmod>
@@ -282,14 +282,21 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/grid-component.html</loc>
+    <loc>http://quasar-framework.org/components/rating.html</loc>
     
     <lastmod>2016-06-02T04:18:08.394Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/rating.html</loc>
+    <loc>http://quasar-framework.org/components/parallax.html</loc>
+    
+    <lastmod>2016-06-02T04:18:08.394Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/grid-component.html</loc>
     
     <lastmod>2016-06-02T04:18:08.394Z</lastmod>
     
@@ -474,13 +481,6 @@
     <loc>http://quasar-framework.org/api/js-events-list.html</loc>
     
     <lastmod>2016-05-29T17:12:47.040Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/index.html</loc>
-    
-    <lastmod>2016-05-29T17:09:40.704Z</lastmod>
     
   </url>
   
