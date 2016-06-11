@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://quasar-framework.org/guide/importing-dependencies.html</loc>
+    
+    <lastmod>2016-06-11T14:39:53.820Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-app-configuration.html</loc>
+    
+    <lastmod>2016-06-11T14:38:11.768Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://quasar-framework.org/guide/cli-commands.html</loc>
     
     <lastmod>2016-06-11T13:42:46.448Z</lastmod>
@@ -33,13 +47,6 @@
     <loc>http://quasar-framework.org/api/css-icons.html</loc>
     
     <lastmod>2016-06-10T12:01:23.457Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/quasar-app-configuration.html</loc>
-    
-    <lastmod>2016-06-06T16:09:56.593Z</lastmod>
     
   </url>
   
@@ -254,20 +261,6 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/rating.html</loc>
-    
-    <lastmod>2016-06-02T04:18:08.394Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/grid-component.html</loc>
-    
-    <lastmod>2016-06-02T04:18:08.394Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/components/parallax.html</loc>
     
     <lastmod>2016-06-02T04:18:08.394Z</lastmod>
@@ -283,6 +276,20 @@
   
   <url>
     <loc>http://quasar-framework.org/components/pagination.html</loc>
+    
+    <lastmod>2016-06-02T04:18:08.394Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/grid-component.html</loc>
+    
+    <lastmod>2016-06-02T04:18:08.394Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/rating.html</loc>
     
     <lastmod>2016-06-02T04:18:08.394Z</lastmod>
     
