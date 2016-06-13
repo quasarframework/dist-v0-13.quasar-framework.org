@@ -1,5 +1,1 @@
-.page-tabs div[id^='tab-'] {
-  margin-top: 20px;
-}
-
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL3RhYnMvc3R5bGUudGFicy5zdHlsIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsaUJBQUEiLCJmaWxlIjoicGFnZXMvdGFicy9zdHlsZS50YWJzLmNzcyIsInNvdXJjZVJvb3QiOiIvc291cmNlLyIsInNvdXJjZXNDb250ZW50IjpbIi5wYWdlLXRhYnMgZGl2W2lkXj0ndGFiLSddXG4gIG1hcmdpbi10b3AgMjBweFxuIl19 */
+.page-tabs div[id^=tab-]{margin-top:20px}

@@ -25,6 +25,130 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Quasar Icons]]></title>
+      <url>http://quasar-framework.org/api/css-icons.html</url>
+      <content type="html"><![CDATA[<p>What would an App be without icons? A default set of (hundreds of) icons is included in any Quasar App.<br>These are the <a href="https://design.google.com/icons/" target="_blank" rel="external">Material Design Icons</a>. You can you can read (and search for them) in the previous link.</p>
+<p><img src="/images/material-icons.png" alt="Material Icons Example"></p>
+<p>It just differs the way you use them in a Quasar App:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--</span><br><span class="line">  On Material Design Icons website you check for an icon and it says:</span><br><span class="line">  "&lt;i class="material-icons"&gt;account_circle&lt;/i&gt;"</span><br><span class="line"></span><br><span class="line">  On Quasar App you simply use it like this:</span><br><span class="line">--&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">i</span>&gt;</span>account_circle<span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>No need for extra markup. Note the “underscore” character instead of a space character… this is mandatory, as Material Icons are displayed using a ligature font.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar CSS Helper Classes]]></title>
+      <url>http://quasar-framework.org/api/css-other-helper-classes.html</url>
+      <content type="html"><![CDATA[<p>There are a lot of CSS classes that you can use while writing your Vue templates. Very handy to ease the complexity of your VueModels and templates.</p>
+<p>The list below is not complete. Also check the other CSS documentation pages like Typography, Visibility, Shadows, Positioning.</p>
+<h3 id="Mouse-Related"><a href="#Mouse-Related" class="headerlink" title="Mouse Related"></a>Mouse Related</h3><table>
+<thead>
+<tr>
+<th>Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>non-selectable</code></td>
+<td>User won’t be able to select DOM node along with its text</td>
+</tr>
+<tr>
+<td><code>scroll</code></td>
+<td>Applies CSS tweaks to make scroll work at its best on ALL platforms</td>
+</tr>
+<tr>
+<td><code>no-scroll</code></td>
+<td>Hides scrollbars on the DOM node</td>
+</tr>
+<tr>
+<td><code>no-pointer-events</code></td>
+<td>DOM element does not become a target of mouse events - clicks, hover and so on</td>
+</tr>
+<tr>
+<td><code>all-pointer-events</code></td>
+<td>The opposite of <code>no-pointer-events</code></td>
+</tr>
+<tr>
+<td><code>cursor-pointer</code></td>
+<td>Change mouse pointer on DOM element to look as if on a clickable link</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Size-Related"><a href="#Size-Related" class="headerlink" title="Size Related"></a>Size Related</h3><table>
+<thead>
+<tr>
+<th>Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fit</code></td>
+<td>Width and Height is set to 100%</td>
+</tr>
+<tr>
+<td><code>full-height</code></td>
+<td>Height is set to 100%</td>
+</tr>
+<tr>
+<td><code>full-width</code></td>
+<td>Width is set to 100%</td>
+</tr>
+<tr>
+<td><code>window-height</code></td>
+<td>Height is set to 100vh with top and bottom margins 0</td>
+</tr>
+<tr>
+<td><code>window-width</code></td>
+<td>Width is set to 100vw with left and right margins 0</td>
+</tr>
+<tr>
+<td><code>block</code></td>
+<td>Same as <code>full-width</code> and with <code>display</code> property set to <code>block</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="Orientation-Related"><a href="#Orientation-Related" class="headerlink" title="Orientation Related"></a>Orientation Related</h3><table>
+<thead>
+<tr>
+<th>Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rotate-90</code></td>
+<td>Rotate by 90 degrees</td>
+</tr>
+<tr>
+<td><code>rotate-180</code></td>
+<td>Rotate by 180 degrees</td>
+</tr>
+<tr>
+<td><code>rotate-270</code></td>
+<td>Rotate by 270 degrees</td>
+</tr>
+<tr>
+<td><code>flip-horizontal</code></td>
+<td>Flip DOM element horizontally</td>
+</tr>
+<tr>
+<td><code>flip-vertical</code></td>
+<td>Flip DOM element vertically</td>
+</tr>
+<tr>
+<td><code>spin</code></td>
+<td>Apply a continuous spin/rotation to the DOM element</td>
+</tr>
+<tr>
+<td><code>blink</code></td>
+<td>Apply a blinking effect to the DOM element</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Color Palette]]></title>
       <url>http://quasar-framework.org/api/css-color-palette.html</url>
       <content type="html"><![CDATA[<p>Quasar Framework offers a wide selection of colors out of the box. You can use them both as Stylus variables in your CSS code or directly as CSS classes in your HTML templates.</p>
@@ -43,6 +167,59 @@
 <figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span></span><br><span class="line">  <span class="attribute">color</span> <span class="variable">$red</span>-<span class="number">1</span></span><br><span class="line">  <span class="attribute">background-color</span> <span class="variable">$grey</span>-<span class="number">5</span></span><br></pre></td></tr></table></figure>
 <p>The full list of colors is stored in the <code>$colors</code> array. You can change it to add/remove/change colors and all Quasar Components will generate CSS according to those colors.</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">$colors ?= &#123;</span><br><span class="line">  neutral: $neutral</span><br><span class="line">  primary: $primary</span><br><span class="line">  secondary: $secondary</span><br><span class="line">  tertiary: $tertiary</span><br><span class="line">  positive: $positive</span><br><span class="line">  negative: $negative</span><br><span class="line">  warning: $warning</span><br><span class="line">  info: $info</span><br><span class="line">  light: $light</span><br><span class="line">  dark: $dark,</span><br><span class="line"></span><br><span class="line">  red: $red,</span><br><span class="line">  pink: $pink,</span><br><span class="line">  purple: $purple,</span><br><span class="line">  deep-purple: $deep-purple,</span><br><span class="line">  indigo: $indigo,</span><br><span class="line">  blue: $blue,</span><br><span class="line">  light-blue: $light-blue,</span><br><span class="line">  cyan: $cyan,</span><br><span class="line">  teal: $teal,</span><br><span class="line">  green: $green,</span><br><span class="line">  light-green: $light-green,</span><br><span class="line">  lime: $lime,</span><br><span class="line">  yellow: $yellow,</span><br><span class="line">  amber: $amber,</span><br><span class="line">  orange: $orange,</span><br><span class="line">  deep-orange: $deep-orange,</span><br><span class="line">  brown: $brown,</span><br><span class="line">  grey: $grey,</span><br><span class="line">  blue-grey: $blue-grey</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar CSS Positioning Classes]]></title>
+      <url>http://quasar-framework.org/api/css-positioning.html</url>
+      <content type="html"><![CDATA[<p>There are CSS classes supplied by Quasar to help you position a DOM element easily:</p>
+<table>
+<thead>
+<tr>
+<th>Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pull-left</code></td>
+<td>Float to the left</td>
+</tr>
+<tr>
+<td><code>pull-right</code></td>
+<td>Float to the right</td>
+</tr>
+<tr>
+<td><code>fullscreen</code></td>
+<td>Fix position covering all window real-estate</td>
+</tr>
+<tr>
+<td><code>fixed</code></td>
+<td>Set <code>position</code> to <code>fixed</code> without specifying <code>top</code>, <code>left</code>, <code>right</code> or <code>bottom</code> properties</td>
+</tr>
+<tr>
+<td><code>absolute</code></td>
+<td>Set <code>position</code> to <code>absolute</code> without specifying <code>top</code>, <code>left</code>, <code>right</code> or <code>bottom</code> properties</td>
+</tr>
+<tr>
+<td><code>fixed-top</code>, <code>absolute-top</code></td>
+<td>Fixed or absolute position to top of screen</td>
+</tr>
+<tr>
+<td><code>fixed-right</code>, <code>absolute-right</code></td>
+<td>Fixed or absolute position to the right edge of screen</td>
+</tr>
+<tr>
+<td><code>fixed-bottom</code>, <code>absolute-bottom</code></td>
+<td>Fixed or absolute position to bottom of screen</td>
+</tr>
+<tr>
+<td><code>fixed-left</code>, <code>absolute-left</code></td>
+<td>Fixed or absolute position to the left edge of screen</td>
+</tr>
+</tbody>
+</table>
 ]]></content>
     </entry>
     
@@ -227,283 +404,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar Icons]]></title>
-      <url>http://quasar-framework.org/api/css-icons.html</url>
-      <content type="html"><![CDATA[<p>What would an App be without icons? A default set of (hundreds of) icons is included in any Quasar App.<br>These are the <a href="https://design.google.com/icons/" target="_blank" rel="external">Material Design Icons</a>. You can you can read (and search for them) in the previous link.</p>
-<p><img src="/images/material-icons.png" alt="Material Icons Example"></p>
-<p>It just differs the way you use them in a Quasar App:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--</span><br><span class="line">  On Material Design Icons website you check for an icon and it says:</span><br><span class="line">  "&lt;i class="material-icons"&gt;account_circle&lt;/i&gt;"</span><br><span class="line"></span><br><span class="line">  On Quasar App you simply use it like this:</span><br><span class="line">--&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">i</span>&gt;</span>account_circle<span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>No need for extra markup. Note the “underscore” character instead of a space character… this is mandatory, as Material Icons are displayed using a ligature font.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar CSS Helper Classes]]></title>
-      <url>http://quasar-framework.org/api/css-other-helper-classes.html</url>
-      <content type="html"><![CDATA[<p>There are a lot of CSS classes that you can use while writing your Vue templates. Very handy to ease the complexity of your VueModels and templates.</p>
-<p>The list below is not complete. Also check the other CSS documentation pages like Typography, Visibility, Shadows, Positioning.</p>
-<h3 id="Mouse-Related"><a href="#Mouse-Related" class="headerlink" title="Mouse Related"></a>Mouse Related</h3><table>
-<thead>
-<tr>
-<th>Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>non-selectable</code></td>
-<td>User won’t be able to select DOM node along with its text</td>
-</tr>
-<tr>
-<td><code>scroll</code></td>
-<td>Applies CSS tweaks to make scroll work at its best on ALL platforms</td>
-</tr>
-<tr>
-<td><code>no-scroll</code></td>
-<td>Hides scrollbars on the DOM node</td>
-</tr>
-<tr>
-<td><code>no-pointer-events</code></td>
-<td>DOM element does not become a target of mouse events - clicks, hover and so on</td>
-</tr>
-<tr>
-<td><code>all-pointer-events</code></td>
-<td>The opposite of <code>no-pointer-events</code></td>
-</tr>
-<tr>
-<td><code>cursor-pointer</code></td>
-<td>Change mouse pointer on DOM element to look as if on a clickable link</td>
-</tr>
-</tbody>
-</table>
-<h3 id="Size-Related"><a href="#Size-Related" class="headerlink" title="Size Related"></a>Size Related</h3><table>
-<thead>
-<tr>
-<th>Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>fit</code></td>
-<td>Width and Height is set to 100%</td>
-</tr>
-<tr>
-<td><code>full-height</code></td>
-<td>Height is set to 100%</td>
-</tr>
-<tr>
-<td><code>full-width</code></td>
-<td>Width is set to 100%</td>
-</tr>
-<tr>
-<td><code>window-height</code></td>
-<td>Height is set to 100vh with top and bottom margins 0</td>
-</tr>
-<tr>
-<td><code>window-width</code></td>
-<td>Width is set to 100vw with left and right margins 0</td>
-</tr>
-<tr>
-<td><code>block</code></td>
-<td>Same as <code>full-width</code> and with <code>display</code> property set to <code>block</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="Orientation-Related"><a href="#Orientation-Related" class="headerlink" title="Orientation Related"></a>Orientation Related</h3><table>
-<thead>
-<tr>
-<th>Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>rotate-90</code></td>
-<td>Rotate by 90 degrees</td>
-</tr>
-<tr>
-<td><code>rotate-180</code></td>
-<td>Rotate by 180 degrees</td>
-</tr>
-<tr>
-<td><code>rotate-270</code></td>
-<td>Rotate by 270 degrees</td>
-</tr>
-<tr>
-<td><code>flip-horizontal</code></td>
-<td>Flip DOM element horizontally</td>
-</tr>
-<tr>
-<td><code>flip-vertical</code></td>
-<td>Flip DOM element vertically</td>
-</tr>
-<tr>
-<td><code>spin</code></td>
-<td>Apply a continuous spin/rotation to the DOM element</td>
-</tr>
-<tr>
-<td><code>blink</code></td>
-<td>Apply a blinking effect to the DOM element</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar CSS Positioning Classes]]></title>
-      <url>http://quasar-framework.org/api/css-positioning.html</url>
-      <content type="html"><![CDATA[<p>There are CSS classes supplied by Quasar to help you position a DOM element easily:</p>
-<table>
-<thead>
-<tr>
-<th>Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>pull-left</code></td>
-<td>Float to the left</td>
-</tr>
-<tr>
-<td><code>pull-right</code></td>
-<td>Float to the right</td>
-</tr>
-<tr>
-<td><code>fullscreen</code></td>
-<td>Fix position covering all window real-estate</td>
-</tr>
-<tr>
-<td><code>fixed</code></td>
-<td>Set <code>position</code> to <code>fixed</code> without specifying <code>top</code>, <code>left</code>, <code>right</code> or <code>bottom</code> properties</td>
-</tr>
-<tr>
-<td><code>absolute</code></td>
-<td>Set <code>position</code> to <code>absolute</code> without specifying <code>top</code>, <code>left</code>, <code>right</code> or <code>bottom</code> properties</td>
-</tr>
-<tr>
-<td><code>fixed-top</code>, <code>absolute-top</code></td>
-<td>Fixed or absolute position to top of screen</td>
-</tr>
-<tr>
-<td><code>fixed-right</code>, <code>absolute-right</code></td>
-<td>Fixed or absolute position to the right edge of screen</td>
-</tr>
-<tr>
-<td><code>fixed-bottom</code>, <code>absolute-bottom</code></td>
-<td>Fixed or absolute position to bottom of screen</td>
-</tr>
-<tr>
-<td><code>fixed-left</code>, <code>absolute-left</code></td>
-<td>Fixed or absolute position to the left edge of screen</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Stylus Variables]]></title>
-      <url>http://quasar-framework.org/api/css-stylus-variables.html</url>
-      <content type="html"><![CDATA[<p>Quasar CSS is a blank slate that you can easily customize and modify to fit your brand, while still following the standards of each platform. The best apps in the app stores are fully customized and Quasar makes it easy to do the same with your App.</p>
-<p>Quasar is built on top of Stylus, which allows it to set some default styles for your App but makes it extremely easy for you to change the defaults in your App code.</p>
-<p>Customizing a theme means overriding Stylus variables which can hold colors, sizes, border types and so on. To understand how and where to make use of the full list of variables below, read <a href="/guide/quasar-theming.html">Guide &gt; Theming</a>.</p>
-<h2 id="Variables-List"><a href="#Variables-List" class="headerlink" title="Variables List"></a>Variables List</h2><!-- DO NOT WRITE ANYTHING BELOW THIS LINE -->
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar Typography]]></title>
-      <url>http://quasar-framework.org/api/css-typography.html</url>
-      <content type="html"><![CDATA[<p><input type="hidden" data-fullpage-demo="typography"><br>See how headings, blockquotes, definitions lists and more are displayed in the demo. At the end of this page you can read about CSS helper classes.</p>
-<h3 id="Default-Font"><a href="#Default-Font" class="headerlink" title="Default Font"></a>Default Font</h3><p>The default font embedded in any Quasar App is the latest iteration of Roboto Google has released. It comes with 5 different font weights you can use: 200, 300, 400, 500, 600. Below is an image from Google’s Roboto Specimen document displaying the different font weights:</p>
-<div style="max-width: 550px"><br><img src="/images/roboto.png" alt="Roboto Font" title="Roboto Font"><br></div>
-
-<h3 id="Text-Types"><a href="#Text-Types" class="headerlink" title="Text Types"></a>Text Types</h3><p>You can display text in a variety of ways.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Small and Big text --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">small</span>&gt;</span>Text<span class="tag">&lt;/<span class="name">small</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">big</span>&gt;</span>Text<span class="tag">&lt;/<span class="name">big</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- sub and sup --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">sub</span>&gt;</span>Subtext<span class="tag">&lt;/<span class="name">sub</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">sup</span>&gt;</span>Supertext<span class="tag">&lt;/<span class="name">sup</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Paragraphs --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Default Paragraph<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"caption"</span>&gt;</span>Caption Paragraph<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"light-paragraph"</span>&gt;</span>Light Paragraph<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"thin-paragraph"</span>&gt;</span>Thin Paragraph<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Blockquotes --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">blockquote</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">small</span>&gt;</span>Someone famous for <span class="tag">&lt;<span class="name">cite</span> <span class="attr">title</span>=<span class="string">"Quasar Framework"</span>&gt;</span>Quasar Framework<span class="tag">&lt;/<span class="name">cite</span>&gt;</span><span class="tag">&lt;/<span class="name">small</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">blockquote</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">blockquote</span> <span class="attr">class</span>=<span class="string">"text-right"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">small</span>&gt;</span>Someone famous for <span class="tag">&lt;<span class="name">cite</span> <span class="attr">title</span>=<span class="string">"Quasar Framework"</span>&gt;</span>Quasar Framework<span class="tag">&lt;/<span class="name">cite</span>&gt;</span><span class="tag">&lt;/<span class="name">small</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">blockquote</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Definition Lists --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dt</span>&gt;</span>Description lists<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dd</span>&gt;</span>A description list is perfect for defining terms.<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dt</span>&gt;</span>Euismod<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dl</span> <span class="attr">class</span>=<span class="string">"horizontal"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dt</span>&gt;</span>Description lists<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dd</span>&gt;</span>A description list is perfect for defining terms.<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dt</span>&gt;</span>Euismod<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="CSS-Helper-Classes"><a href="#CSS-Helper-Classes" class="headerlink" title="CSS Helper Classes"></a>CSS Helper Classes</h3><table>
-<thead>
-<tr>
-<th>Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>text-right</code></td>
-<td>Align text to the right</td>
-</tr>
-<tr>
-<td><code>text-left</code></td>
-<td>Align text to the left</td>
-</tr>
-<tr>
-<td><code>text-center</code></td>
-<td>Align text to the center</td>
-</tr>
-<tr>
-<td><code>text-justify</code></td>
-<td>Text will be justified</td>
-</tr>
-<tr>
-<td><code>text-truncate</code></td>
-<td>Applies all CSS tweaks to truncate text when container is too small</td>
-</tr>
-<tr>
-<td><code>caption</code></td>
-<td>For use on caption parapgraphs</td>
-</tr>
-<tr>
-<td><code>light-paragraph</code></td>
-<td>Applies a font-weight of 300</td>
-</tr>
-<tr>
-<td><code>thin-paragraph</code></td>
-<td>Applies a font-weight of 200</td>
-</tr>
-<tr>
-<td><code>uppercase</code></td>
-<td>Transform text to uppercase</td>
-</tr>
-<tr>
-<td><code>lowercase</code></td>
-<td>Transform text to lowercase</td>
-</tr>
-<tr>
-<td><code>capitalize</code></td>
-<td>Capitalize first letter of the text</td>
-</tr>
-<tr>
-<td><code>strong</code></td>
-<td>DOM element’s font becomes <strong>bold</strong></td>
-</tr>
-<tr>
-<td><code>emphasize</code></td>
-<td>DOM element’s font becomes <em>italic</em></td>
-</tr>
-<tr>
-<td><code>block</code></td>
-<td>Same as <code>full-width</code> and with <code>display</code> property set to <code>block</code></td>
-</tr>
-<tr>
-<td><code>round-borders</code></td>
-<td>Every Quasar Theme has a generic border radius. This radius is applied to the DOM node</td>
-</tr>
-<tr>
-<td><code>no-margin</code></td>
-<td>Margins are set to 0</td>
-</tr>
-<tr>
-<td><code>no-padding</code></td>
-<td>Padding is set to 0</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar CSS Shadows]]></title>
       <url>http://quasar-framework.org/api/css-shadows.html</url>
       <content type="html"><![CDATA[<p>Simple yet effective way to add shadows to create a depth effect.<br>The shadows are in accordance to Material Design speifications.<br>Don’t forget to check the demo.</p>
@@ -552,6 +452,16 @@
 </tbody>
 </table>
 <p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"shadow-1"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Stylus Variables]]></title>
+      <url>http://quasar-framework.org/api/css-stylus-variables.html</url>
+      <content type="html"><![CDATA[<p>Quasar CSS is a blank slate that you can easily customize and modify to fit your brand, while still following the standards of each platform. The best apps in the app stores are fully customized and Quasar makes it easy to do the same with your App.</p>
+<p>Quasar is built on top of Stylus, which allows it to set some default styles for your App but makes it extremely easy for you to change the defaults in your App code.</p>
+<p>Customizing a theme means overriding Stylus variables which can hold colors, sizes, border types and so on. To understand how and where to make use of the full list of variables below, read <a href="/guide/quasar-theming.html">Guide &gt; Theming</a>.</p>
+<h2 id="Variables-List"><a href="#Variables-List" class="headerlink" title="Variables List"></a>Variables List</h2><!-- DO NOT WRITE ANYTHING BELOW THIS LINE -->
 ]]></content>
     </entry>
     
@@ -709,10 +619,188 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Quasar Typography]]></title>
+      <url>http://quasar-framework.org/api/css-typography.html</url>
+      <content type="html"><![CDATA[<p><input type="hidden" data-fullpage-demo="typography"><br>See how headings, blockquotes, definitions lists and more are displayed in the demo. At the end of this page you can read about CSS helper classes.</p>
+<h3 id="Default-Font"><a href="#Default-Font" class="headerlink" title="Default Font"></a>Default Font</h3><p>The default font embedded in any Quasar App is the latest iteration of Roboto Google has released. It comes with 5 different font weights you can use: 200, 300, 400, 500, 600. Below is an image from Google’s Roboto Specimen document displaying the different font weights:</p>
+<div style="max-width: 550px"><br><img src="/images/roboto.png" alt="Roboto Font" title="Roboto Font"><br></div>
+
+<h3 id="Text-Types"><a href="#Text-Types" class="headerlink" title="Text Types"></a>Text Types</h3><p>You can display text in a variety of ways.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Small and Big text --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">small</span>&gt;</span>Text<span class="tag">&lt;/<span class="name">small</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">big</span>&gt;</span>Text<span class="tag">&lt;/<span class="name">big</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- sub and sup --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">sub</span>&gt;</span>Subtext<span class="tag">&lt;/<span class="name">sub</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">sup</span>&gt;</span>Supertext<span class="tag">&lt;/<span class="name">sup</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Paragraphs --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Default Paragraph<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"caption"</span>&gt;</span>Caption Paragraph<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"light-paragraph"</span>&gt;</span>Light Paragraph<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"thin-paragraph"</span>&gt;</span>Thin Paragraph<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Blockquotes --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">blockquote</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">small</span>&gt;</span>Someone famous for <span class="tag">&lt;<span class="name">cite</span> <span class="attr">title</span>=<span class="string">"Quasar Framework"</span>&gt;</span>Quasar Framework<span class="tag">&lt;/<span class="name">cite</span>&gt;</span><span class="tag">&lt;/<span class="name">small</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">blockquote</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">blockquote</span> <span class="attr">class</span>=<span class="string">"text-right"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">small</span>&gt;</span>Someone famous for <span class="tag">&lt;<span class="name">cite</span> <span class="attr">title</span>=<span class="string">"Quasar Framework"</span>&gt;</span>Quasar Framework<span class="tag">&lt;/<span class="name">cite</span>&gt;</span><span class="tag">&lt;/<span class="name">small</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">blockquote</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Definition Lists --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dt</span>&gt;</span>Description lists<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dd</span>&gt;</span>A description list is perfect for defining terms.<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dt</span>&gt;</span>Euismod<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dl</span> <span class="attr">class</span>=<span class="string">"horizontal"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dt</span>&gt;</span>Description lists<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dd</span>&gt;</span>A description list is perfect for defining terms.<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dt</span>&gt;</span>Euismod<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="CSS-Helper-Classes"><a href="#CSS-Helper-Classes" class="headerlink" title="CSS Helper Classes"></a>CSS Helper Classes</h3><table>
+<thead>
+<tr>
+<th>Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>text-right</code></td>
+<td>Align text to the right</td>
+</tr>
+<tr>
+<td><code>text-left</code></td>
+<td>Align text to the left</td>
+</tr>
+<tr>
+<td><code>text-center</code></td>
+<td>Align text to the center</td>
+</tr>
+<tr>
+<td><code>text-justify</code></td>
+<td>Text will be justified</td>
+</tr>
+<tr>
+<td><code>text-truncate</code></td>
+<td>Applies all CSS tweaks to truncate text when container is too small</td>
+</tr>
+<tr>
+<td><code>caption</code></td>
+<td>For use on caption parapgraphs</td>
+</tr>
+<tr>
+<td><code>light-paragraph</code></td>
+<td>Applies a font-weight of 300</td>
+</tr>
+<tr>
+<td><code>thin-paragraph</code></td>
+<td>Applies a font-weight of 200</td>
+</tr>
+<tr>
+<td><code>uppercase</code></td>
+<td>Transform text to uppercase</td>
+</tr>
+<tr>
+<td><code>lowercase</code></td>
+<td>Transform text to lowercase</td>
+</tr>
+<tr>
+<td><code>capitalize</code></td>
+<td>Capitalize first letter of the text</td>
+</tr>
+<tr>
+<td><code>strong</code></td>
+<td>DOM element’s font becomes <strong>bold</strong></td>
+</tr>
+<tr>
+<td><code>emphasize</code></td>
+<td>DOM element’s font becomes <em>italic</em></td>
+</tr>
+<tr>
+<td><code>block</code></td>
+<td>Same as <code>full-width</code> and with <code>display</code> property set to <code>block</code></td>
+</tr>
+<tr>
+<td><code>round-borders</code></td>
+<td>Every Quasar Theme has a generic border radius. This radius is applied to the DOM node</td>
+</tr>
+<tr>
+<td><code>no-margin</code></td>
+<td>Margins are set to 0</td>
+</tr>
+<tr>
+<td><code>no-padding</code></td>
+<td>Padding is set to 0</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Overview]]></title>
       <url>http://quasar-framework.org/api/index.html</url>
       <content type="html"><![CDATA[<p>Learn here about the API specifications of every feature embedded in Quasar Framework. How to require a script, how to create a route, how to detect if the app is running within Cordova or on a desktop, and many more, including Quasar CSS specifications.</p>
 <p>By default, Quasar covers a lot of areas of Web development with ready to use API which simplifies your code and hides the different platform quirks.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar Fullscreen]]></title>
+      <url>http://quasar-framework.org/api/js-app-fullscreen.html</url>
+      <content type="html"><![CDATA[<p>There are times when you want your website or App to run in fullscreen.<br>Quasar makes it easy by wrapping the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API" target="_blank" rel="external">Fullscreen API</a>.</p>
+<input type="hidden" data-external-demo="app-fullscreen">
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Determining if website is in fullscreen mode:</span></span><br><span class="line">(<span class="built_in">Boolean</span>) quasar.is.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Requesting fullscreen mode:</span></span><br><span class="line">quasar.request.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Exiting fullscreen mode:</span></span><br><span class="line">quasar.exit.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Toggle fullscreen mode:</span></span><br><span class="line">quasar.toggle.fullscreen();</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar App Visibility]]></title>
+      <url>http://quasar-framework.org/api/js-app-visibility.html</url>
+      <content type="html"><![CDATA[<p>Quasar makes use of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API" target="_blank" rel="external">Page Visibility API</a> which lets you know when a website/app is visible or in focus.</p>
+<input type="hidden" data-fullpage-demo="app-visibility">
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="built_in">Boolean</span>) quasar.app.is.visible();</span><br></pre></td></tr></table></figure>
+<p>There is also an event triggered when focus changes:</p>
+<table>
+<thead>
+<tr>
+<th>Event Name</th>
+<th>Parameters</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app:visibility</td>
+<td>(String) state</td>
+<td>App got focus if <code>state</code> is <code>visible</code> or lost focus if <code>state</code> is <code>hidden</code></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar Environment]]></title>
+      <url>http://quasar-framework.org/api/js-environment.html</url>
+      <content type="html"><![CDATA[<p>Helpers are built-in to detect the environment in which the code is running:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>quasar.runs.on.mobile</td>
+<td>boolean</td>
+<td>Is the code running on a mobile device?</td>
+</tr>
+<tr>
+<td>quasar.runs.on.cordova</td>
+<td>boolean</td>
+<td>Is the code running within Cordova?</td>
+</tr>
+<tr>
+<td>quasar.runs.on.desktop</td>
+<td>boolean</td>
+<td>Is the code running on a desktop browser?</td>
+</tr>
+<tr>
+<td>quasar.runs.with.touch</td>
+<td>boolean</td>
+<td>Is the code running on a touch capable screen?</td>
+</tr>
+<tr>
+<td>quasar.runs.within.iframe</td>
+<td>boolean</td>
+<td>Is the App running within an IFRAME?</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>NOTE</strong><br>Running on mobile means you can have this code running on a mobile device (phone or tablet) but with a browser, not within a Cordova wrapper.</p>
+</blockquote>
+<p>Other <strong>quasar.runs.on</strong> platform specific properties:<br><code>android</code>, <code>blackberry</code>, <code>cros</code>, <code>ios</code>, <code>ipad</code>, <code>iphone</code>, <code>ipod</code>, <code>kindle</code>, <code>linux</code>, <code>mac</code>, <code>playbook</code>, <code>silk</code>, <code>chrome</code>, <code>opera</code>, <code>safari</code>, <code>win</code> (Windows), <code>winphone</code> (Windows Phone) and more…</p>
+<p>Example when running Chrome on a Linux desktop machine:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.runs.on = &#123;</span><br><span class="line">  chrome: <span class="literal">true</span>,</span><br><span class="line">  desktop: <span class="literal">true</span>,</span><br><span class="line">  linux: <span class="literal">true</span>,</span><br><span class="line">  name: <span class="string">"chrome"</span>,</span><br><span class="line">  platform: <span class="string">"linux"</span>,</span><br><span class="line">  version: <span class="string">"47.0.2526.80"</span>,</span><br><span class="line">  versionNumber: <span class="number">47</span>,</span><br><span class="line">  webkit: <span class="literal">true</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><strong>NOTE</strong><br>When trying to show DOM elements only on a platform you can skip using Javascript and make use of Quasar CSS classes (which is more efficient). Read about on <a href="/api/css-visibility.html#Platform-Related">CSS &gt; Visibility</a> documentation page.</p>
+</blockquote>
 ]]></content>
     </entry>
     
@@ -936,16 +1024,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar Fullscreen]]></title>
-      <url>http://quasar-framework.org/api/js-app-fullscreen.html</url>
-      <content type="html"><![CDATA[<p>There are times when you want your website or App to run in fullscreen.<br>Quasar makes it easy by wrapping the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API" target="_blank" rel="external">Fullscreen API</a>.</p>
-<input type="hidden" data-external-demo="app-fullscreen">
-
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Determining if website is in fullscreen mode:</span></span><br><span class="line">(<span class="built_in">Boolean</span>) quasar.is.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Requesting fullscreen mode:</span></span><br><span class="line">quasar.request.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Exiting fullscreen mode:</span></span><br><span class="line">quasar.exit.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Toggle fullscreen mode:</span></span><br><span class="line">quasar.toggle.fullscreen();</span><br></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Cookies]]></title>
       <url>http://quasar-framework.org/api/js-cookies.html</url>
       <content type="html"><![CDATA[<p>This is a wrapper over the standardized <code>document.cookie</code>.</p>
@@ -969,84 +1047,6 @@
 <h3 id="Option-secure"><a href="#Option-secure" class="headerlink" title="Option secure"></a>Option <code>secure</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">secure: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>If true, the cookie transmission requires a secure protocol (HTTPS) and will NOT be sent over HTTP. Default value is <code>false</code>.</p>
 <h2 id="Remove-a-Cookie"><a href="#Remove-a-Cookie" class="headerlink" title="Remove a Cookie"></a>Remove a Cookie</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.remove.cookie(<span class="string">'cookie_name'</span>);</span><br></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar App Visibility]]></title>
-      <url>http://quasar-framework.org/api/js-app-visibility.html</url>
-      <content type="html"><![CDATA[<p>Quasar makes use of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API" target="_blank" rel="external">Page Visibility API</a> which lets you know when a website/app is visible or in focus.</p>
-<input type="hidden" data-fullpage-demo="app-visibility">
-
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="built_in">Boolean</span>) quasar.app.is.visible();</span><br></pre></td></tr></table></figure>
-<p>There is also an event triggered when focus changes:</p>
-<table>
-<thead>
-<tr>
-<th>Event Name</th>
-<th>Parameters</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>app:visibility</td>
-<td>(String) state</td>
-<td>App got focus if <code>state</code> is <code>visible</code> or lost focus if <code>state</code> is <code>hidden</code></td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar Environment]]></title>
-      <url>http://quasar-framework.org/api/js-environment.html</url>
-      <content type="html"><![CDATA[<p>Helpers are built-in to detect the environment in which the code is running:</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>quasar.runs.on.mobile</td>
-<td>boolean</td>
-<td>Is the code running on a mobile device?</td>
-</tr>
-<tr>
-<td>quasar.runs.on.cordova</td>
-<td>boolean</td>
-<td>Is the code running within Cordova?</td>
-</tr>
-<tr>
-<td>quasar.runs.on.desktop</td>
-<td>boolean</td>
-<td>Is the code running on a desktop browser?</td>
-</tr>
-<tr>
-<td>quasar.runs.with.touch</td>
-<td>boolean</td>
-<td>Is the code running on a touch capable screen?</td>
-</tr>
-<tr>
-<td>quasar.runs.within.iframe</td>
-<td>boolean</td>
-<td>Is the App running within an IFRAME?</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>NOTE</strong><br>Running on mobile means you can have this code running on a mobile device (phone or tablet) but with a browser, not within a Cordova wrapper.</p>
-</blockquote>
-<p>Other <strong>quasar.runs.on</strong> platform specific properties:<br><code>android</code>, <code>blackberry</code>, <code>cros</code>, <code>ios</code>, <code>ipad</code>, <code>iphone</code>, <code>ipod</code>, <code>kindle</code>, <code>linux</code>, <code>mac</code>, <code>playbook</code>, <code>silk</code>, <code>chrome</code>, <code>opera</code>, <code>safari</code>, <code>win</code> (Windows), <code>winphone</code> (Windows Phone) and more…</p>
-<p>Example when running Chrome on a Linux desktop machine:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.runs.on = &#123;</span><br><span class="line">  chrome: <span class="literal">true</span>,</span><br><span class="line">  desktop: <span class="literal">true</span>,</span><br><span class="line">  linux: <span class="literal">true</span>,</span><br><span class="line">  name: <span class="string">"chrome"</span>,</span><br><span class="line">  platform: <span class="string">"linux"</span>,</span><br><span class="line">  version: <span class="string">"47.0.2526.80"</span>,</span><br><span class="line">  versionNumber: <span class="number">47</span>,</span><br><span class="line">  webkit: <span class="literal">true</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p><strong>NOTE</strong><br>When trying to show DOM elements only on a platform you can skip using Javascript and make use of Quasar CSS classes (which is more efficient). Read about on <a href="/api/css-visibility.html#Platform-Related">CSS &gt; Visibility</a> documentation page.</p>
-</blockquote>
 ]]></content>
     </entry>
     
@@ -1423,12 +1423,6 @@
     </entry>
     
     <entry>
-      <title></title>
-      <url>http://quasar-framework.org/blog/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Web Storage]]></title>
       <url>http://quasar-framework.org/api/js-web-storage.html</url>
       <content type="html"><![CDATA[<p>Quasar provides a wrapper over <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API" target="_blank" rel="external">Web Storage API</a>.</p>
@@ -1460,6 +1454,12 @@
 <h3 id="Is-Store-Empty"><a href="#Is-Store-Empty" class="headerlink" title="Is Store Empty?"></a>Is Store Empty?</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(boolean) quasar.local.storage.is.empty()</span><br><span class="line">(boolean) quasar.session.storage.is.empty()</span><br></pre></td></tr></table></figure>
 <h3 id="Is-Key-in-Store"><a href="#Is-Key-in-Store" class="headerlink" title="Is Key in Store?"></a>Is Key in Store?</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(boolean) quasar.has.local.storage.item()</span><br><span class="line">(boolean) quasar.has.session.storage.item()</span><br></pre></td></tr></table></figure>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title></title>
+      <url>http://quasar-framework.org/blog/index.html</url>
+      <content type="html"></content>
     </entry>
     
     <entry>
@@ -3185,7 +3185,7 @@
       <title><![CDATA[Quasar Framework Release Notes]]></title>
       <url>http://quasar-framework.org/guide/quasar-framework-release-notes.html</url>
       <content type="html"><![CDATA[<p>NPM package holding Quasar Framework is <code>quasar-framework</code>.</p>
-<h4 id="v0-1-1-2016-06-13"><a href="#v0-1-1-2016-06-13" class="headerlink" title="v0.1.1 / 2016-06-13"></a>v0.1.1 / 2016-06-13</h4><ul>
+<h4 id="v0-1-2-2016-06-13"><a href="#v0-1-2-2016-06-13" class="headerlink" title="v0.1.2 / 2016-06-13"></a>v0.1.2 / 2016-06-13</h4><ul>
 <li>Updated some dependencies: jQuery to v3, Roboto font face to v0.5.0</li>
 <li>fix: Trigger Parallax events in the right order</li>
 <li>fix: Grid column selection; avoid VueJS glitch</li>
