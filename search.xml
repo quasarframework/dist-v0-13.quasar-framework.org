@@ -47,120 +47,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar CSS Helper Classes]]></title>
-      <url>http://quasar-framework.org/api/css-other-helper-classes.html</url>
-      <content type="html"><![CDATA[<p>There are a lot of CSS classes that you can use while writing your Vue templates. Very handy to ease the complexity of your VueModels and templates.</p>
-<p>The list below is not complete. Also check the other CSS documentation pages like Typography, Visibility, Shadows, Positioning.</p>
-<h3 id="Mouse-Related"><a href="#Mouse-Related" class="headerlink" title="Mouse Related"></a>Mouse Related</h3><table>
-<thead>
-<tr>
-<th>Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>non-selectable</code></td>
-<td>User won’t be able to select DOM node along with its text</td>
-</tr>
-<tr>
-<td><code>scroll</code></td>
-<td>Applies CSS tweaks to make scroll work at its best on ALL platforms</td>
-</tr>
-<tr>
-<td><code>no-scroll</code></td>
-<td>Hides scrollbars on the DOM node</td>
-</tr>
-<tr>
-<td><code>no-pointer-events</code></td>
-<td>DOM element does not become a target of mouse events - clicks, hover and so on</td>
-</tr>
-<tr>
-<td><code>all-pointer-events</code></td>
-<td>The opposite of <code>no-pointer-events</code></td>
-</tr>
-<tr>
-<td><code>cursor-pointer</code></td>
-<td>Change mouse pointer on DOM element to look as if on a clickable link</td>
-</tr>
-</tbody>
-</table>
-<h3 id="Size-Related"><a href="#Size-Related" class="headerlink" title="Size Related"></a>Size Related</h3><table>
-<thead>
-<tr>
-<th>Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>fit</code></td>
-<td>Width and Height is set to 100%</td>
-</tr>
-<tr>
-<td><code>full-height</code></td>
-<td>Height is set to 100%</td>
-</tr>
-<tr>
-<td><code>full-width</code></td>
-<td>Width is set to 100%</td>
-</tr>
-<tr>
-<td><code>window-height</code></td>
-<td>Height is set to 100vh with top and bottom margins 0</td>
-</tr>
-<tr>
-<td><code>window-width</code></td>
-<td>Width is set to 100vw with left and right margins 0</td>
-</tr>
-<tr>
-<td><code>block</code></td>
-<td>Same as <code>full-width</code> and with <code>display</code> property set to <code>block</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="Orientation-Related"><a href="#Orientation-Related" class="headerlink" title="Orientation Related"></a>Orientation Related</h3><table>
-<thead>
-<tr>
-<th>Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>rotate-90</code></td>
-<td>Rotate by 90 degrees</td>
-</tr>
-<tr>
-<td><code>rotate-180</code></td>
-<td>Rotate by 180 degrees</td>
-</tr>
-<tr>
-<td><code>rotate-270</code></td>
-<td>Rotate by 270 degrees</td>
-</tr>
-<tr>
-<td><code>flip-horizontal</code></td>
-<td>Flip DOM element horizontally</td>
-</tr>
-<tr>
-<td><code>flip-vertical</code></td>
-<td>Flip DOM element vertically</td>
-</tr>
-<tr>
-<td><code>spin</code></td>
-<td>Apply a continuous spin/rotation to the DOM element</td>
-</tr>
-<tr>
-<td><code>blink</code></td>
-<td>Apply a blinking effect to the DOM element</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Grid Layout]]></title>
       <url>http://quasar-framework.org/api/css-grid-layout.html</url>
       <content type="html"><![CDATA[<p><input type="hidden" data-fullpage-demo="grid-layout"><br>Back in the ol’ days web developers used HTML tables to style their web pages. Then came along powerful CSS features. Latest in the arena entered <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="external">Flexbox</a>.</p>
@@ -341,64 +227,126 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar CSS Shadows]]></title>
-      <url>http://quasar-framework.org/api/css-shadows.html</url>
-      <content type="html"><![CDATA[<p>Simple yet effective way to add shadows to create a depth effect.<br>The shadows are in accordance to Material Design speifications.<br>Don’t forget to check the demo.</p>
-<input type="hidden" data-fullpage-demo="shadows">
-
-<table>
-<thead>
-<tr>
-<th>CSS Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>no-shadow</code></td>
-<td>Remove any shadow</td>
-</tr>
-<tr>
-<td><code>inset-shadow</code></td>
-<td>Set an inset shadow</td>
-</tr>
-<tr>
-<td><code>shadow-1</code>, <code>hoverable</code>, <code>hoverable-1</code></td>
-<td>Set a depth of 1 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-2</code>, <code>hoverable-2</code></td>
-<td>Set a depth of 2 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-3</code>, <code>hoverable-3</code></td>
-<td>Set a depth of 3 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-4</code>, <code>hoverable-4</code></td>
-<td>Set a depth of 4 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-5</code>, <code>hoverable-5</code></td>
-<td>Set a depth of 5 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-transition</code></td>
-<td>Apply a CSS transition on the shadow; best use in conjonction with <code>hoverable</code> classes</td>
-</tr>
-</tbody>
-</table>
-<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"shadow-1"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Icons]]></title>
       <url>http://quasar-framework.org/api/css-icons.html</url>
       <content type="html"><![CDATA[<p>What would an App be without icons? A default set of (hundreds of) icons is included in any Quasar App.<br>These are the <a href="https://design.google.com/icons/" target="_blank" rel="external">Material Design Icons</a>. You can you can read (and search for them) in the previous link.</p>
 <p><img src="/images/material-icons.png" alt="Material Icons Example"></p>
 <p>It just differs the way you use them in a Quasar App:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--</span><br><span class="line">  On Material Design Icons website you check for an icon and it says:</span><br><span class="line">  "&lt;i class="material-icons"&gt;account_circle&lt;/i&gt;"</span><br><span class="line"></span><br><span class="line">  On Quasar App you simply use it like this:</span><br><span class="line">--&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">i</span>&gt;</span>account_circle<span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>No need for extra markup. Note the “underscore” character instead of a space character… this is mandatory, as Material Icons are displayed using a ligature font.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar CSS Helper Classes]]></title>
+      <url>http://quasar-framework.org/api/css-other-helper-classes.html</url>
+      <content type="html"><![CDATA[<p>There are a lot of CSS classes that you can use while writing your Vue templates. Very handy to ease the complexity of your VueModels and templates.</p>
+<p>The list below is not complete. Also check the other CSS documentation pages like Typography, Visibility, Shadows, Positioning.</p>
+<h3 id="Mouse-Related"><a href="#Mouse-Related" class="headerlink" title="Mouse Related"></a>Mouse Related</h3><table>
+<thead>
+<tr>
+<th>Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>non-selectable</code></td>
+<td>User won’t be able to select DOM node along with its text</td>
+</tr>
+<tr>
+<td><code>scroll</code></td>
+<td>Applies CSS tweaks to make scroll work at its best on ALL platforms</td>
+</tr>
+<tr>
+<td><code>no-scroll</code></td>
+<td>Hides scrollbars on the DOM node</td>
+</tr>
+<tr>
+<td><code>no-pointer-events</code></td>
+<td>DOM element does not become a target of mouse events - clicks, hover and so on</td>
+</tr>
+<tr>
+<td><code>all-pointer-events</code></td>
+<td>The opposite of <code>no-pointer-events</code></td>
+</tr>
+<tr>
+<td><code>cursor-pointer</code></td>
+<td>Change mouse pointer on DOM element to look as if on a clickable link</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Size-Related"><a href="#Size-Related" class="headerlink" title="Size Related"></a>Size Related</h3><table>
+<thead>
+<tr>
+<th>Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fit</code></td>
+<td>Width and Height is set to 100%</td>
+</tr>
+<tr>
+<td><code>full-height</code></td>
+<td>Height is set to 100%</td>
+</tr>
+<tr>
+<td><code>full-width</code></td>
+<td>Width is set to 100%</td>
+</tr>
+<tr>
+<td><code>window-height</code></td>
+<td>Height is set to 100vh with top and bottom margins 0</td>
+</tr>
+<tr>
+<td><code>window-width</code></td>
+<td>Width is set to 100vw with left and right margins 0</td>
+</tr>
+<tr>
+<td><code>block</code></td>
+<td>Same as <code>full-width</code> and with <code>display</code> property set to <code>block</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="Orientation-Related"><a href="#Orientation-Related" class="headerlink" title="Orientation Related"></a>Orientation Related</h3><table>
+<thead>
+<tr>
+<th>Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rotate-90</code></td>
+<td>Rotate by 90 degrees</td>
+</tr>
+<tr>
+<td><code>rotate-180</code></td>
+<td>Rotate by 180 degrees</td>
+</tr>
+<tr>
+<td><code>rotate-270</code></td>
+<td>Rotate by 270 degrees</td>
+</tr>
+<tr>
+<td><code>flip-horizontal</code></td>
+<td>Flip DOM element horizontally</td>
+</tr>
+<tr>
+<td><code>flip-vertical</code></td>
+<td>Flip DOM element vertically</td>
+</tr>
+<tr>
+<td><code>spin</code></td>
+<td>Apply a continuous spin/rotation to the DOM element</td>
+</tr>
+<tr>
+<td><code>blink</code></td>
+<td>Apply a blinking effect to the DOM element</td>
+</tr>
+</tbody>
+</table>
 ]]></content>
     </entry>
     
@@ -452,6 +400,58 @@
 </tr>
 </tbody>
 </table>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar CSS Shadows]]></title>
+      <url>http://quasar-framework.org/api/css-shadows.html</url>
+      <content type="html"><![CDATA[<p>Simple yet effective way to add shadows to create a depth effect.<br>The shadows are in accordance to Material Design speifications.<br>Don’t forget to check the demo.</p>
+<input type="hidden" data-fullpage-demo="shadows">
+
+<table>
+<thead>
+<tr>
+<th>CSS Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>no-shadow</code></td>
+<td>Remove any shadow</td>
+</tr>
+<tr>
+<td><code>inset-shadow</code></td>
+<td>Set an inset shadow</td>
+</tr>
+<tr>
+<td><code>shadow-1</code>, <code>hoverable</code>, <code>hoverable-1</code></td>
+<td>Set a depth of 1 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-2</code>, <code>hoverable-2</code></td>
+<td>Set a depth of 2 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-3</code>, <code>hoverable-3</code></td>
+<td>Set a depth of 3 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-4</code>, <code>hoverable-4</code></td>
+<td>Set a depth of 4 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-5</code>, <code>hoverable-5</code></td>
+<td>Set a depth of 5 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-transition</code></td>
+<td>Apply a CSS transition on the shadow; best use in conjonction with <code>hoverable</code> classes</td>
+</tr>
+</tbody>
+</table>
+<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"shadow-1"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
     
@@ -552,14 +552,6 @@
 </tr>
 </tbody>
 </table>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Overview]]></title>
-      <url>http://quasar-framework.org/api/index.html</url>
-      <content type="html"><![CDATA[<p>Learn here about the API specifications of every feature embedded in Quasar Framework. How to require a script, how to create a route, how to detect if the app is running within Cordova or on a desktop, and many more, including Quasar CSS specifications.</p>
-<p>By default, Quasar covers a lot of areas of Web development with ready to use API which simplifies your code and hides the different platform quirks.</p>
 ]]></content>
     </entry>
     
@@ -717,12 +709,10 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar Fullscreen]]></title>
-      <url>http://quasar-framework.org/api/js-app-fullscreen.html</url>
-      <content type="html"><![CDATA[<p>There are times when you want your website or App to run in fullscreen.<br>Quasar makes it easy by wrapping the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API" target="_blank" rel="external">Fullscreen API</a>.</p>
-<input type="hidden" data-external-demo="app-fullscreen">
-
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Determining if website is in fullscreen mode:</span></span><br><span class="line">(<span class="built_in">Boolean</span>) quasar.is.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Requesting fullscreen mode:</span></span><br><span class="line">quasar.request.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Exiting fullscreen mode:</span></span><br><span class="line">quasar.exit.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Toggle fullscreen mode:</span></span><br><span class="line">quasar.toggle.fullscreen();</span><br></pre></td></tr></table></figure>
+      <title><![CDATA[Overview]]></title>
+      <url>http://quasar-framework.org/api/index.html</url>
+      <content type="html"><![CDATA[<p>Learn here about the API specifications of every feature embedded in Quasar Framework. How to require a script, how to create a route, how to detect if the app is running within Cordova or on a desktop, and many more, including Quasar CSS specifications.</p>
+<p>By default, Quasar covers a lot of areas of Web development with ready to use API which simplifies your code and hides the different platform quirks.</p>
 ]]></content>
     </entry>
     
@@ -946,29 +936,12 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar App Visibility]]></title>
-      <url>http://quasar-framework.org/api/js-app-visibility.html</url>
-      <content type="html"><![CDATA[<p>Quasar makes use of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API" target="_blank" rel="external">Page Visibility API</a> which lets you know when a website/app is visible or in focus.</p>
-<input type="hidden" data-fullpage-demo="app-visibility">
+      <title><![CDATA[Quasar Fullscreen]]></title>
+      <url>http://quasar-framework.org/api/js-app-fullscreen.html</url>
+      <content type="html"><![CDATA[<p>There are times when you want your website or App to run in fullscreen.<br>Quasar makes it easy by wrapping the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API" target="_blank" rel="external">Fullscreen API</a>.</p>
+<input type="hidden" data-external-demo="app-fullscreen">
 
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="built_in">Boolean</span>) quasar.app.is.visible();</span><br></pre></td></tr></table></figure>
-<p>There is also an event triggered when focus changes:</p>
-<table>
-<thead>
-<tr>
-<th>Event Name</th>
-<th>Parameters</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>app:visibility</td>
-<td>(String) state</td>
-<td>App got focus if <code>state</code> is <code>visible</code> or lost focus if <code>state</code> is <code>hidden</code></td>
-</tr>
-</tbody>
-</table>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Determining if website is in fullscreen mode:</span></span><br><span class="line">(<span class="built_in">Boolean</span>) quasar.is.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Requesting fullscreen mode:</span></span><br><span class="line">quasar.request.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Exiting fullscreen mode:</span></span><br><span class="line">quasar.exit.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Toggle fullscreen mode:</span></span><br><span class="line">quasar.toggle.fullscreen();</span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -996,6 +969,33 @@
 <h3 id="Option-secure"><a href="#Option-secure" class="headerlink" title="Option secure"></a>Option <code>secure</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">secure: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>If true, the cookie transmission requires a secure protocol (HTTPS) and will NOT be sent over HTTP. Default value is <code>false</code>.</p>
 <h2 id="Remove-a-Cookie"><a href="#Remove-a-Cookie" class="headerlink" title="Remove a Cookie"></a>Remove a Cookie</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.remove.cookie(<span class="string">'cookie_name'</span>);</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar App Visibility]]></title>
+      <url>http://quasar-framework.org/api/js-app-visibility.html</url>
+      <content type="html"><![CDATA[<p>Quasar makes use of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API" target="_blank" rel="external">Page Visibility API</a> which lets you know when a website/app is visible or in focus.</p>
+<input type="hidden" data-fullpage-demo="app-visibility">
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="built_in">Boolean</span>) quasar.app.is.visible();</span><br></pre></td></tr></table></figure>
+<p>There is also an event triggered when focus changes:</p>
+<table>
+<thead>
+<tr>
+<th>Event Name</th>
+<th>Parameters</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app:visibility</td>
+<td>(String) state</td>
+<td>App got focus if <code>state</code> is <code>visible</code> or lost focus if <code>state</code> is <code>hidden</code></td>
+</tr>
+</tbody>
+</table>
 ]]></content>
     </entry>
     
@@ -1720,7 +1720,9 @@
 <h2 id="Prompt"><a href="#Prompt" class="headerlink" title="Prompt"></a>Prompt</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.dialog(&#123;</span><br><span class="line">  title: <span class="string">'Prompt'</span>,</span><br><span class="line">  message: <span class="string">'Modern HTML5 Single Page Application front-end framework on steroids.'</span>,</span><br><span class="line">  inputs: [</span><br><span class="line">    &#123;</span><br><span class="line">      name: <span class="string">'input1'</span>,</span><br><span class="line">      label: <span class="string">'Placeholder 1'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      name: <span class="string">'input2'</span>,</span><br><span class="line">      label: <span class="string">'Placeholder 2'</span></span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  buttons: [</span><br><span class="line">    <span class="string">'Cancel'</span>,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Ok'</span>,</span><br><span class="line">      handler: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">        quasar.notify(<span class="string">'Returned '</span> + <span class="built_in">JSON</span>.stringify(data));</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h2 id="Confirm"><a href="#Confirm" class="headerlink" title="Confirm"></a>Confirm</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.dialog(&#123;</span><br><span class="line">  title: <span class="string">'Confirm'</span>,</span><br><span class="line">  message: <span class="string">'Modern HTML5 Single Page Application front-end framework on steroids.'</span>,</span><br><span class="line">  buttons: [</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Disagree'</span>,</span><br><span class="line">      handler: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        quasar.notify(<span class="string">'Disagreed...'</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Agree'</span>,</span><br><span class="line">      handler: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        quasar.notify(<span class="string">'Agreed!'</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h2 id="Pick-One-Option-Radios"><a href="#Pick-One-Option-Radios" class="headerlink" title="Pick One Option (Radios)"></a>Pick One Option (Radios)</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.dialog(&#123;</span><br><span class="line">  title: <span class="string">'Radios'</span>,</span><br><span class="line">  message: <span class="string">'Message can be used for all types of Dialogs.'</span>,</span><br><span class="line">  radios: [</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Option 1'</span>,</span><br><span class="line">      value: <span class="string">'opt1'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Option 2'</span>,</span><br><span class="line">      value: <span class="string">'opt2'</span>,</span><br><span class="line">      selected: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Option 3'</span>,</span><br><span class="line">      value: <span class="string">'opt3'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Option 4'</span>,</span><br><span class="line">      value: <span class="string">'opt4'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Option 5'</span>,</span><br><span class="line">      value: <span class="string">'opt5'</span></span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  buttons: [</span><br><span class="line">    <span class="string">'Cancel'</span>,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Ok'</span>,</span><br><span class="line">      handler: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">        quasar.notify(<span class="string">'Returned '</span> + <span class="built_in">JSON</span>.stringify(data));</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h2 id="Pick-Multiple-Options-Checkboxes"><a href="#Pick-Multiple-Options-Checkboxes" class="headerlink" title="Pick Multiple Options (Checkboxes)"></a>Pick Multiple Options (Checkboxes)</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.dialog(&#123;</span><br><span class="line">  title: <span class="string">'Checkboxes'</span>,</span><br><span class="line">  checkboxes: [</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Option 1'</span>,</span><br><span class="line">      value: <span class="string">'opt1'</span>,</span><br><span class="line">      checked: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Option 2'</span>,</span><br><span class="line">      value: <span class="string">'opt2'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Option 3'</span>,</span><br><span class="line">      value: <span class="string">'opt3'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Option 4'</span>,</span><br><span class="line">      value: <span class="string">'opt4'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Option 5'</span>,</span><br><span class="line">      value: <span class="string">'opt5'</span></span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  buttons: [</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Cancel'</span>,</span><br><span class="line">      handler: $.noop</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Ok'</span>,</span><br><span class="line">      handler: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">        quasar.notify(<span class="string">'Returned '</span> + <span class="built_in">JSON</span>.stringify(data));</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="Pick-Multiple-Options-Checkboxes"><a href="#Pick-Multiple-Options-Checkboxes" class="headerlink" title="Pick Multiple Options (Checkboxes)"></a>Pick Multiple Options (Checkboxes)</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.dialog(&#123;</span><br><span class="line">  title: <span class="string">'Checkboxes'</span>,</span><br><span class="line">  checkboxes: [</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Option 1'</span>,</span><br><span class="line">      value: <span class="string">'opt1'</span>,</span><br><span class="line">      checked: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Option 2'</span>,</span><br><span class="line">      value: <span class="string">'opt2'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    ...</span><br><span class="line">  ],</span><br><span class="line">  buttons: [</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Cancel'</span>,</span><br><span class="line">      handler: $.noop</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Ok'</span>,</span><br><span class="line">      handler: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">        quasar.notify(<span class="string">'Returned '</span> + <span class="built_in">JSON</span>.stringify(data));</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="Pick-Multiple-Options-2-Toggles"><a href="#Pick-Multiple-Options-2-Toggles" class="headerlink" title="Pick Multiple Options #2 (Toggles)"></a>Pick Multiple Options #2 (Toggles)</h2><p>Same as previous but using Toggles instead of Checkboxes.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.dialog(&#123;</span><br><span class="line">  title: <span class="string">'Toggles'</span>,</span><br><span class="line">  toggles: [</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Option 1'</span>,</span><br><span class="line">      value: <span class="string">'opt1'</span>,</span><br><span class="line">      checked: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Option 2'</span>,</span><br><span class="line">      value: <span class="string">'opt2'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    ...</span><br><span class="line">  ],</span><br><span class="line">  buttons: [</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Cancel'</span>,</span><br><span class="line">      handler: $.noop</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Ok'</span>,</span><br><span class="line">      handler: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">        quasar.notify(<span class="string">'Returned '</span> + <span class="built_in">JSON</span>.stringify(data));</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h2 id="Pick-Range"><a href="#Pick-Range" class="headerlink" title="Pick Range"></a>Pick Range</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.dialog(&#123;</span><br><span class="line">  title: <span class="string">'Ranges'</span>,</span><br><span class="line">  ranges: [</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Volume'</span>,</span><br><span class="line">      min: <span class="number">1</span>,</span><br><span class="line">      max: <span class="number">5</span>,</span><br><span class="line">      iconMin: <span class="string">'volume_down'</span>,</span><br><span class="line">      iconMax: <span class="string">'volume_up'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Brightness'</span>,</span><br><span class="line">      min: <span class="number">1</span>,</span><br><span class="line">      max: <span class="number">5</span>,</span><br><span class="line">      value: <span class="number">2</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Speed'</span>,</span><br><span class="line">      min: <span class="number">1</span>,</span><br><span class="line">      max: <span class="number">10</span>,</span><br><span class="line">      value: <span class="number">6</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Noise Level'</span>,</span><br><span class="line">      min: <span class="number">4</span>,</span><br><span class="line">      max: <span class="number">15</span></span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  buttons: [</span><br><span class="line">    <span class="string">'Cancel'</span>,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Change'</span>,</span><br><span class="line">      handler: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">        quasar.notify(<span class="string">'Returned '</span> + <span class="built_in">JSON</span>.stringify(data));</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
@@ -2517,17 +2519,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar State Component]]></title>
-      <url>http://quasar-framework.org/components/state-component.html</url>
-      <content type="html"><![CDATA[<p>Quasar State Component helps you when you have two states (called “default” and “active”) to display using the same real estate of a Page. Look at the demo which presents a button that when clicked it shifts to the “active” state and shows a spinner.</p>
-<input type="hidden" data-fullpage-demo="state-component">
-
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Template for VueModel below --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">state</span> <span class="attr">:model.sync</span>=<span class="string">"state"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"active"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">spinner</span> <span class="attr">:size</span>=<span class="string">"51"</span>&gt;</span><span class="tag">&lt;/<span class="name">spinner</span>&gt;</span> Active State</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!--</span><br><span class="line">    any component outside of slot="active"</span><br><span class="line">    is displayed for the default state</span><br><span class="line">  --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"changeState()"</span>&gt;</span></span><br><span class="line">    Default State - Hit me!</span><br><span class="line">  <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">state</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// VueModel for template above</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  ...,</span><br><span class="line">  data: &#123;</span><br><span class="line">    ...,</span><br><span class="line">    state: <span class="literal">false</span></span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    ...,</span><br><span class="line">    changeState: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.state = <span class="literal">true</span>;</span><br><span class="line">      setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.state = <span class="literal">false</span>;</span><br><span class="line">      &#125;.bind(<span class="keyword">this</span>), <span class="number">2000</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Spinners]]></title>
       <url>http://quasar-framework.org/components/spinners.html</url>
       <content type="html"><![CDATA[<p>A spinner is used to show the user a process is currently taking place. You can pick their size without a loss of quality due to the fact that SVGs are used.</p>
@@ -2540,6 +2531,17 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Quasar State Component]]></title>
+      <url>http://quasar-framework.org/components/state-component.html</url>
+      <content type="html"><![CDATA[<p>Quasar State Component helps you when you have two states (called “default” and “active”) to display using the same real estate of a Page. Look at the demo which presents a button that when clicked it shifts to the “active” state and shows a spinner.</p>
+<input type="hidden" data-fullpage-demo="state-component">
+
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Template for VueModel below --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">state</span> <span class="attr">:model.sync</span>=<span class="string">"state"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"active"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">spinner</span> <span class="attr">:size</span>=<span class="string">"51"</span>&gt;</span><span class="tag">&lt;/<span class="name">spinner</span>&gt;</span> Active State</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!--</span><br><span class="line">    any component outside of slot="active"</span><br><span class="line">    is displayed for the default state</span><br><span class="line">  --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"changeState()"</span>&gt;</span></span><br><span class="line">    Default State - Hit me!</span><br><span class="line">  <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">state</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// VueModel for template above</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  ...,</span><br><span class="line">  data: &#123;</span><br><span class="line">    ...,</span><br><span class="line">    state: <span class="literal">false</span></span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    ...,</span><br><span class="line">    changeState: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.state = <span class="literal">true</span>;</span><br><span class="line">      setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.state = <span class="literal">false</span>;</span><br><span class="line">      &#125;.bind(<span class="keyword">this</span>), <span class="number">2000</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Tabs]]></title>
       <url>http://quasar-framework.org/components/tabs.html</url>
       <content type="html"><![CDATA[<p>Quasar Tabs are a way of displaying more information using less window real-estate. This Web Component can especially be used in Layouts.</p>
@@ -2548,6 +2550,17 @@
 <h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Template for VueModel below --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">tabs</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tab</span></span><br><span class="line">    <span class="attr">v-for</span>=<span class="string">"tab in tabs"</span></span><br><span class="line">    <span class="attr">:hidden</span>=<span class="string">"tab.hidden"</span></span><br><span class="line">    <span class="attr">:disabled</span>=<span class="string">"tab.disabled"</span></span><br><span class="line">    <span class="attr">:icon</span>=<span class="string">"tab.icon"</span></span><br><span class="line">    <span class="attr">:target</span>=<span class="string">"tab.target"</span></span><br><span class="line">  &gt;</span></span><br><span class="line">    &#123;&#123;tab.label&#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">tab</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">tabs</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tab-1"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"n in 5"</span>&gt;</span>Tab 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tab-2"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"n in 10"</span>&gt;</span>Tab 2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tab-3"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"n in 7"</span>&gt;</span>Tab 3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  ...,</span><br><span class="line">  data: &#123;</span><br><span class="line">    ...,</span><br><span class="line">    tabs: [</span><br><span class="line">      &#123;</span><br><span class="line">        label: <span class="string">'Tab 1'</span>,</span><br><span class="line">        icon: <span class="string">'message'</span>,</span><br><span class="line">        target: <span class="string">'#tab-1'</span></span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        label: <span class="string">'Disabled'</span>,</span><br><span class="line">        icon: <span class="string">'fingerprint'</span>,</span><br><span class="line">        disabled: <span class="literal">true</span></span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        label: <span class="string">'Tab 2'</span>,</span><br><span class="line">        icon: <span class="string">'alarm'</span>,</span><br><span class="line">        target: <span class="string">'#tab-2'</span></span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        label: <span class="string">'Tab 3'</span>,</span><br><span class="line">        icon: <span class="string">'accessibility'</span>,</span><br><span class="line">        target: <span class="string">'#tab-3'</span></span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        label: <span class="string">'Tab 4'</span>,</span><br><span class="line">        icon: <span class="string">'accessibility'</span>,</span><br><span class="line">        target: <span class="string">'#tab-4'</span>,</span><br><span class="line">        hidden: <span class="literal">true</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h2 id="Layout-Usage"><a href="#Layout-Usage" class="headerlink" title="Layout Usage"></a>Layout Usage</h2><p>You can use the Web Component above in a Layout as is, but if you want the Tabs to be filled in automatically, read <a href="/components/layout-automatic-navigation-tabs.html">Layout Automatic Navigation Tabs</a> page.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar Toggle]]></title>
+      <url>http://quasar-framework.org/components/toggle.html</url>
+      <content type="html"><![CDATA[<input type="hidden" data-fullpage-demo="toggle">
+
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">toggle</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">toggle</span>&gt;</span></span><br><span class="line">  Toggle Label</span><br><span class="line"><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Inside-of-a-List-Usage"><a href="#Inside-of-a-List-Usage" class="headerlink" title="Inside of a List Usage"></a>Inside of a List Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list inner-delimiter bordered"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span>&gt;</span>mail<span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-label"</span>&gt;</span>Toggle Label<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">toggle</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">toggle</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list inner-delimiter bordered"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">toggle</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">toggle</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></span><br><span class="line">      Toggle Label</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -2579,17 +2592,6 @@
 </tr>
 </tbody>
 </table>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar Toggle]]></title>
-      <url>http://quasar-framework.org/components/toggle.html</url>
-      <content type="html"><![CDATA[<input type="hidden" data-fullpage-demo="toggle">
-
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">toggle</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">toggle</span>&gt;</span></span><br><span class="line">  Toggle Label</span><br><span class="line"><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="Inside-of-a-List-Usage"><a href="#Inside-of-a-List-Usage" class="headerlink" title="Inside of a List Usage"></a>Inside of a List Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list inner-delimiter bordered"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span>&gt;</span>mail<span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-label"</span>&gt;</span>Toggle Label<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">toggle</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">toggle</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list inner-delimiter bordered"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">toggle</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">toggle</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></span><br><span class="line">      Toggle Label</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -2735,6 +2737,9 @@
 <blockquote>
 <p><strong>TIP</strong><br>Use <code>quasar build</code> in conjunction with <code>quasar wrap run</code> when you frequently test on your mobile: <code>quasar build &amp;&amp; quasar wrap run</code>.</p>
 </blockquote>
+<h2 id="Serve-Static-Content-Folder"><a href="#Serve-Static-Content-Folder" class="headerlink" title="Serve Static-Content Folder"></a>Serve Static-Content Folder</h2><p>You are able to create an ad-hoc web server to serve static-content web files from a folder. Browser sessions are automatically refreshed when content changes. User clicks/scroll can be synchronized.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Serve current folder:</span></span><br><span class="line">$ quasar serve</span><br><span class="line"></span><br><span class="line"><span class="comment"># ..or serve a full or relative path</span></span><br><span class="line">$ quasar serve ./dist</span><br><span class="line">$ quasar serve /work/quasar-app/dist</span><br></pre></td></tr></table></figure>
+<p>This command does not rely on Quasar Framework. Any folder with any web content can be served.</p>
 <h2 id="Runtime-Information"><a href="#Runtime-Information" class="headerlink" title="Runtime Information"></a>Runtime Information</h2><p>Display information about your runtime, including operating system, nodejs version, Quasar CLI version and more.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar info</span><br></pre></td></tr></table></figure>
 <p>Output example:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar info</span><br><span class="line"></span><br><span class="line"> Runtime</span><br><span class="line"> Quasar CLI:	 v0.1.0</span><br><span class="line"> Node JS:	 v4.2.0</span><br><span class="line"></span><br><span class="line"> Operating System</span><br><span class="line"> Architecture:	 x64</span><br><span class="line"> Platform:	 linux</span><br><span class="line"> Release:	 3.19.0-33-generic</span><br></pre></td></tr></table></figure></p>
@@ -2870,8 +2875,37 @@
 <p>You can also add a Layout (think of it as a wrapper of Pages with common content) with:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar layout &lt;layoutName&gt;</span><br></pre></td></tr></table></figure></p>
 <p>Preview your App in as many browsers you like with:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar preview</span><br></pre></td></tr></table></figure></p>
 <p>You’re mostly set now. Make a thorough reading about the Quasar CLI <a href="/guide/cli-commands.html">here</a>. The Quasar CLI is the primary tool used during the process of developing a Quasar App. It’s like a Swiss Army Knife as it brings together a bunch of miscellaneous tools under a single interface. Get to know how powerful it is so you can leverage it.</p>
+<blockquote>
+<p>You can check what Quasar Framework version it is being currently used by accessing the browser console and looking at <code>quasar.VERSION</code> property.</p>
+</blockquote>
 <p>Continue reading the <strong>App</strong> section of the Guide to understand how Quasar works and how you can use it.</p>
 <h2 id="Generating-Native-Mobile-Apps"><a href="#Generating-Native-Mobile-Apps" class="headerlink" title="Generating Native Mobile Apps"></a>Generating Native Mobile Apps</h2><p>If you want to be able to wrap your Quasar App into a native mobile app, then you should head to <a href="/guide/native-mobile-app-wrapper.html">Native Mobile App Wrapper</a> section to see how easily to do it.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar Development Plans]]></title>
+      <url>http://quasar-framework.org/guide/development-plans.html</url>
+      <content type="html"><![CDATA[<p>There are lots of features waiting to get into Quasar.<br>Feel free to contribute if you like. Read how to do it <a href="/guide/contributing-to-quasar.html">here</a>.</p>
+<h1 id="High-Level-Plans"><a href="#High-Level-Plans" class="headerlink" title="High Level Plans"></a>High Level Plans</h1><ul>
+<li><a href="http://electron.atom.io/" target="_blank" rel="external">Electron</a> support.</li>
+<li><a href="https://developer.chrome.com/extensions/getstarted" target="_blank" rel="external">Chrome Extension</a> support.</li>
+<li>Example Apps</li>
+<li>Tutorials</li>
+<li>Forum</li>
+<li>Improve debugging capabilities for native mobile Apps</li>
+<li>Upgrade to VueJS 2.0</li>
+<li>ES6 support</li>
+</ul>
+<h1 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h1><ul>
+<li>Parameterized Route for Pages</li>
+<li><a href="https://developer.mozilla.org/en/docs/Web/API/notification" target="_blank" rel="external">Notification API</a> wrapper/component</li>
+<li>Quasar Data Model (for REST APIs)</li>
+<li>Pull to Refresh</li>
+<li>Tipster Component (highlight areas of your UI to help user understand what they are for; something like helping the user know about hidden or non-intuitive features of your UI; example: User can swipe here or there, and so on…)</li>
+<li>Edit in place text-box</li>
+<li><a href="https://material.google.com/components/menus.html" target="_blank" rel="external">Menus</a></li>
+</ul>
 ]]></content>
     </entry>
     
@@ -2943,9 +2977,10 @@
       <content type="html"><![CDATA[<p>You can use Cordova to wrap your Quasar App into a native mobile App. We’ll be using Quasar CLI to manage this, including issuing Cordova commands for your wrapped up App.</p>
 <p>First install Cordova globally on your machine:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g cordova</span><br></pre></td></tr></table></figure></p>
 <p>Then make sure you have the platform SDK installed on your machine, like <a href="https://developer.android.com/studio/index.html#download" target="_blank" rel="external">Android SDK</a>.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ cordova requirements</span><br></pre></td></tr></table></figure></p>
-<h2 id="Wrap-your-App"><a href="#Wrap-your-App" class="headerlink" title="Wrap your App"></a>Wrap your App</h2><p>Now let’s create the Wrapper for your App.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar wrap</span><br></pre></td></tr></table></figure></p>
+<h2 id="Wrap-your-App"><a href="#Wrap-your-App" class="headerlink" title="Wrap your App"></a>Wrap your App</h2><p>Now let’s create the Wrapper for your App.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># With Crosswalk plugin</span></span><br><span class="line"><span class="comment"># which is the recommended way</span></span><br><span class="line">$ quasar wrap</span><br><span class="line"></span><br><span class="line"><span class="comment"># Without Crosswalk plugin</span></span><br><span class="line">$ quasar wrap <span class="_">-s</span></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ quasar wrap --slim</span><br></pre></td></tr></table></figure></p>
 <p>This command generates a folder inside your App called <code>/wrapper</code>. It contains the assets of a Cordova project mapped to your Quasar App’s source code.</p>
-<p>It also installs the Crosswalk plugin <code>cordova-plugin-crosswalk-webview</code> which wraps your App with latest Chromium browser. This ensures that your App will have the same runtime on all platforms. Read more <a href="https://crosswalk-project.org/documentation/about.html" target="_blank" rel="external">here</a> about Crosswalk.</p>
+<p>Wrapping with Crosswalk ensures that your App will have the same runtime on all platforms (which is also the latest and greatest), but will also make your package file bigger. Read more <a href="https://crosswalk-project.org/documentation/about.html" target="_blank" rel="external">here</a> about Crosswalk. <strong>It is recommended that you opt for the Crosswalk plugin to be installed.</strong></p>
+<p>If however you opt for the slim (non-Crosswalk) wrapper, you can add it later with:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar wrap plugin add cordova-plugin-crosswalk-webview</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p><strong>NOTE for Windows Developers</strong><br>It is possible that you get <code>Error: EPERM: operation not permitted, symlink &#39;..\dist&#39;</code>, in which case you need to add privileges for your user to be able to create symlinks. Read <a href="http://superuser.com/questions/104845/permission-to-make-symbolic-links-in-windows-7" target="_blank" rel="external">here</a>.</p>
 </blockquote>
@@ -3123,6 +3158,43 @@
 </blockquote>
 <h3 id="Image-Files"><a href="#Image-Files" class="headerlink" title="Image Files"></a>Image Files</h3><p>Image files should be placed under <code>assets</code> folders. By default, on a production build, <code>GIF</code>, <code>JPEG</code>, <code>PNG</code> and <code>SVG</code> image files get “minified” without losing noticeable quality.</p>
 <h3 id="HTML-Files"><a href="#HTML-Files" class="headerlink" title="HTML Files"></a>HTML Files</h3><p>When building for Production, HTML files are minified.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar CLI Release Notes]]></title>
+      <url>http://quasar-framework.org/guide/quasar-cli-release-notes.html</url>
+      <content type="html"><![CDATA[<p>NPM package holding Quasar CLI is <code>quasar-cli</code>.</p>
+<h4 id="v0-1-3-2016-06-13"><a href="#v0-1-3-2016-06-13" class="headerlink" title="v0.1.3 / 2016-06-13"></a>v0.1.3 / 2016-06-13</h4><ul>
+<li>Serve Static-Content Folders (<code>quasar serve</code>). Read more <a href="/guide/cli-commands.html#Serve-Static-Content-Folder">here</a>.</li>
+<li>When wrapping, you are able to <a href="/guide/native-mobile-app-wrapper.html#Wrap-your-App">skip Crosswalk plugin installation</a>: <code>quasar wrap -s</code> or <code>quasar wrap --slim</code>.</li>
+</ul>
+<h4 id="v0-1-2-2016-06-11"><a href="#v0-1-2-2016-06-11" class="headerlink" title="v0.1.2 / 2016-06-11"></a>v0.1.2 / 2016-06-11</h4><ul>
+<li>fix: Cannot use ‘quasar wrap’ on Windows<br>This closes <a href="https://github.com/rstoenescu/quasar-cli/issues/1" target="_blank" rel="external">#1</a></li>
+</ul>
+<h4 id="v0-1-1-2016-06-10"><a href="#v0-1-1-2016-06-10" class="headerlink" title="v0.1.1 / 2016-06-10"></a>v0.1.1 / 2016-06-10</h4><ul>
+<li>feat: Wrapper also installs Crosswalk plugin</li>
+</ul>
+<h4 id="v0-1-0-2016-06-06"><a href="#v0-1-0-2016-06-06" class="headerlink" title="v0.1.0 / 2016-06-06"></a>v0.1.0 / 2016-06-06</h4><ul>
+<li>First public-ready release.</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar Framework Release Notes]]></title>
+      <url>http://quasar-framework.org/guide/quasar-framework-release-notes.html</url>
+      <content type="html"><![CDATA[<p>NPM package holding Quasar Framework is <code>quasar-framework</code>.</p>
+<h4 id="v0-1-1-2016-06-13"><a href="#v0-1-1-2016-06-13" class="headerlink" title="v0.1.1 / 2016-06-13"></a>v0.1.1 / 2016-06-13</h4><ul>
+<li>Updated some dependencies: jQuery to v3, Roboto font face to v0.5.0</li>
+<li>fix: Trigger Parallax events in the right order</li>
+<li>fix: Grid column selection; avoid VueJS glitch</li>
+<li>feat: Dialog with Toggles</li>
+<li>style: Improve design for Tree web component</li>
+</ul>
+<h4 id="v0-1-0-2016-06-06"><a href="#v0-1-0-2016-06-06" class="headerlink" title="v0.1.0 / 2016-06-06"></a>v0.1.0 / 2016-06-06</h4><ul>
+<li>First public-ready release.</li>
+</ul>
 ]]></content>
     </entry>
     
