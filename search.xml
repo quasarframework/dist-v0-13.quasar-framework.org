@@ -25,12 +25,6 @@
     </entry>
     
     <entry>
-      <title></title>
-      <url>http://quasar-framework.org/blog/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Color Palette]]></title>
       <url>http://quasar-framework.org/api/css-color-palette.html</url>
       <content type="html"><![CDATA[<p>Quasar Framework offers a wide selection of colors out of the box. You can use them both as Stylus variables in your CSS code or directly as CSS classes in your HTML templates.</p>
@@ -1265,6 +1259,59 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Quasar Router]]></title>
+      <url>http://quasar-framework.org/api/js-router.html</url>
+      <content type="html"><![CDATA[<p>Quasar Framwork takes care of your routes automatically so you don’t have to manage Page switching yourself. But in case you need to do something fancy, here’s the API.</p>
+<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><p>Each route is an object defined like below:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> route = &#123;</span><br><span class="line">  hash: <span class="string">'#/'</span></span><br><span class="line">  trigger: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; ... &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>Adding a route:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.add.route(&#123;...&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>Initialize router to start listening to hash changes:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.start.router();</span><br></pre></td></tr></table></figure></p>
+<h2 id="Route-Definition"><a href="#Route-Definition" class="headerlink" title="Route Definition"></a>Route Definition</h2><p>A more detailed explanation of a route:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> route = &#123;</span><br><span class="line">  <span class="comment">// hash that gets matched</span></span><br><span class="line">  hash: <span class="string">'#/'</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// method to run when hash is matched</span></span><br><span class="line">  trigger: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//The [this] object is a copy of the [route] object plus:</span></span><br><span class="line">    <span class="comment">//this.params containing the hash tokens</span></span><br><span class="line">    <span class="comment">//this.url containing the original url hash</span></span><br><span class="line">    <span class="comment">//this.query containing the query string parameters</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>The <code>hash</code> property can be a normal static hash like #/page/books or a parametrized string like #/article/:category/:date, in this case the route parameters will be completed with hash tokens.</p>
+<p>For example, for <a href="">http://domain.com/#/article/science/20151010</a> you will have:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> route = &#123;</span><br><span class="line">  hash: <span class="string">'#/article/:category/:date'</span>,</span><br><span class="line">  trigger: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// this.params.category contains 'science'</span></span><br><span class="line">    <span class="comment">// this.params.date contains '20151010'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h2><p>You can hook into some Router events easily. See <a href="/api/js-events-list.html#Router-Events">Quasar Events List</a>.</p>
+<p>Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.events.on(<span class="string">'app:route:notfound'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">Array hashParts</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// hey, user navigated to a route, but we don't have</span></span><br><span class="line">  <span class="comment">// any route with such hash matched...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h2 id="Router-Management"><a href="#Router-Management" class="headerlink" title="Router Management"></a>Router Management</h2><h3 id="Initializing-the-Router"><a href="#Initializing-the-Router" class="headerlink" title="Initializing the Router"></a>Initializing the Router</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.start.router();</span><br></pre></td></tr></table></figure>
+<p>Once the router is initialized it will start listening for hash changes.</p>
+<h3 id="Stopping-the-Router"><a href="#Stopping-the-Router" class="headerlink" title="Stopping the Router"></a>Stopping the Router</h3><p>The router can be stopped so it won’t listen for hash changes:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.stop.router();</span><br></pre></td></tr></table></figure></p>
+<h3 id="Checking-if-Router-is-running"><a href="#Checking-if-Router-is-running" class="headerlink" title="Checking if Router is running"></a>Checking if Router is running</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(boolean) quasar.router.is.running();</span><br></pre></td></tr></table></figure>
+<h3 id="Adding-Route"><a href="#Adding-Route" class="headerlink" title="Adding Route"></a>Adding Route</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.add.route(&#123;...&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="Overwriting-a-Route"><a href="#Overwriting-a-Route" class="headerlink" title="Overwriting a Route"></a>Overwriting a Route</h3><p>Sometimes you may need to overwrite a route.<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.overwrite.route(&#123;...new_route_obj...&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>It will look for the <code>hash</code> from new_route_obj and replace the current route with this new one.</p>
+<h3 id="Removing-Route"><a href="#Removing-Route" class="headerlink" title="Removing Route"></a>Removing Route</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.remove.route(hash);</span><br><span class="line">Example: quasar.remove.route(<span class="string">'#/article'</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="Retrieving-All-Routes"><a href="#Retrieving-All-Routes" class="headerlink" title="Retrieving All Routes"></a>Retrieving All Routes</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> routes = quasar.get.all.routes();</span><br></pre></td></tr></table></figure>
+<h3 id="Checking-if-Route-Exists"><a href="#Checking-if-Route-Exists" class="headerlink" title="Checking if Route Exists"></a>Checking if Route Exists</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(boolean) quasar.has.route(hash);</span><br><span class="line">Example: quasar.has.route(<span class="string">'#/article'</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="Retrieving-Current-Route"><a href="#Retrieving-Current-Route" class="headerlink" title="Retrieving Current Route"></a>Retrieving Current Route</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(route_obj) quasar.get.current.route();</span><br></pre></td></tr></table></figure>
+<h3 id="Get-Route-By-Path"><a href="#Get-Route-By-Path" class="headerlink" title="Get Route By Path"></a>Get Route By Path</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(route_obj) quasar.get.route(hash);</span><br><span class="line">Example: quasar.get.route(<span class="string">'#/article'</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="Reloading-Current-Route"><a href="#Reloading-Current-Route" class="headerlink" title="Reloading Current Route"></a>Reloading Current Route</h3><p>This will trigger the route methods once again.<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.reload.current.route();</span><br></pre></td></tr></table></figure></p>
+<h3 id="Navigating-to-a-Route"><a href="#Navigating-to-a-Route" class="headerlink" title="Navigating to a Route"></a>Navigating to a Route</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.navigate.to.route(hash);</span><br><span class="line">Example: quasar.navigate.to.route(<span class="string">'#/article'</span>);</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Handling Touch Events]]></title>
+      <url>http://quasar-framework.org/api/js-touch-events.html</url>
+      <content type="html"><![CDATA[<p>Quasar makes good use of <a href="http://hammerjs.github.io/" target="_blank" rel="external">HammerJS</a> and has specific API to nicely wrap touch events.</p>
+<h2 id="Vue-‘v-touch’-directive"><a href="#Vue-‘v-touch’-directive" class="headerlink" title="Vue ‘v-touch’ directive"></a>Vue ‘v-touch’ directive</h2><p>Quasar has its own Vue directive written for handling touch events:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch:event</span>=<span class="string">"method_name"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- ..where "event" is the name of the Touch action --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch:pan</span>=<span class="string">"panning"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Here’s the list of touch events supported by HammerJS: <code>pan</code>, <code>pinch</code>, <code>press</code>, <code>rotate</code>, <code>swipe</code>. Basically, any touch action that HammerJS has, so visit their website to get updates.</p>
+<blockquote>
+<p>Just make sure that the method you supply to the directive is registered in your Vue, be that the Quasar Page Vue instance, the Quasar Layout Vue instance or any other Vue instance containing the respective node.</p>
+</blockquote>
+<p>Example of declaring the method used for the touch action:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123; <span class="comment">// or in Page/Layout definition 'module.exports = &#123;...&#125;'</span></span><br><span class="line"></span><br><span class="line">  template: <span class="string">'&lt;div v-touch:pan="panning"&gt;Touch Enabled Node&lt;/div&gt;'</span>,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    panning: <span class="function"><span class="keyword">function</span>(<span class="params">hammer</span>) </span>&#123;</span><br><span class="line">      <span class="comment">// 'hammer' variable has the Hammer object</span></span><br><span class="line">      <span class="comment">// which describes the Touch Event</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">// hammer.deltaX, hammer.deltaY, ...</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h3 id="Custom-Touch-Events"><a href="#Custom-Touch-Events" class="headerlink" title="Custom Touch Events"></a>Custom Touch Events</h3><p>There’s a way to write your own custom Touch Events. Here’s an example:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.register.custom.touch.event(&#123;</span><br><span class="line">  event: <span class="string">'doubletap'</span>,</span><br><span class="line">  type: <span class="string">'tap'</span>,</span><br><span class="line">  taps: <span class="number">2</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch:doubletap</span>=<span class="string">"doubleTapped"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Through-jQuery"><a href="#Through-jQuery" class="headerlink" title="Through jQuery"></a>Through jQuery</h2><p>There are two methods you can use to manage Hammer:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> node = $(...);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Initialize Hammer on DOM node</span></span><br><span class="line">node.hammer(hammerOptions);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Get Hammer instance from node</span></span><br><span class="line"><span class="keyword">var</span> hammer = node.getHammer();</span><br><span class="line">hammer.on(<span class="string">'pan'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;...&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>Don’t worry, jQuery events are still emitted when using Hammer this way.</p>
+<h2 id="Prevent-Ghost-Clicks"><a href="#Prevent-Ghost-Clicks" class="headerlink" title="Prevent Ghost Clicks"></a>Prevent Ghost Clicks</h2><p>When dealing directly with jQuery and Hammer for a <code>tap</code> event, you need to make the following call:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.prevent.ghost.click(node);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 'node' can be a jQuery selector or a native DOM element</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>NOTE</strong><br><code>v-touch</code> directive does NOT support <code>tap</code> event. Use <code>v-on:click</code> directive or jQuery’s <code>.click()</code> method instead.</p>
+</blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Require]]></title>
       <url>http://quasar-framework.org/api/js-require-script-or-css.html</url>
       <content type="html"><![CDATA[<p>This feature is used to dynamically include <code>.js</code> files or inject <code>.css</code> ones.</p>
@@ -1307,35 +1354,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar Router]]></title>
-      <url>http://quasar-framework.org/api/js-router.html</url>
-      <content type="html"><![CDATA[<p>Quasar Framwork takes care of your routes automatically so you don’t have to manage Page switching yourself. But in case you need to do something fancy, here’s the API.</p>
-<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><p>Each route is an object defined like below:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> route = &#123;</span><br><span class="line">  hash: <span class="string">'#/'</span></span><br><span class="line">  trigger: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; ... &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>Adding a route:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.add.route(&#123;...&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>Initialize router to start listening to hash changes:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.start.router();</span><br></pre></td></tr></table></figure></p>
-<h2 id="Route-Definition"><a href="#Route-Definition" class="headerlink" title="Route Definition"></a>Route Definition</h2><p>A more detailed explanation of a route:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> route = &#123;</span><br><span class="line">  <span class="comment">// hash that gets matched</span></span><br><span class="line">  hash: <span class="string">'#/'</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// method to run when hash is matched</span></span><br><span class="line">  trigger: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//The [this] object is a copy of the [route] object plus:</span></span><br><span class="line">    <span class="comment">//this.params containing the hash tokens</span></span><br><span class="line">    <span class="comment">//this.url containing the original url hash</span></span><br><span class="line">    <span class="comment">//this.query containing the query string parameters</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>The <code>hash</code> property can be a normal static hash like #/page/books or a parametrized string like #/article/:category/:date, in this case the route parameters will be completed with hash tokens.</p>
-<p>For example, for <a href="">http://domain.com/#/article/science/20151010</a> you will have:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> route = &#123;</span><br><span class="line">  hash: <span class="string">'#/article/:category/:date'</span>,</span><br><span class="line">  trigger: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// this.params.category contains 'science'</span></span><br><span class="line">    <span class="comment">// this.params.date contains '20151010'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<h2 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h2><p>You can hook into some Router events easily. See <a href="/api/js-events-list.html#Router-Events">Quasar Events List</a>.</p>
-<p>Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.events.on(<span class="string">'app:route:notfound'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">Array hashParts</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// hey, user navigated to a route, but we don't have</span></span><br><span class="line">  <span class="comment">// any route with such hash matched...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<h2 id="Router-Management"><a href="#Router-Management" class="headerlink" title="Router Management"></a>Router Management</h2><h3 id="Initializing-the-Router"><a href="#Initializing-the-Router" class="headerlink" title="Initializing the Router"></a>Initializing the Router</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.start.router();</span><br></pre></td></tr></table></figure>
-<p>Once the router is initialized it will start listening for hash changes.</p>
-<h3 id="Stopping-the-Router"><a href="#Stopping-the-Router" class="headerlink" title="Stopping the Router"></a>Stopping the Router</h3><p>The router can be stopped so it won’t listen for hash changes:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.stop.router();</span><br></pre></td></tr></table></figure></p>
-<h3 id="Checking-if-Router-is-running"><a href="#Checking-if-Router-is-running" class="headerlink" title="Checking if Router is running"></a>Checking if Router is running</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(boolean) quasar.router.is.running();</span><br></pre></td></tr></table></figure>
-<h3 id="Adding-Route"><a href="#Adding-Route" class="headerlink" title="Adding Route"></a>Adding Route</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.add.route(&#123;...&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="Overwriting-a-Route"><a href="#Overwriting-a-Route" class="headerlink" title="Overwriting a Route"></a>Overwriting a Route</h3><p>Sometimes you may need to overwrite a route.<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.overwrite.route(&#123;...new_route_obj...&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>It will look for the <code>hash</code> from new_route_obj and replace the current route with this new one.</p>
-<h3 id="Removing-Route"><a href="#Removing-Route" class="headerlink" title="Removing Route"></a>Removing Route</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.remove.route(hash);</span><br><span class="line">Example: quasar.remove.route(<span class="string">'#/article'</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="Retrieving-All-Routes"><a href="#Retrieving-All-Routes" class="headerlink" title="Retrieving All Routes"></a>Retrieving All Routes</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> routes = quasar.get.all.routes();</span><br></pre></td></tr></table></figure>
-<h3 id="Checking-if-Route-Exists"><a href="#Checking-if-Route-Exists" class="headerlink" title="Checking if Route Exists"></a>Checking if Route Exists</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(boolean) quasar.has.route(hash);</span><br><span class="line">Example: quasar.has.route(<span class="string">'#/article'</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="Retrieving-Current-Route"><a href="#Retrieving-Current-Route" class="headerlink" title="Retrieving Current Route"></a>Retrieving Current Route</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(route_obj) quasar.get.current.route();</span><br></pre></td></tr></table></figure>
-<h3 id="Get-Route-By-Path"><a href="#Get-Route-By-Path" class="headerlink" title="Get Route By Path"></a>Get Route By Path</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(route_obj) quasar.get.route(hash);</span><br><span class="line">Example: quasar.get.route(<span class="string">'#/article'</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="Reloading-Current-Route"><a href="#Reloading-Current-Route" class="headerlink" title="Reloading Current Route"></a>Reloading Current Route</h3><p>This will trigger the route methods once again.<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.reload.current.route();</span><br></pre></td></tr></table></figure></p>
-<h3 id="Navigating-to-a-Route"><a href="#Navigating-to-a-Route" class="headerlink" title="Navigating to a Route"></a>Navigating to a Route</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.navigate.to.route(hash);</span><br><span class="line">Example: quasar.navigate.to.route(<span class="string">'#/article'</span>);</span><br></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Scroll Fire]]></title>
       <url>http://quasar-framework.org/api/js-scroll-fire-directive.html</url>
       <content type="html"><![CDATA[<p>“Scroll Fire” is a feature that enables a method to be called (once and only once) when user scrolls current page to a specific scroll position in pixels.</p>
@@ -1354,30 +1372,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Handling Touch Events]]></title>
-      <url>http://quasar-framework.org/api/js-touch-events.html</url>
-      <content type="html"><![CDATA[<p>Quasar makes good use of <a href="http://hammerjs.github.io/" target="_blank" rel="external">HammerJS</a> and has specific API to nicely wrap touch events.</p>
-<h2 id="Vue-‘v-touch’-directive"><a href="#Vue-‘v-touch’-directive" class="headerlink" title="Vue ‘v-touch’ directive"></a>Vue ‘v-touch’ directive</h2><p>Quasar has its own Vue directive written for handling touch events:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch:event</span>=<span class="string">"method_name"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- ..where "event" is the name of the Touch action --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch:pan</span>=<span class="string">"panning"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>Here’s the list of touch events supported by HammerJS: <code>pan</code>, <code>pinch</code>, <code>press</code>, <code>rotate</code>, <code>swipe</code>. Basically, any touch action that HammerJS has, so visit their website to get updates.</p>
-<blockquote>
-<p>Just make sure that the method you supply to the directive is registered in your Vue, be that the Quasar Page Vue instance, the Quasar Layout Vue instance or any other Vue instance containing the respective node.</p>
-</blockquote>
-<p>Example of declaring the method used for the touch action:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123; <span class="comment">// or in Page/Layout definition 'module.exports = &#123;...&#125;'</span></span><br><span class="line"></span><br><span class="line">  template: <span class="string">'&lt;div v-touch:pan="panning"&gt;Touch Enabled Node&lt;/div&gt;'</span>,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    panning: <span class="function"><span class="keyword">function</span>(<span class="params">hammer</span>) </span>&#123;</span><br><span class="line">      <span class="comment">// 'hammer' variable has the Hammer object</span></span><br><span class="line">      <span class="comment">// which describes the Touch Event</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">// hammer.deltaX, hammer.deltaY, ...</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<h3 id="Custom-Touch-Events"><a href="#Custom-Touch-Events" class="headerlink" title="Custom Touch Events"></a>Custom Touch Events</h3><p>There’s a way to write your own custom Touch Events. Here’s an example:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.register.custom.touch.event(&#123;</span><br><span class="line">  event: <span class="string">'doubletap'</span>,</span><br><span class="line">  type: <span class="string">'tap'</span>,</span><br><span class="line">  taps: <span class="number">2</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch:doubletap</span>=<span class="string">"doubleTapped"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="Through-jQuery"><a href="#Through-jQuery" class="headerlink" title="Through jQuery"></a>Through jQuery</h2><p>There are two methods you can use to manage Hammer:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> node = $(...);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Initialize Hammer on DOM node</span></span><br><span class="line">node.hammer(hammerOptions);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Get Hammer instance from node</span></span><br><span class="line"><span class="keyword">var</span> hammer = node.getHammer();</span><br><span class="line">hammer.on(<span class="string">'pan'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;...&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>Don’t worry, jQuery events are still emitted when using Hammer this way.</p>
-<h2 id="Prevent-Ghost-Clicks"><a href="#Prevent-Ghost-Clicks" class="headerlink" title="Prevent Ghost Clicks"></a>Prevent Ghost Clicks</h2><p>When dealing directly with jQuery and Hammer for a <code>tap</code> event, you need to make the following call:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.prevent.ghost.click(node);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 'node' can be a jQuery selector or a native DOM element</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><strong>NOTE</strong><br><code>v-touch</code> directive does NOT support <code>tap</code> event. Use <code>v-on:click</code> directive or jQuery’s <code>.click()</code> method instead.</p>
-</blockquote>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Vue Transitions]]></title>
       <url>http://quasar-framework.org/api/js-vue-transitions.html</url>
       <content type="html"><![CDATA[<p>At the moment, Quasar provides only one ready to use Vue transition. If you don’t know what a transition is, read <a href="http://vuejs.org/guide/transitions.html" target="_blank" rel="external">here</a>.<br>Vue transitions work alongside <code>v-show</code>, <code>v-if</code> and <code>v-for</code> Vue directives.</p>
@@ -1386,6 +1380,40 @@
 <h3 id="“slide”-transition"><a href="#“slide”-transition" class="headerlink" title="“slide” transition"></a>“slide” transition</h3><p>Slide the DOM element up or down based on its visibility.</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;!-- Template for VueModel below --&gt;</span><br><span class="line">&lt;img</span><br><span class="line">  v-show="visible" &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span><br><span class="line">  transition="slide" &lt;&lt;&lt;&lt;&lt;&lt;</span><br><span class="line">  src="assets/quasar.jpg"</span><br><span class="line">&gt;</span><br><span class="line">&lt;button @click="toggleVisibility()"&gt;Toggle&lt;/button&gt;</span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// VueModel for template above</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  ...,</span><br><span class="line">  data: &#123;</span><br><span class="line">    ...,</span><br><span class="line">    visible: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    ...,</span><br><span class="line">    toggleVisibility: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.visible = !<span class="keyword">this</span>.visible;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar Web Storage]]></title>
+      <url>http://quasar-framework.org/api/js-web-storage.html</url>
+      <content type="html"><![CDATA[<p>Quasar provides a wrapper over <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API" target="_blank" rel="external">Web Storage API</a>.</p>
+<blockquote>
+<p><strong>NOTE</strong><br>Web Storage API only retrieves strings. <strong>Quasar retrieves data with its original data type.</strong> You tell it to store a Number then to retrieve it and it will still be a Number, not a string representation of the number as with Web Storage API. Same for JSON, Regular Expressions, Dates, Booleans and so on. Read below.</p>
+</blockquote>
+<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><p>Quasar supports both Local and Session Storage.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.set.local.storage.item(key, value);</span><br><span class="line"><span class="keyword">var</span> value = quasar.get.local.storage.item(key);</span><br><span class="line"></span><br><span class="line">quasar.set.session.storage.item(key, value);</span><br><span class="line"><span class="keyword">var</span> value = quasar.get.session.storage.item(key);</span><br></pre></td></tr></table></figure>
+<p>Before we jump to discuss on the API, let’s see what data types are supported out of the box.</p>
+<h2 id="Data-Types"><a href="#Data-Types" class="headerlink" title="Data Types"></a>Data Types</h2><p>Quasar Storage supports (but not limited to) the following data types out of the box. If you store one of these types, the retrieved data will have the same data type.</p>
+<ul>
+<li>Dates</li>
+<li>Regular Expressions</li>
+<li>Numbers</li>
+<li>Booleans</li>
+<li>Strings</li>
+<li>Plain Javascript Objects</li>
+</ul>
+<p>If you store any <em>other</em> data type, the returned value will be a String.</p>
+<p>So you can even store functions, but be careful that you need to eval() the returned value (which is a String representation of the function).</p>
+<h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h2><h3 id="Storing-Data"><a href="#Storing-Data" class="headerlink" title="Storing Data"></a>Storing Data</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.set.local.storage.item(key, value);</span><br><span class="line">quasar.set.session.storage.item(key, value);</span><br></pre></td></tr></table></figure>
+<h3 id="Retrieving-Data"><a href="#Retrieving-Data" class="headerlink" title="Retrieving Data"></a>Retrieving Data</h3><p>One item:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> item = quasar.get.local.storage.item(key);</span><br><span class="line"><span class="keyword">var</span> item = quasar.get.session.storage.item(key);</span><br></pre></td></tr></table></figure></p>
+<p>All items:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> store = quasar.get.all.local.storage.items();</span><br><span class="line"><span class="keyword">var</span> store = quasar.get.all.session.storage.items();</span><br></pre></td></tr></table></figure></p>
+<h3 id="Iterating-through-Store"><a href="#Iterating-through-Store" class="headerlink" title="Iterating through Store"></a>Iterating through Store</h3><p>Getting length of store:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> length = quasar.get.local.storage.length();</span><br><span class="line"><span class="keyword">var</span> length = quasar.get.session.storage.length();</span><br></pre></td></tr></table></figure></p>
+<p>Getting item at index:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> item = quasar.get.local.storage.at.index(index);</span><br><span class="line"><span class="keyword">var</span> item = quasar.get.session.storage.at.index(index);</span><br></pre></td></tr></table></figure></p>
+<p>Now you know how to loop through the store.</p>
+<h3 id="Removing-Data"><a href="#Removing-Data" class="headerlink" title="Removing Data"></a>Removing Data</h3><p>One item:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.remove.local.storage.item(key);</span><br><span class="line">quasar.remove.session.storage.item(key);</span><br></pre></td></tr></table></figure></p>
+<p>All items (clear the store):<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.clear.local.storage();</span><br><span class="line">quasar.clear.session.storage();</span><br></pre></td></tr></table></figure></p>
+<h3 id="Is-Store-Empty"><a href="#Is-Store-Empty" class="headerlink" title="Is Store Empty?"></a>Is Store Empty?</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(boolean) quasar.local.storage.is.empty()</span><br><span class="line">(boolean) quasar.session.storage.is.empty()</span><br></pre></td></tr></table></figure>
+<h3 id="Is-Key-in-Store"><a href="#Is-Key-in-Store" class="headerlink" title="Is Key in Store?"></a>Is Key in Store?</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(boolean) quasar.has.local.storage.item()</span><br><span class="line">(boolean) quasar.has.session.storage.item()</span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -1429,37 +1457,9 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar Web Storage]]></title>
-      <url>http://quasar-framework.org/api/js-web-storage.html</url>
-      <content type="html"><![CDATA[<p>Quasar provides a wrapper over <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API" target="_blank" rel="external">Web Storage API</a>.</p>
-<blockquote>
-<p><strong>NOTE</strong><br>Web Storage API only retrieves strings. <strong>Quasar retrieves data with its original data type.</strong> You tell it to store a Number then to retrieve it and it will still be a Number, not a string representation of the number as with Web Storage API. Same for JSON, Regular Expressions, Dates, Booleans and so on. Read below.</p>
-</blockquote>
-<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><p>Quasar supports both Local and Session Storage.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.set.local.storage.item(key, value);</span><br><span class="line"><span class="keyword">var</span> value = quasar.get.local.storage.item(key);</span><br><span class="line"></span><br><span class="line">quasar.set.session.storage.item(key, value);</span><br><span class="line"><span class="keyword">var</span> value = quasar.get.session.storage.item(key);</span><br></pre></td></tr></table></figure>
-<p>Before we jump to discuss on the API, let’s see what data types are supported out of the box.</p>
-<h2 id="Data-Types"><a href="#Data-Types" class="headerlink" title="Data Types"></a>Data Types</h2><p>Quasar Storage supports (but not limited to) the following data types out of the box. If you store one of these types, the retrieved data will have the same data type.</p>
-<ul>
-<li>Dates</li>
-<li>Regular Expressions</li>
-<li>Numbers</li>
-<li>Booleans</li>
-<li>Strings</li>
-<li>Plain Javascript Objects</li>
-</ul>
-<p>If you store any <em>other</em> data type, the returned value will be a String.</p>
-<p>So you can even store functions, but be careful that you need to eval() the returned value (which is a String representation of the function).</p>
-<h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h2><h3 id="Storing-Data"><a href="#Storing-Data" class="headerlink" title="Storing Data"></a>Storing Data</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.set.local.storage.item(key, value);</span><br><span class="line">quasar.set.session.storage.item(key, value);</span><br></pre></td></tr></table></figure>
-<h3 id="Retrieving-Data"><a href="#Retrieving-Data" class="headerlink" title="Retrieving Data"></a>Retrieving Data</h3><p>One item:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> item = quasar.get.local.storage.item(key);</span><br><span class="line"><span class="keyword">var</span> item = quasar.get.session.storage.item(key);</span><br></pre></td></tr></table></figure></p>
-<p>All items:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> store = quasar.get.all.local.storage.items();</span><br><span class="line"><span class="keyword">var</span> store = quasar.get.all.session.storage.items();</span><br></pre></td></tr></table></figure></p>
-<h3 id="Iterating-through-Store"><a href="#Iterating-through-Store" class="headerlink" title="Iterating through Store"></a>Iterating through Store</h3><p>Getting length of store:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> length = quasar.get.local.storage.length();</span><br><span class="line"><span class="keyword">var</span> length = quasar.get.session.storage.length();</span><br></pre></td></tr></table></figure></p>
-<p>Getting item at index:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> item = quasar.get.local.storage.at.index(index);</span><br><span class="line"><span class="keyword">var</span> item = quasar.get.session.storage.at.index(index);</span><br></pre></td></tr></table></figure></p>
-<p>Now you know how to loop through the store.</p>
-<h3 id="Removing-Data"><a href="#Removing-Data" class="headerlink" title="Removing Data"></a>Removing Data</h3><p>One item:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.remove.local.storage.item(key);</span><br><span class="line">quasar.remove.session.storage.item(key);</span><br></pre></td></tr></table></figure></p>
-<p>All items (clear the store):<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.clear.local.storage();</span><br><span class="line">quasar.clear.session.storage();</span><br></pre></td></tr></table></figure></p>
-<h3 id="Is-Store-Empty"><a href="#Is-Store-Empty" class="headerlink" title="Is Store Empty?"></a>Is Store Empty?</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(boolean) quasar.local.storage.is.empty()</span><br><span class="line">(boolean) quasar.session.storage.is.empty()</span><br></pre></td></tr></table></figure>
-<h3 id="Is-Key-in-Store"><a href="#Is-Key-in-Store" class="headerlink" title="Is Key in Store?"></a>Is Key in Store?</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(boolean) quasar.has.local.storage.item()</span><br><span class="line">(boolean) quasar.has.session.storage.item()</span><br></pre></td></tr></table></figure>
-]]></content>
+      <title></title>
+      <url>http://quasar-framework.org/blog/index.html</url>
+      <content type="html"></content>
     </entry>
     
     <entry>
@@ -2674,6 +2674,12 @@
     </entry>
     
     <entry>
+      <title></title>
+      <url>http://quasar-framework.org/search/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Built-in Technology Stack]]></title>
       <url>http://quasar-framework.org/guide/built-in-stack.html</url>
       <content type="html"><![CDATA[<p>You can take full advantage of the following dependencies that are provided by default:</p>
@@ -3165,6 +3171,9 @@
       <title><![CDATA[Quasar CLI Release Notes]]></title>
       <url>http://quasar-framework.org/guide/quasar-cli-release-notes.html</url>
       <content type="html"><![CDATA[<p>NPM package holding Quasar CLI is <code>quasar-cli</code>.</p>
+<h4 id="v0-1-4-2016-06-14"><a href="#v0-1-4-2016-06-14" class="headerlink" title="v0.1.4 / 2016-06-14"></a>v0.1.4 / 2016-06-14</h4><ul>
+<li>CLI Update Notifier. When new CLI version is released it will notify the user.</li>
+</ul>
 <h4 id="v0-1-3-2016-06-13"><a href="#v0-1-3-2016-06-13" class="headerlink" title="v0.1.3 / 2016-06-13"></a>v0.1.3 / 2016-06-13</h4><ul>
 <li>Serve Static-Content Folders (<code>quasar serve</code>). Read more <a href="/guide/cli-commands.html#Serve-Static-Content-Folder">here</a>.</li>
 <li>When wrapping, you are able to <a href="/guide/native-mobile-app-wrapper.html#Wrap-your-App">skip Crosswalk plugin installation</a>: <code>quasar wrap -s</code> or <code>quasar wrap --slim</code>.</li>
@@ -3559,12 +3568,6 @@
 <p>If we enforce a convention where components are never allowed to directly mutate state that belongs to a store, but should instead dispatch events that notify the store to perform actions, we’ve essentially arrived at the <a href="https://facebook.github.io/flux/" target="_blank" rel="external">Flux</a> architecture. The benefits of this convention is we can record all state mutations happening to the store, and on top of that we can implement advanced debugging helpers such as mutation logs, snapshots, history re-rolls etc.</p>
 <p>The Flux architecture is commonly used in React applications. Turns out the core idea behind Flux can be quite simply achieved in Vue.js, thanks to the unobtrusive reactivity system. Do note what we demonstrated here is just an example to introduce the concept - you may not need it at all for simple scenarios, and you should adapt the pattern to fit the real needs of your application.</p>
 ]]></content>
-    </entry>
-    
-    <entry>
-      <title></title>
-      <url>http://quasar-framework.org/search/index.html</url>
-      <content type="html"></content>
     </entry>
     
   
