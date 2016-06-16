@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://quasar-framework.org/guide/importing-dependencies.html</loc>
+    
+    <lastmod>2016-06-16T20:35:11.927Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://quasar-framework.org/guide/quasar-layouts.html</loc>
     
     <lastmod>2016-06-16T18:55:49.215Z</lastmod>
@@ -124,13 +131,6 @@
     <loc>http://quasar-framework.org/guide/index.html</loc>
     
     <lastmod>2016-06-12T13:19:43.344Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/importing-dependencies.html</loc>
-    
-    <lastmod>2016-06-12T13:03:17.296Z</lastmod>
     
   </url>
   
@@ -352,14 +352,14 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/parallax.html</loc>
+    <loc>http://quasar-framework.org/components/pagination.html</loc>
     
     <lastmod>2016-06-02T04:18:08.394Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/tree.html</loc>
+    <loc>http://quasar-framework.org/components/parallax.html</loc>
     
     <lastmod>2016-06-02T04:18:08.394Z</lastmod>
     
@@ -373,7 +373,7 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/pagination.html</loc>
+    <loc>http://quasar-framework.org/components/tree.html</loc>
     
     <lastmod>2016-06-02T04:18:08.394Z</lastmod>
     

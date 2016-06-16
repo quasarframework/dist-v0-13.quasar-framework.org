@@ -25,34 +25,6 @@
     </entry>
     
     <entry>
-      <title></title>
-      <url>http://quasar-framework.org/blog/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar Color Palette]]></title>
-      <url>http://quasar-framework.org/api/css-color-palette.html</url>
-      <content type="html"><![CDATA[<p>Quasar Framework offers a wide selection of colors out of the box. You can use them both as Stylus variables in your CSS code or directly as CSS classes in your HTML templates.</p>
-<input type="hidden" data-fullpage-demo="colors">
-
-<p>This page comes really handy after reading <a href="/guide/quasar-theming.html">Quasar Theming</a>.</p>
-<h2 id="Brand-Colors"><a href="#Brand-Colors" class="headerlink" title="Brand Colors"></a>Brand Colors</h2><p>There can be three main colors used throughout your App, called <code>primary</code>, <code>secondary</code> and <code>tertiary</code>.</p>
-<p>Most of the colors that Quasar Components use are strongly linked with these three colors that you can change. Choosing these colors is the first step one should take when differentiating the design of its own App. You’ll notice immediately on changing their default values that Quasar Components follow these colors as a guideline.</p>
-<h2 id="Color-List"><a href="#Color-List" class="headerlink" title="Color List"></a>Color List</h2><p>Here’s the list of colors provided out of the box. Use them as CSS classes or as Stylus variables (preceded by <code>$</code> character).</p>
-<p><code>primary</code>, <code>secondary</code>, <code>tertiary</code><br><code>neutral</code>, <code>neutral</code>, <code>positive</code>, <code>negative</code>, <code>info</code>, <code>warning</code>, <code>light</code>, <code>dark</code>, <code>faded</code></p>
-<p>On the following colors there are variations available:<br><code>red</code>, <code>pink</code>, <code>purple</code>, <code>deep-purple</code>, <code>indigo</code>, <code>blue</code>, <code>light-blue</code>, <code>cyan</code>, <code>teal</code>, <code>green</code>, <code>light-green</code>, <code>lime</code>, <code>yellow</code>, <code>amber</code>, <code>orange</code>, <code>deep-orange</code>, <code>brown</code>, <code>grey</code>, <code>blue-grey</code></p>
-<p>Example of color variation: <code>red</code>, <code>red-1</code>, <code>red-2</code>, …, <code>red-14</code>. See the demo to make a good picture of what variations are. Variation 11 to 14 are color accents.</p>
-<h2 id="CSS-Classes"><a href="#CSS-Classes" class="headerlink" title="CSS Classes"></a>CSS Classes</h2><p>Use <code>text-</code> or <code>bg-</code> prefixes as class names to change the color of text or the color of the background.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- changing text color --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"text-primary"</span>&gt;</span>....<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- changing background color --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"bg-positive"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="Stylus-Color-Variables"><a href="#Stylus-Color-Variables" class="headerlink" title="Stylus Color Variables"></a>Stylus Color Variables</h2><p>In your Stylus App code you can use them as <code>$primary</code>, <code>$red-1</code>, and so on.</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span></span><br><span class="line">  <span class="attribute">color</span> <span class="variable">$red</span>-<span class="number">1</span></span><br><span class="line">  <span class="attribute">background-color</span> <span class="variable">$grey</span>-<span class="number">5</span></span><br></pre></td></tr></table></figure>
-<p>The full list of colors is stored in the <code>$colors</code> array. You can change it to add/remove/change colors and all Quasar Components will generate CSS according to those colors.</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">$colors ?= &#123;</span><br><span class="line">  neutral: $neutral</span><br><span class="line">  primary: $primary</span><br><span class="line">  secondary: $secondary</span><br><span class="line">  tertiary: $tertiary</span><br><span class="line">  positive: $positive</span><br><span class="line">  negative: $negative</span><br><span class="line">  warning: $warning</span><br><span class="line">  info: $info</span><br><span class="line">  light: $light</span><br><span class="line">  dark: $dark,</span><br><span class="line"></span><br><span class="line">  red: $red,</span><br><span class="line">  pink: $pink,</span><br><span class="line">  purple: $purple,</span><br><span class="line">  deep-purple: $deep-purple,</span><br><span class="line">  indigo: $indigo,</span><br><span class="line">  blue: $blue,</span><br><span class="line">  light-blue: $light-blue,</span><br><span class="line">  cyan: $cyan,</span><br><span class="line">  teal: $teal,</span><br><span class="line">  green: $green,</span><br><span class="line">  light-green: $light-green,</span><br><span class="line">  lime: $lime,</span><br><span class="line">  yellow: $yellow,</span><br><span class="line">  amber: $amber,</span><br><span class="line">  orange: $orange,</span><br><span class="line">  deep-orange: $deep-orange,</span><br><span class="line">  brown: $brown,</span><br><span class="line">  grey: $grey,</span><br><span class="line">  blue-grey: $blue-grey</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Grid Layout]]></title>
       <url>http://quasar-framework.org/api/css-grid-layout.html</url>
       <content type="html"><![CDATA[<p><input type="hidden" data-fullpage-demo="grid-layout"><br>Back in the ol’ days web developers used HTML tables to style their web pages. Then came along powerful CSS features. Latest in the arena entered <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="external">Flexbox</a>.</p>
@@ -229,6 +201,28 @@
 <p>One more example:<br><figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;!-- Displayed as column on small windows and as rows the rest of the time --&gt;</span><br><span class="line">&lt;div class="row gutter sm-column"&gt; &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span><br><span class="line">  &lt;div class="width-2of3"&gt;&lt;div&gt;2/3&lt;/div&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class="width-1of5"&gt;&lt;div&gt;1/5&lt;/div&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class="auto"&gt;&lt;div&gt;auto&lt;/div&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class="auto"&gt;&lt;div&gt;auto&lt;/div&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
 <p>Prefixes also work with <code>order-i</code>, <code>shrink-i</code>, <code>width-XofY</code>, on gutters and so on.</p>
 <p>What does small, medium, big or large windows mean? Check <a href="/api/css-visibility.html#Window-Width-Related">CSS &gt; Visibility</a> page to see thresholds on window width.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar Color Palette]]></title>
+      <url>http://quasar-framework.org/api/css-color-palette.html</url>
+      <content type="html"><![CDATA[<p>Quasar Framework offers a wide selection of colors out of the box. You can use them both as Stylus variables in your CSS code or directly as CSS classes in your HTML templates.</p>
+<input type="hidden" data-fullpage-demo="colors">
+
+<p>This page comes really handy after reading <a href="/guide/quasar-theming.html">Quasar Theming</a>.</p>
+<h2 id="Brand-Colors"><a href="#Brand-Colors" class="headerlink" title="Brand Colors"></a>Brand Colors</h2><p>There can be three main colors used throughout your App, called <code>primary</code>, <code>secondary</code> and <code>tertiary</code>.</p>
+<p>Most of the colors that Quasar Components use are strongly linked with these three colors that you can change. Choosing these colors is the first step one should take when differentiating the design of its own App. You’ll notice immediately on changing their default values that Quasar Components follow these colors as a guideline.</p>
+<h2 id="Color-List"><a href="#Color-List" class="headerlink" title="Color List"></a>Color List</h2><p>Here’s the list of colors provided out of the box. Use them as CSS classes or as Stylus variables (preceded by <code>$</code> character).</p>
+<p><code>primary</code>, <code>secondary</code>, <code>tertiary</code><br><code>neutral</code>, <code>neutral</code>, <code>positive</code>, <code>negative</code>, <code>info</code>, <code>warning</code>, <code>light</code>, <code>dark</code>, <code>faded</code></p>
+<p>On the following colors there are variations available:<br><code>red</code>, <code>pink</code>, <code>purple</code>, <code>deep-purple</code>, <code>indigo</code>, <code>blue</code>, <code>light-blue</code>, <code>cyan</code>, <code>teal</code>, <code>green</code>, <code>light-green</code>, <code>lime</code>, <code>yellow</code>, <code>amber</code>, <code>orange</code>, <code>deep-orange</code>, <code>brown</code>, <code>grey</code>, <code>blue-grey</code></p>
+<p>Example of color variation: <code>red</code>, <code>red-1</code>, <code>red-2</code>, …, <code>red-14</code>. See the demo to make a good picture of what variations are. Variation 11 to 14 are color accents.</p>
+<h2 id="CSS-Classes"><a href="#CSS-Classes" class="headerlink" title="CSS Classes"></a>CSS Classes</h2><p>Use <code>text-</code> or <code>bg-</code> prefixes as class names to change the color of text or the color of the background.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- changing text color --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"text-primary"</span>&gt;</span>....<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- changing background color --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"bg-positive"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Stylus-Color-Variables"><a href="#Stylus-Color-Variables" class="headerlink" title="Stylus Color Variables"></a>Stylus Color Variables</h2><p>In your Stylus App code you can use them as <code>$primary</code>, <code>$red-1</code>, and so on.</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span></span><br><span class="line">  <span class="attribute">color</span> <span class="variable">$red</span>-<span class="number">1</span></span><br><span class="line">  <span class="attribute">background-color</span> <span class="variable">$grey</span>-<span class="number">5</span></span><br></pre></td></tr></table></figure>
+<p>The full list of colors is stored in the <code>$colors</code> array. You can change it to add/remove/change colors and all Quasar Components will generate CSS according to those colors.</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">$colors ?= &#123;</span><br><span class="line">  neutral: $neutral</span><br><span class="line">  primary: $primary</span><br><span class="line">  secondary: $secondary</span><br><span class="line">  tertiary: $tertiary</span><br><span class="line">  positive: $positive</span><br><span class="line">  negative: $negative</span><br><span class="line">  warning: $warning</span><br><span class="line">  info: $info</span><br><span class="line">  light: $light</span><br><span class="line">  dark: $dark,</span><br><span class="line"></span><br><span class="line">  red: $red,</span><br><span class="line">  pink: $pink,</span><br><span class="line">  purple: $purple,</span><br><span class="line">  deep-purple: $deep-purple,</span><br><span class="line">  indigo: $indigo,</span><br><span class="line">  blue: $blue,</span><br><span class="line">  light-blue: $light-blue,</span><br><span class="line">  cyan: $cyan,</span><br><span class="line">  teal: $teal,</span><br><span class="line">  green: $green,</span><br><span class="line">  light-green: $light-green,</span><br><span class="line">  lime: $lime,</span><br><span class="line">  yellow: $yellow,</span><br><span class="line">  amber: $amber,</span><br><span class="line">  orange: $orange,</span><br><span class="line">  deep-orange: $deep-orange,</span><br><span class="line">  brown: $brown,</span><br><span class="line">  grey: $grey,</span><br><span class="line">  blue-grey: $blue-grey</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -410,6 +404,76 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Quasar CSS Shadows]]></title>
+      <url>http://quasar-framework.org/api/css-shadows.html</url>
+      <content type="html"><![CDATA[<p>Simple yet effective way to add shadows to create a depth effect.<br>The shadows are in accordance to Material Design speifications.<br>Don’t forget to check the demo.</p>
+<input type="hidden" data-fullpage-demo="shadows">
+
+<table>
+<thead>
+<tr>
+<th>CSS Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>no-shadow</code></td>
+<td>Remove any shadow</td>
+</tr>
+<tr>
+<td><code>inset-shadow</code></td>
+<td>Set an inset shadow</td>
+</tr>
+<tr>
+<td><code>shadow-1</code>, <code>hoverable</code>, <code>hoverable-1</code></td>
+<td>Set a depth of 1 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-2</code>, <code>hoverable-2</code></td>
+<td>Set a depth of 2 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-3</code>, <code>hoverable-3</code></td>
+<td>Set a depth of 3 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-4</code>, <code>hoverable-4</code></td>
+<td>Set a depth of 4 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-5</code>, <code>hoverable-5</code></td>
+<td>Set a depth of 5 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-transition</code></td>
+<td>Apply a CSS transition on the shadow; best use in conjonction with <code>hoverable</code> classes</td>
+</tr>
+</tbody>
+</table>
+<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"shadow-1"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Stylus Variables]]></title>
+      <url>http://quasar-framework.org/api/css-stylus-variables.html</url>
+      <content type="html"><![CDATA[<p>Quasar CSS is a blank slate that you can easily customize and modify to fit your brand, while still following the standards of each platform. The best apps in the app stores are fully customized and Quasar makes it easy to do the same with your App.</p>
+<p>Quasar is built on top of Stylus, which allows it to set some default styles for your App but makes it extremely easy for you to change the defaults in your App code.</p>
+<p>Customizing a theme means overriding Stylus variables which can hold colors, sizes, border types and so on. To understand how and where to make use of the full list of variables below, read <a href="/guide/quasar-theming.html">Guide &gt; Theming</a>.</p>
+<h2 id="Variables-List"><a href="#Variables-List" class="headerlink" title="Variables List"></a>Variables List</h2><!-- DO NOT WRITE ANYTHING BELOW THIS LINE -->
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Overview]]></title>
+      <url>http://quasar-framework.org/api/index.html</url>
+      <content type="html"><![CDATA[<p>Learn here about the API specifications of every feature embedded in Quasar Framework. How to require a script, how to create a route, how to detect if the app is running within Cordova or on a desktop, and many more, including Quasar CSS specifications.</p>
+<p>By default, Quasar covers a lot of areas of Web development with ready to use API which simplifies your code and hides the different platform quirks.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Typography]]></title>
       <url>http://quasar-framework.org/api/css-typography.html</url>
       <content type="html"><![CDATA[<p><input type="hidden" data-fullpage-demo="typography"><br>See how headings, blockquotes, definitions lists and more are displayed in the demo. At the end of this page you can read about CSS helper classes.</p>
@@ -496,68 +560,6 @@
 </tr>
 </tbody>
 </table>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar CSS Shadows]]></title>
-      <url>http://quasar-framework.org/api/css-shadows.html</url>
-      <content type="html"><![CDATA[<p>Simple yet effective way to add shadows to create a depth effect.<br>The shadows are in accordance to Material Design speifications.<br>Don’t forget to check the demo.</p>
-<input type="hidden" data-fullpage-demo="shadows">
-
-<table>
-<thead>
-<tr>
-<th>CSS Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>no-shadow</code></td>
-<td>Remove any shadow</td>
-</tr>
-<tr>
-<td><code>inset-shadow</code></td>
-<td>Set an inset shadow</td>
-</tr>
-<tr>
-<td><code>shadow-1</code>, <code>hoverable</code>, <code>hoverable-1</code></td>
-<td>Set a depth of 1 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-2</code>, <code>hoverable-2</code></td>
-<td>Set a depth of 2 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-3</code>, <code>hoverable-3</code></td>
-<td>Set a depth of 3 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-4</code>, <code>hoverable-4</code></td>
-<td>Set a depth of 4 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-5</code>, <code>hoverable-5</code></td>
-<td>Set a depth of 5 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-transition</code></td>
-<td>Apply a CSS transition on the shadow; best use in conjonction with <code>hoverable</code> classes</td>
-</tr>
-</tbody>
-</table>
-<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"shadow-1"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Stylus Variables]]></title>
-      <url>http://quasar-framework.org/api/css-stylus-variables.html</url>
-      <content type="html"><![CDATA[<p>Quasar CSS is a blank slate that you can easily customize and modify to fit your brand, while still following the standards of each platform. The best apps in the app stores are fully customized and Quasar makes it easy to do the same with your App.</p>
-<p>Quasar is built on top of Stylus, which allows it to set some default styles for your App but makes it extremely easy for you to change the defaults in your App code.</p>
-<p>Customizing a theme means overriding Stylus variables which can hold colors, sizes, border types and so on. To understand how and where to make use of the full list of variables below, read <a href="/guide/quasar-theming.html">Guide &gt; Theming</a>.</p>
-<h2 id="Variables-List"><a href="#Variables-List" class="headerlink" title="Variables List"></a>Variables List</h2><!-- DO NOT WRITE ANYTHING BELOW THIS LINE -->
 ]]></content>
     </entry>
     
@@ -723,14 +725,6 @@
 </tr>
 </tbody>
 </table>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Overview]]></title>
-      <url>http://quasar-framework.org/api/index.html</url>
-      <content type="html"><![CDATA[<p>Learn here about the API specifications of every feature embedded in Quasar Framework. How to require a script, how to create a route, how to detect if the app is running within Cordova or on a desktop, and many more, including Quasar CSS specifications.</p>
-<p>By default, Quasar covers a lot of areas of Web development with ready to use API which simplifies your code and hides the different platform quirks.</p>
 ]]></content>
     </entry>
     
@@ -954,16 +948,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar Fullscreen]]></title>
-      <url>http://quasar-framework.org/api/js-app-fullscreen.html</url>
-      <content type="html"><![CDATA[<p>There are times when you want your website or App to run in fullscreen.<br>Quasar makes it easy by wrapping the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API" target="_blank" rel="external">Fullscreen API</a>.</p>
-<input type="hidden" data-external-demo="app-fullscreen">
-
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Determining if website is in fullscreen mode:</span></span><br><span class="line">(<span class="built_in">Boolean</span>) quasar.is.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Requesting fullscreen mode:</span></span><br><span class="line">quasar.request.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Exiting fullscreen mode:</span></span><br><span class="line">quasar.exit.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Toggle fullscreen mode:</span></span><br><span class="line">quasar.toggle.fullscreen();</span><br></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar App Visibility]]></title>
       <url>http://quasar-framework.org/api/js-app-visibility.html</url>
       <content type="html"><![CDATA[<p>Quasar makes use of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API" target="_blank" rel="external">Page Visibility API</a> which lets you know when a website/app is visible or in focus.</p>
@@ -987,6 +971,16 @@
 </tr>
 </tbody>
 </table>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar Fullscreen]]></title>
+      <url>http://quasar-framework.org/api/js-app-fullscreen.html</url>
+      <content type="html"><![CDATA[<p>There are times when you want your website or App to run in fullscreen.<br>Quasar makes it easy by wrapping the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API" target="_blank" rel="external">Fullscreen API</a>.</p>
+<input type="hidden" data-external-demo="app-fullscreen">
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Determining if website is in fullscreen mode:</span></span><br><span class="line">(<span class="built_in">Boolean</span>) quasar.is.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Requesting fullscreen mode:</span></span><br><span class="line">quasar.request.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Exiting fullscreen mode:</span></span><br><span class="line">quasar.exit.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Toggle fullscreen mode:</span></span><br><span class="line">quasar.toggle.fullscreen();</span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -1548,15 +1542,9 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar Action Sheet]]></title>
-      <url>http://quasar-framework.org/components/action-sheet.html</url>
-      <content type="html"><![CDATA[<p>Action Sheets slide up from the bottom edge of the device screen, and display a set of options with the ability to confirm or cancel an action. Action Sheets can sometimes be used as an alternative to menus, however, they should not be used for navigation.</p>
-<p>The Action Sheet always appears above any other components on the page, and must be dismissed in order to interact with the underlying content. When it is triggered, the rest of the page darkens to give more focus to the Action Sheet options.</p>
-<input type="hidden" data-fullpage-demo="action-sheet">
-
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.action.sheet(&#123;</span><br><span class="line">  title: <span class="string">'Article Actions'</span>,</span><br><span class="line">  buttons: [</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Delete'</span>,</span><br><span class="line">      icon: <span class="string">'delete'</span>,</span><br><span class="line">      handler: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        quasar.notify.positive(<span class="string">'Deleted Article'</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    ...,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Cancel'</span>,</span><br><span class="line">      icon: <span class="string">'cancel'</span>,</span><br><span class="line">      classes: <span class="string">'text-primary'</span>,</span><br><span class="line">      handler: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// quasar.notify('Cancelled...');</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>The last button specified is always used as a <em>Cancel</em> option to dismiss the Action Sheet and is displayed distinctively from the rest of the buttons.</p>
-]]></content>
+      <title></title>
+      <url>http://quasar-framework.org/blog/index.html</url>
+      <content type="html"></content>
     </entry>
     
     <entry>
@@ -1568,6 +1556,18 @@
 <h3 id="“slide”-transition"><a href="#“slide”-transition" class="headerlink" title="“slide” transition"></a>“slide” transition</h3><p>Slide the DOM element up or down based on its visibility.</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;!-- Template for VueModel below --&gt;</span><br><span class="line">&lt;img</span><br><span class="line">  v-show="visible" &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span><br><span class="line">  transition="slide" &lt;&lt;&lt;&lt;&lt;&lt;</span><br><span class="line">  src="assets/quasar.jpg"</span><br><span class="line">&gt;</span><br><span class="line">&lt;button @click="toggleVisibility()"&gt;Toggle&lt;/button&gt;</span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// VueModel for template above</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  ...,</span><br><span class="line">  data: &#123;</span><br><span class="line">    ...,</span><br><span class="line">    visible: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    ...,</span><br><span class="line">    toggleVisibility: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.visible = !<span class="keyword">this</span>.visible;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar Action Sheet]]></title>
+      <url>http://quasar-framework.org/components/action-sheet.html</url>
+      <content type="html"><![CDATA[<p>Action Sheets slide up from the bottom edge of the device screen, and display a set of options with the ability to confirm or cancel an action. Action Sheets can sometimes be used as an alternative to menus, however, they should not be used for navigation.</p>
+<p>The Action Sheet always appears above any other components on the page, and must be dismissed in order to interact with the underlying content. When it is triggered, the rest of the page darkens to give more focus to the Action Sheet options.</p>
+<input type="hidden" data-fullpage-demo="action-sheet">
+
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.action.sheet(&#123;</span><br><span class="line">  title: <span class="string">'Article Actions'</span>,</span><br><span class="line">  buttons: [</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Delete'</span>,</span><br><span class="line">      icon: <span class="string">'delete'</span>,</span><br><span class="line">      handler: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        quasar.notify.positive(<span class="string">'Deleted Article'</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    ...,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Cancel'</span>,</span><br><span class="line">      icon: <span class="string">'cancel'</span>,</span><br><span class="line">      classes: <span class="string">'text-primary'</span>,</span><br><span class="line">      handler: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// quasar.notify('Cancelled...');</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>The last button specified is always used as a <em>Cancel</em> option to dismiss the Action Sheet and is displayed distinctively from the rest of the buttons.</p>
 ]]></content>
     </entry>
     
@@ -1678,17 +1678,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar Breadcrumb]]></title>
-      <url>http://quasar-framework.org/components/breadcrumb.html</url>
-      <content type="html"><![CDATA[<p>Quasar Breadcrumbs is a graphical control element used as a navigational aid in UI. It allows users to keep track of their locations within programs, documents, or websites.</p>
-<p>This component only has CSS code, so you just have to follow the HTML structure in your templates for it.</p>
-<input type="hidden" data-fullpage-demo="breadcrumb">
-
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"breadcrumb"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">i</span>&gt;</span>home<span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">i</span>&gt;</span>mail<span class="tag">&lt;/<span class="name">i</span>&gt;</span> Quasar</span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">i</span>&gt;</span>cloud<span class="tag">&lt;/<span class="name">i</span>&gt;</span> Breadcrumb</span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Badge]]></title>
       <url>http://quasar-framework.org/components/badge.html</url>
       <content type="html"><![CDATA[<p>Quasar Badges are small graphical elements used to indicate something like the number of likes an article has, the new or unread messages in an inbox and so on.</p>
@@ -1697,6 +1686,17 @@
 
 <h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Basic examples --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"badge bg-primary text-white"</span>&gt;</span>badge<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"badge bg-secondary text-white shadow-1"</span>&gt;</span>10k<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- With Icon as detail --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"badge bg-purple text-white"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">i</span> <span class="attr">left-detail</span>&gt;</span>mail<span class="tag">&lt;/<span class="name">i</span>&gt;</span> 10</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- With text as detail --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"badge bg-amber"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"left-detail"</span>&gt;</span>Quasar<span class="tag">&lt;/<span class="name">span</span>&gt;</span> Framework</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"badge bg-secondary text-white"</span>&gt;</span></span><br><span class="line">  Quasar <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"right-detail"</span>&gt;</span>Framework<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Play with colors from Quasar <a href="/api/css-color-palette.html">API &gt; CSS &gt; Color Palette</a>.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar Breadcrumb]]></title>
+      <url>http://quasar-framework.org/components/breadcrumb.html</url>
+      <content type="html"><![CDATA[<p>Quasar Breadcrumbs is a graphical control element used as a navigational aid in UI. It allows users to keep track of their locations within programs, documents, or websites.</p>
+<p>This component only has CSS code, so you just have to follow the HTML structure in your templates for it.</p>
+<input type="hidden" data-fullpage-demo="breadcrumb">
+
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"breadcrumb"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">i</span>&gt;</span>home<span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">i</span>&gt;</span>mail<span class="tag">&lt;/<span class="name">i</span>&gt;</span> Quasar</span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">i</span>&gt;</span>cloud<span class="tag">&lt;/<span class="name">i</span>&gt;</span> Breadcrumb</span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -3019,6 +3019,8 @@
 <li><p>Configure <code>quasar.build.yml</code> (the <a href="/guide/quasar-app-configuration.html">App Configuration file</a>) so Quasar will embed these dependencies.</p>
 <p>You are interested in <code>deps</code> property which features both the Javascript dependency files as well as the CSS ones.<br>Take a look inside the <code>node_modules/[package_name]</code> folder and see what files to include for Quasar. The Javascript file is usually specified in <code>package.json</code> under the “main” property. Most packages have a <code>dist</code> folder featuring the files you need.</p>
 <blockquote>
+<p><strong>IMPORTANT</strong><br>Do <strong>not</strong> include the file extension for your JS or CSS imports. For example specify <em>node_modules/vue-google-maps/vue-google-maps</em> instead of <em>node_modules/vue-google-maps/vue-google-maps.js</em>.</p>
+<p>Depending on the build type (development or production), Quasar will embed, for example <code>vue-google-maps.js</code> or <code>vue-google-maps.min.js</code> (if this latter file exists). Remember not to end your import string with <code>.js</code> in <code>quasar.build.yml</code>. Same thing for CSS imports too.</p>
 <p>The order in which dependencies are specified matters!</p>
 </blockquote>
 </li>
@@ -3028,7 +3030,7 @@
 <h2 id="Study-Case"><a href="#Study-Case" class="headerlink" title="Study Case"></a>Study Case</h2><p>Let’s embed <code>vue-google-maps</code> as a study case.</p>
 <p>First we npm install it and see it depends on Q, Lodash and Vue. Vue is already supplied, so we only npm install Q and Lodash.</p>
 <p>Then we take a look into <code>node_modules/lodash</code> and <code>node_modules/q</code> folders to see what to tell Quasar to embed in <code>quasar.build.yml</code>.</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deps:</span></span><br><span class="line"><span class="attr">  js:</span> [</span><br><span class="line">    <span class="string">'node_modules/q/q.js'</span>,</span><br><span class="line">    <span class="string">'node_modules/lodash/index.js'</span>,</span><br><span class="line">    <span class="string">'node_modules/vue-google-maps/index.js'</span></span><br><span class="line">    ]</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deps:</span></span><br><span class="line"><span class="attr">  js:</span> [</span><br><span class="line">    <span class="string">'node_modules/q/q'</span>,</span><br><span class="line">    <span class="string">'node_modules/lodash/index'</span>,</span><br><span class="line">    <span class="string">'node_modules/vue-google-maps/index'</span></span><br><span class="line">    ]</span><br></pre></td></tr></table></figure>
 <p>Now all we have to do is use our new dependency. Looking on their website for a “standalone” use case, we see that the package exports <code>VueGoogleMap</code> global.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">VueGoogleMap.load(&#123;</span><br><span class="line">  <span class="string">'key'</span>: <span class="string">'YOUR_API_KEY'</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// this package requires us to declare the components</span></span><br><span class="line"><span class="comment">// we are going to use from it, so here it is:</span></span><br><span class="line">Vue.component(<span class="string">'google-map'</span>, VueGoogleMap.Map);</span><br></pre></td></tr></table></figure>
 <p>Now be creative on where to include the code above.</p>
@@ -3038,15 +3040,8 @@
 <p>and in your <code>src/index.html</code> you’ll write:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.boot(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  quasar.require.script(<span class="string">'js/app'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 <p>Read more about <a href="/guide/quasar-app-starting-point.html">Quasar Starting Point</a>.</p>
 <h4 id="Option-B"><a href="#Option-B" class="headerlink" title="Option B"></a>Option B</h4><p>If only one Page uses it, then embed the code in the script file of your Page (<code>script.*page-name*.js</code>), before defining <code>module.exports</code>.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Installation]]></title>
-      <url>http://quasar-framework.org/guide/installation.html</url>
-      <content type="html"><![CDATA[<p>Quasar relies on its own CLI (Command Line Interface) which does most of the heavy-lifting so you don’t have to take care of the redundant tasks. You must install it to generate and manage a Quasar App.</p>
-<h2 id="Installing-Quasar-CLI"><a href="#Installing-Quasar-CLI" class="headerlink" title="Installing Quasar CLI"></a>Installing Quasar CLI</h2><p>Make sure you have at least NodeJS 4.2.0 (latest always recommended) and latest NPM.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g quasar-cli</span><br></pre></td></tr></table></figure></p>
-<p>This is it. Next, <a href="/guide/create-app.html">create your first Quasar App</a>, read about the <a href="/guide/cli-commands.html">Quasar CLI</a> and follow the next documentation pages on this Guide.</p>
+<p>Or you can specify <code>components</code> property in your Page VueModel declaration:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">...</span><br><span class="line">module.exports = &#123;</span><br><span class="line">  ...,</span><br><span class="line">  components: &#123;</span><br><span class="line">    <span class="string">'google-map'</span>: VueGoogleMap.Map</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -3065,6 +3060,15 @@
 </ol>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ quasar new app-name</span><br></pre></td></tr></table></figure>
 <p>And don’t forget to have fun :)</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Installation]]></title>
+      <url>http://quasar-framework.org/guide/installation.html</url>
+      <content type="html"><![CDATA[<p>Quasar relies on its own CLI (Command Line Interface) which does most of the heavy-lifting so you don’t have to take care of the redundant tasks. You must install it to generate and manage a Quasar App.</p>
+<h2 id="Installing-Quasar-CLI"><a href="#Installing-Quasar-CLI" class="headerlink" title="Installing Quasar CLI"></a>Installing Quasar CLI</h2><p>Make sure you have at least NodeJS 4.2.0 (latest always recommended) and latest NPM.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g quasar-cli</span><br></pre></td></tr></table></figure></p>
+<p>This is it. Next, <a href="/guide/create-app.html">create your first Quasar App</a>, read about the <a href="/guide/cli-commands.html">Quasar CLI</a> and follow the next documentation pages on this Guide.</p>
 ]]></content>
     </entry>
     
