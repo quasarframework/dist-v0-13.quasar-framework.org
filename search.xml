@@ -351,58 +351,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar CSS Shadows]]></title>
-      <url>http://quasar-framework.org/api/css-shadows.html</url>
-      <content type="html"><![CDATA[<p>Simple yet effective way to add shadows to create a depth effect.<br>The shadows are in accordance to Material Design speifications.<br>Don’t forget to check the demo.</p>
-<input type="hidden" data-fullpage-demo="shadows">
-
-<table>
-<thead>
-<tr>
-<th>CSS Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>no-shadow</code></td>
-<td>Remove any shadow</td>
-</tr>
-<tr>
-<td><code>inset-shadow</code></td>
-<td>Set an inset shadow</td>
-</tr>
-<tr>
-<td><code>shadow-1</code>, <code>hoverable</code>, <code>hoverable-1</code></td>
-<td>Set a depth of 1 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-2</code>, <code>hoverable-2</code></td>
-<td>Set a depth of 2 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-3</code>, <code>hoverable-3</code></td>
-<td>Set a depth of 3 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-4</code>, <code>hoverable-4</code></td>
-<td>Set a depth of 4 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-5</code>, <code>hoverable-5</code></td>
-<td>Set a depth of 5 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-transition</code></td>
-<td>Apply a CSS transition on the shadow; best use in conjonction with <code>hoverable</code> classes</td>
-</tr>
-</tbody>
-</table>
-<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"shadow-1"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar CSS Positioning Classes]]></title>
       <url>http://quasar-framework.org/api/css-positioning.html</url>
       <content type="html"><![CDATA[<p>There are CSS classes supplied by Quasar to help you position a DOM element easily:</p>
@@ -476,6 +424,58 @@
 </tr>
 </tbody>
 </table>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar CSS Shadows]]></title>
+      <url>http://quasar-framework.org/api/css-shadows.html</url>
+      <content type="html"><![CDATA[<p>Simple yet effective way to add shadows to create a depth effect.<br>The shadows are in accordance to Material Design speifications.<br>Don’t forget to check the demo.</p>
+<input type="hidden" data-fullpage-demo="shadows">
+
+<table>
+<thead>
+<tr>
+<th>CSS Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>no-shadow</code></td>
+<td>Remove any shadow</td>
+</tr>
+<tr>
+<td><code>inset-shadow</code></td>
+<td>Set an inset shadow</td>
+</tr>
+<tr>
+<td><code>shadow-1</code>, <code>hoverable</code>, <code>hoverable-1</code></td>
+<td>Set a depth of 1 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-2</code>, <code>hoverable-2</code></td>
+<td>Set a depth of 2 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-3</code>, <code>hoverable-3</code></td>
+<td>Set a depth of 3 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-4</code>, <code>hoverable-4</code></td>
+<td>Set a depth of 4 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-5</code>, <code>hoverable-5</code></td>
+<td>Set a depth of 5 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-transition</code></td>
+<td>Apply a CSS transition on the shadow; best use in conjonction with <code>hoverable</code> classes</td>
+</tr>
+</tbody>
+</table>
+<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"shadow-1"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
     
@@ -584,24 +584,6 @@
 </tr>
 </tbody>
 </table>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Overview]]></title>
-      <url>http://quasar-framework.org/api/index.html</url>
-      <content type="html"><![CDATA[<p>Learn here about the API specifications of every feature embedded in Quasar Framework. How to require a script, how to create a route, how to detect if the app is running within Cordova or on a desktop, and many more, including Quasar CSS specifications.</p>
-<p>By default, Quasar covers a lot of areas of Web development with ready to use API which simplifies your code and hides the different platform quirks.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar Fullscreen]]></title>
-      <url>http://quasar-framework.org/api/js-app-fullscreen.html</url>
-      <content type="html"><![CDATA[<p>There are times when you want your website or App to run in fullscreen.<br>Quasar makes it easy by wrapping the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API" target="_blank" rel="external">Fullscreen API</a>.</p>
-<input type="hidden" data-external-demo="app-fullscreen">
-
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Determining if website is in fullscreen mode:</span></span><br><span class="line">(<span class="built_in">Boolean</span>) quasar.is.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Requesting fullscreen mode:</span></span><br><span class="line">quasar.request.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Exiting fullscreen mode:</span></span><br><span class="line">quasar.exit.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Toggle fullscreen mode:</span></span><br><span class="line">quasar.toggle.fullscreen();</span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -837,33 +819,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar App Visibility]]></title>
-      <url>http://quasar-framework.org/api/js-app-visibility.html</url>
-      <content type="html"><![CDATA[<p>Quasar makes use of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API" target="_blank" rel="external">Page Visibility API</a> which lets you know when a website/app is visible or in focus.</p>
-<input type="hidden" data-fullpage-demo="app-visibility">
-
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="built_in">Boolean</span>) quasar.app.is.visible();</span><br></pre></td></tr></table></figure>
-<p>There is also an event triggered when focus changes:</p>
-<table>
-<thead>
-<tr>
-<th>Event Name</th>
-<th>Parameters</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>app:visibility</td>
-<td>(String) state</td>
-<td>App got focus if <code>state</code> is <code>visible</code> or lost focus if <code>state</code> is <code>hidden</code></td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Ajax Requests]]></title>
       <url>http://quasar-framework.org/api/js-ajax-requests.html</url>
       <content type="html"><![CDATA[<p>Quasar Ajax Requests are a wrapper over jQuery’s <code>$.ajax()</code> method. There are many features added on top of it.</p>
@@ -1079,6 +1034,51 @@
 <blockquote>
 <p><strong>NOTE</strong><br>When aborting all requests, you may want to exclude some of them. For this, use the <code>persistent</code> property when making those particular requests.</p>
 </blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Overview]]></title>
+      <url>http://quasar-framework.org/api/index.html</url>
+      <content type="html"><![CDATA[<p>Learn here about the API specifications of every feature embedded in Quasar Framework. How to require a script, how to create a route, how to detect if the app is running within Cordova or on a desktop, and many more, including Quasar CSS specifications.</p>
+<p>By default, Quasar covers a lot of areas of Web development with ready to use API which simplifies your code and hides the different platform quirks.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar Fullscreen]]></title>
+      <url>http://quasar-framework.org/api/js-app-fullscreen.html</url>
+      <content type="html"><![CDATA[<p>There are times when you want your website or App to run in fullscreen.<br>Quasar makes it easy by wrapping the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API" target="_blank" rel="external">Fullscreen API</a>.</p>
+<input type="hidden" data-external-demo="app-fullscreen">
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Determining if website is in fullscreen mode:</span></span><br><span class="line">(<span class="built_in">Boolean</span>) quasar.is.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Requesting fullscreen mode:</span></span><br><span class="line">quasar.request.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Exiting fullscreen mode:</span></span><br><span class="line">quasar.exit.fullscreen();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Toggle fullscreen mode:</span></span><br><span class="line">quasar.toggle.fullscreen();</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar App Visibility]]></title>
+      <url>http://quasar-framework.org/api/js-app-visibility.html</url>
+      <content type="html"><![CDATA[<p>Quasar makes use of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API" target="_blank" rel="external">Page Visibility API</a> which lets you know when a website/app is visible or in focus.</p>
+<input type="hidden" data-fullpage-demo="app-visibility">
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="built_in">Boolean</span>) quasar.app.is.visible();</span><br></pre></td></tr></table></figure>
+<p>There is also an event triggered when focus changes:</p>
+<table>
+<thead>
+<tr>
+<th>Event Name</th>
+<th>Parameters</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app:visibility</td>
+<td>(String) state</td>
+<td>App got focus if <code>state</code> is <code>visible</code> or lost focus if <code>state</code> is <code>hidden</code></td>
+</tr>
+</tbody>
+</table>
 ]]></content>
     </entry>
     
@@ -1454,24 +1454,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar Scroll Fire]]></title>
-      <url>http://quasar-framework.org/api/js-scroll-fire-directive.html</url>
-      <content type="html"><![CDATA[<p>“Scroll Fire” is a feature that enables a method to be called (once and only once) when user scrolls current page to a specific scroll position in pixels.</p>
-<input type="hidden" data-fullpage-demo="scroll-fire">
-
-<p>For ease of use, its implementation is through a Vue Directive called <code>v-scroll-fire</code>.</p>
-<blockquote>
-<p><strong>NOTE</strong><br>There is also a <code>v-scroll</code> directive which fires whenever user scrolls the Page, available to read <a href="/api/js-vue-directives.html#Directive-“v-scroll”">here</a>.</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Template for VueModel below --&gt;</span></span><br><span class="line">....</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-scroll-fire</span>=<span class="string">"bounceImage"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">....</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// VueModel for template above</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  ...,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    bounceImage: <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">      element.velocity(<span class="string">'callout.tada'</span>, &#123;</span><br><span class="line">        display: <span class="literal">null</span></span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><strong>IMPORTANT</strong><br>For performance purposes, the scroll listener function injected  is by default debounced by 50ms. Read more about <code>debouncing</code> <a href="/api/js-helpers-and-utils.html#Debounce-Function">here</a>.</p>
-</blockquote>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Require]]></title>
       <url>http://quasar-framework.org/api/js-require-script-or-css.html</url>
       <content type="html"><![CDATA[<p>This feature is used to dynamically include <code>.js</code> files or inject <code>.css</code> ones.</p>
@@ -1543,6 +1525,24 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Quasar Scroll Fire]]></title>
+      <url>http://quasar-framework.org/api/js-scroll-fire-directive.html</url>
+      <content type="html"><![CDATA[<p>“Scroll Fire” is a feature that enables a method to be called (once and only once) when user scrolls current page to a specific scroll position in pixels.</p>
+<input type="hidden" data-fullpage-demo="scroll-fire">
+
+<p>For ease of use, its implementation is through a Vue Directive called <code>v-scroll-fire</code>.</p>
+<blockquote>
+<p><strong>NOTE</strong><br>There is also a <code>v-scroll</code> directive which fires whenever user scrolls the Page, available to read <a href="/api/js-vue-directives.html#Directive-“v-scroll”">here</a>.</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Template for VueModel below --&gt;</span></span><br><span class="line">....</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-scroll-fire</span>=<span class="string">"bounceImage"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">....</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// VueModel for template above</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  ...,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    bounceImage: <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">      element.velocity(<span class="string">'callout.tada'</span>, &#123;</span><br><span class="line">        display: <span class="literal">null</span></span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>IMPORTANT</strong><br>For performance purposes, the scroll listener function injected  is by default debounced by 50ms. Read more about <code>debouncing</code> <a href="/api/js-helpers-and-utils.html#Debounce-Function">here</a>.</p>
+</blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Handling Touch Events]]></title>
       <url>http://quasar-framework.org/api/js-touch-events.html</url>
       <content type="html"><![CDATA[<p>Quasar makes good use of <a href="http://hammerjs.github.io/" target="_blank" rel="external">HammerJS</a> and has specific API to nicely wrap touch events.</p>
@@ -1567,6 +1567,18 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Quasar Vue Transitions]]></title>
+      <url>http://quasar-framework.org/api/js-vue-transitions.html</url>
+      <content type="html"><![CDATA[<p>At the moment, Quasar provides only one ready to use Vue transition. If you don’t know what a transition is, read <a href="http://vuejs.org/guide/transitions.html" target="_blank" rel="external">here</a>.<br>Vue transitions work alongside <code>v-show</code>, <code>v-if</code> and <code>v-for</code> Vue directives.</p>
+<input type="hidden" data-fullpage-demo="transitions">
+
+<h3 id="“slide”-transition"><a href="#“slide”-transition" class="headerlink" title="“slide” transition"></a>“slide” transition</h3><p>Slide the DOM element up or down based on its visibility.</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;!-- Template for VueModel below --&gt;</span><br><span class="line">&lt;img</span><br><span class="line">  v-show="visible" &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span><br><span class="line">  transition="slide" &lt;&lt;&lt;&lt;&lt;&lt;</span><br><span class="line">  src="assets/quasar.jpg"</span><br><span class="line">&gt;</span><br><span class="line">&lt;button @click="toggleVisibility()"&gt;Toggle&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// VueModel for template above</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  ...,</span><br><span class="line">  data: &#123;</span><br><span class="line">    ...,</span><br><span class="line">    visible: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    ...,</span><br><span class="line">    toggleVisibility: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.visible = !<span class="keyword">this</span>.visible;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Vue Directives]]></title>
       <url>http://quasar-framework.org/api/js-vue-directives.html</url>
       <content type="html"><![CDATA[<p>Quasar provides some useful ready to use Vue directives. If you don’t know what a directive is, read <a href="http://vuejs.org/guide/custom-directive.html" target="_blank" rel="external">here</a>.</p>
@@ -1577,6 +1589,9 @@
 <h4 id="Example-2-Function-Parameter"><a href="#Example-2-Function-Parameter" class="headerlink" title="Example 2. Function Parameter."></a>Example 2. Function Parameter.</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Template for VueModel below --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-page-link</span>=<span class="string">"navigateToBookstore"</span>&gt;</span>Go to Bookstore<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  ...,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    ...,</span><br><span class="line">    navigateToBookstore: <span class="function"><span class="keyword">function</span>(<span class="params">navigateTo</span>) </span>&#123;</span><br><span class="line">      <span class="comment">// do something here before navigating</span></span><br><span class="line">      <span class="comment">// and finally:</span></span><br><span class="line">      navigateTo(<span class="string">'#/bookstore'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h3 id="Directive-“v-exit-app”"><a href="#Directive-“v-exit-app”" class="headerlink" title="Directive “v-exit-app”"></a>Directive “v-exit-app”</h3><p>Adds click event to close the App when running under Cordova wrapper, otherwise it just hides the respective element.<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-exit-app</span>&gt;</span><span class="tag">&lt;<span class="name">i</span>&gt;</span>close<span class="tag">&lt;<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><strong>NOTE</strong><br>It works ONLY for Android apps. iOS App Store policy forbids an App to self close. On any other platform it just hides the element used upon.</p>
+</blockquote>
 <h3 id="Directive-“v-scroll”"><a href="#Directive-“v-scroll”" class="headerlink" title="Directive “v-scroll”"></a>Directive “v-scroll”</h3><p>This one takes one parameter (a Function) and fires when user scrolls the Page containing that DOM node.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Template for VueModel below --&gt;</span></span><br><span class="line">......</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-scroll</span>=<span class="string">"scrolled"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">......</span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// VueModel for template above</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  ...,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    ...,</span><br><span class="line">    scrolled: <span class="function"><span class="keyword">function</span>(<span class="params">position</span>) </span>&#123;</span><br><span class="line">      <span class="comment">// when this method is invoked then it means user</span></span><br><span class="line">      <span class="comment">// has scrolled the Page to `position`</span></span><br><span class="line">      <span class="comment">//</span></span><br><span class="line">      <span class="comment">// `position` is an Integer designating the current</span></span><br><span class="line">      <span class="comment">// scroll position in pixels.</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -1602,18 +1617,6 @@
 <p>In the example above <code>attributes</code> is a variable from VM data. It can be a String or an Array of Strings. Some examples of its effects:</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">// `attributes` has value 'close-me' then DIV below</span><br><span class="line">// has empty HTML attribute 'close-me' added.</span><br><span class="line">&lt;div close-me&gt;...&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">// Changing `attributes` to value "active" makes</span><br><span class="line">// the DIV's DOM node look like this:</span><br><span class="line">&lt;div active&gt;...&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">// If `attributes` is an Array of String, like</span><br><span class="line">// ['close-me', 'active'] then DIV's DOM node looks like this:</span><br><span class="line">&lt;div active close-me&gt;...&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="Directive-“v-touch”"><a href="#Directive-“v-touch”" class="headerlink" title="Directive “v-touch”"></a>Directive “v-touch”</h3><p>This one is explained in detail on <a href="/api/js-touch-events.html#Vue-‘v-touch’-directive">Touch Events</a> page.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar Vue Transitions]]></title>
-      <url>http://quasar-framework.org/api/js-vue-transitions.html</url>
-      <content type="html"><![CDATA[<p>At the moment, Quasar provides only one ready to use Vue transition. If you don’t know what a transition is, read <a href="http://vuejs.org/guide/transitions.html" target="_blank" rel="external">here</a>.<br>Vue transitions work alongside <code>v-show</code>, <code>v-if</code> and <code>v-for</code> Vue directives.</p>
-<input type="hidden" data-fullpage-demo="transitions">
-
-<h3 id="“slide”-transition"><a href="#“slide”-transition" class="headerlink" title="“slide” transition"></a>“slide” transition</h3><p>Slide the DOM element up or down based on its visibility.</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;!-- Template for VueModel below --&gt;</span><br><span class="line">&lt;img</span><br><span class="line">  v-show="visible" &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span><br><span class="line">  transition="slide" &lt;&lt;&lt;&lt;&lt;&lt;</span><br><span class="line">  src="assets/quasar.jpg"</span><br><span class="line">&gt;</span><br><span class="line">&lt;button @click="toggleVisibility()"&gt;Toggle&lt;/button&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// VueModel for template above</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  ...,</span><br><span class="line">  data: &#123;</span><br><span class="line">    ...,</span><br><span class="line">    visible: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    ...,</span><br><span class="line">    toggleVisibility: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.visible = !<span class="keyword">this</span>.visible;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -1669,17 +1672,6 @@
 </blockquote>
 <h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">quasar.action.sheet(&#123;</span><br><span class="line">  title: <span class="string">'Article Actions'</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// specify ONLY IF you want gallery mode:</span></span><br><span class="line">  gallery: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">  buttons: [</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Delete'</span>,</span><br><span class="line"></span><br><span class="line">      <span class="comment">// Choose one of the following two:</span></span><br><span class="line">      icon: <span class="string">'delete'</span>, <span class="comment">// specify ONLY IF using icon</span></span><br><span class="line">      avatar: <span class="string">'assets/some-avatar.png'</span>, <span class="comment">// specify ONLY IF using avatar</span></span><br><span class="line"></span><br><span class="line">      handler: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        quasar.notify.positive(<span class="string">'Deleted Article'</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    ...,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Cancel'</span>,</span><br><span class="line">      icon: <span class="string">'cancel'</span>,</span><br><span class="line">      classes: <span class="string">'text-primary'</span>,</span><br><span class="line">      handler: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// quasar.notify('Cancelled...');</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>The last button specified is always used as a <em>Cancel</em> option to dismiss the Action Sheet and is displayed distinctively from the rest of the buttons.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar Breadcrumb]]></title>
-      <url>http://quasar-framework.org/components/breadcrumb.html</url>
-      <content type="html"><![CDATA[<p>Quasar Breadcrumbs is a graphical control element used as a navigational aid in UI. It allows users to keep track of their locations within programs, documents, or websites.</p>
-<p>This component only has CSS code, so you just have to follow the HTML structure in your templates for it.</p>
-<input type="hidden" data-fullpage-demo="breadcrumb">
-
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"breadcrumb"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">i</span>&gt;</span>home<span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">i</span>&gt;</span>mail<span class="tag">&lt;/<span class="name">i</span>&gt;</span> Quasar</span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">i</span>&gt;</span>cloud<span class="tag">&lt;/<span class="name">i</span>&gt;</span> Breadcrumb</span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -1787,6 +1779,17 @@
 </tbody>
 </table>
 <h2 id="Controlling-a-Notify"><a href="#Controlling-a-Notify" class="headerlink" title="Controlling a Notify"></a>Controlling a Notify</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> notify = quasar.notify(<span class="string">'Some message'</span>);</span><br><span class="line"></span><br><span class="line">notify.node.css(<span class="string">'background-color'</span>, <span class="string">'#f0a3a3'</span>);</span><br><span class="line">notify.vm.someDataVariable = <span class="string">'quasar'</span>;</span><br><span class="line">notify.dismiss();</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar Breadcrumb]]></title>
+      <url>http://quasar-framework.org/components/breadcrumb.html</url>
+      <content type="html"><![CDATA[<p>Quasar Breadcrumbs is a graphical control element used as a navigational aid in UI. It allows users to keep track of their locations within programs, documents, or websites.</p>
+<p>This component only has CSS code, so you just have to follow the HTML structure in your templates for it.</p>
+<input type="hidden" data-fullpage-demo="breadcrumb">
+
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"breadcrumb"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">i</span>&gt;</span>home<span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">i</span>&gt;</span>mail<span class="tag">&lt;/<span class="name">i</span>&gt;</span> Quasar</span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">i</span>&gt;</span>cloud<span class="tag">&lt;/<span class="name">i</span>&gt;</span> Breadcrumb</span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -3054,17 +3057,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar Toggle]]></title>
-      <url>http://quasar-framework.org/components/toggle.html</url>
-      <content type="html"><![CDATA[<input type="hidden" data-fullpage-demo="toggle">
-
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">toggle</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">toggle</span>&gt;</span></span><br><span class="line">  Toggle Label</span><br><span class="line"><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="Inside-of-a-List-Usage"><a href="#Inside-of-a-List-Usage" class="headerlink" title="Inside of a List Usage"></a>Inside of a List Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list inner-delimiter bordered"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span>&gt;</span>mail<span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-label"</span>&gt;</span>Toggle Label<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">toggle</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">toggle</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list inner-delimiter bordered"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">toggle</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">toggle</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></span><br><span class="line">      Toggle Label</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Tooltips]]></title>
       <url>http://quasar-framework.org/components/tooltips.html</url>
       <content type="html"><![CDATA[<p>Quasar Tooltips offer additional information to the user that otherwise would be hidden. The implementation is through a Quasar directive called <code>v-tooltip</code>.</p>
@@ -3094,6 +3086,17 @@
 </tr>
 </tbody>
 </table>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar Toggle]]></title>
+      <url>http://quasar-framework.org/components/toggle.html</url>
+      <content type="html"><![CDATA[<input type="hidden" data-fullpage-demo="toggle">
+
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">toggle</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">toggle</span>&gt;</span></span><br><span class="line">  Toggle Label</span><br><span class="line"><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Inside-of-a-List-Usage"><a href="#Inside-of-a-List-Usage" class="headerlink" title="Inside of a List Usage"></a>Inside of a List Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list inner-delimiter bordered"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span>&gt;</span>mail<span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-label"</span>&gt;</span>Toggle Label<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">toggle</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">toggle</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list inner-delimiter bordered"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">toggle</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">toggle</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></span><br><span class="line">      Toggle Label</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -3663,20 +3666,20 @@
       <title><![CDATA[Quasar CLI Release Notes]]></title>
       <url>http://quasar-framework.org/guide/quasar-cli-release-notes.html</url>
       <content type="html"><![CDATA[<p>NPM package holding Quasar CLI is <code>quasar-cli</code>.</p>
-<h4 id="v0-1-4-2016-06-14"><a href="#v0-1-4-2016-06-14" class="headerlink" title="v0.1.4 / 2016-06-14"></a>v0.1.4 / 2016-06-14</h4><ul>
+<h2 id="v0-1-4-2016-06-14"><a href="#v0-1-4-2016-06-14" class="headerlink" title="v0.1.4 / 2016-06-14"></a>v0.1.4 / 2016-06-14</h2><ul>
 <li>CLI Update Notifier. When new CLI version is released it will notify the user.</li>
 </ul>
-<h4 id="v0-1-3-2016-06-13"><a href="#v0-1-3-2016-06-13" class="headerlink" title="v0.1.3 / 2016-06-13"></a>v0.1.3 / 2016-06-13</h4><ul>
+<h2 id="v0-1-3-2016-06-13"><a href="#v0-1-3-2016-06-13" class="headerlink" title="v0.1.3 / 2016-06-13"></a>v0.1.3 / 2016-06-13</h2><ul>
 <li>Serve Static-Content Folders (<code>quasar serve</code>). Read more <a href="/guide/cli-commands.html#Serve-Static-Content-Folder">here</a>.</li>
 <li>When wrapping, you are able to <a href="/guide/native-mobile-app-wrapper.html#Wrap-your-App">skip Crosswalk plugin installation</a>: <code>quasar wrap -s</code> or <code>quasar wrap --slim</code>.</li>
 </ul>
-<h4 id="v0-1-2-2016-06-11"><a href="#v0-1-2-2016-06-11" class="headerlink" title="v0.1.2 / 2016-06-11"></a>v0.1.2 / 2016-06-11</h4><ul>
+<h2 id="v0-1-2-2016-06-11"><a href="#v0-1-2-2016-06-11" class="headerlink" title="v0.1.2 / 2016-06-11"></a>v0.1.2 / 2016-06-11</h2><ul>
 <li>fix: Cannot use ‘quasar wrap’ on Windows</li>
 </ul>
-<h4 id="v0-1-1-2016-06-10"><a href="#v0-1-1-2016-06-10" class="headerlink" title="v0.1.1 / 2016-06-10"></a>v0.1.1 / 2016-06-10</h4><ul>
+<h2 id="v0-1-1-2016-06-10"><a href="#v0-1-1-2016-06-10" class="headerlink" title="v0.1.1 / 2016-06-10"></a>v0.1.1 / 2016-06-10</h2><ul>
 <li>feat: Wrapper also installs Crosswalk plugin</li>
 </ul>
-<h4 id="v0-1-0-2016-06-06"><a href="#v0-1-0-2016-06-06" class="headerlink" title="v0.1.0 / 2016-06-06"></a>v0.1.0 / 2016-06-06</h4><ul>
+<h2 id="v0-1-0-2016-06-06"><a href="#v0-1-0-2016-06-06" class="headerlink" title="v0.1.0 / 2016-06-06"></a>v0.1.0 / 2016-06-06</h2><ul>
 <li>First public-ready release.</li>
 </ul>
 ]]></content>
@@ -3686,7 +3689,8 @@
       <title><![CDATA[Quasar Framework Release Notes]]></title>
       <url>http://quasar-framework.org/guide/quasar-framework-release-notes.html</url>
       <content type="html"><![CDATA[<p>NPM package holding Quasar Framework is <code>quasar-framework</code>.</p>
-<h4 id="v0-4-0-2016-06-28"><a href="#v0-4-0-2016-06-28" class="headerlink" title="v0.4.0 / 2016-06-28"></a>v0.4.0 / 2016-06-28</h4><p>Breaking change:</p>
+<h2 id="v0-4-1-2016-07-05"><a href="#v0-4-1-2016-07-05" class="headerlink" title="v0.4.1 / 2016-07-05"></a>v0.4.1 / 2016-07-05</h2><p>No breaking changes.<br>Fixed some bugs for iOS platform including <a href="https://github.com/rstoenescu/quasar-framework/issues/10" target="_blank" rel="external">blank screen  one</a>.</p>
+<h2 id="v0-4-0-2016-06-28"><a href="#v0-4-0-2016-06-28" class="headerlink" title="v0.4.0 / 2016-06-28"></a>v0.4.0 / 2016-06-28</h2><p>Breaking change:</p>
 <ul>
 <li><a href="/components/label.html">Label</a> replaces Badge.</li>
 <li>Simplified <a href="/components/list.html#List-with-Images">image (avatar and thumbnail) HTML syntax for Lists</a>.<ul>
@@ -3721,7 +3725,7 @@
 <li><code>text-italic</code>, <code>text-bold</code></li>
 <li><a href="/components/image-gallery.html#Avatar-Images"><strong>avatar</strong> image CSS class</a></li>
 </ul>
-<h4 id="v0-3-0-2016-06-21"><a href="#v0-3-0-2016-06-21" class="headerlink" title="v0.3.0 / 2016-06-21"></a>v0.3.0 / 2016-06-21</h4><p>No breaking changes.<br>New features:</p>
+<h2 id="v0-3-0-2016-06-21"><a href="#v0-3-0-2016-06-21" class="headerlink" title="v0.3.0 / 2016-06-21"></a>v0.3.0 / 2016-06-21</h2><p>No breaking changes.<br>New features:</p>
 <ul>
 <li>Pull down to refresh</li>
 <li>Infinite scroll</li>
@@ -3738,7 +3742,7 @@
 <li>fix: Default spinner for iOS is now different than Material</li>
 <li>Touch directive (<code>v-touch</code>) is now available for desktop too where touch actions can be simulated by dragging the mouse on the DOM elements.</li>
 </ul>
-<h4 id="v0-2-0-2016-06-16"><a href="#v0-2-0-2016-06-16" class="headerlink" title="v0.2.0 / 2016-06-16"></a>v0.2.0 / 2016-06-16</h4><p>   No breaking changes but lots of additions.<br>   A revisit of the <a href="/guide/quasar-pages.html">Quasar Pages</a> would be good.</p>
+<h2 id="v0-2-0-2016-06-16"><a href="#v0-2-0-2016-06-16" class="headerlink" title="v0.2.0 / 2016-06-16"></a>v0.2.0 / 2016-06-16</h2><p>   No breaking changes but lots of additions.<br>   A revisit of the <a href="/guide/quasar-pages.html">Quasar Pages</a> would be good.</p>
 <ul>
 <li>Parameterized Page Routes<br>Learn how to register a Page with multiple routes, like `#/library/:book/:page’. Read more <a href="/guide/parameterized-page-routes.html">here</a> how to handle this scenario.</li>
 <li>New properties available for <code>this</code> when exporting a function from Page script file (instead of an Object):<ul>
@@ -3753,16 +3757,104 @@
 <li>Global Progress feature; overlay with spinner API. Quasar also uses it now when loading a Page. Read more <a href="/api/js-global-progress.html">here</a>.</li>
 <li><code>dimmed</code> and <code>light-dimmed</code> CSS classes. Read more <a href="/api/css-visibility.html">here</a>.</li>
 </ul>
-<h4 id="v0-1-2-2016-06-13"><a href="#v0-1-2-2016-06-13" class="headerlink" title="v0.1.2 / 2016-06-13"></a>v0.1.2 / 2016-06-13</h4><ul>
+<h2 id="v0-1-2-2016-06-13"><a href="#v0-1-2-2016-06-13" class="headerlink" title="v0.1.2 / 2016-06-13"></a>v0.1.2 / 2016-06-13</h2><ul>
 <li>Updated some dependencies: jQuery to v3, Roboto font face to v0.5.0</li>
 <li>fix: Trigger Parallax events in the right order</li>
 <li>fix: Grid column selection; avoid VueJS glitch</li>
 <li>feat: Dialog with Toggles</li>
 <li>style: Improve design for Tree web component</li>
 </ul>
-<h4 id="v0-1-0-2016-06-06"><a href="#v0-1-0-2016-06-06" class="headerlink" title="v0.1.0 / 2016-06-06"></a>v0.1.0 / 2016-06-06</h4><ul>
+<h2 id="v0-1-0-2016-06-06"><a href="#v0-1-0-2016-06-06" class="headerlink" title="v0.1.0 / 2016-06-06"></a>v0.1.0 / 2016-06-06</h2><ul>
 <li>First public-ready release.</li>
 </ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar App Layouts]]></title>
+      <url>http://quasar-framework.org/guide/quasar-layouts.html</url>
+      <content type="html"><![CDATA[<p>Layouts are the elements that wrap page content, like navigational bar or drawers. Multiple pages can share the same Layout, which is one of the main reason for their existence.</p>
+<p>Because it’s easier and it ensures you’re using the Quasar standard, use <a href="/guide/cli-commands.html#Layouts">Quasar CLI</a> to build a Layout.</p>
+<p>Don’t forget to read more about the <a href="/guide/quasar-build-system.html">Build System</a> to understand how layouts are precompiled and bundled, what files are considered an entry-point and many more.</p>
+<h2 id="Structure"><a href="#Structure" class="headerlink" title="Structure"></a>Structure</h2><p>Each layout has its own folder (<code>/src/layouts/&lt;layout-name&gt;</code>) and has the following structure:</p>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Optional</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/assets</td>
+<td>Yes</td>
+<td>Folder to place images, fonts, … specific to the layout only</td>
+</tr>
+<tr>
+<td>layout.<strong>&lt;layout-name&gt;</strong>.js</td>
+<td></td>
+<td>Starting point of the Layout logic</td>
+</tr>
+<tr>
+<td>layout.<strong>&lt;layout-name&gt;</strong>.yml</td>
+<td></td>
+<td>YAML file with layout configuration (called <em>Manifest</em>)</td>
+</tr>
+<tr>
+<td>layout.<strong>&lt;layout-name&gt;</strong>.html</td>
+<td></td>
+<td>Template for your Layout</td>
+</tr>
+<tr>
+<td>layout.<strong>&lt;layout-name&gt;</strong>.styl</td>
+<td>Yes</td>
+<td>Starting point of the Layout CSS</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>NOTE</strong><br>If you do not use the optional files or folder, delete them to get a boost in build times. This folder structure is created by <a href="/guide/cli-commands.html#Create-Layout">Quasar CLI</a> so you don’t have to manually do it.</p>
+</blockquote>
+<h2 id="Layout-Controller-Javascript"><a href="#Layout-Controller-Javascript" class="headerlink" title="Layout Controller (Javascript)"></a>Layout Controller (Javascript)</h2><p>The starting point of a Quasar Layout is <em>layout.layout-name.js</em> file. Think of it as the Controller of a Layout.</p>
+<p>It has a basic CommonJS structure that exports a Vue instantiation object or a function for doing asynchronous operations before calling a callback with a Vue instantiation object.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Option 1. Supply Vue instantiation object</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./layout.layout-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123; <span class="comment">// Vue instance</span></span><br><span class="line">  template: html,</span><br><span class="line">  ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Option 2. Do some asynchronous operations first</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./layout.layout-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">  <span class="comment">/*</span><br><span class="line">   * Properties available:</span><br><span class="line">   */</span></span><br><span class="line">  <span class="keyword">this</span>.name <span class="comment">// [String] Layout name (eg. 'main')</span></span><br><span class="line">  <span class="comment">/*</span><br><span class="line">   * 'this' also contains Layout manifest;</span><br><span class="line">   * for example if you have specific</span><br><span class="line">   * CSS for the layout, then:</span><br><span class="line">   * 'this.css' will contain the URL</span><br><span class="line">   */</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="comment">// asynchronous operations</span></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">  done(&#123; <span class="comment">// Vue instance</span></span><br><span class="line">    template: html,</span><br><span class="line">    ...</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><ol>
+<li><p>When exporting a function, make sure the callback is called, otherwise the Page will never load.</p>
+</li>
+<li><p>Include other JS files for modularity by <em>require()</em>-ing them. Take full advantage of Webpack.<br>Read more about the <a href="/guide/quasar-build-system.html">Build System</a> to understand.</p>
+</li>
+<li><p>Make sure you use <code>require(&#39;raw!.....&#39;)</code> syntax for the template so that it will get bundled automatically into your JS file with the help of the Build System. This saves one precious HTTP request. <strong>Do not require the template within the exporting function (if you use one) because Webpack won’t know it needs to be handled at compile time</strong>. So require it outside to avoid issues.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// do</span></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./some.html'</span>); <span class="comment">// &lt;&lt;&lt;</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">  done(&#123;</span><br><span class="line">    template: html <span class="comment">// &lt;&lt;&lt;</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// don't!</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">  done(&#123;</span><br><span class="line">    template: <span class="built_in">require</span>(<span class="string">'raw!./some.html'</span>) <span class="comment">// &lt;&lt;&lt;</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Make good use of the Vue component lifecycle methods (<code>created</code>, <code>beforeCompile</code>, <code>compiled</code>, <code>ready</code>, <code>beforeDestroy</code>, <code>destroyed</code>) and different props:</p>
+<p><img src="/images/vue-lifecycle.png" alt="Vue Lifecycle Diagram" title="Vue Lifecycle Diagram"></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Example making use of Vue component lifecycle methods</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./layout.main.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  template: html,</span><br><span class="line">  beforeCompile: ...,</span><br><span class="line">  compiled: ...,</span><br><span class="line">  destroyed: ...,</span><br><span class="line">  ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="Layout-Resources-Cleanup"><a href="#Layout-Resources-Cleanup" class="headerlink" title="Layout Resources Cleanup"></a>Layout Resources Cleanup</h3><p>Make sure you sanitize intervals, timeouts, requestAnimationFrames or anything else at <code>beforeDestroy</code> or <code>destroy</code> point, otherwise you may end up with bugs when user switches to another Layout.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Sanitization example within Layout</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./view.layout-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  template: html,</span><br><span class="line">  ready: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.timeout = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="comment">// do something;</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  destroy: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    clearInterval(<span class="keyword">this</span>.timeout);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>IMPORTANT</strong><br>Layout resources cleanup is essential otherwise unforeseen effects may occur leading to hard to track bugs.</p>
+</blockquote>
+<h3 id="Communicating-with-Page"><a href="#Communicating-with-Page" class="headerlink" title="Communicating with Page"></a>Communicating with Page</h3><p>Read about how to communicate between Page and Layouts  <a href="/guide/vue-model-communication.html">here</a>. It’s important to know how to share VueModel data between the two.</p>
+<h3 id="Global-Layout-Variable"><a href="#Global-Layout-Variable" class="headerlink" title="Global Layout Variable"></a>Global Layout Variable</h3><p>There is a global variable available for you to use called <code>quasar.current.layout</code> which holds properties like <code>name</code> and <code>vm</code> (current layout’s VueModel Object - good place to change VM’s reactive data).</p>
+<h2 id="Layout-Template"><a href="#Layout-Template" class="headerlink" title="Layout Template"></a>Layout Template</h2><p>The Quasar App Layout HTML represents a Vue instance template. Read more about the <a href="/guide/quasar-build-system.html#HTML-Files">Build System</a> to understand.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong><br>There are several Web Components that you can use. Some of them are mandatory. Read more about them and how to use them starting with <a href="/components/layout-overview.html">Components &gt; Layout Overview</a> documentation page.</p>
+</blockquote>
+<h3 id="quasar-variable"><a href="#quasar-variable" class="headerlink" title="$quasar variable"></a>$quasar variable</h3><p>From within the template you can directly access <code>quasar</code> global. Example below:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"$quasar.navigate.to.route('#/book')"</span>&gt;</span></span><br><span class="line">  Go to library</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>So rather than injecting a method in your VueModel which handles the <code>quasar</code> global and then attaching the method to the button from your template, you can specify the <code>quasar</code> handling within your templates.</p>
+<h2 id="Layout-CSS"><a href="#Layout-CSS" class="headerlink" title="Layout CSS"></a>Layout CSS</h2><p>Each Layout can use its own CSS. Notice that all CSS files have the <em>.styl</em> extension. This is because you can use Stylus (with NIB extension). Read more about the <a href="/guide/quasar-build-system.html">Build System</a> to understand.</p>
+<p>To better isolate scope of each Layout CSS, the <code>layout.*layout-name*.styl</code> files have by default the following structure:</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">.layout-X // where X is the name of the layout</span><br><span class="line">  //</span><br></pre></td></tr></table></figure>
+<p>Place all your Stylus code under <code>.layout-*X*</code>.</p>
+<h2 id="Layout-Assets"><a href="#Layout-Assets" class="headerlink" title="Layout Assets"></a>Layout Assets</h2><p>Place all your page assets (like images) inside the <code>/layouts/*layout-name*/assets/</code> folder.<br>Images get optimized by default on a production build.</p>
+<h2 id="Layout-Events"><a href="#Layout-Events" class="headerlink" title="Layout Events"></a>Layout Events</h2><p>Loading a Layout is a complex procedure involving requiring its script file, preparing script file (including resolving dependencies) and rendering it. You can hook into these procedures by making good use of the Events API. See <a href="/api/js-events-list.html#Layout-Events">Quasar Events List</a> and <a href="/api/js-events.html">Event API</a>.</p>
+<h2 id="Layout-Manifest"><a href="#Layout-Manifest" class="headerlink" title="Layout Manifest"></a>Layout Manifest</h2><p>Provide layout specific configuration (in YAML format), called <em>Manifest</em> in <code>/layouts/*layout-name*/layout.*layout-name*.yml</code>.</p>
+<p>Example of Layout Manifest property: <code>css</code>. This property gets computed by default if the <code>.styl</code> file exists in the layout folder (<strong>so it is optional!</strong>), but it can be overridden to point to other files. The path must start with the folder where app root <em>index.html</em> file exists.<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">css:</span> <span class="string">'path/to/css'</span></span><br></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
     
@@ -3947,90 +4039,13 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar App Layouts]]></title>
-      <url>http://quasar-framework.org/guide/quasar-layouts.html</url>
-      <content type="html"><![CDATA[<p>Layouts are the elements that wrap page content, like navigational bar or drawers. Multiple pages can share the same Layout, which is one of the main reason for their existence.</p>
-<p>Because it’s easier and it ensures you’re using the Quasar standard, use <a href="/guide/cli-commands.html#Layouts">Quasar CLI</a> to build a Layout.</p>
-<p>Don’t forget to read more about the <a href="/guide/quasar-build-system.html">Build System</a> to understand how layouts are precompiled and bundled, what files are considered an entry-point and many more.</p>
-<h2 id="Structure"><a href="#Structure" class="headerlink" title="Structure"></a>Structure</h2><p>Each layout has its own folder (<code>/src/layouts/&lt;layout-name&gt;</code>) and has the following structure:</p>
-<table>
-<thead>
-<tr>
-<th>Asset</th>
-<th>Optional</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>/assets</td>
-<td>Yes</td>
-<td>Folder to place images, fonts, … specific to the layout only</td>
-</tr>
-<tr>
-<td>layout.<strong>&lt;layout-name&gt;</strong>.js</td>
-<td></td>
-<td>Starting point of the Layout logic</td>
-</tr>
-<tr>
-<td>layout.<strong>&lt;layout-name&gt;</strong>.yml</td>
-<td></td>
-<td>YAML file with layout configuration (called <em>Manifest</em>)</td>
-</tr>
-<tr>
-<td>layout.<strong>&lt;layout-name&gt;</strong>.html</td>
-<td></td>
-<td>Template for your Layout</td>
-</tr>
-<tr>
-<td>layout.<strong>&lt;layout-name&gt;</strong>.styl</td>
-<td>Yes</td>
-<td>Starting point of the Layout CSS</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>NOTE</strong><br>If you do not use the optional files or folder, delete them to get a boost in build times. This folder structure is created by <a href="/guide/cli-commands.html#Create-Layout">Quasar CLI</a> so you don’t have to manually do it.</p>
-</blockquote>
-<h2 id="Layout-Controller-Javascript"><a href="#Layout-Controller-Javascript" class="headerlink" title="Layout Controller (Javascript)"></a>Layout Controller (Javascript)</h2><p>The starting point of a Quasar Layout is <em>layout.layout-name.js</em> file. Think of it as the Controller of a Layout.</p>
-<p>It has a basic CommonJS structure that exports a Vue instantiation object or a function for doing asynchronous operations before calling a callback with a Vue instantiation object.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Option 1. Supply Vue instantiation object</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./layout.layout-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123; <span class="comment">// Vue instance</span></span><br><span class="line">  template: html,</span><br><span class="line">  ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Option 2. Do some asynchronous operations first</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./layout.layout-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">  <span class="comment">/*</span><br><span class="line">   * Properties available:</span><br><span class="line">   */</span></span><br><span class="line">  <span class="keyword">this</span>.name <span class="comment">// [String] Layout name (eg. 'main')</span></span><br><span class="line">  <span class="comment">/*</span><br><span class="line">   * 'this' also contains Layout manifest;</span><br><span class="line">   * for example if you have specific</span><br><span class="line">   * CSS for the layout, then:</span><br><span class="line">   * 'this.css' will contain the URL</span><br><span class="line">   */</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="comment">// asynchronous operations</span></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">  done(&#123; <span class="comment">// Vue instance</span></span><br><span class="line">    template: html,</span><br><span class="line">    ...</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><ol>
-<li><p>When exporting a function, make sure the callback is called, otherwise the Page will never load.</p>
-</li>
-<li><p>Include other JS files for modularity by <em>require()</em>-ing them. Take full advantage of Webpack.<br>Read more about the <a href="/guide/quasar-build-system.html">Build System</a> to understand.</p>
-</li>
-<li><p>Make sure you use <code>require(&#39;raw!.....&#39;)</code> syntax for the template so that it will get bundled automatically into your JS file with the help of the Build System. This saves one precious HTTP request. <strong>Do not require the template within the exporting function (if you use one) because Webpack won’t know it needs to be handled at compile time</strong>. So require it outside to avoid issues.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// do</span></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./some.html'</span>); <span class="comment">// &lt;&lt;&lt;</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">  done(&#123;</span><br><span class="line">    template: html <span class="comment">// &lt;&lt;&lt;</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// don't!</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">  done(&#123;</span><br><span class="line">    template: <span class="built_in">require</span>(<span class="string">'raw!./some.html'</span>) <span class="comment">// &lt;&lt;&lt;</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Make good use of the Vue component lifecycle methods (<code>created</code>, <code>beforeCompile</code>, <code>compiled</code>, <code>ready</code>, <code>beforeDestroy</code>, <code>destroyed</code>) and different props:</p>
-<p><img src="/images/vue-lifecycle.png" alt="Vue Lifecycle Diagram" title="Vue Lifecycle Diagram"></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Example making use of Vue component lifecycle methods</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./layout.main.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  template: html,</span><br><span class="line">  beforeCompile: ...,</span><br><span class="line">  compiled: ...,</span><br><span class="line">  destroyed: ...,</span><br><span class="line">  ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="Layout-Resources-Cleanup"><a href="#Layout-Resources-Cleanup" class="headerlink" title="Layout Resources Cleanup"></a>Layout Resources Cleanup</h3><p>Make sure you sanitize intervals, timeouts, requestAnimationFrames or anything else at <code>beforeDestroy</code> or <code>destroy</code> point, otherwise you may end up with bugs when user switches to another Layout.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Sanitization example within Layout</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'raw!./view.layout-name.html'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  template: html,</span><br><span class="line">  ready: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.timeout = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="comment">// do something;</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  destroy: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    clearInterval(<span class="keyword">this</span>.timeout);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><strong>IMPORTANT</strong><br>Layout resources cleanup is essential otherwise unforeseen effects may occur leading to hard to track bugs.</p>
-</blockquote>
-<h3 id="Communicating-with-Page"><a href="#Communicating-with-Page" class="headerlink" title="Communicating with Page"></a>Communicating with Page</h3><p>Read about how to communicate between Page and Layouts  <a href="/guide/vue-model-communication.html">here</a>. It’s important to know how to share VueModel data between the two.</p>
-<h3 id="Global-Layout-Variable"><a href="#Global-Layout-Variable" class="headerlink" title="Global Layout Variable"></a>Global Layout Variable</h3><p>There is a global variable available for you to use called <code>quasar.current.layout</code> which holds properties like <code>name</code> and <code>vm</code> (current layout’s VueModel Object - good place to change VM’s reactive data).</p>
-<h2 id="Layout-Template"><a href="#Layout-Template" class="headerlink" title="Layout Template"></a>Layout Template</h2><p>The Quasar App Layout HTML represents a Vue instance template. Read more about the <a href="/guide/quasar-build-system.html#HTML-Files">Build System</a> to understand.</p>
-<blockquote>
-<p><strong>IMPORTANT</strong><br>There are several Web Components that you can use. Some of them are mandatory. Read more about them and how to use them starting with <a href="/components/layout-overview.html">Components &gt; Layout Overview</a> documentation page.</p>
-</blockquote>
-<h3 id="quasar-variable"><a href="#quasar-variable" class="headerlink" title="$quasar variable"></a>$quasar variable</h3><p>From within the template you can directly access <code>quasar</code> global. Example below:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"$quasar.navigate.to.route('#/book')"</span>&gt;</span></span><br><span class="line">  Go to library</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>So rather than injecting a method in your VueModel which handles the <code>quasar</code> global and then attaching the method to the button from your template, you can specify the <code>quasar</code> handling within your templates.</p>
-<h2 id="Layout-CSS"><a href="#Layout-CSS" class="headerlink" title="Layout CSS"></a>Layout CSS</h2><p>Each Layout can use its own CSS. Notice that all CSS files have the <em>.styl</em> extension. This is because you can use Stylus (with NIB extension). Read more about the <a href="/guide/quasar-build-system.html">Build System</a> to understand.</p>
-<p>To better isolate scope of each Layout CSS, the <code>layout.*layout-name*.styl</code> files have by default the following structure:</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">.layout-X // where X is the name of the layout</span><br><span class="line">  //</span><br></pre></td></tr></table></figure>
-<p>Place all your Stylus code under <code>.layout-*X*</code>.</p>
-<h2 id="Layout-Assets"><a href="#Layout-Assets" class="headerlink" title="Layout Assets"></a>Layout Assets</h2><p>Place all your page assets (like images) inside the <code>/layouts/*layout-name*/assets/</code> folder.<br>Images get optimized by default on a production build.</p>
-<h2 id="Layout-Events"><a href="#Layout-Events" class="headerlink" title="Layout Events"></a>Layout Events</h2><p>Loading a Layout is a complex procedure involving requiring its script file, preparing script file (including resolving dependencies) and rendering it. You can hook into these procedures by making good use of the Events API. See <a href="/api/js-events-list.html#Layout-Events">Quasar Events List</a> and <a href="/api/js-events.html">Event API</a>.</p>
-<h2 id="Layout-Manifest"><a href="#Layout-Manifest" class="headerlink" title="Layout Manifest"></a>Layout Manifest</h2><p>Provide layout specific configuration (in YAML format), called <em>Manifest</em> in <code>/layouts/*layout-name*/layout.*layout-name*.yml</code>.</p>
-<p>Example of Layout Manifest property: <code>css</code>. This property gets computed by default if the <code>.styl</code> file exists in the layout folder (<strong>so it is optional!</strong>), but it can be overridden to point to other files. The path must start with the folder where app root <em>index.html</em> file exists.<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">css:</span> <span class="string">'path/to/css'</span></span><br></pre></td></tr></table></figure></p>
+      <title><![CDATA[Upgrade App to Latest Quasar]]></title>
+      <url>http://quasar-framework.org/guide/upgrade-app-to-latest-quasar.html</url>
+      <content type="html"><![CDATA[<p>Upgrading an App to use the latest and greatest Quasar Framework version is easy.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># within your App's folder:</span></span><br><span class="line">$ npm update quasar-framework</span><br><span class="line"></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ npm install --save quasar-framework</span><br></pre></td></tr></table></figure>
+<p>But first, be sure to check the <a href="/guide/quasar-framework-release-notes.html">Release Notes</a> for breaking changes, if any.</p>
+<p>Checking if a new version is available is also easy:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># within your App's folder:</span></span><br><span class="line">$ npm outdated</span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -4132,17 +4147,6 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- original index.html --&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">class</span>=<span class="string">"@@theme"</span>&gt;</span></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- theme forced App index.html --&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">class</span>=<span class="string">"mat"</span>&gt;</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 <p>Combine this with building one theme only in the section above, <a href="#Speed-Up-Build-Time">Speed Up Built Time</a>.</p>
 <h2 id="Stylus-Variables"><a href="#Stylus-Variables" class="headerlink" title="Stylus Variables"></a>Stylus Variables</h2><p>Read a complete list of all Stylus variables that you can override <a href="/api/css-stylus-variables.html">here</a>.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Upgrade App to Latest Quasar]]></title>
-      <url>http://quasar-framework.org/guide/upgrade-app-to-latest-quasar.html</url>
-      <content type="html"><![CDATA[<p>Upgrading an App to use the latest and greatest Quasar Framework version is easy.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># within your App's folder:</span></span><br><span class="line">$ npm update quasar-framework</span><br><span class="line"></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ npm install --save quasar-framework</span><br></pre></td></tr></table></figure>
-<p>But first, be sure to check the <a href="/guide/quasar-framework-release-notes.html">Release Notes</a> for breaking changes, if any.</p>
-<p>Checking if a new version is available is also easy:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># within your App's folder:</span></span><br><span class="line">$ npm outdated</span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     

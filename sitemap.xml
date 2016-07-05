@@ -2,14 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://quasar-framework.org/components/label.html</loc>
+    <loc>http://quasar-framework.org/api/js-vue-directives.html</loc>
     
-    <lastmod>2016-06-28T19:45:44.988Z</lastmod>
+    <lastmod>2016-07-05T17:20:48.235Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/dialog.html</loc>
+    <loc>http://quasar-framework.org/guide/quasar-framework-release-notes.html</loc>
+    
+    <lastmod>2016-07-05T17:16:28.907Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-cli-release-notes.html</loc>
+    
+    <lastmod>2016-06-29T13:21:54.336Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/label.html</loc>
     
     <lastmod>2016-06-28T19:45:44.988Z</lastmod>
     
@@ -23,9 +37,9 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/guide/quasar-framework-release-notes.html</loc>
+    <loc>http://quasar-framework.org/components/dialog.html</loc>
     
-    <lastmod>2016-06-28T19:27:02.680Z</lastmod>
+    <lastmod>2016-06-28T19:45:44.988Z</lastmod>
     
   </url>
   
@@ -208,13 +222,6 @@
     <loc>http://quasar-framework.org/guide/parameterized-page-routes.html</loc>
     
     <lastmod>2016-06-15T22:37:10.921Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/quasar-cli-release-notes.html</loc>
-    
-    <lastmod>2016-06-15T21:25:52.873Z</lastmod>
     
   </url>
   
@@ -422,7 +429,7 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/grid-component.html</loc>
+    <loc>http://quasar-framework.org/components/rating.html</loc>
     
     <lastmod>2016-06-02T04:18:08.394Z</lastmod>
     
@@ -443,7 +450,7 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/rating.html</loc>
+    <loc>http://quasar-framework.org/components/grid-component.html</loc>
     
     <lastmod>2016-06-02T04:18:08.394Z</lastmod>
     
@@ -544,13 +551,6 @@
     <loc>http://quasar-framework.org/api/js-environment.html</loc>
     
     <lastmod>2016-05-30T21:45:47.577Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/api/js-vue-directives.html</loc>
-    
-    <lastmod>2016-05-30T18:18:22.781Z</lastmod>
     
   </url>
   
