@@ -30,14 +30,14 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/cards.html</loc>
+    <loc>http://quasar-framework.org/components/dialog.html</loc>
     
     <lastmod>2016-06-28T19:45:44.988Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/dialog.html</loc>
+    <loc>http://quasar-framework.org/components/cards.html</loc>
     
     <lastmod>2016-06-28T19:45:44.988Z</lastmod>
     
@@ -429,21 +429,7 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/rating.html</loc>
-    
-    <lastmod>2016-06-02T04:18:08.394Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/components/grid-component.html</loc>
-    
-    <lastmod>2016-06-02T04:18:08.394Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/tree.html</loc>
     
     <lastmod>2016-06-02T04:18:08.394Z</lastmod>
     
@@ -458,6 +444,20 @@
   
   <url>
     <loc>http://quasar-framework.org/components/parallax.html</loc>
+    
+    <lastmod>2016-06-02T04:18:08.394Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/tree.html</loc>
+    
+    <lastmod>2016-06-02T04:18:08.394Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/rating.html</loc>
     
     <lastmod>2016-06-02T04:18:08.394Z</lastmod>
     
