@@ -25,6 +25,12 @@
     </entry>
     
     <entry>
+      <title></title>
+      <url>http://quasar-framework.org/blog/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Color Palette]]></title>
       <url>http://quasar-framework.org/api/css-color-palette.html</url>
       <content type="html"><![CDATA[<p>Quasar Framework offers a wide selection of colors out of the box. You can use them both as Stylus variables in your CSS code or directly as CSS classes in your HTML templates.</p>
@@ -227,16 +233,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar Icons]]></title>
-      <url>http://quasar-framework.org/api/css-icons.html</url>
-      <content type="html"><![CDATA[<p>What would an App be without icons? A default set of (hundreds of) icons is included in any Quasar App.<br>These are the <a href="https://design.google.com/icons/" target="_blank" rel="external">Material Design Icons</a>. You can you can read (and search for them) in the previous link.</p>
-<p><img src="/images/material-icons.png" alt="Material Icons Example"></p>
-<p>It just differs the way you use them in a Quasar App:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--</span><br><span class="line">  On Material Design Icons website you check for an icon and it says:</span><br><span class="line">  "&lt;i class="material-icons"&gt;account_circle&lt;/i&gt;"</span><br><span class="line"></span><br><span class="line">  On Quasar App you simply use it like this:</span><br><span class="line">--&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">i</span>&gt;</span>account_circle<span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>No need for extra markup. Note the “underscore” character instead of a space character… this is mandatory, as Material Icons are displayed using a ligature font.</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar CSS Helper Classes]]></title>
       <url>http://quasar-framework.org/api/css-other-helper-classes.html</url>
       <content type="html"><![CDATA[<p>There are a lot of CSS classes that you can use while writing your Vue templates. Very handy to ease the complexity of your VueModels and templates.</p>
@@ -351,6 +347,68 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Quasar Icons]]></title>
+      <url>http://quasar-framework.org/api/css-icons.html</url>
+      <content type="html"><![CDATA[<p>What would an App be without icons? A default set of (hundreds of) icons is included in any Quasar App.<br>These are the <a href="https://design.google.com/icons/" target="_blank" rel="external">Material Design Icons</a>. You can you can read (and search for them) in the previous link.</p>
+<p><img src="/images/material-icons.png" alt="Material Icons Example"></p>
+<p>It just differs the way you use them in a Quasar App:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--</span><br><span class="line">  On Material Design Icons website you check for an icon and it says:</span><br><span class="line">  "&lt;i class="material-icons"&gt;account_circle&lt;/i&gt;"</span><br><span class="line"></span><br><span class="line">  On Quasar App you simply use it like this:</span><br><span class="line">--&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">i</span>&gt;</span>account_circle<span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>No need for extra markup. Note the “underscore” character instead of a space character… this is mandatory, as Material Icons are displayed using a ligature font.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar CSS Shadows]]></title>
+      <url>http://quasar-framework.org/api/css-shadows.html</url>
+      <content type="html"><![CDATA[<p>Simple yet effective way to add shadows to create a depth effect.<br>The shadows are in accordance to Material Design speifications.<br>Don’t forget to check the demo.</p>
+<input type="hidden" data-fullpage-demo="shadows">
+
+<table>
+<thead>
+<tr>
+<th>CSS Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>no-shadow</code></td>
+<td>Remove any shadow</td>
+</tr>
+<tr>
+<td><code>inset-shadow</code></td>
+<td>Set an inset shadow</td>
+</tr>
+<tr>
+<td><code>shadow-1</code>, <code>hoverable</code>, <code>hoverable-1</code></td>
+<td>Set a depth of 1 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-2</code>, <code>hoverable-2</code></td>
+<td>Set a depth of 2 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-3</code>, <code>hoverable-3</code></td>
+<td>Set a depth of 3 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-4</code>, <code>hoverable-4</code></td>
+<td>Set a depth of 4 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-5</code>, <code>hoverable-5</code></td>
+<td>Set a depth of 5 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-transition</code></td>
+<td>Apply a CSS transition on the shadow; best use in conjonction with <code>hoverable</code> classes</td>
+</tr>
+</tbody>
+</table>
+<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"shadow-1"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar CSS Positioning Classes]]></title>
       <url>http://quasar-framework.org/api/css-positioning.html</url>
       <content type="html"><![CDATA[<p>There are CSS classes supplied by Quasar to help you position a DOM element easily:</p>
@@ -424,58 +482,6 @@
 </tr>
 </tbody>
 </table>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar CSS Shadows]]></title>
-      <url>http://quasar-framework.org/api/css-shadows.html</url>
-      <content type="html"><![CDATA[<p>Simple yet effective way to add shadows to create a depth effect.<br>The shadows are in accordance to Material Design speifications.<br>Don’t forget to check the demo.</p>
-<input type="hidden" data-fullpage-demo="shadows">
-
-<table>
-<thead>
-<tr>
-<th>CSS Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>no-shadow</code></td>
-<td>Remove any shadow</td>
-</tr>
-<tr>
-<td><code>inset-shadow</code></td>
-<td>Set an inset shadow</td>
-</tr>
-<tr>
-<td><code>shadow-1</code>, <code>hoverable</code>, <code>hoverable-1</code></td>
-<td>Set a depth of 1 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-2</code>, <code>hoverable-2</code></td>
-<td>Set a depth of 2 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-3</code>, <code>hoverable-3</code></td>
-<td>Set a depth of 3 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-4</code>, <code>hoverable-4</code></td>
-<td>Set a depth of 4 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-5</code>, <code>hoverable-5</code></td>
-<td>Set a depth of 5 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-transition</code></td>
-<td>Apply a CSS transition on the shadow; best use in conjonction with <code>hoverable</code> classes</td>
-</tr>
-</tbody>
-</table>
-<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"shadow-1"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
     
@@ -819,6 +825,14 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Overview]]></title>
+      <url>http://quasar-framework.org/api/index.html</url>
+      <content type="html"><![CDATA[<p>Learn here about the API specifications of every feature embedded in Quasar Framework. How to require a script, how to create a route, how to detect if the app is running within Cordova or on a desktop, and many more, including Quasar CSS specifications.</p>
+<p>By default, Quasar covers a lot of areas of Web development with ready to use API which simplifies your code and hides the different platform quirks.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Ajax Requests]]></title>
       <url>http://quasar-framework.org/api/js-ajax-requests.html</url>
       <content type="html"><![CDATA[<p>Quasar Ajax Requests are a wrapper over jQuery’s <code>$.ajax()</code> method. There are many features added on top of it.</p>
@@ -1034,14 +1048,6 @@
 <blockquote>
 <p><strong>NOTE</strong><br>When aborting all requests, you may want to exclude some of them. For this, use the <code>persistent</code> property when making those particular requests.</p>
 </blockquote>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Overview]]></title>
-      <url>http://quasar-framework.org/api/index.html</url>
-      <content type="html"><![CDATA[<p>Learn here about the API specifications of every feature embedded in Quasar Framework. How to require a script, how to create a route, how to detect if the app is running within Cordova or on a desktop, and many more, including Quasar CSS specifications.</p>
-<p>By default, Quasar covers a lot of areas of Web development with ready to use API which simplifies your code and hides the different platform quirks.</p>
 ]]></content>
     </entry>
     
@@ -1543,6 +1549,18 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Quasar Vue Transitions]]></title>
+      <url>http://quasar-framework.org/api/js-vue-transitions.html</url>
+      <content type="html"><![CDATA[<p>At the moment, Quasar provides only one ready to use Vue transition. If you don’t know what a transition is, read <a href="http://vuejs.org/guide/transitions.html" target="_blank" rel="external">here</a>.<br>Vue transitions work alongside <code>v-show</code>, <code>v-if</code> and <code>v-for</code> Vue directives.</p>
+<input type="hidden" data-fullpage-demo="transitions">
+
+<h3 id="“slide”-transition"><a href="#“slide”-transition" class="headerlink" title="“slide” transition"></a>“slide” transition</h3><p>Slide the DOM element up or down based on its visibility.</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;!-- Template for VueModel below --&gt;</span><br><span class="line">&lt;img</span><br><span class="line">  v-show="visible" &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span><br><span class="line">  transition="slide" &lt;&lt;&lt;&lt;&lt;&lt;</span><br><span class="line">  src="assets/quasar.jpg"</span><br><span class="line">&gt;</span><br><span class="line">&lt;button @click="toggleVisibility()"&gt;Toggle&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// VueModel for template above</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  ...,</span><br><span class="line">  data: &#123;</span><br><span class="line">    ...,</span><br><span class="line">    visible: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    ...,</span><br><span class="line">    toggleVisibility: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.visible = !<span class="keyword">this</span>.visible;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Handling Touch Events]]></title>
       <url>http://quasar-framework.org/api/js-touch-events.html</url>
       <content type="html"><![CDATA[<p>Quasar makes good use of <a href="http://hammerjs.github.io/" target="_blank" rel="external">HammerJS</a> and has specific API to nicely wrap touch events.</p>
@@ -1563,18 +1581,6 @@
 <blockquote>
 <p><strong>NOTE</strong><br><code>v-touch</code> directive does NOT support <code>tap</code> event. Use <code>v-on:click</code> directive or jQuery’s <code>.click()</code> method instead.</p>
 </blockquote>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar Vue Transitions]]></title>
-      <url>http://quasar-framework.org/api/js-vue-transitions.html</url>
-      <content type="html"><![CDATA[<p>At the moment, Quasar provides only one ready to use Vue transition. If you don’t know what a transition is, read <a href="http://vuejs.org/guide/transitions.html" target="_blank" rel="external">here</a>.<br>Vue transitions work alongside <code>v-show</code>, <code>v-if</code> and <code>v-for</code> Vue directives.</p>
-<input type="hidden" data-fullpage-demo="transitions">
-
-<h3 id="“slide”-transition"><a href="#“slide”-transition" class="headerlink" title="“slide” transition"></a>“slide” transition</h3><p>Slide the DOM element up or down based on its visibility.</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;!-- Template for VueModel below --&gt;</span><br><span class="line">&lt;img</span><br><span class="line">  v-show="visible" &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span><br><span class="line">  transition="slide" &lt;&lt;&lt;&lt;&lt;&lt;</span><br><span class="line">  src="assets/quasar.jpg"</span><br><span class="line">&gt;</span><br><span class="line">&lt;button @click="toggleVisibility()"&gt;Toggle&lt;/button&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// VueModel for template above</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  ...,</span><br><span class="line">  data: &#123;</span><br><span class="line">    ...,</span><br><span class="line">    visible: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    ...,</span><br><span class="line">    toggleVisibility: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.visible = !<span class="keyword">this</span>.visible;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -1652,12 +1658,6 @@
 <h3 id="Is-Store-Empty"><a href="#Is-Store-Empty" class="headerlink" title="Is Store Empty?"></a>Is Store Empty?</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(boolean) quasar.local.storage.is.empty()</span><br><span class="line">(boolean) quasar.session.storage.is.empty()</span><br></pre></td></tr></table></figure>
 <h3 id="Is-Key-in-Store"><a href="#Is-Key-in-Store" class="headerlink" title="Is Key in Store?"></a>Is Key in Store?</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(boolean) quasar.has.local.storage.item()</span><br><span class="line">(boolean) quasar.has.session.storage.item()</span><br></pre></td></tr></table></figure>
 ]]></content>
-    </entry>
-    
-    <entry>
-      <title></title>
-      <url>http://quasar-framework.org/blog/index.html</url>
-      <content type="html"></content>
     </entry>
     
     <entry>
@@ -1811,6 +1811,16 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Chat CSS]]></title>
+      <url>http://quasar-framework.org/components/chat.html</url>
+      <content type="html"><![CDATA[<p>Quasar supplies CSS classes for making a chat. Loot at the syntax below.</p>
+<input type="hidden" data-fullpage-demo="chat">
+
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- Message received from peer --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-other"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-user"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"assets/linux-avatar.png"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-date"</span>&gt;</span></span><br><span class="line">      7 minutes ago</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-message"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        hey, if you type in your pw, it will show as stars</span><br><span class="line">      <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- Message sent by you --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-you"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-user"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"assets/boy-avatar.png"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-date"</span>&gt;</span></span><br><span class="line">      4 minutes ago</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-message"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        hunter2</span><br><span class="line">      <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Cards]]></title>
       <url>http://quasar-framework.org/components/cards.html</url>
       <content type="html"><![CDATA[<p>Quasar Cards are a great way to display important pieces of content, and are quickly emerging as a core design pattern for Apps. They’re are a great way to contain and organize information, while also setting up predictable expectations for the user. With so much content to display at once, and often so little screen real-estate, Cards have fast become the design pattern of choice for many companies, including the likes of Google and Twitter.</p>
@@ -1861,16 +1871,6 @@
 
 <p>In the example below we include a circular button which the user can tap/click for additional actions on the Card.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"card"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"card-title"</span>&gt;</span></span><br><span class="line">    Card with FAB</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"card-media"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"video"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">iframe</span></span><br><span class="line">        <span class="attr">src</span>=<span class="string">"https://www.youtube.com/embed/k3_tw44QsZQ?rel=0"</span></span><br><span class="line">        <span class="attr">frameborder</span>=<span class="string">"0"</span></span><br><span class="line">        <span class="attr">allowfullscreen</span></span><br><span class="line">      &gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"primary circular"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">i</span>&gt;</span>share<span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"card-content"</span>&gt;</span></span><br><span class="line">    Card Content</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Chat CSS]]></title>
-      <url>http://quasar-framework.org/components/chat.html</url>
-      <content type="html"><![CDATA[<p>Quasar supplies CSS classes for making a chat. Loot at the syntax below.</p>
-<input type="hidden" data-fullpage-demo="chat">
-
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- Message received from peer --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-other"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-user"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"assets/linux-avatar.png"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-date"</span>&gt;</span></span><br><span class="line">      7 minutes ago</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-message"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        hey, if you type in your pw, it will show as stars</span><br><span class="line">      <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- Message sent by you --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-you"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-user"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"assets/boy-avatar.png"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-date"</span>&gt;</span></span><br><span class="line">      4 minutes ago</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-message"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        hunter2</span><br><span class="line">      <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -3057,6 +3057,17 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Quasar Toggle]]></title>
+      <url>http://quasar-framework.org/components/toggle.html</url>
+      <content type="html"><![CDATA[<input type="hidden" data-fullpage-demo="toggle">
+
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">toggle</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">toggle</span>&gt;</span></span><br><span class="line">  Toggle Label</span><br><span class="line"><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Inside-of-a-List-Usage"><a href="#Inside-of-a-List-Usage" class="headerlink" title="Inside of a List Usage"></a>Inside of a List Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list inner-delimiter bordered"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span>&gt;</span>mail<span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-label"</span>&gt;</span>Toggle Label<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">toggle</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">toggle</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list inner-delimiter bordered"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">toggle</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">toggle</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></span><br><span class="line">      Toggle Label</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Tooltips]]></title>
       <url>http://quasar-framework.org/components/tooltips.html</url>
       <content type="html"><![CDATA[<p>Quasar Tooltips offer additional information to the user that otherwise would be hidden. The implementation is through a Quasar directive called <code>v-tooltip</code>.</p>
@@ -3086,17 +3097,6 @@
 </tr>
 </tbody>
 </table>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar Toggle]]></title>
-      <url>http://quasar-framework.org/components/toggle.html</url>
-      <content type="html"><![CDATA[<input type="hidden" data-fullpage-demo="toggle">
-
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">toggle</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">toggle</span>&gt;</span></span><br><span class="line">  Toggle Label</span><br><span class="line"><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="Inside-of-a-List-Usage"><a href="#Inside-of-a-List-Usage" class="headerlink" title="Inside of a List Usage"></a>Inside of a List Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list inner-delimiter bordered"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span>&gt;</span>mail<span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-label"</span>&gt;</span>Toggle Label<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">toggle</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">toggle</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list inner-delimiter bordered"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">toggle</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">toggle</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></span><br><span class="line">      Toggle Label</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -4039,17 +4039,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Upgrade App to Latest Quasar]]></title>
-      <url>http://quasar-framework.org/guide/upgrade-app-to-latest-quasar.html</url>
-      <content type="html"><![CDATA[<p>Upgrading an App to use the latest and greatest Quasar Framework version is easy.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># within your App's folder:</span></span><br><span class="line">$ npm update quasar-framework</span><br><span class="line"></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ npm install --save quasar-framework</span><br></pre></td></tr></table></figure>
-<p>But first, be sure to check the <a href="/guide/quasar-framework-release-notes.html">Release Notes</a> for breaking changes, if any.</p>
-<p>Checking if a new version is available is also easy:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># within your App's folder:</span></span><br><span class="line">$ npm outdated</span><br></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Theming]]></title>
       <url>http://quasar-framework.org/guide/quasar-theming.html</url>
       <content type="html"><![CDATA[<p>Every website or mobile app needs a specific design to differentiate from the competition. This is where Quasar Framework excels, because:</p>
@@ -4147,6 +4136,17 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- original index.html --&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">class</span>=<span class="string">"@@theme"</span>&gt;</span></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- theme forced App index.html --&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">class</span>=<span class="string">"mat"</span>&gt;</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 <p>Combine this with building one theme only in the section above, <a href="#Speed-Up-Build-Time">Speed Up Built Time</a>.</p>
 <h2 id="Stylus-Variables"><a href="#Stylus-Variables" class="headerlink" title="Stylus Variables"></a>Stylus Variables</h2><p>Read a complete list of all Stylus variables that you can override <a href="/api/css-stylus-variables.html">here</a>.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Upgrade App to Latest Quasar]]></title>
+      <url>http://quasar-framework.org/guide/upgrade-app-to-latest-quasar.html</url>
+      <content type="html"><![CDATA[<p>Upgrading an App to use the latest and greatest Quasar Framework version is easy.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># within your App's folder:</span></span><br><span class="line">$ npm update quasar-framework</span><br><span class="line"></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ npm install --save quasar-framework</span><br></pre></td></tr></table></figure>
+<p>But first, be sure to check the <a href="/guide/quasar-framework-release-notes.html">Release Notes</a> for breaking changes, if any.</p>
+<p>Checking if a new version is available is also easy:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># within your App's folder:</span></span><br><span class="line">$ npm outdated</span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
