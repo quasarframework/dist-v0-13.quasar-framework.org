@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://quasar-framework.org/guide/quasar-play-app.html</loc>
+    
+    <lastmod>2016-08-14T15:11:46.871Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://quasar-framework.org/guide/index.html</loc>
     
     <lastmod>2016-08-14T00:19:47.744Z</lastmod>
@@ -72,14 +79,14 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/layout-overview.html</loc>
+    <loc>http://quasar-framework.org/components/modal.html</loc>
     
     <lastmod>2016-08-13T22:49:45.800Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/modal.html</loc>
+    <loc>http://quasar-framework.org/components/tabs.html</loc>
     
     <lastmod>2016-08-13T22:49:45.800Z</lastmod>
     
@@ -93,7 +100,7 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/tabs.html</loc>
+    <loc>http://quasar-framework.org/components/layout-overview.html</loc>
     
     <lastmod>2016-08-13T22:49:45.800Z</lastmod>
     
@@ -138,13 +145,6 @@
     <loc>http://quasar-framework.org/guide/app-boilerplate.html</loc>
     
     <lastmod>2016-08-13T20:48:09.720Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/quasar-play-app.html</loc>
-    
-    <lastmod>2016-08-13T20:07:09.360Z</lastmod>
     
   </url>
   

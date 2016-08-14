@@ -65,6 +65,16 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Quasar Icons]]></title>
+      <url>http://quasar-framework.org/api/css-icons.html</url>
+      <content type="html"><![CDATA[<p>What would an App be without icons? A default set of (hundreds of) icons is included in any Quasar App.<br>These are the <a href="https://design.google.com/icons/" target="_blank" rel="external">Material Design Icons</a>. You can you can read (and search for them) in the previous link.</p>
+<p><img src="/images/material-icons.png" alt="Material Icons Example"></p>
+<p>It just differs the way you use them in a Quasar App:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!--</span></div><div class="line">  On Material Design Icons website you check for an icon and it says:</div><div class="line">  "&lt;i class="material-icons"&gt;account_circle&lt;/i&gt;"</div><div class="line"></div><div class="line">  On Quasar App you simply use it like this:</div><div class="line">--&gt;</div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">i</span>&gt;</span>account_circle<span class="tag">&lt;/<span class="name">i</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>No need for extra markup. Note the “underscore” character instead of a space character… this is mandatory, as Material Icons are displayed using a ligature font.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Grid Layout]]></title>
       <url>http://quasar-framework.org/api/css-grid-layout.html</url>
       <content type="html"><![CDATA[<input type="hidden" data-fullpage-demo="layout/grid-layout">
@@ -247,16 +257,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar Icons]]></title>
-      <url>http://quasar-framework.org/api/css-icons.html</url>
-      <content type="html"><![CDATA[<p>What would an App be without icons? A default set of (hundreds of) icons is included in any Quasar App.<br>These are the <a href="https://design.google.com/icons/" target="_blank" rel="external">Material Design Icons</a>. You can you can read (and search for them) in the previous link.</p>
-<p><img src="/images/material-icons.png" alt="Material Icons Example"></p>
-<p>It just differs the way you use them in a Quasar App:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!--</span></div><div class="line">  On Material Design Icons website you check for an icon and it says:</div><div class="line">  "&lt;i class="material-icons"&gt;account_circle&lt;/i&gt;"</div><div class="line"></div><div class="line">  On Quasar App you simply use it like this:</div><div class="line">--&gt;</div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">i</span>&gt;</span>account_circle<span class="tag">&lt;/<span class="name">i</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>No need for extra markup. Note the “underscore” character instead of a space character… this is mandatory, as Material Icons are displayed using a ligature font.</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar CSS Helper Classes]]></title>
       <url>http://quasar-framework.org/api/css-other-helper-classes.html</url>
       <content type="html"><![CDATA[<p>There are a lot of CSS classes that you can use while writing your Vue templates. Very handy to ease the complexity of your VueModels and templates.</p>
@@ -371,6 +371,66 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Overview]]></title>
+      <url>http://quasar-framework.org/api/index.html</url>
+      <content type="html"><![CDATA[<p>Learn here about the API specifications of every feature embedded in Quasar Framework. How to require a script, how to create a route, how to detect if the app is running within Cordova or on a desktop, and many more, including Quasar CSS specifications.</p>
+<p>By default, Quasar covers a lot of areas of Web development with ready to use API which simplifies your code and hides the different platform quirks.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar CSS Shadows]]></title>
+      <url>http://quasar-framework.org/api/css-shadows.html</url>
+      <content type="html"><![CDATA[<p>Simple yet effective way to add shadows to create a depth effect.<br>The shadows are in accordance to Material Design speifications.<br>Don’t forget to check the demo.</p>
+<input type="hidden" data-fullpage-demo="css/shadows">
+
+<table>
+<thead>
+<tr>
+<th>CSS Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>no-shadow</code></td>
+<td>Remove any shadow</td>
+</tr>
+<tr>
+<td><code>inset-shadow</code></td>
+<td>Set an inset shadow</td>
+</tr>
+<tr>
+<td><code>shadow-1</code>, <code>hoverable</code>, <code>hoverable-1</code></td>
+<td>Set a depth of 1 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-2</code>, <code>hoverable-2</code></td>
+<td>Set a depth of 2 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-3</code>, <code>hoverable-3</code></td>
+<td>Set a depth of 3 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-4</code>, <code>hoverable-4</code></td>
+<td>Set a depth of 4 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-5</code>, <code>hoverable-5</code></td>
+<td>Set a depth of 5 - always or on element hover</td>
+</tr>
+<tr>
+<td><code>shadow-transition</code></td>
+<td>Apply a CSS transition on the shadow; best use in conjonction with <code>hoverable</code> classes</td>
+</tr>
+</tbody>
+</table>
+<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"shadow-1"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar CSS Positioning Classes]]></title>
       <url>http://quasar-framework.org/api/css-positioning.html</url>
       <content type="html"><![CDATA[<p>There are CSS classes supplied by Quasar to help you position a DOM element easily:</p>
@@ -444,58 +504,6 @@
 </tr>
 </tbody>
 </table>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar CSS Shadows]]></title>
-      <url>http://quasar-framework.org/api/css-shadows.html</url>
-      <content type="html"><![CDATA[<p>Simple yet effective way to add shadows to create a depth effect.<br>The shadows are in accordance to Material Design speifications.<br>Don’t forget to check the demo.</p>
-<input type="hidden" data-fullpage-demo="css/shadows">
-
-<table>
-<thead>
-<tr>
-<th>CSS Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>no-shadow</code></td>
-<td>Remove any shadow</td>
-</tr>
-<tr>
-<td><code>inset-shadow</code></td>
-<td>Set an inset shadow</td>
-</tr>
-<tr>
-<td><code>shadow-1</code>, <code>hoverable</code>, <code>hoverable-1</code></td>
-<td>Set a depth of 1 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-2</code>, <code>hoverable-2</code></td>
-<td>Set a depth of 2 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-3</code>, <code>hoverable-3</code></td>
-<td>Set a depth of 3 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-4</code>, <code>hoverable-4</code></td>
-<td>Set a depth of 4 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-5</code>, <code>hoverable-5</code></td>
-<td>Set a depth of 5 - always or on element hover</td>
-</tr>
-<tr>
-<td><code>shadow-transition</code></td>
-<td>Apply a CSS transition on the shadow; best use in conjonction with <code>hoverable</code> classes</td>
-</tr>
-</tbody>
-</table>
-<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"shadow-1"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
     
@@ -842,24 +850,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Overview]]></title>
-      <url>http://quasar-framework.org/api/index.html</url>
-      <content type="html"><![CDATA[<p>Learn here about the API specifications of every feature embedded in Quasar Framework. How to require a script, how to create a route, how to detect if the app is running within Cordova or on a desktop, and many more, including Quasar CSS specifications.</p>
-<p>By default, Quasar covers a lot of areas of Web development with ready to use API which simplifies your code and hides the different platform quirks.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Fullscreen]]></title>
-      <url>http://quasar-framework.org/api/js-app-fullscreen.html</url>
-      <content type="html"><![CDATA[<p>There are times when you want your website or App to run in fullscreen.<br>Quasar makes it easy by wrapping the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API" target="_blank" rel="external">Fullscreen API</a>.</p>
-<input type="hidden" data-external-demo="other/app-fullscreen">
-
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; AppFullscreen &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="comment">// Determining if website is in fullscreen mode:</span></div><div class="line">(<span class="built_in">Boolean</span>) AppFullscreen.isActive()</div><div class="line"></div><div class="line"><span class="comment">// Requesting fullscreen mode:</span></div><div class="line">AppFullscreen.request()</div><div class="line"></div><div class="line"><span class="comment">// Exiting fullscreen mode:</span></div><div class="line">AppFullscreen.exit()</div><div class="line"></div><div class="line"><span class="comment">// Toggle fullscreen mode:</span></div><div class="line">AppFullscreen.toggle()</div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[App Visibility]]></title>
       <url>http://quasar-framework.org/api/js-app-visibility.html</url>
       <content type="html"><![CDATA[<p>Quasar makes use of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API" target="_blank" rel="external">Page Visibility API</a> which lets you know when a website/app is visible or in focus.</p>
@@ -883,6 +873,16 @@
 </tr>
 </tbody>
 </table>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Fullscreen]]></title>
+      <url>http://quasar-framework.org/api/js-app-fullscreen.html</url>
+      <content type="html"><![CDATA[<p>There are times when you want your website or App to run in fullscreen.<br>Quasar makes it easy by wrapping the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API" target="_blank" rel="external">Fullscreen API</a>.</p>
+<input type="hidden" data-external-demo="other/app-fullscreen">
+
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; AppFullscreen &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="comment">// Determining if website is in fullscreen mode:</span></div><div class="line">(<span class="built_in">Boolean</span>) AppFullscreen.isActive()</div><div class="line"></div><div class="line"><span class="comment">// Requesting fullscreen mode:</span></div><div class="line">AppFullscreen.request()</div><div class="line"></div><div class="line"><span class="comment">// Exiting fullscreen mode:</span></div><div class="line">AppFullscreen.exit()</div><div class="line"></div><div class="line"><span class="comment">// Toggle fullscreen mode:</span></div><div class="line">AppFullscreen.toggle()</div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -1139,12 +1139,6 @@
     </entry>
     
     <entry>
-      <title></title>
-      <url>http://quasar-framework.org/blog/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Web Storage]]></title>
       <url>http://quasar-framework.org/api/js-web-storage.html</url>
       <content type="html"><![CDATA[<p>Quasar provides a wrapper over <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API" target="_blank" rel="external">Web Storage API</a>.</p>
@@ -1179,6 +1173,12 @@
     </entry>
     
     <entry>
+      <title></title>
+      <url>http://quasar-framework.org/blog/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Action Sheet]]></title>
       <url>http://quasar-framework.org/components/action-sheet.html</url>
       <content type="html"><![CDATA[<p>Action Sheets slide up from the bottom edge of the device screen, and display a set of options with the ability to confirm or cancel an action. Action Sheets can sometimes be used as an alternative to menus, however, they should not be used for navigation.</p>
@@ -1206,6 +1206,23 @@
 <input type="hidden" data-fullpage-demo="css/breadcrumb">
 
 <h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"breadcrumb"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">a</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">i</span>&gt;</span>home<span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">a</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">i</span>&gt;</span>mail<span class="tag">&lt;/<span class="name">i</span>&gt;</span> Quasar</div><div class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">a</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">i</span>&gt;</span>cloud<span class="tag">&lt;/<span class="name">i</span>&gt;</span> Breadcrumb</div><div class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Buttons]]></title>
+      <url>http://quasar-framework.org/components/buttons.html</url>
+      <content type="html"><![CDATA[<p>Quasar Buttons are of two shapes: rectangle (regular) and circular. They come in three sizes: small, medium (default) and big. As for the colors, use the ones from <a href="/api/css-color-palette.html">Quasar CSS Color Palette</a>. There are some more CSS classes that you can use to enhance the appearance of a button.</p>
+<input type="hidden" data-fullpage-demo="css/button">
+
+<p>For circular buttons only use icons as content.</p>
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Regular shaped --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"clickMethod()"</span>&gt;</span></div><div class="line">  Button Label</div><div class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Circular shaped; only use icon as content --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"primary circular"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">i</span>&gt;</span>alarm<span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>When adding an icon to a regular button, use <code>on-left</code> or <code>on-right</code> CSS classes:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"primary"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"on-left"</span>&gt;</span>mail<span class="tag">&lt;/<span class="name">i</span>&gt;</span> Button Label</div><div class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"teal"</span>&gt;</span></div><div class="line">  Button Label <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"on-right"</span>&gt;</span>mail<span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="Button-Sizes"><a href="#Button-Sizes" class="headerlink" title="Button Sizes"></a>Button Sizes</h2><p>Use <code>small</code> or <code>big</code> CSS classes. You don’t need to specify <code>medium</code> because that’s the default size.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"primary small"</span>&gt;</span></div><div class="line">  Small Button</div><div class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"primary big"</span>&gt;</span></div><div class="line">  Big Button</div><div class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Button-Colors"><a href="#Button-Colors" class="headerlink" title="Button Colors"></a>Button Colors</h2><p>Use the ones from <a href="/api/css-color-palette.html">Quasar CSS Color Palette</a>. Examples: <code>primary</code>, <code>orange</code>, <code>lime</code>.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"primary"</span>&gt;</span>Primary Button<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"amber"</span>&gt;</span>Amber Button<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="More-Button-CSS-Classes"><a href="#More-Button-CSS-Classes" class="headerlink" title="More Button CSS Classes"></a>More Button CSS Classes</h2><p>There are also the <code>glossy</code>, <code>raised</code>, <code>clear</code>, <code>outline</code>, <code>push</code>, <code>bordered</code> and <code>round</code> CSS classes that you can use.</p>
 ]]></content>
     </entry>
     
@@ -1260,23 +1277,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Buttons]]></title>
-      <url>http://quasar-framework.org/components/buttons.html</url>
-      <content type="html"><![CDATA[<p>Quasar Buttons are of two shapes: rectangle (regular) and circular. They come in three sizes: small, medium (default) and big. As for the colors, use the ones from <a href="/api/css-color-palette.html">Quasar CSS Color Palette</a>. There are some more CSS classes that you can use to enhance the appearance of a button.</p>
-<input type="hidden" data-fullpage-demo="css/button">
-
-<p>For circular buttons only use icons as content.</p>
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Regular shaped --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"clickMethod()"</span>&gt;</span></div><div class="line">  Button Label</div><div class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Circular shaped; only use icon as content --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"primary circular"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">i</span>&gt;</span>alarm<span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>When adding an icon to a regular button, use <code>on-left</code> or <code>on-right</code> CSS classes:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"primary"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"on-left"</span>&gt;</span>mail<span class="tag">&lt;/<span class="name">i</span>&gt;</span> Button Label</div><div class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"teal"</span>&gt;</span></div><div class="line">  Button Label <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"on-right"</span>&gt;</span>mail<span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h2 id="Button-Sizes"><a href="#Button-Sizes" class="headerlink" title="Button Sizes"></a>Button Sizes</h2><p>Use <code>small</code> or <code>big</code> CSS classes. You don’t need to specify <code>medium</code> because that’s the default size.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"primary small"</span>&gt;</span></div><div class="line">  Small Button</div><div class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"primary big"</span>&gt;</span></div><div class="line">  Big Button</div><div class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Button-Colors"><a href="#Button-Colors" class="headerlink" title="Button Colors"></a>Button Colors</h2><p>Use the ones from <a href="/api/css-color-palette.html">Quasar CSS Color Palette</a>. Examples: <code>primary</code>, <code>orange</code>, <code>lime</code>.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"primary"</span>&gt;</span>Primary Button<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"amber"</span>&gt;</span>Amber Button<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="More-Button-CSS-Classes"><a href="#More-Button-CSS-Classes" class="headerlink" title="More Button CSS Classes"></a>More Button CSS Classes</h2><p>There are also the <code>glossy</code>, <code>raised</code>, <code>clear</code>, <code>outline</code>, <code>push</code>, <code>bordered</code> and <code>round</code> CSS classes that you can use.</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Chat CSS]]></title>
       <url>http://quasar-framework.org/components/chat.html</url>
       <content type="html"><![CDATA[<p>Quasar supplies CSS classes for making a chat. Loot at the syntax below.</p>
@@ -1296,6 +1296,35 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list bordered inner-delimiter"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-label"</span>&gt;</span></div><div class="line">        Checkbox Label</div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">quasar-checkbox</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-checkbox</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <h2 id="Coloring"><a href="#Coloring" class="headerlink" title="Coloring"></a>Coloring</h2><p>Use one of the Quasar colors from the Color Palette, like <code>primary</code>, <code>secondary</code>, <code>orange</code>, <code>teal</code> as CSS class:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-checkbox</span> <span class="attr">class</span>=<span class="string">"orange"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">quasar-checkbox</span>&gt;</span></div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Collapsibles]]></title>
+      <url>http://quasar-framework.org/components/collapsible.html</url>
+      <content type="html"><![CDATA[<p>Quasar Collapsibles allow the hiding of content that is not immediately relevant to the user. Think of them as accordion elements that expand when clicked on.</p>
+<p>There are two types of Collapsibles: <strong>Regular</strong> and <strong>Popout</strong>. And two types of behavior: <strong>Default</strong> (only one opened accordion element at a time) and <strong>Free</strong> (user can open multiple accordion elements at a time). And also there are two ways of implementing a Collapsible: through a Vue Directive or through a Web Component.</p>
+<input type="hidden" data-fullpage-demo="web-components/collapsible">
+
+<h2 id="Basic-Usage-Directive"><a href="#Basic-Usage-Directive" class="headerlink" title="Basic Usage - Directive"></a>Basic Usage - Directive</h2><p>The usage below implies you won’t add or remove items from the Collapsibles. If this is the case though, use the Web Component in the next section (Advanced Usage).</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Regular collapsible --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"collapsible"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-collapsible</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">i</span>&gt;</span>assignment_ind<span class="tag">&lt;/<span class="name">i</span>&gt;</span>First<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">      Content 1</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-collapsible</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">i</span>&gt;</span>explore<span class="tag">&lt;/<span class="name">i</span>&gt;</span>Second<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">      Content 2</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-collapsible</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">i</span>&gt;</span>shopping_cart<span class="tag">&lt;/<span class="name">i</span>&gt;</span>Third<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">      Content 3</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>For Popouts, add class <code>popout</code> to the <code>&lt;ul&gt;</code> DOM element.<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Popout collapsible --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"collapsible popout"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>For <strong>Free</strong> type (user can open multiple accordion elements at a time), use a slightly different version of the <code>v-collapsible</code> directive:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"collapsible"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-collapsible.free</span>&gt;</span>...<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-collapsible.free</span>&gt;</span>...<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"collapsible popout"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-collapsible.free</span>&gt;</span>...<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-collapsible.free</span>&gt;</span>...<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Preselecting-Items"><a href="#Preselecting-Items" class="headerlink" title="Preselecting Items"></a>Preselecting Items</h2><p>Accordion items can be opened by default. For this, add CSS class <code>active</code> to them. If opening multiple items at once by default then make sure that the Collapsible is in <em>Freely</em> mode.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"collapsible"</span>&gt;</span></div><div class="line">  ...</div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-collapsible</span> <span class="attr">class</span>=<span class="string">"active"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  ...</div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"collapsible"</span>&gt;</span></div><div class="line">  ...</div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"active"</span> <span class="attr">v-collapsible.free</span>&gt;</span>...<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"active"</span> <span class="attr">v-collapsible.free</span>&gt;</span>...<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  ...</div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Ubiquity-Use-Cards-As-Content"><a href="#Ubiquity-Use-Cards-As-Content" class="headerlink" title="Ubiquity - Use Cards As Content"></a>Ubiquity - Use Cards As Content</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"collapsible"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-collapsible</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">i</span>&gt;</span>explore<span class="tag">&lt;/<span class="name">i</span>&gt;</span>Second Card<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"card"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"assets/mountains.jpg"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"card-content"</span>&gt;</span></div><div class="line">        Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Context Menu]]></title>
+      <url>http://quasar-framework.org/components/context-menu.html</url>
+      <content type="html"><![CDATA[<p>This component allows you (currently only on a desktop) to display a context menu (popup) instead of the default one when user performs a right-click.</p>
+<input type="hidden" data-fullpage-demo="web-components/context-menu">
+
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-context-menu</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--</span></div><div class="line">    The DOM element(s) that make up the context menu,</div><div class="line">    in this case a list, but you can use whatever you like</div><div class="line">  --&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list item-delimiter highlight"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item item-link"</span> <span class="attr">v-for</span>=<span class="string">"n in 30"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-label"</span>&gt;</span>Label<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-value"</span>&gt;</span>Value<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">quasar-context-menu</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>The position of the menu/popup is calculated so that it will be displayed on the available screen real estate, switching to right-side and/or top-side when necessary.</p>
 ]]></content>
     </entry>
     
@@ -1402,17 +1431,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Context Menu]]></title>
-      <url>http://quasar-framework.org/components/context-menu.html</url>
-      <content type="html"><![CDATA[<p>This component allows you (currently only on a desktop) to display a context menu (popup) instead of the default one when user performs a right-click.</p>
-<input type="hidden" data-fullpage-demo="web-components/context-menu">
-
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-context-menu</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--</span></div><div class="line">    The DOM element(s) that make up the context menu,</div><div class="line">    in this case a list, but you can use whatever you like</div><div class="line">  --&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list item-delimiter highlight"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item item-link"</span> <span class="attr">v-for</span>=<span class="string">"n in 30"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-label"</span>&gt;</span>Label<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-value"</span>&gt;</span>Value<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">quasar-context-menu</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>The position of the menu/popup is calculated so that it will be displayed on the available screen real estate, switching to right-side and/or top-side when necessary.</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Drawer]]></title>
       <url>http://quasar-framework.org/components/drawer.html</url>
       <content type="html"><![CDATA[<p>The Quasar Drawer (also known as a Sidebar) is the element on the left side or right side of your screen, usually used for Navigation, which gets hidden on smaller screens (and can be activated by swiping them into view from the edge of the screen or by clicking/tapping on menu buttons) and is shown alongside the page content on wide enough screens.</p>
@@ -1457,24 +1475,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Collapsibles]]></title>
-      <url>http://quasar-framework.org/components/collapsible.html</url>
-      <content type="html"><![CDATA[<p>Quasar Collapsibles allow the hiding of content that is not immediately relevant to the user. Think of them as accordion elements that expand when clicked on.</p>
-<p>There are two types of Collapsibles: <strong>Regular</strong> and <strong>Popout</strong>. And two types of behavior: <strong>Default</strong> (only one opened accordion element at a time) and <strong>Free</strong> (user can open multiple accordion elements at a time). And also there are two ways of implementing a Collapsible: through a Vue Directive or through a Web Component.</p>
-<input type="hidden" data-fullpage-demo="web-components/collapsible">
-
-<h2 id="Basic-Usage-Directive"><a href="#Basic-Usage-Directive" class="headerlink" title="Basic Usage - Directive"></a>Basic Usage - Directive</h2><p>The usage below implies you won’t add or remove items from the Collapsibles. If this is the case though, use the Web Component in the next section (Advanced Usage).</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Regular collapsible --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"collapsible"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-collapsible</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">i</span>&gt;</span>assignment_ind<span class="tag">&lt;/<span class="name">i</span>&gt;</span>First<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">      Content 1</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-collapsible</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">i</span>&gt;</span>explore<span class="tag">&lt;/<span class="name">i</span>&gt;</span>Second<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">      Content 2</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-collapsible</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">i</span>&gt;</span>shopping_cart<span class="tag">&lt;/<span class="name">i</span>&gt;</span>Third<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">      Content 3</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>For Popouts, add class <code>popout</code> to the <code>&lt;ul&gt;</code> DOM element.<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Popout collapsible --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"collapsible popout"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>For <strong>Free</strong> type (user can open multiple accordion elements at a time), use a slightly different version of the <code>v-collapsible</code> directive:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"collapsible"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-collapsible.free</span>&gt;</span>...<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-collapsible.free</span>&gt;</span>...<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"collapsible popout"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-collapsible.free</span>&gt;</span>...<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-collapsible.free</span>&gt;</span>...<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Preselecting-Items"><a href="#Preselecting-Items" class="headerlink" title="Preselecting Items"></a>Preselecting Items</h2><p>Accordion items can be opened by default. For this, add CSS class <code>active</code> to them. If opening multiple items at once by default then make sure that the Collapsible is in <em>Freely</em> mode.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"collapsible"</span>&gt;</span></div><div class="line">  ...</div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-collapsible</span> <span class="attr">class</span>=<span class="string">"active"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  ...</div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"collapsible"</span>&gt;</span></div><div class="line">  ...</div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"active"</span> <span class="attr">v-collapsible.free</span>&gt;</span>...<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"active"</span> <span class="attr">v-collapsible.free</span>&gt;</span>...<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  ...</div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Ubiquity-Use-Cards-As-Content"><a href="#Ubiquity-Use-Cards-As-Content" class="headerlink" title="Ubiquity - Use Cards As Content"></a>Ubiquity - Use Cards As Content</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"collapsible"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-collapsible</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">i</span>&gt;</span>explore<span class="tag">&lt;/<span class="name">i</span>&gt;</span>Second Card<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"card"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"assets/mountains.jpg"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"card-content"</span>&gt;</span></div><div class="line">        Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Dropdown]]></title>
       <url>http://quasar-framework.org/components/dropdown.html</url>
       <content type="html"><![CDATA[<p>When you want a menu/popup to be displayed when user clicks/taps on a DOM element.</p>
@@ -1482,17 +1482,6 @@
 
 <h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><p>In the example below we use a Button (as a target) and when clicking/tapping on it Quasar will display a List.<br>You can replace the Button and the List with any DOM elements or Quasar Web Components you like.<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-dropdown</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--</span></div><div class="line">    slot="target" for DOM element that when clicked</div><div class="line">    it will open the dropdown; in this case a button</div><div class="line">  --&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">slot</span>=<span class="string">"target"</span> <span class="attr">class</span>=<span class="string">"primary"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">i</span>&gt;</span>mail<span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="comment">&lt;!--</span></div><div class="line">    The DOM element(s) that make up the Dropdown menu,</div><div class="line">    in this case a list</div><div class="line">  --&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list item-delimiter highlight"</span>&gt;</span></div><div class="line">    ...</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">quasar-dropdown</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>The position of the popup is calculated so that it will be displayed on the available screen real estate, switching to right-side and/or top-side when necessary.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[HTML Tables]]></title>
-      <url>http://quasar-framework.org/components/html-tables.html</url>
-      <content type="html"><![CDATA[<p>HTML tables don`t need to look bad. Quasar takes care of them by default.</p>
-<input type="hidden" data-fullpage-demo="css/html-table">
-
-<p>If the default table style is not enough, use following CSS classes to best suit your needs: <code>inner-delimiter</code>, <code>bordered</code>, <code>striped</code>, <code>highlight</code>, <code>centered</code>, <code>compact</code>.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">"...."</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">thead</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>Price<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>In Stock<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>Item #1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>$10.11<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>101<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>Item #2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>$8.88<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>34<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>Item #3<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>$0.15<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>1670<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -1612,6 +1601,17 @@
 </tr>
 </tbody>
 </table>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[HTML Tables]]></title>
+      <url>http://quasar-framework.org/components/html-tables.html</url>
+      <content type="html"><![CDATA[<p>HTML tables don`t need to look bad. Quasar takes care of them by default.</p>
+<input type="hidden" data-fullpage-demo="css/html-table">
+
+<p>If the default table style is not enough, use following CSS classes to best suit your needs: <code>inner-delimiter</code>, <code>bordered</code>, <code>striped</code>, <code>highlight</code>, <code>centered</code>, <code>compact</code>.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">"...."</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">thead</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>Price<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>In Stock<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>Item #1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>$10.11<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>101<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>Item #2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>$8.88<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>34<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>Item #3<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>$0.15<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>1670<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -2058,6 +2058,42 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Progress Bar]]></title>
+      <url>http://quasar-framework.org/components/progress-bar.html</url>
+      <content type="html"><![CDATA[<p>A Progress bar is used to show a user how far along he/she is in a process.</p>
+<input type="hidden" data-fullpage-demo="web-components/progress">
+
+<h2 id="Basic-usage"><a href="#Basic-usage" class="headerlink" title="Basic usage"></a>Basic usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span> <span class="attr">:model</span>=<span class="string">"progressModel"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h2><p>Configure how your progress bar is shown. Add one of these CSS classes:</p>
+<table>
+<thead>
+<tr>
+<th>CSS Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>indeterminate</code></td>
+<td>Make its state as indeterminate.</td>
+</tr>
+<tr>
+<td><code>stripe</code></td>
+<td>Make it striped. Optionally use in conjunction with <code>animate</code></td>
+</tr>
+<tr>
+<td><code>animate</code></td>
+<td>Works only along <code>stripe</code>. It makes a nice animated stripe.</td>
+</tr>
+</tbody>
+</table>
+<p>For color, use one of the main colors. See <a href="/api/css-color-palette.html">API &gt; CSS &gt; Color Palette</a>.</p>
+<p>Examples:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span> <span class="attr">:model</span>=<span class="string">"progress"</span> <span class="attr">class</span>=<span class="string">"positive"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span> <span class="attr">:model</span>=<span class="string">"progress"</span> <span class="attr">class</span>=<span class="string">"info"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span> <span class="attr">:model</span>=<span class="string">"progress"</span> <span class="attr">class</span>=<span class="string">"warning"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span> <span class="attr">:model</span>=<span class="string">"progress"</span> <span class="attr">class</span>=<span class="string">"secondary"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span> <span class="attr">:model</span>=<span class="string">"progress"</span> <span class="attr">class</span>=<span class="string">"tertiary"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span> <span class="attr">:model</span>=<span class="string">"progress"</span> <span class="attr">class</span>=<span class="string">"dark"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span> <span class="attr">:model</span>=<span class="string">"progress"</span> <span class="attr">class</span>=<span class="string">"orange"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span> <span class="attr">:model</span>=<span class="string">"progress"</span> <span class="attr">class</span>=<span class="string">"red"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span> <span class="attr">:model</span>=<span class="string">"progress"</span> <span class="attr">class</span>=<span class="string">"light-blue"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>Specific height:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span></span></div><div class="line">  <span class="attr">style</span>=<span class="string">"height: 45px"</span></div><div class="line">  <span class="attr">class</span>=<span class="string">"indeterminate stripe"</span></div><div class="line">  <span class="attr">:model</span>=<span class="string">"progress"</span></div><div class="line">&gt;<span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Pull Down to Refresh]]></title>
       <url>http://quasar-framework.org/components/pull-to-refresh.html</url>
       <content type="html"><![CDATA[<p>When you want to allow the user to refresh the content or add newest content.</p>
@@ -2117,42 +2153,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Progress Bar]]></title>
-      <url>http://quasar-framework.org/components/progress-bar.html</url>
-      <content type="html"><![CDATA[<p>A Progress bar is used to show a user how far along he/she is in a process.</p>
-<input type="hidden" data-fullpage-demo="web-components/progress">
-
-<h2 id="Basic-usage"><a href="#Basic-usage" class="headerlink" title="Basic usage"></a>Basic usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span> <span class="attr">:model</span>=<span class="string">"progressModel"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h2><p>Configure how your progress bar is shown. Add one of these CSS classes:</p>
-<table>
-<thead>
-<tr>
-<th>CSS Class</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>indeterminate</code></td>
-<td>Make its state as indeterminate.</td>
-</tr>
-<tr>
-<td><code>stripe</code></td>
-<td>Make it striped. Optionally use in conjunction with <code>animate</code></td>
-</tr>
-<tr>
-<td><code>animate</code></td>
-<td>Works only along <code>stripe</code>. It makes a nice animated stripe.</td>
-</tr>
-</tbody>
-</table>
-<p>For color, use one of the main colors. See <a href="/api/css-color-palette.html">API &gt; CSS &gt; Color Palette</a>.</p>
-<p>Examples:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span> <span class="attr">:model</span>=<span class="string">"progress"</span> <span class="attr">class</span>=<span class="string">"positive"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span> <span class="attr">:model</span>=<span class="string">"progress"</span> <span class="attr">class</span>=<span class="string">"info"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span> <span class="attr">:model</span>=<span class="string">"progress"</span> <span class="attr">class</span>=<span class="string">"warning"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span> <span class="attr">:model</span>=<span class="string">"progress"</span> <span class="attr">class</span>=<span class="string">"secondary"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span> <span class="attr">:model</span>=<span class="string">"progress"</span> <span class="attr">class</span>=<span class="string">"tertiary"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span> <span class="attr">:model</span>=<span class="string">"progress"</span> <span class="attr">class</span>=<span class="string">"dark"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span> <span class="attr">:model</span>=<span class="string">"progress"</span> <span class="attr">class</span>=<span class="string">"orange"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span> <span class="attr">:model</span>=<span class="string">"progress"</span> <span class="attr">class</span>=<span class="string">"red"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span> <span class="attr">:model</span>=<span class="string">"progress"</span> <span class="attr">class</span>=<span class="string">"light-blue"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>Specific height:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-progress</span></span></div><div class="line">  <span class="attr">style</span>=<span class="string">"height: 45px"</span></div><div class="line">  <span class="attr">class</span>=<span class="string">"indeterminate stripe"</span></div><div class="line">  <span class="attr">:model</span>=<span class="string">"progress"</span></div><div class="line">&gt;<span class="tag">&lt;/<span class="name">quasar-progress</span>&gt;</span></div></pre></td></tr></table></figure></p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Radio]]></title>
       <url>http://quasar-framework.org/components/radio.html</url>
       <content type="html"><![CDATA[<input type="hidden" data-fullpage-demo="form/radio">
@@ -2203,6 +2203,24 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Scroll Fire]]></title>
+      <url>http://quasar-framework.org/components/scroll-fire.html</url>
+      <content type="html"><![CDATA[<p>“Scroll Fire” is a feature that enables a method to be called (once and only once) when user scrolls current page to a specific scroll position in pixels.</p>
+<input type="hidden" data-fullpage-demo="web-components/scroll-fire">
+
+<p>For ease of use, its implementation is through a Vue Directive called <code>v-scroll-fire</code>.</p>
+<blockquote>
+<p><strong>NOTE</strong><br>There is also a <code>v-scroll</code> directive which fires whenever user scrolls the page, available to read <a href="/api/js-vue-directives.html#Directive-“v-scroll”">here</a>.</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Template for VueModel below --&gt;</span></div><div class="line">....</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-scroll-fire</span>=<span class="string">"bounceImage"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">....</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// VueModel for template above</span></div><div class="line">&#123;</div><div class="line">  ...,</div><div class="line">  methods: &#123;</div><div class="line">    bounceImage (element) &#123;</div><div class="line">      Velocity(element, <span class="string">'callout.tada'</span>, &#123;</div><div class="line">        display: <span class="literal">null</span></div><div class="line">      &#125;)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>IMPORTANT</strong><br>For performance purposes, the scroll listener function injected is by default debounced by 50ms. Read more about <code>debouncing</code> <a href="/api/js-utils.html#Debounce-Function">here</a>.</p>
+</blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Rating]]></title>
       <url>http://quasar-framework.org/components/rating.html</url>
       <content type="html"><![CDATA[<p>Quasar Rating is a Web Component which allows users to rate items, usually knows as “Star Rating”.</p>
@@ -2242,24 +2260,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Scroll Fire]]></title>
-      <url>http://quasar-framework.org/components/scroll-fire.html</url>
-      <content type="html"><![CDATA[<p>“Scroll Fire” is a feature that enables a method to be called (once and only once) when user scrolls current page to a specific scroll position in pixels.</p>
-<input type="hidden" data-fullpage-demo="web-components/scroll-fire">
-
-<p>For ease of use, its implementation is through a Vue Directive called <code>v-scroll-fire</code>.</p>
-<blockquote>
-<p><strong>NOTE</strong><br>There is also a <code>v-scroll</code> directive which fires whenever user scrolls the page, available to read <a href="/api/js-vue-directives.html#Directive-“v-scroll”">here</a>.</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Template for VueModel below --&gt;</span></div><div class="line">....</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-scroll-fire</span>=<span class="string">"bounceImage"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">....</div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// VueModel for template above</span></div><div class="line">&#123;</div><div class="line">  ...,</div><div class="line">  methods: &#123;</div><div class="line">    bounceImage (element) &#123;</div><div class="line">      Velocity(element, <span class="string">'callout.tada'</span>, &#123;</div><div class="line">        display: <span class="literal">null</span></div><div class="line">      &#125;)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<blockquote>
-<p><strong>IMPORTANT</strong><br>For performance purposes, the scroll listener function injected is by default debounced by 50ms. Read more about <code>debouncing</code> <a href="/api/js-utils.html#Debounce-Function">here</a>.</p>
-</blockquote>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Search bar]]></title>
       <url>http://quasar-framework.org/components/search.html</url>
       <content type="html"><![CDATA[<input type="hidden" data-fullpage-demo="form/search">
@@ -2291,6 +2291,33 @@
 <h2 id="Coloring"><a href="#Coloring" class="headerlink" title="Coloring"></a>Coloring</h2><p>Use one of the Quasar colors from the Color Palette, like <code>primary</code>, <code>secondary</code>, <code>orange</code>, <code>teal</code> as CSS class:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-search</span></span></div><div class="line">  <span class="attr">class</span>=<span class="string">"orange"</span></div><div class="line">  <span class="attr">:model.sync</span>=<span class="string">"searchModel"</span></div><div class="line">&gt;<span class="tag">&lt;/<span class="name">quasar-search</span>&gt;</span></div></pre></td></tr></table></figure>
 <h2 id="Usage-with-Layout"><a href="#Usage-with-Layout" class="headerlink" title="Usage with Layout"></a>Usage with Layout</h2><p>If you want to place on Layout header or footer:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-layout</span>&gt;</span></div><div class="line">  ...</div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"header"</span> <span class="attr">class</span>=<span class="string">"toolbar orange"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">quasar-search</span> <span class="attr">class</span>=<span class="string">"orange"</span> <span class="attr">:model.sync</span>=<span class="string">"searchModel"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-search</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  ...</div><div class="line"><span class="tag">&lt;/<span class="name">quasar-layout</span>&gt;</span></div></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Slider]]></title>
+      <url>http://quasar-framework.org/components/slider.html</url>
+      <content type="html"><![CDATA[<p>Quasar Slider is a Vue Component which you can use to display more information with less real estate, using slides.</p>
+<p>The Slider height is determined by the slide with biggest height.</p>
+<input type="hidden" data-fullpage-demo="web-components/slider">
+
+<h2 id="Basic-Slider"><a href="#Basic-Slider" class="headerlink" title="Basic Slider"></a>Basic Slider</h2><p>Basic Slider. No controls. Just swipe between slides or<br>use you mouse to drag slides to left or right.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-slider</span> <span class="attr">class</span>=<span class="string">"text-white"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"slide"</span> <span class="attr">class</span>=<span class="string">"bg-primary"</span>&gt;</span></div><div class="line">    Slide 1</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"slide"</span> <span class="attr">class</span>=<span class="string">"bg-secondary"</span>&gt;</span></div><div class="line">    Slide 2</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"slide"</span> <span class="attr">class</span>=<span class="string">"bg-tertiary"</span>&gt;</span></div><div class="line">    Slide 3</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">quasar-slider</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Slider-with-Arrows-Dots-and-Fullscreen-Controls"><a href="#Slider-with-Arrows-Dots-and-Fullscreen-Controls" class="headerlink" title="Slider with Arrows, Dots and Fullscreen Controls"></a>Slider with Arrows, Dots and Fullscreen Controls</h2><p>Sliders can contain button controls, like:</p>
+<ul>
+<li>Arrows so user can switch between slides if swipe actions are not enough.</li>
+<li>Clickable small dots to also quickly switch between slides and give a hint on the number of current slide.</li>
+<li>Fullscreen button so Slider can be displayed over all screen real-estate.</li>
+</ul>
+<p>To show these controls simply add <code>arrows</code>, <code>dots</code> and/or <code>fullscreen</code> DOM node attributes.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-slider</span> <span class="attr">arrows</span> <span class="attr">dots</span> <span class="attr">fullscreen</span> <span class="attr">class</span>=<span class="string">"text-white"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"slide"</span> <span class="attr">class</span>=<span class="string">"bg-primary"</span>&gt;</span></div><div class="line">    Slide 1</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"slide"</span> <span class="attr">class</span>=<span class="string">"bg-secondary"</span>&gt;</span></div><div class="line">    Slide 2</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">quasar-slider</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Slider-with-Centered-Content"><a href="#Slider-with-Centered-Content" class="headerlink" title="Slider with Centered Content"></a>Slider with Centered Content</h2><p>Add CSS class <code>centered</code> to the slide that you want to center its content.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-slider</span> <span class="attr">arrows</span> <span class="attr">dots</span> <span class="attr">class</span>=<span class="string">"text-white"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"slide"</span> <span class="attr">class</span>=<span class="string">"bg-primary centered"</span>&gt;</span></div><div class="line">    Slide 1</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"slide"</span> <span class="attr">class</span>=<span class="string">"bg-secondary centered"</span>&gt;</span></div><div class="line">    Slide 2</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">quasar-slider</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Slider-with-Custom-Actions"><a href="#Slider-with-Custom-Actions" class="headerlink" title="Slider with Custom Actions"></a>Slider with Custom Actions</h2><p>Put icons on the same DOM hierarchical level as the slides.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-slider</span> <span class="attr">arrows</span> <span class="attr">dots</span> <span class="attr">actions</span> <span class="attr">class</span>=<span class="string">"text-white"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"slide"</span> <span class="attr">class</span>=<span class="string">"bg-primary"</span>&gt;</span></div><div class="line">    Slide 1</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"slide"</span> <span class="attr">class</span>=<span class="string">"bg-secondary"</span>&gt;</span></div><div class="line">    Slide 2</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"slide"</span> <span class="attr">class</span>=<span class="string">"bg-tertiary"</span>&gt;</span></div><div class="line">    Slide 3</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">i</span> <span class="attr">slot</span>=<span class="string">"action"</span> @<span class="attr">click</span>=<span class="string">"someMethod()"</span>&gt;</span></div><div class="line">    camera_enhance</div><div class="line">  <span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">i</span> <span class="attr">slot</span>=<span class="string">"action"</span> @<span class="attr">click</span>=<span class="string">"someOtherMethod()"</span>&gt;</span></div><div class="line">    bookmark_border</div><div class="line">  <span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">i</span> <span class="attr">slot</span>=<span class="string">"action"</span> @<span class="attr">click</span>=<span class="string">"thirdMethod()"</span>&gt;</span></div><div class="line">    add_shopping_cart</div><div class="line">  <span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">quasar-slider</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Launch-Slider-in-Fullscreen"><a href="#Launch-Slider-in-Fullscreen" class="headerlink" title="Launch Slider in Fullscreen"></a>Launch Slider in Fullscreen</h2><p>You can launch a Slider in Fullscreen by using <a href="/components/modal.html">Modals</a>:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Modal &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Modal.create(&#123;</div><div class="line">  template: modalTemplate</div><div class="line">&#125;).set(&#123;</div><div class="line">  maximized: <span class="literal">true</span></div><div class="line">&#125;).show()</div></pre></td></tr></table></figure>
+<p>Your modal template should only contain at most one slider like ones above, and not more.</p>
 ]]></content>
     </entry>
     
@@ -2346,33 +2373,6 @@
 </tbody>
 </table>
 <h2 id="Inside-of-a-List-Usage"><a href="#Inside-of-a-List-Usage" class="headerlink" title="Inside of a List Usage"></a>Inside of a List Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list item-delimiter bordered"</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- Single Selection --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-label"</span>&gt;</span>Company<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">quasar-select</span></span></div><div class="line">        <span class="attr">:model.sync</span>=<span class="string">"select"</span></div><div class="line">        <span class="attr">:options</span>=<span class="string">"selectOptions"</span></div><div class="line">        <span class="attr">ok-label</span>=<span class="string">"Pick"</span></div><div class="line">        <span class="attr">cancel-label</span>=<span class="string">"Neah"</span></div><div class="line">        <span class="attr">title</span>=<span class="string">"Company"</span></div><div class="line">      &gt;<span class="tag">&lt;/<span class="name">quasar-select</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="comment">&lt;!-- Multiple Selection --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-label"</span>&gt;</span>Companies<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">quasar-select</span></span></div><div class="line">        <span class="attr">multiple</span></div><div class="line">        <span class="attr">:model.sync</span>=<span class="string">"multipleSelect"</span></div><div class="line">        <span class="attr">:options</span>=<span class="string">"selectOptions"</span></div><div class="line">        <span class="attr">ok-label</span>=<span class="string">"Pick"</span></div><div class="line">        <span class="attr">title</span>=<span class="string">"Companies"</span></div><div class="line">      &gt;<span class="tag">&lt;/<span class="name">quasar-select</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Slider]]></title>
-      <url>http://quasar-framework.org/components/slider.html</url>
-      <content type="html"><![CDATA[<p>Quasar Slider is a Vue Component which you can use to display more information with less real estate, using slides.</p>
-<p>The Slider height is determined by the slide with biggest height.</p>
-<input type="hidden" data-fullpage-demo="web-components/slider">
-
-<h2 id="Basic-Slider"><a href="#Basic-Slider" class="headerlink" title="Basic Slider"></a>Basic Slider</h2><p>Basic Slider. No controls. Just swipe between slides or<br>use you mouse to drag slides to left or right.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-slider</span> <span class="attr">class</span>=<span class="string">"text-white"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"slide"</span> <span class="attr">class</span>=<span class="string">"bg-primary"</span>&gt;</span></div><div class="line">    Slide 1</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"slide"</span> <span class="attr">class</span>=<span class="string">"bg-secondary"</span>&gt;</span></div><div class="line">    Slide 2</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"slide"</span> <span class="attr">class</span>=<span class="string">"bg-tertiary"</span>&gt;</span></div><div class="line">    Slide 3</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">quasar-slider</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Slider-with-Arrows-Dots-and-Fullscreen-Controls"><a href="#Slider-with-Arrows-Dots-and-Fullscreen-Controls" class="headerlink" title="Slider with Arrows, Dots and Fullscreen Controls"></a>Slider with Arrows, Dots and Fullscreen Controls</h2><p>Sliders can contain button controls, like:</p>
-<ul>
-<li>Arrows so user can switch between slides if swipe actions are not enough.</li>
-<li>Clickable small dots to also quickly switch between slides and give a hint on the number of current slide.</li>
-<li>Fullscreen button so Slider can be displayed over all screen real-estate.</li>
-</ul>
-<p>To show these controls simply add <code>arrows</code>, <code>dots</code> and/or <code>fullscreen</code> DOM node attributes.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-slider</span> <span class="attr">arrows</span> <span class="attr">dots</span> <span class="attr">fullscreen</span> <span class="attr">class</span>=<span class="string">"text-white"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"slide"</span> <span class="attr">class</span>=<span class="string">"bg-primary"</span>&gt;</span></div><div class="line">    Slide 1</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"slide"</span> <span class="attr">class</span>=<span class="string">"bg-secondary"</span>&gt;</span></div><div class="line">    Slide 2</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">quasar-slider</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Slider-with-Centered-Content"><a href="#Slider-with-Centered-Content" class="headerlink" title="Slider with Centered Content"></a>Slider with Centered Content</h2><p>Add CSS class <code>centered</code> to the slide that you want to center its content.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-slider</span> <span class="attr">arrows</span> <span class="attr">dots</span> <span class="attr">class</span>=<span class="string">"text-white"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"slide"</span> <span class="attr">class</span>=<span class="string">"bg-primary centered"</span>&gt;</span></div><div class="line">    Slide 1</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"slide"</span> <span class="attr">class</span>=<span class="string">"bg-secondary centered"</span>&gt;</span></div><div class="line">    Slide 2</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">quasar-slider</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Slider-with-Custom-Actions"><a href="#Slider-with-Custom-Actions" class="headerlink" title="Slider with Custom Actions"></a>Slider with Custom Actions</h2><p>Put icons on the same DOM hierarchical level as the slides.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-slider</span> <span class="attr">arrows</span> <span class="attr">dots</span> <span class="attr">actions</span> <span class="attr">class</span>=<span class="string">"text-white"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"slide"</span> <span class="attr">class</span>=<span class="string">"bg-primary"</span>&gt;</span></div><div class="line">    Slide 1</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"slide"</span> <span class="attr">class</span>=<span class="string">"bg-secondary"</span>&gt;</span></div><div class="line">    Slide 2</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"slide"</span> <span class="attr">class</span>=<span class="string">"bg-tertiary"</span>&gt;</span></div><div class="line">    Slide 3</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">i</span> <span class="attr">slot</span>=<span class="string">"action"</span> @<span class="attr">click</span>=<span class="string">"someMethod()"</span>&gt;</span></div><div class="line">    camera_enhance</div><div class="line">  <span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">i</span> <span class="attr">slot</span>=<span class="string">"action"</span> @<span class="attr">click</span>=<span class="string">"someOtherMethod()"</span>&gt;</span></div><div class="line">    bookmark_border</div><div class="line">  <span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">i</span> <span class="attr">slot</span>=<span class="string">"action"</span> @<span class="attr">click</span>=<span class="string">"thirdMethod()"</span>&gt;</span></div><div class="line">    add_shopping_cart</div><div class="line">  <span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">quasar-slider</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Launch-Slider-in-Fullscreen"><a href="#Launch-Slider-in-Fullscreen" class="headerlink" title="Launch Slider in Fullscreen"></a>Launch Slider in Fullscreen</h2><p>You can launch a Slider in Fullscreen by using <a href="/components/modal.html">Modals</a>:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Modal &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Modal.create(&#123;</div><div class="line">  template: modalTemplate</div><div class="line">&#125;).set(&#123;</div><div class="line">  maximized: <span class="literal">true</span></div><div class="line">&#125;).show()</div></pre></td></tr></table></figure>
-<p>Your modal template should only contain at most one slider like ones above, and not more.</p>
 ]]></content>
     </entry>
     
@@ -2897,22 +2897,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[App Linter Configuration]]></title>
-      <url>http://quasar-framework.org/guide/app-linter-configuration.html</url>
-      <content type="html"><![CDATA[<p>The boilerplate created by Quasar CLI uses ESLint(<a href="http://eslint.org/" target="_blank" rel="external">http://eslint.org/</a>) as the linter, and uses the <a href="https://github.com/feross/standard/blob/master/RULES.md" target="_blank" rel="external">Standard</a> preset with some small customizations.</p>
-<p>If you are not happy with the default linting rules, you have several options:</p>
-<ol>
-<li><p>Overwrite individual rules in .eslintrc.js. For example, you can add the following rule to enforce semicolons instead of omitting them:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="string">"semi"</span>: [<span class="number">2</span>, <span class="string">"always"</span>]</div></pre></td></tr></table></figure>
-<p>Pick a different ESLint preset when generating the project, for example <a href="https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb" target="_blank" rel="external">eslint-config-airbnb</a>.</p>
-</li>
-<li><p>Pick “none” for ESLint preset when generating the project and define your own rules. See <a href="http://eslint.org/docs/rules/" target="_blank" rel="external">ESLint documentation</a> for more details.</p>
-</li>
-</ol>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[App Pre-Processors]]></title>
       <url>http://quasar-framework.org/guide/app-pre-processors.html</url>
       <content type="html"><![CDATA[<p>The boilerplate created with Quasar CLI has pre-configured CSS extraction for most popular CSS pre-processors including LESS, SASS, Stylus, and PostCSS. To use a pre-processor, all you need to do is installing the appropriate webpack loader for it. For example, to use SASS:</p>
@@ -2932,6 +2916,22 @@
 <h2 id="Standalone-CSS-Files"><a href="#Standalone-CSS-Files" class="headerlink" title="Standalone CSS Files"></a>Standalone CSS Files</h2><p>To ensure consistent extraction and processing it is recommended that you import global, standalone style files from your root component, for example:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">src</span>=<span class="string">"./styles/global.less"</span> <span class="attr">lang</span>=<span class="string">"less"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>Note you should probably only do this for the styles written by yourself for your application. For existing libraries e.g. Bootstrap or Semantic UI, you can place them inside <code>src/statics/</code> and reference them directly in index.html. This avoids extra build time and also is better for browser caching. (See <a href="/guide/app-handling-static-assets.html">Handling Static Assets</a>).</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[App Linter Configuration]]></title>
+      <url>http://quasar-framework.org/guide/app-linter-configuration.html</url>
+      <content type="html"><![CDATA[<p>The boilerplate created by Quasar CLI uses ESLint(<a href="http://eslint.org/" target="_blank" rel="external">http://eslint.org/</a>) as the linter, and uses the <a href="https://github.com/feross/standard/blob/master/RULES.md" target="_blank" rel="external">Standard</a> preset with some small customizations.</p>
+<p>If you are not happy with the default linting rules, you have several options:</p>
+<ol>
+<li><p>Overwrite individual rules in .eslintrc.js. For example, you can add the following rule to enforce semicolons instead of omitting them:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="string">"semi"</span>: [<span class="number">2</span>, <span class="string">"always"</span>]</div></pre></td></tr></table></figure>
+<p>Pick a different ESLint preset when generating the project, for example <a href="https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb" target="_blank" rel="external">eslint-config-airbnb</a>.</p>
+</li>
+<li><p>Pick “none” for ESLint preset when generating the project and define your own rules. See <a href="http://eslint.org/docs/rules/" target="_blank" rel="external">ESLint documentation</a> for more details.</p>
+</li>
+</ol>
 ]]></content>
     </entry>
     
@@ -3167,6 +3167,36 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Getting Started]]></title>
+      <url>http://quasar-framework.org/guide/index.html</url>
+      <content type="html"><![CDATA[<p>Quasar CLI allows you to start new projects in no time by generating a starter boilerplate filled with everything that you need. It also does most of the heavy-lifting so you don’t have to take care of the redundant tasks. You must install it to generate and manage a Quasar App.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ npm install -g quasar-cli</div></pre></td></tr></table></figure>
+<h2 id="Create-your-first-App"><a href="#Create-your-first-App" class="headerlink" title="Create your first App"></a>Create your first App</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ quasar init &lt;folder name&gt;</div></pre></td></tr></table></figure>
+<p>Start a development server of your first App, equipped with hot reload:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ quasar dev [theme]</div><div class="line"></div><div class="line"><span class="comment"># start with 'mat' theme</span></div><div class="line">$ quasar dev</div><div class="line"><span class="comment"># or</span></div><div class="line">$ quasar dev mat</div><div class="line"></div><div class="line"><span class="comment"># start with 'ios' theme</span></div><div class="line">$ quasar dev ios</div></pre></td></tr></table></figure>
+<p>Create <code>*.vue</code> components from ready to use component templates folder (<code>/templates</code>):</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ quasar new [<span class="built_in">type</span>] &lt;name of your component with optional subfolder&gt;</div></pre></td></tr></table></figure>
+<p>Type can be <code>layout</code>, <code>view</code> (page content), <code>component</code> (generic <code>*.vue</code> component).<br>You can even make your own component templates and use CLI to generate them in your App.</p>
+<h2 id="Quasar-Play-App"><a href="#Quasar-Play-App" class="headerlink" title="Quasar Play App"></a>Quasar Play App</h2><p>If you want to <strong>develop mobile Apps with hot reload directly on your mobile phone</strong>, install <a href="/guide/quasar-play-app.html">Quasar Play</a> app, currently only on Google Play Store.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ quasar dev --play</div></pre></td></tr></table></figure>
+<p>This generates a QR code that you can scan with Quasar Play app and you’ll have your App on the phone as long as the development server is running.</p>
+<h2 id="Things-to-read-about"><a href="#Things-to-read-about" class="headerlink" title="Things to read about"></a>Things to read about</h2><p>You should be familiar with these awesome tools/technologies:</p>
+<ul>
+<li><a href="http://www.2ality.com/2015/08/getting-started-es6.html" target="_blank" rel="external">ES6 Javascript</a></li>
+<li><a href="http://vuejs.org" target="_blank" rel="external">Vue Js</a> and <a href="http://npmjs.org" target="_blank" rel="external">NPM</a> ecosystems</li>
+<li><a href="http://router.vuejs.org/" target="_blank" rel="external">Vue Router</a>, <a href="https://github.com/vuejs/vue-touch" target="_blank" rel="external">Vue Touch</a>, <a href="https://github.com/vuejs/vue-resource" target="_blank" rel="external">Vue Resource</a></li>
+<li>Writing <a href="http://vue-loader.vuejs.org/en/index.html" target="_blank" rel="external">.vue files</a></li>
+<li>[Optional] <a href="http://vuex.vuejs.org/" target="_blank" rel="external">Vuex</a> if building large scale Apps.</li>
+<li>[Optional] <a href="http://webpack.github.io/" target="_blank" rel="external">Webpack</a> for tweaking the build system to your specific needs</li>
+<li>[Optional] <a href="https://cordova.apache.org/" target="_blank" rel="external">Cordova</a> for building native mobile phone Apps out of your Quasar App</li>
+</ul>
+<blockquote>
+<p>That’s it. You’re set now. Continue to read the guide about Quasar and don’t forget to have fun :)</p>
+</blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar CLI]]></title>
       <url>http://quasar-framework.org/guide/quasar-cli.html</url>
       <content type="html"><![CDATA[<p>Quasar CLI allows you to start new projects in no time by generating a starter boilerplate filled with everything that you need. It also does most of the heavy-lifting so you don’t have to take care of the redundant tasks. You must install it to generate and manage a Quasar App.</p>
@@ -3215,41 +3245,14 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Getting Started]]></title>
-      <url>http://quasar-framework.org/guide/index.html</url>
-      <content type="html"><![CDATA[<p>Quasar CLI allows you to start new projects in no time by generating a starter boilerplate filled with everything that you need. It also does most of the heavy-lifting so you don’t have to take care of the redundant tasks. You must install it to generate and manage a Quasar App.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ npm install -g quasar-cli</div></pre></td></tr></table></figure>
-<h2 id="Create-your-first-App"><a href="#Create-your-first-App" class="headerlink" title="Create your first App"></a>Create your first App</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ quasar init &lt;folder name&gt;</div></pre></td></tr></table></figure>
-<p>Start a development server of your first App, equipped with hot reload:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ quasar dev [theme]</div><div class="line"></div><div class="line"><span class="comment"># start with 'mat' theme</span></div><div class="line">$ quasar dev</div><div class="line"><span class="comment"># or</span></div><div class="line">$ quasar dev mat</div><div class="line"></div><div class="line"><span class="comment"># start with 'ios' theme</span></div><div class="line">$ quasar dev ios</div></pre></td></tr></table></figure>
-<p>Create <code>*.vue</code> components from ready to use component templates folder (<code>/templates</code>):</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ quasar new [<span class="built_in">type</span>] &lt;name of your component with optional subfolder&gt;</div></pre></td></tr></table></figure>
-<p>Type can be <code>layout</code>, <code>view</code> (page content), <code>component</code> (generic <code>*.vue</code> component).<br>You can even make your own component templates and use CLI to generate them in your App.</p>
-<h2 id="Quasar-Play-App"><a href="#Quasar-Play-App" class="headerlink" title="Quasar Play App"></a>Quasar Play App</h2><p>If you want to <strong>develop mobile Apps with hot reload directly on your mobile phone</strong>, install <a href="/guide/quasar-play-app.html">Quasar Play</a> app, currently only on Google Play Store.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ quasar dev --play</div></pre></td></tr></table></figure>
-<p>This generates a QR code that you can scan with Quasar Play app and you’ll have your App on the phone as long as the development server is running.</p>
-<h2 id="Things-to-read-about"><a href="#Things-to-read-about" class="headerlink" title="Things to read about"></a>Things to read about</h2><p>You should be familiar with these awesome tools/technologies:</p>
-<ul>
-<li><a href="http://www.2ality.com/2015/08/getting-started-es6.html" target="_blank" rel="external">ES6 Javascript</a></li>
-<li><a href="http://vuejs.org" target="_blank" rel="external">Vue Js</a> and <a href="http://npmjs.org" target="_blank" rel="external">NPM</a> ecosystems</li>
-<li><a href="http://router.vuejs.org/" target="_blank" rel="external">Vue Router</a>, <a href="https://github.com/vuejs/vue-touch" target="_blank" rel="external">Vue Touch</a>, <a href="https://github.com/vuejs/vue-resource" target="_blank" rel="external">Vue Resource</a></li>
-<li>Writing <a href="http://vue-loader.vuejs.org/en/index.html" target="_blank" rel="external">.vue files</a></li>
-<li>[Optional] <a href="http://vuex.vuejs.org/" target="_blank" rel="external">Vuex</a> if building large scale Apps.</li>
-<li>[Optional] <a href="http://webpack.github.io/" target="_blank" rel="external">Webpack</a> for tweaking the build system to your specific needs</li>
-<li>[Optional] <a href="https://cordova.apache.org/" target="_blank" rel="external">Cordova</a> for building native mobile phone Apps out of your Quasar App</li>
-</ul>
-<blockquote>
-<p>That’s it. You’re set now. Continue to read the guide about Quasar and don’t forget to have fun :)</p>
-</blockquote>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Play App]]></title>
       <url>http://quasar-framework.org/guide/quasar-play-app.html</url>
       <content type="html"><![CDATA[<p>We have the dev server which offers hot-reload. We can build and test Apps on a desktop machine. If we want to release a native App we can use emulators directly in the browser (read about debugging methods <a href="http://localhost:4000/guide/cordova-wrapper.html#Tips" target="_blank" rel="external">here</a>). It’s cool. But what if we want to develop our Apps directly on phone, tap, swipe items on it. Wouldn’t it be way cooler to have hot-reload working on a phone too?</p>
 <p><strong>Well, now you can.</strong> Download and install Quasar Play App (currently available only on the Google Play Store). This App (written with Quasar) will get you working in no time.</p>
+<p><a class="playstore" href="https://play.google.com/store/apps/details?id=com.quasarframework.quasarplay&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank" rel="external"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"></a></p>
 <ol>
+<li><p>Make sure your phone and development machine can ping each other. In other words, they must be in the same network.</p>
+</li>
 <li><p>Start Dev Server</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ quasar dev --play</div></pre></td></tr></table></figure>
 <p>Notice the <code>--play</code> parameter. This makes Quasar CLI generate a QR code on your console that will point Quasar Play to the newly created server.</p>
@@ -3263,6 +3266,7 @@
 <p>That’s it. You’re done. Wait for your App to load, usually really fast. You’ll have your App running as if it replaces Quasar Play.</p>
 <blockquote>
 <p>You can refresh your App if something goes wrong or close it and go back to Quasar Play at any time. A toolbar on top of the screen will slide down into view if you click on a small <code>+</code> button. To close the toolbar click on the small <code>+</code> button again.</p>
+<p><strong>IMPORTANT</strong><br>While playing with your App in Quasar Play, Cordova functionality will currently not be available. This is due to Cordova Javascript code causing a crash in its Java container.</p>
 </blockquote>
 <p>Give it a try! It will change how you develop your Apps.</p>
 ]]></content>
