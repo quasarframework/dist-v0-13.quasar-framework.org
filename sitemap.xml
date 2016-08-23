@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://quasar-framework.org/components/modal.html</loc>
+    
+    <lastmod>2016-08-23T15:25:23.348Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://quasar-framework.org/components/context-menu.html</loc>
     
     <lastmod>2016-08-23T13:45:01.716Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://quasar-framework.org/components/action-sheet.html</loc>
     
     <lastmod>2016-08-23T13:44:39.936Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/modal.html</loc>
-    
-    <lastmod>2016-08-23T13:44:16.352Z</lastmod>
     
   </url>
   
@@ -170,13 +170,6 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/guide/app-structure.html</loc>
-    
-    <lastmod>2016-08-13T22:49:45.800Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/components/layout-overview.html</loc>
     
     <lastmod>2016-08-13T22:49:45.800Z</lastmod>
@@ -185,6 +178,13 @@
   
   <url>
     <loc>http://quasar-framework.org/components/tabs.html</loc>
+    
+    <lastmod>2016-08-13T22:49:45.800Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/app-structure.html</loc>
     
     <lastmod>2016-08-13T22:49:45.800Z</lastmod>
     
