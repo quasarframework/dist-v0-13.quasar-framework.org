@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://quasar-framework.org/components/input-textbox.html</loc>
+    
+    <lastmod>2016-09-07T07:42:45.883Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-cli.html</loc>
+    
+    <lastmod>2016-09-07T07:42:45.883Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/dialog.html</loc>
+    
+    <lastmod>2016-09-07T07:42:45.883Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://quasar-framework.org/components/modal.html</loc>
     
     <lastmod>2016-08-23T15:25:23.348Z</lastmod>
@@ -19,13 +40,6 @@
     <loc>http://quasar-framework.org/components/action-sheet.html</loc>
     
     <lastmod>2016-08-23T13:44:39.936Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/dialog.html</loc>
-    
-    <lastmod>2016-08-23T13:09:33.224Z</lastmod>
     
   </url>
   
@@ -170,14 +184,14 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/layout-overview.html</loc>
+    <loc>http://quasar-framework.org/components/tabs.html</loc>
     
     <lastmod>2016-08-13T22:49:45.800Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/tabs.html</loc>
+    <loc>http://quasar-framework.org/components/layout-overview.html</loc>
     
     <lastmod>2016-08-13T22:49:45.800Z</lastmod>
     
@@ -215,13 +229,6 @@
     <loc>http://quasar-framework.org/guide/app-linter-configuration.html</loc>
     
     <lastmod>2016-08-13T21:40:37.840Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/quasar-cli.html</loc>
-    
-    <lastmod>2016-08-13T21:37:13.720Z</lastmod>
     
   </url>
   
@@ -544,13 +551,6 @@
     <loc>http://quasar-framework.org/api/css-shadows.html</loc>
     
     <lastmod>2016-08-12T18:02:54.867Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/input-textbox.html</loc>
-    
-    <lastmod>2016-08-12T17:45:56.511Z</lastmod>
     
   </url>
   
