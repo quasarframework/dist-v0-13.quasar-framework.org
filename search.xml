@@ -567,6 +567,16 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Stylus Variables]]></title>
+      <url>http://quasar-framework.org/api/css-stylus-variables.html</url>
+      <content type="html"><![CDATA[<p>Quasar CSS is a blank slate that you can easily customize and modify to fit your brand, while still following the standards of each platform. The best apps in the app stores are fully customized and Quasar makes it easy to do the same with your App.</p>
+<p>Quasar is built on top of Stylus, which allows it to set some default styles for your App but makes it extremely easy for you to change the defaults in your App code.</p>
+<p>Customizing a theme means overriding Stylus variables which can hold colors, sizes, border types and so on. To understand how and where to make use of the full list of variables below, read <a href="/guide/quasar-theming.html">Guide &gt; Theming</a>.</p>
+<h2 id="Variables-List"><a href="#Variables-List" class="headerlink" title="Variables List"></a>Variables List</h2><!-- DO NOT WRITE ANYTHING BELOW THIS LINE -->
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Typography]]></title>
       <url>http://quasar-framework.org/api/css-typography.html</url>
       <content type="html"><![CDATA[<p><input type="hidden" data-fullpage-demo="css/typography"><br>See how headings, blockquotes, definitions lists and more are displayed in the demo. At the end of this page you can read about CSS helper classes.</p>
@@ -664,16 +674,6 @@
 </tr>
 </tbody>
 </table>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Stylus Variables]]></title>
-      <url>http://quasar-framework.org/api/css-stylus-variables.html</url>
-      <content type="html"><![CDATA[<p>Quasar CSS is a blank slate that you can easily customize and modify to fit your brand, while still following the standards of each platform. The best apps in the app stores are fully customized and Quasar makes it easy to do the same with your App.</p>
-<p>Quasar is built on top of Stylus, which allows it to set some default styles for your App but makes it extremely easy for you to change the defaults in your App code.</p>
-<p>Customizing a theme means overriding Stylus variables which can hold colors, sizes, border types and so on. To understand how and where to make use of the full list of variables below, read <a href="/guide/quasar-theming.html">Guide &gt; Theming</a>.</p>
-<h2 id="Variables-List"><a href="#Variables-List" class="headerlink" title="Variables List"></a>Variables List</h2><!-- DO NOT WRITE ANYTHING BELOW THIS LINE -->
 ]]></content>
     </entry>
     
@@ -913,20 +913,20 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Overview]]></title>
+      <url>http://quasar-framework.org/api/index.html</url>
+      <content type="html"><![CDATA[<p>Learn here about the API specifications of every feature embedded in Quasar Framework. How to require a script, how to create a route, how to detect if the app is running within Cordova or on a desktop, and many more, including Quasar CSS specifications.</p>
+<p>By default, Quasar covers a lot of areas of Web development with ready to use API which simplifies your code and hides the different platform quirks.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Fullscreen]]></title>
       <url>http://quasar-framework.org/api/js-app-fullscreen.html</url>
       <content type="html"><![CDATA[<p>There are times when you want your website or App to run in fullscreen.<br>Quasar makes it easy by wrapping the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API" target="_blank" rel="external">Fullscreen API</a>.</p>
 <input type="hidden" data-external-demo="other/app-fullscreen">
 
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; AppFullscreen &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="comment">// Determining if website is in fullscreen mode:</span></div><div class="line">(<span class="built_in">Boolean</span>) AppFullscreen.isActive()</div><div class="line"></div><div class="line"><span class="comment">// Requesting fullscreen mode:</span></div><div class="line">AppFullscreen.request()</div><div class="line"></div><div class="line"><span class="comment">// Exiting fullscreen mode:</span></div><div class="line">AppFullscreen.exit()</div><div class="line"></div><div class="line"><span class="comment">// Toggle fullscreen mode:</span></div><div class="line">AppFullscreen.toggle()</div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Overview]]></title>
-      <url>http://quasar-framework.org/api/index.html</url>
-      <content type="html"><![CDATA[<p>Learn here about the API specifications of every feature embedded in Quasar Framework. How to require a script, how to create a route, how to detect if the app is running within Cordova or on a desktop, and many more, including Quasar CSS specifications.</p>
-<p>By default, Quasar covers a lot of areas of Web development with ready to use API which simplifies your code and hides the different platform quirks.</p>
 ]]></content>
     </entry>
     
@@ -981,6 +981,80 @@
 <h3 id="Option-secure"><a href="#Option-secure" class="headerlink" title="Option secure"></a>Option <code>secure</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">secure: <span class="literal">true</span></div></pre></td></tr></table></figure>
 <p>If true, the cookie transmission requires a secure protocol (HTTPS) and will NOT be sent over HTTP. Default value is <code>false</code>.</p>
 <h2 id="Remove-a-Cookie"><a href="#Remove-a-Cookie" class="headerlink" title="Remove a Cookie"></a>Remove a Cookie</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Cookies &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Cookies.remove(<span class="string">'cookie_name'</span>)</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Platform Detection]]></title>
+      <url>http://quasar-framework.org/api/js-platform-detection.html</url>
+      <content type="html"><![CDATA[<p>Helpers are built-in to detect the Platform (and its capabilities) in which the code is running:</p>
+<input type="hidden" data-fullpage-demo="other/platform-detection">
+
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Platform &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Platform.is.mobile</td>
+<td>boolean</td>
+<td>Is the code running on a mobile device?</td>
+</tr>
+<tr>
+<td>Platform.is.cordova</td>
+<td>boolean</td>
+<td>Is the code running within Cordova?</td>
+</tr>
+<tr>
+<td>Platform.is.desktop</td>
+<td>boolean</td>
+<td>Is the code running on a desktop browser?</td>
+</tr>
+<tr>
+<td>Platform.has.touch</td>
+<td>boolean</td>
+<td>Is the code running on a touch capable screen?</td>
+</tr>
+<tr>
+<td>Platform.within.iframe</td>
+<td>boolean</td>
+<td>Is the App running within an IFRAME?</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>NOTE</strong><br>Running on mobile means you can have this code running on a mobile device (phone or tablet) but with a browser, not within a Cordova wrapper.</p>
+</blockquote>
+<p>Other <strong>Platform.is</strong> specific properties:<br><code>android</code>, <code>blackberry</code>, <code>cros</code>, <code>ios</code>, <code>ipad</code>, <code>iphone</code>, <code>ipod</code>, <code>kindle</code>, <code>linux</code>, <code>mac</code>, <code>playbook</code>, <code>silk</code>, <code>chrome</code>, <code>opera</code>, <code>safari</code>, <code>win</code> (Windows), <code>winphone</code> (Windows Phone) and more…</p>
+<p>Example when running Chrome on a Linux desktop machine:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Describing Platform.is</span></div><div class="line">&#123;</div><div class="line">  chrome: <span class="literal">true</span>,</div><div class="line">  desktop: <span class="literal">true</span>,</div><div class="line">  linux: <span class="literal">true</span>,</div><div class="line">  name: <span class="string">"chrome"</span>,</div><div class="line">  platform: <span class="string">"linux"</span>,</div><div class="line">  version: <span class="string">"47.0.2526.80"</span>,</div><div class="line">  versionNumber: <span class="number">47</span>,</div><div class="line">  webkit: <span class="literal">true</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p><strong>NOTE</strong><br>When trying to show DOM elements only on a platform you can skip using Javascript and make use of Quasar CSS classes (which is more efficient). Read about on <a href="/api/css-visibility.html#Platform-Related">CSS &gt; Visibility</a> documentation page.</p>
+</blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Utils]]></title>
+      <url>http://quasar-framework.org/api/js-utils.html</url>
+      <content type="html"><![CDATA[<h2 id="Open-External-URL"><a href="#Open-External-URL" class="headerlink" title="Open External URL"></a>Open External URL</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Utils.openURL(<span class="string">'http://...'</span>)</div></pre></td></tr></table></figure>
+<p>It will take care of the quirks involved when running under Cordova or on a browser, including notifying the user he/she has to acknowledge opening popups.</p>
+<h2 id="Debounce-Function"><a href="#Debounce-Function" class="headerlink" title="Debounce Function"></a>Debounce Function</h2><p>If your App uses JavaScript to accomplish taxing tasks, a debounce function is essential to ensuring a given task doesn’t fire so often that it bricks browser performance. Debouncing a function limits the rate at which the function can fire.</p>
+<p>Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called. As in “execute this function only if 100 milliseconds have passed without it being called.”</p>
+<p>A quick example: you have a resize listener on the window which does some element dimension calculations and (possibly) repositions a few elements. That isn’t a heavy task in itself but being repeatedly fired after numerous resizes will really slow your App down. So why not limit the rate at which the function can fire?</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Returns a function, that, as long as it continues to be invoked, will not</span></div><div class="line"><span class="comment">// be triggered. The function will be called after it stops being called for</span></div><div class="line"><span class="comment">// N milliseconds. If `immediate` is passed, trigger the function on the</span></div><div class="line"><span class="comment">// leading edge, instead of the trailing.</span></div><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(Debounced <span class="built_in">Function</span>) Utils.debounce(<span class="built_in">Function</span> fn, <span class="built_in">Number</span> milliseconds_to_wait, <span class="built_in">Boolean</span> immediate)</div><div class="line"></div><div class="line"><span class="comment">// Example:</span></div><div class="line"><span class="built_in">window</span>.addEventListener(</div><div class="line">  <span class="string">'resize'</span>,</div><div class="line">  Utils.debounce(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    .... things to <span class="keyword">do</span> ...</div><div class="line">  &#125;, <span class="number">300</span> <span class="comment">/*ms to wait*/</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
+<h2 id="Throttle-Function"><a href="#Throttle-Function" class="headerlink" title="Throttle Function"></a>Throttle Function</h2><p>Throttling enforces a maximum number of times a function can be called over time. As in “execute this function at most once every 300 milliseconds.”</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Returns a function, that, as long as it continues to be invoked, will not</span></div><div class="line"><span class="comment">// be triggered. The function will be called after it stops being called for</span></div><div class="line"><span class="comment">// N milliseconds. If `immediate` is passed, trigger the function on the</span></div><div class="line"><span class="comment">// leading edge, instead of the trailing.</span></div><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(Throttled <span class="built_in">Function</span>) Utils.throttle(<span class="built_in">Function</span> fn, <span class="built_in">Number</span> limit_in_milliseconds)</div><div class="line"></div><div class="line"><span class="comment">// Example:</span></div><div class="line"><span class="built_in">window</span>.addEventListener(</div><div class="line">  <span class="string">'resize'</span>,</div><div class="line">  Utils.throttle(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    .... things to <span class="keyword">do</span> ...</div><div class="line">  &#125;, <span class="number">300</span> <span class="comment">/* execute at most once every 0.3s */</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
+<h2 id="Deep-Copy-Objects"><a href="#Deep-Copy-Objects" class="headerlink" title="(Deep) Copy Objects"></a>(Deep) Copy Objects</h2><p>A basic respawn of <code>jQuery.extend()</code>. Takes same parameters:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> newObject = Utils.extend([<span class="built_in">Boolean</span> deepCopy], targetObj, obj, ...)</div></pre></td></tr></table></figure></p>
+<p>Watch out for methods within objects.</p>
+<h2 id="Generate-UID"><a href="#Generate-UID" class="headerlink" title="Generate UID"></a>Generate UID</h2><p>Generate unique identifiers:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> uid = Utils.uid()</div></pre></td></tr></table></figure></p>
+<h2 id="DOM-methods"><a href="#DOM-methods" class="headerlink" title="DOM methods"></a>DOM methods</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="comment">// Offset on screen</span></div><div class="line"><span class="built_in">console</span>.log(Utils.dom.offset(DomElement))</div><div class="line"><span class="comment">// &#123; top: 10, left: 100 &#125;</span></div><div class="line"></div><div class="line"><span class="comment">// Get COMPUTED style (when DomElement is visible!)</span></div><div class="line"><span class="comment">// Computed means a DomElement might not have "height" CSS property set,</span></div><div class="line"><span class="comment">// but that does not mean it doesn't have a height when it's displayed.</span></div><div class="line"><span class="comment">// The follosing method accesses the computed CSS provided by the browser:</span></div><div class="line"><span class="built_in">console</span>.log(Utils.dom.style(DomElement, <span class="string">'height'</span>))</div><div class="line"><span class="comment">// '10px' &lt;&lt;&lt; notice it returns a String ending in 'px'</span></div><div class="line"></div><div class="line"><span class="comment">// Some aliases of the previous method for "width" and "height" which</span></div><div class="line"><span class="comment">// returns Numbers instead of Strings:</span></div><div class="line"><span class="built_in">console</span>.log(</div><div class="line">  Utils.dom.height(DomElement),</div><div class="line">  Utils.dom.width(DomElement)</div><div class="line">)</div><div class="line"><span class="comment">// 10 100</span></div><div class="line"></div><div class="line"><span class="comment">// Apply a list of CSS properties to a DomNode</span></div><div class="line">Utils.dom.css(&#123;</div><div class="line">  height: <span class="string">'10px'</span>,</div><div class="line">  display: <span class="string">'flex'</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// Get Window height and width</span></div><div class="line"><span class="built_in">console</span>.log(</div><div class="line">  Utils.dom.viewport().height,</div><div class="line">  Utils.dom.viewport().width</div><div class="line">)</div><div class="line"><span class="comment">// 800 600</span></div><div class="line"></div><div class="line"><span class="comment">// Execute a Function when DOM is ready:</span></div><div class="line">Utils.dom.ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// ....</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// Determine if DomNode (target) is child of another DomNode (parent)</span></div><div class="line">(<span class="built_in">Boolean</span>) Utils.dom.childOf(target, parent)</div><div class="line"></div><div class="line"><span class="comment">// Get parent DomNode that handles page scrolling</span></div><div class="line"><span class="comment">// Usually this is element with classname ".layout-view" or "window"</span></div><div class="line">(DOM Element) Utils.dom.getScrollTarget(DomElement)</div><div class="line"></div><div class="line"><span class="comment">// Get scroll position of a page. Use it in conjunction with `Utils.dom.getScrollTarget()`</span></div><div class="line">(<span class="built_in">Number</span> pixels) Utils.dom.getScrollPosition(scrollTargetDomElement)</div></pre></td></tr></table></figure>
+<h2 id="Handling-“event”-on-a-DOM-event-handler"><a href="#Handling-“event”-on-a-DOM-event-handler" class="headerlink" title="Handling “event” on a DOM event handler"></a>Handling “event” on a DOM event handler</h2><p>It’s cross-browser.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">node.addEventListener(<span class="string">'click'</span>, event =&gt; &#123;</div><div class="line">  <span class="comment">// right clicked?</span></div><div class="line">  (<span class="built_in">Boolean</span>) Utils.event.rightClick(event)</div><div class="line"></div><div class="line">  <span class="comment">// position on viewport</span></div><div class="line">  <span class="comment">// works both for mouse and touch events!</span></div><div class="line">  (<span class="built_in">Object</span> &#123;top, left&#125;) Utils.event.position(event)</div><div class="line"></div><div class="line">  <span class="comment">// get target DOM Element on which mouse or touch</span></div><div class="line">  <span class="comment">// event has fired upon</span></div><div class="line">  (DOM Element) Utils.event.targetElement(event)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -1111,80 +1185,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Platform Detection]]></title>
-      <url>http://quasar-framework.org/api/js-platform-detection.html</url>
-      <content type="html"><![CDATA[<p>Helpers are built-in to detect the Platform (and its capabilities) in which the code is running:</p>
-<input type="hidden" data-fullpage-demo="other/platform-detection">
-
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Platform &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Platform.is.mobile</td>
-<td>boolean</td>
-<td>Is the code running on a mobile device?</td>
-</tr>
-<tr>
-<td>Platform.is.cordova</td>
-<td>boolean</td>
-<td>Is the code running within Cordova?</td>
-</tr>
-<tr>
-<td>Platform.is.desktop</td>
-<td>boolean</td>
-<td>Is the code running on a desktop browser?</td>
-</tr>
-<tr>
-<td>Platform.has.touch</td>
-<td>boolean</td>
-<td>Is the code running on a touch capable screen?</td>
-</tr>
-<tr>
-<td>Platform.within.iframe</td>
-<td>boolean</td>
-<td>Is the App running within an IFRAME?</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>NOTE</strong><br>Running on mobile means you can have this code running on a mobile device (phone or tablet) but with a browser, not within a Cordova wrapper.</p>
-</blockquote>
-<p>Other <strong>Platform.is</strong> specific properties:<br><code>android</code>, <code>blackberry</code>, <code>cros</code>, <code>ios</code>, <code>ipad</code>, <code>iphone</code>, <code>ipod</code>, <code>kindle</code>, <code>linux</code>, <code>mac</code>, <code>playbook</code>, <code>silk</code>, <code>chrome</code>, <code>opera</code>, <code>safari</code>, <code>win</code> (Windows), <code>winphone</code> (Windows Phone) and more…</p>
-<p>Example when running Chrome on a Linux desktop machine:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Describing Platform.is</span></div><div class="line">&#123;</div><div class="line">  chrome: <span class="literal">true</span>,</div><div class="line">  desktop: <span class="literal">true</span>,</div><div class="line">  linux: <span class="literal">true</span>,</div><div class="line">  name: <span class="string">"chrome"</span>,</div><div class="line">  platform: <span class="string">"linux"</span>,</div><div class="line">  version: <span class="string">"47.0.2526.80"</span>,</div><div class="line">  versionNumber: <span class="number">47</span>,</div><div class="line">  webkit: <span class="literal">true</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p><strong>NOTE</strong><br>When trying to show DOM elements only on a platform you can skip using Javascript and make use of Quasar CSS classes (which is more efficient). Read about on <a href="/api/css-visibility.html#Platform-Related">CSS &gt; Visibility</a> documentation page.</p>
-</blockquote>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Utils]]></title>
-      <url>http://quasar-framework.org/api/js-utils.html</url>
-      <content type="html"><![CDATA[<h2 id="Open-External-URL"><a href="#Open-External-URL" class="headerlink" title="Open External URL"></a>Open External URL</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Utils.openURL(<span class="string">'http://...'</span>)</div></pre></td></tr></table></figure>
-<p>It will take care of the quirks involved when running under Cordova or on a browser, including notifying the user he/she has to acknowledge opening popups.</p>
-<h2 id="Debounce-Function"><a href="#Debounce-Function" class="headerlink" title="Debounce Function"></a>Debounce Function</h2><p>If your App uses JavaScript to accomplish taxing tasks, a debounce function is essential to ensuring a given task doesn’t fire so often that it bricks browser performance. Debouncing a function limits the rate at which the function can fire.</p>
-<p>Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called. As in “execute this function only if 100 milliseconds have passed without it being called.”</p>
-<p>A quick example: you have a resize listener on the window which does some element dimension calculations and (possibly) repositions a few elements. That isn’t a heavy task in itself but being repeatedly fired after numerous resizes will really slow your App down. So why not limit the rate at which the function can fire?</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Returns a function, that, as long as it continues to be invoked, will not</span></div><div class="line"><span class="comment">// be triggered. The function will be called after it stops being called for</span></div><div class="line"><span class="comment">// N milliseconds. If `immediate` is passed, trigger the function on the</span></div><div class="line"><span class="comment">// leading edge, instead of the trailing.</span></div><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(Debounced <span class="built_in">Function</span>) Utils.debounce(<span class="built_in">Function</span> fn, <span class="built_in">Number</span> milliseconds_to_wait, <span class="built_in">Boolean</span> immediate)</div><div class="line"></div><div class="line"><span class="comment">// Example:</span></div><div class="line"><span class="built_in">window</span>.addEventListener(</div><div class="line">  <span class="string">'resize'</span>,</div><div class="line">  Utils.debounce(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    .... things to <span class="keyword">do</span> ...</div><div class="line">  &#125;, <span class="number">300</span> <span class="comment">/*ms to wait*/</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
-<h2 id="Throttle-Function"><a href="#Throttle-Function" class="headerlink" title="Throttle Function"></a>Throttle Function</h2><p>Throttling enforces a maximum number of times a function can be called over time. As in “execute this function at most once every 300 milliseconds.”</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Returns a function, that, as long as it continues to be invoked, will not</span></div><div class="line"><span class="comment">// be triggered. The function will be called after it stops being called for</span></div><div class="line"><span class="comment">// N milliseconds. If `immediate` is passed, trigger the function on the</span></div><div class="line"><span class="comment">// leading edge, instead of the trailing.</span></div><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(Throttled <span class="built_in">Function</span>) Utils.throttle(<span class="built_in">Function</span> fn, <span class="built_in">Number</span> limit_in_milliseconds)</div><div class="line"></div><div class="line"><span class="comment">// Example:</span></div><div class="line"><span class="built_in">window</span>.addEventListener(</div><div class="line">  <span class="string">'resize'</span>,</div><div class="line">  Utils.throttle(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    .... things to <span class="keyword">do</span> ...</div><div class="line">  &#125;, <span class="number">300</span> <span class="comment">/* execute at most once every 0.3s */</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
-<h2 id="Deep-Copy-Objects"><a href="#Deep-Copy-Objects" class="headerlink" title="(Deep) Copy Objects"></a>(Deep) Copy Objects</h2><p>A basic respawn of <code>jQuery.extend()</code>. Takes same parameters:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> newObject = Utils.extend([<span class="built_in">Boolean</span> deepCopy], targetObj, obj, ...)</div></pre></td></tr></table></figure></p>
-<p>Watch out for methods within objects.</p>
-<h2 id="Generate-UID"><a href="#Generate-UID" class="headerlink" title="Generate UID"></a>Generate UID</h2><p>Generate unique identifiers:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> uid = Utils.uid()</div></pre></td></tr></table></figure></p>
-<h2 id="DOM-methods"><a href="#DOM-methods" class="headerlink" title="DOM methods"></a>DOM methods</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="comment">// Offset on screen</span></div><div class="line"><span class="built_in">console</span>.log(Utils.dom.offset(DomElement))</div><div class="line"><span class="comment">// &#123; top: 10, left: 100 &#125;</span></div><div class="line"></div><div class="line"><span class="comment">// Get COMPUTED style (when DomElement is visible!)</span></div><div class="line"><span class="comment">// Computed means a DomElement might not have "height" CSS property set,</span></div><div class="line"><span class="comment">// but that does not mean it doesn't have a height when it's displayed.</span></div><div class="line"><span class="comment">// The follosing method accesses the computed CSS provided by the browser:</span></div><div class="line"><span class="built_in">console</span>.log(Utils.dom.style(DomElement, <span class="string">'height'</span>))</div><div class="line"><span class="comment">// '10px' &lt;&lt;&lt; notice it returns a String ending in 'px'</span></div><div class="line"></div><div class="line"><span class="comment">// Some aliases of the previous method for "width" and "height" which</span></div><div class="line"><span class="comment">// returns Numbers instead of Strings:</span></div><div class="line"><span class="built_in">console</span>.log(</div><div class="line">  Utils.dom.height(DomElement),</div><div class="line">  Utils.dom.width(DomElement)</div><div class="line">)</div><div class="line"><span class="comment">// 10 100</span></div><div class="line"></div><div class="line"><span class="comment">// Apply a list of CSS properties to a DomNode</span></div><div class="line">Utils.dom.css(&#123;</div><div class="line">  height: <span class="string">'10px'</span>,</div><div class="line">  display: <span class="string">'flex'</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// Get Window height and width</span></div><div class="line"><span class="built_in">console</span>.log(</div><div class="line">  Utils.dom.viewport().height,</div><div class="line">  Utils.dom.viewport().width</div><div class="line">)</div><div class="line"><span class="comment">// 800 600</span></div><div class="line"></div><div class="line"><span class="comment">// Execute a Function when DOM is ready:</span></div><div class="line">Utils.dom.ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// ....</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// Determine if DomNode (target) is child of another DomNode (parent)</span></div><div class="line">(<span class="built_in">Boolean</span>) Utils.dom.childOf(target, parent)</div><div class="line"></div><div class="line"><span class="comment">// Get parent DomNode that handles page scrolling</span></div><div class="line"><span class="comment">// Usually this is element with classname ".layout-view" or "window"</span></div><div class="line">(DOM Element) Utils.dom.getScrollTarget(DomElement)</div><div class="line"></div><div class="line"><span class="comment">// Get scroll position of a page. Use it in conjunction with `Utils.dom.getScrollTarget()`</span></div><div class="line">(<span class="built_in">Number</span> pixels) Utils.dom.getScrollPosition(scrollTargetDomElement)</div></pre></td></tr></table></figure>
-<h2 id="Handling-“event”-on-a-DOM-event-handler"><a href="#Handling-“event”-on-a-DOM-event-handler" class="headerlink" title="Handling “event” on a DOM event handler"></a>Handling “event” on a DOM event handler</h2><p>It’s cross-browser.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">node.addEventListener(<span class="string">'click'</span>, event =&gt; &#123;</div><div class="line">  <span class="comment">// right clicked?</span></div><div class="line">  (<span class="built_in">Boolean</span>) Utils.event.rightClick(event)</div><div class="line"></div><div class="line">  <span class="comment">// position on viewport</span></div><div class="line">  <span class="comment">// works both for mouse and touch events!</span></div><div class="line">  (<span class="built_in">Object</span> &#123;top, left&#125;) Utils.event.position(event)</div><div class="line"></div><div class="line">  <span class="comment">// get target DOM Element on which mouse or touch</span></div><div class="line">  <span class="comment">// event has fired upon</span></div><div class="line">  (DOM Element) Utils.event.targetElement(event)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Vue Directives]]></title>
       <url>http://quasar-framework.org/api/js-vue-directives.html</url>
       <content type="html"><![CDATA[<p>Quasar provides some useful ready to use Vue directives. If you don’t know what a directive is, read <a href="http://vuejs.org/guide/custom-directive.html" target="_blank" rel="external">here</a>.</p>
@@ -1241,6 +1241,12 @@
 <h3 id="Is-Store-Empty"><a href="#Is-Store-Empty" class="headerlink" title="Is Store Empty?"></a>Is Store Empty?</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; LocalStorage, SessionStorage &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(boolean) LocalStorage.isEmpty()</div><div class="line">(boolean) SessionStorage.isEmpty()</div></pre></td></tr></table></figure>
 <h3 id="Is-Key-in-Store"><a href="#Is-Key-in-Store" class="headerlink" title="Is Key in Store?"></a>Is Key in Store?</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; LocalStorage, SessionStorage &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(boolean) LocalStorage.has(key)</div><div class="line">(boolean) SessionStorage.has(key)</div></pre></td></tr></table></figure>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title></title>
+      <url>http://quasar-framework.org/search/index.html</url>
+      <content type="html"></content>
     </entry>
     
     <entry>
@@ -1303,18 +1309,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Chat CSS]]></title>
-      <url>http://quasar-framework.org/components/chat.html</url>
-      <content type="html"><![CDATA[<p>Quasar supplies CSS classes for making a chat. Loot at the syntax below.</p>
-<input type="hidden" data-fullpage-demo="css/chat">
-
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- Message received from peer --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-other"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-user"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"assets/linux-avatar.png"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-date"</span>&gt;</span></div><div class="line">      7 minutes ago</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-message"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">        hey, if you type in your pw, it will show as stars</div><div class="line">      <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="comment">&lt;!-- Message sent by you --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-you"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-user"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"assets/boy-avatar.png"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-date"</span>&gt;</span></div><div class="line">      4 minutes ago</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-message"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">        hunter2</div><div class="line">      <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Coloring"><a href="#Coloring" class="headerlink" title="Coloring"></a>Coloring</h2><p>Apply <code>bg-*</code> or <code>text-*</code> CSS classes (from <a href="/api/css-color-palette.html">Quasar CSS Color Palette</a>) to color a Chat like this:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-other"</span>&gt;</span></div><div class="line">  ...</div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-message"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"bg-orange text-black"</span>&gt;</span></div><div class="line">      hey, if you type in your pw, it will show as stars</div><div class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Cards]]></title>
       <url>http://quasar-framework.org/components/cards.html</url>
       <content type="html"><![CDATA[<p>Quasar Cards are a great way to display important pieces of content, and are quickly emerging as a core design pattern for Apps. They’re are a great way to contain and organize information, while also setting up predictable expectations for the user. With so much content to display at once, and often so little screen real-estate, Cards have fast become the design pattern of choice for many companies, including the likes of Google and Twitter.</p>
@@ -1365,6 +1359,51 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Chat CSS]]></title>
+      <url>http://quasar-framework.org/components/chat.html</url>
+      <content type="html"><![CDATA[<p>Quasar supplies CSS classes for making a chat. Loot at the syntax below.</p>
+<input type="hidden" data-fullpage-demo="css/chat">
+
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- Message received from peer --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-other"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-user"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"assets/linux-avatar.png"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-date"</span>&gt;</span></div><div class="line">      7 minutes ago</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-message"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">        hey, if you type in your pw, it will show as stars</div><div class="line">      <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="comment">&lt;!-- Message sent by you --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-you"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-user"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"assets/boy-avatar.png"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-date"</span>&gt;</span></div><div class="line">      4 minutes ago</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-message"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">        hunter2</div><div class="line">      <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Coloring"><a href="#Coloring" class="headerlink" title="Coloring"></a>Coloring</h2><p>Apply <code>bg-*</code> or <code>text-*</code> CSS classes (from <a href="/api/css-color-palette.html">Quasar CSS Color Palette</a>) to color a Chat like this:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-other"</span>&gt;</span></div><div class="line">  ...</div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chat-message"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"bg-orange text-black"</span>&gt;</span></div><div class="line">      hey, if you type in your pw, it will show as stars</div><div class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar Checkbox]]></title>
+      <url>http://quasar-framework.org/components/checkbox.html</url>
+      <content type="html"><![CDATA[<input type="hidden" data-fullpage-demo="form/checkbox">
+
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">quasar-checkbox</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-checkbox</span>&gt;</span></div><div class="line">  Checkbox Label</div><div class="line"><span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Disabled: --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">quasar-checkbox</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span> <span class="attr">disable</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-checkbox</span>&gt;</span></div><div class="line">  Checkbox Label</div><div class="line"><span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- No label: --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">quasar-checkbox</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-checkbox</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Coloring"><a href="#Coloring" class="headerlink" title="Coloring"></a>Coloring</h2><p>Use one of the Quasar colors from the Color Palette, like <code>primary</code>, <code>secondary</code>, <code>orange</code>, <code>teal</code> as CSS class:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-checkbox</span> <span class="attr">class</span>=<span class="string">"orange"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">quasar-checkbox</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h2><table>
+<thead>
+<tr>
+<th>Vue Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>model</code></td>
+<td>Boolean</td>
+<td>Checked or not.</td>
+</tr>
+<tr>
+<td><code>disable</code></td>
+<td>Boolean</td>
+<td>If disabled user can not change state.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Inside-of-a-List-Usage"><a href="#Inside-of-a-List-Usage" class="headerlink" title="Inside of a List Usage"></a>Inside of a List Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-primary"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">quasar-checkbox</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-checkbox</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></div><div class="line">      Notifications</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"item two-lines"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-primary"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">quasar-checkbox</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-checkbox</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>Notifications<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>Allow notifications<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"item three-lines"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-primary"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">quasar-checkbox</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-checkbox</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>Notifications<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>Allow notifications Allow notifications Allow notifications Allow notifications Allow notifications <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Chips Textbox]]></title>
       <url>http://quasar-framework.org/components/chips-textbox.html</url>
       <content type="html"><![CDATA[<input type="hidden" data-fullpage-demo="form/text-input/chips">
@@ -1401,39 +1440,6 @@
 </tbody>
 </table>
 <h2 id="Inside-of-a-List-Usage"><a href="#Inside-of-a-List-Usage" class="headerlink" title="Inside of a List Usage"></a>Inside of a List Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item multiple-lines"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"item-primary"</span>&gt;</span>edit<span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">quasar-chips</span> <span class="attr">:model.sync</span>=<span class="string">"model"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-chips</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar Checkbox]]></title>
-      <url>http://quasar-framework.org/components/checkbox.html</url>
-      <content type="html"><![CDATA[<input type="hidden" data-fullpage-demo="form/checkbox">
-
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">quasar-checkbox</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-checkbox</span>&gt;</span></div><div class="line">  Checkbox Label</div><div class="line"><span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Disabled: --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">quasar-checkbox</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span> <span class="attr">disable</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-checkbox</span>&gt;</span></div><div class="line">  Checkbox Label</div><div class="line"><span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- No label: --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">quasar-checkbox</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-checkbox</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Coloring"><a href="#Coloring" class="headerlink" title="Coloring"></a>Coloring</h2><p>Use one of the Quasar colors from the Color Palette, like <code>primary</code>, <code>secondary</code>, <code>orange</code>, <code>teal</code> as CSS class:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">quasar-checkbox</span> <span class="attr">class</span>=<span class="string">"orange"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">quasar-checkbox</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h2><table>
-<thead>
-<tr>
-<th>Vue Property</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>model</code></td>
-<td>Boolean</td>
-<td>Checked or not.</td>
-</tr>
-<tr>
-<td><code>disable</code></td>
-<td>Boolean</td>
-<td>If disabled user can not change state.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Inside-of-a-List-Usage"><a href="#Inside-of-a-List-Usage" class="headerlink" title="Inside of a List Usage"></a>Inside of a List Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-primary"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">quasar-checkbox</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-checkbox</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></div><div class="line">      Notifications</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"item two-lines"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-primary"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">quasar-checkbox</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-checkbox</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>Notifications<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>Allow notifications<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"item three-lines"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-primary"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">quasar-checkbox</span> <span class="attr">:model.sync</span>=<span class="string">"checked"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-checkbox</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>Notifications<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>Allow notifications Allow notifications Allow notifications Allow notifications Allow notifications <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -2109,6 +2115,15 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Overview]]></title>
+      <url>http://quasar-framework.org/components/index.html</url>
+      <content type="html"><![CDATA[<p>Quasar Apps are made of high-level building blocks called components. Components allow you to quickly construct an interface for your App. Quasar comes with a number of components, including modals, action sheets, collapsibles, cards, dialogs, FAB, lists and many more.</p>
+<p>Quasar Components are written as Web Components, so they embed HTML, CSS and Javascript code that you can use by just including an HTML tag in your Page and Layout templates.</p>
+<p>Check out the examples (text and live demos for each platform) to see what each component looks like and to learn how to use each one.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Image Gallery]]></title>
       <url>http://quasar-framework.org/components/image-gallery.html</url>
       <content type="html"><![CDATA[<p>All Components below are responsive. They accommodate to the width of their container.</p>
@@ -2126,15 +2141,6 @@
 <p>User can switch between images using the arrow buttons or through swipe actions. When on desktop, user can also drag on images to left or right.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Template for VueModel below --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">quasar-gallery-slider</span> <span class="attr">:src</span>=<span class="string">"gallery"</span>&gt;</span><span class="tag">&lt;/<span class="name">quasar-gallery-slider</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// VueModel for template above</span></div><div class="line">&#123;</div><div class="line">  ...,</div><div class="line">  data: &#123;</div><div class="line">    ...,</div><div class="line">    gallery: [</div><div class="line">      <span class="string">'assets/mountains.jpg'</span>,</div><div class="line">      <span class="string">'assets/parallax1.jpg'</span>,</div><div class="line">      <span class="string">'assets/parallax2.jpg'</span></div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Overview]]></title>
-      <url>http://quasar-framework.org/components/index.html</url>
-      <content type="html"><![CDATA[<p>Quasar Apps are made of high-level building blocks called components. Components allow you to quickly construct an interface for your App. Quasar comes with a number of components, including modals, action sheets, collapsibles, cards, dialogs, FAB, lists and many more.</p>
-<p>Quasar Components are written as Web Components, so they embed HTML, CSS and Javascript code that you can use by just including an HTML tag in your Page and Layout templates.</p>
-<p>Check out the examples (text and live demos for each platform) to see what each component looks like and to learn how to use each one.</p>
 ]]></content>
     </entry>
     
@@ -2453,23 +2459,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Loading]]></title>
-      <url>http://quasar-framework.org/components/loading.html</url>
-      <content type="html"><![CDATA[<p>Loading is a feature that you can use to display an overlay with a spinner on top of your App’s content to inform the user that a background operation is taking place. No need to add complex logic within your Pages for global background operations.</p>
-<input type="hidden" data-fullpage-demo="global/loading">
-
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><p>Loading uses a delay (500ms) to display itself so that quick operations won’t make the screen flicker. This happens by showing and then quickly hiding the progress spinner without the user having a chance to see what happens. The delay before showing it eliminates confusion.</p>
-<p>The default spinner used is <code>tail</code> for Material Design theme and ‘ios’ for iOS one. Read more about Spinners <a href="/components/spinners.html">here</a>.</p>
-<h3 id="Show-Loading"><a href="#Show-Loading" class="headerlink" title="Show Loading"></a>Show Loading</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Loading &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="comment">// default options</span></div><div class="line">Loading.show()</div><div class="line"></div><div class="line"><span class="comment">// with a custom delay</span></div><div class="line">Loading.show(&#123;</div><div class="line">  delay: <span class="number">300</span> <span class="comment">// milliseconds</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// with a custom spinner</span></div><div class="line">Loading.show(&#123;</div><div class="line">  spinner: <span class="string">'dots'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h3 id="Hide-Loading"><a href="#Hide-Loading" class="headerlink" title="Hide Loading"></a>Hide Loading</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Loading &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Loading.hide()</div></pre></td></tr></table></figure>
-<h3 id="Check-Status"><a href="#Check-Status" class="headerlink" title="Check Status"></a>Check Status</h3><p>Checking whether the Loading is active is easy:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Loading &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(<span class="built_in">Boolean</span>) Loading.isActive()</div></pre></td></tr></table></figure>
-<h2 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h2><p>There is one event triggered when showing or hiding Loading: <code>app:loading</code>. It is triggered with one Boolean parameter which is <code>true</code> when Loading is shown and <code>false</code> otherwise.</p>
-<p> See <a href="/api/js-events.html#Loading">Quasar Events API</a> for more details.</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Lists]]></title>
       <url>http://quasar-framework.org/components/list.html</url>
       <content type="html"><![CDATA[<p>Quasar Lists are used to display rows of information, such as a contact list, a playlist, or menu. Each row is called an item. Items can also be used outside of a list.</p>
@@ -2524,6 +2513,23 @@
 <h3 id="Messages-List"><a href="#Messages-List" class="headerlink" title="Messages List"></a>Messages List</h3><input type="hidden" data-demo="css/list/example-messages">
 
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list-label"</span>&gt;</span>Today<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item three-lines"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"item-primary"</span> <span class="attr">:src</span>=<span class="string">"'statics/boy-avatar.png'"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content inset has-secondary"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>Brunch this weekend?<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>John Doe<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        -- I'll be in your neighborhood doing errands this</div><div class="line">        weekend. Do you want to grab brunch?</div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-secondary stamp"</span>&gt;</span></div><div class="line">      1 week</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">hr</span> <span class="attr">class</span>=<span class="string">"inset"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item three-lines"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"item-primary"</span> <span class="attr">:src</span>=<span class="string">"'statics/boy-avatar.png'"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content inset has-secondary"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>Brunch this weekend?<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>John Doe<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        -- I'll be in your neighborhood doing errands this</div><div class="line">        weekend. Do you want to grab brunch?</div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"item-secondary"</span>&gt;</span>info<span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">hr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list-label"</span>&gt;</span>Yesterday<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item three-lines"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"item-primary"</span> <span class="attr">:src</span>=<span class="string">"'statics/boy-avatar.png'"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content inset"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>Brunch this weekend?<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>John Doe<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">        I'll be in your neighborhood doing errands this</div><div class="line">        weekend. Do you want to grab brunch?</div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">hr</span> <span class="attr">class</span>=<span class="string">"inset"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item three-lines"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"item-primary"</span> <span class="attr">:src</span>=<span class="string">"'statics/boy-avatar.png'"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content inset has-secondary"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>Brunch this weekend?<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>John Doe<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">        I'll be in your neighborhood doing errands this</div><div class="line">        weekend. Do you want to grab brunch?</div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-secondary stamp"</span>&gt;</span></div><div class="line">      1 week</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-secondary"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">quasar-popover</span> <span class="attr">v-ref:popover</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">i</span> <span class="attr">slot</span>=<span class="string">"target"</span>&gt;</span></div><div class="line">          more_vert</div><div class="line">        <span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line"></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list"</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item item-link"</span> @<span class="attr">click</span>=<span class="string">"$refs.popover.close()"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span>Reply<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item item-link"</span> @<span class="attr">click</span>=<span class="string">"$refs.popover.close()"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span>Forward<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item item-link"</span> @<span class="attr">click</span>=<span class="string">"$refs.popover.close()"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span>Delete<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">quasar-popover</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Loading]]></title>
+      <url>http://quasar-framework.org/components/loading.html</url>
+      <content type="html"><![CDATA[<p>Loading is a feature that you can use to display an overlay with a spinner on top of your App’s content to inform the user that a background operation is taking place. No need to add complex logic within your Pages for global background operations.</p>
+<input type="hidden" data-fullpage-demo="global/loading">
+
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><p>Loading uses a delay (500ms) to display itself so that quick operations won’t make the screen flicker. This happens by showing and then quickly hiding the progress spinner without the user having a chance to see what happens. The delay before showing it eliminates confusion.</p>
+<p>The default spinner used is <code>tail</code> for Material Design theme and ‘ios’ for iOS one. Read more about Spinners <a href="/components/spinners.html">here</a>.</p>
+<h3 id="Show-Loading"><a href="#Show-Loading" class="headerlink" title="Show Loading"></a>Show Loading</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Loading &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="comment">// default options</span></div><div class="line">Loading.show()</div><div class="line"></div><div class="line"><span class="comment">// with a custom delay</span></div><div class="line">Loading.show(&#123;</div><div class="line">  delay: <span class="number">300</span> <span class="comment">// milliseconds</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// with a custom spinner</span></div><div class="line">Loading.show(&#123;</div><div class="line">  spinner: <span class="string">'dots'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="Hide-Loading"><a href="#Hide-Loading" class="headerlink" title="Hide Loading"></a>Hide Loading</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Loading &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Loading.hide()</div></pre></td></tr></table></figure>
+<h3 id="Check-Status"><a href="#Check-Status" class="headerlink" title="Check Status"></a>Check Status</h3><p>Checking whether the Loading is active is easy:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Loading &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(<span class="built_in">Boolean</span>) Loading.isActive()</div></pre></td></tr></table></figure>
+<h2 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h2><p>There is one event triggered when showing or hiding Loading: <code>app:loading</code>. It is triggered with one Boolean parameter which is <code>true</code> when Loading is shown and <code>false</code> otherwise.</p>
+<p> See <a href="/api/js-events.html#Loading">Quasar Events API</a> for more details.</p>
 ]]></content>
     </entry>
     
@@ -4563,12 +4569,6 @@
       <content type="html"><![CDATA[<p>Touch events are handled by default in a Quasar App by <code>vue-touch</code> plugin for VueJs, which is basically a directive wrapper for <a href="http://hammerjs.github.io/" target="_blank" rel="external">Hammer.js 2.0</a>.</p>
 <p>Get started with the <a href="https://github.com/vuejs/vue-touch" target="_blank" rel="external">documentation</a>.</p>
 ]]></content>
-    </entry>
-    
-    <entry>
-      <title></title>
-      <url>http://quasar-framework.org/search/index.html</url>
-      <content type="html"></content>
     </entry>
     
   
