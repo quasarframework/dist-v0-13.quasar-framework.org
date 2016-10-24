@@ -29,39 +29,14 @@
     
     <entry>
       <title></title>
-      <url>http://quasar-framework.org/support-quasar-framework.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
-      <title></title>
       <url>http://quasar-framework.org/index.html</url>
       <content type="html"></content>
     </entry>
     
     <entry>
-      <title><![CDATA[Color Palette]]></title>
-      <url>http://quasar-framework.org/api/css-color-palette.html</url>
-      <content type="html"><![CDATA[<p>Quasar Framework offers a wide selection of colors out of the box. You can use them both as Stylus variables in your CSS code or directly as CSS classes in your HTML templates.</p>
-<input type="hidden" data-fullpage-demo="css/colors">
-
-<p>This page comes really handy after reading <a href="/guide/quasar-theming.html">Quasar Theming</a>.</p>
-<h2 id="Brand-Colors"><a href="#Brand-Colors" class="headerlink" title="Brand Colors"></a>Brand Colors</h2><p>There can be three main colors used throughout your App, called <code>primary</code>, <code>secondary</code> and <code>tertiary</code>.</p>
-<p>Most of the colors that Quasar Components use are strongly linked with these three colors that you can change. Choosing these colors is the first step one should take when differentiating the design of its own App. You’ll notice immediately on changing their default values that Quasar Components follow these colors as a guideline.</p>
-<h2 id="Color-List"><a href="#Color-List" class="headerlink" title="Color List"></a>Color List</h2><p>Here’s the list of colors provided out of the box. Use them as CSS classes or as Stylus variables (preceded by <code>$</code> character) in files directly required by <code>themes/app.*theme*.styl</code>.</p>
-<blockquote>
-<p><strong>IMPORTANT</strong><br><strong>Do not use them in Vue components <code>&lt;style&gt;</code> tags</strong> as they are not available there. Use CSS classes described in the next section instead.</p>
-</blockquote>
-<p><code>primary</code>, <code>secondary</code>, <code>tertiary</code><br><code>positive</code>, <code>negative</code>, <code>info</code>, <code>warning</code>, <code>white</code>, <code>light</code>, <code>dark</code>, <code>faded</code></p>
-<p>On the following colors there are variations available:<br><code>red</code>, <code>pink</code>, <code>purple</code>, <code>deep-purple</code>, <code>indigo</code>, <code>blue</code>, <code>light-blue</code>, <code>cyan</code>, <code>teal</code>, <code>green</code>, <code>light-green</code>, <code>lime</code>, <code>yellow</code>, <code>amber</code>, <code>orange</code>, <code>deep-orange</code>, <code>brown</code>, <code>grey</code>, <code>blue-grey</code></p>
-<p>Example of color variation: <code>red</code>, <code>red-1</code>, <code>red-2</code>, …, <code>red-14</code>. See the demo to make a good picture of what variations are. Variation 11 to 14 are color accents.</p>
-<h2 id="CSS-Classes"><a href="#CSS-Classes" class="headerlink" title="CSS Classes"></a>CSS Classes</h2><p>Use <code>text-</code> or <code>bg-</code> prefixes as class names to change the color of text or the color of the background.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- changing text color --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"text-primary"</span>&gt;</span>....<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- changing background color --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"bg-positive"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Stylus-Color-Variables"><a href="#Stylus-Color-Variables" class="headerlink" title="Stylus Color Variables"></a>Stylus Color Variables</h2><p>In your Stylus App code you can use them as <code>$primary</code>, <code>$red-1</code>, and so on.</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><div class="line"><span class="selector-tag">div</span></div><div class="line">  <span class="attribute">color</span> <span class="variable">$red</span>-<span class="number">1</span></div><div class="line">  <span class="attribute">background-color</span> <span class="variable">$grey</span>-<span class="number">5</span></div></pre></td></tr></table></figure>
-<p>The full list of colors is stored in the <code>$colors</code> array. You can change it to add/remove/change colors and all Quasar Components will generate CSS according to those colors.</p>
-<figure class="highlight"><table><tr><td class="code"><pre><div class="line">$colors ?= &#123;</div><div class="line">  primary: $primary,</div><div class="line">  secondary: $secondary,</div><div class="line">  tertiary: $tertiary,</div><div class="line">  positive: $positive,</div><div class="line">  negative: $negative,</div><div class="line">  warning: $warning,</div><div class="line">  info: $info,</div><div class="line">  light: $light,</div><div class="line">  dark: $dark,</div><div class="line">  white: $white,</div><div class="line"></div><div class="line">  red: $red,</div><div class="line">  pink: $pink,</div><div class="line">  purple: $purple,</div><div class="line">  deep-purple: $deep-purple,</div><div class="line">  indigo: $indigo,</div><div class="line">  blue: $blue,</div><div class="line">  light-blue: $light-blue,</div><div class="line">  cyan: $cyan,</div><div class="line">  teal: $teal,</div><div class="line">  green: $green,</div><div class="line">  light-green: $light-green,</div><div class="line">  lime: $lime,</div><div class="line">  yellow: $yellow,</div><div class="line">  amber: $amber,</div><div class="line">  orange: $orange,</div><div class="line">  deep-orange: $deep-orange,</div><div class="line">  brown: $brown,</div><div class="line">  grey: $grey,</div><div class="line">  blue-grey: $blue-grey</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-]]></content>
+      <title></title>
+      <url>http://quasar-framework.org/support-quasar-framework.html</url>
+      <content type="html"></content>
     </entry>
     
     <entry>
@@ -243,6 +218,31 @@
 <p>One more example:<br><figure class="highlight"><table><tr><td class="code"><pre><div class="line">&lt;!-- Displayed as column on small windows and as rows the rest of the time --&gt;</div><div class="line">&lt;div class="row gutter sm-column"&gt; &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</div><div class="line">  &lt;div class="width-2of3"&gt;&lt;div&gt;2/3&lt;/div&gt;&lt;/div&gt;</div><div class="line">  &lt;div class="width-1of5"&gt;&lt;div&gt;1/5&lt;/div&gt;&lt;/div&gt;</div><div class="line">  &lt;div class="auto"&gt;&lt;div&gt;auto&lt;/div&gt;&lt;/div&gt;</div><div class="line">  &lt;div class="auto"&gt;&lt;div&gt;auto&lt;/div&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
 <p>Prefixes also work with <code>order-i</code>, <code>shrink-i</code>, <code>width-XofY</code>, on gutters and so on.</p>
 <p>What does small, medium, big or large windows mean? Check <a href="/api/css-visibility.html#Window-Width-Related">CSS &gt; Visibility</a> page to see thresholds on window width.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Color Palette]]></title>
+      <url>http://quasar-framework.org/api/css-color-palette.html</url>
+      <content type="html"><![CDATA[<p>Quasar Framework offers a wide selection of colors out of the box. You can use them both as Stylus variables in your CSS code or directly as CSS classes in your HTML templates.</p>
+<input type="hidden" data-fullpage-demo="css/colors">
+
+<p>This page comes really handy after reading <a href="/guide/quasar-theming.html">Quasar Theming</a>.</p>
+<h2 id="Brand-Colors"><a href="#Brand-Colors" class="headerlink" title="Brand Colors"></a>Brand Colors</h2><p>There can be three main colors used throughout your App, called <code>primary</code>, <code>secondary</code> and <code>tertiary</code>.</p>
+<p>Most of the colors that Quasar Components use are strongly linked with these three colors that you can change. Choosing these colors is the first step one should take when differentiating the design of its own App. You’ll notice immediately on changing their default values that Quasar Components follow these colors as a guideline.</p>
+<h2 id="Color-List"><a href="#Color-List" class="headerlink" title="Color List"></a>Color List</h2><p>Here’s the list of colors provided out of the box. Use them as CSS classes or as Stylus variables (preceded by <code>$</code> character) in files directly required by <code>themes/app.*theme*.styl</code>.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong><br><strong>Do not use them in Vue components <code>&lt;style&gt;</code> tags</strong> as they are not available there. Use CSS classes described in the next section instead.</p>
+</blockquote>
+<p><code>primary</code>, <code>secondary</code>, <code>tertiary</code><br><code>positive</code>, <code>negative</code>, <code>info</code>, <code>warning</code>, <code>white</code>, <code>light</code>, <code>dark</code>, <code>faded</code></p>
+<p>On the following colors there are variations available:<br><code>red</code>, <code>pink</code>, <code>purple</code>, <code>deep-purple</code>, <code>indigo</code>, <code>blue</code>, <code>light-blue</code>, <code>cyan</code>, <code>teal</code>, <code>green</code>, <code>light-green</code>, <code>lime</code>, <code>yellow</code>, <code>amber</code>, <code>orange</code>, <code>deep-orange</code>, <code>brown</code>, <code>grey</code>, <code>blue-grey</code></p>
+<p>Example of color variation: <code>red</code>, <code>red-1</code>, <code>red-2</code>, …, <code>red-14</code>. See the demo to make a good picture of what variations are. Variation 11 to 14 are color accents.</p>
+<h2 id="CSS-Classes"><a href="#CSS-Classes" class="headerlink" title="CSS Classes"></a>CSS Classes</h2><p>Use <code>text-</code> or <code>bg-</code> prefixes as class names to change the color of text or the color of the background.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- changing text color --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"text-primary"</span>&gt;</span>....<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- changing background color --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"bg-positive"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Stylus-Color-Variables"><a href="#Stylus-Color-Variables" class="headerlink" title="Stylus Color Variables"></a>Stylus Color Variables</h2><p>In your Stylus App code you can use them as <code>$primary</code>, <code>$red-1</code>, and so on.</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><div class="line"><span class="selector-tag">div</span></div><div class="line">  <span class="attribute">color</span> <span class="variable">$red</span>-<span class="number">1</span></div><div class="line">  <span class="attribute">background-color</span> <span class="variable">$grey</span>-<span class="number">5</span></div></pre></td></tr></table></figure>
+<p>The full list of colors is stored in the <code>$colors</code> array. You can change it to add/remove/change colors and all Quasar Components will generate CSS according to those colors.</p>
+<figure class="highlight"><table><tr><td class="code"><pre><div class="line">$colors ?= &#123;</div><div class="line">  primary: $primary,</div><div class="line">  secondary: $secondary,</div><div class="line">  tertiary: $tertiary,</div><div class="line">  positive: $positive,</div><div class="line">  negative: $negative,</div><div class="line">  warning: $warning,</div><div class="line">  info: $info,</div><div class="line">  light: $light,</div><div class="line">  dark: $dark,</div><div class="line">  white: $white,</div><div class="line"></div><div class="line">  red: $red,</div><div class="line">  pink: $pink,</div><div class="line">  purple: $purple,</div><div class="line">  deep-purple: $deep-purple,</div><div class="line">  indigo: $indigo,</div><div class="line">  blue: $blue,</div><div class="line">  light-blue: $light-blue,</div><div class="line">  cyan: $cyan,</div><div class="line">  teal: $teal,</div><div class="line">  green: $green,</div><div class="line">  light-green: $light-green,</div><div class="line">  lime: $lime,</div><div class="line">  yellow: $yellow,</div><div class="line">  amber: $amber,</div><div class="line">  orange: $orange,</div><div class="line">  deep-orange: $deep-orange,</div><div class="line">  brown: $brown,</div><div class="line">  grey: $grey,</div><div class="line">  blue-grey: $blue-grey</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -624,6 +624,14 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Overview]]></title>
+      <url>http://quasar-framework.org/api/index.html</url>
+      <content type="html"><![CDATA[<p>Learn here about the API specifications of every feature embedded in Quasar Framework. How to require a script, how to create a route, how to detect if the app is running within Cordova or on a desktop, and many more, including Quasar CSS specifications.</p>
+<p>By default, Quasar covers a lot of areas of Web development with ready to use API which simplifies your code and hides the different platform quirks.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Typography]]></title>
       <url>http://quasar-framework.org/api/css-typography.html</url>
       <content type="html"><![CDATA[<p><input type="hidden" data-fullpage-demo="css/typography"><br>See how headings, blockquotes, definitions lists and more are displayed in the demo. At the end of this page you can read about CSS helper classes.</p>
@@ -721,6 +729,70 @@
 </tr>
 </tbody>
 </table>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[App Visibility]]></title>
+      <url>http://quasar-framework.org/api/js-app-visibility.html</url>
+      <content type="html"><![CDATA[<p>Quasar makes use of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API" target="_blank" rel="external">Page Visibility API</a> which lets you know when a website/app is visible or in focus.</p>
+<input type="hidden" data-fullpage-demo="other/app-visibility">
+
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; AppVisibility &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(<span class="built_in">Boolean</span>) AppVisibility.isVisible()</div></pre></td></tr></table></figure>
+<p>There is also an event triggered when focus changes (read about Events <a href="/api/js-events.html">here</a>):</p>
+<table>
+<thead>
+<tr>
+<th>Event Name</th>
+<th>Parameters</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app:visibility</td>
+<td>(String) state</td>
+<td>App got focus if <code>state</code> is <code>visible</code> or lost focus if <code>state</code> is <code>hidden</code></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Fullscreen]]></title>
+      <url>http://quasar-framework.org/api/js-app-fullscreen.html</url>
+      <content type="html"><![CDATA[<p>There are times when you want your website or App to run in fullscreen.<br>Quasar makes it easy by wrapping the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API" target="_blank" rel="external">Fullscreen API</a>.</p>
+<input type="hidden" data-external-demo="other/app-fullscreen">
+
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; AppFullscreen &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="comment">// Determining if website is in fullscreen mode:</span></div><div class="line">(<span class="built_in">Boolean</span>) AppFullscreen.isActive()</div><div class="line"></div><div class="line"><span class="comment">// Requesting fullscreen mode:</span></div><div class="line">AppFullscreen.request()</div><div class="line"></div><div class="line"><span class="comment">// Exiting fullscreen mode:</span></div><div class="line">AppFullscreen.exit()</div><div class="line"></div><div class="line"><span class="comment">// Toggle fullscreen mode:</span></div><div class="line">AppFullscreen.toggle()</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Cookies]]></title>
+      <url>http://quasar-framework.org/api/js-cookies.html</url>
+      <content type="html"><![CDATA[<p>This is a wrapper over the standardized <code>document.cookie</code>.</p>
+<blockquote>
+<p><strong>NOTE</strong><br>In addition, you can read and write cookies using JSON objects.</p>
+</blockquote>
+<h2 id="Read-a-Cookie"><a href="#Read-a-Cookie" class="headerlink" title="Read a Cookie"></a>Read a Cookie</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Cookies &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> value = Cookies.get(<span class="string">'cookie_name'</span>)</div></pre></td></tr></table></figure>
+<p>When cookie is not set, the return value is <code>undefined</code>.</p>
+<h2 id="Read-All-Cookies"><a href="#Read-All-Cookies" class="headerlink" title="Read All Cookies"></a>Read All Cookies</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Cookies &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> cookies = Cookies.all()</div></pre></td></tr></table></figure>
+<p><code>cookies</code> variable will be an object with key-value pairs (cookie_name : cookie_value).</p>
+<h2 id="Verify-if-Cookie-is-Set"><a href="#Verify-if-Cookie-is-Set" class="headerlink" title="Verify if Cookie is Set"></a>Verify if Cookie is Set</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Cookies &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(<span class="built_in">Boolean</span>) Cookies.has(<span class="string">'cookie_name'</span>)</div></pre></td></tr></table></figure>
+<h2 id="Write-a-Cookie"><a href="#Write-a-Cookie" class="headerlink" title="Write a Cookie"></a>Write a Cookie</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Cookies &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Cookies.set(<span class="string">'cookie_name'</span>, cookie_value, options)</div></pre></td></tr></table></figure>
+<p><code>options</code> is an Object which can have the following properties: <code>expire</code>, <code>path</code>, <code>domain</code>, <code>secure</code>. They are explained below.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Cookies &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Cookies.set(<span class="string">'quasar'</span>, <span class="string">'framework'</span>, &#123;</div><div class="line">  secure: <span class="literal">true</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="Option-expires"><a href="#Option-expires" class="headerlink" title="Option expires"></a>Option <code>expires</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">expires: <span class="number">10</span></div></pre></td></tr></table></figure>
+<p>Define lifetime of the cookie. Value can be a Number which will be interpreted as days from time of creation or a Date object. If omitted, the cookie becomes a session cookie.</p>
+<h3 id="Option-path"><a href="#Option-path" class="headerlink" title="Option path"></a>Option <code>path</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">path: <span class="string">'/'</span></div></pre></td></tr></table></figure>
+<p>Define the path where the cookie is valid. By default the path of the cookie is the path of the page where the cookie was created (standard browser behavior). If you want to make it available for instance across the entire domain use path: ‘/‘. Default: path of page where the cookie was created.</p>
+<h3 id="Option-domain"><a href="#Option-domain" class="headerlink" title="Option domain"></a>Option <code>domain</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">domain: <span class="string">'quasar-framework.org'</span></div></pre></td></tr></table></figure>
+<p>Define the domain where the cookie is valid. Default: domain of page where the cookie was created.</p>
+<h3 id="Option-secure"><a href="#Option-secure" class="headerlink" title="Option secure"></a>Option <code>secure</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">secure: <span class="literal">true</span></div></pre></td></tr></table></figure>
+<p>If true, the cookie transmission requires a secure protocol (HTTPS) and will NOT be sent over HTTP. Default value is <code>false</code>.</p>
+<h2 id="Remove-a-Cookie"><a href="#Remove-a-Cookie" class="headerlink" title="Remove a Cookie"></a>Remove a Cookie</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Cookies &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Cookies.remove(<span class="string">'cookie_name'</span>)</div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -990,78 +1062,6 @@
 </tr>
 </tbody>
 </table>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Overview]]></title>
-      <url>http://quasar-framework.org/api/index.html</url>
-      <content type="html"><![CDATA[<p>Learn here about the API specifications of every feature embedded in Quasar Framework. How to require a script, how to create a route, how to detect if the app is running within Cordova or on a desktop, and many more, including Quasar CSS specifications.</p>
-<p>By default, Quasar covers a lot of areas of Web development with ready to use API which simplifies your code and hides the different platform quirks.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Fullscreen]]></title>
-      <url>http://quasar-framework.org/api/js-app-fullscreen.html</url>
-      <content type="html"><![CDATA[<p>There are times when you want your website or App to run in fullscreen.<br>Quasar makes it easy by wrapping the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API" target="_blank" rel="external">Fullscreen API</a>.</p>
-<input type="hidden" data-external-demo="other/app-fullscreen">
-
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; AppFullscreen &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="comment">// Determining if website is in fullscreen mode:</span></div><div class="line">(<span class="built_in">Boolean</span>) AppFullscreen.isActive()</div><div class="line"></div><div class="line"><span class="comment">// Requesting fullscreen mode:</span></div><div class="line">AppFullscreen.request()</div><div class="line"></div><div class="line"><span class="comment">// Exiting fullscreen mode:</span></div><div class="line">AppFullscreen.exit()</div><div class="line"></div><div class="line"><span class="comment">// Toggle fullscreen mode:</span></div><div class="line">AppFullscreen.toggle()</div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[App Visibility]]></title>
-      <url>http://quasar-framework.org/api/js-app-visibility.html</url>
-      <content type="html"><![CDATA[<p>Quasar makes use of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API" target="_blank" rel="external">Page Visibility API</a> which lets you know when a website/app is visible or in focus.</p>
-<input type="hidden" data-fullpage-demo="other/app-visibility">
-
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; AppVisibility &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(<span class="built_in">Boolean</span>) AppVisibility.isVisible()</div></pre></td></tr></table></figure>
-<p>There is also an event triggered when focus changes (read about Events <a href="/api/js-events.html">here</a>):</p>
-<table>
-<thead>
-<tr>
-<th>Event Name</th>
-<th>Parameters</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>app:visibility</td>
-<td>(String) state</td>
-<td>App got focus if <code>state</code> is <code>visible</code> or lost focus if <code>state</code> is <code>hidden</code></td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Cookies]]></title>
-      <url>http://quasar-framework.org/api/js-cookies.html</url>
-      <content type="html"><![CDATA[<p>This is a wrapper over the standardized <code>document.cookie</code>.</p>
-<blockquote>
-<p><strong>NOTE</strong><br>In addition, you can read and write cookies using JSON objects.</p>
-</blockquote>
-<h2 id="Read-a-Cookie"><a href="#Read-a-Cookie" class="headerlink" title="Read a Cookie"></a>Read a Cookie</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Cookies &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> value = Cookies.get(<span class="string">'cookie_name'</span>)</div></pre></td></tr></table></figure>
-<p>When cookie is not set, the return value is <code>undefined</code>.</p>
-<h2 id="Read-All-Cookies"><a href="#Read-All-Cookies" class="headerlink" title="Read All Cookies"></a>Read All Cookies</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Cookies &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> cookies = Cookies.all()</div></pre></td></tr></table></figure>
-<p><code>cookies</code> variable will be an object with key-value pairs (cookie_name : cookie_value).</p>
-<h2 id="Verify-if-Cookie-is-Set"><a href="#Verify-if-Cookie-is-Set" class="headerlink" title="Verify if Cookie is Set"></a>Verify if Cookie is Set</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Cookies &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(<span class="built_in">Boolean</span>) Cookies.has(<span class="string">'cookie_name'</span>)</div></pre></td></tr></table></figure>
-<h2 id="Write-a-Cookie"><a href="#Write-a-Cookie" class="headerlink" title="Write a Cookie"></a>Write a Cookie</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Cookies &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Cookies.set(<span class="string">'cookie_name'</span>, cookie_value, options)</div></pre></td></tr></table></figure>
-<p><code>options</code> is an Object which can have the following properties: <code>expire</code>, <code>path</code>, <code>domain</code>, <code>secure</code>. They are explained below.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Cookies &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Cookies.set(<span class="string">'quasar'</span>, <span class="string">'framework'</span>, &#123;</div><div class="line">  secure: <span class="literal">true</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h3 id="Option-expires"><a href="#Option-expires" class="headerlink" title="Option expires"></a>Option <code>expires</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">expires: <span class="number">10</span></div></pre></td></tr></table></figure>
-<p>Define lifetime of the cookie. Value can be a Number which will be interpreted as days from time of creation or a Date object. If omitted, the cookie becomes a session cookie.</p>
-<h3 id="Option-path"><a href="#Option-path" class="headerlink" title="Option path"></a>Option <code>path</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">path: <span class="string">'/'</span></div></pre></td></tr></table></figure>
-<p>Define the path where the cookie is valid. By default the path of the cookie is the path of the page where the cookie was created (standard browser behavior). If you want to make it available for instance across the entire domain use path: ‘/‘. Default: path of page where the cookie was created.</p>
-<h3 id="Option-domain"><a href="#Option-domain" class="headerlink" title="Option domain"></a>Option <code>domain</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">domain: <span class="string">'quasar-framework.org'</span></div></pre></td></tr></table></figure>
-<p>Define the domain where the cookie is valid. Default: domain of page where the cookie was created.</p>
-<h3 id="Option-secure"><a href="#Option-secure" class="headerlink" title="Option secure"></a>Option <code>secure</code></h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">secure: <span class="literal">true</span></div></pre></td></tr></table></figure>
-<p>If true, the cookie transmission requires a secure protocol (HTTPS) and will NOT be sent over HTTP. Default value is <code>false</code>.</p>
-<h2 id="Remove-a-Cookie"><a href="#Remove-a-Cookie" class="headerlink" title="Remove a Cookie"></a>Remove a Cookie</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Cookies &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Cookies.remove(<span class="string">'cookie_name'</span>)</div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -2540,23 +2540,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Loading]]></title>
-      <url>http://quasar-framework.org/components/loading.html</url>
-      <content type="html"><![CDATA[<p>Loading is a feature that you can use to display an overlay with a spinner on top of your App’s content to inform the user that a background operation is taking place. No need to add complex logic within your Pages for global background operations.</p>
-<input type="hidden" data-fullpage-demo="global/loading">
-
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><p>Loading uses a delay (500ms) to display itself so that quick operations won’t make the screen flicker. This happens by showing and then quickly hiding the progress spinner without the user having a chance to see what happens. The delay before showing it eliminates confusion.</p>
-<p>The default spinner used is <code>tail</code> for Material Design theme and ‘ios’ for iOS one. Read more about Spinners <a href="/components/spinners.html">here</a>.</p>
-<h3 id="Show-Loading"><a href="#Show-Loading" class="headerlink" title="Show Loading"></a>Show Loading</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Loading &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="comment">// default options</span></div><div class="line">Loading.show()</div><div class="line"></div><div class="line"><span class="comment">// with a custom delay</span></div><div class="line">Loading.show(&#123;</div><div class="line">  delay: <span class="number">300</span> <span class="comment">// milliseconds</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// customizable</span></div><div class="line">Loading.show(&#123;</div><div class="line">  message: <span class="string">'Some message'</span>,</div><div class="line">  messageColor: <span class="string">'#00ff00'</span>,</div><div class="line">  spinner: <span class="string">'dots'</span>,</div><div class="line">  spinnerSize: <span class="number">250</span>, <span class="comment">// in pixels</span></div><div class="line">  spinnerColor: <span class="string">'#f034a3'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h3 id="Hide-Loading"><a href="#Hide-Loading" class="headerlink" title="Hide Loading"></a>Hide Loading</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Loading &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Loading.hide()</div></pre></td></tr></table></figure>
-<h3 id="Check-Status"><a href="#Check-Status" class="headerlink" title="Check Status"></a>Check Status</h3><p>Checking whether the Loading is active is easy:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Loading &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(<span class="built_in">Boolean</span>) Loading.isActive()</div></pre></td></tr></table></figure>
-<h2 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h2><p>There is one event triggered when showing or hiding Loading: <code>app:loading</code>. It is triggered with one Boolean parameter which is <code>true</code> when Loading is shown and <code>false</code> otherwise.</p>
-<p> See <a href="/api/js-events.html#Loading">Quasar Events API</a> for more details.</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Lists]]></title>
       <url>http://quasar-framework.org/components/list.html</url>
       <content type="html"><![CDATA[<p>Quasar Lists are used to display rows of information, such as a contact list, a playlist, or menu. Each row is called an item. Items can also be used outside of a list.</p>
@@ -2611,6 +2594,23 @@
 <h3 id="Messages-List"><a href="#Messages-List" class="headerlink" title="Messages List"></a>Messages List</h3><input type="hidden" data-demo="css/list/example-messages">
 
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list-label"</span>&gt;</span>Today<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item three-lines"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"item-primary"</span> <span class="attr">:src</span>=<span class="string">"'statics/boy-avatar.png'"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content inset has-secondary"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>Brunch this weekend?<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>John Doe<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        -- I'll be in your neighborhood doing errands this</div><div class="line">        weekend. Do you want to grab brunch?</div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-secondary stamp"</span>&gt;</span></div><div class="line">      1 week</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">hr</span> <span class="attr">class</span>=<span class="string">"inset"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item three-lines"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"item-primary"</span> <span class="attr">:src</span>=<span class="string">"'statics/boy-avatar.png'"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content inset has-secondary"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>Brunch this weekend?<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>John Doe<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        -- I'll be in your neighborhood doing errands this</div><div class="line">        weekend. Do you want to grab brunch?</div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"item-secondary"</span>&gt;</span>info<span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">hr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list-label"</span>&gt;</span>Yesterday<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item three-lines"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"item-primary"</span> <span class="attr">:src</span>=<span class="string">"'statics/boy-avatar.png'"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content inset"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>Brunch this weekend?<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>John Doe<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">        I'll be in your neighborhood doing errands this</div><div class="line">        weekend. Do you want to grab brunch?</div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">hr</span> <span class="attr">class</span>=<span class="string">"inset"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item three-lines"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"item-primary"</span> <span class="attr">:src</span>=<span class="string">"'statics/boy-avatar.png'"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content inset has-secondary"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>Brunch this weekend?<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>John Doe<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">        I'll be in your neighborhood doing errands this</div><div class="line">        weekend. Do you want to grab brunch?</div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-secondary stamp"</span>&gt;</span></div><div class="line">      1 week</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-secondary"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">i</span> <span class="attr">slot</span>=<span class="string">"target"</span> <span class="attr">ref</span>=<span class="string">"item"</span>&gt;</span></div><div class="line">        more_vert</div><div class="line">      <span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">quasar-popover</span> <span class="attr">ref</span>=<span class="string">"popover"</span> <span class="attr">anchor-ref</span>=<span class="string">"item"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item item-link"</span> @<span class="attr">click</span>=<span class="string">"$refs.popover.close()"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span>Reply<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item item-link"</span> @<span class="attr">click</span>=<span class="string">"$refs.popover.close()"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span>Forward<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item item-link"</span> @<span class="attr">click</span>=<span class="string">"$refs.popover.close()"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-content"</span>&gt;</span>Delete<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">quasar-popover</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Loading]]></title>
+      <url>http://quasar-framework.org/components/loading.html</url>
+      <content type="html"><![CDATA[<p>Loading is a feature that you can use to display an overlay with a spinner on top of your App’s content to inform the user that a background operation is taking place. No need to add complex logic within your Pages for global background operations.</p>
+<input type="hidden" data-fullpage-demo="global/loading">
+
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><p>Loading uses a delay (500ms) to display itself so that quick operations won’t make the screen flicker. This happens by showing and then quickly hiding the progress spinner without the user having a chance to see what happens. The delay before showing it eliminates confusion.</p>
+<p>The default spinner used is <code>tail</code> for Material Design theme and ‘ios’ for iOS one. Read more about Spinners <a href="/components/spinners.html">here</a>.</p>
+<h3 id="Show-Loading"><a href="#Show-Loading" class="headerlink" title="Show Loading"></a>Show Loading</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Loading &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="comment">// default options</span></div><div class="line">Loading.show()</div><div class="line"></div><div class="line"><span class="comment">// with a custom delay</span></div><div class="line">Loading.show(&#123;</div><div class="line">  delay: <span class="number">300</span> <span class="comment">// milliseconds</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// customizable</span></div><div class="line">Loading.show(&#123;</div><div class="line">  message: <span class="string">'Some message'</span>,</div><div class="line">  messageColor: <span class="string">'#00ff00'</span>,</div><div class="line">  spinner: <span class="string">'dots'</span>,</div><div class="line">  spinnerSize: <span class="number">250</span>, <span class="comment">// in pixels</span></div><div class="line">  spinnerColor: <span class="string">'#f034a3'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="Hide-Loading"><a href="#Hide-Loading" class="headerlink" title="Hide Loading"></a>Hide Loading</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Loading &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Loading.hide()</div></pre></td></tr></table></figure>
+<h3 id="Check-Status"><a href="#Check-Status" class="headerlink" title="Check Status"></a>Check Status</h3><p>Checking whether the Loading is active is easy:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Loading &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(<span class="built_in">Boolean</span>) Loading.isActive()</div></pre></td></tr></table></figure>
+<h2 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h2><p>There is one event triggered when showing or hiding Loading: <code>app:loading</code>. It is triggered with one Boolean parameter which is <code>true</code> when Loading is shown and <code>false</code> otherwise.</p>
+<p> See <a href="/api/js-events.html#Loading">Quasar Events API</a> for more details.</p>
 ]]></content>
     </entry>
     
@@ -3708,6 +3708,11 @@
 </thead>
 <tbody>
 <tr>
+<td><code>name</code></td>
+<td>String</td>
+<td>Configure a name for tab. This name is used to find $refs as target too.</td>
+</tr>
+<tr>
 <td><code>label</code></td>
 <td>String</td>
 <td>Label to use.</td>
@@ -3753,6 +3758,16 @@
 <td>Configure Vue Route “to” property.</td>
 </tr>
 <tr>
+<td><code>label</code></td>
+<td>String</td>
+<td>Label to display.</td>
+</tr>
+<tr>
+<td><code>icon</code></td>
+<td>String</td>
+<td>Icon to display.</td>
+</tr>
+<tr>
 <td><code>replace</code></td>
 <td>Boolean</td>
 <td>Configure Vue Router to replace current route rather than push a new one.</td>
@@ -3767,8 +3782,26 @@
 <td>Boolean</td>
 <td>Append route to current one, just as described for <code>&lt;router-link&gt;</code>.</td>
 </tr>
+<tr>
+<td><code>disable</code></td>
+<td>Boolean</td>
+<td>If disabled user won’t be able to select it.</td>
+</tr>
+<tr>
+<td><code>hidden</code></td>
+<td>Boolean</td>
+<td>Hide it.. or not.</td>
+</tr>
+<tr>
+<td><code>hide</code></td>
+<td>String</td>
+<td>Possible values: <code>icon</code> or <code>label</code>. On narrow screens one of the two will be hidden.</td>
+</tr>
 </tbody>
 </table>
+<blockquote>
+<p>Either use a <code>route</code> or a <code>name</code>, but not both.</p>
+</blockquote>
 <h3 id="Vue-Methods-1"><a href="#Vue-Methods-1" class="headerlink" title="Vue Methods"></a>Vue Methods</h3><table>
 <thead>
 <tr>
@@ -4728,12 +4761,6 @@
     </entry>
     
     <entry>
-      <title></title>
-      <url>http://quasar-framework.org/search/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Router]]></title>
       <url>http://quasar-framework.org/guide/router.html</url>
       <content type="html"><![CDATA[<p>Quasar Apps are using by default the <code>vue-router</code> which is the official router for VueJs. It deeply integrates with Vue.js core to make building Single Page Applications with Vue.js a breeze. Features include:</p>
@@ -4749,6 +4776,12 @@
 </ul>
 <p>Get started with the <a href="http://vuejs.github.io/vue-router" target="_blank" rel="external">documentation</a>.</p>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title></title>
+      <url>http://quasar-framework.org/search/index.html</url>
+      <content type="html"></content>
     </entry>
     
   
