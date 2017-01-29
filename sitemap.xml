@@ -2,16 +2,163 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://quasar-framework.org/api/css-visibility.html</loc>
+    <loc>http://quasar-framework.org/components/inline-datetime.html</loc>
     
-    <lastmod>2016-12-30T22:37:11.350Z</lastmod>
+    <lastmod>2017-01-28T18:54:13.376Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/state.html</loc>
+    
+    <lastmod>2017-01-28T18:53:34.028Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/app-troubleshoot-and-tips.html</loc>
+    
+    <lastmod>2017-01-23T20:01:53.848Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-framework-changelog.html</loc>
+    
+    <lastmod>2017-01-23T19:55:48.588Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-roadmap.html</loc>
+    
+    <lastmod>2017-01-23T19:52:13.472Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/textarea.html</loc>
+    
+    <lastmod>2017-01-23T19:43:25.532Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/input-textbox.html</loc>
+    
+    <lastmod>2017-01-23T19:43:13.580Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/stepper.html</loc>
+    
+    <lastmod>2017-01-23T19:40:36.120Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/api/js-utils.html</loc>
+    
+    <lastmod>2017-01-23T18:29:03.002Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/popover.html</loc>
+    
+    <lastmod>2017-01-23T18:02:55.969Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/datetime-range.html</loc>
+    
+    <lastmod>2017-01-23T18:01:48.409Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/datetime.html</loc>
+    
+    <lastmod>2017-01-23T18:01:40.249Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/drawer.html</loc>
+    
+    <lastmod>2017-01-23T17:58:12.077Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/autocomplete.html</loc>
+    
+    <lastmod>2017-01-23T17:53:45.269Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/collapsible.html</loc>
+    
+    <lastmod>2017-01-23T17:50:36.221Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/knob.html</loc>
+    
+    <lastmod>2017-01-23T17:23:50.573Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://quasar-framework.org/components/data-table.html</loc>
     
-    <lastmod>2016-12-30T20:51:10.234Z</lastmod>
+    <lastmod>2017-01-23T17:23:12.485Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/progress-bar.html</loc>
+    
+    <lastmod>2017-01-23T17:20:28.845Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/image-gallery.html</loc>
+    
+    <lastmod>2017-01-23T16:53:04.333Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/modal.html</loc>
+    
+    <lastmod>2017-01-23T16:39:12.885Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/tooltip.html</loc>
+    
+    <lastmod>2017-01-23T16:35:25.289Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/floating-action-buttons.html</loc>
+    
+    <lastmod>2017-01-17T08:34:32.988Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/api/css-visibility.html</loc>
+    
+    <lastmod>2017-01-11T11:26:50.071Z</lastmod>
     
   </url>
   
@@ -19,6 +166,13 @@
     <loc>http://quasar-framework.org/components/back-to-top.html</loc>
     
     <lastmod>2016-12-30T20:47:15.694Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/cordova-wrapper.html</loc>
+    
+    <lastmod>2016-12-30T20:34:04.002Z</lastmod>
     
   </url>
   
@@ -37,13 +191,6 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/guide/cordova-wrapper.html</loc>
-    
-    <lastmod>2016-12-30T20:34:04.002Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/guide/app-using-fonts-from-cdn.html</loc>
     
     <lastmod>2016-12-30T20:34:04.002Z</lastmod>
@@ -51,70 +198,7 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/guide/app-troubleshoot-and-tips.html</loc>
-    
-    <lastmod>2016-12-30T20:34:03.998Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/select.html</loc>
-    
-    <lastmod>2016-12-30T20:34:03.998Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/components/search.html</loc>
-    
-    <lastmod>2016-12-30T20:34:03.998Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/range.html</loc>
-    
-    <lastmod>2016-12-30T20:34:03.998Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/uploader.html</loc>
-    
-    <lastmod>2016-12-30T20:34:03.998Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/toggle.html</loc>
-    
-    <lastmod>2016-12-30T20:34:03.998Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/rating.html</loc>
-    
-    <lastmod>2016-12-30T20:34:03.998Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/radio.html</loc>
-    
-    <lastmod>2016-12-30T20:34:03.998Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/pagination.html</loc>
-    
-    <lastmod>2016-12-30T20:34:03.998Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/numeric.html</loc>
     
     <lastmod>2016-12-30T20:34:03.998Z</lastmod>
     
@@ -128,13 +212,6 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/guide/app-dev-vs-production-code.html</loc>
-    
-    <lastmod>2016-12-30T20:34:03.998Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/components/list-item.html</loc>
     
     <lastmod>2016-12-30T20:34:03.998Z</lastmod>
@@ -142,35 +219,21 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/knob.html</loc>
+    <loc>http://quasar-framework.org/components/rating.html</loc>
     
     <lastmod>2016-12-30T20:34:03.998Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/inline-datetime.html</loc>
+    <loc>http://quasar-framework.org/components/range.html</loc>
     
     <lastmod>2016-12-30T20:34:03.998Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/html-tables.html</loc>
-    
-    <lastmod>2016-12-30T20:34:03.998Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/double-range.html</loc>
-    
-    <lastmod>2016-12-30T20:34:03.998Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/stepper.html</loc>
+    <loc>http://quasar-framework.org/components/radio.html</loc>
     
     <lastmod>2016-12-30T20:34:03.998Z</lastmod>
     
@@ -184,16 +247,58 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/state.html</loc>
+    <loc>http://quasar-framework.org/components/numeric.html</loc>
     
     <lastmod>2016-12-30T20:34:03.998Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/dialog-select.html</loc>
+    <loc>http://quasar-framework.org/guide/app-dev-vs-production-code.html</loc>
     
-    <lastmod>2016-12-30T20:34:03.994Z</lastmod>
+    <lastmod>2016-12-30T20:34:03.998Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/toggle.html</loc>
+    
+    <lastmod>2016-12-30T20:34:03.998Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/select.html</loc>
+    
+    <lastmod>2016-12-30T20:34:03.998Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/double-range.html</loc>
+    
+    <lastmod>2016-12-30T20:34:03.998Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/pagination.html</loc>
+    
+    <lastmod>2016-12-30T20:34:03.998Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/uploader.html</loc>
+    
+    <lastmod>2016-12-30T20:34:03.998Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/html-tables.html</loc>
+    
+    <lastmod>2016-12-30T20:34:03.998Z</lastmod>
     
   </url>
   
@@ -205,28 +310,14 @@
   </url>
   
   <url>
+    <loc>http://quasar-framework.org/api/css-grid-layout.html</loc>
+    
+    <lastmod>2016-12-30T20:34:03.994Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://quasar-framework.org/components/chips-textbox.html</loc>
-    
-    <lastmod>2016-12-30T20:34:03.994Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/datetime-range.html</loc>
-    
-    <lastmod>2016-12-30T20:34:03.994Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/datetime.html</loc>
-    
-    <lastmod>2016-12-30T20:34:03.994Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/autocomplete.html</loc>
     
     <lastmod>2016-12-30T20:34:03.994Z</lastmod>
     
@@ -247,14 +338,7 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/api/css-grid-layout.html</loc>
-    
-    <lastmod>2016-12-30T20:34:03.994Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/api/js-utils.html</loc>
+    <loc>http://quasar-framework.org/components/dialog-select.html</loc>
     
     <lastmod>2016-12-30T20:34:03.994Z</lastmod>
     
@@ -289,21 +373,7 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/guide/quasar-theming.html</loc>
-    
-    <lastmod>2016-11-26T23:06:16.785Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/video-embedding.html</loc>
-    
-    <lastmod>2016-11-26T23:06:16.785Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/app-structure.html</loc>
+    <loc>http://quasar-framework.org/guide/app-boilerplate.html</loc>
     
     <lastmod>2016-11-26T23:06:16.785Z</lastmod>
     
@@ -317,6 +387,13 @@
   </url>
   
   <url>
+    <loc>http://quasar-framework.org/guide/ajax-requests.html</loc>
+    
+    <lastmod>2016-11-26T23:06:16.785Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://quasar-framework.org/guide/contributing.html</loc>
     
     <lastmod>2016-11-26T23:06:16.785Z</lastmod>
@@ -324,7 +401,49 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/guide/quasar-cli.html</loc>
+    <loc>http://quasar-framework.org/components/vue-transitions.html</loc>
+    
+    <lastmod>2016-11-26T23:06:16.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/app-linter-configuration.html</loc>
+    
+    <lastmod>2016-11-26T23:06:16.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/video-embedding.html</loc>
+    
+    <lastmod>2016-11-26T23:06:16.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/quasar-play-app.html</loc>
+    
+    <lastmod>2016-11-26T23:06:16.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/tree.html</loc>
+    
+    <lastmod>2016-11-26T23:06:16.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/guide/electron-wrapper.html</loc>
+    
+    <lastmod>2016-11-26T23:06:16.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/toolbar.html</loc>
     
     <lastmod>2016-11-26T23:06:16.785Z</lastmod>
     
@@ -345,105 +464,28 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/tree.html</loc>
+    <loc>http://quasar-framework.org/guide/app-structure.html</loc>
     
     <lastmod>2016-11-26T23:06:16.785Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/tooltip.html</loc>
+    <loc>http://quasar-framework.org/guide/quasar-cli.html</loc>
     
     <lastmod>2016-11-26T23:06:16.785Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/toolbar.html</loc>
+    <loc>http://quasar-framework.org/guide/quasar-theming.html</loc>
     
     <lastmod>2016-11-26T23:06:16.785Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/electron-wrapper.html</loc>
-    
-    <lastmod>2016-11-26T23:06:16.785Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/app-linter-configuration.html</loc>
-    
-    <lastmod>2016-11-26T23:06:16.785Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/vue-transitions.html</loc>
-    
-    <lastmod>2016-11-26T23:06:16.785Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/textarea.html</loc>
-    
-    <lastmod>2016-11-26T23:06:16.785Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/quasar-play-app.html</loc>
-    
-    <lastmod>2016-11-26T23:06:16.785Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/app-boilerplate.html</loc>
-    
-    <lastmod>2016-11-26T23:06:16.785Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/guide/ajax-requests.html</loc>
-    
-    <lastmod>2016-11-26T23:06:16.785Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/popover.html</loc>
-    
-    <lastmod>2016-11-26T23:06:16.781Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/progress-button.html</loc>
-    
-    <lastmod>2016-11-26T23:06:16.781Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://quasar-framework.org/components/pull-to-refresh.html</loc>
-    
-    <lastmod>2016-11-26T23:06:16.781Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/image-gallery.html</loc>
-    
-    <lastmod>2016-11-26T23:06:16.781Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/input-textbox.html</loc>
     
     <lastmod>2016-11-26T23:06:16.781Z</lastmod>
     
@@ -457,20 +499,6 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/modal.html</loc>
-    
-    <lastmod>2016-11-26T23:06:16.781Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/progress-bar.html</loc>
-    
-    <lastmod>2016-11-26T23:06:16.781Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/components/parallax.html</loc>
     
     <lastmod>2016-11-26T23:06:16.781Z</lastmod>
@@ -478,7 +506,28 @@
   </url>
   
   <url>
+    <loc>http://quasar-framework.org/components/progress-button.html</loc>
+    
+    <lastmod>2016-11-26T23:06:16.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/api/js-events.html</loc>
+    
+    <lastmod>2016-11-26T23:06:16.777Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://quasar-framework.org/api/js-other-directives.html</loc>
+    
+    <lastmod>2016-11-26T23:06:16.777Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/components/cards.html</loc>
     
     <lastmod>2016-11-26T23:06:16.777Z</lastmod>
     
@@ -492,20 +541,6 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/collapsible.html</loc>
-    
-    <lastmod>2016-11-26T23:06:16.777Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/api/css-typography.html</loc>
-    
-    <lastmod>2016-11-26T23:06:16.777Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://quasar-framework.org/components/context-menu.html</loc>
     
     <lastmod>2016-11-26T23:06:16.777Z</lastmod>
@@ -513,28 +548,7 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/drawer.html</loc>
-    
-    <lastmod>2016-11-26T23:06:16.777Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/floating-action-buttons.html</loc>
-    
-    <lastmod>2016-11-26T23:06:16.777Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/api/js-events.html</loc>
-    
-    <lastmod>2016-11-26T23:06:16.777Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/cards.html</loc>
+    <loc>http://quasar-framework.org/api/css-typography.html</loc>
     
     <lastmod>2016-11-26T23:06:16.777Z</lastmod>
     
@@ -555,6 +569,13 @@
   </url>
   
   <url>
+    <loc>http://quasar-framework.org/components/toast.html</loc>
+    
+    <lastmod>2016-10-23T18:30:08.791Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://quasar-framework.org/guide/index.html</loc>
     
     <lastmod>2016-10-23T18:30:08.791Z</lastmod>
@@ -562,7 +583,7 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/toast.html</loc>
+    <loc>http://quasar-framework.org/guide/handling-back-button.html</loc>
     
     <lastmod>2016-10-23T18:30:08.791Z</lastmod>
     
@@ -583,21 +604,7 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/guide/handling-back-button.html</loc>
-    
-    <lastmod>2016-10-23T18:30:08.791Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/api/js-app-visibility.html</loc>
-    
-    <lastmod>2016-10-23T18:30:08.787Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://quasar-framework.org/components/action-sheet.html</loc>
+    <loc>http://quasar-framework.org/components/loading.html</loc>
     
     <lastmod>2016-10-23T18:30:08.787Z</lastmod>
     
@@ -611,21 +618,28 @@
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/components/loading.html</loc>
+    <loc>http://quasar-framework.org/components/action-sheet.html</loc>
     
     <lastmod>2016-10-23T18:30:08.787Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/2016/09/19/hello-world/</loc>
+    <loc>http://quasar-framework.org/api/js-app-visibility.html</loc>
+    
+    <lastmod>2016-10-23T18:30:08.787Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://quasar-framework.org/2015/10/02/2015-10-02-Working-On-The-First-Release/</loc>
     
     <lastmod>2016-09-19T17:18:51.092Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://quasar-framework.org/2015/10/02/2015-10-02-Working-On-The-First-Release/</loc>
+    <loc>http://quasar-framework.org/2016/09/19/hello-world/</loc>
     
     <lastmod>2016-09-19T17:18:51.092Z</lastmod>
     
