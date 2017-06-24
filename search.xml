@@ -353,80 +353,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Cordova App Wrapper]]></title>
-      <url>http://beta.quasar-framework.org/guide/cordova-wrapper.html</url>
-      <content type="html"><![CDATA[<p>Cordova allows you to wrap your Quasar App into a native mobile App. In the following examples we’ll be using Quasar CLI to manage this. After the initial setup you will need to wrap each project individually and add the desired platforms (Android and/or iOS).</p>
-<h2 id="Initial-setup-steps"><a href="#Initial-setup-steps" class="headerlink" title="Initial setup steps"></a>Initial setup steps</h2><p>There are some initial steps you need to take before you can wrap your apps using Cordova:</p>
-<ol>
-<li><p>First install Cordova globally on your machine:</p>
- <figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ npm install -g cordova</div></pre></td></tr></table></figure>
-</li>
-<li><p>After this step you will need to install the Android platform SDK on your machine. You can <a href="https://developer.android.com/studio/index.html#download" target="_blank" rel="external">download the Android Studio here</a> and follow these <a href="https://developer.android.com/studio/install.html" target="_blank" rel="external">installation steps</a> afterwards.</p>
-</li>
-<li><p>Update your ~/.bashrc file to contain the correct paths to your installation of Android Studio:</p>
- <figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="built_in">export</span> ANDROID_HOME=<span class="string">"<span class="variable">$HOME</span>/Android/Sdk"</span></div><div class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$ANDROID_HOME</span>/tools; PATH=<span class="variable">$PATH</span>:<span class="variable">$ANDROID_HOME</span>/platform-tools</div></pre></td></tr></table></figure>
-</li>
-<li><p>Start Android studio by changing into the folder you installed it in and run <code>./studio.sh</code>. Next step is to install the individual SDKs:</p>
-<p> Open the “Configure” menu at the bottom of the window:</p>
-<p> <img src="/images/Android-Studio-SDK-Menu.png" alt="SDK manager" title="SDK manager"></p>
-<p> Select the desired SDKs. As per May 2017 Cordova supports 4.4 and up and click on “Apply” to install the SDKs.</p>
-<p> <img src="/images/Android-Studio-SDK-selection.png" alt="SDK selection" title="SDK selection"></p>
-</li>
-</ol>
-<h2 id="Wrapping-and-configuration-of-your-App"><a href="#Wrapping-and-configuration-of-your-App" class="headerlink" title="Wrapping and configuration of your App"></a>Wrapping and configuration of your App</h2><p>To transform a Quasar project into a working Cordova app, you need to wrap it initially. The following steps explain how to wrap your app and add the desired platforms.</p>
-<h3 id="Wrapping"><a href="#Wrapping" class="headerlink" title="Wrapping"></a>Wrapping</h3><p>Run the following command to wrap your app in your project folder:<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ quasar wrap cordova</div></pre></td></tr></table></figure></p>
-<p>This command generates a subfolder inside your App named <code>/cordova</code>. It contains the assets of a Cordova project mapped to your Quasar App’s production ready code (<code>/dist</code>).</p>
-<p>It will ask you if you want to install the Crosswalk plugin which applies to Android apps only. Crosswalk ensures that your App will have the same browser runtime (which is also the latest and greatest) on all Android platforms. The downside is that it will also make your native App package file bigger. Read more <a href="https://crosswalk-project.org/documentation/about.html" target="_blank" rel="external">here</a> about Crosswalk.</p>
-<blockquote>
-<p><strong>It is highly recommended that you opt for the Crosswalk plugin to be installed.</strong> Otherwise your App might experience unexpected behavior on older platforms.</p>
-</blockquote>
-<p>If however you don’t wrap your App with Crosswalk from the CLI you can add it later with:<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> cordova</div><div class="line">$ cordova plugin add cordova-plugin-crosswalk-webview</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p><strong>NOTE for Windows Developers</strong><br>It is possible that you get <code>Error: EPERM: operation not permitted, symlink &#39;..\dist&#39;</code>, in which case you need to add privileges for your user to be able to create symlinks. Read <a href="http://superuser.com/questions/104845/permission-to-make-symbolic-links-in-windows-7" target="_blank" rel="external">here</a>.</p>
-<p>Another work-around and a quick solution is creating the symlink manually (after running <code>quasar wrap cordova</code>). To do so, start a command line as Administrator, change directory (<code>cd</code>) to the newly created <code>cordova</code> directory, run <code>mklink www ..\dist\</code>.</p>
-</blockquote>
-<h3 id="Adding-platforms"><a href="#Adding-platforms" class="headerlink" title="Adding platforms"></a>Adding platforms</h3><blockquote>
-<p><strong>IMPORTANT</strong><br>Change into the <code>/cordova</code> subfolder in your Quasar project before you run any <code>cordova</code> commands.</p>
-</blockquote>
-<p>After making the wrapper and making sure you have the platform’s SDK installed on your machine, you need to add at least a platform to your App, like this:<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> cordova</div><div class="line">$ cordova platform add android</div><div class="line"></div><div class="line"><span class="comment"># need to be on running a Mac OS for iOS:</span></div><div class="line">$ cordova platform add ios</div></pre></td></tr></table></figure></p>
-<p>To verify if you fulfill all requirements run the follow command:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ cordova requirements</div></pre></td></tr></table></figure>
-<blockquote>
-<p>On some newer Debian-based operating systems you might face a very persistent problem when running <code>cordova requiremets</code>. Please see the <a href="#android-sdk-not-found-after-installation-of-the-sdk">“Android SDK not found” after installation</a> section for assistance.</p>
-</blockquote>
-<h2 id="Cordova-Plugins"><a href="#Cordova-Plugins" class="headerlink" title="Cordova Plugins"></a>Cordova Plugins</h2><p>There are lots of Cordova plugins available which enables to you access the Camera, NFC, Battery Status, Contacts, Geolocation, Device motion and orientation and many more.</p>
-<p>Check out Cordova’s website. Example for Battery Status: <a href="https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-battery-status/index.html" target="_blank" rel="external">here</a>.</p>
-<h2 id="Tips-and-Troubleshooting"><a href="#Tips-and-Troubleshooting" class="headerlink" title="Tips and Troubleshooting"></a>Tips and Troubleshooting</h2><h3 id="Browser-Simulator"><a href="#Browser-Simulator" class="headerlink" title="Browser Simulator"></a>Browser Simulator</h3><p>Use Google Chrome’s emulator from Developer Tools. It’s a fantastic tool. You can select which device to emulate, but keep in mind that it’s an <em>emulator</em> and not the real deal.</p>
-<p><img src="/images/browser-simulator.png" alt="Google Chrome emulator" title="Google Chrome emulator"></p>
-<h3 id="Disabling-iOS-rubber-band-effect"><a href="#Disabling-iOS-rubber-band-effect" class="headerlink" title="Disabling iOS rubber band effect"></a>Disabling iOS rubber band effect</h3><p>When building an iOS app with Cordova and you want to disable the rubber band effect (<a href="https://www.youtube.com/watch?v=UjuNGpU29Mk" target="_blank" rel="external">https://www.youtube.com/watch?v=UjuNGpU29Mk</a>), add this to your <code>config.xml</code> from the <code>cordova</code> wrapper folder inside your project:</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Preference</span> <span class="attr">name</span> = <span class="string">"DisallowOverscroll"</span> <span class="attr">value</span> = <span class="string">"true"</span> /&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="Remote-Debugging"><a href="#Remote-Debugging" class="headerlink" title="Remote Debugging"></a>Remote Debugging</h3><p>If you are debugging Android Apps, you can use Google Chrome <a href="https://developers.google.com/web/tools/chrome-devtools/debug/remote-debugging/remote-debugging?hl=en" target="_blank" rel="external">Remote Debugging</a> through a USB cable attached to your Android phone. Combine this with <a href="/guide/quasar-play-app.html">Quasar Play</a> App and you get an excellent debugging environment.</p>
-<blockquote>
-<p>This way you have Chrome Dev Tools directly for your App running on the phone. Inspect elements, check console output, and so on and so forth.</p>
-</blockquote>
-<p><img src="/images/remote-debug.png" alt="Android Remote Debugging" title="Android Remote Debugging"><br><img src="/images/remote-debug-2.png" alt="Android Remote Debugging" title="Android Remote Debugging"></p>
-<h3 id="“Android-SDK-not-found-”-after-installation-of-the-SDK"><a href="#“Android-SDK-not-found-”-after-installation-of-the-SDK" class="headerlink" title="“Android SDK not found.” after installation of the SDK"></a>“Android SDK not found.” after installation of the SDK</h3><p>Some newer Debian-based OS (e.g. ubuntu, elementary OS) might leave you with a <code>Android SDK not found.</code> after you installed and (correctly) configured the environment. The output might look similar to this:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ cordova requirements</div><div class="line"></div><div class="line">Requirements check results <span class="keyword">for</span> android:</div><div class="line">Java JDK: installed 1.8.0</div><div class="line">Android SDK: installed <span class="literal">true</span></div><div class="line">Android target: not installed</div><div class="line">Android SDK not found. Make sure that it is installed. If it is not at the default location, <span class="built_in">set</span> the ANDROID_HOME environment variable.</div><div class="line">Gradle: not installed</div><div class="line">Could not find gradle wrapper within Android SDK. Might need to update your Android SDK.</div><div class="line">Looked here: /home/your_user/Android/Sdk/tools/templates/gradle/wrapper</div><div class="line">Error: Some of requirements check failed</div></pre></td></tr></table></figure>
-<p>This could have two different reasons: Usually the paths aren’t configured correctly. The first step is to verify if your paths are set correctly. This can be done by running the following commands:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ <span class="built_in">echo</span> <span class="variable">$ANDROID_HOME</span></div></pre></td></tr></table></figure>
-<p>The expected output should be a path similar to this <code>$HOME/Android/Sdk</code>. After this run:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ ls -la <span class="variable">$ANDROID_HOME</span></div></pre></td></tr></table></figure>
-<p>To ensure the folder contains the SDK. The expected output should contain folders like ‘tools’, ‘sources’, ‘platform-tools’, etc.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ <span class="built_in">echo</span> <span class="variable">$PATH</span></div></pre></td></tr></table></figure>
-<p>The output should contain each one entry for the Android SDK ‘tools’-folder and ‘platform-tools’-tools. This could look like this:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">/home/your_user/bin:/home/your_user/.local/bin:/usr/<span class="built_in">local</span>/sbin:/usr/<span class="built_in">local</span>/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/<span class="built_in">local</span>/games:/home/your_user/Android/Sdk/tools:/home/your_user/Android/Sdk/platform-tools</div></pre></td></tr></table></figure>
-<blockquote>
-<p>If you ensured your paths are set correctly and still get the error on <code>cordova requirements</code> you can try the following fix: <a href="https://github.com/meteor/meteor/issues/8464#issuecomment-288112504" target="_blank" rel="external">Replacing the Android Studio ‘tools’ folder manually</a></p>
-</blockquote>
-<h3 id="Setting-Up-Device-on-Linux"><a href="#Setting-Up-Device-on-Linux" class="headerlink" title="Setting Up Device on Linux"></a>Setting Up Device on Linux</h3><p>You may bump into <code>?????? no permissions</code> problem when trying to run your App directly on an Android phone/tablet.</p>
-<p>Here’s how you fix this:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># create the .rules file and insert the content</span></div><div class="line"><span class="comment"># from below this example</span></div><div class="line">sudo vim /etc/udev/rules.d/51-android.rules</div><div class="line">sudo chmod 644   /etc/udev/rules.d/51-android.rules</div><div class="line">sudo chown root. /etc/udev/rules.d/51-android.rules</div><div class="line">sudo service udev restart</div><div class="line">sudo killall adb</div></pre></td></tr></table></figure>
-<p>The content for <code>51-android.rules</code>:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0bb4&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0e79&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0502&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0b05&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;413c&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0489&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;091e&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;18d1&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0bb4&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;12d1&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;24e3&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;2116&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0482&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;17ef&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;1004&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;22b8&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0409&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;2080&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0955&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;2257&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;10a9&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;1d4d&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0471&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;04da&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;05c6&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;1f53&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;04e8&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;04dd&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0fce&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0930&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;19d2&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;1bbb&quot;, MODE=&quot;0666&quot;</div></pre></td></tr></table></figure></p>
-<p>Now running <code>adb devices</code> should discover your device.</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Electron App Wrapper]]></title>
       <url>http://beta.quasar-framework.org/guide/electron-wrapper.html</url>
       <content type="html"><![CDATA[<p>You can build Electron apps by wrapping your Quasar project with its Electron wrapper. We’ll be using Quasar CLI to manage this.</p>
@@ -550,6 +476,34 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Quasar Development with Docker]]></title>
+      <url>http://beta.quasar-framework.org/guide/quasar-development-with-docker.html</url>
+      <content type="html"><![CDATA[<p>If you’d like to help develop Quasar and you use Docker for your development environment, we offer a <code>docker-compose.yml</code> and a <code>dockerfile</code> to get you started. </p>
+<p>Steps to use the <a href="https://hub.docker.com/r/quasarframework/quasar-dev/" target="_blank" rel="external">quasarframework/quasar-dev</a> container:</p>
+<ol>
+<li><p>At this point, you should be in a clone of the <a href="https://github.com/quasarframework/quasar" target="_blank" rel="external">quasarframework/quasar</a> repo on your local machine and you should have Docker installed and running.</p>
+</li>
+<li><p>In your shell console of choice, run</p>
+<p> <code>docker-compose up -d</code> </p>
+<p>This will build and run the Quasar docker container in detached mode.</p>
+</li>
+<li><p>Once the container is built, enter </p>
+<p> <code>docker-compose exec quasar-dev sh</code></p>
+</li>
+<li><p>You should now be in the <code>/opt/app</code> directory within the container. Since the <code>docker up</code> command and subsequent building of the container also ran <code>npm install</code> for you, using the <code>package.json</code>on your local computer, you now only need to run</p>
+<p> <code>npm run dev</code></p>
+</li>
+</ol>
+<p>Have fun programming on Quasar!</p>
+<h2 id="Changing-dependencies"><a href="#Changing-dependencies" class="headerlink" title="Changing dependencies"></a>Changing dependencies</h2><p>If you have changed dependencies, (i.e. added a package to <code>package.json</code>) you can rebuild the quasar-dev container with the following command in your local machine’s console (not the exec shell). </p>
+<p><code>docker-compose build</code></p>
+<p>Theoretically, you could also use <code>npm install &lt;package&gt;</code> in the exec shell, however you’d be adding the new package(s) outside the container’s cached layer, which means subsequent installs will take longer. We recommend adding your dependencies directly in <code>package.json</code> and rebuilding the container. </p>
+<p>Please also note, adding dependencies is currently frowned upon. Please check with Razvan in the <a href="http://forum.quasar-framework.org/" target="_blank" rel="external">Quasar forum</a> or on the <a href="https://gitter.im/quasarframework/Lobby" target="_blank" rel="external">Gitter channel</a>, before adding any new dependencies.</p>
+<p>That’s it! Hope you enjoy the container. </p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar CLI]]></title>
       <url>http://beta.quasar-framework.org/guide/quasar-cli.html</url>
       <content type="html"><![CDATA[<p>The Quasar CLI allows you to create new projects in no time, by generating a base application, filled with everything you need to begin working on your application. It does most of the heavy-lifting, so you need not concern yourself with the redundant tasks of building a base application. </p>
@@ -603,46 +557,9 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar Development with Docker]]></title>
-      <url>http://beta.quasar-framework.org/guide/quasar-development-with-docker.html</url>
-      <content type="html"><![CDATA[<p>If you’d like to help develop Quasar and you use Docker for your development environment, we offer a <code>docker-compose.yml</code> and a <code>dockerfile</code> to get you started. </p>
-<p>Steps to use the <a href="https://hub.docker.com/r/quasarframework/quasar-dev/" target="_blank" rel="external">quasarframework/quasar-dev</a> container:</p>
-<ol>
-<li><p>At this point, you should be in a clone of the <a href="https://github.com/quasarframework/quasar" target="_blank" rel="external">quasarframework/quasar</a> repo on your local machine and you should have Docker installed and running.</p>
-</li>
-<li><p>In your shell console of choice, run</p>
-<p> <code>docker-compose up -d</code> </p>
-<p>This will build and run the Quasar docker container in detached mode.</p>
-</li>
-<li><p>Once the container is built, enter </p>
-<p> <code>docker-compose exec quasar-dev sh</code></p>
-</li>
-<li><p>You should now be in the <code>/opt/app</code> directory within the container. Since the <code>docker up</code> command and subsequent building of the container also ran <code>npm install</code> for you, using the <code>package.json</code>on your local computer, you now only need to run</p>
-<p> <code>npm run dev</code></p>
-</li>
-</ol>
-<p>Have fun programming on Quasar!</p>
-<h2 id="Changing-dependencies"><a href="#Changing-dependencies" class="headerlink" title="Changing dependencies"></a>Changing dependencies</h2><p>If you have changed dependencies, (i.e. added a package to <code>package.json</code>) you can rebuild the quasar-dev container with the following command in your local machine’s console (not the exec shell). </p>
-<p><code>docker-compose build</code></p>
-<p>Theoretically, you could also use <code>npm install &lt;package&gt;</code> in the exec shell, however you’d be adding the new package(s) outside the container’s cached layer, which means subsequent installs will take longer. We recommend adding your dependencies directly in <code>package.json</code> and rebuilding the container. </p>
-<p>Please also note, adding dependencies is currently frowned upon. Please check with Razvan in the <a href="http://forum.quasar-framework.org/" target="_blank" rel="external">Quasar forum</a> or on the <a href="https://gitter.im/quasarframework/Lobby" target="_blank" rel="external">Gitter channel</a>, before adding any new dependencies.</p>
-<p>That’s it! Hope you enjoy the container. </p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Changelog]]></title>
       <url>http://beta.quasar-framework.org/guide/quasar-framework-changelog.html</url>
       <content type="html"><![CDATA[<p>Before upgrading to a newer version of Quasar, please make sure you read the <a href="https://github.com/quasarframework/quasar/releases" target="_blank" rel="external">Release Notes and Changelog</a> that are available on Github.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar Nightly Build]]></title>
-      <url>http://beta.quasar-framework.org/guide/quasar-nightly-build.html</url>
-      <content type="html"><![CDATA[<p>For those that are adventurous enough, a bleeding edge version of Quasar is available for you to try. Please note that this version <strong>may be unstable and may introduce breaking changes</strong> that are not yet documented.</p>
-<p>What you need to do to use it instead of the latest stable Quasar release is to use the <a href="https://github.com/quasarframework/quasar-edge" target="_blank" rel="external">Github repo</a> instead of the NPM name of the package.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">// remove node_modules/quasar-framework <span class="keyword">if</span> it<span class="string">'s there</span></div><div class="line">$ rm -rf node_modules/quasar-framework</div><div class="line"></div><div class="line">// then install edge version:</div><div class="line">$ npm i --save git+https://git@github.com/quasarframework/quasar-edge.git</div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -676,10 +593,37 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Quasar Nightly Build]]></title>
+      <url>http://beta.quasar-framework.org/guide/quasar-nightly-build.html</url>
+      <content type="html"><![CDATA[<p>For those that are adventurous enough, a bleeding edge version of Quasar is available for you to try. Please note that this version <strong>may be unstable and may introduce breaking changes</strong> that are not yet documented.</p>
+<p>What you need to do to use it instead of the latest stable Quasar release is to use the <a href="https://github.com/quasarframework/quasar-edge" target="_blank" rel="external">Github repo</a> instead of the NPM name of the package.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">// remove node_modules/quasar-framework <span class="keyword">if</span> it<span class="string">'s there</span></div><div class="line">$ rm -rf node_modules/quasar-framework</div><div class="line"></div><div class="line">// then install edge version:</div><div class="line">$ npm i --save git+https://git@github.com/quasarframework/quasar-edge.git</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Roadmap]]></title>
       <url>http://beta.quasar-framework.org/guide/quasar-roadmap.html</url>
       <content type="html"><![CDATA[<p>Quasar is here to stay and grow. The <a href="https://github.com/quasarframework/quasar/projects/3" target="_blank" rel="external">roadmap is available on Github</a> under Projects. There are also a lot of <a href="https://github.com/quasarframework/quasar/issues?q=is%3Aissue+is%3Aopen+label%3Aproposal" target="_blank" rel="external">small enhancements and new features waiting to be implemented</a>.</p>
 <p>We are absolutely thrilled about the future of Quasar and we hope you will be too!</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Router]]></title>
+      <url>http://beta.quasar-framework.org/guide/router.html</url>
+      <content type="html"><![CDATA[<p>Quasar Apps are using by default the <code>vue-router</code> which is the official router for VueJs. It deeply integrates with Vue.js core to make building Single Page Applications with Vue.js a breeze. Features include:</p>
+<ul>
+<li>Nested route/view mapping</li>
+<li>Modular, component-based router configuration</li>
+<li>Route params, query, wildcards</li>
+<li>View transition effects powered by Vue.js’ transition system</li>
+<li>Fine-grained navigation control</li>
+<li>Links with automatic active CSS classes</li>
+<li>HTML5 history mode or hash mode, with auto-fallback in IE9</li>
+<li>Restore scroll position when going back in history mode</li>
+</ul>
+<p>Get started with the <a href="http://vuejs.github.io/vue-router" target="_blank" rel="external">documentation</a>.</p>
 ]]></content>
     </entry>
     
@@ -798,24 +742,6 @@
 <p><strong>All your Stylus variables need to be declared before the inclusion of Quasar Framework theme files (from NPM).</strong> If you follow the default structure of files (and be care-free) then inject variable overrides in <em>src/themes/app.variables.styl</em>.</p>
 </blockquote>
 <h2 id="Stylus-Variables"><a href="#Stylus-Variables" class="headerlink" title="Stylus Variables"></a>Stylus Variables</h2><p>Read a complete list of all <a href="/components/stylus-variables.html">Stylus variables</a> that you can override.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Router]]></title>
-      <url>http://beta.quasar-framework.org/guide/router.html</url>
-      <content type="html"><![CDATA[<p>Quasar Apps are using by default the <code>vue-router</code> which is the official router for VueJs. It deeply integrates with Vue.js core to make building Single Page Applications with Vue.js a breeze. Features include:</p>
-<ul>
-<li>Nested route/view mapping</li>
-<li>Modular, component-based router configuration</li>
-<li>Route params, query, wildcards</li>
-<li>View transition effects powered by Vue.js’ transition system</li>
-<li>Fine-grained navigation control</li>
-<li>Links with automatic active CSS classes</li>
-<li>HTML5 history mode or hash mode, with auto-fallback in IE9</li>
-<li>Restore scroll position when going back in history mode</li>
-</ul>
-<p>Get started with the <a href="http://vuejs.github.io/vue-router" target="_blank" rel="external">documentation</a>.</p>
 ]]></content>
     </entry>
     
@@ -1099,6 +1025,125 @@
 <p><code>enter</code>, <code>leave</code> and <code>name</code> props work same as for <a href="/components/transition.html">QTransition</a>, so it might be a good idea to get a reading on them.</p>
 </blockquote>
 <p>It also supports <code>v-model</code> directive to receive a Boolean as property, which determines the visibility of the QAlert (<code>true</code> means it’s visible).</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Cordova App Wrapper]]></title>
+      <url>http://beta.quasar-framework.org/guide/cordova-wrapper.html</url>
+      <content type="html"><![CDATA[<p>Cordova allows you to wrap your Quasar App into a native mobile App. In the following examples we’ll be using Quasar CLI to manage this. After the initial setup you will need to wrap each project individually and add the desired platforms (Android and/or iOS).</p>
+<h2 id="Initial-setup-steps"><a href="#Initial-setup-steps" class="headerlink" title="Initial setup steps"></a>Initial setup steps</h2><p>There are some initial steps you need to take before you can wrap your apps using Cordova:</p>
+<ol>
+<li><p>First install Cordova globally on your machine:</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ npm install -g cordova</div></pre></td></tr></table></figure>
+</li>
+<li><p>After this step you will need to install the Android platform SDK on your machine. You can <a href="https://developer.android.com/studio/index.html#download" target="_blank" rel="external">download the Android Studio here</a> and follow these <a href="https://developer.android.com/studio/install.html" target="_blank" rel="external">installation steps</a> afterwards.</p>
+</li>
+<li><p>Update your ~/.bashrc file to contain the correct paths to your installation of Android Studio:</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="built_in">export</span> ANDROID_HOME=<span class="string">"<span class="variable">$HOME</span>/Android/Sdk"</span></div><div class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$ANDROID_HOME</span>/tools; PATH=<span class="variable">$PATH</span>:<span class="variable">$ANDROID_HOME</span>/platform-tools</div></pre></td></tr></table></figure>
+</li>
+<li><p>Start Android studio by changing into the folder you installed it in and run <code>./studio.sh</code>. Next step is to install the individual SDKs:</p>
+<p> Open the “Configure” menu at the bottom of the window:</p>
+<p> <img src="/images/Android-Studio-SDK-Menu.png" alt="SDK manager" title="SDK manager"></p>
+<p> Select the desired SDKs. As per May 2017 Cordova supports 4.4 and up and click on “Apply” to install the SDKs.</p>
+<p> <img src="/images/Android-Studio-SDK-selection.png" alt="SDK selection" title="SDK selection"></p>
+</li>
+</ol>
+<h2 id="Wrapping-and-configuration-of-your-App"><a href="#Wrapping-and-configuration-of-your-App" class="headerlink" title="Wrapping and configuration of your App"></a>Wrapping and configuration of your App</h2><p>To transform a Quasar project into a working Cordova app, you need to wrap it initially. The following steps explain how to wrap your app and add the desired platforms.</p>
+<h3 id="Wrapping"><a href="#Wrapping" class="headerlink" title="Wrapping"></a>Wrapping</h3><p>Run the following command to wrap your app in your project folder:<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ quasar wrap cordova</div></pre></td></tr></table></figure></p>
+<p>This command generates a subfolder inside your App named <code>/cordova</code>. It contains the assets of a Cordova project mapped to your Quasar App’s production ready code (<code>/dist</code>).</p>
+<p>It will ask you if you want to install the Crosswalk plugin which applies to Android apps only. Crosswalk ensures that your App will have the same browser runtime (which is also the latest and greatest) on all Android platforms. The downside is that it will also make your native App package file bigger. Read more <a href="https://crosswalk-project.org/documentation/about.html" target="_blank" rel="external">here</a> about Crosswalk.</p>
+<blockquote>
+<p><strong>It is highly recommended that you opt for the Crosswalk plugin to be installed.</strong> Otherwise your App might experience unexpected behavior on older platforms.</p>
+</blockquote>
+<p>If however you don’t wrap your App with Crosswalk from the CLI you can add it later with:<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> cordova</div><div class="line">$ cordova plugin add cordova-plugin-crosswalk-webview</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p><strong>NOTE for Windows Developers</strong><br>It is possible that you get <code>Error: EPERM: operation not permitted, symlink &#39;..\dist&#39;</code>, in which case you need to add privileges for your user to be able to create symlinks. Read <a href="http://superuser.com/questions/104845/permission-to-make-symbolic-links-in-windows-7" target="_blank" rel="external">here</a>.</p>
+<p>Another work-around and a quick solution is creating the symlink manually (after running <code>quasar wrap cordova</code>). To do so, start a command line as Administrator, change directory (<code>cd</code>) to the newly created <code>cordova</code> directory, run <code>mklink www ..\dist\</code>.</p>
+</blockquote>
+<h3 id="Adding-platforms"><a href="#Adding-platforms" class="headerlink" title="Adding platforms"></a>Adding platforms</h3><blockquote>
+<p><strong>IMPORTANT</strong><br>Change into the <code>/cordova</code> subfolder in your Quasar project before you run any <code>cordova</code> commands.</p>
+</blockquote>
+<p>After making the wrapper and making sure you have the platform’s SDK installed on your machine, you need to add at least a platform to your App, like this:<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> cordova</div><div class="line">$ cordova platform add android</div><div class="line"></div><div class="line"><span class="comment"># need to be on running a Mac OS for iOS:</span></div><div class="line">$ cordova platform add ios</div></pre></td></tr></table></figure></p>
+<p>To verify if you fulfill all requirements run the follow command:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ cordova requirements</div></pre></td></tr></table></figure>
+<blockquote>
+<p>On some newer Debian-based operating systems you might face a very persistent problem when running <code>cordova requiremets</code>. Please see the <a href="#android-sdk-not-found-after-installation-of-the-sdk">“Android SDK not found” after installation</a> section for assistance.</p>
+</blockquote>
+<h2 id="Cordova-Plugins"><a href="#Cordova-Plugins" class="headerlink" title="Cordova Plugins"></a>Cordova Plugins</h2><p>There are lots of Cordova plugins available which enables to you access the Camera, NFC, Battery Status, Contacts, Geolocation, Device motion and orientation and many more.</p>
+<p>Check out Cordova’s website. Example for Battery Status: <a href="https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-battery-status/index.html" target="_blank" rel="external">here</a>.</p>
+<h2 id="Tips-and-Troubleshooting"><a href="#Tips-and-Troubleshooting" class="headerlink" title="Tips and Troubleshooting"></a>Tips and Troubleshooting</h2><h3 id="Browser-Simulator"><a href="#Browser-Simulator" class="headerlink" title="Browser Simulator"></a>Browser Simulator</h3><p>Use Google Chrome’s emulator from Developer Tools. It’s a fantastic tool. You can select which device to emulate, but keep in mind that it’s an <em>emulator</em> and not the real deal.</p>
+<p><img src="/images/browser-simulator.png" alt="Google Chrome emulator" title="Google Chrome emulator"></p>
+<h3 id="Disabling-iOS-rubber-band-effect"><a href="#Disabling-iOS-rubber-band-effect" class="headerlink" title="Disabling iOS rubber band effect"></a>Disabling iOS rubber band effect</h3><p>When building an iOS app with Cordova and you want to disable the rubber band effect (<a href="https://www.youtube.com/watch?v=UjuNGpU29Mk" target="_blank" rel="external">https://www.youtube.com/watch?v=UjuNGpU29Mk</a>), add this to your <code>config.xml</code> from the <code>cordova</code> wrapper folder inside your project:</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Preference</span> <span class="attr">name</span> = <span class="string">"DisallowOverscroll"</span> <span class="attr">value</span> = <span class="string">"true"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="Remote-Debugging"><a href="#Remote-Debugging" class="headerlink" title="Remote Debugging"></a>Remote Debugging</h3><p>If you are debugging Android Apps, you can use Google Chrome <a href="https://developers.google.com/web/tools/chrome-devtools/debug/remote-debugging/remote-debugging?hl=en" target="_blank" rel="external">Remote Debugging</a> through a USB cable attached to your Android phone. Combine this with <a href="/guide/quasar-play-app.html">Quasar Play</a> App and you get an excellent debugging environment.</p>
+<blockquote>
+<p>This way you have Chrome Dev Tools directly for your App running on the phone. Inspect elements, check console output, and so on and so forth.</p>
+</blockquote>
+<p><img src="/images/remote-debug.png" alt="Android Remote Debugging" title="Android Remote Debugging"><br><img src="/images/remote-debug-2.png" alt="Android Remote Debugging" title="Android Remote Debugging"></p>
+<h3 id="“Android-SDK-not-found-”-after-installation-of-the-SDK"><a href="#“Android-SDK-not-found-”-after-installation-of-the-SDK" class="headerlink" title="“Android SDK not found.” after installation of the SDK"></a>“Android SDK not found.” after installation of the SDK</h3><p>Some newer Debian-based OS (e.g. ubuntu, elementary OS) might leave you with a <code>Android SDK not found.</code> after you installed and (correctly) configured the environment. The output might look similar to this:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ cordova requirements</div><div class="line"></div><div class="line">Requirements check results <span class="keyword">for</span> android:</div><div class="line">Java JDK: installed 1.8.0</div><div class="line">Android SDK: installed <span class="literal">true</span></div><div class="line">Android target: not installed</div><div class="line">Android SDK not found. Make sure that it is installed. If it is not at the default location, <span class="built_in">set</span> the ANDROID_HOME environment variable.</div><div class="line">Gradle: not installed</div><div class="line">Could not find gradle wrapper within Android SDK. Might need to update your Android SDK.</div><div class="line">Looked here: /home/your_user/Android/Sdk/tools/templates/gradle/wrapper</div><div class="line">Error: Some of requirements check failed</div></pre></td></tr></table></figure>
+<p>This could have two different reasons: Usually the paths aren’t configured correctly. The first step is to verify if your paths are set correctly. This can be done by running the following commands:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ <span class="built_in">echo</span> <span class="variable">$ANDROID_HOME</span></div></pre></td></tr></table></figure>
+<p>The expected output should be a path similar to this <code>$HOME/Android/Sdk</code>. After this run:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ ls -la <span class="variable">$ANDROID_HOME</span></div></pre></td></tr></table></figure>
+<p>To ensure the folder contains the SDK. The expected output should contain folders like ‘tools’, ‘sources’, ‘platform-tools’, etc.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ <span class="built_in">echo</span> <span class="variable">$PATH</span></div></pre></td></tr></table></figure>
+<p>The output should contain each one entry for the Android SDK ‘tools’-folder and ‘platform-tools’-tools. This could look like this:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">/home/your_user/bin:/home/your_user/.local/bin:/usr/<span class="built_in">local</span>/sbin:/usr/<span class="built_in">local</span>/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/<span class="built_in">local</span>/games:/home/your_user/Android/Sdk/tools:/home/your_user/Android/Sdk/platform-tools</div></pre></td></tr></table></figure>
+<blockquote>
+<p>If you ensured your paths are set correctly and still get the error on <code>cordova requirements</code> you can try the following fix: <a href="https://github.com/meteor/meteor/issues/8464#issuecomment-288112504" target="_blank" rel="external">Replacing the Android Studio ‘tools’ folder manually</a></p>
+</blockquote>
+<h3 id="Setting-Up-Device-on-Linux"><a href="#Setting-Up-Device-on-Linux" class="headerlink" title="Setting Up Device on Linux"></a>Setting Up Device on Linux</h3><p>You may bump into <code>?????? no permissions</code> problem when trying to run your App directly on an Android phone/tablet.</p>
+<p>Here’s how you fix this:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># create the .rules file and insert the content</span></div><div class="line"><span class="comment"># from below this example</span></div><div class="line">sudo vim /etc/udev/rules.d/51-android.rules</div><div class="line">sudo chmod 644   /etc/udev/rules.d/51-android.rules</div><div class="line">sudo chown root. /etc/udev/rules.d/51-android.rules</div><div class="line">sudo service udev restart</div><div class="line">sudo killall adb</div></pre></td></tr></table></figure>
+<p>The content for <code>51-android.rules</code>:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0bb4&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0e79&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0502&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0b05&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;413c&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0489&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;091e&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;18d1&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0bb4&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;12d1&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;24e3&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;2116&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0482&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;17ef&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;1004&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;22b8&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0409&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;2080&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0955&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;2257&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;10a9&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;1d4d&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0471&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;04da&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;05c6&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;1f53&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;04e8&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;04dd&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0fce&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0930&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;19d2&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;1bbb&quot;, MODE=&quot;0666&quot;</div></pre></td></tr></table></figure></p>
+<p>Now running <code>adb devices</code> should discover your device.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Animation CSS Helper Classes]]></title>
+      <url>http://beta.quasar-framework.org/components/animation-css-helper-classes.html</url>
+      <content type="html"><![CDATA[<p>Add these CSS classes to the DOM element / component you want the effect on.<br>These are very basic effects so for advanced ones check <a href="/components/transition.html">Transition</a>, <a href="/components/slide-transition.html">Slide Transition</a> or use <a href="/components/js-animations.html">JS Animations</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>animate-spin</code></td>
+<td>Apply a continuous spin/rotation to the DOM element</td>
+</tr>
+<tr>
+<td><code>animate-spin-reverse</code></td>
+<td>Apply a continuous spin/rotation (opposite direction to <code>animate-spin</code>) to the DOM element</td>
+</tr>
+<tr>
+<td><code>animate-blink</code></td>
+<td>Apply a blinking effect to the DOM element</td>
+</tr>
+<tr>
+<td><code>animate-pop</code></td>
+<td>Apply a pop-in effect to the DOM element</td>
+</tr>
+<tr>
+<td><code>animate-scale</code></td>
+<td>Apply a scale-in effect to the DOM element</td>
+</tr>
+<tr>
+<td><code>animate-fade</code></td>
+<td>Apply a fade-in effect to the DOM element</td>
+</tr>
+<tr>
+<td><code>animate-bounce</code></td>
+<td>Apply a continuous bouncing effect to the DOM element</td>
+</tr>
+</tbody>
+</table>
 ]]></content>
     </entry>
     
@@ -4978,6 +5023,15 @@
     </entry>
     
     <entry>
+      <title><![CDATA[JS Animations]]></title>
+      <url>http://beta.quasar-framework.org/components/js-animations.html</url>
+      <content type="html"><![CDATA[<p>You can create animations through Javascript (using RAF - <code>requestAnimationFrame()</code>) with Quasar.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; animate &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> id = animate.start(&#123;</div><div class="line">  name: <span class="string">'unique-animation-name'</span>, <span class="comment">// optional, if none is supplied a unique one is created and returned</span></div><div class="line">  <span class="keyword">from</span>: <span class="string">'0'</span>, <span class="comment">// current position</span></div><div class="line">  to: <span class="string">'100'</span>, <span class="comment">// final position</span></div><div class="line">  duration: <span class="number">300</span>, <span class="comment">// duration of the animation</span></div><div class="line">  done (finalPosition) &#123;...&#125;, <span class="comment">// function to call when animation is done</span></div><div class="line">  cancel (currentPosition) &#123;...&#125;, <span class="comment">// function to call when animation is aborted</span></div><div class="line">  apply (currentPosition) &#123;...&#125;, <span class="comment">// function called on each step so you can apply changes</span></div><div class="line">  easing (currentPosition) &#123; <span class="comment">// custom easing function</span></div><div class="line">    <span class="comment">// ...return transformation of currentPosition...</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"><span class="comment">// Starting an animation with same name will abort the previous one</span></div><div class="line"></div><div class="line"><span class="comment">// Stop an animation using its name</span></div><div class="line">animate.stop(<span class="string">'unique-animation-name'</span>)</div><div class="line"><span class="comment">// or</span></div><div class="line">animate.stop(id) <span class="comment">// id returned from above</span></div></pre></td></tr></table></figure>
+<p>Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; animate &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">animate.start(&#123;</div><div class="line">  <span class="keyword">from</span>: <span class="number">6</span>,</div><div class="line">  to: <span class="number">158</span>,</div><div class="line">  apply (pos) &#123;</div><div class="line">    el.style.maxHeight = <span class="string">`<span class="subst">$&#123;pos&#125;</span>px`</span></div><div class="line">  &#125;,</div><div class="line">  done () &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`we're done!`</span>)</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Introduction for Beginners]]></title>
       <url>http://beta.quasar-framework.org/components/introduction-for-beginners.html</url>
       <content type="html"><![CDATA[<p>Before you begin with Quasar, it is a good idea to get acquainted with ES6 and have a fairly good knowledge about how Vue works. (<a href="https://github.com/lukehoban/es6features" target="_blank" rel="external">quick overview of ES6</a> and <a href="http://es6-features.org/#Constants" target="_blank" rel="external">full description</a> – don’t worry, you don’t need to understand ALL of ES6). For devs experienced with reactive UIs, <a href="https://vuejs.org/v2/guide/" target="_blank" rel="external">the Vue documentation</a> itself takes half a day at most to read top-to-bottom and will help you understand how Quasar components can be used and configured.</p>
@@ -5105,15 +5159,6 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">q-bogus</span> @<span class="attr">open</span>=<span class="string">"doSomething"</span> @<span class="attr">close</span>=<span class="string">"doSomethingElse"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  methods: &#123;</div><div class="line">    doSomething () &#123;</div><div class="line">      <span class="comment">// this method has been called (in this case)</span></div><div class="line">      <span class="comment">// because @open event was triggered by QBogus component</span></div><div class="line">    &#125;,</div><div class="line">    doSomethingElse () &#123;</div><div class="line">      <span class="comment">// this method has been called (in this case)</span></div><div class="line">      <span class="comment">// because @close event was triggered by QBogus component</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>There are times when you need to access native DOM events on a Quasar component too, like the native <code>@click</code>. Do not confuse native events with the Vue events emitted by the component. They are different things. Let’s take an example: let’s say we have a component (QBogus) that emits <code>@open</code> and <code>@close</code>, but doesn’t emit a <code>@click</code> event. <code>@click</code> being a native DOM event, we can still catch it with the <code>.native</code> modifier:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Notice "@click.native" --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-bogus</span> @<span class="attr">click.native</span>=<span class="string">"myMethod"</span> /&gt;</span></div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[JS Animations]]></title>
-      <url>http://beta.quasar-framework.org/components/js-animations.html</url>
-      <content type="html"><![CDATA[<p>You can create animations through Javascript (using RAF - <code>requestAnimationFrame()</code>) with Quasar.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; animate &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> id = animate.start(&#123;</div><div class="line">  name: <span class="string">'unique-animation-name'</span>, <span class="comment">// optional, if none is supplied a unique one is created and returned</span></div><div class="line">  <span class="keyword">from</span>: <span class="string">'0'</span>, <span class="comment">// current position</span></div><div class="line">  to: <span class="string">'100'</span>, <span class="comment">// final position</span></div><div class="line">  duration: <span class="number">300</span>, <span class="comment">// duration of the animation</span></div><div class="line">  done (finalPosition) &#123;...&#125;, <span class="comment">// function to call when animation is done</span></div><div class="line">  cancel (currentPosition) &#123;...&#125;, <span class="comment">// function to call when animation is aborted</span></div><div class="line">  apply (currentPosition) &#123;...&#125;, <span class="comment">// function called on each step so you can apply changes</span></div><div class="line">  easing (currentPosition) &#123; <span class="comment">// custom easing function</span></div><div class="line">    <span class="comment">// ...return transformation of currentPosition...</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"><span class="comment">// Starting an animation with same name will abort the previous one</span></div><div class="line"></div><div class="line"><span class="comment">// Stop an animation using its name</span></div><div class="line">animate.stop(<span class="string">'unique-animation-name'</span>)</div><div class="line"><span class="comment">// or</span></div><div class="line">animate.stop(id) <span class="comment">// id returned from above</span></div></pre></td></tr></table></figure>
-<p>Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; animate &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">animate.start(&#123;</div><div class="line">  <span class="keyword">from</span>: <span class="number">6</span>,</div><div class="line">  to: <span class="number">158</span>,</div><div class="line">  apply (pos) &#123;</div><div class="line">    el.style.maxHeight = <span class="string">`<span class="subst">$&#123;pos&#125;</span>px`</span></div><div class="line">  &#125;,</div><div class="line">  done () &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`we're done!`</span>)</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
     
@@ -6710,89 +6755,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Pull Down to Refresh]]></title>
-      <url>http://beta.quasar-framework.org/components/pull-to-refresh.html</url>
-      <content type="html"><![CDATA[<p>When you want to allow the user to refresh the content or add newest content.</p>
-<input type="hidden" data-fullpage-demo="navigation/pull-to-refresh">
-
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><p>Use QPullToRefresh component as direct child of your page component, to encapsulate all its content. Refer to the source on the demo for a more detailed example.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-pull-to-refresh</span> <span class="attr">:handler</span>=<span class="string">"refresher"</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- Content, whatever you like --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-for</span>=<span class="string">"item in items"</span>&gt;</span></div><div class="line">    Lorem ipsum dolor sit amet...</div><div class="line">  <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">q-pull-to-refresh</span>&gt;</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p><strong>IMPORTANT</strong><br>Do not wrap <code>&lt;q-pull-to-refresh&gt;</code> by a <code>&lt;div class=&quot;layout-padding&gt;&quot;</code>. If you must, place that <code>&lt;div&gt;</code> as direct child of <code>&lt;q-pull-to-refresh&gt;</code>.</p>
-</blockquote>
-<h2 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h2><table>
-<thead>
-<tr>
-<th>Vue Property</th>
-<th>Type</th>
-<th>Default Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>handler</code></td>
-<td>Function</td>
-<td></td>
-<td><strong>Required</strong> Method from VM to be called to load more content</td>
-</tr>
-<tr>
-<td><code>distance</code></td>
-<td>Number</td>
-<td>35</td>
-<td>Minimum threshold distance in pixels to determine if releasing will determine a refresh</td>
-</tr>
-<tr>
-<td><code>pull-message</code></td>
-<td>String</td>
-<td>‘Pull down to refresh’</td>
-<td>Message to display before hitting the threshold above</td>
-</tr>
-<tr>
-<td><code>release-message</code></td>
-<td>String</td>
-<td>‘Release to refresh’</td>
-<td>Message to display after hitting the threshold above and before releasing</td>
-</tr>
-<tr>
-<td><code>refresh-message</code></td>
-<td>String</td>
-<td>‘Refreshing…’</td>
-<td>Message to display when refreshing content</td>
-</tr>
-<tr>
-<td><code>refresh-icon</code></td>
-<td>String</td>
-<td>‘refresh’</td>
-<td>Icon to display when refreshing the content, besides the text above</td>
-</tr>
-<tr>
-<td><code>disable</code></td>
-<td>Boolean</td>
-<td>false</td>
-<td>When set to <code>true</code> it disables its functionality. If no value is provided (empty attribute), then it’s considered as set to <code>true</code>.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Vue-Methods"><a href="#Vue-Methods" class="headerlink" title="Vue Methods"></a>Vue Methods</h2><table>
-<thead>
-<tr>
-<th>Vue Method</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>@trigger</code></td>
-<td>Triggers a refresh, calling your handler.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Handler"><a href="#Handler" class="headerlink" title="Handler"></a>Handler</h2><p>The handler Function (specified as DOM element property) takes one parameter:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line">  methods: &#123;</div><div class="line">    refresher (done) &#123;</div><div class="line">      <span class="comment">// done - Function to call when you made all necessary updates.</span></div><div class="line">      <span class="comment">//        DO NOT forget to call it otherwise the refresh message</span></div><div class="line">      <span class="comment">//        will continue to be displayed</span></div><div class="line"></div><div class="line">      <span class="comment">// make some Ajax call then call done()</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Progress Bar (QProgress)]]></title>
       <url>http://beta.quasar-framework.org/components/progress-bar.html</url>
       <content type="html"><![CDATA[<p>A Progress bar is used to show a process is being worked on, so the user isn’t staring at a static page, even though the system is working in the background. It is a good visual indicator (i.e. good UX) for the user, when waiting for longer term operations to be accomplished.</p>
@@ -6935,6 +6897,89 @@
 <h3 id="Label-Position"><a href="#Label-Position" class="headerlink" title="Label Position"></a>Label Position</h3><p>Use the <code>left-label</code> prop, to move the label to the left of the radio.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-radio</span></span></div><div class="line">  <span class="attr">v-model</span>=<span class="string">"option"</span></div><div class="line">  <span class="attr">val</span>=<span class="string">"opt2"</span></div><div class="line">  <span class="attr">left-label</span></div><div class="line">  <span class="attr">label</span>=<span class="string">"Option 2"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
 <h3 id="Usage-Inside-of-a-List"><a href="#Usage-Inside-of-a-List" class="headerlink" title="Usage Inside of a List"></a>Usage Inside of a List</h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-list</span> <span class="attr">link</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--</span></div><div class="line">    Rendering a &lt;label&gt; tag (notice tag="label")</div><div class="line">    so the whole QItem will respond to clicks to</div><div class="line">    change Toggle state.</div><div class="line">  --&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">q-item</span> <span class="attr">tag</span>=<span class="string">"label"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-item-side</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">q-radio</span> <span class="attr">v-model</span>=<span class="string">"option"</span> <span class="attr">val</span>=<span class="string">"opt1"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">q-item-side</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-item-main</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">q-item-tile</span> <span class="attr">label</span>&gt;</span>Option 1<span class="tag">&lt;/<span class="name">q-item-tile</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">q-item-main</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">q-item</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">q-item</span> <span class="attr">tag</span>=<span class="string">"label"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-item-side</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">q-radio</span> <span class="attr">v-model</span>=<span class="string">"option"</span> <span class="attr">val</span>=<span class="string">"opt2"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">q-item-side</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-item-main</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">q-item-tile</span> <span class="attr">label</span>&gt;</span>Option 2<span class="tag">&lt;/<span class="name">q-item-tile</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">q-item-tile</span> <span class="attr">sublabel</span>&gt;</span>Allows notifications<span class="tag">&lt;/<span class="name">q-item-tile</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">q-item-main</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">q-item</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">q-item</span> <span class="attr">tag</span>=<span class="string">"label"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-item-side</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">q-radio</span> <span class="attr">v-model</span>=<span class="string">"option"</span> <span class="attr">val</span>=<span class="string">"opt3"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">q-item-side</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-item-main</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">q-item-tile</span> <span class="attr">label</span>&gt;</span>Option 3<span class="tag">&lt;/<span class="name">q-item-tile</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">q-item-tile</span> <span class="attr">sublabel</span>&gt;</span></div><div class="line">        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</div><div class="line">        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</div><div class="line">        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</div><div class="line">        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</div><div class="line">        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</div><div class="line">        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div><div class="line">      <span class="tag">&lt;/<span class="name">q-item-tile</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">q-item-main</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">q-item</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">q-list</span>&gt;</span></div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Pull Down to Refresh]]></title>
+      <url>http://beta.quasar-framework.org/components/pull-to-refresh.html</url>
+      <content type="html"><![CDATA[<p>When you want to allow the user to refresh the content or add newest content.</p>
+<input type="hidden" data-fullpage-demo="navigation/pull-to-refresh">
+
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><p>Use QPullToRefresh component as direct child of your page component, to encapsulate all its content. Refer to the source on the demo for a more detailed example.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-pull-to-refresh</span> <span class="attr">:handler</span>=<span class="string">"refresher"</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- Content, whatever you like --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-for</span>=<span class="string">"item in items"</span>&gt;</span></div><div class="line">    Lorem ipsum dolor sit amet...</div><div class="line">  <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">q-pull-to-refresh</span>&gt;</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>IMPORTANT</strong><br>Do not wrap <code>&lt;q-pull-to-refresh&gt;</code> by a <code>&lt;div class=&quot;layout-padding&gt;&quot;</code>. If you must, place that <code>&lt;div&gt;</code> as direct child of <code>&lt;q-pull-to-refresh&gt;</code>.</p>
+</blockquote>
+<h2 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h2><table>
+<thead>
+<tr>
+<th>Vue Property</th>
+<th>Type</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>handler</code></td>
+<td>Function</td>
+<td></td>
+<td><strong>Required</strong> Method from VM to be called to load more content</td>
+</tr>
+<tr>
+<td><code>distance</code></td>
+<td>Number</td>
+<td>35</td>
+<td>Minimum threshold distance in pixels to determine if releasing will determine a refresh</td>
+</tr>
+<tr>
+<td><code>pull-message</code></td>
+<td>String</td>
+<td>‘Pull down to refresh’</td>
+<td>Message to display before hitting the threshold above</td>
+</tr>
+<tr>
+<td><code>release-message</code></td>
+<td>String</td>
+<td>‘Release to refresh’</td>
+<td>Message to display after hitting the threshold above and before releasing</td>
+</tr>
+<tr>
+<td><code>refresh-message</code></td>
+<td>String</td>
+<td>‘Refreshing…’</td>
+<td>Message to display when refreshing content</td>
+</tr>
+<tr>
+<td><code>refresh-icon</code></td>
+<td>String</td>
+<td>‘refresh’</td>
+<td>Icon to display when refreshing the content, besides the text above</td>
+</tr>
+<tr>
+<td><code>disable</code></td>
+<td>Boolean</td>
+<td>false</td>
+<td>When set to <code>true</code> it disables its functionality. If no value is provided (empty attribute), then it’s considered as set to <code>true</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Vue-Methods"><a href="#Vue-Methods" class="headerlink" title="Vue Methods"></a>Vue Methods</h2><table>
+<thead>
+<tr>
+<th>Vue Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@trigger</code></td>
+<td>Triggers a refresh, calling your handler.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Handler"><a href="#Handler" class="headerlink" title="Handler"></a>Handler</h2><p>The handler Function (specified as DOM element property) takes one parameter:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line">  methods: &#123;</div><div class="line">    refresher (done) &#123;</div><div class="line">      <span class="comment">// done - Function to call when you made all necessary updates.</span></div><div class="line">      <span class="comment">//        DO NOT forget to call it otherwise the refresh message</span></div><div class="line">      <span class="comment">//        will continue to be displayed</span></div><div class="line"></div><div class="line">      <span class="comment">// make some Ajax call then call done()</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
     
@@ -7489,85 +7534,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[CSS Shadows (Elevation)]]></title>
-      <url>http://beta.quasar-framework.org/components/shadows.html</url>
-      <content type="html"><![CDATA[<p>Simple yet effective way to add shadows to create a depth/elevation effect.<br>The shadows are in accordance to Material Design speifications (24 levels of depth).</p>
-<p>Don’t forget to check the demo.</p>
-<input type="hidden" data-fullpage-demo="css-helpers/shadows">
-
-<table>
-<thead>
-<tr>
-<th>CSS Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>no-shadow</code></td>
-<td>Remove any shadow</td>
-</tr>
-<tr>
-<td><code>inset-shadow</code></td>
-<td>Set an inset shadow</td>
-</tr>
-<tr>
-<td><code>shadow-1</code></td>
-<td>Set a depth of 1</td>
-</tr>
-<tr>
-<td><code>shadow-2</code></td>
-<td>Set a depth of 2</td>
-</tr>
-<tr>
-<td><code>shadow-N</code></td>
-<td>Where <code>N</code> is an integer from 1 to 24.</td>
-</tr>
-<tr>
-<td><code>shadow-transition</code></td>
-<td>Apply a CSS transition on the shadow; best use in conjonction with <code>hoverable</code> classes</td>
-</tr>
-</tbody>
-</table>
-<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"shadow-1"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>The shadows above point towards the bottom of the element. If you want them to point towards the top of the element, add <code>up</code> before the number:</p>
-<table>
-<thead>
-<tr>
-<th>CSS Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>shadow-up-1</code></td>
-<td>Set a depth of 1</td>
-</tr>
-<tr>
-<td><code>shadow-up-2</code></td>
-<td>Set a depth of 2</td>
-</tr>
-<tr>
-<td><code>shadow-up-N</code></td>
-<td>Where <code>N</code> is an integer from 1 to 24.</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Slide Transition]]></title>
-      <url>http://beta.quasar-framework.org/components/slide-transition.html</url>
-      <content type="html"><![CDATA[<p>QSlideTransitions slides the DOM element (or component) up or down, based on its visibility: works alongside <code>v-show</code> and <code>v-if</code> on a single element, similar to Vue’s Transition component with the only difference being that it’s not a group transition too (it only applies to one DOM element or component).</p>
-<input type="hidden" data-fullpage-demo="animation/slide-transition">
-
-<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-slide-transition</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">img</span></span></div><div class="line">        <span class="attr">v-show</span>=<span class="string">"visible"</span></div><div class="line">        <span class="attr">src</span>=<span class="string">"~assets/quasar.jpg"</span></div><div class="line">      &gt;</div><div class="line">    <span class="tag">&lt;/<span class="name">q-slide-transition</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">q-btn</span> @<span class="attr">click</span>=<span class="string">"toggleVisibility"</span>&gt;</span></div><div class="line">      Toggle</div><div class="line">    <span class="tag">&lt;/<span class="name">q-btn</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  ...,</div><div class="line">  data: &#123;</div><div class="line">    ...,</div><div class="line">    visible: <span class="literal">true</span></div><div class="line">  &#125;,</div><div class="line">  methods: &#123;</div><div class="line">    ...,</div><div class="line">    toggleVisibility () &#123;</div><div class="line">      <span class="keyword">this</span>.visible = !<span class="keyword">this</span>.visible</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>You can also trigger the animation when rendering the component for first time (on appearance) too, by specifying the <code>appear</code> Boolean prop:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-slide-transition</span> <span class="attr">appear</span>&gt;</span></div><div class="line">  ...</div><div class="line"><span class="tag">&lt;/<span class="name">q-slide-transition</span>&gt;</span></div></pre></td></tr></table></figure></p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Select]]></title>
       <url>http://beta.quasar-framework.org/components/select.html</url>
       <content type="html"><![CDATA[<p>Select component has two types of selection: single selection (using Radios or Lists) or multiple selection (using Checkboxes or Toggles). This component opens up a Popover for the selection list and action. A filter can also be used for longer lists.</p>
@@ -7860,42 +7826,81 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Spinners]]></title>
-      <url>http://beta.quasar-framework.org/components/spinner.html</url>
-      <content type="html"><![CDATA[<p>A Spinner is used to show the user a timely process is currently taking place. It is an important UX feature, which gives the user the feeling the system is continuing to work for longer term activities, like grabbing data from the server or some heavy calculations.   </p>
-<input type="hidden" data-fullpage-demo="progress/spinner">
+      <title><![CDATA[CSS Shadows (Elevation)]]></title>
+      <url>http://beta.quasar-framework.org/components/shadows.html</url>
+      <content type="html"><![CDATA[<p>Simple yet effective way to add shadows to create a depth/elevation effect.<br>The shadows are in accordance to Material Design speifications (24 levels of depth).</p>
+<p>Don’t forget to check the demo.</p>
+<input type="hidden" data-fullpage-demo="css-helpers/shadows">
 
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Default platform spinner--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-spinner</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Spinner with options --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-spinner</span> <span class="attr">color</span>=<span class="string">"secondary"</span> <span class="attr">:size</span>=<span class="string">"30"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-spinner</span> <span class="attr">color</span>=<span class="string">"teal-4"</span> <span class="attr">size</span>=<span class="string">"40px"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!--</span></div><div class="line">  Alternatively, you can set CSS colo prop on</div><div class="line">  a container or directly with `style` attribute on spinner</div><div class="line">--&gt;</div><div class="line"><span class="tag">&lt;<span class="name">q-spinner</span> <span class="attr">style</span>=<span class="string">"color: #e2aa6f"</span> /&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h2><table>
+<table>
 <thead>
 <tr>
-<th>Vue Property</th>
-<th>Type</th>
+<th>CSS Class Name</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>size</code></td>
-<td>Number / String</td>
-<td>Number (defining the size in pixels) or String (CSS size with unit).</td>
+<td><code>no-shadow</code></td>
+<td>Remove any shadow</td>
 </tr>
 <tr>
-<td><code>color</code></td>
-<td>String</td>
-<td>CSS color from <a href="/components/color-palette.html">Quasar Color Palette</a>.</td>
+<td><code>inset-shadow</code></td>
+<td>Set an inset shadow</td>
+</tr>
+<tr>
+<td><code>shadow-1</code></td>
+<td>Set a depth of 1</td>
+</tr>
+<tr>
+<td><code>shadow-2</code></td>
+<td>Set a depth of 2</td>
+</tr>
+<tr>
+<td><code>shadow-N</code></td>
+<td>Where <code>N</code> is an integer from 1 to 24.</td>
+</tr>
+<tr>
+<td><code>shadow-transition</code></td>
+<td>Apply a CSS transition on the shadow; best use in conjonction with <code>hoverable</code> classes</td>
 </tr>
 </tbody>
 </table>
-<p>You can change the spinner’s size without a loss of quality, because SVGs are used.</p>
-<h2 id="Using-Specific-Spinners"><a href="#Using-Specific-Spinners" class="headerlink" title="Using Specific Spinners"></a>Using Specific Spinners</h2><p>If you’d like to use a different spinner than the default, use a specific spinner component, which inherits the <a href="#Vue-Properties">same props as specified above</a>.</p>
-<p>The following specific spinners components are available. The name of these components is <code>q-spinner-*name*</code>, where <code>name</code> is one of ‘audio’, ‘ball’, ‘bars’, ‘circles’, ‘comment’, ‘cube’, ‘dots’, ‘grid’, ‘hearts’, ‘ios’, ‘mat’, ‘oval’, ‘puff’, ‘rings’, ‘tail’, ‘facebook’, ‘gears’, ‘hourglass’, ‘infinity’, ‘pie’, ‘radio’.</p>
-<p>Example:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Specific spinner icon --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-spinner-audio</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Specific spinner icon with options --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-spinner-audio</span> <span class="attr">color</span>=<span class="string">"primary"</span> <span class="attr">:size</span>=<span class="string">"30"</span> /&gt;</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p><strong>Note</strong><br>Having to use an extra component to identify specific spinners might seem like extra work, however, the goal is to be able to remove all other spinner components in your final build, in order to keep the overall package size of your application down to a minimum.  </p>
-</blockquote>
-<p>The spinners are used in components such as the <a href="/components/inner-loading.html">QInnerLoading</a> and <a href="/components/button.html">QBtn</a> components or within the <a href="/components/loading.html">Loading</a> feature, just to name a few examples.</p>
+<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"shadow-1"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>The shadows above point towards the bottom of the element. If you want them to point towards the top of the element, add <code>up</code> before the number:</p>
+<table>
+<thead>
+<tr>
+<th>CSS Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>shadow-up-1</code></td>
+<td>Set a depth of 1</td>
+</tr>
+<tr>
+<td><code>shadow-up-2</code></td>
+<td>Set a depth of 2</td>
+</tr>
+<tr>
+<td><code>shadow-up-N</code></td>
+<td>Where <code>N</code> is an integer from 1 to 24.</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Slide Transition]]></title>
+      <url>http://beta.quasar-framework.org/components/slide-transition.html</url>
+      <content type="html"><![CDATA[<p>QSlideTransitions slides the DOM element (or component) up or down, based on its visibility: works alongside <code>v-show</code> and <code>v-if</code> on a single element, similar to Vue’s Transition component with the only difference being that it’s not a group transition too (it only applies to one DOM element or component).</p>
+<input type="hidden" data-fullpage-demo="animation/slide-transition">
+
+<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-slide-transition</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">img</span></span></div><div class="line">        <span class="attr">v-show</span>=<span class="string">"visible"</span></div><div class="line">        <span class="attr">src</span>=<span class="string">"~assets/quasar.jpg"</span></div><div class="line">      &gt;</div><div class="line">    <span class="tag">&lt;/<span class="name">q-slide-transition</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">q-btn</span> @<span class="attr">click</span>=<span class="string">"toggleVisibility"</span>&gt;</span></div><div class="line">      Toggle</div><div class="line">    <span class="tag">&lt;/<span class="name">q-btn</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  ...,</div><div class="line">  data: &#123;</div><div class="line">    ...,</div><div class="line">    visible: <span class="literal">true</span></div><div class="line">  &#125;,</div><div class="line">  methods: &#123;</div><div class="line">    ...,</div><div class="line">    toggleVisibility () &#123;</div><div class="line">      <span class="keyword">this</span>.visible = !<span class="keyword">this</span>.visible</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>You can also trigger the animation when rendering the component for first time (on appearance) too, by specifying the <code>appear</code> Boolean prop:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-slide-transition</span> <span class="attr">appear</span>&gt;</span></div><div class="line">  ...</div><div class="line"><span class="tag">&lt;/<span class="name">q-slide-transition</span>&gt;</span></div></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
     
@@ -8009,30 +8014,42 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Stylus Variables]]></title>
-      <url>http://beta.quasar-framework.org/components/stylus-variables.html</url>
-      <content type="html"><![CDATA[<p>Quasar CSS is a blank slate that you can easily customize and modify to fit your brand, while still following the standards of each platform. The best apps in the app stores are fully customized and Quasar makes it easy to do the same with your App.</p>
-<p>Quasar is built on top of Stylus, which allows it to set some default styles for your App but makes it extremely easy for you to change the defaults in your App code.</p>
-<p>Customizing a theme means overriding Stylus variables which can hold colors, sizes, border types and so on. To understand how and where to make use of the full list of variables below, read <a href="/guide/quasar-theming.html">Guide &gt; Theming</a>.</p>
-<h2 id="Variables-List"><a href="#Variables-List" class="headerlink" title="Variables List"></a>Variables List</h2><!-- DO NOT WRITE ANYTHING BELOW THIS LINE -->
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Swipe Touch/Mouse Action]]></title>
-      <url>http://beta.quasar-framework.org/components/swiping.html</url>
-      <content type="html"><![CDATA[<p>Quasar offers full-featured Vue directives that can totally replace libraries like Hammerjs: <code>v-touch-pan</code>, <code>v-touch-swipe</code> and <code>v-touch-hold</code>.</p>
+      <title><![CDATA[Spinners]]></title>
+      <url>http://beta.quasar-framework.org/components/spinner.html</url>
+      <content type="html"><![CDATA[<p>A Spinner is used to show the user a timely process is currently taking place. It is an important UX feature, which gives the user the feeling the system is continuing to work for longer term activities, like grabbing data from the server or some heavy calculations.   </p>
+<input type="hidden" data-fullpage-demo="progress/spinner">
+
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Default platform spinner--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-spinner</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Spinner with options --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-spinner</span> <span class="attr">color</span>=<span class="string">"secondary"</span> <span class="attr">:size</span>=<span class="string">"30"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-spinner</span> <span class="attr">color</span>=<span class="string">"teal-4"</span> <span class="attr">size</span>=<span class="string">"40px"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!--</span></div><div class="line">  Alternatively, you can set CSS colo prop on</div><div class="line">  a container or directly with `style` attribute on spinner</div><div class="line">--&gt;</div><div class="line"><span class="tag">&lt;<span class="name">q-spinner</span> <span class="attr">style</span>=<span class="string">"color: #e2aa6f"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h2><table>
+<thead>
+<tr>
+<th>Vue Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>size</code></td>
+<td>Number / String</td>
+<td>Number (defining the size in pixels) or String (CSS size with unit).</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>String</td>
+<td>CSS color from <a href="/components/color-palette.html">Quasar Color Palette</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>You can change the spinner’s size without a loss of quality, because SVGs are used.</p>
+<h2 id="Using-Specific-Spinners"><a href="#Using-Specific-Spinners" class="headerlink" title="Using Specific Spinners"></a>Using Specific Spinners</h2><p>If you’d like to use a different spinner than the default, use a specific spinner component, which inherits the <a href="#Vue-Properties">same props as specified above</a>.</p>
+<p>The following specific spinners components are available. The name of these components is <code>q-spinner-*name*</code>, where <code>name</code> is one of ‘audio’, ‘ball’, ‘bars’, ‘circles’, ‘comment’, ‘cube’, ‘dots’, ‘grid’, ‘hearts’, ‘ios’, ‘mat’, ‘oval’, ‘puff’, ‘rings’, ‘tail’, ‘facebook’, ‘gears’, ‘hourglass’, ‘infinity’, ‘pie’, ‘radio’.</p>
+<p>Example:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Specific spinner icon --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-spinner-audio</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Specific spinner icon with options --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-spinner-audio</span> <span class="attr">color</span>=<span class="string">"primary"</span> <span class="attr">:size</span>=<span class="string">"30"</span> /&gt;</span></div></pre></td></tr></table></figure>
 <blockquote>
-<p><strong>These directives also work with mouse events, not only touch events</strong>, so you are able to build cool functionality for your App on desktops too.</p>
+<p><strong>Note</strong><br>Having to use an extra component to identify specific spinners might seem like extra work, however, the goal is to be able to remove all other spinner components in your final build, in order to keep the overall package size of your application down to a minimum.  </p>
 </blockquote>
-<p>We will be describing <code>v-touch-swipe</code> on the lines below.</p>
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch-swipe</span>=<span class="string">"handler"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">// "handler" is a Function which receives an Object as parameter</div></pre></td></tr></table></figure>
-<h2 id="Handler-Parameter"><a href="#Handler-Parameter" class="headerlink" title="Handler Parameter"></a>Handler Parameter</h2><p>The <code>handler</code> function/method is called by the directive when a <code>swipe</code> touch action took place on the DOM element and it receives the following parameter:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line">  evt, <span class="comment">// JS Native Event</span></div><div class="line">  direction, <span class="comment">// "left", "right", "up" or "down"</span></div><div class="line">  duration, <span class="comment">// Number in ms</span></div><div class="line">  distance <span class="comment">// &#123;x, y&#125; Distance in pixels covered by swipe on horizontal and vertical</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// example:</span></div><div class="line">handler (obj) &#123;</div><div class="line">  <span class="built_in">console</span>.log(obj.direction) <span class="comment">// "right"</span></div><div class="line">  <span class="built_in">console</span>.log(obj.duration) <span class="comment">// 78</span></div><div class="line">  <span class="built_in">console</span>.log(obj.distance.x) <span class="comment">// 273</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="Modifiers"><a href="#Modifiers" class="headerlink" title="Modifiers"></a>Modifiers</h2><p>Use <code>horizontal</code> or <code>vertical</code> when you only want to capture horizontal or vertical swipes.<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch-swipe.horizontal</span>=<span class="string">"userHasSwiped"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<blockquote>
-<p><strong>NOTE</strong><br>The directive allows vertical scroll when capturing only horizontal swipes.</p>
-</blockquote>
-<p>When you don’t want to capture mouse actions too, use the <code>nomouse</code> modifier:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!--</span></div><div class="line">  directive won't be triggered by mouse actions;</div><div class="line">  it's exclusively triggered by touch actions now:</div><div class="line">--&gt;</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch-swipe.nomouse</span>=<span class="string">"userHasSwiped"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>The spinners are used in components such as the <a href="/components/inner-loading.html">QInnerLoading</a> and <a href="/components/button.html">QBtn</a> components or within the <a href="/components/loading.html">Loading</a> feature, just to name a few examples.</p>
 ]]></content>
     </entry>
     
@@ -8219,74 +8236,30 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Toast]]></title>
-      <url>http://beta.quasar-framework.org/components/toast.html</url>
-      <content type="html"><![CDATA[<p>Quasar Toasts appear on top of the screen above any other components to signal the user with a message and sometimes with an action too. They can be dismissed by clicking on the right side button or waiting for them to timeout. Toasts are displayed one at a time, but you can build up a queue of them.</p>
-<p>Check the sibling <a href="/components/alert.html">Alert</a> too.</p>
-<input type="hidden" data-fullpage-demo="popups/toast">
-
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><p>A Quasar App Toast is a message displayed to the user. Below is an example of a simple Toast containing only a message:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Toast &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Toast.create(<span class="built_in">String</span> or <span class="built_in">Object</span>)</div></pre></td></tr></table></figure></p>
-<p>When creating a Toast with a String, that String is the actual message going to be displayed. For more complex cases (like also displaying an icon or an image, or controlling the Toast’s color), use an Object instead of String and read below on <a href="#Toast-Options">Toast Options</a>.</p>
-<h2 id="Toast-Options"><a href="#Toast-Options" class="headerlink" title="Toast Options"></a>Toast Options</h2><p>We saw how to display a Toast, but let’s go deeper and analize the required parameter at instantiation, which can be a String or an Object.</p>
-<p>When a String, it simply displays that String as the content of your Toast.<br>When an Object, you can specify more options:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Toast &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Toast.create(&#123;</div><div class="line">  html: <span class="string">'Message to display'</span>,</div><div class="line">  icon: <span class="string">'alarm_add'</span>,</div><div class="line">  timeout: <span class="number">2500</span>,</div><div class="line">  color: <span class="string">'#f8c1c1'</span>,</div><div class="line">  bgColor: <span class="string">'white'</span>,</div><div class="line">  button: &#123;</div><div class="line">    label: <span class="string">'Undo'</span>,</div><div class="line">    handler () &#123;</div><div class="line">      <span class="comment">// Specify what to do when button is clicked/tapped</span></div><div class="line">    &#125;,</div><div class="line">    color: <span class="string">'#000'</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>html</code></td>
-<td>String</td>
-<td>(<strong>Required</strong>) HTML to display.</td>
-</tr>
-<tr>
-<td><code>icon</code></td>
-<td>String</td>
-<td>Icon to use. See <a href="/api/css-icons.html">Icons</a>.</td>
-</tr>
-<tr>
-<td><code>image</code></td>
-<td>String</td>
-<td>Image to include.</td>
-</tr>
-<tr>
-<td><code>timeout</code></td>
-<td>2500</td>
-<td>Timeout in milliseconds until being automatically dissmissed.</td>
-</tr>
-<tr>
-<td><code>button</code></td>
-<td>Object</td>
-<td>Place a button with an action, like “Undo”. Specify <code>label</code> (String) and <code>handler</code> (Function). Optionally, specify <code>color</code> with a CSS color.</td>
-</tr>
-<tr>
-<td><code>color</code></td>
-<td>String</td>
-<td>CSS color of Toast text</td>
-</tr>
-<tr>
-<td><code>bgColor</code></td>
-<td>String</td>
-<td>CSS color of Toast background</td>
-</tr>
-<tr>
-<td><code>onDismiss</code></td>
-<td>Function</td>
-<td>Function to execute when Toast gets dismissed.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Types-of-Toasts"><a href="#Types-of-Toasts" class="headerlink" title="Types of Toasts"></a>Types of Toasts</h2><p>Quasar offers the possibility to create out of the box Toasts for different types of success or failure messages. The Toast types have specific icons and colors.</p>
-<p>The types of Toasts we are talking about are: <code>positive</code> (for success), <code>negative</code> (for errors), <code>warning</code> and <code>info</code>. Here’s how to create them:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Toast &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Toast.create.positive(&#123;...&#125;)</div><div class="line">Toast.create.negative(&#123;...&#125;)</div><div class="line">Toast.create.warning(&#123;...&#125;)</div><div class="line">Toast.create.info(&#123;...&#125;)</div></pre></td></tr></table></figure>
-<h2 id="Setting-Up-Defaults"><a href="#Setting-Up-Defaults" class="headerlink" title="Setting Up Defaults"></a>Setting Up Defaults</h2><p>If you like to change the default Toast’s settings, like color of text, color of background or timeout, you can easily do so:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Toast &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="comment">// Call this only AFTER Vue.use(Quasar):</span></div><div class="line">Toast.setDefaults(&#123;</div><div class="line">  <span class="comment">// props from above</span></div><div class="line">  color: <span class="string">'#eee'</span>,</div><div class="line">  timeout: <span class="number">10000</span>,</div><div class="line">  ...</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>Now all of the default Toasts will inherit these properties.</p>
+      <title><![CDATA[Stylus Variables]]></title>
+      <url>http://beta.quasar-framework.org/components/stylus-variables.html</url>
+      <content type="html"><![CDATA[<p>Quasar CSS is a blank slate that you can easily customize and modify to fit your brand, while still following the standards of each platform. The best apps in the app stores are fully customized and Quasar makes it easy to do the same with your App.</p>
+<p>Quasar is built on top of Stylus, which allows it to set some default styles for your App but makes it extremely easy for you to change the defaults in your App code.</p>
+<p>Customizing a theme means overriding Stylus variables which can hold colors, sizes, border types and so on. To understand how and where to make use of the full list of variables below, read <a href="/guide/quasar-theming.html">Guide &gt; Theming</a>.</p>
+<h2 id="Variables-List"><a href="#Variables-List" class="headerlink" title="Variables List"></a>Variables List</h2><!-- DO NOT WRITE ANYTHING BELOW THIS LINE -->
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Swipe Touch/Mouse Action]]></title>
+      <url>http://beta.quasar-framework.org/components/swiping.html</url>
+      <content type="html"><![CDATA[<p>Quasar offers full-featured Vue directives that can totally replace libraries like Hammerjs: <code>v-touch-pan</code>, <code>v-touch-swipe</code> and <code>v-touch-hold</code>.</p>
+<blockquote>
+<p><strong>These directives also work with mouse events, not only touch events</strong>, so you are able to build cool functionality for your App on desktops too.</p>
+</blockquote>
+<p>We will be describing <code>v-touch-swipe</code> on the lines below.</p>
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch-swipe</span>=<span class="string">"handler"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">// "handler" is a Function which receives an Object as parameter</div></pre></td></tr></table></figure>
+<h2 id="Handler-Parameter"><a href="#Handler-Parameter" class="headerlink" title="Handler Parameter"></a>Handler Parameter</h2><p>The <code>handler</code> function/method is called by the directive when a <code>swipe</code> touch action took place on the DOM element and it receives the following parameter:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line">  evt, <span class="comment">// JS Native Event</span></div><div class="line">  direction, <span class="comment">// "left", "right", "up" or "down"</span></div><div class="line">  duration, <span class="comment">// Number in ms</span></div><div class="line">  distance <span class="comment">// &#123;x, y&#125; Distance in pixels covered by swipe on horizontal and vertical</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// example:</span></div><div class="line">handler (obj) &#123;</div><div class="line">  <span class="built_in">console</span>.log(obj.direction) <span class="comment">// "right"</span></div><div class="line">  <span class="built_in">console</span>.log(obj.duration) <span class="comment">// 78</span></div><div class="line">  <span class="built_in">console</span>.log(obj.distance.x) <span class="comment">// 273</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="Modifiers"><a href="#Modifiers" class="headerlink" title="Modifiers"></a>Modifiers</h2><p>Use <code>horizontal</code> or <code>vertical</code> when you only want to capture horizontal or vertical swipes.<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch-swipe.horizontal</span>=<span class="string">"userHasSwiped"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<blockquote>
+<p><strong>NOTE</strong><br>The directive allows vertical scroll when capturing only horizontal swipes.</p>
+</blockquote>
+<p>When you don’t want to capture mouse actions too, use the <code>nomouse</code> modifier:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!--</span></div><div class="line">  directive won't be triggered by mouse actions;</div><div class="line">  it's exclusively triggered by touch actions now:</div><div class="line">--&gt;</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch-swipe.nomouse</span>=<span class="string">"userHasSwiped"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
     
@@ -8552,6 +8525,78 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Toast]]></title>
+      <url>http://beta.quasar-framework.org/components/toast.html</url>
+      <content type="html"><![CDATA[<p>Quasar Toasts appear on top of the screen above any other components to signal the user with a message and sometimes with an action too. They can be dismissed by clicking on the right side button or waiting for them to timeout. Toasts are displayed one at a time, but you can build up a queue of them.</p>
+<p>Check the sibling <a href="/components/alert.html">Alert</a> too.</p>
+<input type="hidden" data-fullpage-demo="popups/toast">
+
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><p>A Quasar App Toast is a message displayed to the user. Below is an example of a simple Toast containing only a message:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Toast &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Toast.create(<span class="built_in">String</span> or <span class="built_in">Object</span>)</div></pre></td></tr></table></figure></p>
+<p>When creating a Toast with a String, that String is the actual message going to be displayed. For more complex cases (like also displaying an icon or an image, or controlling the Toast’s color), use an Object instead of String and read below on <a href="#Toast-Options">Toast Options</a>.</p>
+<h2 id="Toast-Options"><a href="#Toast-Options" class="headerlink" title="Toast Options"></a>Toast Options</h2><p>We saw how to display a Toast, but let’s go deeper and analize the required parameter at instantiation, which can be a String or an Object.</p>
+<p>When a String, it simply displays that String as the content of your Toast.<br>When an Object, you can specify more options:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Toast &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Toast.create(&#123;</div><div class="line">  html: <span class="string">'Message to display'</span>,</div><div class="line">  icon: <span class="string">'alarm_add'</span>,</div><div class="line">  timeout: <span class="number">2500</span>,</div><div class="line">  color: <span class="string">'#f8c1c1'</span>,</div><div class="line">  bgColor: <span class="string">'white'</span>,</div><div class="line">  button: &#123;</div><div class="line">    label: <span class="string">'Undo'</span>,</div><div class="line">    handler () &#123;</div><div class="line">      <span class="comment">// Specify what to do when button is clicked/tapped</span></div><div class="line">    &#125;,</div><div class="line">    color: <span class="string">'#000'</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>html</code></td>
+<td>String</td>
+<td>(<strong>Required</strong>) HTML to display.</td>
+</tr>
+<tr>
+<td><code>icon</code></td>
+<td>String</td>
+<td>Icon to use. See <a href="/api/css-icons.html">Icons</a>.</td>
+</tr>
+<tr>
+<td><code>image</code></td>
+<td>String</td>
+<td>Image to include.</td>
+</tr>
+<tr>
+<td><code>timeout</code></td>
+<td>2500</td>
+<td>Timeout in milliseconds until being automatically dissmissed.</td>
+</tr>
+<tr>
+<td><code>button</code></td>
+<td>Object</td>
+<td>Place a button with an action, like “Undo”. Specify <code>label</code> (String) and <code>handler</code> (Function). Optionally, specify <code>color</code> with a CSS color.</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>String</td>
+<td>CSS color of Toast text</td>
+</tr>
+<tr>
+<td><code>bgColor</code></td>
+<td>String</td>
+<td>CSS color of Toast background</td>
+</tr>
+<tr>
+<td><code>onDismiss</code></td>
+<td>Function</td>
+<td>Function to execute when Toast gets dismissed.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Types-of-Toasts"><a href="#Types-of-Toasts" class="headerlink" title="Types of Toasts"></a>Types of Toasts</h2><p>Quasar offers the possibility to create out of the box Toasts for different types of success or failure messages. The Toast types have specific icons and colors.</p>
+<p>The types of Toasts we are talking about are: <code>positive</code> (for success), <code>negative</code> (for errors), <code>warning</code> and <code>info</code>. Here’s how to create them:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Toast &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Toast.create.positive(&#123;...&#125;)</div><div class="line">Toast.create.negative(&#123;...&#125;)</div><div class="line">Toast.create.warning(&#123;...&#125;)</div><div class="line">Toast.create.info(&#123;...&#125;)</div></pre></td></tr></table></figure>
+<h2 id="Setting-Up-Defaults"><a href="#Setting-Up-Defaults" class="headerlink" title="Setting Up Defaults"></a>Setting Up Defaults</h2><p>If you like to change the default Toast’s settings, like color of text, color of background or timeout, you can easily do so:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Toast &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="comment">// Call this only AFTER Vue.use(Quasar):</span></div><div class="line">Toast.setDefaults(&#123;</div><div class="line">  <span class="comment">// props from above</span></div><div class="line">  color: <span class="string">'#eee'</span>,</div><div class="line">  timeout: <span class="number">10000</span>,</div><div class="line">  ...</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>Now all of the default Toasts will inherit these properties.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Toggle]]></title>
       <url>http://beta.quasar-framework.org/components/toggle.html</url>
       <content type="html"><![CDATA[<p>The Quasar Toggle component is another basic element for user input. You can use this for turning settings, features or true/ false inputs on and off.</p>
@@ -8689,20 +8734,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Swipe Touch/Mouse Action]]></title>
-      <url>http://beta.quasar-framework.org/components/touch-hold.html</url>
-      <content type="html"><![CDATA[<p>Quasar offers full-featured Vue directives that can totally replace libraries like Hammerjs: <code>v-touch-pan</code>, <code>v-touch-swipe</code> and <code>v-touch-hold</code>.</p>
-<blockquote>
-<p><strong>These directives also work with mouse events, not only touch events</strong>, so you are able to build cool functionality for your App on desktops too.</p>
-</blockquote>
-<p>We will be describing <code>v-touch-hold</code> on the lines below.</p>
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch-hold</span>=<span class="string">"handler"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">// "handler" is a Function which receives an Object as parameter</div></pre></td></tr></table></figure>
-<h2 id="Handler-Parameter"><a href="#Handler-Parameter" class="headerlink" title="Handler Parameter"></a>Handler Parameter</h2><p>The <code>handler</code> function/method is called by the directive when user taps/clicks and holds on the DOM element and it receives the following parameter:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line">  evt, <span class="comment">// JS Native Event</span></div><div class="line">  position: <span class="comment">// &#123;x, y&#125; offset on screen</span></div><div class="line">  duration <span class="comment">// Number in ms</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// example:</span></div><div class="line">handler (obj) &#123;</div><div class="line">  <span class="built_in">console</span>.log(obj.psoition) <span class="comment">// &#123;x: 22, y: 451&#125;</span></div><div class="line">  <span class="built_in">console</span>.log(obj.duration) <span class="comment">// 78</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="Modifiers"><a href="#Modifiers" class="headerlink" title="Modifiers"></a>Modifiers</h2><p>When you don’t want to capture mouse actions too, use the <code>nomouse</code> modifier:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!--</span></div><div class="line">  directive won't be triggered by mouse actions;</div><div class="line">  it's exclusively triggered by touch actions now:</div><div class="line">--&gt;</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch-hold.nomouse</span>=<span class="string">"userHasSwiped"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Tooltip]]></title>
       <url>http://beta.quasar-framework.org/components/tooltip.html</url>
       <content type="html"><![CDATA[<p>QTooltip should be used when you want to offer the user more information about a certain area in your App. When hovering the mouse over the target element (or quickly tapping on mobile platforms), the Tooltip will appear.</p>
@@ -8781,37 +8812,16 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Tree]]></title>
-      <url>http://beta.quasar-framework.org/components/tree.html</url>
-      <content type="html"><![CDATA[<p>Quasar Tree represents a highly configurable component that displays hierarchical data, such as a table of contents in a tree structure.</p>
-<p>Trees are stripped out of any design by default so you can<br>easily stylize and turn them into anything you want.</p>
-<input type="hidden" data-fullpage-demo="other-components/tree">
-
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-tree</span></span></div><div class="line">  <span class="attr">:model</span>=<span class="string">"treeModel"</span></div><div class="line">  <span class="attr">contract-html</span>=<span class="string">"&lt;i&gt;remove_circle&lt;/i&gt;"</span></div><div class="line">  <span class="attr">expand-html</span>=<span class="string">"&lt;i&gt;add_circle&lt;/i&gt;"</span></div><div class="line">&gt;<span class="tag">&lt;/<span class="name">q-tree</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="Tree-model-structure"><a href="#Tree-model-structure" class="headerlink" title="Tree model structure"></a>Tree model structure</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">treeModel: [</div><div class="line">  &#123;</div><div class="line">    title: <span class="string">'Item 1'</span>,</div><div class="line">    expanded: <span class="literal">true</span>,</div><div class="line">    children: [</div><div class="line">      &#123;</div><div class="line">        title: <span class="string">'Item 1.1'</span>,</div><div class="line">        expanded: <span class="literal">false</span>,</div><div class="line">        children: [</div><div class="line">          &#123;</div><div class="line">            title: <span class="string">'Item 1.1.1'</span>,</div><div class="line">            expanded: <span class="literal">false</span>,</div><div class="line">            children: [</div><div class="line">              &#123;</div><div class="line">                title: <span class="string">'Item 1.1.1.1'</span>,</div><div class="line">                expanded: <span class="literal">false</span>,</div><div class="line">                children: []</div><div class="line">              &#125;</div><div class="line">            ]</div><div class="line">          &#125;,</div><div class="line">          &#123;</div><div class="line">            title: <span class="string">'Item 1.1.2'</span>,</div><div class="line">            expanded: <span class="literal">false</span>,</div><div class="line">            handler () &#123; <span class="built_in">console</span>.log(<span class="string">'Tapped on Item 1.1.2'</span>) &#125;,</div><div class="line">            children: []</div><div class="line">          &#125;</div><div class="line">        ]</div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        title: <span class="string">'Item 1.2'</span>,</div><div class="line">        expanded: <span class="literal">false</span>,</div><div class="line">        children: []</div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    title: <span class="string">'Item 2'</span>,</div><div class="line">    expanded: <span class="literal">false</span>,</div><div class="line">    children: []</div><div class="line">  &#125;</div><div class="line">]</div></pre></td></tr></table></figure>
-<p>Items containing a <code>handler</code> method will make those items trigger the handler method when clicked/tapped.</p>
-<h3 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h3><table>
-<thead>
-<tr>
-<th>Vue Property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>model</code></td>
-<td>Vue model for the Tree</td>
-</tr>
-<tr>
-<td><code>contract-html</code></td>
-<td>HTML to display at the end of each item; when user clicks on it its branch contracts</td>
-</tr>
-<tr>
-<td><code>expand-html</code></td>
-<td>HTML to display at the end of each item; when user clicks on it its branch expands</td>
-</tr>
-</tbody>
-</table>
+      <title><![CDATA[Swipe Touch/Mouse Action]]></title>
+      <url>http://beta.quasar-framework.org/components/touch-hold.html</url>
+      <content type="html"><![CDATA[<p>Quasar offers full-featured Vue directives that can totally replace libraries like Hammerjs: <code>v-touch-pan</code>, <code>v-touch-swipe</code> and <code>v-touch-hold</code>.</p>
+<blockquote>
+<p><strong>These directives also work with mouse events, not only touch events</strong>, so you are able to build cool functionality for your App on desktops too.</p>
+</blockquote>
+<p>We will be describing <code>v-touch-hold</code> on the lines below.</p>
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch-hold</span>=<span class="string">"handler"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">// "handler" is a Function which receives an Object as parameter</div></pre></td></tr></table></figure>
+<h2 id="Handler-Parameter"><a href="#Handler-Parameter" class="headerlink" title="Handler Parameter"></a>Handler Parameter</h2><p>The <code>handler</code> function/method is called by the directive when user taps/clicks and holds on the DOM element and it receives the following parameter:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line">  evt, <span class="comment">// JS Native Event</span></div><div class="line">  position: <span class="comment">// &#123;x, y&#125; offset on screen</span></div><div class="line">  duration <span class="comment">// Number in ms</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// example:</span></div><div class="line">handler (obj) &#123;</div><div class="line">  <span class="built_in">console</span>.log(obj.psoition) <span class="comment">// &#123;x: 22, y: 451&#125;</span></div><div class="line">  <span class="built_in">console</span>.log(obj.duration) <span class="comment">// 78</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="Modifiers"><a href="#Modifiers" class="headerlink" title="Modifiers"></a>Modifiers</h2><p>When you don’t want to capture mouse actions too, use the <code>nomouse</code> modifier:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!--</span></div><div class="line">  directive won't be triggered by mouse actions;</div><div class="line">  it's exclusively triggered by touch actions now:</div><div class="line">--&gt;</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch-hold.nomouse</span>=<span class="string">"userHasSwiped"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
     
@@ -8944,6 +8954,41 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Tree]]></title>
+      <url>http://beta.quasar-framework.org/components/tree.html</url>
+      <content type="html"><![CDATA[<p>Quasar Tree represents a highly configurable component that displays hierarchical data, such as a table of contents in a tree structure.</p>
+<p>Trees are stripped out of any design by default so you can<br>easily stylize and turn them into anything you want.</p>
+<input type="hidden" data-fullpage-demo="other-components/tree">
+
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-tree</span></span></div><div class="line">  <span class="attr">:model</span>=<span class="string">"treeModel"</span></div><div class="line">  <span class="attr">contract-html</span>=<span class="string">"&lt;i&gt;remove_circle&lt;/i&gt;"</span></div><div class="line">  <span class="attr">expand-html</span>=<span class="string">"&lt;i&gt;add_circle&lt;/i&gt;"</span></div><div class="line">&gt;<span class="tag">&lt;/<span class="name">q-tree</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="Tree-model-structure"><a href="#Tree-model-structure" class="headerlink" title="Tree model structure"></a>Tree model structure</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">treeModel: [</div><div class="line">  &#123;</div><div class="line">    title: <span class="string">'Item 1'</span>,</div><div class="line">    expanded: <span class="literal">true</span>,</div><div class="line">    children: [</div><div class="line">      &#123;</div><div class="line">        title: <span class="string">'Item 1.1'</span>,</div><div class="line">        expanded: <span class="literal">false</span>,</div><div class="line">        children: [</div><div class="line">          &#123;</div><div class="line">            title: <span class="string">'Item 1.1.1'</span>,</div><div class="line">            expanded: <span class="literal">false</span>,</div><div class="line">            children: [</div><div class="line">              &#123;</div><div class="line">                title: <span class="string">'Item 1.1.1.1'</span>,</div><div class="line">                expanded: <span class="literal">false</span>,</div><div class="line">                children: []</div><div class="line">              &#125;</div><div class="line">            ]</div><div class="line">          &#125;,</div><div class="line">          &#123;</div><div class="line">            title: <span class="string">'Item 1.1.2'</span>,</div><div class="line">            expanded: <span class="literal">false</span>,</div><div class="line">            handler () &#123; <span class="built_in">console</span>.log(<span class="string">'Tapped on Item 1.1.2'</span>) &#125;,</div><div class="line">            children: []</div><div class="line">          &#125;</div><div class="line">        ]</div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        title: <span class="string">'Item 1.2'</span>,</div><div class="line">        expanded: <span class="literal">false</span>,</div><div class="line">        children: []</div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    title: <span class="string">'Item 2'</span>,</div><div class="line">    expanded: <span class="literal">false</span>,</div><div class="line">    children: []</div><div class="line">  &#125;</div><div class="line">]</div></pre></td></tr></table></figure>
+<p>Items containing a <code>handler</code> method will make those items trigger the handler method when clicked/tapped.</p>
+<h3 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h3><table>
+<thead>
+<tr>
+<th>Vue Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>model</code></td>
+<td>Vue model for the Tree</td>
+</tr>
+<tr>
+<td><code>contract-html</code></td>
+<td>HTML to display at the end of each item; when user clicks on it its branch contracts</td>
+</tr>
+<tr>
+<td><code>expand-html</code></td>
+<td>HTML to display at the end of each item; when user clicks on it its branch expands</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Typography]]></title>
       <url>http://beta.quasar-framework.org/components/typography.html</url>
       <content type="html"><![CDATA[<p>See how headings, blockquotes, definitions lists and more are displayed in the demo. At the end of this page you can read about CSS helper classes.</p>
@@ -9043,17 +9088,6 @@
 </tr>
 </tbody>
 </table>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Video Embedding]]></title>
-      <url>http://beta.quasar-framework.org/components/video-embedding.html</url>
-      <content type="html"><![CDATA[<p>Embedding a video like Youtube is easy. It also resizes to fit the container by default.</p>
-<input type="hidden" data-fullpage-demo="media/video">
-
-<h2 id="Using-QVideo"><a href="#Using-QVideo" class="headerlink" title="Using QVideo"></a>Using QVideo</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-video</span></span></div><div class="line">  <span class="attr">src</span>=<span class="string">"https://www.youtube.com/embed/k3_tw44QsZQ?rel=0"</span></div><div class="line">  <span class="attr">style</span>=<span class="string">"width: 853px; height: 480px"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
-<p>Or, if you prefer the “raw” version for more control:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"q-video"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">iframe</span></span></div><div class="line">    <span class="attr">width</span>=<span class="string">"853"</span></div><div class="line">    <span class="attr">height</span>=<span class="string">"480"</span></div><div class="line">    <span class="attr">src</span>=<span class="string">"https://www.youtube.com/embed/k3_tw44QsZQ?rel=0"</span></div><div class="line">    <span class="attr">frameborder</span>=<span class="string">"0"</span></div><div class="line">    <span class="attr">allowfullscreen</span></div><div class="line">  &gt;<span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
     
@@ -9267,6 +9301,17 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Video Embedding]]></title>
+      <url>http://beta.quasar-framework.org/components/video-embedding.html</url>
+      <content type="html"><![CDATA[<p>Embedding a video like Youtube is easy. It also resizes to fit the container by default.</p>
+<input type="hidden" data-fullpage-demo="media/video">
+
+<h2 id="Using-QVideo"><a href="#Using-QVideo" class="headerlink" title="Using QVideo"></a>Using QVideo</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-video</span></span></div><div class="line">  <span class="attr">src</span>=<span class="string">"https://www.youtube.com/embed/k3_tw44QsZQ?rel=0"</span></div><div class="line">  <span class="attr">style</span>=<span class="string">"width: 853px; height: 480px"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
+<p>Or, if you prefer the “raw” version for more control:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"q-video"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">iframe</span></span></div><div class="line">    <span class="attr">width</span>=<span class="string">"853"</span></div><div class="line">    <span class="attr">height</span>=<span class="string">"480"</span></div><div class="line">    <span class="attr">src</span>=<span class="string">"https://www.youtube.com/embed/k3_tw44QsZQ?rel=0"</span></div><div class="line">    <span class="attr">frameborder</span>=<span class="string">"0"</span></div><div class="line">    <span class="attr">allowfullscreen</span></div><div class="line">  &gt;<span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[CSS Visibility]]></title>
       <url>http://beta.quasar-framework.org/components/visibility.html</url>
       <content type="html"><![CDATA[<p>There are some CSS classes that you can use out of the box for common functionality.</p>
@@ -9396,44 +9441,6 @@
 <blockquote>
 <p><strong>NOTE</strong><br>You can combine the visibility classes with the <code>inline</code> class for inline-blocks.<br>Example : <code>&lt;span class=&quot;gt-sm inline&quot;&gt;&amp;nbsp;and here is the end of this long sentence.&lt;/span&gt;</code></p>
 </blockquote>
-<h3 id="Animating"><a href="#Animating" class="headerlink" title="Animating"></a>Animating</h3><table>
-<thead>
-<tr>
-<th>Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>animate-spin</code></td>
-<td>Apply a continuous spin/rotation to the DOM element</td>
-</tr>
-<tr>
-<td><code>animate-spin-reverse</code></td>
-<td>Apply a continuous spin/rotation (opposite direction to <code>animate-spin</code>) to the DOM element</td>
-</tr>
-<tr>
-<td><code>animate-blink</code></td>
-<td>Apply a blinking effect to the DOM element</td>
-</tr>
-<tr>
-<td><code>animate-pop</code></td>
-<td>Apply a pop-in effect to the DOM element</td>
-</tr>
-<tr>
-<td><code>animate-scale</code></td>
-<td>Apply a scale-in effect to the DOM element</td>
-</tr>
-<tr>
-<td><code>animate-fade</code></td>
-<td>Apply a fade-in effect to the DOM element</td>
-</tr>
-<tr>
-<td><code>animate-bounce</code></td>
-<td>Apply a continuous bouncing effect to the DOM element</td>
-</tr>
-</tbody>
-</table>
 <h3 id="Platform-Related"><a href="#Platform-Related" class="headerlink" title="Platform Related"></a>Platform Related</h3><p>Visible only on:</p>
 <table>
 <thead>
