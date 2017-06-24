@@ -289,7 +289,7 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/formatter-utils.html</loc>
+    <loc>http://beta.quasar-framework.org/components/toolbar.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
@@ -380,14 +380,14 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/datetime-range.html</loc>
+    <loc>http://beta.quasar-framework.org/components/datetime.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/datetime.html</loc>
+    <loc>http://beta.quasar-framework.org/components/datetime-range.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
@@ -436,14 +436,14 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/toolbar.html</loc>
+    <loc>http://beta.quasar-framework.org/components/toggle.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/flex-css.html</loc>
+    <loc>http://beta.quasar-framework.org/components/floating-action-button.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
@@ -478,7 +478,7 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/stylus-variables.html</loc>
+    <loc>http://beta.quasar-framework.org/components/swiping.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
@@ -506,6 +506,13 @@
   </url>
   
   <url>
+    <loc>http://beta.quasar-framework.org/components/inline-datetime.html</loc>
+    
+    <lastmod>2017-06-20T15:23:09.888Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://beta.quasar-framework.org/components/inner-loading.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
@@ -514,13 +521,6 @@
   
   <url>
     <loc>http://beta.quasar-framework.org/components/stepper.html</loc>
-    
-    <lastmod>2017-06-20T15:23:09.888Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://beta.quasar-framework.org/components/inline-datetime.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
@@ -562,7 +562,7 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/swiping.html</loc>
+    <loc>http://beta.quasar-framework.org/components/stylus-variables.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
@@ -632,14 +632,14 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/parallax.html</loc>
+    <loc>http://beta.quasar-framework.org/components/platform-detection.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/platform-detection.html</loc>
+    <loc>http://beta.quasar-framework.org/components/parallax.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
@@ -681,7 +681,7 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/toggle.html</loc>
+    <loc>http://beta.quasar-framework.org/components/formatter-utils.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
@@ -695,7 +695,7 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/floating-action-button.html</loc>
+    <loc>http://beta.quasar-framework.org/components/flex-css.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     

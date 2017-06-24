@@ -238,6 +238,28 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Troubleshoot]]></title>
+      <url>http://beta.quasar-framework.org/guide/app-troubleshoot-and-tips.html</url>
+      <content type="html"><![CDATA[<h3 id="Building-App-takes-too-long"><a href="#Building-App-takes-too-long" class="headerlink" title="Building App takes too long"></a>Building App takes too long</h3><p>At some point you might notice that the build takes an unusual long time to finish (if it even finishes). Due to how Webpack and its loaders work, this is a clear indication that <strong>your HTML Vue templates have a syntax error somewhere</strong>. Example: <code>&lt;span&lt;&gt;</code>, where an extra character breaks HTML: <code>&lt;</code>.</p>
+<h3 id="Disabling-Linters"><a href="#Disabling-Linters" class="headerlink" title="Disabling Linters"></a>Disabling Linters</h3><p>It’s highly <strong>NOT recommended</strong>, but here is how to do it: edit <code>/build/webpack.base.conf.js</code> and removing the lines below from <code>module/rules</code>:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&#123; <span class="comment">// eslint</span></div><div class="line">  enforce: <span class="string">'pre'</span>,</div><div class="line">  test: <span class="regexp">/\.(vue|js)$/</span>,</div><div class="line">  loader: <span class="string">'eslint-loader'</span>,</div><div class="line">  include: projectRoot,</div><div class="line">  exclude: <span class="regexp">/node_modules/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Remote-Debugging-Mobile-Apps"><a href="#Remote-Debugging-Mobile-Apps" class="headerlink" title="Remote Debugging Mobile Apps"></a>Remote Debugging Mobile Apps</h3><p>Check the guide <a href="/guide/cordova-wrapper.html#Remote-Debugging">here</a></p>
+<h3 id="White-Screen-on-Electron"><a href="#White-Screen-on-Electron" class="headerlink" title="White Screen on Electron"></a>White Screen on Electron</h3><p>When using the development build it’s easy to see what it is broken as you can use Chrome Development Tools. But when building for production, you have to deal with this differently. Check the guide <a href="/guide/electron-wrapper.html#Debugging">here</a></p>
+<h3 id="Win10-Unexpected-token-import"><a href="#Win10-Unexpected-token-import" class="headerlink" title="Win10: Unexpected token import"></a>Win10: Unexpected token import</h3><p>When on <strong>Windows 10 (the 64bits version)</strong> you may get this error. This is due to NPM. You can fix it by installing and running <code>npm-windows-upgrade</code>:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">npm install -g npm-windows-upgrade</div><div class="line">npm-windows-upgrade</div></pre></td></tr></table></figure>
+<h3 id="Disabling-iOS-rubber-band-effect"><a href="#Disabling-iOS-rubber-band-effect" class="headerlink" title="Disabling iOS rubber band effect"></a>Disabling iOS rubber band effect</h3><p>When building an iOS app with Cordova and you want to disable the <a href="https://www.youtube.com/watch?v=UjuNGpU29Mk" target="_blank" rel="external">rubber band effect</a>, add this to your <code>config.xml</code> from the <code>cordova</code> wrapper folder inside your project:</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Preference</span> <span class="attr">name</span> = <span class="string">"DisallowOverscroll"</span> <span class="attr">value</span> = <span class="string">"true"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="Configuring-Momentjs-Localization"><a href="#Configuring-Momentjs-Localization" class="headerlink" title="Configuring Momentjs Localization"></a>Configuring Momentjs Localization</h3><p>In <code>src/main.js</code> file, add this:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> moment <span class="keyword">from</span> <span class="string">'moment'</span></div><div class="line"></div><div class="line"><span class="comment">// 'de' for German localization, as an example</span></div><div class="line">moment.locale(<span class="string">'de'</span>)</div></pre></td></tr></table></figure>
+<h3 id="Adding-support-for-IE11"><a href="#Adding-support-for-IE11" class="headerlink" title="Adding support for IE11"></a>Adding support for IE11</h3><p>Webpack2 requires Promise polyfill which does not come out of the box with IE11+. As a result, npm install <code>es6-promise</code> and then at the top of your <code>src/main.js</code> add the following code:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="built_in">require</span>(<span class="string">'es6-promise'</span>).polyfill()</div></pre></td></tr></table></figure>
+<p>Due to the fact that it adds about 6KB to the bundle size (and we care about bundle size!), this is not added for you by default in the boilerplating.</p>
+<h3 id="Google-Chrome-shows-scrollbars"><a href="#Google-Chrome-shows-scrollbars" class="headerlink" title="Google Chrome shows scrollbars"></a>Google Chrome shows scrollbars</h3><p>There are some Google Chrome extensions that interfere with website CSS, like WhatFont. Disable it. If this is not it, disable the extensions one by one to find the culprit.</p>
+<p><img src="/images/chrome-scrollbar.png" alt="Chrome extension interfering with website CSS" title="Chrome extension interfering with website CSS"></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Sharing State Between Components]]></title>
       <url>http://beta.quasar-framework.org/guide/components-sharing-state.html</url>
       <content type="html"><![CDATA[<p>In large applications, state management often becomes complex due to multiple pieces of state scattered across many components and the interactions between them. It is often overlooked that the source of truth in Vue instances is the raw data object - a Vue instances simply proxies access to it. Therefore, if you have a piece of state that should be shared by multiple instances, you should avoid duplicating it and share it by identity:</p>
@@ -258,28 +280,6 @@
 <p>To better deal with shared state in large applications, we need to differentiate between component local state and application level state. Application state does not belong to a specific component, but our components can still observe it for reactive DOM updates. By centralizing its management in a single place, we no longer need to pass events around, because everything that affects more than one component should belong there. In addition, this allows us to record and inspect every mutation for easier understanding of state changes, and even implement fancy stuff like time-travel debugging.</p>
 <p><img src="/images/vuex.png" alt="Vuex"></p>
 <p>Vuex also enforces some opinions on how to split state management logic into different places, but still allows enough flexibility for the actual code structure.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Troubleshoot]]></title>
-      <url>http://beta.quasar-framework.org/guide/app-troubleshoot-and-tips.html</url>
-      <content type="html"><![CDATA[<h3 id="Building-App-takes-too-long"><a href="#Building-App-takes-too-long" class="headerlink" title="Building App takes too long"></a>Building App takes too long</h3><p>At some point you might notice that the build takes an unusual long time to finish (if it even finishes). Due to how Webpack and its loaders work, this is a clear indication that <strong>your HTML Vue templates have a syntax error somewhere</strong>. Example: <code>&lt;span&lt;&gt;</code>, where an extra character breaks HTML: <code>&lt;</code>.</p>
-<h3 id="Disabling-Linters"><a href="#Disabling-Linters" class="headerlink" title="Disabling Linters"></a>Disabling Linters</h3><p>It’s highly <strong>NOT recommended</strong>, but here is how to do it: edit <code>/build/webpack.base.conf.js</code> and removing the lines below from <code>module/rules</code>:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&#123; <span class="comment">// eslint</span></div><div class="line">  enforce: <span class="string">'pre'</span>,</div><div class="line">  test: <span class="regexp">/\.(vue|js)$/</span>,</div><div class="line">  loader: <span class="string">'eslint-loader'</span>,</div><div class="line">  include: projectRoot,</div><div class="line">  exclude: <span class="regexp">/node_modules/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Remote-Debugging-Mobile-Apps"><a href="#Remote-Debugging-Mobile-Apps" class="headerlink" title="Remote Debugging Mobile Apps"></a>Remote Debugging Mobile Apps</h3><p>Check the guide <a href="/guide/cordova-wrapper.html#Remote-Debugging">here</a></p>
-<h3 id="White-Screen-on-Electron"><a href="#White-Screen-on-Electron" class="headerlink" title="White Screen on Electron"></a>White Screen on Electron</h3><p>When using the development build it’s easy to see what it is broken as you can use Chrome Development Tools. But when building for production, you have to deal with this differently. Check the guide <a href="/guide/electron-wrapper.html#Debugging">here</a></p>
-<h3 id="Win10-Unexpected-token-import"><a href="#Win10-Unexpected-token-import" class="headerlink" title="Win10: Unexpected token import"></a>Win10: Unexpected token import</h3><p>When on <strong>Windows 10 (the 64bits version)</strong> you may get this error. This is due to NPM. You can fix it by installing and running <code>npm-windows-upgrade</code>:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">npm install -g npm-windows-upgrade</div><div class="line">npm-windows-upgrade</div></pre></td></tr></table></figure>
-<h3 id="Disabling-iOS-rubber-band-effect"><a href="#Disabling-iOS-rubber-band-effect" class="headerlink" title="Disabling iOS rubber band effect"></a>Disabling iOS rubber band effect</h3><p>When building an iOS app with Cordova and you want to disable the <a href="https://www.youtube.com/watch?v=UjuNGpU29Mk" target="_blank" rel="external">rubber band effect</a>, add this to your <code>config.xml</code> from the <code>cordova</code> wrapper folder inside your project:</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Preference</span> <span class="attr">name</span> = <span class="string">"DisallowOverscroll"</span> <span class="attr">value</span> = <span class="string">"true"</span> /&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="Configuring-Momentjs-Localization"><a href="#Configuring-Momentjs-Localization" class="headerlink" title="Configuring Momentjs Localization"></a>Configuring Momentjs Localization</h3><p>In <code>src/main.js</code> file, add this:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> moment <span class="keyword">from</span> <span class="string">'moment'</span></div><div class="line"></div><div class="line"><span class="comment">// 'de' for German localization, as an example</span></div><div class="line">moment.locale(<span class="string">'de'</span>)</div></pre></td></tr></table></figure>
-<h3 id="Adding-support-for-IE11"><a href="#Adding-support-for-IE11" class="headerlink" title="Adding support for IE11"></a>Adding support for IE11</h3><p>Webpack2 requires Promise polyfill which does not come out of the box with IE11+. As a result, npm install <code>es6-promise</code> and then at the top of your <code>src/main.js</code> add the following code:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="built_in">require</span>(<span class="string">'es6-promise'</span>).polyfill()</div></pre></td></tr></table></figure>
-<p>Due to the fact that it adds about 6KB to the bundle size (and we care about bundle size!), this is not added for you by default in the boilerplating.</p>
-<h3 id="Google-Chrome-shows-scrollbars"><a href="#Google-Chrome-shows-scrollbars" class="headerlink" title="Google Chrome shows scrollbars"></a>Google Chrome shows scrollbars</h3><p>There are some Google Chrome extensions that interfere with website CSS, like WhatFont. Disable it. If this is not it, disable the extensions one by one to find the culprit.</p>
-<p><img src="/images/chrome-scrollbar.png" alt="Chrome extension interfering with website CSS" title="Chrome extension interfering with website CSS"></p>
 ]]></content>
     </entry>
     
@@ -427,14 +427,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Form Validation]]></title>
-      <url>http://beta.quasar-framework.org/guide/form-validation.html</url>
-      <content type="html"><![CDATA[<p>Recommended package for Form Validations is <code>Vuelidate</code>.<br>Get started with the <a href="https://monterail.github.io/vuelidate/" target="_blank" rel="external">documentation</a>.</p>
-<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-input</span></span></div><div class="line">      <span class="attr">v-model</span>=<span class="string">"form.email"</span></div><div class="line">      @<span class="attr">blur</span>=<span class="string">"$v.form.email.$touch"</span></div><div class="line">      @<span class="attr">keyup.enter</span>=<span class="string">"submit"</span></div><div class="line">      <span class="attr">:error</span>=<span class="string">"$v.form.email.$error"</span></div><div class="line">    /&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">q-btn</span> <span class="attr">color</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"submit"</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">q-btn</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">import</span> &#123; required, email &#125; <span class="keyword">from</span> <span class="string">'vuelidate/lib/validators'</span></div><div class="line"><span class="keyword">import</span> &#123; Toast &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  data () &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      form: &#123;</div><div class="line">        email: <span class="string">''</span></div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  validations: &#123;</div><div class="line">    form: &#123;</div><div class="line">      email: &#123; required, email  &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  methods: &#123;</div><div class="line">    submit () &#123;</div><div class="line">      <span class="keyword">this</span>.$v.form.$touch()</div><div class="line"></div><div class="line">      <span class="keyword">if</span> (<span class="keyword">this</span>.$v.form.$error) &#123;</div><div class="line">        Toast.create(<span class="string">'Please review fields again.'</span>)</div><div class="line">        <span class="keyword">return</span></div><div class="line">      &#125;</div><div class="line"></div><div class="line">      <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Electron App Wrapper]]></title>
       <url>http://beta.quasar-framework.org/guide/electron-wrapper.html</url>
       <content type="html"><![CDATA[<p>You can build Electron apps by wrapping your Quasar project with its Electron wrapper. We’ll be using Quasar CLI to manage this.</p>
@@ -451,6 +443,14 @@
 <h2 id="Debugging"><a href="#Debugging" class="headerlink" title="Debugging"></a>Debugging</h2><p>While developing you got Chrome Dev Tools available. But what happens when the production build has something failing? It may happen, for example, that if you made a mistake in the code in some scenarios you’ll only see a blank window showing up. So how can you debug this? Simple:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ electron --debug=[port] path/to/production/executable</div><div class="line"></div><div class="line"><span class="comment"># Example:</span></div><div class="line">$ electron --debug=<span class="string">"4444"</span> electron/dist/QuasarElectronApp-linux-x64/QuasarElectronApp</div></pre></td></tr></table></figure>
 <p>Your Electron App will be opened and you can check console output for errors.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Form Validation]]></title>
+      <url>http://beta.quasar-framework.org/guide/form-validation.html</url>
+      <content type="html"><![CDATA[<p>Recommended package for Form Validations is <code>Vuelidate</code>.<br>Get started with the <a href="https://monterail.github.io/vuelidate/" target="_blank" rel="external">documentation</a>.</p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-input</span></span></div><div class="line">      <span class="attr">v-model</span>=<span class="string">"form.email"</span></div><div class="line">      @<span class="attr">blur</span>=<span class="string">"$v.form.email.$touch"</span></div><div class="line">      @<span class="attr">keyup.enter</span>=<span class="string">"submit"</span></div><div class="line">      <span class="attr">:error</span>=<span class="string">"$v.form.email.$error"</span></div><div class="line">    /&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">q-btn</span> <span class="attr">color</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"submit"</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">q-btn</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">import</span> &#123; required, email &#125; <span class="keyword">from</span> <span class="string">'vuelidate/lib/validators'</span></div><div class="line"><span class="keyword">import</span> &#123; Toast &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  data () &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      form: &#123;</div><div class="line">        email: <span class="string">''</span></div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  validations: &#123;</div><div class="line">    form: &#123;</div><div class="line">      email: &#123; required, email  &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  methods: &#123;</div><div class="line">    submit () &#123;</div><div class="line">      <span class="keyword">this</span>.$v.form.$touch()</div><div class="line"></div><div class="line">      <span class="keyword">if</span> (<span class="keyword">this</span>.$v.form.$error) &#123;</div><div class="line">        Toast.create(<span class="string">'Please review fields again.'</span>)</div><div class="line">        <span class="keyword">return</span></div><div class="line">      &#125;</div><div class="line"></div><div class="line">      <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -631,18 +631,18 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Quasar Changelog]]></title>
+      <url>http://beta.quasar-framework.org/guide/quasar-framework-changelog.html</url>
+      <content type="html"><![CDATA[<p>Before upgrading to a newer version of Quasar, please make sure you read the <a href="https://github.com/quasarframework/quasar/releases" target="_blank" rel="external">Release Notes and Changelog</a> that are available on Github.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Nightly Build]]></title>
       <url>http://beta.quasar-framework.org/guide/quasar-nightly-build.html</url>
       <content type="html"><![CDATA[<p>For those that are adventurous enough, a bleeding edge version of Quasar is available for you to try. Please note that this version <strong>may be unstable and may introduce breaking changes</strong> that are not yet documented.</p>
 <p>What you need to do to use it instead of the latest stable Quasar release is to use the <a href="https://github.com/quasarframework/quasar-edge" target="_blank" rel="external">Github repo</a> instead of the NPM name of the package.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">// remove node_modules/quasar-framework <span class="keyword">if</span> it<span class="string">'s there</span></div><div class="line">$ rm -rf node_modules/quasar-framework</div><div class="line"></div><div class="line">// then install edge version:</div><div class="line">$ npm i --save git+https://git@github.com/quasarframework/quasar-edge.git</div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar Changelog]]></title>
-      <url>http://beta.quasar-framework.org/guide/quasar-framework-changelog.html</url>
-      <content type="html"><![CDATA[<p>Before upgrading to a newer version of Quasar, please make sure you read the <a href="https://github.com/quasarframework/quasar/releases" target="_blank" rel="external">Release Notes and Changelog</a> that are available on Github.</p>
 ]]></content>
     </entry>
     
@@ -954,6 +954,17 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Fullscreen]]></title>
+      <url>http://beta.quasar-framework.org/components/app-fullscreen.html</url>
+      <content type="html"><![CDATA[<p>There are times when you want your website or App to run in fullscreen.<br>Quasar makes it easy by wrapping the Web <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API" target="_blank" rel="external">Fullscreen API</a>.</p>
+<p>Please note that the behavior is different depending on the platform the code is running on, due to the fact that there isn’t a fixed Web standard for Web Fullscreen API yet.</p>
+<input type="hidden" data-external-demo="web-api-wrappers/app-fullscreen">
+
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; AppFullscreen &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="comment">// Determining if website is in fullscreen mode:</span></div><div class="line">(<span class="built_in">Boolean</span>) AppFullscreen.isActive()</div><div class="line"></div><div class="line"><span class="comment">// Requesting fullscreen mode:</span></div><div class="line">AppFullscreen.request()</div><div class="line"></div><div class="line"><span class="comment">// Exiting fullscreen mode:</span></div><div class="line">AppFullscreen.exit()</div><div class="line"></div><div class="line"><span class="comment">// Toggle fullscreen mode:</span></div><div class="line">AppFullscreen.toggle()</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Alert]]></title>
       <url>http://beta.quasar-framework.org/components/alert.html</url>
       <content type="html"><![CDATA[<p>Quasar Alerts are like a mix between Dialog and Toast components. They offer more options for appearance and control than Toasts do and they can have custom dismissal action(s) and other behaviors, similar to the dialog component. The Alert component is built however, to be more specific to alerting the users of events happening in your app and it does not timeouts unless user hits one of the Alert action buttons. It can be used either as a component or as a method (so globally, even outside of Vue components, much like Toasts).</p>
@@ -1099,17 +1110,6 @@
 <p><code>enter</code>, <code>leave</code> and <code>name</code> props work same as for <a href="/components/transition.html">QTransition</a>, so it might be a good idea to get a reading on them.</p>
 </blockquote>
 <p>It also supports <code>v-model</code> directive to receive a Boolean as property, which determines the visibility of the QAlert (<code>true</code> means it’s visible).</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Fullscreen]]></title>
-      <url>http://beta.quasar-framework.org/components/app-fullscreen.html</url>
-      <content type="html"><![CDATA[<p>There are times when you want your website or App to run in fullscreen.<br>Quasar makes it easy by wrapping the Web <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API" target="_blank" rel="external">Fullscreen API</a>.</p>
-<p>Please note that the behavior is different depending on the platform the code is running on, due to the fact that there isn’t a fixed Web standard for Web Fullscreen API yet.</p>
-<input type="hidden" data-external-demo="web-api-wrappers/app-fullscreen">
-
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; AppFullscreen &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="comment">// Determining if website is in fullscreen mode:</span></div><div class="line">(<span class="built_in">Boolean</span>) AppFullscreen.isActive()</div><div class="line"></div><div class="line"><span class="comment">// Requesting fullscreen mode:</span></div><div class="line">AppFullscreen.request()</div><div class="line"></div><div class="line"><span class="comment">// Exiting fullscreen mode:</span></div><div class="line">AppFullscreen.exit()</div><div class="line"></div><div class="line"><span class="comment">// Toggle fullscreen mode:</span></div><div class="line">AppFullscreen.toggle()</div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -2631,61 +2631,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Datetime Range]]></title>
-      <url>http://beta.quasar-framework.org/components/datetime-range.html</url>
-      <content type="html"><![CDATA[<p>The Datetime Range component offers the users the ability to input a date, time or datetime interval. It is based off of the <a href="/components/datetime.html">Datetime component</a>. Before diving in, make sure you know how to use the Datetime component, since this component shares same properties.</p>
-<input type="hidden" data-fullpage-demo="forms/datetime/range-datetime">
-
-<p>In essense, Datetime Range is made up of two Datetime components, one for “from” and one for “to”, making up a date interval together.</p>
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Date Range --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-datetime-range</span></span></div><div class="line">  <span class="attr">type</span>=<span class="string">"date"</span></div><div class="line">  <span class="attr">v-model</span>=<span class="string">"range"</span></div><div class="line">  <span class="attr">:min</span>=<span class="string">"min"</span></div><div class="line">  <span class="attr">:max</span>=<span class="string">"max"</span></div><div class="line">/&gt;</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Time Range --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-datetime-range</span></span></div><div class="line">  <span class="attr">type</span>=<span class="string">"time"</span></div><div class="line">  <span class="attr">v-model</span>=<span class="string">"range"</span></div><div class="line">  <span class="attr">:min</span>=<span class="string">"min"</span></div><div class="line">  <span class="attr">:max</span>=<span class="string">"max"</span></div><div class="line">/&gt;</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Datetime Range --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-datetime-range</span></span></div><div class="line">  <span class="attr">type</span>=<span class="string">"datetime"</span></div><div class="line">  <span class="attr">v-model</span>=<span class="string">"range"</span></div><div class="line">  <span class="attr">:min</span>=<span class="string">"min"</span></div><div class="line">  <span class="attr">:max</span>=<span class="string">"max"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
-<h2 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h2><blockquote>
-<p><strong>Note</strong><br>The properties below are only special to the Datetime Range component. This component also shares all of the properties of the <a href="/components/datetime.html">Datetime component</a> which get applied to both inner Datetimes.</p>
-</blockquote>
-<p>Supports <code>v-model</code> which must be an Object with <code>from</code> and <code>to</code> properties, which each holding the same types <code>String</code>, <code>Number</code> and <code>Date</code> as the model used for <a href="/components/datetime.html">Datetime component</a>. In effect, these are the models for each of the two datetime components used to create the range.</p>
-<table>
-<thead>
-<tr>
-<th>Vue Property</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>default-from</code></td>
-<td>String, Number, Date</td>
-<td>Used as “default-selection” for “from” model.</td>
-</tr>
-<tr>
-<td><code>default-to</code></td>
-<td>String, Number, Date</td>
-<td>Used as “default-selection” for “to” model.</td>
-</tr>
-<tr>
-<td><code>css</code></td>
-<td>String/Object</td>
-<td>CSS applied to each Datetime component</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Vue-Events"><a href="#Vue-Events" class="headerlink" title="Vue Events"></a>Vue Events</h2><table>
-<thead>
-<tr>
-<th>Vue Event</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>@change(newVal)</code></td>
-<td>Triggered when model (Object with <code>to</code> and <code>from</code> props) changes.</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Datetime]]></title>
       <url>http://beta.quasar-framework.org/components/datetime.html</url>
       <content type="html"><![CDATA[<p>The Datetime component provides a method to input dates and time or both. There are also two more version available: <a href="/components/inline-datetime.html">Inline Datetime</a> and <a href="/components/datetime-range.html">Datetime Range</a>.</p>
@@ -2915,6 +2860,61 @@
 <h3 id="Coloring"><a href="#Coloring" class="headerlink" title="Coloring"></a>Coloring</h3><p>Use the <code>color</code> and <code>inverse</code> props to control the color.<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-datetime</span></span></div><div class="line">  <span class="attr">color</span>=<span class="string">"amber-7"</span></div><div class="line">  <span class="attr">float-label</span>=<span class="string">"Float Label"</span></div><div class="line">  <span class="attr">v-model</span>=<span class="string">"model"</span></div><div class="line">  <span class="attr">type</span>=<span class="string">"date"</span></div><div class="line">/&gt;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">q-datetime</span></span></div><div class="line">  <span class="attr">inverted</span></div><div class="line">  <span class="attr">color</span>=<span class="string">"primary"</span></div><div class="line">  <span class="attr">float-label</span>=<span class="string">"Float Label"</span></div><div class="line">  <span class="attr">v-model</span>=<span class="string">"model"</span></div><div class="line">  <span class="attr">type</span>=<span class="string">"date"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure></p>
 <p>Also, if QDatetime is displayed on a dark background, add the <code>dark</code> property.<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-datetime</span> <span class="attr">dark</span> <span class="attr">color</span>=<span class="string">"secondary"</span> /&gt;</span></div></pre></td></tr></table></figure></p>
 <h3 id="Usage-Inside-of-a-List"><a href="#Usage-Inside-of-a-List" class="headerlink" title="Usage Inside of a List"></a>Usage Inside of a List</h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-list</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">q-list-header</span>&gt;</span>Date or Time<span class="tag">&lt;/<span class="name">q-list-header</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">q-item</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-item-side</span> <span class="attr">icon</span>=<span class="string">"access_time"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-item-main</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">q-datetime</span> <span class="attr">class</span>=<span class="string">"no-margin"</span> <span class="attr">v-model</span>=<span class="string">"model"</span> <span class="attr">type</span>=<span class="string">"time"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">q-item-main</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">q-item</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">q-item</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-item-side</span> <span class="attr">icon</span>=<span class="string">"update"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-item-main</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">q-datetime</span> <span class="attr">class</span>=<span class="string">"no-margin"</span> <span class="attr">v-model</span>=<span class="string">"model"</span> <span class="attr">type</span>=<span class="string">"date"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">q-item-main</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">q-item</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">q-item-separator</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">q-list-header</span>&gt;</span>Date &amp; Time<span class="tag">&lt;/<span class="name">q-list-header</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">q-item</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-item-side</span> <span class="attr">icon</span>=<span class="string">"notifications"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-item-main</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">q-datetime</span> <span class="attr">class</span>=<span class="string">"no-margin"</span> <span class="attr">v-model</span>=<span class="string">"model"</span> <span class="attr">type</span>=<span class="string">"datetime"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">q-item-main</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">q-item</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">q-list</span>&gt;</span></div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Datetime Range]]></title>
+      <url>http://beta.quasar-framework.org/components/datetime-range.html</url>
+      <content type="html"><![CDATA[<p>The Datetime Range component offers the users the ability to input a date, time or datetime interval. It is based off of the <a href="/components/datetime.html">Datetime component</a>. Before diving in, make sure you know how to use the Datetime component, since this component shares same properties.</p>
+<input type="hidden" data-fullpage-demo="forms/datetime/range-datetime">
+
+<p>In essense, Datetime Range is made up of two Datetime components, one for “from” and one for “to”, making up a date interval together.</p>
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Date Range --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-datetime-range</span></span></div><div class="line">  <span class="attr">type</span>=<span class="string">"date"</span></div><div class="line">  <span class="attr">v-model</span>=<span class="string">"range"</span></div><div class="line">  <span class="attr">:min</span>=<span class="string">"min"</span></div><div class="line">  <span class="attr">:max</span>=<span class="string">"max"</span></div><div class="line">/&gt;</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Time Range --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-datetime-range</span></span></div><div class="line">  <span class="attr">type</span>=<span class="string">"time"</span></div><div class="line">  <span class="attr">v-model</span>=<span class="string">"range"</span></div><div class="line">  <span class="attr">:min</span>=<span class="string">"min"</span></div><div class="line">  <span class="attr">:max</span>=<span class="string">"max"</span></div><div class="line">/&gt;</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Datetime Range --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-datetime-range</span></span></div><div class="line">  <span class="attr">type</span>=<span class="string">"datetime"</span></div><div class="line">  <span class="attr">v-model</span>=<span class="string">"range"</span></div><div class="line">  <span class="attr">:min</span>=<span class="string">"min"</span></div><div class="line">  <span class="attr">:max</span>=<span class="string">"max"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
+<h2 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h2><blockquote>
+<p><strong>Note</strong><br>The properties below are only special to the Datetime Range component. This component also shares all of the properties of the <a href="/components/datetime.html">Datetime component</a> which get applied to both inner Datetimes.</p>
+</blockquote>
+<p>Supports <code>v-model</code> which must be an Object with <code>from</code> and <code>to</code> properties, which each holding the same types <code>String</code>, <code>Number</code> and <code>Date</code> as the model used for <a href="/components/datetime.html">Datetime component</a>. In effect, these are the models for each of the two datetime components used to create the range.</p>
+<table>
+<thead>
+<tr>
+<th>Vue Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>default-from</code></td>
+<td>String, Number, Date</td>
+<td>Used as “default-selection” for “from” model.</td>
+</tr>
+<tr>
+<td><code>default-to</code></td>
+<td>String, Number, Date</td>
+<td>Used as “default-selection” for “to” model.</td>
+</tr>
+<tr>
+<td><code>css</code></td>
+<td>String/Object</td>
+<td>CSS applied to each Datetime component</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Vue-Events"><a href="#Vue-Events" class="headerlink" title="Vue Events"></a>Vue Events</h2><table>
+<thead>
+<tr>
+<th>Vue Event</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@change(newVal)</code></td>
+<td>Triggered when model (Object with <code>to</code> and <code>from</code> props) changes.</td>
+</tr>
+</tbody>
+</table>
 ]]></content>
     </entry>
     
@@ -3373,6 +3373,151 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Flex CSS]]></title>
+      <url>http://beta.quasar-framework.org/components/flex-css.html</url>
+      <content type="html"><![CDATA[<p>Quasar provides lots of CSS classes to help you build your UI easily with the help of <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="external">Flexbox</a>. Think of it like operating with rows and columns with many options at hand.</p>
+<blockquote>
+<p>The final section of this page will show you how to create responsive UIs. Also take a look at the demo (best viewed by clicking “Desktop View” when on a desktop, because that’s where you can resize the window width to see helper classes in action). Click on “View Source” too to see the demo’s source code.</p>
+<input type="hidden" data-fullpage-demo="css-helpers/flex-css">
+
+</blockquote>
+<h2 id="Background-on-Flexbox"><a href="#Background-on-Flexbox" class="headerlink" title="Background on Flexbox"></a>Background on Flexbox</h2><p>The Flexbox Layout (Flexible Box) module (currently a W3C Last Call Working Draft) aims at providing a more efficient way to lay out, align and distribute space among items in a container, even when their size is unknown and/or dynamic (thus the word “flex”).</p>
+<p>The main idea behind the flex layout is to give the container the ability to alter its items’ width/height (and order) to best fill the available space (mostly to accommodate to all kind of display devices and screen sizes). A flex container expands items to fill available free space, or shrinks them to prevent overflow.</p>
+<p>Most importantly, the flexbox layout is direction-agnostic as opposed to the regular layouts (block which is vertically-based and inline which is horizontally-based). While those work well for pages, they lack flexibility (no pun intended) to support large or complex applications (especially when it comes to orientation changing, resizing, stretching, shrinking, etc.).</p>
+<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><p>Quasar Flex CSS classes apply to either the Container (Parent) or the Container’s items (Children).</p>
+<p><img src="/images/flexbox-container.svg" alt="Flexbox Container"><br><img src="/images/flexbox-items.svg" alt="Flexbox Items"></p>
+<h2 id="Parent-Classes"><a href="#Parent-Classes" class="headerlink" title="Parent Classes"></a>Parent Classes</h2><h3 id="Setting-Direction"><a href="#Setting-Direction" class="headerlink" title="Setting Direction"></a>Setting Direction</h3><p>One of the following CSS classes is mandatory for the parent in order for the children ones (described in next sections) to have any effect.</p>
+<p><img src="/images/flexbox-direction.svg" alt="Flexbox Direction"></p>
+<table>
+<thead>
+<tr>
+<th>Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>row</code></td>
+<td>Flex row</td>
+</tr>
+<tr>
+<td><code>row inline</code></td>
+<td>Inline Flex row</td>
+</tr>
+<tr>
+<td><code>column</code></td>
+<td>Flex column</td>
+</tr>
+<tr>
+<td><code>column inline</code></td>
+<td>Inline Flex column</td>
+</tr>
+<tr>
+<td><code>row reverse</code></td>
+<td>Flex row with <code>flex-direction</code> set to <code>row-reverse</code></td>
+</tr>
+<tr>
+<td><code>column reverse</code></td>
+<td>Flex column with <code>flex-direction</code> set to <code>column-reverse</code></td>
+</tr>
+</tbody>
+</table>
+<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>First column<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>Second column<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>Third column<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="Wrapping-by-default"><a href="#Wrapping-by-default" class="headerlink" title="Wrapping by default"></a>Wrapping by default</h3><p>By default, all rows and columns are wrapping content.</p>
+<p><img src="/images/flexbox-wrap.svg" alt="Flexbox Direction"></p>
+<p>However if you explicitly do not want to wrap and by so doing you want to fit all content into one line, then add <code>no-wrap</code> CSS helper class.</p>
+<p>Also, if you want to wrap in reverse order, then <code>reverse-wrap</code> is available.</p>
+<table>
+<thead>
+<tr>
+<th>Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>wrap</code></td>
+<td>Wrap if necessary (“on” by default, no need to specify it)</td>
+</tr>
+<tr>
+<td><code>no-wrap</code></td>
+<td>Do NOT wrap even if necessary</td>
+</tr>
+<tr>
+<td><code>reverse-wrap</code></td>
+<td>Wrap backwards if necessary</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Alignment"><a href="#Alignment" class="headerlink" title="Alignment"></a>Alignment</h3><p><strong>For alignment along the main axis</strong>, use classes below. It helps distribute extra free space left over when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.</p>
+<p><img src="/images/flexbox-main-axis-align.svg" alt="Flexbox Justify Content"></p>
+<p><strong>For alignment perpendicular to the main axis</strong>, use classes below. This defines the default behavior for how flex items are laid out along the cross axis on the current line. Think of it as the horizontal-* version for the cross-axis (perpendicular to the main-axis).</p>
+<p><img src="/images/flexbox-cross-axis-align.svg" alt="Flexbox Items Align"></p>
+<p>The next classes <strong>align a flex container’s lines</strong> within when there is extra space in the cross-axis, similar to how horizontal-* aligns individual items within the main-axis.</p>
+<p><img src="/images/flexbox-content-align.svg" alt="Flexbox Content Align"></p>
+<h2 id="Children-Classes"><a href="#Children-Classes" class="headerlink" title="Children Classes"></a>Children Classes</h2><h3 id="Distribution-of-Size"><a href="#Distribution-of-Size" class="headerlink" title="Distribution of Size"></a>Distribution of Size</h3><p>Quasar uses a 12 point column system for distributing size of row children. Here are some examples of the CSS helper classes available:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-8"</span>&gt;</span>two thirds<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-2"</span>&gt;</span>one sixth<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-auto"</span>&gt;</span>auto size based on content and available space<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col"</span>&gt;</span>fills remaining available space<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>In the example above, <code>col-8</code> fills two thirds (2/3) of the row width, because 8/12 = 2/3 = 66%, while <code>col-2</code> occupies one sixth (2/12 = 1/6 ~ 16.67%).</p>
+<p>CSS helper class <code>col-auto</code> makes the cell fill only the space it needs to be rendered, with the possibility to shrink when not enough space is available. <code>col</code>, on the other hand, tries to fill all space available while also shrinking if needed.</p>
+<p>Another example with a visual representation below it:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--</span></div><div class="line">     we have 3 children, so equivalent</div><div class="line">     to above would be to use `col-4`</div><div class="line">     on each of the children</div><div class="line">  --&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-3"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-6"</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-3"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><img src="/images/flexbox-grow.svg" alt="Flexbox Grow"></p>
+<p>There’s also the possible to offset a cell. Example: <code>offset-4</code> which offsets a third of space (4/12 = 1/3 = 33%).</p>
+<h3 id="Self-Alignment"><a href="#Self-Alignment" class="headerlink" title="Self Alignment"></a>Self Alignment</h3><p><strong>An item can override the aligned specified on parent</strong>. This allows alignment to be overridden for individual flex items. Please see the <a href="#Alignment">Alignment</a> explanation from Parent Classes to understand the available values (<code>self-start</code>, <code>self-center</code>, <code>self-baseline</code>, <code>self-end</code>, <code>self-stretch</code>).</p>
+<p><img src="/images/flexbox-self.svg" alt="Flexbox Grow"></p>
+<h3 id="Order"><a href="#Order" class="headerlink" title="Order"></a>Order</h3><p><strong>You can set the order</strong> of children elements by using <code>order-first</code> and <code>order-last</code> CSS helper classes.</p>
+<p>By default, flex items are laid out in the source order. However, the order property controls the order in which they appear in the flex container. If you need more granularity, use <code>order</code> CSS property and assign the desired value.</p>
+<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"order: 2"</span>&gt;</span>Second column<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"order-last"</span>&gt;</span>Third column<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"order-first"</span>&gt;</span>First column<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>Here is how the CSS <code>order</code> property works:</p>
+<p><img src="/images/flexbox-order.svg" alt="Flexbox Order"></p>
+<h2 id="Responsive-Design"><a href="#Responsive-Design" class="headerlink" title="Responsive Design"></a>Responsive Design</h2><p>Flex CSS Helper classes can be applied based on the width of the screen, to help you in making a responsive UI. The 12 points grid is inspired by Bootstrap’s, so there are a lot of similarities.</p>
+<p>What we’ve learned so far is that, for example, we can size the columns regardless of window width. If we are to create a response UI, we need to dynamically change the sizing while taking into account how wide the window is. First, let’s learn about some tokens that you can inject at middle of <code>col-*</code>, <code>offset-*</code> and <code>col-auto</code> helper classes (look at table below for tokens).</p>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Max window width</th>
+<th>Description / When it applies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>xs</code></td>
+<td>576px</td>
+<td>Extra small sized window</td>
+</tr>
+<tr>
+<td><code>sm</code></td>
+<td>768px</td>
+<td>Small sized window</td>
+</tr>
+<tr>
+<td><code>md</code></td>
+<td>992px</td>
+<td>Medium-sized window</td>
+</tr>
+<tr>
+<td><code>lg</code></td>
+<td>1200px</td>
+<td>Large sized window</td>
+</tr>
+<tr>
+<td><code>xl</code></td>
+<td>1201+ px</td>
+<td>Extra large sized window</td>
+</tr>
+</tbody>
+</table>
+<p>Example: <code>col-md-7</code>, <code>offset-lg-3</code>, <code>col-xs-auto</code>.</p>
+<p>A full example: let’s say we have a row with three children. On extra small windows, we need to stack the children vertically, on small windows we need to display them side by side (each having equal width), and starting with medium windows we should display them all on same line:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-xs-12 col-sm-6 col-md-4"</span>&gt;</span></div><div class="line">    col</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-xs-12 col-sm-6 col-md-4"</span>&gt;</span></div><div class="line">    col</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-xs-12 col-sm-6 col-md-4"</span>&gt;</span></div><div class="line">    col</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Notice in the above example that we used <code>col-xs-12</code> (12/12 = 100% of row, so each child will take full width of the container making all children stack vertically, since rows are wrapping content by default), <code>col-sm-6</code> (6/12 = 50% of row) and <code>col-md-4</code> (4/12 = 33% of row).</p>
+<p>Like previously mentioned, rows wrap content by default, so when 12 (or more) grid points are used for a row, content is wrapped to the next line. If we have two <code>&lt;div&gt;</code>s and we use <code>col-8</code> on both, they will also stack, since 8 + 8 = 16 and we can only display 12 points on a single line.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--</span></div><div class="line">    more than 12 grid points together,</div><div class="line">    so second &lt;div&gt; will wrap on next line</div><div class="line">  --&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-8"</span>&gt;</span>col<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-8"</span>&gt;</span>col<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Also check <a href="/components/visibility.html#Window-Width-Related">CSS Helpers &gt; Visibility</a> page to see thresholds on window width and these tokens (xs, sm, md, lg, xl) used on their own to hide or show DOM elements.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Floating Action Buttons]]></title>
       <url>http://beta.quasar-framework.org/components/floating-action-button.html</url>
       <content type="html"><![CDATA[<p>A Quasar Floating Action Button (FAB) represents the primary action in an App Page. But, it’s not limited to only a single action. It can contain any number of sub-actions too. And more importantly, it can also be used inline in your Pages or Layouts.</p>
@@ -3551,151 +3696,6 @@
 <h3 id="Labeling-QFabAction-with-Tooltips"><a href="#Labeling-QFabAction-with-Tooltips" class="headerlink" title="Labeling QFabAction with Tooltips"></a>Labeling QFabAction with Tooltips</h3><p>You can also add labels to the actions with a Tooltip. Below is an example of how to do this.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-fab</span></span></div><div class="line">  <span class="attr">color</span>=<span class="string">"primary"</span></div><div class="line">  <span class="attr">active-icon</span>=<span class="string">"alarm"</span></div><div class="line">  <span class="attr">direction</span>=<span class="string">"right"</span></div><div class="line">&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">q-fab-action</span> <span class="attr">color</span>=<span class="string">"purple"</span> @<span class="attr">click</span>=<span class="string">"toast('mail')"</span> <span class="attr">icon</span>=<span class="string">"mail"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-tooltip</span> <span class="attr">anchor</span>=<span class="string">"center left"</span> <span class="attr">self</span>=<span class="string">"center right"</span> <span class="attr">:offset</span>=<span class="string">"[20, 0]"</span>&gt;</span>Mail<span class="tag">&lt;/<span class="name">q-tooltip</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">q-fab-action</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">q-fab-action</span> <span class="attr">color</span>=<span class="string">"secondary"</span> @<span class="attr">click</span>=<span class="string">"toast('alarm')"</span> <span class="attr">icon</span>=<span class="string">"alarm"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-tooltip</span> <span class="attr">anchor</span>=<span class="string">"center left"</span> <span class="attr">self</span>=<span class="string">"center right"</span> <span class="attr">:offset</span>=<span class="string">"[20, 0]"</span>&gt;</span>Alarm<span class="tag">&lt;/<span class="name">q-tooltip</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">q-fab-action</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">q-fab</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>For more information about Tooltips, please refer to the <a href="/components/tooltip.html">Tooltip documentation</a>.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Flex CSS]]></title>
-      <url>http://beta.quasar-framework.org/components/flex-css.html</url>
-      <content type="html"><![CDATA[<p>Quasar provides lots of CSS classes to help you build your UI easily with the help of <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="external">Flexbox</a>. Think of it like operating with rows and columns with many options at hand.</p>
-<blockquote>
-<p>The final section of this page will show you how to create responsive UIs. Also take a look at the demo (best viewed by clicking “Desktop View” when on a desktop, because that’s where you can resize the window width to see helper classes in action). Click on “View Source” too to see the demo’s source code.</p>
-<input type="hidden" data-fullpage-demo="css-helpers/flex-css">
-
-</blockquote>
-<h2 id="Background-on-Flexbox"><a href="#Background-on-Flexbox" class="headerlink" title="Background on Flexbox"></a>Background on Flexbox</h2><p>The Flexbox Layout (Flexible Box) module (currently a W3C Last Call Working Draft) aims at providing a more efficient way to lay out, align and distribute space among items in a container, even when their size is unknown and/or dynamic (thus the word “flex”).</p>
-<p>The main idea behind the flex layout is to give the container the ability to alter its items’ width/height (and order) to best fill the available space (mostly to accommodate to all kind of display devices and screen sizes). A flex container expands items to fill available free space, or shrinks them to prevent overflow.</p>
-<p>Most importantly, the flexbox layout is direction-agnostic as opposed to the regular layouts (block which is vertically-based and inline which is horizontally-based). While those work well for pages, they lack flexibility (no pun intended) to support large or complex applications (especially when it comes to orientation changing, resizing, stretching, shrinking, etc.).</p>
-<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><p>Quasar Flex CSS classes apply to either the Container (Parent) or the Container’s items (Children).</p>
-<p><img src="/images/flexbox-container.svg" alt="Flexbox Container"><br><img src="/images/flexbox-items.svg" alt="Flexbox Items"></p>
-<h2 id="Parent-Classes"><a href="#Parent-Classes" class="headerlink" title="Parent Classes"></a>Parent Classes</h2><h3 id="Setting-Direction"><a href="#Setting-Direction" class="headerlink" title="Setting Direction"></a>Setting Direction</h3><p>One of the following CSS classes is mandatory for the parent in order for the children ones (described in next sections) to have any effect.</p>
-<p><img src="/images/flexbox-direction.svg" alt="Flexbox Direction"></p>
-<table>
-<thead>
-<tr>
-<th>Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>row</code></td>
-<td>Flex row</td>
-</tr>
-<tr>
-<td><code>row inline</code></td>
-<td>Inline Flex row</td>
-</tr>
-<tr>
-<td><code>column</code></td>
-<td>Flex column</td>
-</tr>
-<tr>
-<td><code>column inline</code></td>
-<td>Inline Flex column</td>
-</tr>
-<tr>
-<td><code>row reverse</code></td>
-<td>Flex row with <code>flex-direction</code> set to <code>row-reverse</code></td>
-</tr>
-<tr>
-<td><code>column reverse</code></td>
-<td>Flex column with <code>flex-direction</code> set to <code>column-reverse</code></td>
-</tr>
-</tbody>
-</table>
-<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>First column<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>Second column<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>Third column<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h3 id="Wrapping-by-default"><a href="#Wrapping-by-default" class="headerlink" title="Wrapping by default"></a>Wrapping by default</h3><p>By default, all rows and columns are wrapping content.</p>
-<p><img src="/images/flexbox-wrap.svg" alt="Flexbox Direction"></p>
-<p>However if you explicitly do not want to wrap and by so doing you want to fit all content into one line, then add <code>no-wrap</code> CSS helper class.</p>
-<p>Also, if you want to wrap in reverse order, then <code>reverse-wrap</code> is available.</p>
-<table>
-<thead>
-<tr>
-<th>Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>wrap</code></td>
-<td>Wrap if necessary (“on” by default, no need to specify it)</td>
-</tr>
-<tr>
-<td><code>no-wrap</code></td>
-<td>Do NOT wrap even if necessary</td>
-</tr>
-<tr>
-<td><code>reverse-wrap</code></td>
-<td>Wrap backwards if necessary</td>
-</tr>
-</tbody>
-</table>
-<h3 id="Alignment"><a href="#Alignment" class="headerlink" title="Alignment"></a>Alignment</h3><p><strong>For alignment along the main axis</strong>, use classes below. It helps distribute extra free space left over when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.</p>
-<p><img src="/images/flexbox-main-axis-align.svg" alt="Flexbox Justify Content"></p>
-<p><strong>For alignment perpendicular to the main axis</strong>, use classes below. This defines the default behavior for how flex items are laid out along the cross axis on the current line. Think of it as the horizontal-* version for the cross-axis (perpendicular to the main-axis).</p>
-<p><img src="/images/flexbox-cross-axis-align.svg" alt="Flexbox Items Align"></p>
-<p>The next classes <strong>align a flex container’s lines</strong> within when there is extra space in the cross-axis, similar to how horizontal-* aligns individual items within the main-axis.</p>
-<p><img src="/images/flexbox-content-align.svg" alt="Flexbox Content Align"></p>
-<h2 id="Children-Classes"><a href="#Children-Classes" class="headerlink" title="Children Classes"></a>Children Classes</h2><h3 id="Distribution-of-Size"><a href="#Distribution-of-Size" class="headerlink" title="Distribution of Size"></a>Distribution of Size</h3><p>Quasar uses a 12 point column system for distributing size of row children. Here are some examples of the CSS helper classes available:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-8"</span>&gt;</span>two thirds<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-2"</span>&gt;</span>one sixth<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-auto"</span>&gt;</span>auto size based on content and available space<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col"</span>&gt;</span>fills remaining available space<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>In the example above, <code>col-8</code> fills two thirds (2/3) of the row width, because 8/12 = 2/3 = 66%, while <code>col-2</code> occupies one sixth (2/12 = 1/6 ~ 16.67%).</p>
-<p>CSS helper class <code>col-auto</code> makes the cell fill only the space it needs to be rendered, with the possibility to shrink when not enough space is available. <code>col</code>, on the other hand, tries to fill all space available while also shrinking if needed.</p>
-<p>Another example with a visual representation below it:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--</span></div><div class="line">     we have 3 children, so equivalent</div><div class="line">     to above would be to use `col-4`</div><div class="line">     on each of the children</div><div class="line">  --&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-3"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-6"</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-3"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p><img src="/images/flexbox-grow.svg" alt="Flexbox Grow"></p>
-<p>There’s also the possible to offset a cell. Example: <code>offset-4</code> which offsets a third of space (4/12 = 1/3 = 33%).</p>
-<h3 id="Self-Alignment"><a href="#Self-Alignment" class="headerlink" title="Self Alignment"></a>Self Alignment</h3><p><strong>An item can override the aligned specified on parent</strong>. This allows alignment to be overridden for individual flex items. Please see the <a href="#Alignment">Alignment</a> explanation from Parent Classes to understand the available values (<code>self-start</code>, <code>self-center</code>, <code>self-baseline</code>, <code>self-end</code>, <code>self-stretch</code>).</p>
-<p><img src="/images/flexbox-self.svg" alt="Flexbox Grow"></p>
-<h3 id="Order"><a href="#Order" class="headerlink" title="Order"></a>Order</h3><p><strong>You can set the order</strong> of children elements by using <code>order-first</code> and <code>order-last</code> CSS helper classes.</p>
-<p>By default, flex items are laid out in the source order. However, the order property controls the order in which they appear in the flex container. If you need more granularity, use <code>order</code> CSS property and assign the desired value.</p>
-<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"order: 2"</span>&gt;</span>Second column<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"order-last"</span>&gt;</span>Third column<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"order-first"</span>&gt;</span>First column<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>Here is how the CSS <code>order</code> property works:</p>
-<p><img src="/images/flexbox-order.svg" alt="Flexbox Order"></p>
-<h2 id="Responsive-Design"><a href="#Responsive-Design" class="headerlink" title="Responsive Design"></a>Responsive Design</h2><p>Flex CSS Helper classes can be applied based on the width of the screen, to help you in making a responsive UI. The 12 points grid is inspired by Bootstrap’s, so there are a lot of similarities.</p>
-<p>What we’ve learned so far is that, for example, we can size the columns regardless of window width. If we are to create a response UI, we need to dynamically change the sizing while taking into account how wide the window is. First, let’s learn about some tokens that you can inject at middle of <code>col-*</code>, <code>offset-*</code> and <code>col-auto</code> helper classes (look at table below for tokens).</p>
-<table>
-<thead>
-<tr>
-<th>Token</th>
-<th>Max window width</th>
-<th>Description / When it applies</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>xs</code></td>
-<td>576px</td>
-<td>Extra small sized window</td>
-</tr>
-<tr>
-<td><code>sm</code></td>
-<td>768px</td>
-<td>Small sized window</td>
-</tr>
-<tr>
-<td><code>md</code></td>
-<td>992px</td>
-<td>Medium-sized window</td>
-</tr>
-<tr>
-<td><code>lg</code></td>
-<td>1200px</td>
-<td>Large sized window</td>
-</tr>
-<tr>
-<td><code>xl</code></td>
-<td>1201+ px</td>
-<td>Extra large sized window</td>
-</tr>
-</tbody>
-</table>
-<p>Example: <code>col-md-7</code>, <code>offset-lg-3</code>, <code>col-xs-auto</code>.</p>
-<p>A full example: let’s say we have a row with three children. On extra small windows, we need to stack the children vertically, on small windows we need to display them side by side (each having equal width), and starting with medium windows we should display them all on same line:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-xs-12 col-sm-6 col-md-4"</span>&gt;</span></div><div class="line">    col</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-xs-12 col-sm-6 col-md-4"</span>&gt;</span></div><div class="line">    col</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-xs-12 col-sm-6 col-md-4"</span>&gt;</span></div><div class="line">    col</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>Notice in the above example that we used <code>col-xs-12</code> (12/12 = 100% of row, so each child will take full width of the container making all children stack vertically, since rows are wrapping content by default), <code>col-sm-6</code> (6/12 = 50% of row) and <code>col-md-4</code> (4/12 = 33% of row).</p>
-<p>Like previously mentioned, rows wrap content by default, so when 12 (or more) grid points are used for a row, content is wrapped to the next line. If we have two <code>&lt;div&gt;</code>s and we use <code>col-8</code> on both, they will also stack, since 8 + 8 = 16 and we can only display 12 points on a single line.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--</span></div><div class="line">    more than 12 grid points together,</div><div class="line">    so second &lt;div&gt; will wrap on next line</div><div class="line">  --&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-8"</span>&gt;</span>col<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-8"</span>&gt;</span>col<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>Also check <a href="/components/visibility.html#Window-Width-Related">CSS Helpers &gt; Visibility</a> page to see thresholds on window width and these tokens (xs, sm, md, lg, xl) used on their own to hide or show DOM elements.</p>
 ]]></content>
     </entry>
     
@@ -4456,6 +4456,117 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Inline Datetime]]></title>
+      <url>http://beta.quasar-framework.org/components/inline-datetime.html</url>
+      <content type="html"><![CDATA[<p>The Inline Datetime component provides a method to input dates and time or both and is shown directly on the page or element you are dislpaying. There are also two more versions available: <a href="/components/datetime.html">Datetime</a>, which also uses a modal/popup, as well as a <a href="/components/datetime-range.html">Datetime Range</a>.</p>
+<input type="hidden" data-fullpage-demo="forms/datetime/inline-datetime">
+
+<p>You’ll notice in the demos that the iOS and Material Datetime pickers look and act totally different, just like their native counterparts.</p>
+<p>Works well with <a href="/components/field.html">QField</a> for additional functionality such as a helper, error message placeholder and many others.</p>
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-inline-datetime</span> <span class="attr">v-model</span>=<span class="string">"model"</span> <span class="attr">type</span>=<span class="string">"date"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Only Time --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-inline-datetime</span> <span class="attr">v-model</span>=<span class="string">"model"</span> <span class="attr">type</span>=<span class="string">"time"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Date &amp; Time --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-inline-datetime</span> <span class="attr">v-model</span>=<span class="string">"model"</span> <span class="attr">type</span>=<span class="string">"datetime"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Date - Monday as first day of week --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-inline-datetime</span> <span class="attr">v-model</span>=<span class="string">"model"</span> <span class="attr">monday-first</span> <span class="attr">type</span>=<span class="string">"date"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Disabled State --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-inline-datetime</span> <span class="attr">disable</span> <span class="attr">v-model</span>=<span class="string">"model"</span> <span class="attr">type</span>=<span class="string">"datetime"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Readonly State --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-inline-datetime</span> <span class="attr">readonly</span> <span class="attr">v-model</span>=<span class="string">"model"</span> <span class="attr">type</span>=<span class="string">"datetime"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Min &amp; Max --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-inline-datetime</span> <span class="attr">type</span>=<span class="string">"datetime"</span> <span class="attr">v-model</span>=<span class="string">"minMaxModel"</span> <span class="attr">:min</span>=<span class="string">"min"</span> <span class="attr">:max</span>=<span class="string">"max"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Specific color --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-inline-datetime</span> <span class="attr">color</span>=<span class="string">"secondary"</span> <span class="attr">v-model</span>=<span class="string">"model"</span> <span class="attr">type</span>=<span class="string">"datetime"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Time 24hr Format --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-inline-datetime</span> <span class="attr">v-model</span>=<span class="string">"model"</span> <span class="attr">type</span>=<span class="string">"time"</span> <span class="attr">format24h</span> /&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h2><p>Supports <code>v-model</code> which must be a String, Number or Date Object. Please refer to the <a href="/components/datetime.html">Datetime component</a> for detailed information regarding the model that must be used.</p>
+<table>
+<thead>
+<tr>
+<th>Vue Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td>String</td>
+<td>One of <code>date</code>, <code>time</code> or <code>datetime</code>. Default is <code>date</code>.</td>
+</tr>
+<tr>
+<td><code>min</code></td>
+<td>String</td>
+<td>Optional minimum value it can take. Has same format as Datetime model.</td>
+</tr>
+<tr>
+<td><code>max</code></td>
+<td>String</td>
+<td>Optional maximum value it can take. Has same format as Datetime model.</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>String</td>
+<td>One from <a href="/components/color-palette.html">Color Palette</a>.</td>
+</tr>
+<tr>
+<td><code>month-names</code></td>
+<td>Array</td>
+<td>Array of month names, starting with January.</td>
+</tr>
+<tr>
+<td><code>day-names</code></td>
+<td>Array</td>
+<td>Array of day names, starting with Sunday, Monday, …</td>
+</tr>
+<tr>
+<td><code>default-selection</code></td>
+<td>String/Number/Date</td>
+<td>Default date/time for picker when model is not yet set.</td>
+</tr>
+<tr>
+<td><code>monday-first</code></td>
+<td>Boolean</td>
+<td>Use Monday as first day of week. Otherwise it’s Sunday.</td>
+</tr>
+<tr>
+<td><code>format24h</code></td>
+<td>Boolean</td>
+<td>Use 24 hour time for Material picker instead of AM/PM system which is default.</td>
+</tr>
+<tr>
+<td><code>disable</code></td>
+<td>Boolean</td>
+<td>If set to <code>true</code>, the field is inaccessable.</td>
+</tr>
+<tr>
+<td><code>readonly</code></td>
+<td>Boolean</td>
+<td>If set to <code>true</code>, the component is readonly.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Vue-Methods"><a href="#Vue-Methods" class="headerlink" title="Vue Methods"></a>Vue Methods</h2><table>
+<thead>
+<tr>
+<th>Vue Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>clear()</code></td>
+<td>Sets model to empty string (removes current value).</td>
+</tr>
+<tr>
+<td><code>toggleAmPm()</code></td>
+<td>Toggle between AM - PM.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Vue-Events"><a href="#Vue-Events" class="headerlink" title="Vue Events"></a>Vue Events</h2><table>
+<thead>
+<tr>
+<th>Vue Event</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@change(newValue)</code></td>
+<td>Triggered on model value change.</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Inner Loading]]></title>
       <url>http://beta.quasar-framework.org/components/inner-loading.html</url>
       <content type="html"><![CDATA[<p>The QInnerLoading component allows you to add a progress animation within a component. Much like the <a href="loading.html">Loading feature</a>, it’s purpose is to offer visual confirmation to the user that some process is happening in the background, which takes an excessive amount of time. QInnerLoading will add an opaque overlay over the delayed element along with a <a href="/components/spinner.html">Spinner</a>.</p>
@@ -4833,117 +4944,6 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- synced after "change" instead of "input" --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-input</span> <span class="attr">v-model.lazy</span>=<span class="string">"msg"</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="trim"><a href="#trim" class="headerlink" title=".trim"></a><code>.trim</code></h3><p>If you want the user’s input to be trimmed automatically, you can add the <code>trim</code> modifier to your <code>v-model</code> managed inputs:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-input</span> <span class="attr">v-model.trim</span>=<span class="string">"msg"</span>&gt;</span></div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Inline Datetime]]></title>
-      <url>http://beta.quasar-framework.org/components/inline-datetime.html</url>
-      <content type="html"><![CDATA[<p>The Inline Datetime component provides a method to input dates and time or both and is shown directly on the page or element you are dislpaying. There are also two more versions available: <a href="/components/datetime.html">Datetime</a>, which also uses a modal/popup, as well as a <a href="/components/datetime-range.html">Datetime Range</a>.</p>
-<input type="hidden" data-fullpage-demo="forms/datetime/inline-datetime">
-
-<p>You’ll notice in the demos that the iOS and Material Datetime pickers look and act totally different, just like their native counterparts.</p>
-<p>Works well with <a href="/components/field.html">QField</a> for additional functionality such as a helper, error message placeholder and many others.</p>
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-inline-datetime</span> <span class="attr">v-model</span>=<span class="string">"model"</span> <span class="attr">type</span>=<span class="string">"date"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Only Time --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-inline-datetime</span> <span class="attr">v-model</span>=<span class="string">"model"</span> <span class="attr">type</span>=<span class="string">"time"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Date &amp; Time --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-inline-datetime</span> <span class="attr">v-model</span>=<span class="string">"model"</span> <span class="attr">type</span>=<span class="string">"datetime"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Date - Monday as first day of week --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-inline-datetime</span> <span class="attr">v-model</span>=<span class="string">"model"</span> <span class="attr">monday-first</span> <span class="attr">type</span>=<span class="string">"date"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Disabled State --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-inline-datetime</span> <span class="attr">disable</span> <span class="attr">v-model</span>=<span class="string">"model"</span> <span class="attr">type</span>=<span class="string">"datetime"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Readonly State --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-inline-datetime</span> <span class="attr">readonly</span> <span class="attr">v-model</span>=<span class="string">"model"</span> <span class="attr">type</span>=<span class="string">"datetime"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Min &amp; Max --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-inline-datetime</span> <span class="attr">type</span>=<span class="string">"datetime"</span> <span class="attr">v-model</span>=<span class="string">"minMaxModel"</span> <span class="attr">:min</span>=<span class="string">"min"</span> <span class="attr">:max</span>=<span class="string">"max"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Specific color --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-inline-datetime</span> <span class="attr">color</span>=<span class="string">"secondary"</span> <span class="attr">v-model</span>=<span class="string">"model"</span> <span class="attr">type</span>=<span class="string">"datetime"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Time 24hr Format --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-inline-datetime</span> <span class="attr">v-model</span>=<span class="string">"model"</span> <span class="attr">type</span>=<span class="string">"time"</span> <span class="attr">format24h</span> /&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h2><p>Supports <code>v-model</code> which must be a String, Number or Date Object. Please refer to the <a href="/components/datetime.html">Datetime component</a> for detailed information regarding the model that must be used.</p>
-<table>
-<thead>
-<tr>
-<th>Vue Property</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>type</code></td>
-<td>String</td>
-<td>One of <code>date</code>, <code>time</code> or <code>datetime</code>. Default is <code>date</code>.</td>
-</tr>
-<tr>
-<td><code>min</code></td>
-<td>String</td>
-<td>Optional minimum value it can take. Has same format as Datetime model.</td>
-</tr>
-<tr>
-<td><code>max</code></td>
-<td>String</td>
-<td>Optional maximum value it can take. Has same format as Datetime model.</td>
-</tr>
-<tr>
-<td><code>color</code></td>
-<td>String</td>
-<td>One from <a href="/components/color-palette.html">Color Palette</a>.</td>
-</tr>
-<tr>
-<td><code>month-names</code></td>
-<td>Array</td>
-<td>Array of month names, starting with January.</td>
-</tr>
-<tr>
-<td><code>day-names</code></td>
-<td>Array</td>
-<td>Array of day names, starting with Sunday, Monday, …</td>
-</tr>
-<tr>
-<td><code>default-selection</code></td>
-<td>String/Number/Date</td>
-<td>Default date/time for picker when model is not yet set.</td>
-</tr>
-<tr>
-<td><code>monday-first</code></td>
-<td>Boolean</td>
-<td>Use Monday as first day of week. Otherwise it’s Sunday.</td>
-</tr>
-<tr>
-<td><code>format24h</code></td>
-<td>Boolean</td>
-<td>Use 24 hour time for Material picker instead of AM/PM system which is default.</td>
-</tr>
-<tr>
-<td><code>disable</code></td>
-<td>Boolean</td>
-<td>If set to <code>true</code>, the field is inaccessable.</td>
-</tr>
-<tr>
-<td><code>readonly</code></td>
-<td>Boolean</td>
-<td>If set to <code>true</code>, the component is readonly.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Vue-Methods"><a href="#Vue-Methods" class="headerlink" title="Vue Methods"></a>Vue Methods</h2><table>
-<thead>
-<tr>
-<th>Vue Method</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>clear()</code></td>
-<td>Sets model to empty string (removes current value).</td>
-</tr>
-<tr>
-<td><code>toggleAmPm()</code></td>
-<td>Toggle between AM - PM.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Vue-Events"><a href="#Vue-Events" class="headerlink" title="Vue Events"></a>Vue Events</h2><table>
-<thead>
-<tr>
-<th>Vue Event</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>@change(newValue)</code></td>
-<td>Triggered on model value change.</td>
-</tr>
-</tbody>
-</table>
 ]]></content>
     </entry>
     
@@ -6382,45 +6382,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Parallax]]></title>
-      <url>http://beta.quasar-framework.org/components/parallax.html</url>
-      <content type="html"><![CDATA[<p>Parallax scrolling is a technique in computer graphics and web design, where background images move by the camera slower than foreground images, creating an illusion of depth in a 2D scene and adding to the immersion.</p>
-<p>Quasar provides an out of the box Vue Component you can use. It takes care of a lot of quirks, including image size which can actually be smaller than the window width/height.</p>
-<input type="hidden" data-fullpage-demo="media/parallax">
-
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-parallax</span> <span class="attr">src</span>=<span class="string">"assets/mountains.jpg"</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- Dom elements to display while loading image --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"loading"</span>&gt;</span>Loading...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="comment">&lt;!--</span></div><div class="line">    The rest of Dom elements get displayed on</div><div class="line">    top of the Parallax image after it's loaded</div><div class="line">  --&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Parallax<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">q-parallax</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>While the underlying image is being loaded you can display a specific message through <code>&lt;div slot=&quot;loading&quot;&gt;...&lt;/div&gt;</code>. After image has loaded, you can also display some content on top of the Parallax image (in the example above an <code>&lt;h1&gt;</code> tag).</p>
-<h2 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h2><table>
-<thead>
-<tr>
-<th>Param Attributes</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>src</code></td>
-<td>String</td>
-<td>Source for the image.</td>
-</tr>
-<tr>
-<td><code>height</code></td>
-<td>Number</td>
-<td>Height of Parallax in pixels. Default value is 500.</td>
-</tr>
-<tr>
-<td><code>speed</code></td>
-<td>Number</td>
-<td>Float between 0 and 1.</td>
-</tr>
-</tbody>
-</table>
-<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- VueModel contains data property "imageURL" --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-parallax</span> <span class="attr">:src</span>=<span class="string">"imageURL"</span> <span class="attr">:height</span>=<span class="string">"300"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"loading"</span>&gt;</span>Loading...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Parallax<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">q-parallax</span>&gt;</span></div></pre></td></tr></table></figure></p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Platform Detection]]></title>
       <url>http://beta.quasar-framework.org/components/platform-detection.html</url>
       <content type="html"><![CDATA[<p>Helpers are built-in to detect the Platform (and its capabilities) in which the code is running:</p>
@@ -6476,6 +6437,45 @@
 <blockquote>
 <p><strong>NOTE</strong><br>When trying to show DOM elements only on a platform you can skip using Javascript and make use of Quasar CSS classes (which is more efficient). Read about this here: <a href="/components/visibility.html#Platform-Related">Design Helpers &gt; Visibility</a>.</p>
 </blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Parallax]]></title>
+      <url>http://beta.quasar-framework.org/components/parallax.html</url>
+      <content type="html"><![CDATA[<p>Parallax scrolling is a technique in computer graphics and web design, where background images move by the camera slower than foreground images, creating an illusion of depth in a 2D scene and adding to the immersion.</p>
+<p>Quasar provides an out of the box Vue Component you can use. It takes care of a lot of quirks, including image size which can actually be smaller than the window width/height.</p>
+<input type="hidden" data-fullpage-demo="media/parallax">
+
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-parallax</span> <span class="attr">src</span>=<span class="string">"assets/mountains.jpg"</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- Dom elements to display while loading image --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"loading"</span>&gt;</span>Loading...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="comment">&lt;!--</span></div><div class="line">    The rest of Dom elements get displayed on</div><div class="line">    top of the Parallax image after it's loaded</div><div class="line">  --&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Parallax<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">q-parallax</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>While the underlying image is being loaded you can display a specific message through <code>&lt;div slot=&quot;loading&quot;&gt;...&lt;/div&gt;</code>. After image has loaded, you can also display some content on top of the Parallax image (in the example above an <code>&lt;h1&gt;</code> tag).</p>
+<h2 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h2><table>
+<thead>
+<tr>
+<th>Param Attributes</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>src</code></td>
+<td>String</td>
+<td>Source for the image.</td>
+</tr>
+<tr>
+<td><code>height</code></td>
+<td>Number</td>
+<td>Height of Parallax in pixels. Default value is 500.</td>
+</tr>
+<tr>
+<td><code>speed</code></td>
+<td>Number</td>
+<td>Float between 0 and 1.</td>
+</tr>
+</tbody>
+</table>
+<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- VueModel contains data property "imageURL" --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-parallax</span> <span class="attr">:src</span>=<span class="string">"imageURL"</span> <span class="attr">:height</span>=<span class="string">"300"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"loading"</span>&gt;</span>Loading...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Parallax<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">q-parallax</span>&gt;</span></div></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
     
@@ -8177,16 +8177,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Stylus Variables]]></title>
-      <url>http://beta.quasar-framework.org/components/stylus-variables.html</url>
-      <content type="html"><![CDATA[<p>Quasar CSS is a blank slate that you can easily customize and modify to fit your brand, while still following the standards of each platform. The best apps in the app stores are fully customized and Quasar makes it easy to do the same with your App.</p>
-<p>Quasar is built on top of Stylus, which allows it to set some default styles for your App but makes it extremely easy for you to change the defaults in your App code.</p>
-<p>Customizing a theme means overriding Stylus variables which can hold colors, sizes, border types and so on. To understand how and where to make use of the full list of variables below, read <a href="/guide/quasar-theming.html">Guide &gt; Theming</a>.</p>
-<h2 id="Variables-List"><a href="#Variables-List" class="headerlink" title="Variables List"></a>Variables List</h2><!-- DO NOT WRITE ANYTHING BELOW THIS LINE -->
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Swipe Touch/Mouse Action]]></title>
       <url>http://beta.quasar-framework.org/components/swiping.html</url>
       <content type="html"><![CDATA[<p>Quasar offers full-featured Vue directives that can totally replace libraries like Hammerjs: <code>v-touch-pan</code>, <code>v-touch-swipe</code> and <code>v-touch-hold</code>.</p>
@@ -8201,6 +8191,16 @@
 <p><strong>NOTE</strong><br>The directive allows vertical scroll when capturing only horizontal swipes.</p>
 </blockquote>
 <p>When you don’t want to capture mouse actions too, use the <code>nomouse</code> modifier:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!--</span></div><div class="line">  directive won't be triggered by mouse actions;</div><div class="line">  it's exclusively triggered by touch actions now:</div><div class="line">--&gt;</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-touch-swipe.nomouse</span>=<span class="string">"userHasSwiped"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Stylus Variables]]></title>
+      <url>http://beta.quasar-framework.org/components/stylus-variables.html</url>
+      <content type="html"><![CDATA[<p>Quasar CSS is a blank slate that you can easily customize and modify to fit your brand, while still following the standards of each platform. The best apps in the app stores are fully customized and Quasar makes it easy to do the same with your App.</p>
+<p>Quasar is built on top of Stylus, which allows it to set some default styles for your App but makes it extremely easy for you to change the defaults in your App code.</p>
+<p>Customizing a theme means overriding Stylus variables which can hold colors, sizes, border types and so on. To understand how and where to make use of the full list of variables below, read <a href="/guide/quasar-theming.html">Guide &gt; Theming</a>.</p>
+<h2 id="Variables-List"><a href="#Variables-List" class="headerlink" title="Variables List"></a>Variables List</h2><!-- DO NOT WRITE ANYTHING BELOW THIS LINE -->
 ]]></content>
     </entry>
     
