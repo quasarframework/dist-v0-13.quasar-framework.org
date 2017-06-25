@@ -105,15 +105,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Dev vs Production Code]]></title>
-      <url>http://beta.quasar-framework.org/guide/app-dev-vs-production-code.html</url>
-      <content type="html"><![CDATA[<p>Quasar boilerplate has built-in functionality so you can differentiate between Development and Production code.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span> (DEV) &#123;</div><div class="line">  <span class="comment">// this code block gets executed only in Dev mode</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (PROD) &#123;</div><div class="line">  <span class="comment">// this code block gets executed only in Production mode</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Due to the way that this is implemented, for example when building for Production, the first block (dealing with Dev mode) is completely discarded from the bundle (gets removed for the production build).</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[App Build Commands]]></title>
       <url>http://beta.quasar-framework.org/guide/app-build-commands.html</url>
       <content type="html"><![CDATA[<h3 id="Development"><a href="#Development" class="headerlink" title="Development"></a>Development</h3><blockquote>
@@ -153,6 +144,15 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Dev vs Production Code]]></title>
+      <url>http://beta.quasar-framework.org/guide/app-dev-vs-production-code.html</url>
+      <content type="html"><![CDATA[<p>Quasar boilerplate has built-in functionality so you can differentiate between Development and Production code.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span> (DEV) &#123;</div><div class="line">  <span class="comment">// this code block gets executed only in Dev mode</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (PROD) &#123;</div><div class="line">  <span class="comment">// this code block gets executed only in Production mode</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Due to the way that this is implemented, for example when building for Production, the first block (dealing with Dev mode) is completely discarded from the bundle (gets removed for the production build).</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[App Handling Static Assets]]></title>
       <url>http://beta.quasar-framework.org/guide/app-handling-static-assets.html</url>
       <content type="html"><![CDATA[<p>You will notice in the project structure we have two directories for static assets: <code>src/assets/</code> and <code>src/statics/</code>. What is the difference between them?</p>
@@ -172,22 +172,6 @@
 <h2 id="“Real”-Static-Assets"><a href="#“Real”-Static-Assets" class="headerlink" title="“Real” Static Assets"></a>“Real” Static Assets</h2><p>In comparison, files in <code>src/statics/</code> are not processed by Webpack at all: they are directly copied to their final destination as-is, with the same filename. You must reference these files using absolute paths, which is determined by <code>build.publicPath</code> in <code>config/index.js</code>.</p>
 <p>As an example, with the following default values:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// config/index.js</span></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">  build: &#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">    publicPath: <span class="string">'/'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>Any file placed in <code>src/statics/</code> should be referenced using the absolute URL <code>/statics/[filename]</code>.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[App Linter Configuration]]></title>
-      <url>http://beta.quasar-framework.org/guide/app-linter-configuration.html</url>
-      <content type="html"><![CDATA[<p>The boilerplate created by Quasar CLI uses <a href="http://eslint.org/" target="_blank" rel="external">ESLint</a> as the linter, and uses the <a href="https://github.com/feross/standard/blob/master/RULES.md" target="_blank" rel="external">Standard</a> preset with some small customizations.</p>
-<p>If you are not happy with the default linting rules, you have several options:</p>
-<ol>
-<li><p>Overwrite individual rules in .eslintrc.js. For example, you can add the following rule to enforce semicolons instead of omitting them:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="string">"semi"</span>: [<span class="number">2</span>, <span class="string">"always"</span>]</div></pre></td></tr></table></figure>
-</li>
-<li><p>Remove linter by editing <code>/build/webpack.base.conf.js</code> and removing the lines below from <code>module/rules</code>:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&#123; <span class="comment">// eslint</span></div><div class="line">  enforce: <span class="string">'pre'</span>,</div><div class="line">  test: <span class="regexp">/\.(vue|js)$/</span>,</div><div class="line">  loader: <span class="string">'eslint-loader'</span>,</div><div class="line">  include: projectRoot,</div><div class="line">  exclude: <span class="regexp">/node_modules/</span></div><div class="line">&#125;,</div></pre></td></tr></table></figure>
-</li>
-</ol>
 ]]></content>
     </entry>
     
@@ -212,6 +196,22 @@
 <h2 id="Standalone-CSS-Files"><a href="#Standalone-CSS-Files" class="headerlink" title="Standalone CSS Files"></a>Standalone CSS Files</h2><p>To ensure consistent extraction and processing it is recommended that you import global, standalone style files from your root component, for example:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">src</span>=<span class="string">"./styles/global.less"</span> <span class="attr">lang</span>=<span class="string">"less"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>Note you should probably only do this for the styles written by yourself for your application. For existing libraries e.g. Bootstrap or Semantic UI, you can place them inside <code>src/statics/</code> and reference them directly in index.html. This avoids extra build time and also is better for browser caching. (See <a href="/guide/app-handling-static-assets.html">Handling Static Assets</a>).</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[App Linter Configuration]]></title>
+      <url>http://beta.quasar-framework.org/guide/app-linter-configuration.html</url>
+      <content type="html"><![CDATA[<p>The boilerplate created by Quasar CLI uses <a href="http://eslint.org/" target="_blank" rel="external">ESLint</a> as the linter, and uses the <a href="https://github.com/feross/standard/blob/master/RULES.md" target="_blank" rel="external">Standard</a> preset with some small customizations.</p>
+<p>If you are not happy with the default linting rules, you have several options:</p>
+<ol>
+<li><p>Overwrite individual rules in .eslintrc.js. For example, you can add the following rule to enforce semicolons instead of omitting them:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="string">"semi"</span>: [<span class="number">2</span>, <span class="string">"always"</span>]</div></pre></td></tr></table></figure>
+</li>
+<li><p>Remove linter by editing <code>/build/webpack.base.conf.js</code> and removing the lines below from <code>module/rules</code>:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&#123; <span class="comment">// eslint</span></div><div class="line">  enforce: <span class="string">'pre'</span>,</div><div class="line">  test: <span class="regexp">/\.(vue|js)$/</span>,</div><div class="line">  loader: <span class="string">'eslint-loader'</span>,</div><div class="line">  include: projectRoot,</div><div class="line">  exclude: <span class="regexp">/node_modules/</span></div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+</li>
+</ol>
 ]]></content>
     </entry>
     
@@ -447,14 +447,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Form Validation]]></title>
-      <url>http://beta.quasar-framework.org/guide/form-validation.html</url>
-      <content type="html"><![CDATA[<p>Recommended package for Form Validations is <code>Vuelidate</code>.<br>Get started with the <a href="https://monterail.github.io/vuelidate/" target="_blank" rel="external">documentation</a>.</p>
-<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-input</span></span></div><div class="line">      <span class="attr">v-model</span>=<span class="string">"form.email"</span></div><div class="line">      @<span class="attr">blur</span>=<span class="string">"$v.form.email.$touch"</span></div><div class="line">      @<span class="attr">keyup.enter</span>=<span class="string">"submit"</span></div><div class="line">      <span class="attr">:error</span>=<span class="string">"$v.form.email.$error"</span></div><div class="line">    /&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">q-btn</span> <span class="attr">color</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"submit"</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">q-btn</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">import</span> &#123; required, email &#125; <span class="keyword">from</span> <span class="string">'vuelidate/lib/validators'</span></div><div class="line"><span class="keyword">import</span> &#123; Toast &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  data () &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      form: &#123;</div><div class="line">        email: <span class="string">''</span></div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  validations: &#123;</div><div class="line">    form: &#123;</div><div class="line">      email: &#123; required, email  &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  methods: &#123;</div><div class="line">    submit () &#123;</div><div class="line">      <span class="keyword">this</span>.$v.form.$touch()</div><div class="line"></div><div class="line">      <span class="keyword">if</span> (<span class="keyword">this</span>.$v.form.$error) &#123;</div><div class="line">        Toast.create(<span class="string">'Please review fields again.'</span>)</div><div class="line">        <span class="keyword">return</span></div><div class="line">      &#125;</div><div class="line"></div><div class="line">      <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Getting Started]]></title>
       <url>http://beta.quasar-framework.org/guide/index.html</url>
       <content type="html"><![CDATA[<p>There are 2 sections on this documentation website that will get you familiarized with Quasar:</p>
@@ -487,6 +479,14 @@
 <blockquote>
 <p>That’s it. You’re all set now. Continue to read the guide about Quasar and don’t forget to have fun! :)</p>
 </blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Form Validation]]></title>
+      <url>http://beta.quasar-framework.org/guide/form-validation.html</url>
+      <content type="html"><![CDATA[<p>Recommended package for Form Validations is <code>Vuelidate</code>.<br>Get started with the <a href="https://monterail.github.io/vuelidate/" target="_blank" rel="external">documentation</a>.</p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-input</span></span></div><div class="line">      <span class="attr">v-model</span>=<span class="string">"form.email"</span></div><div class="line">      @<span class="attr">blur</span>=<span class="string">"$v.form.email.$touch"</span></div><div class="line">      @<span class="attr">keyup.enter</span>=<span class="string">"submit"</span></div><div class="line">      <span class="attr">:error</span>=<span class="string">"$v.form.email.$error"</span></div><div class="line">    /&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">q-btn</span> <span class="attr">color</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"submit"</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">q-btn</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">import</span> &#123; required, email &#125; <span class="keyword">from</span> <span class="string">'vuelidate/lib/validators'</span></div><div class="line"><span class="keyword">import</span> &#123; Toast &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  data () &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      form: &#123;</div><div class="line">        email: <span class="string">''</span></div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  validations: &#123;</div><div class="line">    form: &#123;</div><div class="line">      email: &#123; required, email  &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  methods: &#123;</div><div class="line">    submit () &#123;</div><div class="line">      <span class="keyword">this</span>.$v.form.$touch()</div><div class="line"></div><div class="line">      <span class="keyword">if</span> (<span class="keyword">this</span>.$v.form.$error) &#123;</div><div class="line">        Toast.create(<span class="string">'Please review fields again.'</span>)</div><div class="line">        <span class="keyword">return</span></div><div class="line">      &#125;</div><div class="line"></div><div class="line">      <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -2547,61 +2547,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Datetime Range]]></title>
-      <url>http://beta.quasar-framework.org/components/datetime-range.html</url>
-      <content type="html"><![CDATA[<p>The Datetime Range component offers the users the ability to input a date, time or datetime interval. It is based off of the <a href="/components/datetime.html">Datetime component</a>. Before diving in, make sure you know how to use the Datetime component, since this component shares same properties.</p>
-<input type="hidden" data-fullpage-demo="forms/datetime/range-datetime">
-
-<p>In essense, Datetime Range is made up of two Datetime components, one for “from” and one for “to”, making up a date interval together.</p>
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Date Range --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-datetime-range</span></span></div><div class="line">  <span class="attr">type</span>=<span class="string">"date"</span></div><div class="line">  <span class="attr">v-model</span>=<span class="string">"range"</span></div><div class="line">  <span class="attr">:min</span>=<span class="string">"min"</span></div><div class="line">  <span class="attr">:max</span>=<span class="string">"max"</span></div><div class="line">/&gt;</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Time Range --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-datetime-range</span></span></div><div class="line">  <span class="attr">type</span>=<span class="string">"time"</span></div><div class="line">  <span class="attr">v-model</span>=<span class="string">"range"</span></div><div class="line">  <span class="attr">:min</span>=<span class="string">"min"</span></div><div class="line">  <span class="attr">:max</span>=<span class="string">"max"</span></div><div class="line">/&gt;</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Datetime Range --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-datetime-range</span></span></div><div class="line">  <span class="attr">type</span>=<span class="string">"datetime"</span></div><div class="line">  <span class="attr">v-model</span>=<span class="string">"range"</span></div><div class="line">  <span class="attr">:min</span>=<span class="string">"min"</span></div><div class="line">  <span class="attr">:max</span>=<span class="string">"max"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
-<h2 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h2><blockquote>
-<p><strong>Note</strong><br>The properties below are only special to the Datetime Range component. This component also shares all of the properties of the <a href="/components/datetime.html">Datetime component</a> which get applied to both inner Datetimes.</p>
-</blockquote>
-<p>Supports <code>v-model</code> which must be an Object with <code>from</code> and <code>to</code> properties, which each holding the same types <code>String</code>, <code>Number</code> and <code>Date</code> as the model used for <a href="/components/datetime.html">Datetime component</a>. In effect, these are the models for each of the two datetime components used to create the range.</p>
-<table>
-<thead>
-<tr>
-<th>Vue Property</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>default-from</code></td>
-<td>String, Number, Date</td>
-<td>Used as “default-selection” for “from” model.</td>
-</tr>
-<tr>
-<td><code>default-to</code></td>
-<td>String, Number, Date</td>
-<td>Used as “default-selection” for “to” model.</td>
-</tr>
-<tr>
-<td><code>css</code></td>
-<td>String/Object</td>
-<td>CSS applied to each Datetime component</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Vue-Events"><a href="#Vue-Events" class="headerlink" title="Vue Events"></a>Vue Events</h2><table>
-<thead>
-<tr>
-<th>Vue Event</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>@change(newVal)</code></td>
-<td>Triggered when model (Object with <code>to</code> and <code>from</code> props) changes.</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Data Table]]></title>
       <url>http://beta.quasar-framework.org/components/datatable.html</url>
       <content type="html"><![CDATA[<p>Quasar Grid is a Vue Component which allows you to display data in a tabular manner. Features:</p>
@@ -2727,6 +2672,61 @@
 <li>Rendering a cell with a formatter method. The formatter method must be really quick, so strip out whatever is not needed and avoid making complex computations.</li>
 </ul>
 <p>The more rows you are displaying at a time the more time it will take for Data Table to render the cells. It’s a good idea to force pagination when you’re using lots of formatters or rendering with lots of components.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Datetime Range]]></title>
+      <url>http://beta.quasar-framework.org/components/datetime-range.html</url>
+      <content type="html"><![CDATA[<p>The Datetime Range component offers the users the ability to input a date, time or datetime interval. It is based off of the <a href="/components/datetime.html">Datetime component</a>. Before diving in, make sure you know how to use the Datetime component, since this component shares same properties.</p>
+<input type="hidden" data-fullpage-demo="forms/datetime/range-datetime">
+
+<p>In essense, Datetime Range is made up of two Datetime components, one for “from” and one for “to”, making up a date interval together.</p>
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Date Range --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-datetime-range</span></span></div><div class="line">  <span class="attr">type</span>=<span class="string">"date"</span></div><div class="line">  <span class="attr">v-model</span>=<span class="string">"range"</span></div><div class="line">  <span class="attr">:min</span>=<span class="string">"min"</span></div><div class="line">  <span class="attr">:max</span>=<span class="string">"max"</span></div><div class="line">/&gt;</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Time Range --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-datetime-range</span></span></div><div class="line">  <span class="attr">type</span>=<span class="string">"time"</span></div><div class="line">  <span class="attr">v-model</span>=<span class="string">"range"</span></div><div class="line">  <span class="attr">:min</span>=<span class="string">"min"</span></div><div class="line">  <span class="attr">:max</span>=<span class="string">"max"</span></div><div class="line">/&gt;</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Datetime Range --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-datetime-range</span></span></div><div class="line">  <span class="attr">type</span>=<span class="string">"datetime"</span></div><div class="line">  <span class="attr">v-model</span>=<span class="string">"range"</span></div><div class="line">  <span class="attr">:min</span>=<span class="string">"min"</span></div><div class="line">  <span class="attr">:max</span>=<span class="string">"max"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
+<h2 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h2><blockquote>
+<p><strong>Note</strong><br>The properties below are only special to the Datetime Range component. This component also shares all of the properties of the <a href="/components/datetime.html">Datetime component</a> which get applied to both inner Datetimes.</p>
+</blockquote>
+<p>Supports <code>v-model</code> which must be an Object with <code>from</code> and <code>to</code> properties, which each holding the same types <code>String</code>, <code>Number</code> and <code>Date</code> as the model used for <a href="/components/datetime.html">Datetime component</a>. In effect, these are the models for each of the two datetime components used to create the range.</p>
+<table>
+<thead>
+<tr>
+<th>Vue Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>default-from</code></td>
+<td>String, Number, Date</td>
+<td>Used as “default-selection” for “from” model.</td>
+</tr>
+<tr>
+<td><code>default-to</code></td>
+<td>String, Number, Date</td>
+<td>Used as “default-selection” for “to” model.</td>
+</tr>
+<tr>
+<td><code>css</code></td>
+<td>String/Object</td>
+<td>CSS applied to each Datetime component</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Vue-Events"><a href="#Vue-Events" class="headerlink" title="Vue Events"></a>Vue Events</h2><table>
+<thead>
+<tr>
+<th>Vue Event</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@change(newVal)</code></td>
+<td>Triggered when model (Object with <code>to</code> and <code>from</code> props) changes.</td>
+</tr>
+</tbody>
+</table>
 ]]></content>
     </entry>
     
@@ -3891,30 +3891,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Handling Back Button]]></title>
-      <url>http://beta.quasar-framework.org/components/handling-back-button.html</url>
-      <content type="html"><![CDATA[<p>When writing reusable code for building a mobile App and a website, it’s important to know how to handle the “Back” button. More specifically, how to manage buttons on your layout/page that should make your App “go back” to the previous screen.</p>
-<blockquote>
-<p>If you have no knowledge of <a href="http://router.vuejs.org/" target="_blank" rel="external">Vue Router</a>, we highly recommend you read and understand how it works first.</p>
-</blockquote>
-<h2 id="Navigation-Scenario"><a href="#Navigation-Scenario" class="headerlink" title="Navigation Scenario"></a>Navigation Scenario</h2><p>Consider this situation: We have an App with two pages (so two routes): a login page (route “/“) and another page with a list of items on multiple layout tabs-  Let’s call this page “List page” from now on, where each tab has a route like “/list/shoes”, “/list/hats”. The Login page redirects to List page and List page has a “Logout” button, which redirects the user to the Login page.</p>
-<p>How would you handle this situation? Normally, you’d write code like below for the Login and Logout button (we won’t go into details of handling the login information and communicating with a server as this is outside of our point here):</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Login button --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-btn</span> @<span class="attr">click</span>=<span class="string">"$router.push('/list')"</span>&gt;</span>Login<span class="tag">&lt;/<span class="name">q-btn</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Logout button --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-btn</span> @<span class="attr">click</span>=<span class="string">"$router.push('/list')"</span>&gt;</span>Logout<span class="tag">&lt;/<span class="name">q-btn</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>Now you build your App and install it on a phone. You open up the App, hit login then logout, then the phone’s back button. What you most likely want is for your App to exit at this point… but it doesn’t! It goes to the “/list” route instead. It’s kind of obvious why. Web history builds up as you hit the buttons:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line"># Start App</div><div class="line">--&gt; window.history.length is 1</div><div class="line"></div><div class="line"># Hit Login button</div><div class="line">--&gt; window.history.length is 2</div><div class="line"></div><div class="line"># Hit Logout button</div><div class="line">--&gt; window.history.length is 3!</div></pre></td></tr></table></figure></p>
-<p>What you’d like instead, is when you hit the Logout button, the <code>window.history.length</code> to be 1 again. Quasar can handle this automatically for you. Read about the <code>v-go-back</code> Vue directive.</p>
-<h2 id="Directive-“v-go-back”"><a href="#Directive-“v-go-back”" class="headerlink" title="Directive “v-go-back”"></a>Directive “v-go-back”</h2><p>Let’s rewrite the Logout button to act as we would actually want it to work, which is to make <code>window.history.length</code> be 1 again:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Logout button --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"primary"</span> <span class="attr">v-go-back</span>=<span class="string">" '/' "</span>&gt;</span>Logout<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>This directive determines if the Platform is Cordova, and if so, it performs a <code>window.history.back()</code> call instead of a <code>$router.push(&#39;/&#39;)</code>.</p>
-<h2 id="Quirks"><a href="#Quirks" class="headerlink" title="Quirks"></a>Quirks</h2><p>Now you may think everything will work smoothly, but you must be careful about how your app is stacking up the window history. Remember, we started out by saying that the List page has a layout with multiple tabs, each one with its own route (“/list/shoes”, “/list/hats”). If we’d use <code>to=&quot;/list/shoes&quot;</code> and <code>to=&quot;/list/hats&#39;&quot;</code> on your Tabs (read more about Tabs <a href="/components/tabs.html">here</a>), then window history will build up when switching between the tabs.</p>
-<p>This incorrect behavior for apps is due to Vue Router pushing routes to the history by default. What you’d like instead, is for your window history length to stay the same, even if routes change. Fortunately, Vue Router comes to the rescue with the <code>replace</code> property, which essentially replaces current route instead of pushing it as a new route.</p>
-<p>So, besides <code>to=&quot; &#39;...route...&#39; &quot;</code> you should add the <code>replace</code> attribute (becoming <code>to=&quot; &#39;...route...&#39; &quot; replace</code>). This will replace the current route in the window history rather than pushing it.</p>
-<p>The same applies to <code>&lt;router-link&gt;</code>s.</p>
-<blockquote>
-<p>Always <strong>think</strong> about how you redirect your App to a new route, depending on what you want to achieve. Think if you really want to push a new route to window history or if you want to “replace” the current route. Otherwise the phone/tablet/browser “Back” button won’t work quite as expected. Instead of finally exiting the App, it will make you go through all the routes in the reverse order they were visited. So when you hit back and go to the Login page, you’d expect another back to make the App exit, but it might make your App go to one of the List tabs, depending on the user’s navigation history.</p>
-</blockquote>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Handling JS Date]]></title>
       <url>http://beta.quasar-framework.org/components/handling-js-date.html</url>
       <content type="html"><![CDATA[<p>Quasar provides a set of useful functions to manipulate JS Date easily in most use cases, without the high additional cost of integrating dedicated libraries like <a href="https://momentjs.com" target="_blank" rel="external">moment</a>.</p>
@@ -4230,6 +4206,30 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Handling Back Button]]></title>
+      <url>http://beta.quasar-framework.org/components/handling-back-button.html</url>
+      <content type="html"><![CDATA[<p>When writing reusable code for building a mobile App and a website, it’s important to know how to handle the “Back” button. More specifically, how to manage buttons on your layout/page that should make your App “go back” to the previous screen.</p>
+<blockquote>
+<p>If you have no knowledge of <a href="http://router.vuejs.org/" target="_blank" rel="external">Vue Router</a>, we highly recommend you read and understand how it works first.</p>
+</blockquote>
+<h2 id="Navigation-Scenario"><a href="#Navigation-Scenario" class="headerlink" title="Navigation Scenario"></a>Navigation Scenario</h2><p>Consider this situation: We have an App with two pages (so two routes): a login page (route “/“) and another page with a list of items on multiple layout tabs-  Let’s call this page “List page” from now on, where each tab has a route like “/list/shoes”, “/list/hats”. The Login page redirects to List page and List page has a “Logout” button, which redirects the user to the Login page.</p>
+<p>How would you handle this situation? Normally, you’d write code like below for the Login and Logout button (we won’t go into details of handling the login information and communicating with a server as this is outside of our point here):</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Login button --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-btn</span> @<span class="attr">click</span>=<span class="string">"$router.push('/list')"</span>&gt;</span>Login<span class="tag">&lt;/<span class="name">q-btn</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Logout button --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-btn</span> @<span class="attr">click</span>=<span class="string">"$router.push('/list')"</span>&gt;</span>Logout<span class="tag">&lt;/<span class="name">q-btn</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Now you build your App and install it on a phone. You open up the App, hit login then logout, then the phone’s back button. What you most likely want is for your App to exit at this point… but it doesn’t! It goes to the “/list” route instead. It’s kind of obvious why. Web history builds up as you hit the buttons:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line"># Start App</div><div class="line">--&gt; window.history.length is 1</div><div class="line"></div><div class="line"># Hit Login button</div><div class="line">--&gt; window.history.length is 2</div><div class="line"></div><div class="line"># Hit Logout button</div><div class="line">--&gt; window.history.length is 3!</div></pre></td></tr></table></figure></p>
+<p>What you’d like instead, is when you hit the Logout button, the <code>window.history.length</code> to be 1 again. Quasar can handle this automatically for you. Read about the <code>v-go-back</code> Vue directive.</p>
+<h2 id="Directive-“v-go-back”"><a href="#Directive-“v-go-back”" class="headerlink" title="Directive “v-go-back”"></a>Directive “v-go-back”</h2><p>Let’s rewrite the Logout button to act as we would actually want it to work, which is to make <code>window.history.length</code> be 1 again:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Logout button --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"primary"</span> <span class="attr">v-go-back</span>=<span class="string">" '/' "</span>&gt;</span>Logout<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>This directive determines if the Platform is Cordova, and if so, it performs a <code>window.history.back()</code> call instead of a <code>$router.push(&#39;/&#39;)</code>.</p>
+<h2 id="Quirks"><a href="#Quirks" class="headerlink" title="Quirks"></a>Quirks</h2><p>Now you may think everything will work smoothly, but you must be careful about how your app is stacking up the window history. Remember, we started out by saying that the List page has a layout with multiple tabs, each one with its own route (“/list/shoes”, “/list/hats”). If we’d use <code>to=&quot;/list/shoes&quot;</code> and <code>to=&quot;/list/hats&#39;&quot;</code> on your Tabs (read more about Tabs <a href="/components/tabs.html">here</a>), then window history will build up when switching between the tabs.</p>
+<p>This incorrect behavior for apps is due to Vue Router pushing routes to the history by default. What you’d like instead, is for your window history length to stay the same, even if routes change. Fortunately, Vue Router comes to the rescue with the <code>replace</code> property, which essentially replaces current route instead of pushing it as a new route.</p>
+<p>So, besides <code>to=&quot; &#39;...route...&#39; &quot;</code> you should add the <code>replace</code> attribute (becoming <code>to=&quot; &#39;...route...&#39; &quot; replace</code>). This will replace the current route in the window history rather than pushing it.</p>
+<p>The same applies to <code>&lt;router-link&gt;</code>s.</p>
+<blockquote>
+<p>Always <strong>think</strong> about how you redirect your App to a new route, depending on what you want to achieve. Think if you really want to push a new route to window history or if you want to “replace” the current route. Otherwise the phone/tablet/browser “Back” button won’t work quite as expected. Instead of finally exiting the App, it will make you go through all the routes in the reverse order they were visited. So when you hit back and go to the Login page, you’d expect another back to make the App exit, but it might make your App go to one of the List tabs, depending on the user’s navigation history.</p>
+</blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[HTML Tables]]></title>
       <url>http://beta.quasar-framework.org/components/html-table.html</url>
       <content type="html"><![CDATA[<p>HTML tables don’t need to look bad. Quasar takes care of them by default if you add <code>q-table</code> CSS class to them.</p>
@@ -4248,7 +4248,7 @@
       <content type="html"><![CDATA[<p>The Quasar Icon component allows you to easily insert icons within other components or any other area of your pages, as you’d like.<br>Quasar currently supports: <a href="https://material.io/icons/" target="_blank" rel="external">Material Icons</a> out of the box, but you can add <a href="http://fontawesome.io/icons/" target="_blank" rel="external">Font Awesome</a>, <a href="http://ionicons.com/" target="_blank" rel="external">Ionicons</a> and <a href="https://icomoon.io/" target="_blank" rel="external">IcoMoon</a>. Learn how to include the last three (which are optional) by reading on.</p>
 <p>Importing the required font icons is required in order to make them work. Read <a href="#Importing-Icons">Importing Icons</a> section for more details.</p>
 <p>Please <a href="https://github.com/quasarframework/quasar/issues/new" target="_blank" rel="external">submit a request</a> if your favorite font icon is not listed here.</p>
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><p>Learn how to include the font icons that you need in the next sections, but for now, let’s take a look at how we can use QIcon component:</p>
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><p>Let’s take a look at how we can use QIcon component. (Do not forget to check down below how to <a href="#Importing-Icons">import the icons</a>, otherwise they won’t show up!)</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Material icons have no prefix --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-icon</span> <span class="attr">name</span>=<span class="string">"thumb_up"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Ionicons have "ion-" prefix --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-icon</span> <span class="attr">name</span>=<span class="string">"ion-heart"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Fontawesome icons have "fa-" prefix --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-icon</span> <span class="attr">name</span>=<span class="string">"fa-id-card"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- IcoMoon icons have "icon-" prefix --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-icon</span> <span class="attr">name</span>=<span class="string">"icon-chrome"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!--</span></div><div class="line">  or if you prefer the non self-closing tag version</div><div class="line">  which allows to add a QPopover or QTooltip:</div><div class="line">--&gt;</div><div class="line"><span class="tag">&lt;<span class="name">q-icon</span> <span class="attr">name</span>=<span class="string">"thumb_up"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">q-tooltip</span>&gt;</span>Some tooltip<span class="tag">&lt;/<span class="name">q-tooltip</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">q-icon</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>There are cases where you want to differentiate icons displayed based on the Quasar theme you are using, so you can use <code>mat</code> and <code>ios</code> props. This is practical for cross-platform application development where you use different themes for each platform.<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-icon</span> <span class="attr">mat</span>=<span class="string">"settings"</span> <span class="attr">ios</span>=<span class="string">"ion-ios-gear-outline"</span> /&gt;</span></div></pre></td></tr></table></figure></p>
 <p>For “icon” properties on different Quasar components you won’t have the means to specify an icon for each platform, but you can achieve the same effect with:</p>
@@ -7005,6 +7005,89 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Rating]]></title>
+      <url>http://beta.quasar-framework.org/components/rating.html</url>
+      <content type="html"><![CDATA[<p>Quasar Rating is a Component which allows users to rate items, usually known as “Star Rating”.</p>
+<input type="hidden" data-fullpage-demo="forms/rating">
+
+<p>Works well with <a href="/components/field.html">QField</a> for additional functionality such as a helper, error message placeholder and many others.</p>
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-rating</span> <span class="attr">v-model</span>=<span class="string">"ratingModel"</span> <span class="attr">:max</span>=<span class="string">"3"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Disabled State --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-rating</span></span></div><div class="line">  <span class="attr">disable</span></div><div class="line">  <span class="attr">v-model</span>=<span class="string">"ratingModel"</span></div><div class="line">  <span class="attr">:max</span>=<span class="string">"3"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
+<h2 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h2><p>Supports <code>v-model</code> which should be binded to a Number in your scope.</p>
+<table>
+<thead>
+<tr>
+<th>Vue Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max</code></td>
+<td>Number</td>
+<td>Number of icons to display.</td>
+</tr>
+<tr>
+<td><code>icon</code></td>
+<td>String</td>
+<td>Icon to use as grade. Default value: <code>grade</code>.</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>String</td>
+<td>One of <a href="/components/color-palette.html">Quasar Color Palette</a>.</td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>String</td>
+<td>CSS size String. Examples: ‘12px’, ‘2rem’.</td>
+</tr>
+<tr>
+<td><code>readonly</code></td>
+<td>Boolean</td>
+<td>Display as readonly.</td>
+</tr>
+<tr>
+<td><code>disable</code></td>
+<td>Boolean</td>
+<td>When set to <code>true</code> user can not change model value and Rating is faded.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Vue-Methods"><a href="#Vue-Methods" class="headerlink" title="Vue Methods"></a>Vue Methods</h2><table>
+<thead>
+<tr>
+<th>Vue Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set(value)</code></td>
+<td>Parses and sets that value.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Vue-Events"><a href="#Vue-Events" class="headerlink" title="Vue Events"></a>Vue Events</h2><table>
+<thead>
+<tr>
+<th>Vue Event</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@change(newVal)</code></td>
+<td>Triggered on model value change.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Coloring"><a href="#Coloring" class="headerlink" title="Coloring"></a>Coloring</h2><p>Use one of the Quasar colors from the <a href="/components/color-palette.html">Color Palette</a>, like <code>primary</code>, <code>secondary</code>, <code>orange-7</code>, <code>teal-2</code> as CSS class:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-rating</span></span></div><div class="line">  <span class="attr">class</span>=<span class="string">"orange"</span></div><div class="line">  <span class="attr">v-model</span>=<span class="string">"ratingModel"</span></div><div class="line">  <span class="attr">:max</span>=<span class="string">"5"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Range]]></title>
       <url>http://beta.quasar-framework.org/components/range.html</url>
       <content type="html"><![CDATA[<p>The Quasar Range component is a great way to offer the user the selection of a sub-range of values between a minimum and maximum value, with optional steps to select those values. An example use case for the Range component would be to offer a price range selection.</p>
@@ -7113,89 +7196,6 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-range</span> <span class="attr">drag-range</span> <span class="attr">v-model</span>=<span class="string">"rangeValues"</span> <span class="attr">:min</span>=<span class="string">"0"</span> <span class="attr">:max</span>=<span class="string">"100"</span> <span class="attr">label</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">q-range</span> <span class="attr">drag-only-range</span> <span class="attr">v-model</span>=<span class="string">"rangeValues"</span> <span class="attr">:min</span>=<span class="string">"0"</span> <span class="attr">:max</span>=<span class="string">"100"</span> <span class="attr">label</span> /&gt;</span></div><div class="line">```  </div><div class="line"></div><div class="line">### Adding Markers</div><div class="line">Use the `markers` prop, to show the steps available for the range selection.</div><div class="line">``` html</div><div class="line"><span class="tag">&lt;<span class="name">q-range</span> <span class="attr">markers</span> <span class="attr">v-model</span>=<span class="string">"rangeValues"</span> <span class="attr">:min</span>=<span class="string">"-6"</span> <span class="attr">:max</span>=<span class="string">"10"</span> <span class="attr">:step</span>=<span class="string">"2"</span> <span class="attr">label</span> <span class="attr">snap</span>  /&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="Overriding-Labels"><a href="#Overriding-Labels" class="headerlink" title="Overriding Labels"></a>Overriding Labels</h3><p>In the example below we add a “px” suffix to labels.<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-range</span></span></div><div class="line">  <span class="attr">v-model</span>=<span class="string">"label"</span></div><div class="line">  <span class="attr">:min</span>=<span class="string">"-20"</span> <span class="attr">:max</span>=<span class="string">"20"</span></div><div class="line">  <span class="attr">:left-label-value</span>=<span class="string">"`$&#123;label.min&#125;px`"</span></div><div class="line">  <span class="attr">:right-label-value</span>=<span class="string">"`$&#123;label.max&#125;px`"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure></p>
 <h2 id="Usage-Inside-of-a-List"><a href="#Usage-Inside-of-a-List" class="headerlink" title="Usage Inside of a List"></a>Usage Inside of a List</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-list</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">q-item</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-item-side</span> <span class="attr">icon</span>=<span class="string">"local_atm"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-item-main</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">q-range</span> <span class="attr">v-model</span>=<span class="string">"standalone"</span> <span class="attr">:min</span>=<span class="string">"0"</span> <span class="attr">:max</span>=<span class="string">"50"</span> <span class="attr">label</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">q-item-main</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">q-item</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">q-item</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-item-side</span> <span class="attr">icon</span>=<span class="string">"euro symbol"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-item-main</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">q-range</span> <span class="attr">v-model</span>=<span class="string">"standalone"</span> <span class="attr">:min</span>=<span class="string">"0"</span> <span class="attr">:max</span>=<span class="string">"50"</span> <span class="attr">label</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">q-item-main</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">q-item</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">q-list</span>&gt;</span></div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Rating]]></title>
-      <url>http://beta.quasar-framework.org/components/rating.html</url>
-      <content type="html"><![CDATA[<p>Quasar Rating is a Component which allows users to rate items, usually known as “Star Rating”.</p>
-<input type="hidden" data-fullpage-demo="forms/rating">
-
-<p>Works well with <a href="/components/field.html">QField</a> for additional functionality such as a helper, error message placeholder and many others.</p>
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-rating</span> <span class="attr">v-model</span>=<span class="string">"ratingModel"</span> <span class="attr">:max</span>=<span class="string">"3"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Disabled State --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-rating</span></span></div><div class="line">  <span class="attr">disable</span></div><div class="line">  <span class="attr">v-model</span>=<span class="string">"ratingModel"</span></div><div class="line">  <span class="attr">:max</span>=<span class="string">"3"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
-<h2 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h2><p>Supports <code>v-model</code> which should be binded to a Number in your scope.</p>
-<table>
-<thead>
-<tr>
-<th>Vue Property</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>max</code></td>
-<td>Number</td>
-<td>Number of icons to display.</td>
-</tr>
-<tr>
-<td><code>icon</code></td>
-<td>String</td>
-<td>Icon to use as grade. Default value: <code>grade</code>.</td>
-</tr>
-<tr>
-<td><code>color</code></td>
-<td>String</td>
-<td>One of <a href="/components/color-palette.html">Quasar Color Palette</a>.</td>
-</tr>
-<tr>
-<td><code>size</code></td>
-<td>String</td>
-<td>CSS size String. Examples: ‘12px’, ‘2rem’.</td>
-</tr>
-<tr>
-<td><code>readonly</code></td>
-<td>Boolean</td>
-<td>Display as readonly.</td>
-</tr>
-<tr>
-<td><code>disable</code></td>
-<td>Boolean</td>
-<td>When set to <code>true</code> user can not change model value and Rating is faded.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Vue-Methods"><a href="#Vue-Methods" class="headerlink" title="Vue Methods"></a>Vue Methods</h2><table>
-<thead>
-<tr>
-<th>Vue Method</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>set(value)</code></td>
-<td>Parses and sets that value.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Vue-Events"><a href="#Vue-Events" class="headerlink" title="Vue Events"></a>Vue Events</h2><table>
-<thead>
-<tr>
-<th>Vue Event</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>@change(newVal)</code></td>
-<td>Triggered on model value change.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Coloring"><a href="#Coloring" class="headerlink" title="Coloring"></a>Coloring</h2><p>Use one of the Quasar colors from the <a href="/components/color-palette.html">Color Palette</a>, like <code>primary</code>, <code>secondary</code>, <code>orange-7</code>, <code>teal-2</code> as CSS class:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-rating</span></span></div><div class="line">  <span class="attr">class</span>=<span class="string">"orange"</span></div><div class="line">  <span class="attr">v-model</span>=<span class="string">"ratingModel"</span></div><div class="line">  <span class="attr">:max</span>=<span class="string">"5"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
