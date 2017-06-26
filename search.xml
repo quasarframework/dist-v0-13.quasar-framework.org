@@ -78,33 +78,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[App Folder Boilerplate]]></title>
-      <url>http://beta.quasar-framework.org/guide/app-boilerplate.html</url>
-      <content type="html"><![CDATA[<p>The Quasar CLI helps you start an App folder with all the necessary boilerplate  you will need to get started building your application. To begin, there is a simple command:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ quasar init &lt;folder name&gt;</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>The boilerplate created is a fork of the <a href="https://github.com/vuejs-templates/webpack" target="_blank" rel="external">official Webpack + VueJs</a> repo. So, if you’ve worked with Vue’s CLI, Quasar’s CLI should seem quite familiar to you.</p>
-</blockquote>
-<p>If you want to tweak things specific for your App, you first need to understand the underlying tools being used in the generated boilerplate.</p>
-<p>The boilerplate is targeted towards large, serious projects and assumes you are somewhat familiar with <strong>Webpack</strong> and <strong>vue-loader</strong>. Make sure to also read <a href="http://vue-loader.vuejs.org/index.html" target="_blank" rel="external">vue-loader’s documentation</a> for common workflow recipes.</p>
-<h2 id="What’s-Included"><a href="#What’s-Included" class="headerlink" title="What’s Included"></a>What’s Included</h2><p>While developing with Dev Server (<code>$ quasar dev</code>):</p>
-<ul>
-<li>Webbpack + vue-loader for single file Vue components</li>
-<li>State preserving hot-reload</li>
-<li>State preserving compilation error overlay</li>
-<li>Lint-on-save with ESLint</li>
-<li>Source maps</li>
-</ul>
-<p>Developing for production (<code>$quasar build</code>):</p>
-<ul>
-<li>Javascript minified with <a href="https://github.com/mishoo/UglifyJS2" target="_blank" rel="external">UglifyJS</a></li>
-<li>HTML minified with <a href="https://github.com/kangax/html-minifier" target="_blank" rel="external">html-minifier</a></li>
-<li>CSS across all components extracted into a single file and minified with <a href="https://github.com/ben-eb/cssnano" target="_blank" rel="external">cssnano</a></li>
-<li>All static assets are compiled with version hashes for efficient long-term caching, and a production index.html is auto-generated with proper URLs to these generated assets.</li>
-</ul>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[App Build Commands]]></title>
       <url>http://beta.quasar-framework.org/guide/app-build-commands.html</url>
       <content type="html"><![CDATA[<h3 id="Development"><a href="#Development" class="headerlink" title="Development"></a>Development</h3><blockquote>
@@ -144,11 +117,29 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Dev vs Production Code]]></title>
-      <url>http://beta.quasar-framework.org/guide/app-dev-vs-production-code.html</url>
-      <content type="html"><![CDATA[<p>Quasar boilerplate has built-in functionality so you can differentiate between Development and Production code.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span> (DEV) &#123;</div><div class="line">  <span class="comment">// this code block gets executed only in Dev mode</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (PROD) &#123;</div><div class="line">  <span class="comment">// this code block gets executed only in Production mode</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Due to the way that this is implemented, for example when building for Production, the first block (dealing with Dev mode) is completely discarded from the bundle (gets removed for the production build).</p>
+      <title><![CDATA[App Folder Boilerplate]]></title>
+      <url>http://beta.quasar-framework.org/guide/app-boilerplate.html</url>
+      <content type="html"><![CDATA[<p>The Quasar CLI helps you start an App folder with all the necessary boilerplate  you will need to get started building your application. To begin, there is a simple command:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ quasar init &lt;folder name&gt;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>The boilerplate created is a fork of the <a href="https://github.com/vuejs-templates/webpack" target="_blank" rel="external">official Webpack + VueJs</a> repo. So, if you’ve worked with Vue’s CLI, Quasar’s CLI should seem quite familiar to you.</p>
+</blockquote>
+<p>If you want to tweak things specific for your App, you first need to understand the underlying tools being used in the generated boilerplate.</p>
+<p>The boilerplate is targeted towards large, serious projects and assumes you are somewhat familiar with <strong>Webpack</strong> and <strong>vue-loader</strong>. Make sure to also read <a href="http://vue-loader.vuejs.org/index.html" target="_blank" rel="external">vue-loader’s documentation</a> for common workflow recipes.</p>
+<h2 id="What’s-Included"><a href="#What’s-Included" class="headerlink" title="What’s Included"></a>What’s Included</h2><p>While developing with Dev Server (<code>$ quasar dev</code>):</p>
+<ul>
+<li>Webbpack + vue-loader for single file Vue components</li>
+<li>State preserving hot-reload</li>
+<li>State preserving compilation error overlay</li>
+<li>Lint-on-save with ESLint</li>
+<li>Source maps</li>
+</ul>
+<p>Developing for production (<code>$quasar build</code>):</p>
+<ul>
+<li>Javascript minified with <a href="https://github.com/mishoo/UglifyJS2" target="_blank" rel="external">UglifyJS</a></li>
+<li>HTML minified with <a href="https://github.com/kangax/html-minifier" target="_blank" rel="external">html-minifier</a></li>
+<li>CSS across all components extracted into a single file and minified with <a href="https://github.com/ben-eb/cssnano" target="_blank" rel="external">cssnano</a></li>
+<li>All static assets are compiled with version hashes for efficient long-term caching, and a production index.html is auto-generated with proper URLs to these generated assets.</li>
+</ul>
 ]]></content>
     </entry>
     
@@ -188,6 +179,15 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&#123; <span class="comment">// eslint</span></div><div class="line">  enforce: <span class="string">'pre'</span>,</div><div class="line">  test: <span class="regexp">/\.(vue|js)$/</span>,</div><div class="line">  loader: <span class="string">'eslint-loader'</span>,</div><div class="line">  include: projectRoot,</div><div class="line">  exclude: <span class="regexp">/node_modules/</span></div><div class="line">&#125;,</div></pre></td></tr></table></figure>
 </li>
 </ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Dev vs Production Code]]></title>
+      <url>http://beta.quasar-framework.org/guide/app-dev-vs-production-code.html</url>
+      <content type="html"><![CDATA[<p>Quasar boilerplate has built-in functionality so you can differentiate between Development and Production code.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span> (DEV) &#123;</div><div class="line">  <span class="comment">// this code block gets executed only in Dev mode</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (PROD) &#123;</div><div class="line">  <span class="comment">// this code block gets executed only in Production mode</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Due to the way that this is implemented, for example when building for Production, the first block (dealing with Dev mode) is completely discarded from the bundle (gets removed for the production build).</p>
 ]]></content>
     </entry>
     
@@ -260,30 +260,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Sharing State Between Components]]></title>
-      <url>http://beta.quasar-framework.org/guide/components-sharing-state.html</url>
-      <content type="html"><![CDATA[<p>In large applications, state management often becomes complex due to multiple pieces of state scattered across many components and the interactions between them. It is often overlooked that the source of truth in Vue instances is the raw data object - a Vue instances simply proxies access to it. Therefore, if you have a piece of state that should be shared by multiple instances, you should avoid duplicating it and share it by identity:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> sourceOfTruth = &#123;&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> vmA = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  data: sourceOfTruth</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">var</span> vmB = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  data: sourceOfTruth</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>Now whenever <code>sourceOfTruth</code> is mutated, both <code>vmA</code> and <code>vmB</code> will update their views automatically. Extending this idea further, we would arrive at the <strong>store pattern</strong>:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> store = &#123;</div><div class="line">  state: &#123;</div><div class="line">    message: <span class="string">'Hello!'</span></div><div class="line">  &#125;,</div><div class="line">  actionA: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.state.message = <span class="string">'action A triggered'</span></div><div class="line">  &#125;,</div><div class="line">  actionB: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.state.message = <span class="string">'action B triggered'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> vmA = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  data: &#123;</div><div class="line">    privateState: &#123;&#125;,</div><div class="line">    sharedState: store.state</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">var</span> vmB = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  data: &#123;</div><div class="line">    privateState: &#123;&#125;,</div><div class="line">    sharedState: store.state</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>Notice we are putting all actions that mutate the store’s state inside the store itself. This type of centralized state management makes it easier to understand what type of mutations could happen to the state, and how are they triggered. Each component can still own and manage its private state.</p>
-<p><img src="/images/vue-state-management.png" alt="Vue State Management"></p>
-<p>One thing to take note is that you should never replace the original state object in your actions - the components and the store need to share reference to the same object in order for the mutations to be observed.</p>
-<p>If we enforce a convention where components are never allowed to directly mutate state that belongs to a store, but should instead dispatch events that notify the store to perform actions, we’ve essentially arrived at the <a href="https://facebook.github.io/flux/" target="_blank" rel="external">Flux</a> architecture. The benefits of this convention is we can record all state mutations happening to the store, and on top of that we can implement advanced debugging helpers such as mutation logs, snapshots, history re-rolls etc.</p>
-<p>The Flux architecture is commonly used in React applications. Turns out the core idea behind Flux can be quite simply achieved in Vue.js, thanks to the unobtrusive reactivity system. Do note what we demonstrated here is just an example to introduce the concept - you may not need it at all for simple scenarios, and you should adapt the pattern to fit the real needs of your application.</p>
-<h2 id="Best-Solution-Vuex"><a href="#Best-Solution-Vuex" class="headerlink" title="Best Solution: Vuex"></a>Best Solution: Vuex</h2><p>Vuex (see documentation <a href="http://vuex.vuejs.org/" target="_blank" rel="external">here</a> and Github page <a href="https://github.com/vuejs/vuex" target="_blank" rel="external">here</a>) is an application architecture for centralized state management in Vue.js applications. It is inspired by Flux and Redux, but with simplified concepts and an implementation that is designed specifically to take advantage of Vue.js’ reactivity system.</p>
-<blockquote>
-<p>Vuex is not supplied by default with Quasar Framework. NPM install it and import it from <code>src/main.js</code> in order to use it.</p>
-</blockquote>
-<h3 id="Why-using-Vuex"><a href="#Why-using-Vuex" class="headerlink" title="Why using Vuex"></a>Why using Vuex</h3><p>If your app is simple enough, you probably don’t need Vuex. Don’t apply it prematurely. But if you are building a medium-to-large-scale SPA, chances are you have run into situations that make you think about how to better structure things outside of your Vue components. This is where Vuex comes into play.</p>
-<p>When using Vue.js alone, we often tend to store the state “inside” our components. That is, each component owns a piece of our application state, and as a result the state is scattered all over the place. However, sometimes a piece of state needs to be shared by multiple components. A commonly-seen practice is letting one component “send” some state to other components using the custom event system. The problem with this pattern is that the event flow inside large component trees can quickly become complex, and it’s often difficult to reason about when something goes wrong.</p>
-<p>To better deal with shared state in large applications, we need to differentiate between component local state and application level state. Application state does not belong to a specific component, but our components can still observe it for reactive DOM updates. By centralizing its management in a single place, we no longer need to pass events around, because everything that affects more than one component should belong there. In addition, this allows us to record and inspect every mutation for easier understanding of state changes, and even implement fancy stuff like time-travel debugging.</p>
-<p><img src="/images/vuex.png" alt="Vuex"></p>
-<p>Vuex also enforces some opinions on how to split state management logic into different places, but still allows enough flexibility for the actual code structure.</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Framework Contributing Guide]]></title>
       <url>http://beta.quasar-framework.org/guide/contributing.html</url>
       <content type="html"><![CDATA[<p>The Quasar team is really excited, when anyone helps by contributing to Quasar Framework. It’s what OSS community is all about! </p>
@@ -349,6 +325,58 @@
 <h4 id="Body"><a href="#Body" class="headerlink" title="Body"></a>Body</h4><p>Just as in the <strong>subject</strong>, use the imperative, present tense: “change” not “changed” nor “changes”.<br>The body should include the motivation for the change and contrast this with previous behavior.</p>
 <h4 id="Footer"><a href="#Footer" class="headerlink" title="Footer"></a>Footer</h4><p>The footer should contain any information about <strong>Breaking Changes</strong> and is also the place to<br>reference GitHub issues that this commit <strong>Closes</strong>.</p>
 <p><strong>Breaking Changes</strong> should start with the word <code>BREAKING CHANGE:</code> with a space or two newlines. The rest of the commit message is then used for this.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Sharing State Between Components]]></title>
+      <url>http://beta.quasar-framework.org/guide/components-sharing-state.html</url>
+      <content type="html"><![CDATA[<p>In large applications, state management often becomes complex due to multiple pieces of state scattered across many components and the interactions between them. It is often overlooked that the source of truth in Vue instances is the raw data object - a Vue instances simply proxies access to it. Therefore, if you have a piece of state that should be shared by multiple instances, you should avoid duplicating it and share it by identity:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> sourceOfTruth = &#123;&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> vmA = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  data: sourceOfTruth</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">var</span> vmB = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  data: sourceOfTruth</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>Now whenever <code>sourceOfTruth</code> is mutated, both <code>vmA</code> and <code>vmB</code> will update their views automatically. Extending this idea further, we would arrive at the <strong>store pattern</strong>:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> store = &#123;</div><div class="line">  state: &#123;</div><div class="line">    message: <span class="string">'Hello!'</span></div><div class="line">  &#125;,</div><div class="line">  actionA: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.state.message = <span class="string">'action A triggered'</span></div><div class="line">  &#125;,</div><div class="line">  actionB: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.state.message = <span class="string">'action B triggered'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> vmA = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  data: &#123;</div><div class="line">    privateState: &#123;&#125;,</div><div class="line">    sharedState: store.state</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">var</span> vmB = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  data: &#123;</div><div class="line">    privateState: &#123;&#125;,</div><div class="line">    sharedState: store.state</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>Notice we are putting all actions that mutate the store’s state inside the store itself. This type of centralized state management makes it easier to understand what type of mutations could happen to the state, and how are they triggered. Each component can still own and manage its private state.</p>
+<p><img src="/images/vue-state-management.png" alt="Vue State Management"></p>
+<p>One thing to take note is that you should never replace the original state object in your actions - the components and the store need to share reference to the same object in order for the mutations to be observed.</p>
+<p>If we enforce a convention where components are never allowed to directly mutate state that belongs to a store, but should instead dispatch events that notify the store to perform actions, we’ve essentially arrived at the <a href="https://facebook.github.io/flux/" target="_blank" rel="external">Flux</a> architecture. The benefits of this convention is we can record all state mutations happening to the store, and on top of that we can implement advanced debugging helpers such as mutation logs, snapshots, history re-rolls etc.</p>
+<p>The Flux architecture is commonly used in React applications. Turns out the core idea behind Flux can be quite simply achieved in Vue.js, thanks to the unobtrusive reactivity system. Do note what we demonstrated here is just an example to introduce the concept - you may not need it at all for simple scenarios, and you should adapt the pattern to fit the real needs of your application.</p>
+<h2 id="Best-Solution-Vuex"><a href="#Best-Solution-Vuex" class="headerlink" title="Best Solution: Vuex"></a>Best Solution: Vuex</h2><p>Vuex (see documentation <a href="http://vuex.vuejs.org/" target="_blank" rel="external">here</a> and Github page <a href="https://github.com/vuejs/vuex" target="_blank" rel="external">here</a>) is an application architecture for centralized state management in Vue.js applications. It is inspired by Flux and Redux, but with simplified concepts and an implementation that is designed specifically to take advantage of Vue.js’ reactivity system.</p>
+<blockquote>
+<p>Vuex is not supplied by default with Quasar Framework. NPM install it and import it from <code>src/main.js</code> in order to use it.</p>
+</blockquote>
+<h3 id="Why-using-Vuex"><a href="#Why-using-Vuex" class="headerlink" title="Why using Vuex"></a>Why using Vuex</h3><p>If your app is simple enough, you probably don’t need Vuex. Don’t apply it prematurely. But if you are building a medium-to-large-scale SPA, chances are you have run into situations that make you think about how to better structure things outside of your Vue components. This is where Vuex comes into play.</p>
+<p>When using Vue.js alone, we often tend to store the state “inside” our components. That is, each component owns a piece of our application state, and as a result the state is scattered all over the place. However, sometimes a piece of state needs to be shared by multiple components. A commonly-seen practice is letting one component “send” some state to other components using the custom event system. The problem with this pattern is that the event flow inside large component trees can quickly become complex, and it’s often difficult to reason about when something goes wrong.</p>
+<p>To better deal with shared state in large applications, we need to differentiate between component local state and application level state. Application state does not belong to a specific component, but our components can still observe it for reactive DOM updates. By centralizing its management in a single place, we no longer need to pass events around, because everything that affects more than one component should belong there. In addition, this allows us to record and inspect every mutation for easier understanding of state changes, and even implement fancy stuff like time-travel debugging.</p>
+<p><img src="/images/vuex.png" alt="Vuex"></p>
+<p>Vuex also enforces some opinions on how to split state management logic into different places, but still allows enough flexibility for the actual code structure.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Electron App Wrapper]]></title>
+      <url>http://beta.quasar-framework.org/guide/electron-wrapper.html</url>
+      <content type="html"><![CDATA[<p>You can build Electron apps by wrapping your Quasar project with its Electron wrapper. We’ll be using Quasar CLI to manage this.</p>
+<h2 id="Wrap-your-App"><a href="#Wrap-your-App" class="headerlink" title="Wrap your App"></a>Wrap your App</h2><p>Now let’s create the Wrapper for your App.<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ quasar wrap electron</div></pre></td></tr></table></figure></p>
+<p>This command generates a subfolder inside your App named <code>/electron</code>. It contains the assets of an Electron project <strong>mapped to your Quasar App</strong>.</p>
+<p>Next, change current directory to the newly created <code>/electron</code> folder and npm install its dependencies:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> electron</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<h2 id="Development-with-Electron"><a href="#Development-with-Electron" class="headerlink" title="Development with Electron"></a>Development with Electron</h2><p>You can benefit from Hot Reload while developing an Electron app. The wrapper will open an Electron app which will point to your App. As a bonus, besides Hot Reload, the Chrome Dev Tools will also be available so you can easily inspect code.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># Make sure you keep running (from root project folder):</span></div><div class="line">$ quasar dev</div><div class="line"><span class="comment"># then from Electron wrapper folder</span></div><div class="line">$ quasar dev</div></pre></td></tr></table></figure>
+<h2 id="Building-Electron-App"><a href="#Building-Electron-App" class="headerlink" title="Building Electron App"></a>Building Electron App</h2><p>Make sure you build Quasar app from root project folder before packaging it with Electron and then follow these steps:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># from Electron wrapper folder:</span></div><div class="line">$ quasar build</div></pre></td></tr></table></figure>
+<p>If you want to only build for a specific platform, like Linux, simply add another parameter to <code>quasar build</code>:<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ quasar build linux <span class="comment"># for Linux</span></div><div class="line"><span class="comment"># or</span></div><div class="line">$ quasar build darwin <span class="comment"># for MacOS</span></div><div class="line"><span class="comment"># or</span></div><div class="line">$ quasar build win32 <span class="comment"># for Windows</span></div><div class="line"><span class="comment"># or</span></div><div class="line">$ quasar build mas</div></pre></td></tr></table></figure></p>
+<h2 id="Electron-App-Structure"><a href="#Electron-App-Structure" class="headerlink" title="Electron App Structure"></a>Electron App Structure</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">.</div><div class="line">├── build                <span class="comment"># build files</span></div><div class="line">│   ├── script.build.js  <span class="comment"># production build for Electron</span></div><div class="line">│   └── script.clean.js  <span class="comment"># cleaning build artifacts</span></div><div class="line">├── config               <span class="comment"># build config folder</span></div><div class="line">│   └── index.js         <span class="comment"># configure your build</span></div><div class="line">├── dist                 <span class="comment"># where production build will go</span></div><div class="line">│   └── ...</div><div class="line">├── electron.js          <span class="comment"># main Electron runner</span></div><div class="line">├── icons                <span class="comment"># icons for your Electron App</span></div><div class="line">│   ├── icon.icns</div><div class="line">│   └── icon.ico</div><div class="line">└── package.json         <span class="comment"># npm scripts and dependencies for Electron</span></div></pre></td></tr></table></figure>
+<h2 id="Debugging"><a href="#Debugging" class="headerlink" title="Debugging"></a>Debugging</h2><p>While developing you got Chrome Dev Tools available. But what happens when the production build has something failing? It may happen, for example, that if you made a mistake in the code in some scenarios you’ll only see a blank window showing up. So how can you debug this? Simple:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ electron --debug=[port] path/to/production/executable</div><div class="line"></div><div class="line"><span class="comment"># Example:</span></div><div class="line">$ electron --debug=<span class="string">"4444"</span> electron/dist/QuasarElectronApp-linux-x64/QuasarElectronApp</div></pre></td></tr></table></figure>
+<p>Your Electron App will be opened and you can check console output for errors.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Form Validation]]></title>
+      <url>http://beta.quasar-framework.org/guide/form-validation.html</url>
+      <content type="html"><![CDATA[<p>Recommended package for Form Validations is <code>Vuelidate</code>.<br>Get started with the <a href="https://monterail.github.io/vuelidate/" target="_blank" rel="external">documentation</a>.</p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-input</span></span></div><div class="line">      <span class="attr">v-model</span>=<span class="string">"form.email"</span></div><div class="line">      @<span class="attr">blur</span>=<span class="string">"$v.form.email.$touch"</span></div><div class="line">      @<span class="attr">keyup.enter</span>=<span class="string">"submit"</span></div><div class="line">      <span class="attr">:error</span>=<span class="string">"$v.form.email.$error"</span></div><div class="line">    /&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">q-btn</span> <span class="attr">color</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"submit"</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">q-btn</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">import</span> &#123; required, email &#125; <span class="keyword">from</span> <span class="string">'vuelidate/lib/validators'</span></div><div class="line"><span class="keyword">import</span> &#123; Toast &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  data () &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      form: &#123;</div><div class="line">        email: <span class="string">''</span></div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  validations: &#123;</div><div class="line">    form: &#123;</div><div class="line">      email: &#123; required, email  &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  methods: &#123;</div><div class="line">    submit () &#123;</div><div class="line">      <span class="keyword">this</span>.$v.form.$touch()</div><div class="line"></div><div class="line">      <span class="keyword">if</span> (<span class="keyword">this</span>.$v.form.$error) &#123;</div><div class="line">        Toast.create(<span class="string">'Please review fields again.'</span>)</div><div class="line">        <span class="keyword">return</span></div><div class="line">      &#125;</div><div class="line"></div><div class="line">      <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -423,34 +451,6 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># create the .rules file and insert the content</span></div><div class="line"><span class="comment"># from below this example</span></div><div class="line">sudo vim /etc/udev/rules.d/51-android.rules</div><div class="line">sudo chmod 644   /etc/udev/rules.d/51-android.rules</div><div class="line">sudo chown root. /etc/udev/rules.d/51-android.rules</div><div class="line">sudo service udev restart</div><div class="line">sudo killall adb</div></pre></td></tr></table></figure>
 <p>The content for <code>51-android.rules</code>:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0bb4&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0e79&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0502&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0b05&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;413c&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0489&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;091e&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;18d1&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0bb4&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;12d1&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;24e3&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;2116&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0482&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;17ef&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;1004&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;22b8&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0409&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;2080&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0955&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;2257&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;10a9&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;1d4d&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0471&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;04da&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;05c6&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;1f53&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;04e8&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;04dd&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0fce&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;0930&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;19d2&quot;, MODE=&quot;0666&quot;</div><div class="line">SUBSYSTEM==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;1bbb&quot;, MODE=&quot;0666&quot;</div></pre></td></tr></table></figure></p>
 <p>Now running <code>adb devices</code> should discover your device.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Electron App Wrapper]]></title>
-      <url>http://beta.quasar-framework.org/guide/electron-wrapper.html</url>
-      <content type="html"><![CDATA[<p>You can build Electron apps by wrapping your Quasar project with its Electron wrapper. We’ll be using Quasar CLI to manage this.</p>
-<h2 id="Wrap-your-App"><a href="#Wrap-your-App" class="headerlink" title="Wrap your App"></a>Wrap your App</h2><p>Now let’s create the Wrapper for your App.<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ quasar wrap electron</div></pre></td></tr></table></figure></p>
-<p>This command generates a subfolder inside your App named <code>/electron</code>. It contains the assets of an Electron project <strong>mapped to your Quasar App</strong>.</p>
-<p>Next, change current directory to the newly created <code>/electron</code> folder and npm install its dependencies:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> electron</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
-<h2 id="Development-with-Electron"><a href="#Development-with-Electron" class="headerlink" title="Development with Electron"></a>Development with Electron</h2><p>You can benefit from Hot Reload while developing an Electron app. The wrapper will open an Electron app which will point to your App. As a bonus, besides Hot Reload, the Chrome Dev Tools will also be available so you can easily inspect code.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># Make sure you keep running (from root project folder):</span></div><div class="line">$ quasar dev</div><div class="line"><span class="comment"># then from Electron wrapper folder</span></div><div class="line">$ quasar dev</div></pre></td></tr></table></figure>
-<h2 id="Building-Electron-App"><a href="#Building-Electron-App" class="headerlink" title="Building Electron App"></a>Building Electron App</h2><p>Make sure you build Quasar app from root project folder before packaging it with Electron and then follow these steps:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># from Electron wrapper folder:</span></div><div class="line">$ quasar build</div></pre></td></tr></table></figure>
-<p>If you want to only build for a specific platform, like Linux, simply add another parameter to <code>quasar build</code>:<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ quasar build linux <span class="comment"># for Linux</span></div><div class="line"><span class="comment"># or</span></div><div class="line">$ quasar build darwin <span class="comment"># for MacOS</span></div><div class="line"><span class="comment"># or</span></div><div class="line">$ quasar build win32 <span class="comment"># for Windows</span></div><div class="line"><span class="comment"># or</span></div><div class="line">$ quasar build mas</div></pre></td></tr></table></figure></p>
-<h2 id="Electron-App-Structure"><a href="#Electron-App-Structure" class="headerlink" title="Electron App Structure"></a>Electron App Structure</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">.</div><div class="line">├── build                <span class="comment"># build files</span></div><div class="line">│   ├── script.build.js  <span class="comment"># production build for Electron</span></div><div class="line">│   └── script.clean.js  <span class="comment"># cleaning build artifacts</span></div><div class="line">├── config               <span class="comment"># build config folder</span></div><div class="line">│   └── index.js         <span class="comment"># configure your build</span></div><div class="line">├── dist                 <span class="comment"># where production build will go</span></div><div class="line">│   └── ...</div><div class="line">├── electron.js          <span class="comment"># main Electron runner</span></div><div class="line">├── icons                <span class="comment"># icons for your Electron App</span></div><div class="line">│   ├── icon.icns</div><div class="line">│   └── icon.ico</div><div class="line">└── package.json         <span class="comment"># npm scripts and dependencies for Electron</span></div></pre></td></tr></table></figure>
-<h2 id="Debugging"><a href="#Debugging" class="headerlink" title="Debugging"></a>Debugging</h2><p>While developing you got Chrome Dev Tools available. But what happens when the production build has something failing? It may happen, for example, that if you made a mistake in the code in some scenarios you’ll only see a blank window showing up. So how can you debug this? Simple:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ electron --debug=[port] path/to/production/executable</div><div class="line"></div><div class="line"><span class="comment"># Example:</span></div><div class="line">$ electron --debug=<span class="string">"4444"</span> electron/dist/QuasarElectronApp-linux-x64/QuasarElectronApp</div></pre></td></tr></table></figure>
-<p>Your Electron App will be opened and you can check console output for errors.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Form Validation]]></title>
-      <url>http://beta.quasar-framework.org/guide/form-validation.html</url>
-      <content type="html"><![CDATA[<p>Recommended package for Form Validations is <code>Vuelidate</code>.<br>Get started with the <a href="https://monterail.github.io/vuelidate/" target="_blank" rel="external">documentation</a>.</p>
-<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-input</span></span></div><div class="line">      <span class="attr">v-model</span>=<span class="string">"form.email"</span></div><div class="line">      @<span class="attr">blur</span>=<span class="string">"$v.form.email.$touch"</span></div><div class="line">      @<span class="attr">keyup.enter</span>=<span class="string">"submit"</span></div><div class="line">      <span class="attr">:error</span>=<span class="string">"$v.form.email.$error"</span></div><div class="line">    /&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">q-btn</span> <span class="attr">color</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"submit"</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">q-btn</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">import</span> &#123; required, email &#125; <span class="keyword">from</span> <span class="string">'vuelidate/lib/validators'</span></div><div class="line"><span class="keyword">import</span> &#123; Toast &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  data () &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      form: &#123;</div><div class="line">        email: <span class="string">''</span></div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  validations: &#123;</div><div class="line">    form: &#123;</div><div class="line">      email: &#123; required, email  &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  methods: &#123;</div><div class="line">    submit () &#123;</div><div class="line">      <span class="keyword">this</span>.$v.form.$touch()</div><div class="line"></div><div class="line">      <span class="keyword">if</span> (<span class="keyword">this</span>.$v.form.$error) &#123;</div><div class="line">        Toast.create(<span class="string">'Please review fields again.'</span>)</div><div class="line">        <span class="keyword">return</span></div><div class="line">      &#125;</div><div class="line"></div><div class="line">      <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -550,6 +550,34 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Quasar Development with Docker]]></title>
+      <url>http://beta.quasar-framework.org/guide/quasar-development-with-docker.html</url>
+      <content type="html"><![CDATA[<p>If you’d like to help develop Quasar and you use Docker for your development environment, we offer a <code>docker-compose.yml</code> and a <code>dockerfile</code> to get you started. </p>
+<p>Steps to use the <a href="https://hub.docker.com/r/quasarframework/quasar-dev/" target="_blank" rel="external">quasarframework/quasar-dev</a> container:</p>
+<ol>
+<li><p>At this point, you should be in a clone of the <a href="https://github.com/quasarframework/quasar" target="_blank" rel="external">quasarframework/quasar</a> repo on your local machine and you should have Docker installed and running.</p>
+</li>
+<li><p>In your shell console of choice, run</p>
+<p> <code>docker-compose up -d</code> </p>
+<p>This will build and run the Quasar docker container in detached mode.</p>
+</li>
+<li><p>Once the container is built, enter </p>
+<p> <code>docker-compose exec quasar-dev sh</code></p>
+</li>
+<li><p>You should now be in the <code>/opt/app</code> directory within the container. Since the <code>docker up</code> command and subsequent building of the container also ran <code>npm install</code> for you, using the <code>package.json</code>on your local computer, you now only need to run</p>
+<p> <code>npm run dev</code></p>
+</li>
+</ol>
+<p>Have fun programming on Quasar!</p>
+<h2 id="Changing-dependencies"><a href="#Changing-dependencies" class="headerlink" title="Changing dependencies"></a>Changing dependencies</h2><p>If you have changed dependencies, (i.e. added a package to <code>package.json</code>) you can rebuild the quasar-dev container with the following command in your local machine’s console (not the exec shell). </p>
+<p><code>docker-compose build</code></p>
+<p>Theoretically, you could also use <code>npm install &lt;package&gt;</code> in the exec shell, however you’d be adding the new package(s) outside the container’s cached layer, which means subsequent installs will take longer. We recommend adding your dependencies directly in <code>package.json</code> and rebuilding the container. </p>
+<p>Please also note, adding dependencies is currently frowned upon. Please check with Razvan in the <a href="http://forum.quasar-framework.org/" target="_blank" rel="external">Quasar forum</a> or on the <a href="https://gitter.im/quasarframework/Lobby" target="_blank" rel="external">Gitter channel</a>, before adding any new dependencies.</p>
+<p>That’s it! Hope you enjoy the container. </p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar CLI]]></title>
       <url>http://beta.quasar-framework.org/guide/quasar-cli.html</url>
       <content type="html"><![CDATA[<p>The Quasar CLI allows you to create new projects in no time, by generating a base application, filled with everything you need to begin working on your application. It does most of the heavy-lifting, so you need not concern yourself with the redundant tasks of building a base application. </p>
@@ -603,34 +631,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Quasar Development with Docker]]></title>
-      <url>http://beta.quasar-framework.org/guide/quasar-development-with-docker.html</url>
-      <content type="html"><![CDATA[<p>If you’d like to help develop Quasar and you use Docker for your development environment, we offer a <code>docker-compose.yml</code> and a <code>dockerfile</code> to get you started. </p>
-<p>Steps to use the <a href="https://hub.docker.com/r/quasarframework/quasar-dev/" target="_blank" rel="external">quasarframework/quasar-dev</a> container:</p>
-<ol>
-<li><p>At this point, you should be in a clone of the <a href="https://github.com/quasarframework/quasar" target="_blank" rel="external">quasarframework/quasar</a> repo on your local machine and you should have Docker installed and running.</p>
-</li>
-<li><p>In your shell console of choice, run</p>
-<p> <code>docker-compose up -d</code> </p>
-<p>This will build and run the Quasar docker container in detached mode.</p>
-</li>
-<li><p>Once the container is built, enter </p>
-<p> <code>docker-compose exec quasar-dev sh</code></p>
-</li>
-<li><p>You should now be in the <code>/opt/app</code> directory within the container. Since the <code>docker up</code> command and subsequent building of the container also ran <code>npm install</code> for you, using the <code>package.json</code>on your local computer, you now only need to run</p>
-<p> <code>npm run dev</code></p>
-</li>
-</ol>
-<p>Have fun programming on Quasar!</p>
-<h2 id="Changing-dependencies"><a href="#Changing-dependencies" class="headerlink" title="Changing dependencies"></a>Changing dependencies</h2><p>If you have changed dependencies, (i.e. added a package to <code>package.json</code>) you can rebuild the quasar-dev container with the following command in your local machine’s console (not the exec shell). </p>
-<p><code>docker-compose build</code></p>
-<p>Theoretically, you could also use <code>npm install &lt;package&gt;</code> in the exec shell, however you’d be adding the new package(s) outside the container’s cached layer, which means subsequent installs will take longer. We recommend adding your dependencies directly in <code>package.json</code> and rebuilding the container. </p>
-<p>Please also note, adding dependencies is currently frowned upon. Please check with Razvan in the <a href="http://forum.quasar-framework.org/" target="_blank" rel="external">Quasar forum</a> or on the <a href="https://gitter.im/quasarframework/Lobby" target="_blank" rel="external">Gitter channel</a>, before adding any new dependencies.</p>
-<p>That’s it! Hope you enjoy the container. </p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Changelog]]></title>
       <url>http://beta.quasar-framework.org/guide/quasar-framework-changelog.html</url>
       <content type="html"><![CDATA[<p>Before upgrading to a newer version of Quasar, please make sure you read the <a href="https://github.com/quasarframework/quasar/releases" target="_blank" rel="external">Release Notes and Changelog</a> that are available on Github.</p>
@@ -680,6 +680,24 @@
       <url>http://beta.quasar-framework.org/guide/quasar-roadmap.html</url>
       <content type="html"><![CDATA[<p>Quasar is here to stay and grow. The <a href="https://github.com/quasarframework/quasar/projects/3" target="_blank" rel="external">roadmap is available on Github</a> under Projects. There are also a lot of <a href="https://github.com/quasarframework/quasar/issues?q=is%3Aissue+is%3Aopen+label%3Aproposal" target="_blank" rel="external">small enhancements and new features waiting to be implemented</a>.</p>
 <p>We are absolutely thrilled about the future of Quasar and we hope you will be too!</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Router]]></title>
+      <url>http://beta.quasar-framework.org/guide/router.html</url>
+      <content type="html"><![CDATA[<p>Quasar Apps are using by default the <code>vue-router</code> which is the official router for VueJs. It deeply integrates with Vue.js core to make building Single Page Applications with Vue.js a breeze. Features include:</p>
+<ul>
+<li>Nested route/view mapping</li>
+<li>Modular, component-based router configuration</li>
+<li>Route params, query, wildcards</li>
+<li>View transition effects powered by Vue.js’ transition system</li>
+<li>Fine-grained navigation control</li>
+<li>Links with automatic active CSS classes</li>
+<li>HTML5 history mode or hash mode, with auto-fallback in IE9</li>
+<li>Restore scroll position when going back in history mode</li>
+</ul>
+<p>Get started with the <a href="http://vuejs.github.io/vue-router" target="_blank" rel="external">documentation</a>.</p>
 ]]></content>
     </entry>
     
@@ -798,24 +816,6 @@
 <p><strong>All your Stylus variables need to be declared before the inclusion of Quasar Framework theme files (from NPM).</strong> If you follow the default structure of files (and be care-free) then inject variable overrides in <em>src/themes/app.variables.styl</em>.</p>
 </blockquote>
 <h2 id="Stylus-Variables"><a href="#Stylus-Variables" class="headerlink" title="Stylus Variables"></a>Stylus Variables</h2><p>Read a complete list of all <a href="/components/stylus-variables.html">Stylus variables</a> that you can override.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Router]]></title>
-      <url>http://beta.quasar-framework.org/guide/router.html</url>
-      <content type="html"><![CDATA[<p>Quasar Apps are using by default the <code>vue-router</code> which is the official router for VueJs. It deeply integrates with Vue.js core to make building Single Page Applications with Vue.js a breeze. Features include:</p>
-<ul>
-<li>Nested route/view mapping</li>
-<li>Modular, component-based router configuration</li>
-<li>Route params, query, wildcards</li>
-<li>View transition effects powered by Vue.js’ transition system</li>
-<li>Fine-grained navigation control</li>
-<li>Links with automatic active CSS classes</li>
-<li>HTML5 history mode or hash mode, with auto-fallback in IE9</li>
-<li>Restore scroll position when going back in history mode</li>
-</ul>
-<p>Get started with the <a href="http://vuejs.github.io/vue-router" target="_blank" rel="external">documentation</a>.</p>
 ]]></content>
     </entry>
     
@@ -7125,46 +7125,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Scroll Area]]></title>
-      <url>http://beta.quasar-framework.org/components/scroll-area.html</url>
-      <content type="html"><![CDATA[<p>Quasar offers a neat way of customizing the scrollbars with the help of QScrollArea component which can encapsulate your content. Think of it as a DOM element which has <code>overflow: auto</code>, but with your own custom styled scrollbar instead of browser’s default one and a few nice features on top.</p>
-<input type="hidden" data-fullpage-demo="scrolling/scroll-area">
-
-<p>This is especially useful for desktop as scrollbars are hidden on a mobile device. When on a mobile device, QScrollArea simply wraps the content in a <code>&lt;div&gt;</code> configured for default browser scrolling.</p>
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><p>QScrollArea supports scrolling by user dragging the custom scrollbars or by using the mousewheel. If on a desktop that has a touch screen then scrolling will work with touch actions too.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!--</span></div><div class="line">  In this example we set a height to force</div><div class="line">  custom scrollbars to appear</div><div class="line">--&gt;</div><div class="line"><span class="tag">&lt;<span class="name">q-scroll-area</span> <span class="attr">style</span>=<span class="string">"width: 400px; height: 100px;"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"n in 10"</span>&gt;</span></div><div class="line">    Lorem ipsum dolor sit amet, consectetur adipisicing</div><div class="line">    elit, sed do eiusmod tempor incididunt ut labore et</div><div class="line">    dolore magna aliqua.</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">q-scroll-area</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h2><table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>thumb-style</code></td>
-<td>Object with CSS properties and values for styling the thumb of custom scrollbar.</td>
-</tr>
-<tr>
-<td><code>content-style</code></td>
-<td>Object with CSS properties and values for styling the container of QScrollArea.</td>
-</tr>
-<tr>
-<td><code>content-active-style</code></td>
-<td>Object with CSS properties and values for styling the container of QScrollArea when scroll area becomes active (is mouse hovered).</td>
-</tr>
-<tr>
-<td><code>delay</code></td>
-<td>Number (in milliseconds, default is 1000) defining a delay before custom scrollbars become visible after mouse is hovering the container.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Custom-Scrollbar-Example"><a href="#Custom-Scrollbar-Example" class="headerlink" title="Custom Scrollbar Example"></a>Custom Scrollbar Example</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!--</span></div><div class="line">  Custom scrollbar thumb with a delay of</div><div class="line">  1.5 seconds before appearing after hovering</div><div class="line">  the mouse over the scrollable content</div><div class="line">--&gt;</div><div class="line"><span class="tag">&lt;<span class="name">q-scroll-area</span></span></div><div class="line">  <span class="attr">style</span>=<span class="string">"height: 200px"</span></div><div class="line">  <span class="attr">:thumb-style</span>=<span class="string">"&#123;</span></div><div class="line">    right: '4px',</div><div class="line">    borderRadius: '5px',</div><div class="line">    background: 'red',</div><div class="line">    width: '10px',</div><div class="line">    opacity: 1</div><div class="line">  &#125;"</div><div class="line">  <span class="attr">:delay</span>=<span class="string">"1500"</span></div><div class="line">&gt;</div><div class="line">  ...Scrollable.Content...</div><div class="line"><span class="tag">&lt;/<span class="name">q-scroll-area</span>&gt;</span></div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Rating]]></title>
       <url>http://beta.quasar-framework.org/components/rating.html</url>
       <content type="html"><![CDATA[<p>Quasar Rating is a Component which allows users to rate items, usually known as “Star Rating”.</p>
@@ -7244,6 +7204,46 @@
 </table>
 <h2 id="Coloring"><a href="#Coloring" class="headerlink" title="Coloring"></a>Coloring</h2><p>Use one of the Quasar colors from the <a href="/components/color-palette.html">Color Palette</a>, like <code>primary</code>, <code>secondary</code>, <code>orange-7</code>, <code>teal-2</code> as CSS class:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-rating</span></span></div><div class="line">  <span class="attr">class</span>=<span class="string">"orange"</span></div><div class="line">  <span class="attr">v-model</span>=<span class="string">"ratingModel"</span></div><div class="line">  <span class="attr">:max</span>=<span class="string">"5"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Scroll Area]]></title>
+      <url>http://beta.quasar-framework.org/components/scroll-area.html</url>
+      <content type="html"><![CDATA[<p>Quasar offers a neat way of customizing the scrollbars with the help of QScrollArea component which can encapsulate your content. Think of it as a DOM element which has <code>overflow: auto</code>, but with your own custom styled scrollbar instead of browser’s default one and a few nice features on top.</p>
+<input type="hidden" data-fullpage-demo="scrolling/scroll-area">
+
+<p>This is especially useful for desktop as scrollbars are hidden on a mobile device. When on a mobile device, QScrollArea simply wraps the content in a <code>&lt;div&gt;</code> configured for default browser scrolling.</p>
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><p>QScrollArea supports scrolling by user dragging the custom scrollbars or by using the mousewheel. If on a desktop that has a touch screen then scrolling will work with touch actions too.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!--</span></div><div class="line">  In this example we set a height to force</div><div class="line">  custom scrollbars to appear</div><div class="line">--&gt;</div><div class="line"><span class="tag">&lt;<span class="name">q-scroll-area</span> <span class="attr">style</span>=<span class="string">"width: 400px; height: 100px;"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"n in 10"</span>&gt;</span></div><div class="line">    Lorem ipsum dolor sit amet, consectetur adipisicing</div><div class="line">    elit, sed do eiusmod tempor incididunt ut labore et</div><div class="line">    dolore magna aliqua.</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">q-scroll-area</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h2><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>thumb-style</code></td>
+<td>Object with CSS properties and values for styling the thumb of custom scrollbar.</td>
+</tr>
+<tr>
+<td><code>content-style</code></td>
+<td>Object with CSS properties and values for styling the container of QScrollArea.</td>
+</tr>
+<tr>
+<td><code>content-active-style</code></td>
+<td>Object with CSS properties and values for styling the container of QScrollArea when scroll area becomes active (is mouse hovered).</td>
+</tr>
+<tr>
+<td><code>delay</code></td>
+<td>Number (in milliseconds, default is 1000) defining a delay before custom scrollbars become visible after mouse is hovering the container.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Custom-Scrollbar-Example"><a href="#Custom-Scrollbar-Example" class="headerlink" title="Custom Scrollbar Example"></a>Custom Scrollbar Example</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!--</span></div><div class="line">  Custom scrollbar thumb with a delay of</div><div class="line">  1.5 seconds before appearing after hovering</div><div class="line">  the mouse over the scrollable content</div><div class="line">--&gt;</div><div class="line"><span class="tag">&lt;<span class="name">q-scroll-area</span></span></div><div class="line">  <span class="attr">style</span>=<span class="string">"height: 200px"</span></div><div class="line">  <span class="attr">:thumb-style</span>=<span class="string">"&#123;</span></div><div class="line">    right: '4px',</div><div class="line">    borderRadius: '5px',</div><div class="line">    background: 'red',</div><div class="line">    width: '10px',</div><div class="line">    opacity: 1</div><div class="line">  &#125;"</div><div class="line">  <span class="attr">:delay</span>=<span class="string">"1500"</span></div><div class="line">&gt;</div><div class="line">  ...Scrollable.Content...</div><div class="line"><span class="tag">&lt;/<span class="name">q-scroll-area</span>&gt;</span></div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -8855,41 +8855,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Tree]]></title>
-      <url>http://beta.quasar-framework.org/components/tree.html</url>
-      <content type="html"><![CDATA[<p>Quasar Tree represents a highly configurable component that displays hierarchical data, such as a table of contents in a tree structure.</p>
-<p>Trees are stripped out of any design by default so you can<br>easily stylize and turn them into anything you want.</p>
-<input type="hidden" data-fullpage-demo="other-components/tree">
-
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-tree</span></span></div><div class="line">  <span class="attr">:model</span>=<span class="string">"treeModel"</span></div><div class="line">  <span class="attr">contract-html</span>=<span class="string">"&lt;i&gt;remove_circle&lt;/i&gt;"</span></div><div class="line">  <span class="attr">expand-html</span>=<span class="string">"&lt;i&gt;add_circle&lt;/i&gt;"</span></div><div class="line">&gt;<span class="tag">&lt;/<span class="name">q-tree</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="Tree-model-structure"><a href="#Tree-model-structure" class="headerlink" title="Tree model structure"></a>Tree model structure</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">treeModel: [</div><div class="line">  &#123;</div><div class="line">    title: <span class="string">'Item 1'</span>,</div><div class="line">    expanded: <span class="literal">true</span>,</div><div class="line">    children: [</div><div class="line">      &#123;</div><div class="line">        title: <span class="string">'Item 1.1'</span>,</div><div class="line">        expanded: <span class="literal">false</span>,</div><div class="line">        children: [</div><div class="line">          &#123;</div><div class="line">            title: <span class="string">'Item 1.1.1'</span>,</div><div class="line">            expanded: <span class="literal">false</span>,</div><div class="line">            children: [</div><div class="line">              &#123;</div><div class="line">                title: <span class="string">'Item 1.1.1.1'</span>,</div><div class="line">                expanded: <span class="literal">false</span>,</div><div class="line">                children: []</div><div class="line">              &#125;</div><div class="line">            ]</div><div class="line">          &#125;,</div><div class="line">          &#123;</div><div class="line">            title: <span class="string">'Item 1.1.2'</span>,</div><div class="line">            expanded: <span class="literal">false</span>,</div><div class="line">            handler () &#123; <span class="built_in">console</span>.log(<span class="string">'Tapped on Item 1.1.2'</span>) &#125;,</div><div class="line">            children: []</div><div class="line">          &#125;</div><div class="line">        ]</div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        title: <span class="string">'Item 1.2'</span>,</div><div class="line">        expanded: <span class="literal">false</span>,</div><div class="line">        children: []</div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    title: <span class="string">'Item 2'</span>,</div><div class="line">    expanded: <span class="literal">false</span>,</div><div class="line">    children: []</div><div class="line">  &#125;</div><div class="line">]</div></pre></td></tr></table></figure>
-<p>Items containing a <code>handler</code> method will make those items trigger the handler method when clicked/tapped.</p>
-<h3 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h3><table>
-<thead>
-<tr>
-<th>Vue Property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>model</code></td>
-<td>Vue model for the Tree</td>
-</tr>
-<tr>
-<td><code>contract-html</code></td>
-<td>HTML to display at the end of each item; when user clicks on it its branch contracts</td>
-</tr>
-<tr>
-<td><code>expand-html</code></td>
-<td>HTML to display at the end of each item; when user clicks on it its branch expands</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Transition (QTransition)]]></title>
       <url>http://beta.quasar-framework.org/components/transition.html</url>
       <content type="html"><![CDATA[<p>The Quasar Transition component (called QTransition) gives transitional animation behavior to any components or HTML elements, which are wrapped by it. It is basically a simplification of <a href="https://vuejs.org/v2/guide/transitions.html" target="_blank" rel="external">the Vue Transition Component</a>. The transitions are used for entering (appearing) or leaving (disappearing) animations.</p>
@@ -9014,6 +8979,41 @@
 <p>Each of the classes mentioned above are prefixed with <code>v-</code>, but if for example you are defining a custom transition named <code>custom-anim</code> then <code>v-enter</code> class would instead be <code>custom-anim-enter</code> (and so on for all others).</p>
 <p><code>v-enter-active</code> and <code>v-leave-active</code> give you the ability to specify different easing curves for enter/leave transitions.</p>
 <h3 id="Example-of-Custom-Animation"><a href="#Example-of-Custom-Animation" class="headerlink" title="Example of Custom Animation"></a>Example of Custom Animation</h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-transition</span> <span class="attr">name</span>=<span class="string">"custom"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">q-btn</span> <span class="attr">color</span>=<span class="string">"primary"</span>&gt;</span>Button<span class="tag">&lt;/<span class="name">q-btn</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">q-transition</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="comment">// ...</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">/* Enter and leave animations can use different */</div><div class="line">/* durations and timing functions.              */</div><div class="line">.custom-enter-active &#123;</div><div class="line">  transition: all .3s ease;</div><div class="line">&#125;</div><div class="line">.custom-leave-active &#123;</div><div class="line">  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);</div><div class="line">&#125;</div><div class="line">.custom-enter, .custom-leave-to</div><div class="line">  transform: translateX(10px);</div><div class="line">  opacity: 0;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Tree]]></title>
+      <url>http://beta.quasar-framework.org/components/tree.html</url>
+      <content type="html"><![CDATA[<p>Quasar Tree represents a highly configurable component that displays hierarchical data, such as a table of contents in a tree structure.</p>
+<p>Trees are stripped out of any design by default so you can<br>easily stylize and turn them into anything you want.</p>
+<input type="hidden" data-fullpage-demo="other-components/tree">
+
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-tree</span></span></div><div class="line">  <span class="attr">:model</span>=<span class="string">"treeModel"</span></div><div class="line">  <span class="attr">contract-html</span>=<span class="string">"&lt;i&gt;remove_circle&lt;/i&gt;"</span></div><div class="line">  <span class="attr">expand-html</span>=<span class="string">"&lt;i&gt;add_circle&lt;/i&gt;"</span></div><div class="line">&gt;<span class="tag">&lt;/<span class="name">q-tree</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="Tree-model-structure"><a href="#Tree-model-structure" class="headerlink" title="Tree model structure"></a>Tree model structure</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">treeModel: [</div><div class="line">  &#123;</div><div class="line">    title: <span class="string">'Item 1'</span>,</div><div class="line">    expanded: <span class="literal">true</span>,</div><div class="line">    children: [</div><div class="line">      &#123;</div><div class="line">        title: <span class="string">'Item 1.1'</span>,</div><div class="line">        expanded: <span class="literal">false</span>,</div><div class="line">        children: [</div><div class="line">          &#123;</div><div class="line">            title: <span class="string">'Item 1.1.1'</span>,</div><div class="line">            expanded: <span class="literal">false</span>,</div><div class="line">            children: [</div><div class="line">              &#123;</div><div class="line">                title: <span class="string">'Item 1.1.1.1'</span>,</div><div class="line">                expanded: <span class="literal">false</span>,</div><div class="line">                children: []</div><div class="line">              &#125;</div><div class="line">            ]</div><div class="line">          &#125;,</div><div class="line">          &#123;</div><div class="line">            title: <span class="string">'Item 1.1.2'</span>,</div><div class="line">            expanded: <span class="literal">false</span>,</div><div class="line">            handler () &#123; <span class="built_in">console</span>.log(<span class="string">'Tapped on Item 1.1.2'</span>) &#125;,</div><div class="line">            children: []</div><div class="line">          &#125;</div><div class="line">        ]</div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        title: <span class="string">'Item 1.2'</span>,</div><div class="line">        expanded: <span class="literal">false</span>,</div><div class="line">        children: []</div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">    title: <span class="string">'Item 2'</span>,</div><div class="line">    expanded: <span class="literal">false</span>,</div><div class="line">    children: []</div><div class="line">  &#125;</div><div class="line">]</div></pre></td></tr></table></figure>
+<p>Items containing a <code>handler</code> method will make those items trigger the handler method when clicked/tapped.</p>
+<h3 id="Vue-Properties"><a href="#Vue-Properties" class="headerlink" title="Vue Properties"></a>Vue Properties</h3><table>
+<thead>
+<tr>
+<th>Vue Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>model</code></td>
+<td>Vue model for the Tree</td>
+</tr>
+<tr>
+<td><code>contract-html</code></td>
+<td>HTML to display at the end of each item; when user clicks on it its branch contracts</td>
+</tr>
+<tr>
+<td><code>expand-html</code></td>
+<td>HTML to display at the end of each item; when user clicks on it its branch expands</td>
+</tr>
+</tbody>
+</table>
 ]]></content>
     </entry>
     
@@ -9341,6 +9341,47 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Vue Prototype Injections]]></title>
+      <url>http://beta.quasar-framework.org/components/vue-prototype-injections.html</url>
+      <content type="html"><![CDATA[<p>Quasar injects Vue prototype with <code>$q</code> object:</p>
+<table>
+<thead>
+<tr>
+<th>Injection</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$q.version</code></td>
+<td>String</td>
+<td>Quasar version.</td>
+</tr>
+<tr>
+<td><code>$q.theme</code></td>
+<td>String</td>
+<td>Theme being used. Examples: mat, ios</td>
+</tr>
+<tr>
+<td><code>$q.platform</code></td>
+<td>Object</td>
+<td>Same object as <a href="/components/platform-detection.html">Platform</a> import from Quasar.</td>
+</tr>
+<tr>
+<td><code>$q.events</code></td>
+<td>Object</td>
+<td>Same object as <a href="/components/global-event-bus.html">Events</a> import from Quasar.</td>
+</tr>
+</tbody>
+</table>
+<p>You can use it globally inside a Vue context (component script or template) like this:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- inside a Vue template --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">"$q.platform.is.ios"</span>&gt;</span></div><div class="line">      Gets rendered only on iOS platform.</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="comment">// not availabel here outside</span></div><div class="line"><span class="comment">// of the export</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  <span class="comment">// inside a Vue component script</span></div><div class="line">  ...,</div><div class="line"></div><div class="line">  <span class="comment">// showing an example on a method, but</span></div><div class="line">  <span class="comment">// can be any part of Vue script</span></div><div class="line">  methods: &#123;</div><div class="line">    show () &#123;</div><div class="line">      <span class="comment">// prints out Quasar version</span></div><div class="line">      <span class="built_in">console</span>.log(<span class="keyword">this</span>.$q.version)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="Mobile-Apps"><a href="#Mobile-Apps" class="headerlink" title="Mobile Apps"></a>Mobile Apps</h3><p>When running under Cordova, you’ll be able to use <code>$cordova</code> injection too (<code>this.$cordova</code> in Vue components script, <code>$cordova</code> in Vue templates).</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[CSS Visibility]]></title>
       <url>http://beta.quasar-framework.org/components/visibility.html</url>
       <content type="html"><![CDATA[<p>There are some CSS classes that you can use out of the box for common functionality.</p>
@@ -9598,56 +9639,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Vue Prototype Injections]]></title>
-      <url>http://beta.quasar-framework.org/components/vue-prototype-injections.html</url>
-      <content type="html"><![CDATA[<p>Quasar injects Vue prototype with <code>$q</code> object:</p>
-<table>
-<thead>
-<tr>
-<th>Injection</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>$q.version</code></td>
-<td>String</td>
-<td>Quasar version.</td>
-</tr>
-<tr>
-<td><code>$q.theme</code></td>
-<td>String</td>
-<td>Theme being used. Examples: mat, ios</td>
-</tr>
-<tr>
-<td><code>$q.platform</code></td>
-<td>Object</td>
-<td>Same object as <a href="/components/platform-detection.html">Platform</a> import from Quasar.</td>
-</tr>
-<tr>
-<td><code>$q.events</code></td>
-<td>Object</td>
-<td>Same object as <a href="/components/global-event-bus.html">Events</a> import from Quasar.</td>
-</tr>
-</tbody>
-</table>
-<p>You can use it globally inside a Vue context (component script or template) like this:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- inside a Vue template --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">"$q.platform.is.ios"</span>&gt;</span></div><div class="line">      Gets rendered only on iOS platform.</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="comment">// not availabel here outside</span></div><div class="line"><span class="comment">// of the export</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  <span class="comment">// inside a Vue component script</span></div><div class="line">  ...,</div><div class="line"></div><div class="line">  <span class="comment">// showing an example on a method, but</span></div><div class="line">  <span class="comment">// can be any part of Vue script</span></div><div class="line">  methods: &#123;</div><div class="line">    show () &#123;</div><div class="line">      <span class="comment">// prints out Quasar version</span></div><div class="line">      <span class="built_in">console</span>.log(<span class="keyword">this</span>.$q.version)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="Mobile-Apps"><a href="#Mobile-Apps" class="headerlink" title="Mobile Apps"></a>Mobile Apps</h3><p>When running under Cordova, you’ll be able to use <code>$cordova</code> injection too (<code>this.$cordova</code> in Vue components script, <code>$cordova</code> in Vue templates).</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Window Resize Observable]]></title>
-      <url>http://beta.quasar-framework.org/components/window-resize-observable.html</url>
-      <content type="html"><![CDATA[<p>QWindowResizeObservable is a Quasar component that emits a <code>resize</code> event whenever the document viewport (window) changes its size, with no polling involved.</p>
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  ...</div><div class="line">    <span class="comment">&lt;!--can be placed anywhere within your template --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-window-resize-observable</span> @<span class="attr">resize</span>=<span class="string">"onResize"</span> /&gt;</span></div><div class="line">  ...</div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  ...,</div><div class="line">  methods: &#123;</div><div class="line">    ...,</div><div class="line">    onResize (size) &#123;</div><div class="line">      <span class="built_in">console</span>.log(size)</div><div class="line">      <span class="comment">// &#123;</span></div><div class="line">      <span class="comment">//   width: 1200 // width of viewport (in px)</span></div><div class="line">      <span class="comment">//   height: 920 // height of viewport (in px)</span></div><div class="line">      <span class="comment">// &#125;</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>Please note that QWindowResizeObservable will issue an event as soon as it gets rendered and attached to DOM, so you can have the initial size of the window.</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Web Storage]]></title>
       <url>http://beta.quasar-framework.org/components/web-storage.html</url>
       <content type="html"><![CDATA[<p>Quasar provides a wrapper over <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API" target="_blank" rel="external">Web Storage API</a>.</p>
@@ -9678,6 +9669,15 @@
 <p>All items (clear the store):<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; LocalStorage, SessionStorage &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">LocalStorage.clear(key)</div><div class="line">SessionStorage.clear(key)</div></pre></td></tr></table></figure></p>
 <h3 id="Is-Store-Empty"><a href="#Is-Store-Empty" class="headerlink" title="Is Store Empty?"></a>Is Store Empty?</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; LocalStorage, SessionStorage &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(boolean) LocalStorage.isEmpty()</div><div class="line">(boolean) SessionStorage.isEmpty()</div></pre></td></tr></table></figure>
 <h3 id="Is-Key-in-Store"><a href="#Is-Key-in-Store" class="headerlink" title="Is Key in Store?"></a>Is Key in Store?</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; LocalStorage, SessionStorage &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(boolean) LocalStorage.has(key)</div><div class="line">(boolean) SessionStorage.has(key)</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Window Resize Observable]]></title>
+      <url>http://beta.quasar-framework.org/components/window-resize-observable.html</url>
+      <content type="html"><![CDATA[<p>QWindowResizeObservable is a Quasar component that emits a <code>resize</code> event whenever the document viewport (window) changes its size, with no polling involved.</p>
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  ...</div><div class="line">    <span class="comment">&lt;!--can be placed anywhere within your template --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-window-resize-observable</span> @<span class="attr">resize</span>=<span class="string">"onResize"</span> /&gt;</span></div><div class="line">  ...</div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  ...,</div><div class="line">  methods: &#123;</div><div class="line">    ...,</div><div class="line">    onResize (size) &#123;</div><div class="line">      <span class="built_in">console</span>.log(size)</div><div class="line">      <span class="comment">// &#123;</span></div><div class="line">      <span class="comment">//   width: 1200 // width of viewport (in px)</span></div><div class="line">      <span class="comment">//   height: 920 // height of viewport (in px)</span></div><div class="line">      <span class="comment">// &#125;</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Please note that QWindowResizeObservable will issue an event as soon as it gets rendered and attached to DOM, so you can have the initial size of the window.</p>
 ]]></content>
     </entry>
     
