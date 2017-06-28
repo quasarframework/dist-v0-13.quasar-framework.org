@@ -35,19 +35,13 @@
     
     <entry>
       <title></title>
-      <url>http://beta.quasar-framework.org/support-quasar-framework.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
-      <title></title>
       <url>http://beta.quasar-framework.org/quasar-play-privacy-policy.html</url>
       <content type="html"></content>
     </entry>
     
     <entry>
       <title></title>
-      <url>http://beta.quasar-framework.org/blog/index.html</url>
+      <url>http://beta.quasar-framework.org/support-quasar-framework.html</url>
       <content type="html"></content>
     </entry>
     
@@ -68,39 +62,18 @@
     </entry>
     
     <entry>
+      <title></title>
+      <url>http://beta.quasar-framework.org/blog/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[App API Proxying for Dev]]></title>
       <url>http://beta.quasar-framework.org/guide/app-api-proxying-for-dev.html</url>
       <content type="html"><![CDATA[<p>When integrating the boilerplate created by Quasar CLI with an existing backend, a common need is to access the backend API when using the dev server. To achieve that, we can run the dev server and the API backend side-by-side (or remotely), and let the dev server proxy all API requests to the actual backend.</p>
 <p>To configure the proxy rules, edit <code>dev.proxyTable</code> option in <code>config/index.js</code>. The dev server is using <code>http-proxy-middleware</code> for proxying, so you should refer to its docs for detailed usage. But here’s a simple example:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// config/index.js</span></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">  dev: &#123;</div><div class="line">    ...</div><div class="line">    proxyTable: &#123;</div><div class="line">      <span class="comment">// proxy all requests starting with /api to jsonplaceholder</span></div><div class="line">      <span class="string">'/api'</span>: &#123;</div><div class="line">        target: <span class="string">'http://jsonplaceholder.typicode.com'</span>,</div><div class="line">        changeOrigin: <span class="literal">true</span>,</div><div class="line">        pathRewrite: &#123;</div><div class="line">          <span class="string">'^/api'</span>: <span class="string">''</span></div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>The above example will proxy the request <code>/api/posts/1</code> to <code>http://jsonplaceholder.typicode.com/posts/1</code>.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[App Folder Boilerplate]]></title>
-      <url>http://beta.quasar-framework.org/guide/app-boilerplate.html</url>
-      <content type="html"><![CDATA[<p>The Quasar CLI helps you start an App folder with all the necessary boilerplate  you will need to get started building your application. To begin, there is a simple command:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ quasar init &lt;folder name&gt;</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>The boilerplate created is a fork of the <a href="https://github.com/vuejs-templates/webpack" target="_blank" rel="external">official Webpack + VueJs</a> repo. So, if you’ve worked with Vue’s CLI, Quasar’s CLI should seem quite familiar to you.</p>
-</blockquote>
-<p>If you want to tweak things specific for your App, you first need to understand the underlying tools being used in the generated boilerplate.</p>
-<p>The boilerplate is targeted towards large, serious projects and assumes you are somewhat familiar with <strong>Webpack</strong> and <strong>vue-loader</strong>. Make sure to also read <a href="http://vue-loader.vuejs.org/index.html" target="_blank" rel="external">vue-loader’s documentation</a> for common workflow recipes.</p>
-<h2 id="What’s-Included"><a href="#What’s-Included" class="headerlink" title="What’s Included"></a>What’s Included</h2><p>While developing with Dev Server (<code>$ quasar dev</code>):</p>
-<ul>
-<li>Webbpack + vue-loader for single file Vue components</li>
-<li>State preserving hot-reload</li>
-<li>State preserving compilation error overlay</li>
-<li>Lint-on-save with ESLint</li>
-<li>Source maps</li>
-</ul>
-<p>Developing for production (<code>$quasar build</code>):</p>
-<ul>
-<li>Javascript minified with <a href="https://github.com/mishoo/UglifyJS2" target="_blank" rel="external">UglifyJS</a></li>
-<li>HTML minified with <a href="https://github.com/kangax/html-minifier" target="_blank" rel="external">html-minifier</a></li>
-<li>CSS across all components extracted into a single file and minified with <a href="https://github.com/ben-eb/cssnano" target="_blank" rel="external">cssnano</a></li>
-<li>All static assets are compiled with version hashes for efficient long-term caching, and a production index.html is auto-generated with proper URLs to these generated assets.</li>
-</ul>
 ]]></content>
     </entry>
     
@@ -139,6 +112,33 @@
 <li>Unused CSS removed with <a href="https://github.com/purifycss/purifycss" target="_blank" rel="external">PurifyCSS</a></li>
 <li>CSS across all components extracted into a single file and minified with <a href="https://github.com/ben-eb/cssnano" target="_blank" rel="external">cssnano</a></li>
 <li>All static assets compiled with version hashes for efficient long-term caching, and a production index.html is auto-generated with proper URLs to these generated assets</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[App Folder Boilerplate]]></title>
+      <url>http://beta.quasar-framework.org/guide/app-boilerplate.html</url>
+      <content type="html"><![CDATA[<p>The Quasar CLI helps you start an App folder with all the necessary boilerplate  you will need to get started building your application. To begin, there is a simple command:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ quasar init &lt;folder name&gt;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>The boilerplate created is a fork of the <a href="https://github.com/vuejs-templates/webpack" target="_blank" rel="external">official Webpack + VueJs</a> repo. So, if you’ve worked with Vue’s CLI, Quasar’s CLI should seem quite familiar to you.</p>
+</blockquote>
+<p>If you want to tweak things specific for your App, you first need to understand the underlying tools being used in the generated boilerplate.</p>
+<p>The boilerplate is targeted towards large, serious projects and assumes you are somewhat familiar with <strong>Webpack</strong> and <strong>vue-loader</strong>. Make sure to also read <a href="http://vue-loader.vuejs.org/index.html" target="_blank" rel="external">vue-loader’s documentation</a> for common workflow recipes.</p>
+<h2 id="What’s-Included"><a href="#What’s-Included" class="headerlink" title="What’s Included"></a>What’s Included</h2><p>While developing with Dev Server (<code>$ quasar dev</code>):</p>
+<ul>
+<li>Webbpack + vue-loader for single file Vue components</li>
+<li>State preserving hot-reload</li>
+<li>State preserving compilation error overlay</li>
+<li>Lint-on-save with ESLint</li>
+<li>Source maps</li>
+</ul>
+<p>Developing for production (<code>$quasar build</code>):</p>
+<ul>
+<li>Javascript minified with <a href="https://github.com/mishoo/UglifyJS2" target="_blank" rel="external">UglifyJS</a></li>
+<li>HTML minified with <a href="https://github.com/kangax/html-minifier" target="_blank" rel="external">html-minifier</a></li>
+<li>CSS across all components extracted into a single file and minified with <a href="https://github.com/ben-eb/cssnano" target="_blank" rel="external">cssnano</a></li>
+<li>All static assets are compiled with version hashes for efficient long-term caching, and a production index.html is auto-generated with proper URLs to these generated assets.</li>
 </ul>
 ]]></content>
     </entry>
@@ -455,39 +455,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Managing Google Analytics]]></title>
-      <url>http://beta.quasar-framework.org/guide/managing-google-analytics.html</url>
-      <content type="html"><![CDATA[<p>Getting to know your users and measuring user behavior is an important step in App Development. Unfortunately, it’s take a bit of non-standard work to get Google Analytics to work after wrapping your mobile app with Cordova. Setting up Google Analytics in a pure web application is quite easy, but Cordova somehow prevents pageviews and events from being sent to Google Analytics.</p>
-<p>Follow this guide to implement Google Analytics into your Cordova App.</p>
-<h2 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h2><blockquote>
-<ul>
-<li>Make sure all your routes have a name and path parameter specified. Otherwise, they cannot be posted to the <code>ga.logPage</code> function. Please refer to <a href="/guide/router.html">the router docs</a> for more info on routing.</li>
-<li>Have Basic knowledge of Google Analytics</li>
-</ul>
-</blockquote>
-<h2 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h2><p>Before we can start implementing Google Analytics into your application, you’ll need an account for <a href="https://analytics.google.com" target="_blank" rel="external">Google Analytics</a> and <a href="https://tagmanager.google.com/" target="_blank" rel="external">Google Tagmanager</a>. So let’s do that first. When you have these accounts, it’s time to configure Tag manager. Follow the steps in this <a href="http://www.multiminds.eu/2016/12/06/google-analytics-tag-manager-ionic-cordova/" target="_blank" rel="external">Multiminds article</a> to do so.</p>
-<h2 id="Implementing-this-into-application"><a href="#Implementing-this-into-application" class="headerlink" title="Implementing this into application"></a>Implementing this into application</h2><blockquote>
-<p>For this guide, we’ll assume you have a fixed sessionId that you send to Google Analytics. Google Analytics uses a sessionId to distinquish different users from each other. If you want to create an anonymous sessionId, see <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id" target="_blank" rel="external">Analytics Documentation on user id</a>.</p>
-</blockquote>
-<p>Place the Tag Manager snippet into head of your <code>index.html</code> file (if you’ve followed the <a href="http://www.multiminds.eu/2016/12/06/google-analytics-tag-manager-ionic-cordova/" target="_blank" rel="external">Multiminds article</a>, you already have this.) Create a new file in your codebase called <code>analytics.js</code> with the following contents:</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line"></div><div class="line">    logEvent(category, action, label, sessionId = <span class="literal">null</span>) &#123;</div><div class="line">        dataLayer.push(&#123;</div><div class="line">            <span class="string">'appEventCategory'</span>: category,</div><div class="line">            <span class="string">'appEventAction'</span>: action,</div><div class="line">            <span class="string">'appEventLabel'</span>: label,</div><div class="line">            <span class="string">'sessionId'</span>: sessionId</div><div class="line">        &#125;);</div><div class="line">        dataLayer.push(&#123; <span class="string">'event'</span>: <span class="string">'appEvent'</span> &#125;);</div><div class="line">    &#125;,</div><div class="line"></div><div class="line">    logPage(path, name, userId = <span class="literal">null</span>) &#123;</div><div class="line">        dataLayer.push(&#123;</div><div class="line">            <span class="string">'screenPath'</span>: path,</div><div class="line">            <span class="string">'screenName'</span>: name,</div><div class="line">            <span class="string">'sessionId'</span>: sessionId</div><div class="line">        &#125;);</div><div class="line">        dataLayer.push(&#123; <span class="string">'event'</span>: <span class="string">'appScreenView'</span> &#125;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>To make sure all the pages in your application are automatically posted towards Google Analytics, import the newly created <code>analytics.js</code> file into <code>main.js</code> and add the following in <code>main.js</code>.</p>
-<blockquote>
-<p>If you are not using Vue-router, you can log clicks manualy by calling the logPage function at any place you like.</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">router.afterEach((to, <span class="keyword">from</span>) =&gt; &#123;</div><div class="line">    ga.logPage(to.path, to.name, sessionId)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>Let’s add some event logging into a component, by calling the <code>logEvent</code> function with the correct parameters. Import the <code>analytics.js</code> in your component as <code>ga</code>.</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">methods: &#123;</div><div class="line">    clickRedButton <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        ga.logEvent(<span class="string">"Buttons"</span>, <span class="string">"Click"</span>, <span class="string">"Red Button"</span>, sessionId)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>More information about events can be found in the <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/events" target="_blank" rel="external">Analytics documentation on events</a>.</p>
-</blockquote>
-<h2 id="Wrapping-up"><a href="#Wrapping-up" class="headerlink" title="Wrapping up"></a>Wrapping up</h2><p>Now, when you build your application with Cordova and test it out on the emulator.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ quasar build</div><div class="line">$ <span class="built_in">cd</span> cordova</div><div class="line">$ cordova run</div></pre></td></tr></table></figure>
-<p>You’ll see the events and pageviews coming in. It usually takes around 5 to 10 seconds for a pageview to be registered in the realtime view.</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Getting Started]]></title>
       <url>http://beta.quasar-framework.org/guide/index.html</url>
       <content type="html"><![CDATA[<p>There are 2 sections on this documentation website that will get you familiarized with Quasar:</p>
@@ -520,6 +487,39 @@
 <blockquote>
 <p>That’s it. You’re all set now. Continue to read the guide about Quasar and don’t forget to have fun! :)</p>
 </blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Managing Google Analytics]]></title>
+      <url>http://beta.quasar-framework.org/guide/managing-google-analytics.html</url>
+      <content type="html"><![CDATA[<p>Getting to know your users and measuring user behavior is an important step in App Development. Unfortunately, it’s take a bit of non-standard work to get Google Analytics to work after wrapping your mobile app with Cordova. Setting up Google Analytics in a pure web application is quite easy, but Cordova somehow prevents pageviews and events from being sent to Google Analytics.</p>
+<p>Follow this guide to implement Google Analytics into your Cordova App.</p>
+<h2 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h2><blockquote>
+<ul>
+<li>Make sure all your routes have a name and path parameter specified. Otherwise, they cannot be posted to the <code>ga.logPage</code> function. Please refer to <a href="/guide/router.html">the router docs</a> for more info on routing.</li>
+<li>Have Basic knowledge of Google Analytics</li>
+</ul>
+</blockquote>
+<h2 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h2><p>Before we can start implementing Google Analytics into your application, you’ll need an account for <a href="https://analytics.google.com" target="_blank" rel="external">Google Analytics</a> and <a href="https://tagmanager.google.com/" target="_blank" rel="external">Google Tagmanager</a>. So let’s do that first. When you have these accounts, it’s time to configure Tag manager. Follow the steps in this <a href="http://www.multiminds.eu/2016/12/06/google-analytics-tag-manager-ionic-cordova/" target="_blank" rel="external">Multiminds article</a> to do so.</p>
+<h2 id="Implementing-this-into-application"><a href="#Implementing-this-into-application" class="headerlink" title="Implementing this into application"></a>Implementing this into application</h2><blockquote>
+<p>For this guide, we’ll assume you have a fixed sessionId that you send to Google Analytics. Google Analytics uses a sessionId to distinquish different users from each other. If you want to create an anonymous sessionId, see <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id" target="_blank" rel="external">Analytics Documentation on user id</a>.</p>
+</blockquote>
+<p>Place the Tag Manager snippet into head of your <code>index.html</code> file (if you’ve followed the <a href="http://www.multiminds.eu/2016/12/06/google-analytics-tag-manager-ionic-cordova/" target="_blank" rel="external">Multiminds article</a>, you already have this.) Create a new file in your codebase called <code>analytics.js</code> with the following contents:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line"></div><div class="line">    logEvent(category, action, label, sessionId = <span class="literal">null</span>) &#123;</div><div class="line">        dataLayer.push(&#123;</div><div class="line">            <span class="string">'appEventCategory'</span>: category,</div><div class="line">            <span class="string">'appEventAction'</span>: action,</div><div class="line">            <span class="string">'appEventLabel'</span>: label,</div><div class="line">            <span class="string">'sessionId'</span>: sessionId</div><div class="line">        &#125;);</div><div class="line">        dataLayer.push(&#123; <span class="string">'event'</span>: <span class="string">'appEvent'</span> &#125;);</div><div class="line">    &#125;,</div><div class="line"></div><div class="line">    logPage(path, name, userId = <span class="literal">null</span>) &#123;</div><div class="line">        dataLayer.push(&#123;</div><div class="line">            <span class="string">'screenPath'</span>: path,</div><div class="line">            <span class="string">'screenName'</span>: name,</div><div class="line">            <span class="string">'sessionId'</span>: sessionId</div><div class="line">        &#125;);</div><div class="line">        dataLayer.push(&#123; <span class="string">'event'</span>: <span class="string">'appScreenView'</span> &#125;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>To make sure all the pages in your application are automatically posted towards Google Analytics, import the newly created <code>analytics.js</code> file into <code>main.js</code> and add the following in <code>main.js</code>.</p>
+<blockquote>
+<p>If you are not using Vue-router, you can log clicks manualy by calling the logPage function at any place you like.</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">router.afterEach((to, <span class="keyword">from</span>) =&gt; &#123;</div><div class="line">    ga.logPage(to.path, to.name, sessionId)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>Let’s add some event logging into a component, by calling the <code>logEvent</code> function with the correct parameters. Import the <code>analytics.js</code> in your component as <code>ga</code>.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">methods: &#123;</div><div class="line">    clickRedButton <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        ga.logEvent(<span class="string">"Buttons"</span>, <span class="string">"Click"</span>, <span class="string">"Red Button"</span>, sessionId)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>More information about events can be found in the <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/events" target="_blank" rel="external">Analytics documentation on events</a>.</p>
+</blockquote>
+<h2 id="Wrapping-up"><a href="#Wrapping-up" class="headerlink" title="Wrapping up"></a>Wrapping up</h2><p>Now, when you build your application with Cordova and test it out on the emulator.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ quasar build</div><div class="line">$ <span class="built_in">cd</span> cordova</div><div class="line">$ cordova run</div></pre></td></tr></table></figure>
+<p>You’ll see the events and pageviews coming in. It usually takes around 5 to 10 seconds for a pageview to be registered in the realtime view.</p>
 ]]></content>
     </entry>
     
@@ -685,24 +685,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Router]]></title>
-      <url>http://beta.quasar-framework.org/guide/router.html</url>
-      <content type="html"><![CDATA[<p>Quasar Apps are using by default the <code>vue-router</code> which is the official router for VueJs. It deeply integrates with Vue.js core to make building Single Page Applications with Vue.js a breeze. Features include:</p>
-<ul>
-<li>Nested route/view mapping</li>
-<li>Modular, component-based router configuration</li>
-<li>Route params, query, wildcards</li>
-<li>View transition effects powered by Vue.js’ transition system</li>
-<li>Fine-grained navigation control</li>
-<li>Links with automatic active CSS classes</li>
-<li>HTML5 history mode or hash mode, with auto-fallback in IE9</li>
-<li>Restore scroll position when going back in history mode</li>
-</ul>
-<p>Get started with the <a href="http://vuejs.github.io/vue-router" target="_blank" rel="external">documentation</a>.</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Theming]]></title>
       <url>http://beta.quasar-framework.org/guide/quasar-theming.html</url>
       <content type="html"><![CDATA[<p>Every website or mobile app needs a specific design to differentiate from the competition. This is where Quasar Framework excels, because:</p>
@@ -817,6 +799,24 @@
 <p><strong>All your Stylus variables need to be declared before the inclusion of Quasar Framework theme files (from NPM).</strong> If you follow the default structure of files (and be care-free) then inject variable overrides in <em>src/themes/app.variables.styl</em>.</p>
 </blockquote>
 <h2 id="Stylus-Variables"><a href="#Stylus-Variables" class="headerlink" title="Stylus Variables"></a>Stylus Variables</h2><p>Read a complete list of all <a href="/components/stylus-variables.html">Stylus variables</a> that you can override.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Router]]></title>
+      <url>http://beta.quasar-framework.org/guide/router.html</url>
+      <content type="html"><![CDATA[<p>Quasar Apps are using by default the <code>vue-router</code> which is the official router for VueJs. It deeply integrates with Vue.js core to make building Single Page Applications with Vue.js a breeze. Features include:</p>
+<ul>
+<li>Nested route/view mapping</li>
+<li>Modular, component-based router configuration</li>
+<li>Route params, query, wildcards</li>
+<li>View transition effects powered by Vue.js’ transition system</li>
+<li>Fine-grained navigation control</li>
+<li>Links with automatic active CSS classes</li>
+<li>HTML5 history mode or hash mode, with auto-fallback in IE9</li>
+<li>Restore scroll position when going back in history mode</li>
+</ul>
+<p>Get started with the <a href="http://vuejs.github.io/vue-router" target="_blank" rel="external">documentation</a>.</p>
 ]]></content>
     </entry>
     
@@ -955,51 +955,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Animation CSS Helper Classes]]></title>
-      <url>http://beta.quasar-framework.org/components/animation-css-helper-classes.html</url>
-      <content type="html"><![CDATA[<p>Add these CSS classes to the DOM element / component you want the effect on.<br>These are very basic effects so for advanced ones check <a href="/components/transition.html">Transition</a>, <a href="/components/slide-transition.html">Slide Transition</a> or use <a href="/components/js-animations.html">JS Animations</a>.</p>
-<table>
-<thead>
-<tr>
-<th>Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>animate-spin</code></td>
-<td>Apply a continuous spin/rotation to the DOM element</td>
-</tr>
-<tr>
-<td><code>animate-spin-reverse</code></td>
-<td>Apply a continuous spin/rotation (opposite direction to <code>animate-spin</code>) to the DOM element</td>
-</tr>
-<tr>
-<td><code>animate-blink</code></td>
-<td>Apply a blinking effect to the DOM element</td>
-</tr>
-<tr>
-<td><code>animate-pop</code></td>
-<td>Apply a pop-in effect to the DOM element</td>
-</tr>
-<tr>
-<td><code>animate-scale</code></td>
-<td>Apply a scale-in effect to the DOM element</td>
-</tr>
-<tr>
-<td><code>animate-fade</code></td>
-<td>Apply a fade-in effect to the DOM element</td>
-</tr>
-<tr>
-<td><code>animate-bounce</code></td>
-<td>Apply a continuous bouncing effect to the DOM element</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Alert]]></title>
       <url>http://beta.quasar-framework.org/components/alert.html</url>
       <content type="html"><![CDATA[<p>Quasar Alerts are like a mix between Dialog and Toast components. They offer more options for appearance and control than Toasts do and they can have custom dismissal action(s) and other behaviors, similar to the dialog component. The Alert component is built however, to be more specific to alerting the users of events happening in your app and it does not timeouts unless user hits one of the Alert action buttons. It can be used either as a component or as a method (so globally, even outside of Vue components, much like Toasts).</p>
@@ -1041,6 +996,11 @@
 <td><code>duration</code></td>
 <td>Number</td>
 <td>The time in milliseconds any transition should take.</td>
+</tr>
+<tr>
+<td><code>inline</code></td>
+<td>Boolean</td>
+<td>Use inline instead of taking up entire row.</td>
 </tr>
 <tr>
 <td><code>color</code></td>
@@ -1145,6 +1105,51 @@
 <p><code>enter</code>, <code>leave</code> and <code>name</code> props work same as for <a href="/components/transition.html">QTransition</a>, so it might be a good idea to get a reading on them.</p>
 </blockquote>
 <p>It also supports <code>v-model</code> directive to receive a Boolean as property, which determines the visibility of the QAlert (<code>true</code> means it’s visible).</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Animation CSS Helper Classes]]></title>
+      <url>http://beta.quasar-framework.org/components/animation-css-helper-classes.html</url>
+      <content type="html"><![CDATA[<p>Add these CSS classes to the DOM element / component you want the effect on.<br>These are very basic effects so for advanced ones check <a href="/components/transition.html">Transition</a>, <a href="/components/slide-transition.html">Slide Transition</a> or use <a href="/components/js-animations.html">JS Animations</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>animate-spin</code></td>
+<td>Apply a continuous spin/rotation to the DOM element</td>
+</tr>
+<tr>
+<td><code>animate-spin-reverse</code></td>
+<td>Apply a continuous spin/rotation (opposite direction to <code>animate-spin</code>) to the DOM element</td>
+</tr>
+<tr>
+<td><code>animate-blink</code></td>
+<td>Apply a blinking effect to the DOM element</td>
+</tr>
+<tr>
+<td><code>animate-pop</code></td>
+<td>Apply a pop-in effect to the DOM element</td>
+</tr>
+<tr>
+<td><code>animate-scale</code></td>
+<td>Apply a scale-in effect to the DOM element</td>
+</tr>
+<tr>
+<td><code>animate-fade</code></td>
+<td>Apply a fade-in effect to the DOM element</td>
+</tr>
+<tr>
+<td><code>animate-bounce</code></td>
+<td>Apply a continuous bouncing effect to the DOM element</td>
+</tr>
+</tbody>
+</table>
 ]]></content>
     </entry>
     
@@ -3978,19 +3983,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[HTML Tables]]></title>
-      <url>http://beta.quasar-framework.org/components/html-table.html</url>
-      <content type="html"><![CDATA[<p>HTML tables don’t need to look bad. Quasar takes care of them by default if you add <code>q-table</code> CSS class to them.</p>
-<input type="hidden" data-fullpage-demo="grouping/html-table">
-
-<p>If the default table style is not enough, also add the following CSS classes to best suit your needs: <code>bordered</code>, <code>horizontal-separator</code>, <code>vertical-separator</code>, <code>cell-separator</code>, <code>striped</code>, <code>striped-even</code>, <code>striped-odd</code>, <code>highlight</code>, <code>compact</code>, <code>loose</code>, <code>flipped</code>, <code>responsive</code>.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">"q-table"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">thead</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">th</span> <span class="attr">class</span>=<span class="string">"text-left"</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">th</span> <span class="attr">class</span>=<span class="string">"text-right"</span>&gt;</span>Price<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">th</span> <span class="attr">class</span>=<span class="string">"text-right"</span>&gt;</span>In Stock<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"text-left"</span>&gt;</span>Item #1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"text-right"</span>&gt;</span>$10.11<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"text-right"</span>&gt;</span>101<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"text-left"</span>&gt;</span>Item #2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"text-right"</span>&gt;</span>$8.88<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"text-right"</span>&gt;</span>34<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"text-left"</span>&gt;</span>Item #3<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"text-right"</span>&gt;</span>$0.15<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"text-right"</span>&gt;</span>1670<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>If you’re using <code>responsive</code> CSS class, then add <code>data-th=&quot;Column name&quot;</code> to each <code>&lt;td&gt;</code>. Example:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">"q-table responsive"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">thead</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>Price<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>In Stock<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">data-th</span>=<span class="string">"Name"</span>&gt;</span>Item #1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">data-th</span>=<span class="string">"Price"</span>&gt;</span>$10.11<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">data-th</span>=<span class="string">"In Stock"</span>&gt;</span>101<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">data-th</span>=<span class="string">"Name"</span>&gt;</span>Item #2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">data-th</span>=<span class="string">"Price"</span>&gt;</span>$8.88<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"text-right"</span>&gt;</span>34<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">data-th</span>=<span class="string">"Name"</span>&gt;</span>Item #3<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">data-th</span>=<span class="string">"Price"</span>&gt;</span>$0.15<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">data-th</span>=<span class="string">"In Stock"</span>&gt;</span>1670<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Handling JS Date]]></title>
       <url>http://beta.quasar-framework.org/components/handling-js-date.html</url>
       <content type="html"><![CDATA[<p>Quasar provides a set of useful functions to manipulate JS Date easily in most use cases, without the high additional cost of integrating dedicated libraries like <a href="https://momentjs.com" target="_blank" rel="external">moment</a>.</p>
@@ -4302,6 +4294,19 @@
 </tr>
 </tbody>
 </table>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[HTML Tables]]></title>
+      <url>http://beta.quasar-framework.org/components/html-table.html</url>
+      <content type="html"><![CDATA[<p>HTML tables don’t need to look bad. Quasar takes care of them by default if you add <code>q-table</code> CSS class to them.</p>
+<input type="hidden" data-fullpage-demo="grouping/html-table">
+
+<p>If the default table style is not enough, also add the following CSS classes to best suit your needs: <code>bordered</code>, <code>horizontal-separator</code>, <code>vertical-separator</code>, <code>cell-separator</code>, <code>striped</code>, <code>striped-even</code>, <code>striped-odd</code>, <code>highlight</code>, <code>compact</code>, <code>loose</code>, <code>flipped</code>, <code>responsive</code>.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">"q-table"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">thead</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">th</span> <span class="attr">class</span>=<span class="string">"text-left"</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">th</span> <span class="attr">class</span>=<span class="string">"text-right"</span>&gt;</span>Price<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">th</span> <span class="attr">class</span>=<span class="string">"text-right"</span>&gt;</span>In Stock<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"text-left"</span>&gt;</span>Item #1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"text-right"</span>&gt;</span>$10.11<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"text-right"</span>&gt;</span>101<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"text-left"</span>&gt;</span>Item #2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"text-right"</span>&gt;</span>$8.88<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"text-right"</span>&gt;</span>34<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"text-left"</span>&gt;</span>Item #3<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"text-right"</span>&gt;</span>$0.15<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"text-right"</span>&gt;</span>1670<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>If you’re using <code>responsive</code> CSS class, then add <code>data-th=&quot;Column name&quot;</code> to each <code>&lt;td&gt;</code>. Example:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">"q-table responsive"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">thead</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>Price<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>In Stock<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">data-th</span>=<span class="string">"Name"</span>&gt;</span>Item #1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">data-th</span>=<span class="string">"Price"</span>&gt;</span>$10.11<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">data-th</span>=<span class="string">"In Stock"</span>&gt;</span>101<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">data-th</span>=<span class="string">"Name"</span>&gt;</span>Item #2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">data-th</span>=<span class="string">"Price"</span>&gt;</span>$8.88<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"text-right"</span>&gt;</span>34<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">data-th</span>=<span class="string">"Name"</span>&gt;</span>Item #3<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">data-th</span>=<span class="string">"Price"</span>&gt;</span>$0.15<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">data-th</span>=<span class="string">"In Stock"</span>&gt;</span>1670<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -5096,6 +5101,15 @@
     </entry>
     
     <entry>
+      <title><![CDATA[JS Animations]]></title>
+      <url>http://beta.quasar-framework.org/components/js-animations.html</url>
+      <content type="html"><![CDATA[<p>You can create animations through Javascript (using RAF - <code>requestAnimationFrame()</code>) with Quasar.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; animate &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> id = animate.start(&#123;</div><div class="line">  name: <span class="string">'unique-animation-name'</span>, <span class="comment">// optional, if none is supplied a unique one is created and returned</span></div><div class="line">  <span class="keyword">from</span>: <span class="string">'0'</span>, <span class="comment">// current position</span></div><div class="line">  to: <span class="string">'100'</span>, <span class="comment">// final position</span></div><div class="line">  duration: <span class="number">300</span>, <span class="comment">// duration of the animation</span></div><div class="line">  done (finalPosition) &#123;...&#125;, <span class="comment">// function to call when animation is done</span></div><div class="line">  cancel (currentPosition) &#123;...&#125;, <span class="comment">// function to call when animation is aborted</span></div><div class="line">  apply (currentPosition) &#123;...&#125;, <span class="comment">// function called on each step so you can apply changes</span></div><div class="line">  easing (currentPosition) &#123; <span class="comment">// custom easing function</span></div><div class="line">    <span class="comment">// ...return transformation of currentPosition...</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"><span class="comment">// Starting an animation with same name will abort the previous one</span></div><div class="line"></div><div class="line"><span class="comment">// Stop an animation using its name</span></div><div class="line">animate.stop(<span class="string">'unique-animation-name'</span>)</div><div class="line"><span class="comment">// or</span></div><div class="line">animate.stop(id) <span class="comment">// id returned from above</span></div></pre></td></tr></table></figure>
+<p>Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; animate &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">animate.start(&#123;</div><div class="line">  <span class="keyword">from</span>: <span class="number">6</span>,</div><div class="line">  to: <span class="number">158</span>,</div><div class="line">  apply (pos) &#123;</div><div class="line">    el.style.maxHeight = <span class="string">`<span class="subst">$&#123;pos&#125;</span>px`</span></div><div class="line">  &#125;,</div><div class="line">  done () &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`we're done!`</span>)</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Introduction for Beginners]]></title>
       <url>http://beta.quasar-framework.org/components/introduction-for-beginners.html</url>
       <content type="html"><![CDATA[<p>Before you begin with Quasar, it is a good idea to get acquainted with ES6 and have a fairly good knowledge about how Vue works. (<a href="https://github.com/lukehoban/es6features" target="_blank" rel="external">quick overview of ES6</a> and <a href="http://es6-features.org/#Constants" target="_blank" rel="external">full description</a> – don’t worry, you don’t need to understand ALL of ES6). For devs experienced with reactive UIs, <a href="https://vuejs.org/v2/guide/" target="_blank" rel="external">the Vue documentation</a> itself takes half a day at most to read top-to-bottom and will help you understand how Quasar components can be used and configured.</p>
@@ -5223,15 +5237,6 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">q-bogus</span> @<span class="attr">open</span>=<span class="string">"doSomething"</span> @<span class="attr">close</span>=<span class="string">"doSomethingElse"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  methods: &#123;</div><div class="line">    doSomething () &#123;</div><div class="line">      <span class="comment">// this method has been called (in this case)</span></div><div class="line">      <span class="comment">// because @open event was triggered by QBogus component</span></div><div class="line">    &#125;,</div><div class="line">    doSomethingElse () &#123;</div><div class="line">      <span class="comment">// this method has been called (in this case)</span></div><div class="line">      <span class="comment">// because @close event was triggered by QBogus component</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>There are times when you need to access native DOM events on a Quasar component too, like the native <code>@click</code>. Do not confuse native events with the Vue events emitted by the component. They are different things. Let’s take an example: let’s say we have a component (QBogus) that emits <code>@open</code> and <code>@close</code>, but doesn’t emit a <code>@click</code> event. <code>@click</code> being a native DOM event, we can still catch it with the <code>.native</code> modifier:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Notice "@click.native" --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">q-bogus</span> @<span class="attr">click.native</span>=<span class="string">"myMethod"</span> /&gt;</span></div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[JS Animations]]></title>
-      <url>http://beta.quasar-framework.org/components/js-animations.html</url>
-      <content type="html"><![CDATA[<p>You can create animations through Javascript (using RAF - <code>requestAnimationFrame()</code>) with Quasar.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; animate &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> id = animate.start(&#123;</div><div class="line">  name: <span class="string">'unique-animation-name'</span>, <span class="comment">// optional, if none is supplied a unique one is created and returned</span></div><div class="line">  <span class="keyword">from</span>: <span class="string">'0'</span>, <span class="comment">// current position</span></div><div class="line">  to: <span class="string">'100'</span>, <span class="comment">// final position</span></div><div class="line">  duration: <span class="number">300</span>, <span class="comment">// duration of the animation</span></div><div class="line">  done (finalPosition) &#123;...&#125;, <span class="comment">// function to call when animation is done</span></div><div class="line">  cancel (currentPosition) &#123;...&#125;, <span class="comment">// function to call when animation is aborted</span></div><div class="line">  apply (currentPosition) &#123;...&#125;, <span class="comment">// function called on each step so you can apply changes</span></div><div class="line">  easing (currentPosition) &#123; <span class="comment">// custom easing function</span></div><div class="line">    <span class="comment">// ...return transformation of currentPosition...</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"><span class="comment">// Starting an animation with same name will abort the previous one</span></div><div class="line"></div><div class="line"><span class="comment">// Stop an animation using its name</span></div><div class="line">animate.stop(<span class="string">'unique-animation-name'</span>)</div><div class="line"><span class="comment">// or</span></div><div class="line">animate.stop(id) <span class="comment">// id returned from above</span></div></pre></td></tr></table></figure>
-<p>Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; animate &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">animate.start(&#123;</div><div class="line">  <span class="keyword">from</span>: <span class="number">6</span>,</div><div class="line">  to: <span class="number">158</span>,</div><div class="line">  apply (pos) &#123;</div><div class="line">    el.style.maxHeight = <span class="string">`<span class="subst">$&#123;pos&#125;</span>px`</span></div><div class="line">  &#125;,</div><div class="line">  done () &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`we're done!`</span>)</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
     
@@ -5639,44 +5644,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Loading]]></title>
-      <url>http://beta.quasar-framework.org/components/loading.html</url>
-      <content type="html"><![CDATA[<p>Loading is a feature that you can use to display an overlay with a spinner on top of your App’s content to inform the user that a background operation is taking place. No need to add complex logic within your Pages for global background operations.</p>
-<input type="hidden" data-fullpage-demo="progress/loading">
-
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><p>Loading uses a delay (500ms) to display itself so that quick operations won’t make the screen flicker. This happens by showing and then quickly hiding the progress spinner without the user having a chance to see what happens. The delay before showing it eliminates confusion.</p>
-<h3 id="Show-Loading"><a href="#Show-Loading" class="headerlink" title="Show Loading"></a>Show Loading</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;</div><div class="line">  Loading,</div><div class="line"></div><div class="line">  <span class="comment">// optional!, for example below</span></div><div class="line">  <span class="comment">// with custom spinner</span></div><div class="line">  QSpinnerGears</div><div class="line">&#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="comment">// default options</span></div><div class="line">Loading.show()</div><div class="line"></div><div class="line"><span class="comment">// with a custom delay</span></div><div class="line">Loading.show(&#123;</div><div class="line">  delay: <span class="number">300</span> <span class="comment">// milliseconds</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// customizable (all props available)</span></div><div class="line">Loading.show(&#123;</div><div class="line">  spinner: QSpinnerGears,</div><div class="line">  message: <span class="string">'Some message'</span>,</div><div class="line">  messageColor: <span class="string">'#00ff00'</span>,</div><div class="line">  spinnerSize: <span class="number">250</span>, <span class="comment">// in pixels</span></div><div class="line">  spinnerColor: <span class="string">'#f034a3'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h3 id="Hide-Loading"><a href="#Hide-Loading" class="headerlink" title="Hide Loading"></a>Hide Loading</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Loading &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line">Loading.hide()</div></pre></td></tr></table></figure>
-<h3 id="Check-Status"><a href="#Check-Status" class="headerlink" title="Check Status"></a>Check Status</h3><p>Checking whether the Loading is active is easy:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Loading &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line">(<span class="built_in">Boolean</span>) Loading.isActive()</div></pre></td></tr></table></figure>
-<h2 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h2><p>Since this is not a Vue component, events are handled through Quasar’s <a href="/components/global-event-bus.html">Global Event Bus</a>. There is one such event triggered when “Loading” is showing or hiding: <code>app:loading</code>. It is triggered with one Boolean parameter which is <code>true</code> when Loading is shown and <code>false</code> otherwise.</p>
-<p>Example of capturing the event on the Global Event Bus:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Events &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line">Events.$on(<span class="string">'app:loading'</span>, state =&gt; &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`Loading has become <span class="subst">$&#123;state ? 'visible' : 'hidden'&#125;</span>`</span>)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// or in a Vue component:</span></div><div class="line"><span class="keyword">this</span>.$q.events.$on(<span class="string">'app:loading'</span>, state =&gt; &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`Loading has become <span class="subst">$&#123;state ? 'visible' : 'hidden'&#125;</span>`</span>)</div><div class="line">&#125;)</div><div class="line"><span class="comment">// in this case, remember to unregister your handler when</span></div><div class="line"><span class="comment">// the Vue component gets destroyed (use `beforeDestroy()` Vue lifecycle hook). See Global Event Bus for more information.</span></div></pre></td></tr></table></figure></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Material Ripples]]></title>
-      <url>http://beta.quasar-framework.org/components/material-ripples.html</url>
-      <content type="html"><![CDATA[<p>Material Ripple effect can easily be added to any DOM element (or component) through the <code>v-ripple</code> Quasar directive. Following these steps:</p>
-<ol>
-<li><p>Make sure your DOM element or component has CSS <code>position: relative</code> or Quasar CSS helper class <code>relative-position</code> attached to it.</p>
-</li>
-<li><p>Add <code>v-ripple</code> directive to it.</p>
-</li>
-</ol>
-<p>The color of the ripples are determined by the text color (CSS ‘color’ prop) of the DOM element.</p>
-<input type="hidden" data-fullpage-demo="style-and-identity/material-ripples">
-
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"relative-position"</span> <span class="attr">v-ripple</span>&gt;</span></div><div class="line">  ....</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Trigger-only-for-one-Quasar-theme"><a href="#Trigger-only-for-one-Quasar-theme" class="headerlink" title="Trigger only for one Quasar theme"></a>Trigger only for one Quasar theme</h2><p>For this you need to specify <code>mat</code> or <code>ios</code> directive modifiers like this:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Only for Quasar Material theme --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-ripple.mat</span> <span class="attr">class</span>=<span class="string">"relative-position"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Only for Quasar iOS theme --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-ripple.ios</span> <span class="attr">class</span>=<span class="string">"relative-position"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Dynamic-Disable"><a href="#Dynamic-Disable" class="headerlink" title="Dynamic Disable"></a>Dynamic Disable</h2><p>If for some reason you have a scenario where the ripples need to be disabled, then you can assign a Boolean as value for the directive.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span></span></div><div class="line">    <span class="attr">v-ripple</span>=<span class="string">"rippleEnabled"</span></div><div class="line">    <span class="attr">class</span>=<span class="string">"relative-position"</span></div><div class="line">  &gt;</div><div class="line">    <span class="tag">&lt;<span class="name">q-checkbox</span></span></div><div class="line">      <span class="attr">v-model</span>=<span class="string">"rippleEnabled"</span></div><div class="line">      <span class="attr">label</span>=<span class="string">"Enable Ripples"</span></div><div class="line">    /&gt;</div><div class="line">    .....</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  data () &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      rippleEnabled: <span class="literal">true</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>When your Vue scope variable <code>rippleEnabled</code> becomes Boolean <code>false</code> then the ripple will be disabled.<br>You can also combine this with the <code>mat</code> and <code>ios</code> modifiers.</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Lists and List Items]]></title>
       <url>http://beta.quasar-framework.org/components/lists-and-list-items.html</url>
       <content type="html"><![CDATA[<p>Quasar Lists and List Items are a group of components which can work together to present multiple line items vertically as a single continuous element. They are best suited for displaying similar data types as rows of information, such as a contact list, a playlist, or menu. Each row is called an Item. Items can also be used outside of a List.</p>
@@ -6067,6 +6034,44 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Loading]]></title>
+      <url>http://beta.quasar-framework.org/components/loading.html</url>
+      <content type="html"><![CDATA[<p>Loading is a feature that you can use to display an overlay with a spinner on top of your App’s content to inform the user that a background operation is taking place. No need to add complex logic within your Pages for global background operations.</p>
+<input type="hidden" data-fullpage-demo="progress/loading">
+
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><p>Loading uses a delay (500ms) to display itself so that quick operations won’t make the screen flicker. This happens by showing and then quickly hiding the progress spinner without the user having a chance to see what happens. The delay before showing it eliminates confusion.</p>
+<h3 id="Show-Loading"><a href="#Show-Loading" class="headerlink" title="Show Loading"></a>Show Loading</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;</div><div class="line">  Loading,</div><div class="line"></div><div class="line">  <span class="comment">// optional!, for example below</span></div><div class="line">  <span class="comment">// with custom spinner</span></div><div class="line">  QSpinnerGears</div><div class="line">&#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="comment">// default options</span></div><div class="line">Loading.show()</div><div class="line"></div><div class="line"><span class="comment">// with a custom delay</span></div><div class="line">Loading.show(&#123;</div><div class="line">  delay: <span class="number">300</span> <span class="comment">// milliseconds</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// customizable (all props available)</span></div><div class="line">Loading.show(&#123;</div><div class="line">  spinner: QSpinnerGears,</div><div class="line">  message: <span class="string">'Some message'</span>,</div><div class="line">  messageColor: <span class="string">'#00ff00'</span>,</div><div class="line">  spinnerSize: <span class="number">250</span>, <span class="comment">// in pixels</span></div><div class="line">  spinnerColor: <span class="string">'#f034a3'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="Hide-Loading"><a href="#Hide-Loading" class="headerlink" title="Hide Loading"></a>Hide Loading</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Loading &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line">Loading.hide()</div></pre></td></tr></table></figure>
+<h3 id="Check-Status"><a href="#Check-Status" class="headerlink" title="Check Status"></a>Check Status</h3><p>Checking whether the Loading is active is easy:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Loading &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line">(<span class="built_in">Boolean</span>) Loading.isActive()</div></pre></td></tr></table></figure>
+<h2 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h2><p>Since this is not a Vue component, events are handled through Quasar’s <a href="/components/global-event-bus.html">Global Event Bus</a>. There is one such event triggered when “Loading” is showing or hiding: <code>app:loading</code>. It is triggered with one Boolean parameter which is <code>true</code> when Loading is shown and <code>false</code> otherwise.</p>
+<p>Example of capturing the event on the Global Event Bus:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Events &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line">Events.$on(<span class="string">'app:loading'</span>, state =&gt; &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`Loading has become <span class="subst">$&#123;state ? 'visible' : 'hidden'&#125;</span>`</span>)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// or in a Vue component:</span></div><div class="line"><span class="keyword">this</span>.$q.events.$on(<span class="string">'app:loading'</span>, state =&gt; &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`Loading has become <span class="subst">$&#123;state ? 'visible' : 'hidden'&#125;</span>`</span>)</div><div class="line">&#125;)</div><div class="line"><span class="comment">// in this case, remember to unregister your handler when</span></div><div class="line"><span class="comment">// the Vue component gets destroyed (use `beforeDestroy()` Vue lifecycle hook). See Global Event Bus for more information.</span></div></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Material Ripples]]></title>
+      <url>http://beta.quasar-framework.org/components/material-ripples.html</url>
+      <content type="html"><![CDATA[<p>Material Ripple effect can easily be added to any DOM element (or component) through the <code>v-ripple</code> Quasar directive. Following these steps:</p>
+<ol>
+<li><p>Make sure your DOM element or component has CSS <code>position: relative</code> or Quasar CSS helper class <code>relative-position</code> attached to it.</p>
+</li>
+<li><p>Add <code>v-ripple</code> directive to it.</p>
+</li>
+</ol>
+<p>The color of the ripples are determined by the text color (CSS ‘color’ prop) of the DOM element.</p>
+<input type="hidden" data-fullpage-demo="style-and-identity/material-ripples">
+
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"relative-position"</span> <span class="attr">v-ripple</span>&gt;</span></div><div class="line">  ....</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Trigger-only-for-one-Quasar-theme"><a href="#Trigger-only-for-one-Quasar-theme" class="headerlink" title="Trigger only for one Quasar theme"></a>Trigger only for one Quasar theme</h2><p>For this you need to specify <code>mat</code> or <code>ios</code> directive modifiers like this:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Only for Quasar Material theme --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-ripple.mat</span> <span class="attr">class</span>=<span class="string">"relative-position"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Only for Quasar iOS theme --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-ripple.ios</span> <span class="attr">class</span>=<span class="string">"relative-position"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Dynamic-Disable"><a href="#Dynamic-Disable" class="headerlink" title="Dynamic Disable"></a>Dynamic Disable</h2><p>If for some reason you have a scenario where the ripples need to be disabled, then you can assign a Boolean as value for the directive.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span></span></div><div class="line">    <span class="attr">v-ripple</span>=<span class="string">"rippleEnabled"</span></div><div class="line">    <span class="attr">class</span>=<span class="string">"relative-position"</span></div><div class="line">  &gt;</div><div class="line">    <span class="tag">&lt;<span class="name">q-checkbox</span></span></div><div class="line">      <span class="attr">v-model</span>=<span class="string">"rippleEnabled"</span></div><div class="line">      <span class="attr">label</span>=<span class="string">"Enable Ripples"</span></div><div class="line">    /&gt;</div><div class="line">    .....</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  data () &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      rippleEnabled: <span class="literal">true</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>When your Vue scope variable <code>rippleEnabled</code> becomes Boolean <code>false</code> then the ripple will be disabled.<br>You can also combine this with the <code>mat</code> and <code>ios</code> modifiers.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Modal]]></title>
       <url>http://beta.quasar-framework.org/components/modal.html</url>
       <content type="html"><![CDATA[<p>The Quasar Modal component is a UI overlay, which offers extended screen space to allow the user to get more work done. Modals are used for such things as login or signup dialogs, for message composition windows or extended option selections, like offering a list of users to be friends with.</p>
@@ -6314,31 +6319,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Other Utils]]></title>
-      <url>http://beta.quasar-framework.org/components/other-utils.html</url>
-      <content type="html"><![CDATA[<h2 id="Open-External-URL"><a href="#Open-External-URL" class="headerlink" title="Open External URL"></a>Open External URL</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; openURL &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">openURL(<span class="string">'http://...'</span>)</div></pre></td></tr></table></figure>
-<p>It will take care of the quirks involved when running under Cordova or on a browser, including notifying the user he/she has to acknowledge opening popups.</p>
-<h2 id="Debounce-Function"><a href="#Debounce-Function" class="headerlink" title="Debounce Function"></a>Debounce Function</h2><p>If your App uses JavaScript to accomplish taxing tasks, a debounce function is essential to ensuring a given task doesn’t fire so often that it bricks browser performance. Debouncing a function limits the rate at which the function can fire.</p>
-<p>Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called. As in “execute this function only if 100 milliseconds have passed without it being called.”</p>
-<p>A quick example: you have a resize listener on the window which does some element dimension calculations and (possibly) repositions a few elements. That isn’t a heavy task in itself but being repeatedly fired after numerous resizes will really slow your App down. So why not limit the rate at which the function can fire?</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Returns a function, that, as long as it continues to be invoked, will not</span></div><div class="line"><span class="comment">// be triggered. The function will be called after it stops being called for</span></div><div class="line"><span class="comment">// N milliseconds. If `immediate` is passed, trigger the function on the</span></div><div class="line"><span class="comment">// leading edge, instead of the trailing.</span></div><div class="line"><span class="keyword">import</span> &#123; debounce &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(Debounced <span class="built_in">Function</span>) debounce(<span class="built_in">Function</span> fn, <span class="built_in">Number</span> milliseconds_to_wait, <span class="built_in">Boolean</span> immediate)</div><div class="line"></div><div class="line"><span class="comment">// Example:</span></div><div class="line"><span class="built_in">window</span>.addEventListener(</div><div class="line">  <span class="string">'resize'</span>,</div><div class="line">  debounce(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    .... things to <span class="keyword">do</span> ...</div><div class="line">  &#125;, <span class="number">300</span> <span class="comment">/*ms to wait*/</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
-<p>There’s also a <code>frameDebounce</code> available which delays calling your function until next browser frame is scheduled to run (read about <code>requestAnimationFrame</code>).</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; frameDebounce &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(Debounced <span class="built_in">Function</span>) frameDebounce(<span class="built_in">Function</span> fn)</div><div class="line"></div><div class="line"><span class="comment">// Example:</span></div><div class="line"><span class="built_in">window</span>.addEventListener(</div><div class="line">  <span class="string">'resize'</span>,</div><div class="line">  frameDebounce(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    .... things to <span class="keyword">do</span> ...</div><div class="line">  &#125;)</div><div class="line">)</div></pre></td></tr></table></figure>
-<h2 id="Throttle-Function"><a href="#Throttle-Function" class="headerlink" title="Throttle Function"></a>Throttle Function</h2><p>Throttling enforces a maximum number of times a function can be called over time. As in “execute this function at most once every 300 milliseconds.”</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Returns a function, that, as long as it continues to be invoked, will not</span></div><div class="line"><span class="comment">// be triggered. The function will be called after it stops being called for</span></div><div class="line"><span class="comment">// N milliseconds. If `immediate` is passed, trigger the function on the</span></div><div class="line"><span class="comment">// leading edge, instead of the trailing.</span></div><div class="line"><span class="keyword">import</span> &#123; throttle &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(Throttled <span class="built_in">Function</span>) throttle(<span class="built_in">Function</span> fn, <span class="built_in">Number</span> limit_in_milliseconds)</div><div class="line"></div><div class="line"><span class="comment">// Example:</span></div><div class="line"><span class="built_in">window</span>.addEventListener(</div><div class="line">  <span class="string">'resize'</span>,</div><div class="line">  throttle(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    .... things to <span class="keyword">do</span> ...</div><div class="line">  &#125;, <span class="number">300</span> <span class="comment">/* execute at most once every 0.3s */</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
-<h2 id="Deep-Copy-Objects"><a href="#Deep-Copy-Objects" class="headerlink" title="(Deep) Copy Objects"></a>(Deep) Copy Objects</h2><p>A basic respawn of <code>jQuery.extend()</code>. Takes same parameters:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; extend &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> newObject = extend([<span class="built_in">Boolean</span> deepCopy], targetObj, obj, ...)</div></pre></td></tr></table></figure></p>
-<p>Watch out for methods within objects.</p>
-<h2 id="Generate-UID"><a href="#Generate-UID" class="headerlink" title="Generate UID"></a>Generate UID</h2><p>Generate unique identifiers:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; uid &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> uid = uid()</div><div class="line"><span class="comment">// Example: 501e7ae1-7e6f-b923-3e84-4e946bff31a8</span></div></pre></td></tr></table></figure></p>
-<h2 id="Handling-“event”-on-a-DOM-event-handler"><a href="#Handling-“event”-on-a-DOM-event-handler" class="headerlink" title="Handling “event” on a DOM event handler"></a>Handling “event” on a DOM event handler</h2><p>It’s cross-browser.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; event &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">node.addEventListener(<span class="string">'click'</span>, evt =&gt; &#123;</div><div class="line">  <span class="comment">// right clicked?</span></div><div class="line">  (<span class="built_in">Boolean</span>) event.rightClick(evt)</div><div class="line"></div><div class="line">  <span class="comment">// position on viewport</span></div><div class="line">  <span class="comment">// works both for mouse and touch events!</span></div><div class="line">  (<span class="built_in">Object</span> &#123;top, left&#125;) event.position(evt)</div><div class="line"></div><div class="line">  <span class="comment">// get target DOM Element on which mouse or touch</span></div><div class="line">  <span class="comment">// event has fired upon</span></div><div class="line">  (DOM Element) event.targetElement(evt)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h2 id="Colors"><a href="#Colors" class="headerlink" title="Colors"></a>Colors</h2><p>You can change colors from RGB to Hex format (and reverse too).</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; colors &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(colors.rgbToHex(<span class="number">85</span>, <span class="number">165</span>, <span class="number">1</span>)) <span class="comment">// #55a532</span></div><div class="line"><span class="built_in">console</span>.log(colors.hexToRgb(<span class="string">'#55a532'</span>)) <span class="comment">// [85, 165, 1]</span></div></pre></td></tr></table></figure>
-<h2 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h2><p>Filter out an array of Objects based on a certain field:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; filter &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> data = [&#123;fee: <span class="number">5</span>, desc: <span class="string">'Bla bla'</span>&#125;, &#123;fee: <span class="number">10</span>, desc: <span class="string">'Bla bla'</span>&#125;, &#123;fee: <span class="number">1</span>, desc: <span class="string">'Bla bla'</span>&#125;]</div><div class="line"><span class="built_in">console</span>.log(filter(<span class="string">'5'</span>, &#123;field: <span class="string">'fee'</span>, list: data&#125;)</div><div class="line"><span class="comment">// &#123;fee: 5, desc: 'Bla bla'&#125;</span></div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Other CSS Helper Classes]]></title>
       <url>http://beta.quasar-framework.org/components/other-helper-classes.html</url>
       <content type="html"><![CDATA[<p>There are a lot of CSS classes that you can use while writing your Vue templates. Very handy to ease the complexity of your VueModels and templates.</p>
@@ -6451,6 +6431,31 @@
 </table>
 <h2 id="Groups"><a href="#Groups" class="headerlink" title="Groups"></a>Groups</h2><p>There’s are two special CSS class named <code>group</code> and <code>generic-margin</code>.</p>
 <p><code>group</code> applies a small margin to all children DOM elements, while <code>generic-margin</code> applies same margin to the respective DOM element (this varies with each theme).</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Other Utils]]></title>
+      <url>http://beta.quasar-framework.org/components/other-utils.html</url>
+      <content type="html"><![CDATA[<h2 id="Open-External-URL"><a href="#Open-External-URL" class="headerlink" title="Open External URL"></a>Open External URL</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; openURL &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">openURL(<span class="string">'http://...'</span>)</div></pre></td></tr></table></figure>
+<p>It will take care of the quirks involved when running under Cordova or on a browser, including notifying the user he/she has to acknowledge opening popups.</p>
+<h2 id="Debounce-Function"><a href="#Debounce-Function" class="headerlink" title="Debounce Function"></a>Debounce Function</h2><p>If your App uses JavaScript to accomplish taxing tasks, a debounce function is essential to ensuring a given task doesn’t fire so often that it bricks browser performance. Debouncing a function limits the rate at which the function can fire.</p>
+<p>Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called. As in “execute this function only if 100 milliseconds have passed without it being called.”</p>
+<p>A quick example: you have a resize listener on the window which does some element dimension calculations and (possibly) repositions a few elements. That isn’t a heavy task in itself but being repeatedly fired after numerous resizes will really slow your App down. So why not limit the rate at which the function can fire?</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Returns a function, that, as long as it continues to be invoked, will not</span></div><div class="line"><span class="comment">// be triggered. The function will be called after it stops being called for</span></div><div class="line"><span class="comment">// N milliseconds. If `immediate` is passed, trigger the function on the</span></div><div class="line"><span class="comment">// leading edge, instead of the trailing.</span></div><div class="line"><span class="keyword">import</span> &#123; debounce &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(Debounced <span class="built_in">Function</span>) debounce(<span class="built_in">Function</span> fn, <span class="built_in">Number</span> milliseconds_to_wait, <span class="built_in">Boolean</span> immediate)</div><div class="line"></div><div class="line"><span class="comment">// Example:</span></div><div class="line"><span class="built_in">window</span>.addEventListener(</div><div class="line">  <span class="string">'resize'</span>,</div><div class="line">  debounce(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    .... things to <span class="keyword">do</span> ...</div><div class="line">  &#125;, <span class="number">300</span> <span class="comment">/*ms to wait*/</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>There’s also a <code>frameDebounce</code> available which delays calling your function until next browser frame is scheduled to run (read about <code>requestAnimationFrame</code>).</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; frameDebounce &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(Debounced <span class="built_in">Function</span>) frameDebounce(<span class="built_in">Function</span> fn)</div><div class="line"></div><div class="line"><span class="comment">// Example:</span></div><div class="line"><span class="built_in">window</span>.addEventListener(</div><div class="line">  <span class="string">'resize'</span>,</div><div class="line">  frameDebounce(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    .... things to <span class="keyword">do</span> ...</div><div class="line">  &#125;)</div><div class="line">)</div></pre></td></tr></table></figure>
+<h2 id="Throttle-Function"><a href="#Throttle-Function" class="headerlink" title="Throttle Function"></a>Throttle Function</h2><p>Throttling enforces a maximum number of times a function can be called over time. As in “execute this function at most once every 300 milliseconds.”</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Returns a function, that, as long as it continues to be invoked, will not</span></div><div class="line"><span class="comment">// be triggered. The function will be called after it stops being called for</span></div><div class="line"><span class="comment">// N milliseconds. If `immediate` is passed, trigger the function on the</span></div><div class="line"><span class="comment">// leading edge, instead of the trailing.</span></div><div class="line"><span class="keyword">import</span> &#123; throttle &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(Throttled <span class="built_in">Function</span>) throttle(<span class="built_in">Function</span> fn, <span class="built_in">Number</span> limit_in_milliseconds)</div><div class="line"></div><div class="line"><span class="comment">// Example:</span></div><div class="line"><span class="built_in">window</span>.addEventListener(</div><div class="line">  <span class="string">'resize'</span>,</div><div class="line">  throttle(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    .... things to <span class="keyword">do</span> ...</div><div class="line">  &#125;, <span class="number">300</span> <span class="comment">/* execute at most once every 0.3s */</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
+<h2 id="Deep-Copy-Objects"><a href="#Deep-Copy-Objects" class="headerlink" title="(Deep) Copy Objects"></a>(Deep) Copy Objects</h2><p>A basic respawn of <code>jQuery.extend()</code>. Takes same parameters:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; extend &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> newObject = extend([<span class="built_in">Boolean</span> deepCopy], targetObj, obj, ...)</div></pre></td></tr></table></figure></p>
+<p>Watch out for methods within objects.</p>
+<h2 id="Generate-UID"><a href="#Generate-UID" class="headerlink" title="Generate UID"></a>Generate UID</h2><p>Generate unique identifiers:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; uid &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> uid = uid()</div><div class="line"><span class="comment">// Example: 501e7ae1-7e6f-b923-3e84-4e946bff31a8</span></div></pre></td></tr></table></figure></p>
+<h2 id="Handling-“event”-on-a-DOM-event-handler"><a href="#Handling-“event”-on-a-DOM-event-handler" class="headerlink" title="Handling “event” on a DOM event handler"></a>Handling “event” on a DOM event handler</h2><p>It’s cross-browser.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; event &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">node.addEventListener(<span class="string">'click'</span>, evt =&gt; &#123;</div><div class="line">  <span class="comment">// right clicked?</span></div><div class="line">  (<span class="built_in">Boolean</span>) event.rightClick(evt)</div><div class="line"></div><div class="line">  <span class="comment">// position on viewport</span></div><div class="line">  <span class="comment">// works both for mouse and touch events!</span></div><div class="line">  (<span class="built_in">Object</span> &#123;top, left&#125;) event.position(evt)</div><div class="line"></div><div class="line">  <span class="comment">// get target DOM Element on which mouse or touch</span></div><div class="line">  <span class="comment">// event has fired upon</span></div><div class="line">  (DOM Element) event.targetElement(evt)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="Colors"><a href="#Colors" class="headerlink" title="Colors"></a>Colors</h2><p>You can change colors from RGB to Hex format (and reverse too).</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; colors &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(colors.rgbToHex(<span class="number">85</span>, <span class="number">165</span>, <span class="number">1</span>)) <span class="comment">// #55a532</span></div><div class="line"><span class="built_in">console</span>.log(colors.hexToRgb(<span class="string">'#55a532'</span>)) <span class="comment">// [85, 165, 1]</span></div></pre></td></tr></table></figure>
+<h2 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h2><p>Filter out an array of Objects based on a certain field:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; filter &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> data = [&#123;fee: <span class="number">5</span>, desc: <span class="string">'Bla bla'</span>&#125;, &#123;fee: <span class="number">10</span>, desc: <span class="string">'Bla bla'</span>&#125;, &#123;fee: <span class="number">1</span>, desc: <span class="string">'Bla bla'</span>&#125;]</div><div class="line"><span class="built_in">console</span>.log(filter(<span class="string">'5'</span>, &#123;field: <span class="string">'fee'</span>, list: data&#125;)</div><div class="line"><span class="comment">// &#123;fee: 5, desc: 'Bla bla'&#125;</span></div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -7323,21 +7328,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Scroll Observable]]></title>
-      <url>http://beta.quasar-framework.org/components/scroll-observable.html</url>
-      <content type="html"><![CDATA[<p>QScrollObservable is a Quasar component that emits a <code>scroll</code> event whenever the user scrolls the page or overflowed container with <code>.scroll</code> CSS class applied to it.</p>
-<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  ...</div><div class="line">  <span class="tag">&lt;<span class="name">q-scroll-observable</span> @<span class="attr">scroll</span>=<span class="string">"userHasScrolled"</span> /&gt;</span></div><div class="line">  ...</div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  ...,</div><div class="line">  methods: &#123;</div><div class="line">    ...,</div><div class="line">    userHasScrolled (scroll) &#123;</div><div class="line">      <span class="built_in">console</span>.log(scroll)</div><div class="line">      <span class="comment">// &#123;</span></div><div class="line">      <span class="comment">//   position: 56, // pixels from top</span></div><div class="line">      <span class="comment">//   direction: 'down', // 'down' or 'up'</span></div><div class="line">      <span class="comment">//   directionChanged: false, // has direction changed since this handler was called?</span></div><div class="line">      <span class="comment">//   inflexionPosition: 56 // last scroll position where user changed scroll direction</span></div><div class="line">      <span class="comment">// &#125;</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Determining-Scrolling-Container"><a href="#Determining-Scrolling-Container" class="headerlink" title="Determining Scrolling Container"></a>Determining Scrolling Container</h2><p>All components or directives in Quasar have a simple algorithm to determine which is the container that supports the scroll: it searches for a parent DOM element which has the <code>scroll</code> Quasar CSS Helper class attached to it. If none is found, then it considers that the scrolling takes place on the document itself.</p>
-<p>Components like <a href="/components/scroll-area.html">QScrollArea</a>, for example, respect this design and have the <code>scroll</code> class embedded into it, so that QScrollObservable (or any other scrolling component or directive) can succesfully detect it and attach the necessary event handlers to it.</p>
-<p>Please note that simply attaching <code>scroll</code> CSS class to a DOM element or on a Vue component will have no effect if the respective element is not overflowed (example, with: CSS <code>overflow: hidden</code> and a height smaller than its inner content height).</p>
-<p>Example of good container:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!--</span></div><div class="line">  Quasar CSS helper 'overflow-hidden' is</div><div class="line">  equivalent to style="overflow: hidden"</div><div class="line">--&gt;</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"scroll overflow-hidden"</span> <span class="attr">style</span>=<span class="string">"height: 100px"</span>&gt;</span></div><div class="line">  ...content expanding over the 100px height from container...</div><div class="line">  <span class="tag">&lt;<span class="name">q-scroll-observable</span> @<span class="attr">scroll</span>=<span class="string">"scrollHandler"</span> /&gt;</span></div><div class="line"></div><div class="line">  <span class="comment">&lt;!-- example with `v-scroll` directive --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-scroll</span>=<span class="string">"scrollHandler"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>One more example with QScrollArea:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-scroll-area</span> <span class="attr">style</span>=<span class="string">"width: 400px; height: 500px;"</span> <span class="attr">class</span>=<span class="string">"bg-yellow"</span>&gt;</span></div><div class="line">  ...content expanding over the 500px height from container...</div><div class="line">  <span class="tag">&lt;<span class="name">q-scroll-observable</span> @<span class="attr">scroll</span>=<span class="string">"scrollHandler"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">q-scroll-area</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h2 id="Layout-Scrolling"><a href="#Layout-Scrolling" class="headerlink" title="Layout Scrolling"></a>Layout Scrolling</h2><p>When scrolling on a Layout with a Page, rather than injecting a QScrollObservable (and by so doing registering additional scroll events) you can take advantage of <a href="/components/layout.html">QLayout</a>‘s <code>@scroll</code> event directly on your component defining the Layout.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-layout</span> @<span class="attr">scroll</span>=<span class="string">"scrollHandler"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">q-layout</span>&gt;</span></div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Scroll Fire]]></title>
       <url>http://beta.quasar-framework.org/components/scroll-fire.html</url>
       <content type="html"><![CDATA[<p>“Scroll Fire” is a feature that enables a method to be called (once and only once) when user scrolls current page and the DOM element (or component) that it is applied to comes into the viewport.</p>
@@ -7353,6 +7343,21 @@
 <p><strong>IMPORTANT</strong><br>For performance purposes, the scroll listener function injected is by default debounced by 50ms. Read more about <code>debouncing</code> <a href="/components/utils.html#Debounce-Function">here</a>.</p>
 </blockquote>
 <h2 id="Determining-Scrolling-Container"><a href="#Determining-Scrolling-Container" class="headerlink" title="Determining Scrolling Container"></a>Determining Scrolling Container</h2><p>Please read <a href="components/scroll-observable.html#Determining-Scrolling-Container">here</a> about how Quasar determines the container to attach scrolling events to.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Scroll Observable]]></title>
+      <url>http://beta.quasar-framework.org/components/scroll-observable.html</url>
+      <content type="html"><![CDATA[<p>QScrollObservable is a Quasar component that emits a <code>scroll</code> event whenever the user scrolls the page or overflowed container with <code>.scroll</code> CSS class applied to it.</p>
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  ...</div><div class="line">  <span class="tag">&lt;<span class="name">q-scroll-observable</span> @<span class="attr">scroll</span>=<span class="string">"userHasScrolled"</span> /&gt;</span></div><div class="line">  ...</div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  ...,</div><div class="line">  methods: &#123;</div><div class="line">    ...,</div><div class="line">    userHasScrolled (scroll) &#123;</div><div class="line">      <span class="built_in">console</span>.log(scroll)</div><div class="line">      <span class="comment">// &#123;</span></div><div class="line">      <span class="comment">//   position: 56, // pixels from top</span></div><div class="line">      <span class="comment">//   direction: 'down', // 'down' or 'up'</span></div><div class="line">      <span class="comment">//   directionChanged: false, // has direction changed since this handler was called?</span></div><div class="line">      <span class="comment">//   inflexionPosition: 56 // last scroll position where user changed scroll direction</span></div><div class="line">      <span class="comment">// &#125;</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Determining-Scrolling-Container"><a href="#Determining-Scrolling-Container" class="headerlink" title="Determining Scrolling Container"></a>Determining Scrolling Container</h2><p>All components or directives in Quasar have a simple algorithm to determine which is the container that supports the scroll: it searches for a parent DOM element which has the <code>scroll</code> Quasar CSS Helper class attached to it. If none is found, then it considers that the scrolling takes place on the document itself.</p>
+<p>Components like <a href="/components/scroll-area.html">QScrollArea</a>, for example, respect this design and have the <code>scroll</code> class embedded into it, so that QScrollObservable (or any other scrolling component or directive) can succesfully detect it and attach the necessary event handlers to it.</p>
+<p>Please note that simply attaching <code>scroll</code> CSS class to a DOM element or on a Vue component will have no effect if the respective element is not overflowed (example, with: CSS <code>overflow: hidden</code> and a height smaller than its inner content height).</p>
+<p>Example of good container:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!--</span></div><div class="line">  Quasar CSS helper 'overflow-hidden' is</div><div class="line">  equivalent to style="overflow: hidden"</div><div class="line">--&gt;</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"scroll overflow-hidden"</span> <span class="attr">style</span>=<span class="string">"height: 100px"</span>&gt;</span></div><div class="line">  ...content expanding over the 100px height from container...</div><div class="line">  <span class="tag">&lt;<span class="name">q-scroll-observable</span> @<span class="attr">scroll</span>=<span class="string">"scrollHandler"</span> /&gt;</span></div><div class="line"></div><div class="line">  <span class="comment">&lt;!-- example with `v-scroll` directive --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-scroll</span>=<span class="string">"scrollHandler"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>One more example with QScrollArea:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-scroll-area</span> <span class="attr">style</span>=<span class="string">"width: 400px; height: 500px;"</span> <span class="attr">class</span>=<span class="string">"bg-yellow"</span>&gt;</span></div><div class="line">  ...content expanding over the 500px height from container...</div><div class="line">  <span class="tag">&lt;<span class="name">q-scroll-observable</span> @<span class="attr">scroll</span>=<span class="string">"scrollHandler"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">q-scroll-area</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="Layout-Scrolling"><a href="#Layout-Scrolling" class="headerlink" title="Layout Scrolling"></a>Layout Scrolling</h2><p>When scrolling on a Layout with a Page, rather than injecting a QScrollObservable (and by so doing registering additional scroll events) you can take advantage of <a href="/components/layout.html">QLayout</a>‘s <code>@scroll</code> event directly on your component defining the Layout.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-layout</span> @<span class="attr">scroll</span>=<span class="string">"scrollHandler"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">q-layout</span>&gt;</span></div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -7616,74 +7621,6 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bg-grey-9"</span> <span class="attr">style</span>=<span class="string">"width: 500px; padding: 25px"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">q-field</span></span></div><div class="line">    <span class="attr">icon</span>=<span class="string">"wifi"</span></div><div class="line">    <span class="attr">label</span>=<span class="string">"Some Label"</span></div><div class="line">    <span class="attr">:count</span>=<span class="string">"10"</span></div><div class="line">    <span class="attr">helper</span>=<span class="string">"Some helper"</span></div><div class="line">    <span class="attr">:error</span>=<span class="string">"error"</span></div><div class="line">    <span class="attr">error-label</span>=<span class="string">"Some error"</span></div><div class="line">  &gt;</div><div class="line">    <span class="tag">&lt;<span class="name">q-search</span></span></div><div class="line">      <span class="attr">v-model</span>=<span class="string">"text"</span></div><div class="line">      <span class="attr">dark</span></div><div class="line">      <span class="attr">inverted</span></div><div class="line">      <span class="attr">color</span>=<span class="string">"black"</span></div><div class="line">      <span class="attr">float-label</span>=<span class="string">"Textfield"</span></div><div class="line">    /&gt;</div><div class="line">  <span class="tag">&lt;/<span class="name">q-field</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>The above usage of QField will show the input field within a dark grey background with an inverse white text. Notice the usage of the <code>dark</code> prop for QInput. This controls the inversion of the text color.</p>
 <p>Please refer to the <a href="/components/field.html">QField documentation</a> for more info about its usage.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[CSS Shadows (Elevation)]]></title>
-      <url>http://beta.quasar-framework.org/components/shadows.html</url>
-      <content type="html"><![CDATA[<p>Simple yet effective way to add shadows to create a depth/elevation effect.<br>The shadows are in accordance to Material Design specifications (24 levels of depth).</p>
-<p>Don’t forget to check the demo.</p>
-<input type="hidden" data-fullpage-demo="css-helpers/shadows">
-
-<table>
-<thead>
-<tr>
-<th>CSS Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>no-shadow</code></td>
-<td>Remove any shadow</td>
-</tr>
-<tr>
-<td><code>inset-shadow</code></td>
-<td>Set an inset shadow</td>
-</tr>
-<tr>
-<td><code>shadow-1</code></td>
-<td>Set a depth of 1</td>
-</tr>
-<tr>
-<td><code>shadow-2</code></td>
-<td>Set a depth of 2</td>
-</tr>
-<tr>
-<td><code>shadow-N</code></td>
-<td>Where <code>N</code> is an integer from 1 to 24.</td>
-</tr>
-<tr>
-<td><code>shadow-transition</code></td>
-<td>Apply a CSS transition on the shadow; best use in conjonction with <code>hoverable</code> classes</td>
-</tr>
-</tbody>
-</table>
-<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"shadow-1"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>The shadows above point towards the bottom of the element. If you want them to point towards the top of the element, add <code>up</code> before the number:</p>
-<table>
-<thead>
-<tr>
-<th>CSS Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>shadow-up-1</code></td>
-<td>Set a depth of 1</td>
-</tr>
-<tr>
-<td><code>shadow-up-2</code></td>
-<td>Set a depth of 2</td>
-</tr>
-<tr>
-<td><code>shadow-up-N</code></td>
-<td>Where <code>N</code> is an integer from 1 to 24.</td>
-</tr>
-</tbody>
-</table>
 ]]></content>
     </entry>
     
@@ -7976,6 +7913,74 @@
 <p><strong>Note</strong><br>The optional <code>frame-color</code> prop is useful when using chips as selected values, so the chips stand out from the background color.</p>
 </blockquote>
 <h3 id="Usage-Inside-of-a-List"><a href="#Usage-Inside-of-a-List" class="headerlink" title="Usage Inside of a List"></a>Usage Inside of a List</h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">q-list</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">q-list-header</span>&gt;</span>Single Selection<span class="tag">&lt;/<span class="name">q-list-header</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">q-item</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-item-side</span> <span class="attr">icon</span>=<span class="string">"supervisor_account"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-item-main</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">q-select</span></span></div><div class="line">        <span class="attr">class</span>=<span class="string">"no-margin"</span></div><div class="line">        <span class="attr">v-model</span>=<span class="string">"select"</span></div><div class="line">        <span class="attr">:options</span>=<span class="string">"selectOptions"</span></div><div class="line">      /&gt;</div><div class="line">    <span class="tag">&lt;/<span class="name">q-item-main</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">q-item</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">q-item-separator</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">q-list-header</span>&gt;</span>Multiple Selection<span class="tag">&lt;/<span class="name">q-list-header</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">q-item</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-item-side</span> <span class="attr">icon</span>=<span class="string">"supervisor_account"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">q-item-main</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">q-select</span></span></div><div class="line">        <span class="attr">multiple</span></div><div class="line">        <span class="attr">class</span>=<span class="string">"no-margin"</span></div><div class="line">        <span class="attr">v-model</span>=<span class="string">"multipleSelect"</span></div><div class="line">        <span class="attr">:options</span>=<span class="string">"selectOptions"</span></div><div class="line">      /&gt;</div><div class="line">    <span class="tag">&lt;/<span class="name">q-item-main</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">q-item</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">q-list</span>&gt;</span></div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[CSS Shadows (Elevation)]]></title>
+      <url>http://beta.quasar-framework.org/components/shadows.html</url>
+      <content type="html"><![CDATA[<p>Simple yet effective way to add shadows to create a depth/elevation effect.<br>The shadows are in accordance to Material Design specifications (24 levels of depth).</p>
+<p>Don’t forget to check the demo.</p>
+<input type="hidden" data-fullpage-demo="css-helpers/shadows">
+
+<table>
+<thead>
+<tr>
+<th>CSS Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>no-shadow</code></td>
+<td>Remove any shadow</td>
+</tr>
+<tr>
+<td><code>inset-shadow</code></td>
+<td>Set an inset shadow</td>
+</tr>
+<tr>
+<td><code>shadow-1</code></td>
+<td>Set a depth of 1</td>
+</tr>
+<tr>
+<td><code>shadow-2</code></td>
+<td>Set a depth of 2</td>
+</tr>
+<tr>
+<td><code>shadow-N</code></td>
+<td>Where <code>N</code> is an integer from 1 to 24.</td>
+</tr>
+<tr>
+<td><code>shadow-transition</code></td>
+<td>Apply a CSS transition on the shadow; best use in conjonction with <code>hoverable</code> classes</td>
+</tr>
+</tbody>
+</table>
+<p>Example:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"shadow-1"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>The shadows above point towards the bottom of the element. If you want them to point towards the top of the element, add <code>up</code> before the number:</p>
+<table>
+<thead>
+<tr>
+<th>CSS Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>shadow-up-1</code></td>
+<td>Set a depth of 1</td>
+</tr>
+<tr>
+<td><code>shadow-up-2</code></td>
+<td>Set a depth of 2</td>
+</tr>
+<tr>
+<td><code>shadow-up-N</code></td>
+<td>Where <code>N</code> is an integer from 1 to 24.</td>
+</tr>
+</tbody>
+</table>
 ]]></content>
     </entry>
     
@@ -9398,6 +9403,47 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Vue Prototype Injections]]></title>
+      <url>http://beta.quasar-framework.org/components/vue-prototype-injections.html</url>
+      <content type="html"><![CDATA[<p>Quasar injects Vue prototype with <code>$q</code> object:</p>
+<table>
+<thead>
+<tr>
+<th>Injection</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$q.version</code></td>
+<td>String</td>
+<td>Quasar version.</td>
+</tr>
+<tr>
+<td><code>$q.theme</code></td>
+<td>String</td>
+<td>Theme being used. Examples: mat, ios</td>
+</tr>
+<tr>
+<td><code>$q.platform</code></td>
+<td>Object</td>
+<td>Same object as <a href="/components/platform-detection.html">Platform</a> import from Quasar.</td>
+</tr>
+<tr>
+<td><code>$q.events</code></td>
+<td>Object</td>
+<td>Same object as <a href="/components/global-event-bus.html">Events</a> import from Quasar.</td>
+</tr>
+</tbody>
+</table>
+<p>You can use it globally inside a Vue context (component script or template) like this:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- inside a Vue template --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">"$q.platform.is.ios"</span>&gt;</span></div><div class="line">      Gets rendered only on iOS platform.</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="comment">// not availabel here outside</span></div><div class="line"><span class="comment">// of the export</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  <span class="comment">// inside a Vue component script</span></div><div class="line">  ...,</div><div class="line"></div><div class="line">  <span class="comment">// showing an example on a method, but</span></div><div class="line">  <span class="comment">// can be any part of Vue script</span></div><div class="line">  methods: &#123;</div><div class="line">    show () &#123;</div><div class="line">      <span class="comment">// prints out Quasar version</span></div><div class="line">      <span class="built_in">console</span>.log(<span class="keyword">this</span>.$q.version)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="Mobile-Apps"><a href="#Mobile-Apps" class="headerlink" title="Mobile Apps"></a>Mobile Apps</h3><p>When running under Cordova, you’ll be able to use <code>$cordova</code> injection too (<code>this.$cordova</code> in Vue components script, <code>$cordova</code> in Vue templates).</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[CSS Visibility]]></title>
       <url>http://beta.quasar-framework.org/components/visibility.html</url>
       <content type="html"><![CDATA[<p>There are some CSS classes that you can use out of the box for common functionality.</p>
@@ -9651,47 +9697,6 @@
 </tr>
 </tbody>
 </table>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Vue Prototype Injections]]></title>
-      <url>http://beta.quasar-framework.org/components/vue-prototype-injections.html</url>
-      <content type="html"><![CDATA[<p>Quasar injects Vue prototype with <code>$q</code> object:</p>
-<table>
-<thead>
-<tr>
-<th>Injection</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>$q.version</code></td>
-<td>String</td>
-<td>Quasar version.</td>
-</tr>
-<tr>
-<td><code>$q.theme</code></td>
-<td>String</td>
-<td>Theme being used. Examples: mat, ios</td>
-</tr>
-<tr>
-<td><code>$q.platform</code></td>
-<td>Object</td>
-<td>Same object as <a href="/components/platform-detection.html">Platform</a> import from Quasar.</td>
-</tr>
-<tr>
-<td><code>$q.events</code></td>
-<td>Object</td>
-<td>Same object as <a href="/components/global-event-bus.html">Events</a> import from Quasar.</td>
-</tr>
-</tbody>
-</table>
-<p>You can use it globally inside a Vue context (component script or template) like this:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- inside a Vue template --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">"$q.platform.is.ios"</span>&gt;</span></div><div class="line">      Gets rendered only on iOS platform.</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="comment">// not availabel here outside</span></div><div class="line"><span class="comment">// of the export</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  <span class="comment">// inside a Vue component script</span></div><div class="line">  ...,</div><div class="line"></div><div class="line">  <span class="comment">// showing an example on a method, but</span></div><div class="line">  <span class="comment">// can be any part of Vue script</span></div><div class="line">  methods: &#123;</div><div class="line">    show () &#123;</div><div class="line">      <span class="comment">// prints out Quasar version</span></div><div class="line">      <span class="built_in">console</span>.log(<span class="keyword">this</span>.$q.version)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="Mobile-Apps"><a href="#Mobile-Apps" class="headerlink" title="Mobile Apps"></a>Mobile Apps</h3><p>When running under Cordova, you’ll be able to use <code>$cordova</code> injection too (<code>this.$cordova</code> in Vue components script, <code>$cordova</code> in Vue templates).</p>
 ]]></content>
     </entry>
     
