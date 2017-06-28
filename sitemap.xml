@@ -240,14 +240,14 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/vue-prototype-injections.html</loc>
+    <loc>http://beta.quasar-framework.org/guide/managing-google-analytics.html</loc>
     
     <lastmod>2017-06-20T15:23:09.892Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/guide/managing-google-analytics.html</loc>
+    <loc>http://beta.quasar-framework.org/components/web-storage.html</loc>
     
     <lastmod>2017-06-20T15:23:09.892Z</lastmod>
     
@@ -296,20 +296,6 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/guide/quasar-theming.html</loc>
-    
-    <lastmod>2017-06-20T15:23:09.892Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://beta.quasar-framework.org/guide/app-pre-processors.html</loc>
-    
-    <lastmod>2017-06-20T15:23:09.892Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://beta.quasar-framework.org/components/video-embedding.html</loc>
     
     <lastmod>2017-06-20T15:23:09.892Z</lastmod>
@@ -317,7 +303,21 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/web-storage.html</loc>
+    <loc>http://beta.quasar-framework.org/guide/quasar-theming.html</loc>
+    
+    <lastmod>2017-06-20T15:23:09.892Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://beta.quasar-framework.org/components/vue-prototype-injections.html</loc>
+    
+    <lastmod>2017-06-20T15:23:09.892Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://beta.quasar-framework.org/guide/app-pre-processors.html</loc>
     
     <lastmod>2017-06-20T15:23:09.892Z</lastmod>
     
@@ -373,14 +373,14 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/toolbar.html</loc>
+    <loc>http://beta.quasar-framework.org/components/cookies.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/cookies.html</loc>
+    <loc>http://beta.quasar-framework.org/components/formatter-utils.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
@@ -394,7 +394,7 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/swiping.html</loc>
+    <loc>http://beta.quasar-framework.org/components/toolbar.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
@@ -471,13 +471,6 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/handling-js-date.html</loc>
-    
-    <lastmod>2017-06-20T15:23:09.888Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://beta.quasar-framework.org/components/html-table.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
@@ -485,7 +478,14 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/stylus-variables.html</loc>
+    <loc>http://beta.quasar-framework.org/components/handling-js-date.html</loc>
+    
+    <lastmod>2017-06-20T15:23:09.888Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://beta.quasar-framework.org/components/select.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
@@ -513,7 +513,7 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/select.html</loc>
+    <loc>http://beta.quasar-framework.org/components/stylus-variables.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
@@ -569,7 +569,7 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/scroll-observable.html</loc>
+    <loc>http://beta.quasar-framework.org/components/scroll-fire.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
@@ -583,14 +583,14 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/lists-and-list-items.html</loc>
+    <loc>http://beta.quasar-framework.org/components/material-ripples.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/material-ripples.html</loc>
+    <loc>http://beta.quasar-framework.org/components/lists-and-list-items.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
@@ -611,14 +611,14 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/other-helper-classes.html</loc>
+    <loc>http://beta.quasar-framework.org/components/other-utils.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/other-utils.html</loc>
+    <loc>http://beta.quasar-framework.org/components/other-helper-classes.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
@@ -646,7 +646,7 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/scroll-area.html</loc>
+    <loc>http://beta.quasar-framework.org/components/scroll-observable.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
@@ -688,7 +688,7 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/formatter-utils.html</loc>
+    <loc>http://beta.quasar-framework.org/components/swiping.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
@@ -702,14 +702,14 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/scroll-directive.html</loc>
+    <loc>http://beta.quasar-framework.org/components/scroll-area.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/components/scroll-fire.html</loc>
+    <loc>http://beta.quasar-framework.org/components/scroll-directive.html</loc>
     
     <lastmod>2017-06-20T15:23:09.888Z</lastmod>
     
@@ -807,14 +807,14 @@
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/quasar-play-privacy-policy.html</loc>
+    <loc>http://beta.quasar-framework.org/support-quasar-framework.html</loc>
     
     <lastmod>2017-03-12T13:51:39.447Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://beta.quasar-framework.org/support-quasar-framework.html</loc>
+    <loc>http://beta.quasar-framework.org/quasar-play-privacy-policy.html</loc>
     
     <lastmod>2017-03-12T13:51:39.447Z</lastmod>
     
