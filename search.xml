@@ -50,31 +50,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Color Palette]]></title>
-      <url>http://v0-13.quasar-framework.org/api/css-color-palette.html</url>
-      <content type="html"><![CDATA[<p>Quasar Framework offers a wide selection of colors out of the box. You can use them both as Stylus variables in your CSS code or directly as CSS classes in your HTML templates.</p>
-<input type="hidden" data-fullpage-demo="css/colors">
-
-<p>This page comes really handy after reading <a href="/guide/quasar-theming.html">Quasar Theming</a>.</p>
-<h2 id="Brand-Colors"><a href="#Brand-Colors" class="headerlink" title="Brand Colors"></a>Brand Colors</h2><p>There can be three main colors used throughout your App, called <code>primary</code>, <code>secondary</code> and <code>tertiary</code>.</p>
-<p>Most of the colors that Quasar Components use are strongly linked with these three colors that you can change. Choosing these colors is the first step one should take when differentiating the design of its own App. You’ll notice immediately on changing their default values that Quasar Components follow these colors as a guideline.</p>
-<h2 id="Color-List"><a href="#Color-List" class="headerlink" title="Color List"></a>Color List</h2><p>Here’s the list of colors provided out of the box. Use them as CSS classes or as Stylus variables (preceded by <code>$</code> character) in files directly required by <code>themes/app.*theme*.styl</code>.</p>
-<blockquote>
-<p><strong>IMPORTANT</strong><br><strong>Do not use them in Vue components <code>&lt;style&gt;</code> tags</strong> as they are not available there. Use CSS classes described in the next section instead.</p>
-</blockquote>
-<p><code>primary</code>, <code>secondary</code>, <code>tertiary</code><br><code>positive</code>, <code>negative</code>, <code>info</code>, <code>warning</code>, <code>white</code>, <code>light</code>, <code>dark</code>, <code>faded</code></p>
-<p>On the following colors there are variations available:<br><code>red</code>, <code>pink</code>, <code>purple</code>, <code>deep-purple</code>, <code>indigo</code>, <code>blue</code>, <code>light-blue</code>, <code>cyan</code>, <code>teal</code>, <code>green</code>, <code>light-green</code>, <code>lime</code>, <code>yellow</code>, <code>amber</code>, <code>orange</code>, <code>deep-orange</code>, <code>brown</code>, <code>grey</code>, <code>blue-grey</code></p>
-<p>Example of color variation: <code>red</code>, <code>red-1</code>, <code>red-2</code>, …, <code>red-14</code>. See the demo to make a good picture of what variations are. Variation 11 to 14 are color accents.</p>
-<h2 id="CSS-Classes"><a href="#CSS-Classes" class="headerlink" title="CSS Classes"></a>CSS Classes</h2><p>Use <code>text-</code> or <code>bg-</code> prefixes as class names to change the color of text or the color of the background.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- changing text color --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"text-primary"</span>&gt;</span>....<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- changing background color --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"bg-positive"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Stylus-Color-Variables"><a href="#Stylus-Color-Variables" class="headerlink" title="Stylus Color Variables"></a>Stylus Color Variables</h2><p>In your Stylus App code you can use them as <code>$primary</code>, <code>$red-1</code>, and so on.</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><div class="line">div</div><div class="line">  <span class="attribute">color</span> <span class="variable">$red</span>-<span class="number">1</span></div><div class="line">  <span class="attribute">background-color</span> <span class="variable">$grey</span>-<span class="number">5</span></div></pre></td></tr></table></figure>
-<p>The full list of colors is stored in the <code>$colors</code> array. You can change it to add/remove/change colors and all Quasar Components will generate CSS according to those colors.</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><div class="line">$colors ?= &#123;</div><div class="line">  primary: <span class="variable">$primary</span>,</div><div class="line">  secondary: <span class="variable">$secondary</span>,</div><div class="line">  tertiary: <span class="variable">$tertiary</span>,</div><div class="line">  positive: <span class="variable">$positive</span>,</div><div class="line">  negative: <span class="variable">$negative</span>,</div><div class="line">  warning: <span class="variable">$warning</span>,</div><div class="line">  info: <span class="variable">$info</span>,</div><div class="line">  light: <span class="variable">$light</span>,</div><div class="line">  dark: <span class="variable">$dark</span>,</div><div class="line">  white: <span class="variable">$white</span>,</div><div class="line"></div><div class="line">  red: <span class="variable">$red</span>,</div><div class="line">  pink: <span class="variable">$pink</span>,</div><div class="line">  purple: <span class="variable">$purple</span>,</div><div class="line">  deep-purple: <span class="variable">$deep</span>-purple,</div><div class="line">  indigo: <span class="variable">$indigo</span>,</div><div class="line">  blue: <span class="variable">$blue</span>,</div><div class="line">  light-blue: <span class="variable">$light</span>-blue,</div><div class="line">  cyan: <span class="variable">$cyan</span>,</div><div class="line">  teal: <span class="variable">$teal</span>,</div><div class="line">  green: <span class="variable">$green</span>,</div><div class="line">  light-green: <span class="variable">$light</span>-green,</div><div class="line">  lime: <span class="variable">$lime</span>,</div><div class="line">  yellow: <span class="variable">$yellow</span>,</div><div class="line">  amber: <span class="variable">$amber</span>,</div><div class="line">  orange: <span class="variable">$orange</span>,</div><div class="line">  deep-orange: <span class="variable">$deep</span>-orange,</div><div class="line">  brown: <span class="variable">$brown</span>,</div><div class="line">  grey: <span class="variable">$grey</span>,</div><div class="line">  blue-grey: <span class="variable">$blue</span>-grey</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Quasar Grid Layout]]></title>
       <url>http://v0-13.quasar-framework.org/api/css-grid-layout.html</url>
       <content type="html"><![CDATA[<input type="hidden" data-fullpage-demo="css/grid-layout">
@@ -257,134 +232,37 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Color Palette]]></title>
+      <url>http://v0-13.quasar-framework.org/api/css-color-palette.html</url>
+      <content type="html"><![CDATA[<p>Quasar Framework offers a wide selection of colors out of the box. You can use them both as Stylus variables in your CSS code or directly as CSS classes in your HTML templates.</p>
+<input type="hidden" data-fullpage-demo="css/colors">
+
+<p>This page comes really handy after reading <a href="/guide/quasar-theming.html">Quasar Theming</a>.</p>
+<h2 id="Brand-Colors"><a href="#Brand-Colors" class="headerlink" title="Brand Colors"></a>Brand Colors</h2><p>There can be three main colors used throughout your App, called <code>primary</code>, <code>secondary</code> and <code>tertiary</code>.</p>
+<p>Most of the colors that Quasar Components use are strongly linked with these three colors that you can change. Choosing these colors is the first step one should take when differentiating the design of its own App. You’ll notice immediately on changing their default values that Quasar Components follow these colors as a guideline.</p>
+<h2 id="Color-List"><a href="#Color-List" class="headerlink" title="Color List"></a>Color List</h2><p>Here’s the list of colors provided out of the box. Use them as CSS classes or as Stylus variables (preceded by <code>$</code> character) in files directly required by <code>themes/app.*theme*.styl</code>.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong><br><strong>Do not use them in Vue components <code>&lt;style&gt;</code> tags</strong> as they are not available there. Use CSS classes described in the next section instead.</p>
+</blockquote>
+<p><code>primary</code>, <code>secondary</code>, <code>tertiary</code><br><code>positive</code>, <code>negative</code>, <code>info</code>, <code>warning</code>, <code>white</code>, <code>light</code>, <code>dark</code>, <code>faded</code></p>
+<p>On the following colors there are variations available:<br><code>red</code>, <code>pink</code>, <code>purple</code>, <code>deep-purple</code>, <code>indigo</code>, <code>blue</code>, <code>light-blue</code>, <code>cyan</code>, <code>teal</code>, <code>green</code>, <code>light-green</code>, <code>lime</code>, <code>yellow</code>, <code>amber</code>, <code>orange</code>, <code>deep-orange</code>, <code>brown</code>, <code>grey</code>, <code>blue-grey</code></p>
+<p>Example of color variation: <code>red</code>, <code>red-1</code>, <code>red-2</code>, …, <code>red-14</code>. See the demo to make a good picture of what variations are. Variation 11 to 14 are color accents.</p>
+<h2 id="CSS-Classes"><a href="#CSS-Classes" class="headerlink" title="CSS Classes"></a>CSS Classes</h2><p>Use <code>text-</code> or <code>bg-</code> prefixes as class names to change the color of text or the color of the background.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- changing text color --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"text-primary"</span>&gt;</span>....<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- changing background color --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"bg-positive"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Stylus-Color-Variables"><a href="#Stylus-Color-Variables" class="headerlink" title="Stylus Color Variables"></a>Stylus Color Variables</h2><p>In your Stylus App code you can use them as <code>$primary</code>, <code>$red-1</code>, and so on.</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><div class="line">div</div><div class="line">  <span class="attribute">color</span> <span class="variable">$red</span>-<span class="number">1</span></div><div class="line">  <span class="attribute">background-color</span> <span class="variable">$grey</span>-<span class="number">5</span></div></pre></td></tr></table></figure>
+<p>The full list of colors is stored in the <code>$colors</code> array. You can change it to add/remove/change colors and all Quasar Components will generate CSS according to those colors.</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><div class="line">$colors ?= &#123;</div><div class="line">  primary: <span class="variable">$primary</span>,</div><div class="line">  secondary: <span class="variable">$secondary</span>,</div><div class="line">  tertiary: <span class="variable">$tertiary</span>,</div><div class="line">  positive: <span class="variable">$positive</span>,</div><div class="line">  negative: <span class="variable">$negative</span>,</div><div class="line">  warning: <span class="variable">$warning</span>,</div><div class="line">  info: <span class="variable">$info</span>,</div><div class="line">  light: <span class="variable">$light</span>,</div><div class="line">  dark: <span class="variable">$dark</span>,</div><div class="line">  white: <span class="variable">$white</span>,</div><div class="line"></div><div class="line">  red: <span class="variable">$red</span>,</div><div class="line">  pink: <span class="variable">$pink</span>,</div><div class="line">  purple: <span class="variable">$purple</span>,</div><div class="line">  deep-purple: <span class="variable">$deep</span>-purple,</div><div class="line">  indigo: <span class="variable">$indigo</span>,</div><div class="line">  blue: <span class="variable">$blue</span>,</div><div class="line">  light-blue: <span class="variable">$light</span>-blue,</div><div class="line">  cyan: <span class="variable">$cyan</span>,</div><div class="line">  teal: <span class="variable">$teal</span>,</div><div class="line">  green: <span class="variable">$green</span>,</div><div class="line">  light-green: <span class="variable">$light</span>-green,</div><div class="line">  lime: <span class="variable">$lime</span>,</div><div class="line">  yellow: <span class="variable">$yellow</span>,</div><div class="line">  amber: <span class="variable">$amber</span>,</div><div class="line">  orange: <span class="variable">$orange</span>,</div><div class="line">  deep-orange: <span class="variable">$deep</span>-orange,</div><div class="line">  brown: <span class="variable">$brown</span>,</div><div class="line">  grey: <span class="variable">$grey</span>,</div><div class="line">  blue-grey: <span class="variable">$blue</span>-grey</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Icons]]></title>
       <url>http://v0-13.quasar-framework.org/api/css-icons.html</url>
       <content type="html"><![CDATA[<p>What would an App be without icons? A default set of (hundreds of) icons is included in any Quasar App.<br>These are the <a href="https://design.google.com/icons/" target="_blank" rel="external">Material Design Icons</a>. You can you can read (and search for them) in the previous link.</p>
 <p><img src="/images/material-icons.png" alt="Material Icons Example"></p>
 <p>It just differs the way you use them in a Quasar App:<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!--</span></div><div class="line"><span class="comment">  On Material Design Icons website you check for an icon and it says:</span></div><div class="line"><span class="comment">  "&lt;i class="material-icons"&gt;account_circle&lt;/i&gt;"</span></div><div class="line"><span class="comment"></span></div><div class="line"><span class="comment">  On Quasar App you simply use it like this:</span></div><div class="line"><span class="comment">--&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">i</span>&gt;</span>account_circle<span class="tag">&lt;/<span class="name">i</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>No need for extra markup. Note the “underscore” character instead of a space character… this is mandatory, as Material Icons are displayed using a ligature font.</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Quasar CSS Positioning Classes]]></title>
-      <url>http://v0-13.quasar-framework.org/api/css-positioning.html</url>
-      <content type="html"><![CDATA[<p>There are CSS classes supplied by Quasar to help you position a DOM element easily:</p>
-<table>
-<thead>
-<tr>
-<th>Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>float-left</code>/<code>pull-left</code></td>
-<td>Float to the left</td>
-</tr>
-<tr>
-<td><code>float-right</code>/<code>pull-right</code></td>
-<td>Float to the right</td>
-</tr>
-<tr>
-<td><code>fullscreen</code></td>
-<td>Fix position covering all window real-estate</td>
-</tr>
-<tr>
-<td><code>fixed</code></td>
-<td>Set <code>position</code> to <code>fixed</code> without specifying <code>top</code>, <code>left</code>, <code>right</code> or <code>bottom</code> properties</td>
-</tr>
-<tr>
-<td><code>absolute</code></td>
-<td>Set <code>position</code> to <code>absolute</code> without specifying <code>top</code>, <code>left</code>, <code>right</code> or <code>bottom</code> properties</td>
-</tr>
-<tr>
-<td><code>fixed-top</code>, <code>absolute-top</code></td>
-<td>Fixed or absolute position to top of screen</td>
-</tr>
-<tr>
-<td><code>fixed-right</code>, <code>absolute-right</code></td>
-<td>Fixed or absolute position to the right edge of screen</td>
-</tr>
-<tr>
-<td><code>fixed-bottom</code>, <code>absolute-bottom</code></td>
-<td>Fixed or absolute position to bottom of screen</td>
-</tr>
-<tr>
-<td><code>fixed-left</code>, <code>absolute-left</code></td>
-<td>Fixed or absolute position to the left edge of screen</td>
-</tr>
-<tr>
-<td><code>fixed-top-left</code>, <code>absolute-top-left</code></td>
-<td>Fixed or absolute position to top left of screen</td>
-</tr>
-<tr>
-<td><code>fixed-top-right</code>, <code>absolute-top-right</code></td>
-<td>Fixed or absolute position to top right of screen</td>
-</tr>
-<tr>
-<td><code>fixed-bottom-left</code>, <code>absolute-bottom-left</code></td>
-<td>Fixed or absolute position to bottom left of screen</td>
-</tr>
-<tr>
-<td><code>fixed-bottom-right</code>, <code>absolute-bottom-right</code></td>
-<td>Fixed or absolute position to bottom right of screen</td>
-</tr>
-<tr>
-<td><code>relative-position</code></td>
-<td>Set position to <code>relative</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="Alignment"><a href="#Alignment" class="headerlink" title="Alignment"></a>Alignment</h2><table>
-<thead>
-<tr>
-<th>Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>float-left</code>/<code>pull-left</code></td>
-<td>Float to the left</td>
-</tr>
-<tr>
-<td><code>float-right</code>/<code>pull-right</code></td>
-<td>Float to the right</td>
-</tr>
-<tr>
-<td><code>on-left</code></td>
-<td>Sets a small margin to the right; commonly used for icon elements with other siblings</td>
-</tr>
-<tr>
-<td><code>on-right</code></td>
-<td>Sets a small margin to the left; commonly used for icon elements with other siblings</td>
-</tr>
-</tbody>
-</table>
-<p>Vertical alignment:</p>
-<table>
-<thead>
-<tr>
-<th>Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>vertical-top</code></td>
-<td>Set vertical alignment to <code>top</code></td>
-</tr>
-<tr>
-<td><code>vertical-middle</code></td>
-<td>Set vertical alignment to <code>middle</code></td>
-</tr>
-<tr>
-<td><code>vertical-bottom</code></td>
-<td>Set vertical alignment to <code>bottom</code></td>
-</tr>
-</tbody>
-</table>
 ]]></content>
     </entry>
     
@@ -529,6 +407,128 @@
 </table>
 <h2 id="Groups"><a href="#Groups" class="headerlink" title="Groups"></a>Groups</h2><p>There’s are two special CSS class named <code>group</code> and <code>generic-margin</code>.</p>
 <p><code>group</code> applies a small margin to all children DOM elements, while <code>generic-margin</code> applies same margin to the respective DOM element (this varies with each theme).</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quasar CSS Positioning Classes]]></title>
+      <url>http://v0-13.quasar-framework.org/api/css-positioning.html</url>
+      <content type="html"><![CDATA[<p>There are CSS classes supplied by Quasar to help you position a DOM element easily:</p>
+<table>
+<thead>
+<tr>
+<th>Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float-left</code>/<code>pull-left</code></td>
+<td>Float to the left</td>
+</tr>
+<tr>
+<td><code>float-right</code>/<code>pull-right</code></td>
+<td>Float to the right</td>
+</tr>
+<tr>
+<td><code>fullscreen</code></td>
+<td>Fix position covering all window real-estate</td>
+</tr>
+<tr>
+<td><code>fixed</code></td>
+<td>Set <code>position</code> to <code>fixed</code> without specifying <code>top</code>, <code>left</code>, <code>right</code> or <code>bottom</code> properties</td>
+</tr>
+<tr>
+<td><code>absolute</code></td>
+<td>Set <code>position</code> to <code>absolute</code> without specifying <code>top</code>, <code>left</code>, <code>right</code> or <code>bottom</code> properties</td>
+</tr>
+<tr>
+<td><code>fixed-top</code>, <code>absolute-top</code></td>
+<td>Fixed or absolute position to top of screen</td>
+</tr>
+<tr>
+<td><code>fixed-right</code>, <code>absolute-right</code></td>
+<td>Fixed or absolute position to the right edge of screen</td>
+</tr>
+<tr>
+<td><code>fixed-bottom</code>, <code>absolute-bottom</code></td>
+<td>Fixed or absolute position to bottom of screen</td>
+</tr>
+<tr>
+<td><code>fixed-left</code>, <code>absolute-left</code></td>
+<td>Fixed or absolute position to the left edge of screen</td>
+</tr>
+<tr>
+<td><code>fixed-top-left</code>, <code>absolute-top-left</code></td>
+<td>Fixed or absolute position to top left of screen</td>
+</tr>
+<tr>
+<td><code>fixed-top-right</code>, <code>absolute-top-right</code></td>
+<td>Fixed or absolute position to top right of screen</td>
+</tr>
+<tr>
+<td><code>fixed-bottom-left</code>, <code>absolute-bottom-left</code></td>
+<td>Fixed or absolute position to bottom left of screen</td>
+</tr>
+<tr>
+<td><code>fixed-bottom-right</code>, <code>absolute-bottom-right</code></td>
+<td>Fixed or absolute position to bottom right of screen</td>
+</tr>
+<tr>
+<td><code>relative-position</code></td>
+<td>Set position to <code>relative</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Alignment"><a href="#Alignment" class="headerlink" title="Alignment"></a>Alignment</h2><table>
+<thead>
+<tr>
+<th>Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float-left</code>/<code>pull-left</code></td>
+<td>Float to the left</td>
+</tr>
+<tr>
+<td><code>float-right</code>/<code>pull-right</code></td>
+<td>Float to the right</td>
+</tr>
+<tr>
+<td><code>on-left</code></td>
+<td>Sets a small margin to the right; commonly used for icon elements with other siblings</td>
+</tr>
+<tr>
+<td><code>on-right</code></td>
+<td>Sets a small margin to the left; commonly used for icon elements with other siblings</td>
+</tr>
+</tbody>
+</table>
+<p>Vertical alignment:</p>
+<table>
+<thead>
+<tr>
+<th>Class Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vertical-top</code></td>
+<td>Set vertical alignment to <code>top</code></td>
+</tr>
+<tr>
+<td><code>vertical-middle</code></td>
+<td>Set vertical alignment to <code>middle</code></td>
+</tr>
+<tr>
+<td><code>vertical-bottom</code></td>
+<td>Set vertical alignment to <code>bottom</code></td>
+</tr>
+</tbody>
+</table>
 ]]></content>
     </entry>
     
@@ -1351,6 +1351,36 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Utils]]></title>
+      <url>http://v0-13.quasar-framework.org/api/js-utils.html</url>
+      <content type="html"><![CDATA[<h2 id="Open-External-URL"><a href="#Open-External-URL" class="headerlink" title="Open External URL"></a>Open External URL</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Utils.openURL(<span class="string">'http://...'</span>)</div></pre></td></tr></table></figure>
+<p>It will take care of the quirks involved when running under Cordova or on a browser, including notifying the user he/she has to acknowledge opening popups.</p>
+<h2 id="Debounce-Function"><a href="#Debounce-Function" class="headerlink" title="Debounce Function"></a>Debounce Function</h2><p>If your App uses JavaScript to accomplish taxing tasks, a debounce function is essential to ensuring a given task doesn’t fire so often that it bricks browser performance. Debouncing a function limits the rate at which the function can fire.</p>
+<p>Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called. As in “execute this function only if 100 milliseconds have passed without it being called.”</p>
+<p>A quick example: you have a resize listener on the window which does some element dimension calculations and (possibly) repositions a few elements. That isn’t a heavy task in itself but being repeatedly fired after numerous resizes will really slow your App down. So why not limit the rate at which the function can fire?</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Returns a function, that, as long as it continues to be invoked, will not</span></div><div class="line"><span class="comment">// be triggered. The function will be called after it stops being called for</span></div><div class="line"><span class="comment">// N milliseconds. If `immediate` is passed, trigger the function on the</span></div><div class="line"><span class="comment">// leading edge, instead of the trailing.</span></div><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(Debounced <span class="built_in">Function</span>) Utils.debounce(<span class="built_in">Function</span> fn, <span class="built_in">Number</span> milliseconds_to_wait, <span class="built_in">Boolean</span> immediate)</div><div class="line"></div><div class="line"><span class="comment">// Example:</span></div><div class="line"><span class="built_in">window</span>.addEventListener(</div><div class="line">  <span class="string">'resize'</span>,</div><div class="line">  Utils.debounce(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    .... things to <span class="keyword">do</span> ...</div><div class="line">  &#125;, <span class="number">300</span> <span class="comment">/*ms to wait*/</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
+<h2 id="Throttle-Function"><a href="#Throttle-Function" class="headerlink" title="Throttle Function"></a>Throttle Function</h2><p>Throttling enforces a maximum number of times a function can be called over time. As in “execute this function at most once every 300 milliseconds.”</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Returns a function, that, as long as it continues to be invoked, will not</span></div><div class="line"><span class="comment">// be triggered. The function will be called after it stops being called for</span></div><div class="line"><span class="comment">// N milliseconds. If `immediate` is passed, trigger the function on the</span></div><div class="line"><span class="comment">// leading edge, instead of the trailing.</span></div><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(Throttled <span class="built_in">Function</span>) Utils.throttle(<span class="built_in">Function</span> fn, <span class="built_in">Number</span> limit_in_milliseconds)</div><div class="line"></div><div class="line"><span class="comment">// Example:</span></div><div class="line"><span class="built_in">window</span>.addEventListener(</div><div class="line">  <span class="string">'resize'</span>,</div><div class="line">  Utils.throttle(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    .... things to <span class="keyword">do</span> ...</div><div class="line">  &#125;, <span class="number">300</span> <span class="comment">/* execute at most once every 0.3s */</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
+<h2 id="Deep-Copy-Objects"><a href="#Deep-Copy-Objects" class="headerlink" title="(Deep) Copy Objects"></a>(Deep) Copy Objects</h2><p>A basic respawn of <code>jQuery.extend()</code>. Takes same parameters:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> newObject = Utils.extend([<span class="built_in">Boolean</span> deepCopy], targetObj, obj, ...)</div></pre></td></tr></table></figure></p>
+<p>Watch out for methods within objects.</p>
+<h2 id="Generate-UID"><a href="#Generate-UID" class="headerlink" title="Generate UID"></a>Generate UID</h2><p>Generate unique identifiers:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> uid = Utils.uid()</div><div class="line"><span class="comment">// Example: 501e7ae1-7e6f-b923-3e84-4e946bff31a8</span></div></pre></td></tr></table></figure></p>
+<h2 id="Animate"><a href="#Animate" class="headerlink" title="Animate"></a>Animate</h2><p>You can create animations through Javascript (using RAF - <code>requestAnimationFrame()</code>).<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> id = Utils.animate.start(&#123;</div><div class="line">  name: <span class="string">'unique-animation-name'</span>, <span class="comment">// optional, if none is supplied a unique one is created and returned</span></div><div class="line">  finalPos: <span class="string">'100'</span>,</div><div class="line">  pos: <span class="string">'0'</span>, <span class="comment">// current position</span></div><div class="line">  factor: <span class="number">5</span>, <span class="comment">// on each step, it adds (finalPosition - currentPosition) / factor</span></div><div class="line">  done (finalPosition) &#123;...&#125;, <span class="comment">// function to call when animation is done</span></div><div class="line">  apply (currentPosition) &#123;...&#125;, <span class="comment">// function called on each step so you can apply changes</span></div><div class="line"></div><div class="line">  threshold: <span class="number">0.1</span>, <span class="comment">// if Math.abs(finalPosition - currentPosition) &lt; threshold</span></div><div class="line">    <span class="comment">//then stop and we're done</span></div><div class="line">&#125;)</div><div class="line"><span class="comment">// Starting an animation with same name will abort the previous one</span></div><div class="line"></div><div class="line"><span class="comment">// Stop an animation using its name</span></div><div class="line">Utils.animate.stop(<span class="string">'unique-animation-name'</span>)</div><div class="line"><span class="comment">// or</span></div><div class="line">Utils.animate.stop(id) <span class="comment">// id returned from above</span></div></pre></td></tr></table></figure></p>
+<p>Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Utils.animate.start(&#123;</div><div class="line">  finalPos: <span class="number">158</span>,</div><div class="line">  pos: <span class="number">6</span>,</div><div class="line">  factor: <span class="number">10</span>,</div><div class="line">  threshold: <span class="number">0.5</span>,</div><div class="line">  apply (pos) &#123;</div><div class="line">    el.style.maxHeight = <span class="string">`<span class="subst">$&#123;pos&#125;</span>px`</span></div><div class="line">  &#125;,</div><div class="line">  done () &#123;</div><div class="line">    <span class="comment">// we're done!</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<h2 id="DOM-methods"><a href="#DOM-methods" class="headerlink" title="DOM methods"></a>DOM methods</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="comment">// Offset on screen</span></div><div class="line"><span class="built_in">console</span>.log(Utils.dom.offset(DomElement))</div><div class="line"><span class="comment">// &#123; top: 10, left: 100 &#125;</span></div><div class="line"></div><div class="line"><span class="comment">// Get COMPUTED style (when DomElement is visible!)</span></div><div class="line"><span class="comment">// Computed means a DomElement might not have "height" CSS property set,</span></div><div class="line"><span class="comment">// but that does not mean it doesn't have a height when it's displayed.</span></div><div class="line"><span class="comment">// The follosing method accesses the computed CSS provided by the browser:</span></div><div class="line"><span class="built_in">console</span>.log(Utils.dom.style(DomElement, <span class="string">'height'</span>))</div><div class="line"><span class="comment">// '10px' &lt;&lt;&lt; notice it returns a String ending in 'px'</span></div><div class="line"></div><div class="line"><span class="comment">// Some aliases of the previous method for "width" and "height" which</span></div><div class="line"><span class="comment">// returns Numbers instead of Strings:</span></div><div class="line"><span class="built_in">console</span>.log(</div><div class="line">  Utils.dom.height(DomElement),</div><div class="line">  Utils.dom.width(DomElement)</div><div class="line">)</div><div class="line"><span class="comment">// 10 100</span></div><div class="line"></div><div class="line"><span class="comment">// Apply a list of CSS properties to a DomNode</span></div><div class="line">Utils.dom.css(DomElement, &#123;</div><div class="line">  height: <span class="string">'10px'</span>,</div><div class="line">  display: <span class="string">'flex'</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// Get Window height and width</span></div><div class="line"><span class="keyword">let</span> &#123;height, width&#125; = Utils.dom.viewport()</div><div class="line"><span class="built_in">console</span>.log(height, width)</div><div class="line"><span class="comment">// 800 600</span></div><div class="line"></div><div class="line"><span class="comment">// Execute a Function when DOM is ready:</span></div><div class="line">Utils.dom.ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// ....</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// Get parent DomNode that handles page scrolling</span></div><div class="line"><span class="comment">// Usually this is element with classname ".layout-view" or "window"</span></div><div class="line">(DOM Element) Utils.dom.getScrollTarget(DomElement)</div><div class="line"></div><div class="line"><span class="comment">// Get scroll position of a element or page. Use it in conjunction with `Utils.dom.getScrollTarget()`</span></div><div class="line">(<span class="built_in">Number</span> pixels) Utils.dom.getScrollPosition(scrollTargetDomElement)</div><div class="line"></div><div class="line"><span class="comment">// Setting scroll position of an element or page:</span></div><div class="line">Utils.dom.setScrollPosition (scrollTargetElement, offset[, duration])</div><div class="line"><span class="comment">// if "duration" is specified then it will animate the scrolling</span></div></pre></td></tr></table></figure>
+<p>You can also generate an object with cross-browser props for CSS <code>transform</code>s:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">let</span> props = Utils.dom.cssTransform(<span class="string">'rotateX(30deg)'</span>)</div><div class="line"><span class="comment">// props = &#123;</span></div><div class="line"><span class="comment">//   transform: 'rotateX(30deg)',</span></div><div class="line"><span class="comment">//   '-webkit-transform': 'rotateX(30deg)',</span></div><div class="line"><span class="comment">//   '-ms-transform': 'rotateX(30deg)',</span></div><div class="line"><span class="comment">//   '-o-transform': 'rotateX(30deg)',</span></div><div class="line"><span class="comment">//   '-moz-transform': 'rotateX(30deg)'</span></div><div class="line"><span class="comment">// &#125;</span></div><div class="line"></div><div class="line"><span class="comment">// Then you can apply it with Utils.css(el, props)</span></div></pre></td></tr></table></figure></p>
+<h2 id="Handling-“event”-on-a-DOM-event-handler"><a href="#Handling-“event”-on-a-DOM-event-handler" class="headerlink" title="Handling “event” on a DOM event handler"></a>Handling “event” on a DOM event handler</h2><p>It’s cross-browser.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">node.addEventListener(<span class="string">'click'</span>, event =&gt; &#123;</div><div class="line">  <span class="comment">// right clicked?</span></div><div class="line">  (<span class="built_in">Boolean</span>) Utils.event.rightClick(event)</div><div class="line"></div><div class="line">  <span class="comment">// position on viewport</span></div><div class="line">  <span class="comment">// works both for mouse and touch events!</span></div><div class="line">  (<span class="built_in">Object</span> &#123;top, left&#125;) Utils.event.position(event)</div><div class="line"></div><div class="line">  <span class="comment">// get target DOM Element on which mouse or touch</span></div><div class="line">  <span class="comment">// event has fired upon</span></div><div class="line">  (DOM Element) Utils.event.targetElement(event)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="Determining-Scrollbar-Width"><a href="#Determining-Scrollbar-Width" class="headerlink" title="Determining Scrollbar Width"></a>Determining Scrollbar Width</h2><p>Computes the width of scrollbar in pixels.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(Utils.scrollbar.width()) <span class="comment">// 16</span></div></pre></td></tr></table></figure>
+<h2 id="Colors"><a href="#Colors" class="headerlink" title="Colors"></a>Colors</h2><p>You can change colors from RGB to Hex format (and reverse too).</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(Utils.colors.rgbToHex(<span class="number">85</span>, <span class="number">165</span>, <span class="number">1</span>)) <span class="comment">// #55a532</span></div><div class="line"><span class="built_in">console</span>.log(Utils.colors.hexToRgb(<span class="string">'#55a532'</span>)) <span class="comment">// [85, 165, 1]</span></div></pre></td></tr></table></figure>
+<h2 id="Formatters"><a href="#Formatters" class="headerlink" title="Formatters"></a>Formatters</h2><p>There’s currently only one formatter available, which turns numbers in human readable storage size:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="built_in">console</span>.log( Utils.format.humanStorageSize(<span class="number">13087</span>) )</div><div class="line"><span class="comment">// 12.78 kB</span></div></pre></td></tr></table></figure></p>
+<h2 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h2><p>Filter out an array of Objects based on a certain field:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> data = [&#123;<span class="attr">fee</span>: <span class="number">5</span>, <span class="attr">desc</span>: <span class="string">'Bla bla'</span>&#125;, &#123;<span class="attr">fee</span>: <span class="number">10</span>, <span class="attr">desc</span>: <span class="string">'Bla bla'</span>&#125;, &#123;<span class="attr">fee</span>: <span class="number">1</span>, <span class="attr">desc</span>: <span class="string">'Bla bla'</span>&#125;]</div><div class="line"><span class="built_in">console</span>.log(Utils.filter(<span class="string">'5'</span>, &#123;<span class="attr">field</span>: <span class="string">'fee'</span>, <span class="attr">list</span>: data&#125;)</div><div class="line"><span class="comment">// &#123;fee: 5, desc: 'Bla bla'&#125;</span></div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quasar Web Storage]]></title>
       <url>http://v0-13.quasar-framework.org/api/js-web-storage.html</url>
       <content type="html"><![CDATA[<p>Quasar provides a wrapper over <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API" target="_blank" rel="external">Web Storage API</a>.</p>
@@ -1381,36 +1411,6 @@
 <p>All items (clear the store):<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; LocalStorage, SessionStorage &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">LocalStorage.clear(key)</div><div class="line">SessionStorage.clear(key)</div></pre></td></tr></table></figure></p>
 <h3 id="Is-Store-Empty"><a href="#Is-Store-Empty" class="headerlink" title="Is Store Empty?"></a>Is Store Empty?</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; LocalStorage, SessionStorage &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(boolean) LocalStorage.isEmpty()</div><div class="line">(boolean) SessionStorage.isEmpty()</div></pre></td></tr></table></figure>
 <h3 id="Is-Key-in-Store"><a href="#Is-Key-in-Store" class="headerlink" title="Is Key in Store?"></a>Is Key in Store?</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; LocalStorage, SessionStorage &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(boolean) LocalStorage.has(key)</div><div class="line">(boolean) SessionStorage.has(key)</div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Utils]]></title>
-      <url>http://v0-13.quasar-framework.org/api/js-utils.html</url>
-      <content type="html"><![CDATA[<h2 id="Open-External-URL"><a href="#Open-External-URL" class="headerlink" title="Open External URL"></a>Open External URL</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Utils.openURL(<span class="string">'http://...'</span>)</div></pre></td></tr></table></figure>
-<p>It will take care of the quirks involved when running under Cordova or on a browser, including notifying the user he/she has to acknowledge opening popups.</p>
-<h2 id="Debounce-Function"><a href="#Debounce-Function" class="headerlink" title="Debounce Function"></a>Debounce Function</h2><p>If your App uses JavaScript to accomplish taxing tasks, a debounce function is essential to ensuring a given task doesn’t fire so often that it bricks browser performance. Debouncing a function limits the rate at which the function can fire.</p>
-<p>Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called. As in “execute this function only if 100 milliseconds have passed without it being called.”</p>
-<p>A quick example: you have a resize listener on the window which does some element dimension calculations and (possibly) repositions a few elements. That isn’t a heavy task in itself but being repeatedly fired after numerous resizes will really slow your App down. So why not limit the rate at which the function can fire?</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Returns a function, that, as long as it continues to be invoked, will not</span></div><div class="line"><span class="comment">// be triggered. The function will be called after it stops being called for</span></div><div class="line"><span class="comment">// N milliseconds. If `immediate` is passed, trigger the function on the</span></div><div class="line"><span class="comment">// leading edge, instead of the trailing.</span></div><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(Debounced <span class="built_in">Function</span>) Utils.debounce(<span class="built_in">Function</span> fn, <span class="built_in">Number</span> milliseconds_to_wait, <span class="built_in">Boolean</span> immediate)</div><div class="line"></div><div class="line"><span class="comment">// Example:</span></div><div class="line"><span class="built_in">window</span>.addEventListener(</div><div class="line">  <span class="string">'resize'</span>,</div><div class="line">  Utils.debounce(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    .... things to <span class="keyword">do</span> ...</div><div class="line">  &#125;, <span class="number">300</span> <span class="comment">/*ms to wait*/</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
-<h2 id="Throttle-Function"><a href="#Throttle-Function" class="headerlink" title="Throttle Function"></a>Throttle Function</h2><p>Throttling enforces a maximum number of times a function can be called over time. As in “execute this function at most once every 300 milliseconds.”</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Returns a function, that, as long as it continues to be invoked, will not</span></div><div class="line"><span class="comment">// be triggered. The function will be called after it stops being called for</span></div><div class="line"><span class="comment">// N milliseconds. If `immediate` is passed, trigger the function on the</span></div><div class="line"><span class="comment">// leading edge, instead of the trailing.</span></div><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">(Throttled <span class="built_in">Function</span>) Utils.throttle(<span class="built_in">Function</span> fn, <span class="built_in">Number</span> limit_in_milliseconds)</div><div class="line"></div><div class="line"><span class="comment">// Example:</span></div><div class="line"><span class="built_in">window</span>.addEventListener(</div><div class="line">  <span class="string">'resize'</span>,</div><div class="line">  Utils.throttle(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    .... things to <span class="keyword">do</span> ...</div><div class="line">  &#125;, <span class="number">300</span> <span class="comment">/* execute at most once every 0.3s */</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
-<h2 id="Deep-Copy-Objects"><a href="#Deep-Copy-Objects" class="headerlink" title="(Deep) Copy Objects"></a>(Deep) Copy Objects</h2><p>A basic respawn of <code>jQuery.extend()</code>. Takes same parameters:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> newObject = Utils.extend([<span class="built_in">Boolean</span> deepCopy], targetObj, obj, ...)</div></pre></td></tr></table></figure></p>
-<p>Watch out for methods within objects.</p>
-<h2 id="Generate-UID"><a href="#Generate-UID" class="headerlink" title="Generate UID"></a>Generate UID</h2><p>Generate unique identifiers:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> uid = Utils.uid()</div><div class="line"><span class="comment">// Example: 501e7ae1-7e6f-b923-3e84-4e946bff31a8</span></div></pre></td></tr></table></figure></p>
-<h2 id="Animate"><a href="#Animate" class="headerlink" title="Animate"></a>Animate</h2><p>You can create animations through Javascript (using RAF - <code>requestAnimationFrame()</code>).<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> id = Utils.animate.start(&#123;</div><div class="line">  name: <span class="string">'unique-animation-name'</span>, <span class="comment">// optional, if none is supplied a unique one is created and returned</span></div><div class="line">  finalPos: <span class="string">'100'</span>,</div><div class="line">  pos: <span class="string">'0'</span>, <span class="comment">// current position</span></div><div class="line">  factor: <span class="number">5</span>, <span class="comment">// on each step, it adds (finalPosition - currentPosition) / factor</span></div><div class="line">  done (finalPosition) &#123;...&#125;, <span class="comment">// function to call when animation is done</span></div><div class="line">  apply (currentPosition) &#123;...&#125;, <span class="comment">// function called on each step so you can apply changes</span></div><div class="line"></div><div class="line">  threshold: <span class="number">0.1</span>, <span class="comment">// if Math.abs(finalPosition - currentPosition) &lt; threshold</span></div><div class="line">    <span class="comment">//then stop and we're done</span></div><div class="line">&#125;)</div><div class="line"><span class="comment">// Starting an animation with same name will abort the previous one</span></div><div class="line"></div><div class="line"><span class="comment">// Stop an animation using its name</span></div><div class="line">Utils.animate.stop(<span class="string">'unique-animation-name'</span>)</div><div class="line"><span class="comment">// or</span></div><div class="line">Utils.animate.stop(id) <span class="comment">// id returned from above</span></div></pre></td></tr></table></figure></p>
-<p>Example:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">Utils.animate.start(&#123;</div><div class="line">  finalPos: <span class="number">158</span>,</div><div class="line">  pos: <span class="number">6</span>,</div><div class="line">  factor: <span class="number">10</span>,</div><div class="line">  threshold: <span class="number">0.5</span>,</div><div class="line">  apply (pos) &#123;</div><div class="line">    el.style.maxHeight = <span class="string">`<span class="subst">$&#123;pos&#125;</span>px`</span></div><div class="line">  &#125;,</div><div class="line">  done () &#123;</div><div class="line">    <span class="comment">// we're done!</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
-<h2 id="DOM-methods"><a href="#DOM-methods" class="headerlink" title="DOM methods"></a>DOM methods</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="comment">// Offset on screen</span></div><div class="line"><span class="built_in">console</span>.log(Utils.dom.offset(DomElement))</div><div class="line"><span class="comment">// &#123; top: 10, left: 100 &#125;</span></div><div class="line"></div><div class="line"><span class="comment">// Get COMPUTED style (when DomElement is visible!)</span></div><div class="line"><span class="comment">// Computed means a DomElement might not have "height" CSS property set,</span></div><div class="line"><span class="comment">// but that does not mean it doesn't have a height when it's displayed.</span></div><div class="line"><span class="comment">// The follosing method accesses the computed CSS provided by the browser:</span></div><div class="line"><span class="built_in">console</span>.log(Utils.dom.style(DomElement, <span class="string">'height'</span>))</div><div class="line"><span class="comment">// '10px' &lt;&lt;&lt; notice it returns a String ending in 'px'</span></div><div class="line"></div><div class="line"><span class="comment">// Some aliases of the previous method for "width" and "height" which</span></div><div class="line"><span class="comment">// returns Numbers instead of Strings:</span></div><div class="line"><span class="built_in">console</span>.log(</div><div class="line">  Utils.dom.height(DomElement),</div><div class="line">  Utils.dom.width(DomElement)</div><div class="line">)</div><div class="line"><span class="comment">// 10 100</span></div><div class="line"></div><div class="line"><span class="comment">// Apply a list of CSS properties to a DomNode</span></div><div class="line">Utils.dom.css(DomElement, &#123;</div><div class="line">  height: <span class="string">'10px'</span>,</div><div class="line">  display: <span class="string">'flex'</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// Get Window height and width</span></div><div class="line"><span class="keyword">let</span> &#123;height, width&#125; = Utils.dom.viewport()</div><div class="line"><span class="built_in">console</span>.log(height, width)</div><div class="line"><span class="comment">// 800 600</span></div><div class="line"></div><div class="line"><span class="comment">// Execute a Function when DOM is ready:</span></div><div class="line">Utils.dom.ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// ....</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// Get parent DomNode that handles page scrolling</span></div><div class="line"><span class="comment">// Usually this is element with classname ".layout-view" or "window"</span></div><div class="line">(DOM Element) Utils.dom.getScrollTarget(DomElement)</div><div class="line"></div><div class="line"><span class="comment">// Get scroll position of a element or page. Use it in conjunction with `Utils.dom.getScrollTarget()`</span></div><div class="line">(<span class="built_in">Number</span> pixels) Utils.dom.getScrollPosition(scrollTargetDomElement)</div><div class="line"></div><div class="line"><span class="comment">// Setting scroll position of an element or page:</span></div><div class="line">Utils.dom.setScrollPosition (scrollTargetElement, offset[, duration])</div><div class="line"><span class="comment">// if "duration" is specified then it will animate the scrolling</span></div></pre></td></tr></table></figure>
-<p>You can also generate an object with cross-browser props for CSS <code>transform</code>s:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">let</span> props = Utils.dom.cssTransform(<span class="string">'rotateX(30deg)'</span>)</div><div class="line"><span class="comment">// props = &#123;</span></div><div class="line"><span class="comment">//   transform: 'rotateX(30deg)',</span></div><div class="line"><span class="comment">//   '-webkit-transform': 'rotateX(30deg)',</span></div><div class="line"><span class="comment">//   '-ms-transform': 'rotateX(30deg)',</span></div><div class="line"><span class="comment">//   '-o-transform': 'rotateX(30deg)',</span></div><div class="line"><span class="comment">//   '-moz-transform': 'rotateX(30deg)'</span></div><div class="line"><span class="comment">// &#125;</span></div><div class="line"></div><div class="line"><span class="comment">// Then you can apply it with Utils.css(el, props)</span></div></pre></td></tr></table></figure></p>
-<h2 id="Handling-“event”-on-a-DOM-event-handler"><a href="#Handling-“event”-on-a-DOM-event-handler" class="headerlink" title="Handling “event” on a DOM event handler"></a>Handling “event” on a DOM event handler</h2><p>It’s cross-browser.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line">node.addEventListener(<span class="string">'click'</span>, event =&gt; &#123;</div><div class="line">  <span class="comment">// right clicked?</span></div><div class="line">  (<span class="built_in">Boolean</span>) Utils.event.rightClick(event)</div><div class="line"></div><div class="line">  <span class="comment">// position on viewport</span></div><div class="line">  <span class="comment">// works both for mouse and touch events!</span></div><div class="line">  (<span class="built_in">Object</span> &#123;top, left&#125;) Utils.event.position(event)</div><div class="line"></div><div class="line">  <span class="comment">// get target DOM Element on which mouse or touch</span></div><div class="line">  <span class="comment">// event has fired upon</span></div><div class="line">  (DOM Element) Utils.event.targetElement(event)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h2 id="Determining-Scrollbar-Width"><a href="#Determining-Scrollbar-Width" class="headerlink" title="Determining Scrollbar Width"></a>Determining Scrollbar Width</h2><p>Computes the width of scrollbar in pixels.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(Utils.scrollbar.width()) <span class="comment">// 16</span></div></pre></td></tr></table></figure>
-<h2 id="Colors"><a href="#Colors" class="headerlink" title="Colors"></a>Colors</h2><p>You can change colors from RGB to Hex format (and reverse too).</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(Utils.colors.rgbToHex(<span class="number">85</span>, <span class="number">165</span>, <span class="number">1</span>)) <span class="comment">// #55a532</span></div><div class="line"><span class="built_in">console</span>.log(Utils.colors.hexToRgb(<span class="string">'#55a532'</span>)) <span class="comment">// [85, 165, 1]</span></div></pre></td></tr></table></figure>
-<h2 id="Formatters"><a href="#Formatters" class="headerlink" title="Formatters"></a>Formatters</h2><p>There’s currently only one formatter available, which turns numbers in human readable storage size:<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="built_in">console</span>.log( Utils.format.humanStorageSize(<span class="number">13087</span>) )</div><div class="line"><span class="comment">// 12.78 kB</span></div></pre></td></tr></table></figure></p>
-<h2 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h2><p>Filter out an array of Objects based on a certain field:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Utils &#125; <span class="keyword">from</span> <span class="string">'quasar'</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> data = [&#123;<span class="attr">fee</span>: <span class="number">5</span>, <span class="attr">desc</span>: <span class="string">'Bla bla'</span>&#125;, &#123;<span class="attr">fee</span>: <span class="number">10</span>, <span class="attr">desc</span>: <span class="string">'Bla bla'</span>&#125;, &#123;<span class="attr">fee</span>: <span class="number">1</span>, <span class="attr">desc</span>: <span class="string">'Bla bla'</span>&#125;]</div><div class="line"><span class="built_in">console</span>.log(Utils.filter(<span class="string">'5'</span>, &#123;<span class="attr">field</span>: <span class="string">'fee'</span>, <span class="attr">list</span>: data&#125;)</div><div class="line"><span class="comment">// &#123;fee: 5, desc: 'Bla bla'&#125;</span></div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
